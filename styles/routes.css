@@ -1,0 +1,456 @@
+.routes-section {
+    background-color: white;
+    padding: 80px 0;
+}
+
+.routes-tabs {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tabs-header {
+    display: flex;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 15px 30px;
+    background: none;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #718096;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.tab-btn.active {
+    color: #2d6bc9;
+    border-bottom: 3px solid #2d6bc9;
+    background: white;
+}
+
+.tab-btn:hover:not(.active) {
+    background: rgba(45, 107, 201, 0.05);
+    color: #2d3748;
+}
+
+.tab-content {
+    display: none;
+    padding: 30px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.routes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.route-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.route-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.route-header {
+    background: linear-gradient(135deg, #1a365d, #2d4a7c);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.route-header h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.route-distance {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.route-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.route-aircraft {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #2d6bc9;
+    font-weight: 600;
+}
+
+.route-aircraft i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.route-description {
+    color: #2d3748;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    flex-grow: 0;
+}
+
+.route-highlights {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    flex-grow: 0;
+}
+
+.route-highlights h4 {
+    color: #1a365d;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.route-highlights h4 i {
+    margin-right: 8px;
+}
+
+.route-highlights ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.route-highlights li {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #718096;
+    padding-left: 20px;
+    position: relative;
+}
+
+.route-highlights li:before {
+    content: "•";
+    color: #2d6bc9;
+    position: absolute;
+    left: 0;
+}
+
+.route-airspace {
+    background: #f0f9ff;
+    color: #1a365d;
+    border-left: 3px solid #2d6bc9;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    flex-grow: 0;
+}
+
+.route-airspace h4 {
+    color: #1a365d;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.route-airspace h4 i {
+    margin-right: 8px;
+    color: #2d6bc9;
+}
+
+.route-airspace ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.route-airspace li {
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    color: #2d3748;
+    padding-left: 18px;
+    position: relative;
+}
+
+.route-airspace li:before {
+    content: "•";
+    color: #2d6bc9;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.route-alt, .route-warning {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    flex-grow: 0;
+}
+
+.route-alt {
+    background: #e6f7ff;
+    color: #0066cc;
+    border-left: 3px solid #0066cc;
+}
+
+.route-warning {
+    background: #fff7e6;
+    color: #d46b08;
+    border-left: 3px solid #d46b08;
+    display: flex;
+    align-items: center;
+}
+
+.route-warning i {
+    margin-right: 5px;
+}
+
+.ml-2 {
+    margin-left: 8px;
+}
+
+.mt-3 {
+    margin-top: 15px;
+}
+
+.itineraries-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.itinerary-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.itinerary-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.itinerary-header {
+    background: linear-gradient(135deg, #2d6bc9, #1a4d8c);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.itinerary-header h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.itinerary-duration {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.itinerary-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.itinerary-day {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    flex-grow: 0;
+}
+
+.itinerary-day:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.itinerary-day h4 {
+    color: #1a365d;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.itinerary-day h4 i {
+    margin-right: 8px;
+}
+
+.itinerary-day p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: #2d3748;
+}
+
+.itinerary-day small {
+    display: block;
+    color: #718096;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.itinerary-aircraft {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: auto;
+    font-size: 0.95rem;
+    color: #2d3748;
+    flex-shrink: 0;
+}
+
+.routes-note {
+    margin-top: 40px;
+}
+
+.note-box {
+    background: linear-gradient(to right, #f8fafc, #e6f0ff);
+    border-left: 4px solid #2d6bc9;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.note-box i {
+    color: #2d6bc9;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.note-box p {
+    margin: 0;
+    color: #2d3748;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .routes-section {
+        padding: 60px 0;
+    }
+
+    .routes-grid,
+    .itineraries-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tabs-header {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .tab-btn {
+        width: 100%;
+        text-align: left;
+        padding: 15px 20px;
+        border-bottom: 1px solid #e2e8f0;
+        min-width: auto;
+    }
+
+    .tab-btn.active {
+        border-bottom: 3px solid #2d6bc9;
+    }
+
+    .tab-content {
+        padding: 20px;
+    }
+
+    .route-header,
+    .itinerary-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .route-distance,
+    .itinerary-duration {
+        align-self: flex-start;
+    }
+
+    .note-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .note-box i {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .aircraft-card,
+    .route-card,
+    .itinerary-card {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media print {
+    .routes-grid,
+    .itineraries-container {
+        grid-template-columns: 1fr;
+    }
+}
