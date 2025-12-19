@@ -96,6 +96,10 @@
     align-items: center;
 }
 
+.member-details p strong {
+    margin-right: 4px;
+}
+
 .member-details i {
     margin-right: 10px;
     color: #2d6bc9;
