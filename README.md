@@ -2,7 +2,13 @@
   <img src="images/logo.png" alt="Coastal Peaks Air Service" width="350">
 </div>
 
-[![VISIT WEBSITE](https://img.shields.io/badge/VISIT_WEBSITE-6ee7b7?style=for-the-badge&logo=github)](https://github.com/Chalwk/CPAS)
+<div align="center">
+  <a href="https://chalwk.github.io/CPAS/">
+    <img src="https://img.shields.io/badge/VISIT_WEBSITE-6ee7b7?style=for-the-badge&logo=github" 
+         alt="Visit Website" 
+         style="height: 60px;">
+  </a>
+</div>
 
 # Coastal Peaks Air Service (CPAS)
 
