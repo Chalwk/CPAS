@@ -110,11 +110,11 @@
 ### 1. Rank Structure
 
 ```
-🟢 Trainee Pilot       - Initial training phase
-🟡 First Officer       - Certified for specific aircraft
-🟠 Senior First Officer - Multiple aircraft certified
-🔴 Captain             - All aircraft, mentoring role
-🟣 Check Captain       - Training and check ride authority
+🟢 Pilot Under Training     - Initial training phase
+🟡 Charter Pilot           - Certified for basic charter operations
+🟠 Senior Charter Pilot    - Multiple aircraft certified, complex routes
+🔴 Lead Pilot              - Full fleet access, mentoring role
+🟣 Instructor              - Training and check ride authority
 ```
 
 ### 2. Certification Process
@@ -237,7 +237,7 @@
 ### 1. Leadership Team
 
 * **Founder/Owner:** Chalwk (Jericho Crosby)
-* **Training Staff:** Certified check captains
+* **Training Staff:** Certified instructors
 * **Moderators:** Community support team
 
 ### 2. Support Channels
@@ -269,5 +269,3 @@ By participating in Coastal Peaks Air Service, you agree to:
 
 Guidelines may be updated periodically. Changes will be announced in Discord and on
 our [website](https://chalwk.github.io/CPAS)
-
----
