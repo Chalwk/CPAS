@@ -21,9 +21,8 @@ This repository and all associated content are proprietary. See the [LICENSE](LI
 
 ## Disclaimer
 
-Coastal Peaks Air Service (CPAS) is a fictional, virtual organization created for flight simulation enthusiasts. It is
-not affiliated with, sponsored by, or representative of the real-world Canterbury Aero Club (CAC), GCH Aviation,
-Helicopter Line, or any other actual aviation service.
+Coastal Peaks Air Service (CPAS) is not affiliated with, sponsored by, or representative of the real-world Canterbury
+Aero Club (CAC), GCH Aviation, Helicopter Line, or any other actual aviation service.
 
 ---
 
