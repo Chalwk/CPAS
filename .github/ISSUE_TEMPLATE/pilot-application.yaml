@@ -1,0 +1,201 @@
+name: Pilot Application
+description: Apply to become a virtual pilot with Coastal Peaks Air Service.
+title: 'Pilot Application - [Your Name]'
+labels:
+  - pilot-application
+  - awaiting-review
+assignees: Chalwk
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # ✈️ Coastal Peaks Air Service - Pilot Application ✈️
+
+        Thank you for your interest in joining **Coastal Peaks Air Service**! This form is for virtual pilots who wish to join our MSFS-based air charter community operating in New Zealand's South Island.
+
+        **📌 Important Notes:**
+        - Applications are reviewed as soon as possible. If selected, you will be contacted via Discord.
+        - Ensure you meet all requirements before applying. Incomplete applications may be denied.
+        - By submitting this application, you agree to abide by the **CPAS Operations Manual** and community guidelines.
+
+        ---
+
+        ## 🚀 Pilot Requirements
+
+        Before applying, ensure you meet the following criteria:
+
+        - **Microsoft Flight Simulator 2020**: Must own a legitimate copy of MSFS 2020
+        - **Discord Account**: Must have a verified account for communication and coordination
+        - **Flight Experience**: Basic understanding of flight procedures (VATSIM/IVAO experience preferred but not required)
+        - **Add-Ons**: Access to quality aircraft add-ons (our fleet uses CowanSim, Just Flight, etc.)
+        - **Commitment**: Able to participate in regular flights and community events
+        - **Age**: Must be at least 16 years old
+
+        ---
+
+        ## 🏆 CPAS Pilot Ranks
+
+        - **🟢 Trainee Pilot**  
+          Entry-level pilots learning CPAS procedures and aircraft
+
+        - **🟡 First Officer**  
+          Certified pilots cleared for solo operations on specific aircraft
+
+        - **🟠 Senior First Officer**  
+          Experienced pilots with multiple aircraft certifications
+
+        - **🔴 Captain**  
+          Qualified to operate all aircraft in the fleet and mentor junior pilots
+
+        - **🟣 Check Captain**  
+          Senior pilots authorized to conduct training and check rides
+
+        ---
+
+  - type: checkboxes
+    id: accept-rules
+    attributes:
+      label: Do you accept our community rules and procedures?
+      description: Please review and accept our community guidelines before proceeding.
+      options:
+        - label: Yes, I accept and will follow all CPAS procedures. 👍
+        - label: No, I do not accept. ❌
+    validations:
+      required: true
+
+  - type: input
+    id: full-name
+    attributes:
+      label: 👤 Full Name (or Preferred Name)
+      description: The name you'd like to be addressed by in the community.
+      placeholder: "e.g., John Smith"
+    validations:
+      required: true
+
+  - type: input
+    id: age
+    attributes:
+      label: 🎂 Age
+      description: You must be at least 16 years old to apply.
+      placeholder: "e.g., 25"
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: 🌍 Where are you from?
+      description: Your country and timezone for scheduling purposes.
+      placeholder: "e.g., New Zealand (UTC+12) or United States (UTC-5)"
+    validations:
+      required: true
+
+  - type: input
+    id: vatsim-id
+    attributes:
+      label: 🎮 VATSIM ID (if applicable)
+      description: If you have a VATSIM ID, please provide it here.
+      placeholder: "e.g., 1234567 or 'Not a VATSIM member'"
+    validations:
+      required: false
+
+  - type: input
+    id: ivao-id
+    attributes:
+      label: 🎮 IVAO ID (if applicable)
+      description: If you have an IVAO ID, please provide it here.
+      placeholder: "e.g., 123456 or 'Not an IVAO member'"
+    validations:
+      required: false
+
+  - type: input
+    id: discord-username
+    attributes:
+      label: 💬 Discord Username
+      description: Your Discord username for community communication.
+      placeholder: "e.g., PilotJohn#1234"
+    validations:
+      required: true
+
+  - type: input
+    id: msfs-version
+    attributes:
+      label: 🎮 MSFS 2020 Edition
+      description: Which edition of Microsoft Flight Simulator 2020 do you own?
+      placeholder: "e.g., Standard, Deluxe, Premium Deluxe"
+    validations:
+      required: true
+
+  - type: textarea
+    id: about-yourself
+    attributes:
+      label: 🙋 Tell us about yourself
+      description: Provide a brief introduction about yourself and your aviation interests.
+      placeholder: "e.g., I'm an aviation enthusiast with a particular interest in helicopter operations in mountainous terrain..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: flight-experience
+    attributes:
+      label: ✈️ Flight Simulation Experience
+      description: Describe your experience with flight simulators, including previous virtual airlines/groups.
+      placeholder: "e.g., I've been simming for 3 years, previously flew with XYZ Virtual Airline..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: aircraft-experience
+    attributes:
+      label: 🛩️ Aircraft Experience
+      description: Which CPAS fleet aircraft (or similar) have you flown? List any relevant add-ons you own.
+      placeholder: "e.g., I have the CowanSim R66 and H125, and am comfortable with Piper aircraft..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-cpas
+    attributes:
+      label: 🏔️ Why Coastal Peaks Air Service?
+      description: Why do you want to join CPAS specifically?
+      placeholder: "e.g., I'm drawn to the New Zealand scenery and the mix of helicopter/fixed-wing operations..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: availability
+    attributes:
+      label: 🕒 Weekly Availability
+      description: What times/days are you typically available for flights? Include your timezone.
+      placeholder: "e.g., Weekday evenings 7-10pm UTC, weekends flexible..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: preferred-operations
+    attributes:
+      label: ⛰️ Preferred Operations
+      description: Which CPAS operations interest you most?
+      placeholder: "e.g., Helicopter glacier tours, fixed-wing charters, mountain flying, scenic tours..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: 📝 Additional Information
+      description: Anything else you'd like us to know about your application?
+      placeholder: "Optional additional information..."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎉 Thank You for Applying!
+        - Your application will be reviewed by the CPAS team
+        - If selected, you'll receive an invitation to our Discord server
+        - You'll gain access to our operations manual, procedures, and flight scheduling
+        - For questions, contact us on Discord or via the CPAS website
+
+        **Blue skies and tailwinds!** ✈️🏔️
