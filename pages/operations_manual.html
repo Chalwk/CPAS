@@ -1,0 +1,286 @@
+<!-- Copyright (c) 2025 Jericho Crosby (Chalwk) - All Rights Reserved -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Operations Manual - Coastal Peaks Air Service</title>
+    <link href="../styles/operations.css" rel="stylesheet">
+    <link href="../styles/index.css" rel="stylesheet">
+    <link href="../styles/common.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container nav-container">
+        <a class="logo" href="../index.html">
+            <span class="logo-text">CPAS</span>
+            <span class="logo-subtitle">Coastal Peaks Air Service</span>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="fleet.html">Fleet</a></li>
+            <li><a href="members.html">Team</a></li>
+            <li><a href="routes.html">Routes</a></li>
+            <li><a href="training_structure.html">Training</a></li>
+            <li><a class="active" href="operations_manual.html">Operations</a></li>
+            <li><a href="../pages/addons.html">Add-Ons</a></li>
+            <li><a href="../index.html#discord">Join</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
+<section class="operations-section" style="margin-top: 70px;">
+    <div class="container">
+        <h2 class="section-title">CPAS Operations Manual</h2>
+        <p class="section-subtitle">
+            Basic guidelines for virtual charter operations - Keep it simple, keep it safe
+        </p>
+
+        <div class="manual-toc">
+            <h3><i class="fas fa-list"></i> Quick Navigation</h3>
+            <div class="toc-links">
+                <a href="#general">General Rules</a>
+                <a href="#preflight">Pre-Flight</a>
+                <a href="#inflight">In-Flight</a>
+                <a href="#aircraft">Aircraft Use</a>
+                <a href="#reporting">Reporting</a>
+                <a href="#safety">Safety</a>
+            </div>
+        </div>
+
+        <div class="manual-section" id="general">
+            <h3><i class="fas fa-flag"></i> General Operating Rules</h3>
+            <div class="rules-grid">
+                <div class="rule-item">
+                    <h4>1. Virtual, Not Real</h4>
+                    <p>Remember this is simulation. Follow real-world principles, but don't stress over perfection.</p>
+                </div>
+                <div class="rule-item">
+                    <h4>2. Have Fun</h4>
+                    <p>The primary goal is enjoyable, realistic virtual flying. Don't make it a chore.</p>
+                </div>
+                <div class="rule-item">
+                    <h4>3. Respect Limits</h4>
+                    <p>Fly within your skill level and aircraft capabilities. No need to prove anything.</p>
+                </div>
+                <div class="rule-item">
+                    <h4>4. Help Others</h4>
+                    <p>We're a community. Help new pilots, share tips, be supportive.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="manual-section" id="preflight">
+            <h3><i class="fas fa-clipboard-list"></i> Pre-Flight Procedures</h3>
+
+            <div class="procedure-card">
+                <h4>Basic Pre-Flight (All Flights)</h4>
+                <ol>
+                    <li><strong>Choose Aircraft:</strong> Select appropriate aircraft for route and rank</li>
+                    <li><strong>Check Weather:</strong> Use in-game weather or add-ons. Don't fly in impossible
+                        conditions
+                    </li>
+                    <li><strong>Flight Plan:</strong> Know your route, alternates, and fuel requirements</li>
+                    <li><strong>Checklists:</strong> Complete the appropriate checklist for your aircraft</li>
+                    <li><strong>Briefing:</strong> For complex flights, consider a quick self-briefing</li>
+                </ol>
+            </div>
+
+            <div class="procedure-card">
+                <h4>Charter-Specific Preparation</h4>
+                <ul>
+                    <li><strong>Passenger Count:</strong> Don't exceed aircraft capacity</li>
+                    <li><strong>Route Knowledge:</strong> Familiarize with terrain, airspace, challenges</li>
+                    <li><strong>Alternates:</strong> Always have a backup plan (weather, mechanical)</li>
+                    <li><strong>Time Planning:</strong> Allow buffer for delays</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="manual-section" id="inflight">
+            <h3><i class="fas fa-plane"></i> In-Flight Operations</h3>
+
+            <div class="inflight-rules">
+                <div class="rule-box">
+                    <h5><i class="fas fa-comment-alt"></i> Communication</h5>
+                    <ul>
+                        <li>Use appropriate frequencies (see route pages)</li>
+                        <li>No ATC? Use Common Traffic Advisory Frequency (CTAF) concepts</li>
+                        <li>Position reports on longer flights (self-announce)</li>
+                    </ul>
+                </div>
+
+                <div class="rule-box">
+                    <h5><i class="fas fa-mountain"></i> Terrain & Weather</h5>
+                    <ul>
+                        <li>Maintain safe altitude above terrain</li>
+                        <li>Turn back if weather deteriorates</li>
+                        <li>Mountain flying: know valley directions and escape routes</li>
+                    </ul>
+                </div>
+
+                <div class="rule-box">
+                    <h5><i class="fas fa-gas-pump"></i> Fuel Management</h5>
+                    <ul>
+                        <li>Land with at least 45 minutes fuel reserve</li>
+                        <li>Monitor fuel consumption in mountains (higher burn)</li>
+                        <li>Plan refueling stops on long routes</li>
+                    </ul>
+                </div>
+
+                <div class="rule-box">
+                    <h5><i class="fas fa-user-friends"></i> Passenger Comfort</h5>
+                    <ul>
+                        <li>Smooth takeoffs and landings</li>
+                        <li>Gentle turns and altitude changes</li>
+                        <li>Point out scenery (in your imagination!)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="manual-section" id="aircraft">
+            <h3><i class="fas fa-cogs"></i> Aircraft Use Policy</h3>
+
+            <div class="aircraft-policy">
+                <h4>Aircraft Assignment by Rank</h4>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Aircraft</th>
+                        <th>Minimum Rank</th>
+                        <th>Notes</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Piper Tomahawk/Warrior</td>
+                        <td>Pilot Under Training</td>
+                        <td>Training and local flights</td>
+                    </tr>
+                    <tr>
+                        <td>R44, Piper Archer</td>
+                        <td>Charter Pilot</td>
+                        <td>Basic charter operations</td>
+                    </tr>
+                    <tr>
+                        <td>R66, Piper Arrow, H125</td>
+                        <td>Senior Charter Pilot</td>
+                        <td>Complex charters, mountain</td>
+                    </tr>
+                    <tr>
+                        <td>H145</td>
+                        <td>Lead Pilot</td>
+                        <td>Advanced/Special operations</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="policy-note">
+                <h5><i class="fas fa-exclamation-triangle"></i> Important Notes</h5>
+                <ul>
+                    <li>Fly aircraft you're comfortable with - not just highest available</li>
+                    <li>Complete aircraft-specific training before first flight</li>
+                    <li>Report any persistent aircraft issues in Discord</li>
+                    <li>Custom liveries welcome but keep professional appearance</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="manual-section" id="reporting">
+            <h3><i class="fas fa-file-alt"></i> Flight Reporting (Optional)</h3>
+
+            <div class="reporting-simple">
+                <p>We don't require complex reporting, but sharing flights helps the community:</p>
+
+                <div class="report-options">
+                    <div class="option">
+                        <h5><i class="fab fa-discord"></i> Discord Sharing</h5>
+                        <p>Post screenshots, share experiences, ask questions</p>
+                    </div>
+                    <div class="option">
+                        <h5><i class="fas fa-route"></i> Route Completion</h5>
+                        <p>Mention which routes you've flown for progression tracking</p>
+                    </div>
+                    <div class="option">
+                        <h5><i class="fas fa-lightbulb"></i> Feedback</h5>
+                        <p>Suggest improvements to routes or procedures</p>
+                    </div>
+                </div>
+
+                <div class="report-note">
+                    <i class="fas fa-info-circle"></i>
+                    <p><strong>Note:</strong> Reporting is encouraged but not mandatory. We trust pilots to manage their
+                        own progression.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="manual-section" id="safety">
+            <h3><i class="fas fa-shield-alt"></i> Safety Philosophy</h3>
+
+            <div class="safety-principles">
+                <div class="principle">
+                    <h4><i class="fas fa-brain"></i> 1. Good Judgment</h4>
+                    <p>The most important safety device is between your ears. If it doesn't feel right, don't do it.</p>
+                </div>
+
+                <div class="principle">
+                    <h4><i class="fas fa-undo"></i> 2. Turn Back Option</h4>
+                    <p>Always have an "out". Weather worsening? Terrain questionable? Turn back or divert.</p>
+                </div>
+
+                <div class="principle">
+                    <h4><i class="fas fa-book"></i> 3. Know Limitations</h4>
+                    <p>Your personal limits, aircraft limits, weather limits. Respect them all.</p>
+                </div>
+
+                <div class="principle">
+                    <h4><i class="fas fa-users"></i> 4. Virtual Safety Culture</h4>
+                    <p>We learn from each other. Share experiences, discuss incidents (virtual ones!), improve
+                        together.</p>
+                </div>
+            </div>
+
+            <div class="emergency-note">
+                <h5><i class="fas fa-first-aid"></i> Emergency Procedures (Virtual)</h5>
+                <ul>
+                    <li><strong>Engine Failure:</strong> Practice in safe areas. Know best glide, landing spots</li>
+                    <li><strong>Weather Emergency:</strong> 180° turn, descend if necessary, divert</li>
+                    <li><strong>Lost Procedures:</strong> Climb for visibility, use GPS, landmarks</li>
+                    <li><strong>Medical Emergency:</strong> In simulation, this means landing ASAP at nearest suitable
+                        field
+                    </li>
+                </ul>
+                <p class="note-small">Remember: This is simulation. Pause, reset, or restart if needed. No real lives at
+                    risk.</p>
+            </div>
+        </div>
+
+        <div class="manual-footer">
+            <div class="footer-box">
+                <h4><i class="fas fa-heart"></i> Final Thoughts</h4>
+                <p>This manual is a starting point. As our virtual charter grows, we'll expand it together.</p>
+                <p>The spirit of CPAS is: <strong>Realistic enjoyment, mutual support, and celebrating the amazing
+                    scenery of virtual New Zealand.</strong></p>
+                <p>Questions? Suggestions? Chat in Discord. We're all here for the love of flying.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-copyright"><p></p></footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

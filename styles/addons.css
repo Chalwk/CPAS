@@ -1,0 +1,208 @@
+/* Copyright (c) 2025 Jericho Crosby (Chalwk) - All Rights Reserved */
+
+.addons-section {
+    padding: 40px 0;
+}
+
+.addons-categories {
+    margin-top: 30px;
+}
+
+.category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.category-tab {
+    background: #f3f4f6;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    color: #374151;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+}
+
+.category-tab:hover {
+    background: #e5e7eb;
+}
+
+.category-tab.active {
+    background: #2d6bc9;
+    color: white;
+}
+
+.category-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.category-content.active {
+    display: block;
+}
+
+.category-description {
+    color: #6b7280;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.addon-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.addon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.addon-header {
+    background: linear-gradient(135deg, #2d6bc9, #1e40af);
+    color: white;
+    padding: 20px;
+}
+
+.addon-header h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+}
+
+.addon-type {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.addon-icon {
+    text-align: center;
+    padding: 20px;
+    background: #f8fafc;
+}
+
+.addon-icon i {
+    font-size: 3rem;
+    color: #2d6bc9;
+}
+
+.addon-details {
+    padding: 20px;
+}
+
+.addon-details p {
+    margin-bottom: 10px;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+.addon-details strong {
+    color: #1f2937;
+}
+
+.btn-small {
+    display: inline-block;
+    background: #2d6bc9;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.btn-small:hover {
+    background: #1e40af;
+}
+
+.btn-small i {
+    margin-right: 5px;
+}
+
+.addons-notes {
+    margin-top: 50px;
+}
+
+.note-box {
+    background: #fef3c7;
+    border-left: 5px solid #f59e0b;
+    padding: 25px;
+    border-radius: 8px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.note-box i {
+    font-size: 1.8rem;
+    color: #f59e0b;
+    margin-top: 5px;
+}
+
+.note-box h4 {
+    margin-top: 0;
+    color: #92400e;
+}
+
+.note-box ul, .note-box ol {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.note-box li {
+    margin-bottom: 8px;
+    color: #78350f;
+}
+
+.note-box p {
+    color: #78350f;
+    margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .category-tabs {
+        justify-content: center;
+    }
+
+    .category-tab {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .addons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .note-box {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .note-box i {
+        align-self: center;
+    }
+}

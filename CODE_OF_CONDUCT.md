@@ -267,6 +267,7 @@ By participating in Coastal Peaks Air Service, you agree to:
 
 ### Updates to Guidelines
 
-Guidelines may be updated periodically. Changes will be announced in Discord and on our [website](https://chalwk.github.io/CPAS)
+Guidelines may be updated periodically. Changes will be announced in Discord and on
+our [website](https://chalwk.github.io/CPAS)
 
 ---

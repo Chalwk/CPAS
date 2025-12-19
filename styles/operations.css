@@ -1,0 +1,198 @@
+/* Copyright (c) 2025 Jericho Crosby (Chalwk) - All Rights Reserved */
+
+.operations-section {
+    padding: 40px 0;
+}
+
+.manual-toc {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 30px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.toc-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.toc-links a {
+    background: #f3f4f6;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #374151;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.toc-links a:hover {
+    background: #2d6bc9;
+    color: white;
+}
+
+.manual-section {
+    margin: 50px 0;
+    padding-top: 30px;
+    border-top: 2px solid #e5e7eb;
+}
+
+.rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.rule-item {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #2d6bc9;
+}
+
+.procedure-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 25px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.procedure-card ol, .procedure-card ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.procedure-card li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.inflight-rules {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.rule-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.rule-box h5 i {
+    margin-right: 10px;
+    color: #2d6bc9;
+}
+
+.aircraft-policy {
+    overflow-x: auto;
+    margin: 30px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+thead {
+    background: #2d6bc9;
+    color: white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+.policy-note {
+    background: #fef3c7;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 25px 0;
+    border-left: 5px solid #f59e0b;
+}
+
+.report-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.option {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.report-note {
+    background: #f0f9ff;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.safety-principles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.principle {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.emergency-note {
+    background: #fef2f2;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 30px 0;
+    border-left: 5px solid #ef4444;
+}
+
+.note-small {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.manual-footer {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid #e5e7eb;
+}
+
+.footer-box {
+    background: linear-gradient(135deg, #2d6bc9, #1e40af);
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+}

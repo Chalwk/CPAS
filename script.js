@@ -63,7 +63,7 @@ if (tabButtons.length > 0) {
 }
 
 function highlightNavOnScroll() {
-    const sections = document.querySelectorAll('section[id]');
+    const sections = document.querySelectorAll('section[id], header[id]');
     const scrollPosition = window.scrollY + 100;
 
     sections.forEach(section => {
