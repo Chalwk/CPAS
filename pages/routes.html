@@ -1,0 +1,1460 @@
+<!-- Copyright (c) 2025 Jericho Crosby (Chalwk) - All Rights Reserved -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Charter Routes - Coastal Peaks Air Service</title>
+    <style>
+        .routes-section {
+            background-color: white;
+            padding: 80px 0;
+        }
+
+        .routes-tabs {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .tabs-header {
+            display: flex;
+            background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 15px 30px;
+            background: none;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #718096;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .tab-btn.active {
+            color: #2d6bc9;
+            border-bottom: 3px solid #2d6bc9;
+            background: white;
+        }
+
+        .tab-btn:hover:not(.active) {
+            background: rgba(45, 107, 201, 0.05);
+            color: #2d3748;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 30px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .routes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .route-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .route-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .route-header {
+            background: linear-gradient(135deg, #1a365d, #2d4a7c);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .route-header h3 {
+            margin: 0;
+            color: white;
+            font-size: 1.4rem;
+        }
+
+        .route-distance {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .route-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .route-aircraft {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #2d6bc9;
+            font-weight: 600;
+        }
+
+        .route-aircraft i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .route-description {
+            color: #2d3748;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            flex-grow: 0;
+        }
+
+        .route-highlights {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            flex-grow: 0;
+        }
+
+        .route-highlights h4 {
+            color: #1a365d;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .route-highlights h4 i {
+            margin-right: 8px;
+        }
+
+        .route-highlights ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .route-highlights li {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            color: #718096;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .route-highlights li:before {
+            content: "•";
+            color: #2d6bc9;
+            position: absolute;
+            left: 0;
+        }
+
+        .route-airspace {
+            background: #f0f9ff;
+            color: #1a365d;
+            border-left: 3px solid #2d6bc9;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            flex-grow: 0;
+        }
+
+        .route-airspace h4 {
+            color: #1a365d;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .route-airspace h4 i {
+            margin-right: 8px;
+            color: #2d6bc9;
+        }
+
+        .route-airspace ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .route-airspace li {
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            color: #2d3748;
+            padding-left: 18px;
+            position: relative;
+        }
+
+        .route-airspace li:before {
+            content: "•";
+            color: #2d6bc9;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .route-alt, .route-warning {
+            font-size: 0.9rem;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            flex-grow: 0;
+        }
+
+        .route-alt {
+            background: #e6f7ff;
+            color: #0066cc;
+            border-left: 3px solid #0066cc;
+        }
+
+        .route-warning {
+            background: #fff7e6;
+            color: #d46b08;
+            border-left: 3px solid #d46b08;
+            display: flex;
+            align-items: center;
+        }
+
+        .route-warning i {
+            margin-right: 5px;
+        }
+
+        .ml-2 {
+            margin-left: 8px;
+        }
+
+        .mt-3 {
+            margin-top: 15px;
+        }
+
+        .itineraries-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .itinerary-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .itinerary-card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .itinerary-header {
+            background: linear-gradient(135deg, #2d6bc9, #1a4d8c);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .itinerary-header h3 {
+            margin: 0;
+            color: white;
+            font-size: 1.4rem;
+        }
+
+        .itinerary-duration {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .itinerary-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .itinerary-day {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+            flex-grow: 0;
+        }
+
+        .itinerary-day:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .itinerary-day h4 {
+            color: #1a365d;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .itinerary-day h4 i {
+            margin-right: 8px;
+        }
+
+        .itinerary-day p {
+            margin: 5px 0;
+            font-size: 0.95rem;
+            color: #2d3748;
+        }
+
+        .itinerary-day small {
+            display: block;
+            color: #718096;
+            font-size: 0.85rem;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .itinerary-aircraft {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: auto;
+            font-size: 0.95rem;
+            color: #2d3748;
+            flex-shrink: 0;
+        }
+
+        .routes-note {
+            margin-top: 40px;
+        }
+
+        .note-box {
+            background: linear-gradient(to right, #f8fafc, #e6f0ff);
+            border-left: 4px solid #2d6bc9;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .note-box i {
+            color: #2d6bc9;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .note-box p {
+            margin: 0;
+            color: #2d3748;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .routes-section {
+                padding: 60px 0;
+            }
+
+            .routes-grid,
+            .itineraries-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .tabs-header {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .tab-btn {
+                width: 100%;
+                text-align: left;
+                padding: 15px 20px;
+                border-bottom: 1px solid #e2e8f0;
+                min-width: auto;
+            }
+
+            .tab-btn.active {
+                border-bottom: 3px solid #2d6bc9;
+            }
+
+            .tab-content {
+                padding: 20px;
+            }
+
+            .route-header,
+            .itinerary-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .route-distance,
+            .itinerary-duration {
+                align-self: flex-start;
+            }
+
+            .note-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .note-box i {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .aircraft-card,
+            .route-card,
+            .itinerary-card {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media print {
+            .routes-grid,
+            .itineraries-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link href="../styles/index.css" rel="stylesheet">
+    <link href="../styles/common.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container nav-container">
+        <a class="logo" href="../index.html">
+            <span class="logo-text">CPAS</span>
+            <span class="logo-subtitle">Coastal Peaks Air Service</span>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="fleet.html">Our Fleet</a></li>
+            <li><a class="active" href="routes.html">Charter Routes</a></li>
+            <li><a href="checklists/checklists.html">Checklists</a></li>
+            <li><a href="../index.html#discord">Join</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
+<section class="routes-section" style="margin-top: 70px;">
+    <div class="container">
+        <h2 class="section-title">Charter Routes</h2>
+        <p class="section-subtitle">Real-world charter routes across the South Island, designed for virtual operations
+            in MSFS</p>
+
+        <div class="routes-tabs">
+            <div class="tabs-header">
+                <button class="tab-btn active" data-tab="fixed-wing">Fixed-Wing Routes</button>
+                <button class="tab-btn" data-tab="helicopter">Helicopter Routes</button>
+                <button class="tab-btn" data-tab="scenic-tours">Scenic Tours</button>
+                <button class="tab-btn" data-tab="heli-hike">Heli-Hike Tours</button>
+                <button class="tab-btn" data-tab="itineraries">Multi-Day Itineraries</button>
+            </div>
+
+            <div class="tab-content active" id="fixed-wing">
+                <div class="routes-grid">
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h3>NZCH → NZQN</h3>
+                            <span class="route-distance">274 NM</span>
+                        </div>
+                        <div class="route-body">
+                            <div class="route-aircraft">
+                                <i class="fas fa-plane"></i>
+                                <span>Piper Archer IIIArcher II / Warrior II</span>
+                            </div>
+                            <p class="route-description">Christchurch to Queenstown via Mackenzie Country. Scenic
+                                routing over Lake Tekapo and Mount Cook region.</p>
+                            <div class="route-highlights">
+                                <h4><i class="fas fa-mountain"></i> Highlights:</h4>
+                                <ul>
+                                    <li>Southern Alps crossing</li>
+                                    <li>Lake Tekapo overflight</li>
+                                    <li>Queenstown approach over The Remarkables</li>
+                                </ul>
+                            </div>
+                            <div class="route-airspace">
+                                <h4><i class="fas fa-tower"></i> Airspace & Procedures:</h4>
+                                <ul>
+                                    <li>Depart NZCH: Contact Christchurch Approach 119.1</li>
+                                    <li>Transition through Christchurch Control Area (CTA) - FL150 or below</li>
+                                    <li>Mackenzie Basin: Class G airspace, remain below 13,000ft</li>
+                                    <li>NZQN arrival: Queenstown Control 124.8, expect visual approach Runway 23</li>
+                                    <li>RNAV (GNSS) approaches available at NZQN</li>
+                                </ul>
+                            </div>
+                            <div class="route-alt">
+                                <strong>Alternate:</strong> NZMC (Mount Cook) for stopover
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h3>NZCH → NZHK</h3>
+                            <span class="route-distance">103 NM</span>
+                        </div>
+                        <div class="route-body">
+                            <div class="route-aircraft">
+                                <i class="fas fa-plane"></i>
+                                <span>Piper Warrior / Archer</span>
+                            </div>
+                            <p class="route-description">Christchurch to Hokitika via Arthur's Pass. Classic West Coast
+                                access route.</p>
+                            <div class="route-highlights">
+                                <h4><i class="fas fa-mountain"></i> Highlights:</h4>
+                                <ul>
+                                    <li>Arthur's Pass crossing</li>
+                                    <li>Coastal approach to NZHK</li>
+                                    <li>West Coast rainforest views</li>
+                                </ul>
+                            </div>
+                            <div class="route-airspace">
+                                <h4><i class="fas fa-tower"></i> Airspace & Procedures:</h4>
+                                <ul>
+                                    <li>Depart NZCH: Christchurch Tower 118.1</li>
+                                    <li>Westbound via Waimakariri River corridor</li>
+                                    <li>Arthur's Pass: Class G, maintain 7,500ft MSL minimum for terrain clearance</li>
+                                    <li>NZHK arrival: Hokitika Tower 118.7</li>
+                                    <li>Hokitika Control Zone active 0800-1700 local</li>
+                                    <li>Non-radar area west of divide, position reporting required</li>
+                                </ul>
+                            </div>
+                            <div class="route-alt">
+                                <strong>Use:</strong> Mining/industry support, coastal access
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h3>NZCH → NZMC</h3>
+                            <span class="route-distance">113 NM</span>
+                        </div>
+                        <div class="route-body">
+                            <div class="route-aircraft">
+                                <i class="fas fa-plane"></i>
+                                <span>Piper Warrior / Archer</span>
+                            </div>
+                            <p class="route-description">Alpine access to Mount Cook Airport. Challenging mountain
+                                conditions.</p>
+                            <div class="route-highlights">
+                                <h4><i class="fas fa-exclamation-triangle"></i> Challenges:</h4>
+                                <ul>
+                                    <li>Runway 05/23 at 1,800 ft AMSL</li>
+                                    <li>Mountain turbulence</li>
+                                    <li>Rapid weather changes</li>
+                                </ul>
+                            </div>
+                            <div class="route-airspace">
+                                <h4><i class="fas fa-tower"></i> Airspace & Procedures:</h4>
+                                <ul>
+                                    <li>Mount Cook Flight Information Zone (FIZ)</li>
+                                    <li>Mandatory area frequency 122.5 within 10NM</li>
+                                    <li>Class G airspace, no ATC service</li>
+                                    <li>VFR only - no instrument approaches</li>
+                                    <li>Must maintain visual contact with terrain at all times</li>
+                                    <li>Mountain wave activity common - avoid lee of ranges</li>
+                                </ul>
+                            </div>
+                            <div class="route-alt">
+                                <strong>Use:</strong> Alpine lodge transfers, tourism, SAR training
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h3>NZHK ↔ NZGY</h3>
+                            <span class="route-distance">22 NM</span>
+                        </div>
+                        <div class="route-body">
+                            <div class="route-aircraft">
+                                <i class="fas fa-helicopter"></i>
+                                <span>R44, R66 or Light Fixed-Wing</span>
+                            </div>
+                            <p class="route-description">West Coast shuttle between Hokitika and Greymouth.</p>
+                            <div class="route-highlights">
+                                <h4><i class="fas fa-water"></i> Coastal Flight:</h4>
+                                <ul>
+                                    <li>Tasman Sea coastline</li>
+                                    <li>Low-level coastal views</li>
+                                    <li>Quick 15-minute flight</li>
+                                </ul>
+                            </div>
+                            <div class="route-airspace">
+                                <h4><i class="fas fa-tower"></i> Airspace & Procedures:</h4>
+                                <ul>
+                                    <li>NZHK: Hokitika Control Zone (Class D) 118.7</li>
+                                    <li>NZGY: Greymouth Flight Information Zone (FIZ) 122.7</li>
+                                    <li>Coastal corridor: Class G below 1500ft AGL</li>
+                                    <li>VFR flight following available from Hokitika Tower</li>
+                                    <li>Watch for military low-level training (NOTAMs)</li>
+                                </ul>
+                            </div>
+                            <div class="route-alt">
+                                <strong>Use:</strong> Inter-town transfers, medical evac training
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="helicopter">
+                <div class="routes-grid">
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h3>Extended Range West Coast</h3>
+                            <span class="route-distance">NZCH → NZMO (Milford)</span>
+                        </div>
+                        <div class="route-body">
+                            <div class="route-aircraft">
+                                <i class="fas fa-helicopter"></i>
+                                <span>R66 Specialized Operations</span>
+                            </div>
+                            <p class="route-description">Christchurch direct to Milford Sound with the R66's extended
+                                range and turbine power. Perfect for premium tours and time-sensitive transfers.</p>
+                            <div class="route-highlights">
+                                <h4><i class="fas fa-gas-pump"></i> R66 Advantages:</h4>
+                                <ul>
+                                    <li>300+ nm range for non-stop flights</li>
+                                    <li>Turbine reliability for alpine conditions</li>
+                                    <li>Enclosed luggage compartment for passenger gear</li>
+                                    <li>Higher cruise speed (120+ kts)</li>
+                                </ul>
+                            </div>
+                            <div class="route-airspace">
+                                <h4><i class="fas fa-tower"></i> Airspace & Procedures:</h4>
+                                <ul>
+                                    <li>NZCH departure: Christchurch Tower 118.1</li>
+                                    <li>Route: Direct or via Arthurs Pass depending on weather</li>
+                                    <li>Milford Sound (NZMO): Special rules airspace 122.1</li>
+                                    <li>Fuel planning critical - limited refueling options enroute</li>
+                                    <li>Consider Te Anau (NZMO) for weather alternates</li>
+                                    <li>Turbine performance allows higher altitude routing over ranges</li>
+                                </ul>
+                            </div>
+                            <div class="route-warning">
+                                <i class="fas fa-exclamation-circle"></i> Requires turbine helicopter endorsement
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h3>Glacier Access</h3>
+                            <span class="route-distance">NZHK → Franz Josef</span>
+                        </div>
+                        <div class="route-body">
+                            <div class="route-aircraft">
+                                <i class="fas fa-helicopter"></i>
+                                <span>H125 / R66 / R44</span>
+                            </div>
+                            <p class="route-description">Hokitika to Franz Josef Glacier for glacier tours and alpine
+                                drops.</p>
+                            <div class="route-highlights">
+                                <h4><i class="fas fa-snowflake"></i> Operations:</h4>
+                                <ul>
+                                    <li>Confined landing zones</li>
+                                    <li>Glacier landing practice</li>
+                                    <li>Mountain weather navigation</li>
+                                </ul>
+                            </div>
+                            <div class="route-airspace">
+                                <h4><i class="fas fa-tower"></i> Airspace & Procedures:</h4>
+                                <ul>
+                                    <li>Depart NZHK: Contact Hokitika Tower 118.7</li>
+                                    <li>Franz Josef Glacier area: Class G, uncontrolled</li>
+                                    <li>Common Traffic Advisory Frequency (CTAF): 123.1</li>
+                                    <li>Glacier landing zones: Helicopter Landing Areas (HLAs)</li>
+                                    <li>Mountain flying rules apply: one-way valley traffic</li>
+                                    <li>Watch for other tour operators - high traffic in summer</li>
+                                </ul>
+                            </div>
+                            <div class="route-warning">
+                                <i class="fas fa-exclamation-circle"></i> Requires mountain flying experience
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h3>Remote Lodge Access</h3>
+                            <span class="route-distance">NZQN → Minaret Station</span>
+                        </div>
+                        <div class="route-body">
+                            <div class="route-aircraft">
+                                <i class="fas fa-helicopter"></i>
+                                <span>H145 / R66 / H125</span>
+                            </div>
+                            <p class="route-description">Queenstown to remote high-country stations and luxury
+                                lodges.</p>
+                            <div class="route-highlights">
+                                <h4><i class="fas fa-home"></i> Destinations:</h4>
+                                <ul>
+                                    <li>Private farm strips</li>
+                                    <li>Grass landing pads</li>
+                                    <li>Alpine valley approaches</li>
+                                </ul>
+                            </div>
+                            <div class="route-airspace">
+                                <h4><i class="fas fa-tower"></i> Airspace & Procedures:</h4>
+                                <ul>
+                                    <li>Depart NZQN: Queenstown Tower 124.8</li>
+                                    <li>Wakatipu Basin: Class D airspace</li>
+                                    <li>Minaret Station: Private airstrip in Class G</li>
+                                    <li>Lodge frequencies: 122.9 (CTAF for station airstrips)</li>
+                                    <li>Mountain radio service: 130.6 for area broadcasts</li>
+                                    <li>Terrain clearance: 500ft minimum over uninhabited areas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h3>Coastal Survey</h3>
+                            <span class="route-distance">NZGY → Punakaiki</span>
+                        </div>
+                        <div class="route-body">
+                            <div class="route-aircraft">
+                                <i class="fas fa-helicopter"></i>
+                                <span>R66 / R44 / H125</span>
+                            </div>
+                            <p class="route-description">Low-level coastal survey along the West Coast.</p>
+                            <div class="route-highlights">
+                                <h4><i class="fas fa-binoculars"></i> Missions:</h4>
+                                <ul>
+                                    <li>Pancake Rocks aerial photography</li>
+                                    <li>Coastal erosion surveys</li>
+                                    <li>Tourism scenic flights</li>
+                                </ul>
+                            </div>
+                            <div class="route-airspace">
+                                <h4><i class="fas fa-tower"></i> Airspace & Procedures:</h4>
+                                <ul>
+                                    <li>NZGY: Greymouth FIZ 122.7</li>
+                                    <li>Coastal route: Class G below 1500ft</li>
+                                    <li>Paparoa National Park: Flight below 500ft requires special permission</li>
+                                    <li>Low-level corridors: Follow SH6 highway for navigation</li>
+                                    <li>Marine VHF monitoring: Channel 16 for maritime activity</li>
+                                    <li>Military Restricted Area R380 occasionally active - check NOTAMs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="heli-hike">
+                <h3 style="text-align: center; margin-bottom: 30px; color: #1a365d;">Glacier Heli-Hike Tours from Mount
+                    Cook & Glentanner</h3>
+                <p class="section-subtitle" style="text-align: center; margin-bottom: 40px;">Based on real-world
+                    Helicopter Line operations. Specialized glacier landings and guided hikes.</p>
+
+                <div class="routes-grid">
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h3>Tasman Glacier Heli-Hike</h3>
+                            <span class="route-distance">2-3 hours</span>
+                        </div>
+                        <div class="route-body">
+                            <div class="route-aircraft">
+                                <i class="fas fa-helicopter"></i>
+                                <span>Airbus H145 / H125 / R66</span>
+                            </div>
+                            <p class="route-description">The ultimate glacier experience. Land on the Tasman Glacier for
+                                a guided hike among seracs and ice formations. Based on real-world Helicopter Line
+                                tours.</p>
+                            <div class="route-highlights">
+                                <h4><i class="fas fa-hiking"></i> Tour Features:</h4>
+                                <ul>
+                                    <li>Landing at 2,200m on the Tasman Glacier</li>
+                                    <li>45-60 minute guided hike with crampons</li>
+                                    <li>Views of Hochstetter Icefall</li>
+                                    <li>Blue ice exploration</li>
+                                    <li>Glacier geology interpretation</li>
+                                </ul>
+                            </div>
+                            <div class="route-airspace">
+                                <h4><i class="fas fa-tower"></i> Operational Details:</h4>
+                                <ul>
+                                    <li>Depart from: Glentanner Station or Mount Cook Airport</li>
+                                    <li>Tasman Glacier Landing Zone: S43° 37.5' E170° 10.5'</li>
+                                    <li>Mount Cook Flight Information Zone (FIZ) - 122.5 MHz</li>
+                                    <li>Glacier landing requires special training</li>
+                                    <li>Monitor mountain weather: 130.6 MHz</li>
+                                    <li>H145 preferred for group tours (up to 8 passengers)</li>
+                                    <li>R66 for premium small groups (4 passengers)</li>
+                                </ul>
+                            </div>
+                            <div class="route-alt">
+                                <strong>Real-World Reference:</strong> Helicopter Line's "Tasman Glacier Heli Hike" (3
+                                hours)
+                            </div>
+                            <div class="route-warning">
+                                <i class="fas fa-exclamation-triangle"></i> Glacier conditions change rapidly - daily
+                                briefings required
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h3>Alpine Explorer Heli-Hike</h3>
+                            <span class="route-distance">1.5-2 hours</span>
+                        </div>
+                        <div class="route-body">
+                            <div class="route-aircraft">
+                                <i class="fas fa-helicopter"></i>
+                                <span>H125 / R66 / H145</span>
+                            </div>
+                            <p class="route-description">Multiple alpine landings with short hikes. Experience different
+                                terrains from glacier to rocky ridges.</p>
+                            <div class="route-highlights">
+                                <h4><i class="fas fa-mountain"></i> Landing Sites:</h4>
+                                <ul>
+                                    <li>Sealy Range ridge landing (1,800m)</li>
+                                    <li>Hooker Valley overlook</li>
+                                    <li>Blue Lakes area (ancient glacier terminal)</li>
+                                    <li>Optional: Tasman Glacier terminal lake</li>
+                                </ul>
+                            </div>
+                            <div class="route-airspace">
+                                <h4><i class="fas fa-tower"></i> Operational Details:</h4>
+                                <ul>
+                                    <li>Multiple confined area landings</li>
+                                    <li>Route: NZMC → Sealy Range → Hooker Valley → Blue Lakes</li>
+                                    <li>All landings above 1,500m ASL</li>
+                                    <li>High density altitude operations</li>
+                                    <li>Passenger weight and balance critical</li>
+                                    <li>H125 excels in high-altitude performance</li>
+                                </ul>
+                            </div>
+                            <div class="route-alt">
+                                <strong>Real-World Reference:</strong> Helicopter Line's "Alpine Heli Hike" (2 hours)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h3>Summit View Heli-Hike</h3>
+                            <span class="route-distance">3-4 hours</span>
+                        </div>
+                        <div class="route-body">
+                            <div class="route-aircraft">
+                                <i class="fas fa-helicopter"></i>
+                                <span>H145 / H125 (Premium Experience)</span>
+                            </div>
+                            <p class="route-description">Land near the Main Divide for breathtaking views of
+                                Aoraki/Mount Cook. Includes alpine flora hike and glacier education.</p>
+                            <div class="route-highlights">
+                                <h4><i class="fas fa-eye"></i> Experience Includes:</h4>
+                                <ul>
+                                    <li>Landing at 2,400m near the Main Divide</li>
+                                    <li>360° views of Mount Cook, Tasman, and Hooker Glaciers</li>
+                                    <li>Alpine plant identification (mountain buttercup, snow gentians)</li>
+                                    <li>Glacier formation education</li>
+                                    <li>Photography session with professional guidance</li>
+                                </ul>
+                            </div>
+                            <div class="route-airspace">
+                                <h4><i class="fas fa-tower"></i> Operational Details:</h4>
+                                <ul>
+                                    <li>Highest landing at approximately 2,400m ASL</li>
+                                    <li>Extreme high-altitude operations</li>
+                                    <li>Turbine helicopters only (H145/H125 preferred)</li>
+                                    <li>Weather minimums: Cloud base 3,000ft, visibility 10km</li>
+                                    <li>Passenger oxygen available on H145</li>
+                                    <li>Maximum group size: 6 passengers</li>
+                                </ul>
+                            </div>
+                            <div class="route-alt">
+                                <strong>Real-World Reference:</strong> Premium "Mount Cook Summit Experience"
+                            </div>
+                            <div class="route-warning">
+                                <i class="fas fa-exclamation-triangle"></i> Altitude sickness awareness required
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h3>Family Glacier Adventure</h3>
+                            <span class="route-distance">1-1.5 hours</span>
+                        </div>
+                        <div class="route-body">
+                            <div class="route-aircraft">
+                                <i class="fas fa-helicopter"></i>
+                                <span>H145 (Family groups) / R66</span>
+                            </div>
+                            <p class="route-description">Shorter, more accessible glacier experience suitable for
+                                families. Gentle landing with easy walking.</p>
+                            <div class="route-highlights">
+                                <h4><i class="fas fa-users"></i> Family-Friendly Features:</h4>
+                                <ul>
+                                    <li>Lower altitude glacier landing (1,800m)</li>
+                                    <li>Easy 30-minute walk on gentle ice</li>
+                                    <li>Ice cave exploration (when safe)</li>
+                                    <li>Glacier meltwater streams</li>
+                                    <li>Child-friendly interpretation</li>
+                                </ul>
+                            </div>
+                            <div class="route-airspace">
+                                <h4><i class="fas fa-tower"></i> Operational Details:</h4>
+                                <ul>
+                                    <li>Special family briefing included</li>
+                                    <li>Minimum age: 8 years</li>
+                                    <li>H145 accommodates up to 8 (ideal for families)</li>
+                                    <li>All safety equipment provided (crampons, helmets)</li>
+                                    <li>Warmer landing site selected for comfort</li>
+                                    <li>Shorter flight time ideal for children</li>
+                                </ul>
+                            </div>
+                            <div class="route-alt">
+                                <strong>Real-World Reference:</strong> Helicopter Line's "Family Glacier Adventure"
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h3>Photography Special</h3>
+                            <span class="route-distance">2.5-3.5 hours</span>
+                        </div>
+                        <div class="route-body">
+                            <div class="route-aircraft">
+                                <i class="fas fa-helicopter"></i>
+                                <span>R66 / H125 (Door-off operations)</span>
+                            </div>
+                            <p class="route-description">Designed for photographers. Multiple landings at golden hour
+                                with door-off flying for aerial photography.</p>
+                            <div class="route-highlights">
+                                <h4><i class="fas fa-camera"></i> Photography Opportunities:</h4>
+                                <ul>
+                                    <li>Door-off flying for clear shots</li>
+                                    <li>Sunrise/sunset landings</li>
+                                    <li>Multiple locations: Glacier, lakes, peaks</li>
+                                    <li>Professional photography guidance</li>
+                                    <li>Time at each location for setup</li>
+                                </ul>
+                            </div>
+                            <div class="route-airspace">
+                                <h4><i class="fas fa-tower"></i> Operational Details:</h4>
+                                <ul>
+                                    <li>Door-off operations require special briefing</li>
+                                    <li>Reduced passenger capacity for equipment</li>
+                                    <li>Early morning/late evening operations</li>
+                                    <li>R66 ideal for smoother ride and visibility</li>
+                                    <li>H125 with doors removed for best access</li>
+                                    <li>Maximum 3 photographers + guide</li>
+                                </ul>
+                            </div>
+                            <div class="route-alt">
+                                <strong>Real-World Reference:</strong> Custom photography charters
+                            </div>
+                            <div class="route-warning">
+                                <i class="fas fa-exclamation-triangle"></i> Door-off operations increase risk - special
+                                procedures
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h3>Alpine Lakes Heli-Hike</h3>
+                            <span class="route-distance">2-2.5 hours</span>
+                        </div>
+                        <div class="route-body">
+                            <div class="route-aircraft">
+                                <i class="fas fa-helicopter"></i>
+                                <span>All helicopters (varies by group size)</span>
+                            </div>
+                            <p class="route-description">Explore the stunning alpine lakes around Mount Cook. Land at
+                                secluded lakes for short hikes and photography.</p>
+                            <div class="route-highlights">
+                                <h4><i class="fas fa-water"></i> Lake Landings:</h4>
+                                <ul>
+                                    <li>Lake Mueller (glacial turquoise waters)</li>
+                                    <li>Hooker Lake (iceberg viewing)</li>
+                                    <li>Sealy Tarns (reflection photography)</li>
+                                    <li>Blue Lakes (color-changing waters)</li>
+                                </ul>
+                            </div>
+                            <div class="route-airspace">
+                                <h4><i class="fas fa-tower"></i> Operational Details:</h4>
+                                <ul>
+                                    <li>Lakeside confined area landings</li>
+                                    <li>Watch for wind gusts off water</li>
+                                    <li>R44 suitable for 2-3 passengers</li>
+                                    <li>H145 for larger groups to multiple lakes</li>
+                                    <li>All landings require firm, stable ground</li>
+                                    <li>Avoid disturbing wildlife habitats</li>
+                                </ul>
+                            </div>
+                            <div class="route-alt">
+                                <strong>Seasonal:</strong> Best November-April when lakes are ice-free
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="routes-note">
+                    <div class="note-box">
+                        <i class="fas fa-info-circle"></i>
+                        <p><strong>Real-World Heli-Hike Operations (Based on Helicopter Line):</strong>
+                            <br>• All passengers receive safety briefing and equipment (crampons, poles, helmets)
+                            <br>• Guides are qualified alpine/mountain guides
+                            <br>• Maximum guide-to-client ratio: 1:8
+                            <br>• Weather contingency: Full refund if cancelled due to weather
+                            <br>• Minimum age: 8 years for standard tours, 12 years for advanced hikes
+                            <br>• Fitness level: Moderate fitness required for glacier hiking
+                            <br>• Season: October to May (glacier conditions permitting)
+                            <br>• H145 operations allow for larger groups and more equipment
+                            <br>• R66 provides premium experience with quieter cabin
+                            <br>• All flights follow NZ CAA Adventure Aviation guidelines
+                        </p>
+                    </div>
+                </div>
+
+                <div class="routes-note" style="margin-top: 20px;">
+                    <div class="note-box">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p><strong>Glentanner Station Operations:</strong>
+                            <br>• Located at the head of Lake Pukaki (NZGT unofficial designation)
+                            <br>• Grass runway available for fixed-wing support
+                            <br>• Helipad coordinates: S43° 59.2' E170° 07.8'
+                            <br>• Fuel available: Jet A1 and Avgas (limited)
+                            <br>• Passenger facilities: Briefing room, equipment storage
+                            <br>• Often used as weather alternate to Mount Cook Airport
+                            <br>• Real-world base for Glacier Southern Lakes Helicopters
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="itineraries">
+                <div class="itineraries-container">
+                    <div class="itinerary-card">
+                        <div class="itinerary-header">
+                            <h3>South Island Scenic Tour</h3>
+                            <span class="itinerary-duration">3 Days</span>
+                        </div>
+                        <div class="itinerary-body">
+                            <div class="itinerary-day">
+                                <h4><i class="fas fa-calendar-day"></i> Day 1</h4>
+                                <p><strong>NZCH → NZMC</strong> - Mount Cook glacier flight training</p>
+                                <small>Airspace: Class G, Mount Cook FIZ 122.5</small>
+                            </div>
+                            <div class="itinerary-day">
+                                <h4><i class="fas fa-calendar-day"></i> Day 2</h4>
+                                <p><strong>NZMC → NZQN</strong> - Alpine crossing to Queenstown</p>
+                                <small>Airspace: Class D arrival, Queenstown Tower 124.8</small>
+                            </div>
+                            <div class="itinerary-day">
+                                <h4><i class="fas fa-calendar-day"></i> Day 3</h4>
+                                <p><strong>NZQN → NZHK → NZCH</strong> - Coastal return via West Coast</p>
+                                <small>Airspace: Multiple CTR transitions, flight planning required</small>
+                            </div>
+                            <div class="itinerary-aircraft">
+                                <strong>Aircraft:</strong> R66, H145 or Piper Archer IIIArcher II
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="itinerary-card">
+                        <div class="itinerary-header">
+                            <h3>West Coast Industry Support</h3>
+                            <span class="itinerary-duration">2 Days</span>
+                        </div>
+                        <div class="itinerary-body">
+                            <div class="itinerary-day">
+                                <h4><i class="fas fa-calendar-day"></i> Day 1</h4>
+                                <p><strong>NZCH → NZHK</strong> - Crew transport to West Coast</p>
+                                <p><strong>NZHK → Remote strips</strong> - Site survey flights</p>
+                                <small>Airspace: West Coast uncontrolled airstrips in Class G</small>
+                            </div>
+                            <div class="itinerary-day">
+                                <h4><i class="fas fa-calendar-day"></i> Day 2</h4>
+                                <p><strong>West Coast circuits</strong> - Equipment transport</p>
+                                <p><strong>NZHK → NZCH</strong> - Return with personnel</p>
+                                <small>Airspace: Hokitika CTR, then Arthur's Pass crossing</small>
+                            </div>
+                            <div class="itinerary-aircraft">
+                                <strong>Aircraft:</strong> R66, H125 or STOL-capable fixed-wing
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="itinerary-card">
+                        <div class="itinerary-header">
+                            <h3>Wine & Food Tour</h3>
+                            <span class="itinerary-duration">2 Days</span>
+                        </div>
+                        <div class="itinerary-body">
+                            <div class="itinerary-day">
+                                <h4><i class="fas fa-calendar-day"></i> Day 1</h4>
+                                <p><strong>NZCH → NZOU</strong> - Waitaki Valley vineyards</p>
+                                <p><strong>Scenic coastal flight</strong> - Oamaru to Moeraki</p>
+                                <small>Airspace: Coastal Class G, Oamaru CTAF 123.1</small>
+                            </div>
+                            <div class="itinerary-day">
+                                <h4><i class="fas fa-calendar-day"></i> Day 2</h4>
+                                <p><strong>NZOU → NZQN</strong> - Central Otago wineries</p>
+                                <p><strong>Return to NZCH</strong> via Mackenzie Country</p>
+                                <small>Airspace: Queenstown CTR, then Class G high country</small>
+                            </div>
+                            <div class="itinerary-aircraft">
+                                <strong>Aircraft:</strong> Piper Archer IIIArcher II (luggage capacity)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="scenic-tours">
+                <h3 style="text-align: center; margin-bottom: 30px; color: #1a365d;">Scenic Tours from
+                    Christchurch</h3>
+
+                <div class="routes-grid">
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h3>R66 Alpine Explorer</h3>
+                            <span class="route-distance">2-3 hours</span>
+                        </div>
+                        <div class="route-body">
+                            <div class="route-aircraft">
+                                <i class="fas fa-helicopter"></i>
+                                <span>Robinson R66</span>
+                            </div>
+                            <p class="route-description">Designed specifically for the R66's capabilities, this tour
+                                showcases its extended range and turbine performance in challenging alpine
+                                environments.</p>
+                            <div class="route-highlights">
+                                <h4><i class="fas fa-star"></i> R66 Exclusive Features:</h4>
+                                <ul>
+                                    <li>High-altitude lake landings (Lake Coleridge, Lake Heron)</li>
+                                    <li>Extended coastal range to Kaikoura Peninsula</li>
+                                    <li>Multiple remote high-country station visits in one trip</li>
+                                    <li>Turbine-powered hover capability for photography</li>
+                                </ul>
+                            </div>
+                            <div class="route-airspace">
+                                <h4><i class="fas fa-tower"></i> R66 Operational Notes:</h4>
+                                <ul>
+                                    <li>Turbine engine allows higher density altitude operations</li>
+                                    <li>Extended range enables direct routing over uninhabited areas</li>
+                                    <li>Enhanced instrumentation for marginal weather capability</li>
+                                    <li>CowanSim R66 includes realistic fuel burn and performance</li>
+                                    <li>Consider load planning - useful load ~1,200 lbs</li>
+                                    <li>Ideal for premium passenger experience with quieter cabin</li>
+                                </ul>
+                            </div>
+                            <div class="route-alt">
+                                <strong>Typical Route:</strong> NZCH → Arthur's Pass → West Coast glaciers → Return via
+                                different valley
+                            </div>
+                            <div class="route-warning">
+                                <i class="fas fa-exclamation-triangle"></i> R66 requires turbine management attention -
+                                monitor ITT and torque
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h3>Port Hills & Banks Peninsula</h3>
+                            <span class="route-distance">30-45 min</span>
+                        </div>
+                        <div class="route-body">
+                            <div class="route-aircraft">
+                                <i class="fas fa-helicopter"></i>
+                                <span>R66 / H125 / R44</span>
+                            </div>
+                            <p class="route-description">Departing from CAC, this tour offers breathtaking views of
+                                Christchurch, Lyttelton Harbour, and the volcanic formations of the Port Hills.</p>
+                            <div class="route-highlights">
+                                <h4><i class="fas fa-eye"></i> Highlights:</h4>
+                                <ul>
+                                    <li>Summit Road and Crater Rim</li>
+                                    <li>Lyttelton Harbour & Quail Island</li>
+                                    <li>Godley Head & Taylor's Mistake</li>
+                                    <li>Christchurch CBD bird's-eye view</li>
+                                </ul>
+                            </div>
+                            <div class="route-airspace">
+                                <h4><i class="fas fa-tower"></i> Airspace & Procedures:</h4>
+                                <ul>
+                                    <li>Christchurch Control Zone (CTR) transition approval required</li>
+                                    <li>Remain west of Christchurch Class C airspace (below 1500ft AGL)</li>
+                                    <li>Lyttelton Harbour: Class G, but within Christchurch CTR lateral boundaries</li>
+                                    <li>Godley Head: Coastal warning area - watch for ships' cranes</li>
+                                    <li>CTAF for Port Hills area: 123.1</li>
+                                    <li>Must remain clear of Christchurch International traffic patterns</li>
+                                </ul>
+                            </div>
+                            <div class="route-alt">
+                                <strong>Typical Route:</strong> NZCH → Port Hills → Lyttelton → Godley Head → Return to
+                                NZCH
+                            </div>
+                            <div class="route-warning">
+                                <i class="fas fa-wind"></i> Watch for nor'westers - common afternoon turbulence
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h3>Waimakariri & Pegasus Bay</h3>
+                            <span class="route-distance">45-60 min</span>
+                        </div>
+                        <div class="route-body">
+                            <div class="route-aircraft">
+                                <i class="fas fa-helicopter"></i>
+                                <span>R66 / H125 / H145</span>
+                            </div>
+                            <p class="route-description">Follow the braided Waimakariri River from the foothills to the
+                                sea, with stunning coastal views of Pegasus Bay and the Canterbury coastline.</p>
+                            <div class="route-highlights">
+                                <h4><i class="fas fa-water"></i> Key Features:</h4>
+                                <ul>
+                                    <li>Braided river patterns (unique aerial view)</li>
+                                    <li>Coastal wetlands & birdlife</li>
+                                    <li>Ashley River confluence</li>
+                                    <li>Kaiapoi & Woodend townships</li>
+                                    <li>Pegasus Bay coastline</li>
+                                </ul>
+                            </div>
+                            <div class="route-airspace">
+                                <h4><i class="fas fa-tower"></i> Airspace & Procedures:</h4>
+                                <ul>
+                                    <li>Waimakariri area has Class D airspace - remain west of controlled zone</li>
+                                    <li>Christchurch Control Area (CTA) floor at 1500ft in this sector</li>
+                                    <li>Kaiapoi zone: Transition at or below 1000ft AGL</li>
+                                    <li>Coastal route: Class G below 500ft along beach</li>
+                                    <li>Flight following available from Christchurch Information 124.4</li>
+                                    <li>Avoid Woodbourne Military Airspace (R383) to north</li>
+                                </ul>
+                            </div>
+                            <div class="route-alt">
+                                <strong>Route:</strong> NZCH → Waimakariri Gorge → River mouth → Coastal return
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h3>Canterbury Plains Scenic</h3>
+                            <span class="route-distance">1.5-2 hours</span>
+                        </div>
+                        <div class="route-body">
+                            <div class="route-aircraft">
+                                <i class="fas fa-plane"></i>
+                                <span>Piper Warrior II / Archer IIIArcher II</span>
+                            </div>
+                            <p class="route-description">Low-level flight over the patchwork of Canterbury farms with
+                                options for coastal or inland routing to various airstrips.</p>
+                            <div class="route-highlights">
+                                <h4><i class="fas fa-th-large"></i> Features:</h4>
+                                <ul>
+                                    <li>Patchwork farmland patterns</li>
+                                    <li>Rangiora (NZRT) & Ashburton (NZAS) overflights</li>
+                                    <li>Mt Hutt & Southern Alps backdrop</li>
+                                    <li>Multiple farm strip options</li>
+                                </ul>
+                            </div>
+                            <div class="route-airspace">
+                                <h4><i class="fas fa-tower"></i> Airspace & Procedures:</h4>
+                                <ul>
+                                    <li>Canterbury Plains: Mix of Class D and Class G</li>
+                                    <li>Rangiora (NZRT): Uncontrolled, CTAF 123.1</li>
+                                    <li>Ashburton (NZAS): Flight Information Zone, 122.7</li>
+                                    <li>Farm strips: All Class G, landowner permission required</li>
+                                    <li>Avoid Christchurch Control Zone without clearance</li>
+                                    <li>Military low-level routes through area - check NOTAMs</li>
+                                </ul>
+                            </div>
+                            <div class="route-alt">
+                                <strong>Optional Stops:</strong> Rangiora (NZRT), Ashburton (NZAS), or any farm strip
+                                with permission
+                            </div>
+                            <div class="route-warning">
+                                <i class="fas fa-cloud"></i> Canterbury's nor'west arch often visible to the west
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h3>Coastal Run to Oamaru</h3>
+                            <span class="route-distance">2-2.5 hours</span>
+                        </div>
+                        <div class="route-body">
+                            <div class="route-aircraft">
+                                <i class="fas fa-plane"></i>
+                                <span>Piper Archer IIIArcher II</span>
+                            </div>
+                            <p class="route-description">Christchurch to Oamaru (NZOU) following the coastline with
+                                options for low-level coastal flying or higher cruise.</p>
+                            <div class="route-highlights">
+                                <h4><i class="fas fa-route"></i> Route Points:</h4>
+                                <ul>
+                                    <li>Waimakariri River mouth departure</li>
+                                    <li>Coastal views of Pegasus Bay</li>
+                                    <li>Ashley & Waipara river mouths</li>
+                                    <li>Moeraki Boulders (famous spherical rocks)</li>
+                                    <li>Oamaru's Victorian precinct view</li>
+                                </ul>
+                            </div>
+                            <div class="route-airspace">
+                                <h4><i class="fas fa-tower"></i> Airspace & Procedures:</h4>
+                                <ul>
+                                    <li>Coastal corridor: Class G below 1500ft, Class C above</li>
+                                    <li>Timaru (NZTU) Control Zone: Class D, frequency 118.1</li>
+                                    <li>Oamaru (NZOU): Flight Information Zone, 123.1</li>
+                                    <li>Must cross Timaru CTR at approved points or above 2500ft</li>
+                                    <li>Maritime Patrol: Coastwatch operations common</li>
+                                    <li>Check for military exercise areas offshore</li>
+                                </ul>
+                            </div>
+                            <div class="route-alt">
+                                <strong>Flight Plan:</strong> NZCH → follow coast at 1500-2500ft → NZOU
+                            </div>
+                            <div class="route-warning">
+                                <i class="fas fa-exclamation-triangle"></i> Monitor weather - coastal fog common
+                                mornings
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="route-card">
+                        <div class="route-header">
+                            <h3>Alpine Foothills Explorer</h3>
+                            <span class="route-distance">Custom Duration</span>
+                        </div>
+                        <div class="route-body">
+                            <div class="route-aircraft">
+                                <i class="fas fa-helicopter"></i><i class="fas fa-plane ml-2"></i>
+                                <span>Both Helicopter & Fixed-Wing</span>
+                            </div>
+                            <p class="route-description">Explore the transition from plains to mountains, suitable for
+                                both aircraft types with different operational considerations.</p>
+                            <div class="route-highlights">
+                                <h4><i class="fas fa-mountain"></i> For Helicopter:</h4>
+                                <ul>
+                                    <li>Confined area landings in foothills</li>
+                                    <li>Low-level valley flying</li>
+                                    <li>Access to high-country stations</li>
+                                </ul>
+                                <h4 class="mt-3"><i class="fas fa-plane"></i> For Warrior:</h4>
+                                <ul>
+                                    <li>Rangiora (NZRT) or Mt Hutt (NZMF) stop</li>
+                                    <li>Foothills overflight at safe altitude</li>
+                                    <li>Return via different route</li>
+                                </ul>
+                            </div>
+                            <div class="route-airspace">
+                                <h4><i class="fas fa-tower"></i> Airspace & Procedures:</h4>
+                                <ul>
+                                    <li>Foothills area: Class G, uncontrolled</li>
+                                    <li>Mt Hutt (NZMF): Ski field airstrip, CTAF 122.9</li>
+                                    <li>Hororata (NZHT): Private strip, prior permission required</li>
+                                    <li>Helicopter: Special rules for mountain flying apply</li>
+                                    <li>Fixed-wing: Minimum safe altitude 2000ft above highest terrain</li>
+                                    <li>Mountain radio frequency: 130.6 for area broadcasts</li>
+                                </ul>
+                            </div>
+                            <div class="route-alt">
+                                <strong>Common Stops:</strong> Hororata (NZHT), Mt Hutt (NZMF), or high-country farm
+                                strips
+                            </div>
+                            <div class="route-warning">
+                                <i class="fas fa-exclamation-triangle"></i> Mountain weather changes rapidly - careful
+                                planning required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="routes-note">
+                    <div class="note-box">
+                        <i class="fas fa-info-circle"></i>
+                        <p><strong>Real-World Operational Notes:</strong>
+                            <br>• Port Hills tours often operate below 1500ft for best views
+                            <br>• Waimakariri area has Class D airspace - remain west of controlled zone
+                            <br>• Coastal routes watch for seabird activity near river mouths
+                            <br>• Farm strip landings require prior permission (simulated)
+                            <br>• Oamaru often has morning fog - afternoon flights recommended
+                            <br>• R66 operations benefit from turbine power for high-altitude and hot day performance
+                            <br>• All flights must comply with NZ CAA VFR flight rules
+                            <br>• Mountain flying requires specific training and experience
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-copyright"> <p></p> </footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

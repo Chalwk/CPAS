@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmperf.xsd">
+    <AircraftPerf>
+        <Header>
+            <CreationDate>2025-12-15T17:52:00+13:00</CreationDate>
+            <FileVersion>1.1</FileVersion>
+            <ProgramName>Little Navmap</ProgramName>
+            <ProgramVersion>3.0.18</ProgramVersion>
+            <Documentation>https://www.littlenavmap.org/lnmperf.html</Documentation>
+        </Header>
+        <Options>
+            <Name>Robinson R44</Name>
+            <AircraftType>R44</AircraftType>
+            <Simulator>MSFS</Simulator>
+            <Description>Light piston helicopter, 1+3 seats, common for training, private, and sightseeing.
+            </Description>
+            <FuelAsVolume>1</FuelAsVolume>
+            <JetFuel>0</JetFuel>
+        </Options>
+        <Perf>
+            <ContingencyFuelPercent>5.0</ContingencyFuelPercent>
+            <MinRunwayLengthFt>0</MinRunwayLengthFt>
+            <ReserveFuelLbsGal>15.000</ReserveFuelLbsGal>
+            <RunwayType>VERTICAL</RunwayType>
+            <TaxiFuelLbsGal>2.000</TaxiFuelLbsGal>
+            <UsableFuelLbsGal>50.000</UsableFuelLbsGal>
+            <Alternate>
+                <FuelFlowLbsGalPerHour>15.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>75.000</SpeedKtsTAS>
+            </Alternate>
+            <Climb>
+                <FuelFlowLbsGalPerHour>16.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>70.000</SpeedKtsTAS>
+                <VertSpeedFtPerMin>1200.000</VertSpeedFtPerMin>
+            </Climb>
+            <Cruise>
+                <FuelFlowLbsGalPerHour>14.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>110.000</SpeedKtsTAS>
+            </Cruise>
+            <Descent>
+                <FuelFlowLbsGalPerHour>12.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>80.000</SpeedKtsTAS>
+                <VertSpeedFtPerMin>800.000</VertSpeedFtPerMin>
+            </Descent>
+        </Perf>
+    </AircraftPerf>
+</LittleNavmap>

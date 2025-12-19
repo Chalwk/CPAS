@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmperf.xsd">
+    <AircraftPerf>
+        <Header>
+            <CreationDate>2025-12-15T17:54:00+13:00</CreationDate>
+            <FileVersion>1.1</FileVersion>
+            <ProgramName>Little Navmap</ProgramName>
+            <ProgramVersion>3.0.18</ProgramVersion>
+            <Documentation>https://www.littlenavmap.org/lnmperf.html</Documentation>
+        </Header>
+        <Options>
+            <Name>Piper PA-38 Tomahawk</Name>
+            <AircraftType>P38T</AircraftType>
+            <Simulator>MSFS</Simulator>
+            <Description>Two-seat, low-wing trainer, single-engine piston, ideal for flight training and VFR practice.
+            </Description>
+            <FuelAsVolume>1</FuelAsVolume>
+            <JetFuel>0</JetFuel>
+        </Options>
+        <Perf>
+            <ContingencyFuelPercent>5.0</ContingencyFuelPercent>
+            <MinRunwayLengthFt>1300.000</MinRunwayLengthFt>
+            <ReserveFuelLbsGal>20.000</ReserveFuelLbsGal>
+            <RunwayType>PAVED</RunwayType>
+            <TaxiFuelLbsGal>1.000</TaxiFuelLbsGal>
+            <UsableFuelLbsGal>30.000</UsableFuelLbsGal>
+            <Alternate>
+                <FuelFlowLbsGalPerHour>8.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>80.000</SpeedKtsTAS>
+            </Alternate>
+            <Climb>
+                <FuelFlowLbsGalPerHour>8.500</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>70.000</SpeedKtsTAS>
+                <VertSpeedFtPerMin>600.000</VertSpeedFtPerMin>
+            </Climb>
+            <Cruise>
+                <FuelFlowLbsGalPerHour>8.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>98.000</SpeedKtsTAS>
+            </Cruise>
+            <Descent>
+                <FuelFlowLbsGalPerHour>5.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>90.000</SpeedKtsTAS>
+                <VertSpeedFtPerMin>500.000</VertSpeedFtPerMin>
+            </Descent>
+        </Perf>
+    </AircraftPerf>
+</LittleNavmap>

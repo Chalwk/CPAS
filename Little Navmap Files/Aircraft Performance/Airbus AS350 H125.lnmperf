@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmperf.xsd">
+    <AircraftPerf>
+        <Header>
+            <CreationDate>2025-12-15T17:51:00+13:00</CreationDate>
+            <FileVersion>1.1</FileVersion>
+            <ProgramName>Little Navmap</ProgramName>
+            <ProgramVersion>3.0.18</ProgramVersion>
+            <Documentation>https://www.littlenavmap.org/lnmperf.html</Documentation>
+        </Header>
+        <Options>
+            <Name>Airbus AS350 H125</Name>
+            <AircraftType>H125</AircraftType>
+            <Simulator>MSFS</Simulator>
+            <Description>Light single-engine turbine helicopter, versatile, used for sightseeing, EMS, utility, and
+                training.
+            </Description>
+            <FuelAsVolume>1</FuelAsVolume>
+            <JetFuel>1</JetFuel>
+        </Options>
+        <Perf>
+            <ContingencyFuelPercent>5.0</ContingencyFuelPercent>
+            <MinRunwayLengthFt>0</MinRunwayLengthFt>
+            <ReserveFuelLbsGal>30.000</ReserveFuelLbsGal>
+            <RunwayType>VERTICAL</RunwayType>
+            <TaxiFuelLbsGal>3.000</TaxiFuelLbsGal>
+            <UsableFuelLbsGal>170.000</UsableFuelLbsGal>
+            <Alternate>
+                <FuelFlowLbsGalPerHour>80.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>90.000</SpeedKtsTAS>
+            </Alternate>
+            <Climb>
+                <FuelFlowLbsGalPerHour>95.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>75.000</SpeedKtsTAS>
+                <VertSpeedFtPerMin>1500.000</VertSpeedFtPerMin>
+            </Climb>
+            <Cruise>
+                <FuelFlowLbsGalPerHour>80.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>108.000</SpeedKtsTAS>
+            </Cruise>
+            <Descent>
+                <FuelFlowLbsGalPerHour>45.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>100.000</SpeedKtsTAS>
+                <VertSpeedFtPerMin>1000.000</VertSpeedFtPerMin>
+            </Descent>
+        </Perf>
+    </AircraftPerf>
+</LittleNavmap>

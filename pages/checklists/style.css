@@ -1,0 +1,109 @@
+/* Copyright (c) 2025 Jericho Crosby (Chalwk) - All Rights Reserved */
+
+:root {
+    --bg: #0f1419;
+    --panel: #161b22;
+    --header: #1f2933;
+    --text: #e6edf3;
+    --muted: #9aa4af;
+    --accent: #3498db;
+    --border: #2a3440;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+h1 {
+    margin-top: 0;
+    text-align: center;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    margin: 32px 0 12px;
+    padding: 10px 14px;
+    background: var(--header);
+    border-left: 4px solid var(--accent);
+    font-size: 1.1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--panel);
+    margin-bottom: 16px;
+}
+
+th, td {
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    vertical-align: top;
+}
+
+th {
+    background: #1b2330;
+    text-align: left;
+    color: var(--muted);
+    font-weight: 600;
+    width: 35%;
+}
+
+td strong {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 4px;
+    display: block;
+}
+
+.warning {
+    background: rgba(231, 76, 60, 0.1);
+    border: 1px solid #e74c3c;
+    border-left: 4px solid #e74c3c;
+    padding: 10px 14px;
+    margin: 16px 0;
+    border-radius: 4px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--accent);
+    color: var(--bg);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.back-button:hover {
+    background-color: #2980b9;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 16px;
+    }
+
+    th {
+        width: 45%;
+    }
+}

@@ -1,0 +1,360 @@
+<!-- Copyright (c) 2025 Jericho Crosby (Chalwk) - All Rights Reserved -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Aircraft Checklists - Coastal Peaks Air Service</title>
+    <style>
+        .checklists-section {
+            background-color: #f8fafc;
+            padding: 80px 0;
+        }
+
+        .checklists-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .checklist-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .checklist-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .checklist-header {
+            background-color: #1a365d;
+            color: white;
+            padding: 20px;
+        }
+
+        .checklist-header h3 {
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        .aircraft-type {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .aircraft-icon {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .aircraft-icon i {
+            font-size: 4rem;
+            color: #2d6bc9;
+            transition: all 0.3s ease;
+        }
+
+        .checklist-card:hover .aircraft-icon i {
+            transform: scale(1.1);
+        }
+
+        .checklist-details {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .checklist-details p {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+
+        .checklist-link {
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .checklist-link .btn {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+
+        .icon-helicopter {
+            color: #2d6bc9;
+        }
+
+        .icon-plane {
+            color: #e53e3e;
+        }
+
+        @media (max-width: 768px) {
+            .checklists-section {
+                padding: 60px 0;
+            }
+
+            .checklists-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .checklist-card {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media print {
+            .checklists-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link href="../../styles/index.css" rel="stylesheet">
+    <link href="../../styles/common.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container nav-container">
+        <a class="logo" href="../../index.html">
+            <span class="logo-text">CPAS</span>
+            <span class="logo-subtitle">Coastal Peaks Air Service</span>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#about">About</a></li>
+            <li><a href="../fleet.html">Our Fleet</a></li>
+            <li><a href="../routes.html">Charter Routes</a></li>
+            <li><a class="active" href="checklists.html">Checklists</a></li>
+            <li><a href="../../index.html#discord">Join</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
+<section class="checklists-section" style="margin-top: 70px;">
+    <div class="container">
+        <h2 class="section-title">Aircraft Checklists</h2>
+        <p class="section-subtitle">Comprehensive checklists for all aircraft in our virtual fleet</p>
+
+        <div class="checklists-grid">
+            <div class="checklist-card">
+                <div class="checklist-header">
+                    <h3>Airbus AS350 H125</h3>
+                    <span class="aircraft-type">Helicopter</span>
+                </div>
+                <div class="aircraft-icon">
+                    <i class="fas fa-helicopter icon-helicopter"></i>
+                </div>
+                <div class="checklist-details">
+                    <p>Complete checklist for the Airbus AS350 H125 (formerly Aérospatiale AS350 Écureuil) helicopter
+                        operations.</p>
+                    <div class="checklist-link">
+                        <a class="btn btn-primary" href="airbus_as350_h125.html">View Checklist</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card">
+                <div class="checklist-header">
+                    <h3>Airbus H145</h3>
+                    <span class="aircraft-type">Helicopter</span>
+                </div>
+                <div class="aircraft-icon">
+                    <i class="fas fa-helicopter icon-helicopter"></i>
+                </div>
+                <div class="checklist-details">
+                    <p>Detailed checklist for the Airbus H145 twin-engine helicopter, ideal for mountain operations and
+                        passenger transport.</p>
+                    <div class="checklist-link">
+                        <a class="btn btn-primary" href="airbus_h145.html">View Checklist</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card">
+                <div class="checklist-header">
+                    <h3>Piper Archer IIIArcher II</h3>
+                    <span class="aircraft-type">Fixed-Wing</span>
+                </div>
+                <div class="aircraft-icon">
+                    <i class="fas fa-plane icon-plane"></i>
+                </div>
+                <div class="checklist-details">
+                    <p>Complete pre-flight, in-flight, and post-flight checklist for the Piper PA-28-181 Archer IIIArcher II.</p>
+                    <div class="checklist-link">
+                        <a class="btn btn-primary" href="./checklists/piper_archer_III.html">View Checklist</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card">
+                <div class="checklist-header">
+                    <h3>Piper Arrow III</h3>
+                    <span class="aircraft-type">Fixed-Wing</span>
+                </div>
+                <div class="aircraft-icon">
+                    <i class="fas fa-plane icon-plane"></i>
+                </div>
+                <div class="checklist-details">
+                    <p>Checklist for the retractable gear Piper PA-28R-201 Arrow III, including gear procedures.</p>
+                    <div class="checklist-link">
+                        <a class="btn btn-primary" href="piper_arrow_iii.html">View Checklist</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card">
+                <div class="checklist-header">
+                    <h3>Piper Arrow III Turbo</h3>
+                    <span class="aircraft-type">Fixed-Wing</span>
+                </div>
+                <div class="aircraft-icon">
+                    <i class="fas fa-plane icon-plane"></i>
+                </div>
+                <div class="checklist-details">
+                    <p>Turbocharged version checklist with specific procedures for high-altitude operations.</p>
+                    <div class="checklist-link">
+                        <a class="btn btn-primary" href="piper_arrow_iii_turbo.html">View Checklist</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card">
+                <div class="checklist-header">
+                    <h3>Piper Arrow IV Turbo</h3>
+                    <span class="aircraft-type">Fixed-Wing</span>
+                </div>
+                <div class="aircraft-icon">
+                    <i class="fas fa-plane icon-plane"></i>
+                </div>
+                <div class="checklist-details">
+                    <p>Advanced checklist for the Piper PA-28RT-201 Arrow IV with T-tail and turbocharging.</p>
+                    <div class="checklist-link">
+                        <a class="btn btn-primary" href="piper_arrow_iv_turbo.html">View Checklist</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card">
+                <div class="checklist-header">
+                    <h3>Piper Tomahawk</h3>
+                    <span class="aircraft-type">Fixed-Wing</span>
+                </div>
+                <div class="aircraft-icon">
+                    <i class="fas fa-plane icon-plane"></i>
+                </div>
+                <div class="checklist-details">
+                    <p>Training aircraft checklist for the Piper PA-38-112 Tomahawk, perfect for flight instruction.</p>
+                    <div class="checklist-link">
+                        <a class="btn btn-primary" href="piper_tomahawk.html">View Checklist</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card">
+                <div class="checklist-header">
+                    <h3>Piper Warrior II</h3>
+                    <span class="aircraft-type">Fixed-Wing</span>
+                </div>
+                <div class="aircraft-icon">
+                    <i class="fas fa-plane icon-plane"></i>
+                </div>
+                <div class="checklist-details">
+                    <p>Comprehensive checklist for the Piper PA-28-161 Warrior II, our primary training aircraft.</p>
+                    <div class="checklist-link">
+                        <a class="btn btn-primary" href="piper_warrior_II.html">View Checklist</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card">
+                <div class="checklist-header">
+                    <h3>Robinson R44</h3>
+                    <span class="aircraft-type">Helicopter</span>
+                </div>
+                <div class="aircraft-icon">
+                    <i class="fas fa-helicopter icon-helicopter"></i>
+                </div>
+                <div class="checklist-details">
+                    <p>Light helicopter checklist for the Robinson R44 Raven, ideal for utility and training
+                        operations.</p>
+                    <div class="checklist-link">
+                        <a class="btn btn-primary" href="robinson_r44.html">View Checklist</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card">
+                <div class="checklist-header">
+                    <h3>Robinson R66</h3>
+                    <span class="aircraft-type">Helicopter</span>
+                </div>
+                <div class="aircraft-icon">
+                    <i class="fas fa-helicopter icon-helicopter"></i>
+                </div>
+                <div class="checklist-details">
+                    <p>Turbine-powered helicopter checklist for the Robinson R66, featuring extended range
+                        operations.</p>
+                    <div class="checklist-link">
+                        <a class="btn btn-primary" href="robinson_r66.html">View Checklist</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-copyright"> <p></p> </footer>
+
+<script src="../../script.js"></script>
+<script>
+    function animateChecklistsOnScroll() {
+        const checklistCards = document.querySelectorAll('.checklist-card');
+        checklistCards.forEach(card => {
+            const cardPosition = card.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+            if (cardPosition < screenPosition) {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const checklistCards = document.querySelectorAll('.checklist-card');
+        checklistCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+        setTimeout(animateChecklistsOnScroll, 300);
+    });
+
+    window.addEventListener('scroll', animateChecklistsOnScroll);
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+/* Copyright (c) 2025 Jericho Crosby (Chalwk) - All Rights Reserved */
+
+footer {
+    background-color: transparent;
+}
+
+footer p {
+    text-align: center;
+    margin: 0 auto 15px;
+    max-width: 800px;
+    padding: 0 15px;
+    color: #4a5568;
+    font-size: 0.9rem;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding: 25px 0;
+    color: #4a5568;
+    font-size: 0.9rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px 15px;
+}
+
+.footer-copyright::before {
+    content: "© 2025 Coastal Peaks Air Service (CPAS) | Jericho Crosby (Chalwk). All rights reserved.";
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.footer-copyright::after {
+    content: "Coastal Peaks Air Service (CPAS) is a fictional, virtual organization created for flight simulation enthusiasts. It is not affiliated with, sponsored by, or representative of the real-world Canterbury Aero Club (CAC), GCH Aviation, Helicopter Line, or any other actual aviation service.";
+    display: block;
+    text-align: center;
+    line-height: 1.4;
+    margin-top: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+    font-size: 0.9rem;
+    color: #4a5568;
+}
+
+@media (max-width: 768px) {
+    footer {
+        margin-top: 40px;
+        padding-top: 20px;
+    }
+
+    .footer-copyright,
+    .footer-copyright::after,
+    .footer-copyright::before {
+        padding: 0 10px;
+        max-width: 100%;
+    }
+}
