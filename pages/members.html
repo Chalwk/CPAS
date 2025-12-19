@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Our Team - Coastal Peaks Air Service</title>
+    <style>
+        .team-section {
+            background-color: #f8fafc;
+            padding: 80px 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .member-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .member-header {
+            background-color: #1a365d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .member-header h3 {
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        .member-role {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            color: #d1d5db;
+        }
+
+        .member-avatar {
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f5f9;
+        }
+
+        .member-avatar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .member-card:hover .member-avatar img {
+            transform: scale(1.05);
+        }
+
+        .member-avatar i {
+            font-size: 4.5rem;
+            color: #475569;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #e5e7eb;
+            border: 4px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .member-card:hover .member-avatar i {
+            transform: scale(1.05);
+        }
+
+        .member-details {
+            padding: 20px;
+        }
+
+        .member-details p {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .member-details i {
+            margin-right: 10px;
+            color: #2d6bc9;
+            width: 20px;
+            text-align: center;
+        }
+
+        .member-hours {
+            color: #059669;
+            font-weight: 600;
+        }
+
+        .member-status {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        .status-active {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+
+        .member-badge {
+            display: inline-block;
+            background-color: #fbbf24;
+            color: #78350f;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .team-section {
+                padding: 60px 0;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .member-card {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .member-card {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media print {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link href="../styles/index.css" rel="stylesheet">
+    <link href="../styles/common.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container nav-container">
+        <a class="logo" href="../index.html">
+            <span class="logo-text">CPAS</span>
+            <span class="logo-subtitle">Coastal Peaks Air Service</span>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="fleet.html">Our Fleet</a></li>
+            <li><a href="members.html" class="active">Our Team</a></li>
+            <li><a href="routes.html">Charter Routes</a></li>
+            <li><a href="checklists/checklists.html">Checklists</a></li>
+            <li><a href="../index.html#discord">Join</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
+<section class="team-section" style="margin-top: 70px;">
+    <div class="container">
+        <h2 class="section-title">Our Virtual Team</h2>
+        <p class="section-subtitle">
+            Meet the dedicated pilots who bring Coastal Peaks Air Service to life in Microsoft Flight Simulator
+        </p>
+
+        <div class="team-grid">
+            <div class="member-card">
+                <div class="member-header">
+                    <h3>Chalwk</h3>
+                    <span class="member-role">Founder & Chief Pilot</span>
+                </div>
+                <div class="member-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="member-details">
+                    <p><i class="fas fa-clock"></i> <strong>Hours on Record:</strong> <span class="member-hours">10,000+</span></p>
+                    <p><i class="fas fa-id-card"></i> <strong>VATSIM ID:</strong> Private</p>
+                    <p><i class="fas fa-plane"></i> <strong>Favorite Aircraft:</strong> H145, R66 & PA-28 Arrow Series</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Base:</strong> Christchurch (NZCH)</p>
+                    <p><i class="fas fa-certificate"></i> <strong>Status:</strong>
+                        <span class="member-status status-active">
+                            <i class="fas fa-circle" style="font-size: 0.6rem; margin-right: 5px;"></i> Active Pilot
+                        </span>
+                        <span class="member-badge">Founder</span>
+                    </p>
+                    <p style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e5e7eb;">
+                        <i class="fas fa-quote-left"></i>
+                        <em>Founder of Coastal Peaks Air Service, dedicated to creating authentic New Zealand flight experiences with meticulous attention to detail.</em>
+                    </p>
+                </div>
+            </div>
+
+            <!-- NOTE TO SELF: New member cards here -->
+
+            <div class="member-card" style="background-color: #f0f9ff; border: 2px dashed #93c5fd;">
+                <div class="member-header" style="background-color: #3b82f6;">
+                    <h3>Join Our Team!</h3>
+                    <span class="member-role">Future Pilot</span>
+                </div>
+                <div class="member-avatar">
+                    <div style="width: 150px; height: 150px; border-radius: 50%; background-color: #dbeafe; display: flex; align-items: center; justify-content: center; border: 4px solid white;">
+                        <i class="fas fa-user-plus" style="font-size: 3rem; color: #3b82f6;"></i>
+                    </div>
+                </div>
+                <div class="member-details" style="text-align: center;">
+                    <p style="font-size: 1.1rem; margin-bottom: 20px; color: #1e40af;">
+                        <i class="fas fa-star"></i>
+                        <strong>Could this be you?</strong>
+                    </p>
+                    <p id="recruitment-text">We're always looking for passionate virtual pilots to join our growing team!</p>
+                    <a href="https://github.com/Chalwk/CPAS/issues/new?template=pilot-application.yaml" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">
+                        Apply Now
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 50px; background-color: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
+            <h3 style="text-align: center; margin-bottom: 20px; color: #1a365d;">
+                <i class="fas fa-users" style="margin-right: 10px;"></i> Team Statistics
+            </h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center;">
+                <div>
+                    <div style="font-size: 2.5rem; font-weight: 700; color: #2d6bc9;" id="active-pilots-count">1</div>
+                    <div style="color: #4b5563; font-size: 0.9rem;">Active Pilots</div>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; font-weight: 700; color: #059669;">10,000+</div>
+                    <div style="color: #4b5563; font-size: 0.9rem;">Total Hours Flown</div>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; font-weight: 700; color: #7c3aed;">10</div>
+                    <div style="color: #4b5563; font-size: 0.9rem;">Aircraft in Fleet</div>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; font-weight: 700; color: #dc2626;">3</div>
+                    <div style="color: #4b5563; font-size: 0.9rem;">Operating Bases</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-copyright"> <p></p> </footer>
+
+<script src="../script.js"></script>
+<script>
+    function animateMembersOnScroll() {
+        const memberCards = document.querySelectorAll('.member-card');
+        memberCards.forEach(card => {
+            const cardPosition = card.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+            if (cardPosition < screenPosition) {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }
+        });
+    }
+
+    function updateTeamStatistics() {
+        // Count only actual pilot cards (excluding the "Join Our Team!" card)
+        const allCards = document.querySelectorAll('.member-card');
+        let activePilotsCount = 0;
+
+        allCards.forEach(card => {
+            const header = card.querySelector('.member-header h3');
+            if (header && header.textContent !== 'Join Our Team!') {
+                activePilotsCount++;
+            }
+        });
+
+        // Update the active pilots statistic
+        const activePilotsElement = document.getElementById('active-pilots-count');
+        if (activePilotsElement) {
+            activePilotsElement.textContent = activePilotsCount;
+        }
+
+        // Update the recruitment card text based on pilot count
+        const recruitmentTextElement = document.getElementById('recruitment-text');
+        if (recruitmentTextElement) {
+            if (activePilotsCount === 1) {
+                recruitmentTextElement.textContent = "We're a brand new virtual air charter looking for our first team members to help build this community from the ground up!";
+            } else {
+                recruitmentTextElement.textContent = "We're expanding our virtual air charter and looking for more passionate pilots to join our growing team!";
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const memberCards = document.querySelectorAll('.member-card');
+        memberCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+
+        // Update team statistics and recruitment text
+        updateTeamStatistics();
+
+        setTimeout(animateMembersOnScroll, 300);
+    });
+
+    window.addEventListener('scroll', animateMembersOnScroll);
+</script>
+</body>
+</html>
