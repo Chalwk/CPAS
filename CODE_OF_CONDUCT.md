@@ -18,7 +18,7 @@
 
 * Help new pilots learn and integrate.
 * Participate in community events and group flights.
-* Provide constructive feedback—everyone is here to improve.
+* Provide constructive feedback, everyone is here to improve.
 
 ---
 
