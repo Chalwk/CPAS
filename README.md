@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="images/logo.png" alt="Coastal Peaks Air Service" width="250">
+  <img src="images/logo.png" alt="Coastal Peaks Air Service" width="350">
 </div>
 
 [![VISIT WEBSITE](https://img.shields.io/badge/VISIT_WEBSITE-6ee7b7?style=for-the-badge&logo=github)](https://github.com/Chalwk/CPAS)
