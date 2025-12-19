@@ -35,20 +35,49 @@ body:
 
         ## CPAS Pilot Ranks
 
-        - **🟢 Trainee Pilot**  
-          Entry-level pilots learning CPAS procedures and aircraft
+        - **🟢 Pilot Under Training**  
+          **Requirements:** Newly accepted pilots
+          **Privileges:**
+          - Access to training aircraft only
+          - Must fly with instructor oversight
+          - Local area familiarization flights
+          **Upgrade to:** Complete 5 training flights & basic navigation test
 
-        - **🟡 First Officer**  
-          Certified pilots cleared for solo operations on specific aircraft
+        - **🟡 Charter Pilot**
+            **Requirements:** Basic training complete
+            **Privileges:**
+            - Can fly simple charter routes solo
+            - Access to basic fleet (Warrior, R44)
+            - Day VFR operations only
+            - Can transport passengers on approved routes
+            **Upgrade to:** 10 completed charters & mountain flying basics
+        
+        - **🟠 Senior Charter Pilot**
+          **Requirements:** Proven charter experience
+          **Privileges:**
+          - Access to entire fleet (except H145)
+          - Can fly complex/mountain routes
+          - May mentor Pilot Under Training
+          - Can request custom charters
+          **Upgrade to:** 25 completed charters & turbine endorsement
 
-        - **🟠 Senior First Officer**  
-          Experienced pilots with multiple aircraft certifications
+        - **🔴 Lead Pilot**
+            **Requirements:** Extensive charter & mountain experience
+            **Privileges:**
+            - Full fleet access including H145
+            - Can approve new pilots for solo
+            - May develop new routes
+            - Special operations (glacier landings, etc.)
+            **Note:** This is our highest operational rank
 
-        - **🔴 Captain**  
-          Qualified to operate all aircraft in the fleet and mentor junior pilots
-
-        - **🟣 Check Captain**  
-          Senior pilots authorized to conduct training and check rides
+        - **🟣 Instructor**
+            **Requirements:** Exceptional knowledge & teaching ability
+            **Responsibilities:**
+            - Conduct check rides
+            - Train new pilots
+            - Maintain training standards
+            - Approve rank advancements
+            **Note:** Separate from operational chain, focused on training
 
         ---
 
@@ -93,11 +122,11 @@ body:
   - type: input
     id: vatsim-id
     attributes:
-      label: VATSIM ID (if applicable)
-      description: If you have a VATSIM ID, please provide it here.
-      placeholder: "e.g., 1234567 or 'Not a VATSIM member'"
+      label: VATSIM ID
+      description: You must provide a valid VATSIM ID to apply.
+      placeholder: "e.g., 1234567"
     validations:
-      required: false
+      required: true
 
   - type: input
     id: ivao-id
