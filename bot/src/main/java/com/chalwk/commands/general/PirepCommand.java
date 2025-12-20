@@ -72,15 +72,8 @@ public class PirepCommand extends ListenerAdapter implements CommandManager {
     @Override
     public void handleCommand(SlashCommandInteractionEvent event) {
         try {
-            if (isPendingUser(event.getMember())) {
-                event.reply("❌ You must be accepted as a pilot before submitting PIREPs!")
-                        .setEphemeral(true)
-                        .queue();
-                return;
-            }
-
             if (!hasAccessToPirep(event.getMember())) {
-                event.reply("❌ You don't have permission to submit PIREPs. You need to be accepted as a pilot first!")
+                event.reply("❌ You don't have permission to submit PIREPs. You need to be assigned a pilot role!")
                         .setEphemeral(true)
                         .queue();
                 return;
@@ -148,12 +141,6 @@ public class PirepCommand extends ListenerAdapter implements CommandManager {
         }
     }
 
-    private boolean isPendingUser(net.dv8tion.jda.api.entities.Member member) {
-        if (member == null) return false;
-        return member.getRoles().stream()
-                .anyMatch(role -> role.getIdLong() == Constants.ROLE_PENDING);
-    }
-
     private boolean hasAccessToPirep(net.dv8tion.jda.api.entities.Member member) {
         if (member == null) return false;
 
@@ -161,10 +148,7 @@ public class PirepCommand extends ListenerAdapter implements CommandManager {
             return true;
         }
 
-        boolean hasAcceptedRole = member.getRoles().stream()
-                .anyMatch(role -> role.getIdLong() == Constants.ROLE_ACCEPTED);
-
-        boolean hasPilotRole = member.getRoles().stream()
+        return member.getRoles().stream()
                 .anyMatch(role ->
                         role.getIdLong() == Constants.ROLE_PILOT_UNDER_TRAINING ||
                                 role.getIdLong() == Constants.ROLE_CHARTER_PILOT ||
@@ -172,8 +156,6 @@ public class PirepCommand extends ListenerAdapter implements CommandManager {
                                 role.getIdLong() == Constants.ROLE_LEAD_PILOT ||
                                 role.getIdLong() == Constants.ROLE_INSTRUCTOR
                 );
-
-        return hasAcceptedRole || hasPilotRole;
     }
 
     private String getOption(SlashCommandInteractionEvent event, String optionName, String defaultValue) {

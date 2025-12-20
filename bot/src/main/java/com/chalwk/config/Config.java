@@ -36,18 +36,13 @@ public class Config {
 
     private static void createDefaultConfig(File configFile) throws IOException {
         String defaultConfig = """
-                # Discord Role IDs
-                role.pending=1234567890
-                role.accepted=1234567890
+                # Discord Role IDs (for PIREP command permissions)
                 role.pilot.under.training=1234567890
                 role.charter.pilot=1234567890
                 role.senior.charter.pilot=1234567890
                 role.lead.pilot=1234567890
                 role.instructor=1234567890
                 # Channel IDs
-                channel.welcome=1234567890
-                channel.logs=1234567890
-                channel.admin=1234567890
                 channel.pirep=1234567890
                 # Command Settings
                 admin.ids=123456789012345678,123456789012345678

@@ -42,15 +42,6 @@ public class HelpCommand extends ListenerAdapter implements CommandManager {
                     `/help` - Show this help message
                     """, false);
 
-            if (event.getMember() != null && event.getMember().hasPermission(
-                    net.dv8tion.jda.api.Permission.ADMINISTRATOR)) {
-                embed.addField("🔒 Admin Commands", """
-                        `/accept @user` - Accept a pending member
-                        `/promote @user [role]` - Promote a member
-                        `/demote @user [role]` - Demote a member
-                        """, false);
-            }
-
             embed.addField("🔗 Useful Links",
                     String.format("[Website](%s) | [GitHub](%s)",
                             Constants.BOT_WEBSITE, Constants.BOT_GITHUB), false);

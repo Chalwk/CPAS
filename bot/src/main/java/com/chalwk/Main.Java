@@ -3,13 +3,10 @@
 package com.chalwk;
 
 import com.chalwk.commands.CommandManager;
-import com.chalwk.commands.admin.AcceptCommand;
-import com.chalwk.commands.admin.DemoteCommand;
-import com.chalwk.commands.admin.PromoteCommand;
 import com.chalwk.commands.general.HelpCommand;
 import com.chalwk.commands.general.PirepCommand;
 import com.chalwk.config.Config;
-import com.chalwk.listeners.GuildJoinListener;
+import com.chalwk.listeners.AutoRoleListener;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;
@@ -28,6 +25,7 @@ import java.util.List;
 public class Main {
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
     private static final List<CommandManager> COMMANDS = new ArrayList<>();
+    private static final List<Object> LISTENERS = new ArrayList<>();
     private static JDA jda;
 
     public static void main(String[] args) {
@@ -42,8 +40,8 @@ public class Main {
                 System.exit(1);
             }
 
-            // Initialize commands
             initializeCommands();
+            initializeListeners();
 
             jda = JDABuilder.createDefault(token)
                     .setStatus(OnlineStatus.ONLINE)
@@ -55,10 +53,7 @@ public class Main {
                             GatewayIntent.GUILD_PRESENCES
                     )
                     .setMemberCachePolicy(MemberCachePolicy.ALL)
-                    .addEventListeners(
-                            new GuildJoinListener()
-                    )
-                    .addEventListeners(COMMANDS.toArray())
+                    .addEventListeners(LISTENERS.toArray())
                     .build();
 
             jda.awaitReady();
@@ -87,11 +82,13 @@ public class Main {
     }
 
     private static void initializeCommands() {
-        COMMANDS.add(new AcceptCommand());
-        COMMANDS.add(new PromoteCommand());
-        COMMANDS.add(new DemoteCommand());
         COMMANDS.add(new PirepCommand());
         COMMANDS.add(new HelpCommand());
+    }
+
+    private static void initializeListeners() {
+        LISTENERS.addAll(COMMANDS);
+        LISTENERS.add(new AutoRoleListener());
     }
 
     private static String readTokenFromFile() {
