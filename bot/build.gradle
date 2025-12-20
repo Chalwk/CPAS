@@ -1,0 +1,104 @@
+/* Copyright (c) 2025. Jericho Crosby (Chalwk) */
+
+plugins {
+    id 'java'
+    id 'groovy'
+    id 'application'
+    id 'org.beryx.jlink' version '2.26.0'
+}
+
+application {
+    mainClass = 'com.chalwk.Main'
+}
+
+group = 'com.chalwk'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://m2.dv8tion.net/releases' }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+dependencies {
+    implementation 'net.dv8tion:JDA:6.1.1'
+    implementation 'ch.qos.logback:logback-classic:1.5.21'
+    implementation 'commons-configuration:commons-configuration:1.10'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'org.xerial:sqlite-jdbc:3.44.1.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+}
+
+jlink {
+    launcher {
+        name = 'CPAS'
+    }
+
+    options = ['--strip-debug', '--compress', 'zip-6', '--no-header-files', '--no-man-pages']
+
+    jpackage {
+        installerType = 'exe'
+
+        if (org.gradle.internal.os.OperatingSystem.current().windows) {
+            installerOptions = [
+                    '--description', 'GitHub Discord Bot',
+                    '--vendor', 'Jericho Crosby (Chalwk)',
+                    '--win-menu',
+                    '--win-shortcut',
+                    '--win-dir-chooser',
+                    '--verbose',
+                    '--about-url', 'https://github.com/Chalwk/CPAS',
+                    '--copyright', '© Copyright 2025. Jericho Crosby (Chalwk)'
+            ]
+
+            def licenseFile = file('src/main/resources/LICENSE.txt')
+            if (licenseFile.exists()) {
+                installerOptions.add('--license-file')
+                installerOptions.add(licenseFile.absolutePath)
+            }
+
+            installerOptions.addAll(['--app-version', project.version.toString()])
+        }
+
+        imageOptions = []
+
+        def iconFile = file('src/main/resources/icon.ico')
+        if (iconFile.exists()) {
+            imageOptions.add('--icon')
+            imageOptions.add(iconFile.absolutePath)
+        }
+    }
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.chalwk.Main',
+                'Implementation-Version': project.version
+        )
+    }
+
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ['src/main/resources']
+            includes = ['**/*']
+        }
+    }
+}
