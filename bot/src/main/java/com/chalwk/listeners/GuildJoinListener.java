@@ -45,10 +45,10 @@ public class GuildJoinListener extends ListenerAdapter {
                                         ### Useful Links
                                         • Website: %s
                                         • GitHub: %s
-                                        • Apply: https://github.com/Chalwk/CPAS/issues/new?template=pilot-application.yaml
+                                        • [Apply via GitHub](https://github.com/Chalwk/CPAS/issues/new?template=pilot-application.yaml)
                                         
                                         ### What Now?
-                                        Please be patient while we review your application. 
+                                        Please be patient while we review your application.
                                         You'll receive a DM when you're accepted!
                                         
                                         **Blue skies and tailwinds!**

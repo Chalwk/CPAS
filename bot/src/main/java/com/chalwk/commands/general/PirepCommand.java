@@ -4,6 +4,7 @@ package com.chalwk.commands.general;
 
 import com.chalwk.commands.CommandManager;
 import com.chalwk.config.Constants;
+import com.chalwk.utils.PermissionChecker;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
@@ -71,6 +72,20 @@ public class PirepCommand extends ListenerAdapter implements CommandManager {
     @Override
     public void handleCommand(SlashCommandInteractionEvent event) {
         try {
+            if (isPendingUser(event.getMember())) {
+                event.reply("❌ You must be accepted as a pilot before submitting PIREPs!")
+                        .setEphemeral(true)
+                        .queue();
+                return;
+            }
+
+            if (!hasAccessToPirep(event.getMember())) {
+                event.reply("❌ You don't have permission to submit PIREPs. You need to be accepted as a pilot first!")
+                        .setEphemeral(true)
+                        .queue();
+                return;
+            }
+
             String flightNumber = getOption(event, "flight_number", "");
             String aircraft = getOption(event, "aircraft", "");
             String origin = getOption(event, "origin", "").toUpperCase();
@@ -131,6 +146,34 @@ public class PirepCommand extends ListenerAdapter implements CommandManager {
                     .queue();
             logger.error("Error in PIREP command", e);
         }
+    }
+
+    private boolean isPendingUser(net.dv8tion.jda.api.entities.Member member) {
+        if (member == null) return false;
+        return member.getRoles().stream()
+                .anyMatch(role -> role.getIdLong() == Constants.ROLE_PENDING);
+    }
+
+    private boolean hasAccessToPirep(net.dv8tion.jda.api.entities.Member member) {
+        if (member == null) return false;
+
+        if (PermissionChecker.isAdmin(member)) {
+            return true;
+        }
+
+        boolean hasAcceptedRole = member.getRoles().stream()
+                .anyMatch(role -> role.getIdLong() == Constants.ROLE_ACCEPTED);
+
+        boolean hasPilotRole = member.getRoles().stream()
+                .anyMatch(role ->
+                        role.getIdLong() == Constants.ROLE_PILOT_UNDER_TRAINING ||
+                                role.getIdLong() == Constants.ROLE_CHARTER_PILOT ||
+                                role.getIdLong() == Constants.ROLE_SENIOR_CHARTER_PILOT ||
+                                role.getIdLong() == Constants.ROLE_LEAD_PILOT ||
+                                role.getIdLong() == Constants.ROLE_INSTRUCTOR
+                );
+
+        return hasAcceptedRole || hasPilotRole;
     }
 
     private String getOption(SlashCommandInteractionEvent event, String optionName, String defaultValue) {

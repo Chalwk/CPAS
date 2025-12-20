@@ -51,7 +51,8 @@ public class Main {
                     .enableIntents(
                             GatewayIntent.GUILD_MEMBERS,
                             GatewayIntent.GUILD_MESSAGES,
-                            GatewayIntent.MESSAGE_CONTENT
+                            GatewayIntent.MESSAGE_CONTENT,
+                            GatewayIntent.GUILD_PRESENCES
                     )
                     .setMemberCachePolicy(MemberCachePolicy.ALL)
                     .addEventListeners(
