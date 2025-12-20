@@ -6,6 +6,7 @@ import com.chalwk.commands.CommandManager;
 import com.chalwk.commands.admin.AssignTrainingRoleCommand;
 import com.chalwk.commands.general.HelpCommand;
 import com.chalwk.commands.general.PirepCommand;
+import com.chalwk.commands.general.SimBriefPirepCommand;
 import com.chalwk.config.Config;
 import com.chalwk.listeners.AutoRoleListener;
 import net.dv8tion.jda.api.JDA;
@@ -84,6 +85,7 @@ public class Main {
 
     private static void initializeCommands() {
         COMMANDS.add(new PirepCommand());
+        COMMANDS.add(new SimBriefPirepCommand());
         COMMANDS.add(new HelpCommand());
         COMMANDS.add(new AssignTrainingRoleCommand());
     }

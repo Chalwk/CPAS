@@ -26,11 +26,25 @@ java {
 }
 
 dependencies {
+    // JDA - Discord API
     implementation 'net.dv8tion:JDA:6.1.1'
+
+    // Logging
     implementation 'ch.qos.logback:logback-classic:1.5.21'
+
+    // Configuration
     implementation 'commons-configuration:commons-configuration:1.10'
+
+    // JSON Processing (for SimBrief API)
     implementation 'com.google.code.gson:gson:2.10.1'
+
+    // Database (if you want to store SimBrief user IDs)
     implementation 'org.xerial:sqlite-jdbc:3.44.1.0'
+
+    // HTTP Client (for SimBrief API calls)
+    // Note: Java 11+ has built-in HttpClient, so we don't need extra dependency
+
+    // Testing
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
 }
 

@@ -50,7 +50,10 @@ public class Config {
                 bot.color=0x2d6bc9
                 bot.name=CPAS Bot
                 bot.website=https://chalwk.github.io/CPAS
-                bot.github=https://github.com/Chalwk/CPAS""";
+                bot.github=https://github.com/Chalwk/CPAS
+                # SimBrief API
+                simbrief.api.key=your_api_key_here
+                simbrief.api.baseurl=https://www.simbrief.com/api""";
 
         try (FileWriter writer = new FileWriter(configFile)) {
             writer.write(defaultConfig);

@@ -38,7 +38,8 @@ public class HelpCommand extends ListenerAdapter implements CommandManager {
                     .setDescription("Here are all the available commands:");
 
             embed.addField("📋 General Commands", """
-                    `/pirep` - Submit a pilot report
+                    `/pirep` - Submit a manual pilot report
+                    `/simbrief-pirep` - Submit a PIREP using SimBrief data
                     `/help` - Show this help message
                     """, false);
 

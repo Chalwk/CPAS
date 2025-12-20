@@ -34,7 +34,7 @@ public class AutoRoleListener extends ListenerAdapter {
                     success -> logger.info("Assigned Pilot Under Training role to {} ({})",
                             event.getUser().getAsTag(),
                             event.getUser().getId()),
-                    
+
                     error -> logger.error("Failed to assign Pilot Under Training role to {}: {}",
                             event.getUser().getAsTag(),
                             error.getMessage())
