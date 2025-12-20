@@ -31,38 +31,19 @@ public class AutoRoleListener extends ListenerAdapter {
             }
 
             event.getGuild().addRoleToMember(event.getMember(), pilotUnderTrainingRole).queue(
-                    success -> {
-                        logger.info("Assigned Pilot Under Training role to {} ({})",
-                                event.getUser().getAsTag(),
-                                event.getUser().getId());
-                        sendWelcomeMessage(event);
-                    },
-                    error -> {
-                        logger.error("Failed to assign Pilot Under Training role to {}: {}",
-                                event.getUser().getAsTag(),
-                                error.getMessage());
-                    }
+                    success -> logger.info("Assigned Pilot Under Training role to {} ({})",
+                            event.getUser().getAsTag(),
+                            event.getUser().getId()),
+                    
+                    error -> logger.error("Failed to assign Pilot Under Training role to {}: {}",
+                            event.getUser().getAsTag(),
+                            error.getMessage())
             );
 
         } catch (Exception e) {
             logger.error("Error in auto-role assignment for {}: {}",
                     event.getUser().getAsTag(),
                     e.getMessage());
-        }
-    }
-
-    private void sendWelcomeMessage(GuildMemberJoinEvent event) {
-        String welcomeMessage = String.format(
-                "👋 Welcome to Coastal Peaks Air Service, %s!\n" +
-                        "You've been automatically assigned the **Pilot Under Training** role.\n" +
-                        "Check out our documentation and use `/help` to get started!\n" +
-                        "Website: %s",
-                event.getUser().getAsMention(),
-                Constants.BOT_WEBSITE
-        );
-
-        if (event.getGuild().getSystemChannel() != null) {
-            event.getGuild().getSystemChannel().sendMessage(welcomeMessage).queue();
         }
     }
 }

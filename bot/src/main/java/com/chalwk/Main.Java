@@ -3,6 +3,7 @@
 package com.chalwk;
 
 import com.chalwk.commands.CommandManager;
+import com.chalwk.commands.admin.AssignTrainingRoleCommand;
 import com.chalwk.commands.general.HelpCommand;
 import com.chalwk.commands.general.PirepCommand;
 import com.chalwk.config.Config;
@@ -84,6 +85,7 @@ public class Main {
     private static void initializeCommands() {
         COMMANDS.add(new PirepCommand());
         COMMANDS.add(new HelpCommand());
+        COMMANDS.add(new AssignTrainingRoleCommand());
     }
 
     private static void initializeListeners() {
