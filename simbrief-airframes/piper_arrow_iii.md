@@ -5,25 +5,25 @@
 * Base TypeL C172
 * ICAO Code: PA28
 * Civil Registration: ZK-ARR
-* Fin Number: 503
+* Fin Number: 502
 * SELCAL Code: NONE
 * Mode-S Code: ZZZZZZ
 * OFP Layout: Default
 * Flight Rules: Default
 * Type of Flight: Default
-* Plan Units: Pounds
+* Plan Units: Default
 * Max Diversion: 130 NM
 * Min Runway: 2000 FT
-* Aircraft Name: PA-28R-201 ARROW III
+* Aircraft Name: PIPER ARROW III
 * Engine Type: Lycoming IO-360-C1C6
-* Comments: Just Flight MSF2020
+* Comments: PA-28R-201 / Just Flight MSF2020
 
 ---
 
 ### Airframe Weights:
 
 * Weight Units: Pounds
-* Max Passengers: 4
+* Max Passengers: 3
 * Passenger Weight: 175 lbs
 * Baggage Weight: 0 lbs
 * Empty Weight: 1520 lbs

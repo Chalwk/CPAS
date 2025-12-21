@@ -5,25 +5,25 @@
 * Base TypeL C172
 * ICAO Code: P28A
 * Civil Registration: ZK-ARC
-* Fin Number: 502
+* Fin Number: 501
 * SELCAL Code: NONE
 * Mode-S Code: ZZZZZZ
 * OFP Layout: Default
 * Flight Rules: Default
 * Type of Flight: Default
-* Plan Units: Pounds
+* Plan Units: Default
 * Max Diversion: 115 NM
 * Min Runway: 1900 FT
-* Aircraft Name: PA-28-181 ARCHER II
+* Aircraft Name: PIPER ARCHER II
 * Engine Type: Lycoming O-360-A4M
-* Comments: Just Flight MSF2020
+* Comments: PA-28-181 / Just Flight MSF2020
 
 ---
 
 ### Airframe Weights:
 
 * Weight Units: Pounds
-* Max Passengers: 4
+* Max Passengers: 3
 * Passenger Weight: 175 lbs
 * Baggage Weight: 0 lbs
 * Empty Weight: 1400 lbs
@@ -31,7 +31,7 @@
 * Max Takeoff Weight: 2440 lbs
 * Max Landing Weight: 2250 lbs
 * Max Fuel Capacity: 288 lbs (48 US Gal)
-* Max Cargo Weight: 200 lbs
+* Max Cargo Weight: None
 * Default Freight Mode: Default (None)
 
 ---

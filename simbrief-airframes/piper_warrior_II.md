@@ -5,16 +5,16 @@
 * Base TypeL C172
 * ICAO Code: P28A
 * Civil Registration: ZK-LJF
-* Fin Number: 999
+* Fin Number: 506
 * SELCAL Code: NONE
 * Mode-S Code: ZZZZZZ
 * OFP Layout: Default
 * Flight Rules: Default
 * Type of Flight: Default
-* Plan Units: Pounds
+* Plan Units: Default
 * Max Diversion: 109 NM
 * Min Runway: 2000 FT
-* Aircraft Name: PA28 WARRIOR II
+* Aircraft Name: PIPER WARRIOR II
 * Engine Type: Lycoming O-320-D3G
 * Comments: Just Flight MSF2020
 
@@ -23,7 +23,7 @@
 ### Airframe Weights:
 
 * Weight Units: Pounds
-* Max Passengers: 4
+* Max Passengers: 3
 * Passenger Weight: 175 lbs
 * Baggage Weight: 0 lbs
 * Empty Weight: 1353 lbs

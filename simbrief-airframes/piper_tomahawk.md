@@ -5,13 +5,13 @@
 * Base TypeL C172
 * ICAO Code: P28A
 * Civil Registration: ZK-TMA
-* Fin Number: 501
+* Fin Number: 505
 * SELCAL Code: NONE
 * Mode-S Code: ZZZZZZ
 * OFP Layout: Default
 * Flight Rules: Default
 * Type of Flight: Default
-* Plan Units: Pounds
+* Plan Units: Default
 * Max Diversion: 90 NM
 * Min Runway: 1800 FT
 * Aircraft Name: PA-38 TOMAHAWK
@@ -23,7 +23,7 @@
 ### Airframe Weights:
 
 * Weight Units: Pounds
-* Max Passengers: 2
+* Max Passengers: 1
 * Passenger Weight: 175 lbs
 * Baggage Weight: 0 lbs
 * Empty Weight: 1160 lbs

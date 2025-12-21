@@ -5,25 +5,25 @@
 * Base TypeL C172
 * ICAO Code: PA28
 * Civil Registration: ZK-AT4
-* Fin Number: 505
+* Fin Number: 504
 * SELCAL Code: NONE
 * Mode-S Code: ZZZZZZ
 * OFP Layout: Default
 * Flight Rules: Default
 * Type of Flight: Default
-* Plan Units: Pounds
+* Plan Units: Default
 * Max Diversion: 160 NM
 * Min Runway: 2100 FT
-* Aircraft Name: PA-28R-201T ARROW IV TURBO
-* Engine Type: Lycoming TIO-360-C1C6
-* Comments: Just Flight MSF2020
+* Aircraft Name: PIPER ARROW IV (T)
+* Engine Type: TIO-360-C1C6
+* Comments: PA-28R-201T TURBO / Just Flight MSF2020 / Lycoming Engine
 
 ---
 
 ### Airframe Weights:
 
 * Weight Units: Pounds
-* Max Passengers: 4
+* Max Passengers: 3
 * Passenger Weight: 175 lbs
 * Baggage Weight: 0 lbs
 * Empty Weight: 1580 lbs
