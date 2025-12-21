@@ -88,7 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const matchesSearch =
             flight.flightNumber.toLowerCase().includes(searchTerm) ||
             flight.pilot.toLowerCase().includes(searchTerm) ||
-            flight.pilotTag.toLowerCase().includes(searchTerm) ||
             flight.departure.toLowerCase().includes(searchTerm) ||
             flight.arrival.toLowerCase().includes(searchTerm) ||
             flight.aircraftReg.toLowerCase().includes(searchTerm) ||
@@ -164,7 +163,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="pilot-avatar">${flight.pilot.charAt(0).toUpperCase()}</div>
                         <div>
                             <div>${flight.pilot}</div>
-                            <div style="font-size: 0.8rem; color: #6b7280;">${flight.pilotTag}</div>
                         </div>
                     </div>
                 </td>
@@ -247,7 +245,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.getElementById('detailPilot').textContent = flight.pilot;
         document.getElementById('detailPilotId').textContent = flight.pilotId;
-        document.getElementById('detailPilotTag').textContent = flight.pilotTag;
 
         document.getElementById('detailSource').textContent = flight.source;
         document.getElementById('detailTimestamp').textContent = formatDateTime(flight.timestamp);
@@ -358,7 +355,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!pilotStats[flight.pilotId]) {
                 pilotStats[flight.pilotId] = {
                     name: flight.pilot,
-                    tag: flight.pilotTag,
                     flights: 0,
                     totalTime: 0
                 };

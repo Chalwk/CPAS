@@ -31,7 +31,6 @@ public class FlightDataManager {
             flight.put("timestamp", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
             flight.put("pilot", user.getName());
             flight.put("pilotId", simbriefPilotId);
-            flight.put("pilotTag", user.getAsTag());
             flight.put("flightNumber", flightPlan.getOrDefault("flight_number", "N/A"));
             flight.put("callsign", flightPlan.getOrDefault("callsign", "N/A"));
             flight.put("departure", flightPlan.getOrDefault("origin", "N/A"));
