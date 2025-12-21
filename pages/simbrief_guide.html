@@ -1,0 +1,407 @@
+<!-- pages/simbrief_guide.html -->
+<!-- Copyright (c) 2025 Jericho Crosby (Chalwk) - All Rights Reserved -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>SimBrief Flight Planning - Coastal Peaks Air Service</title>
+    <link href="../styles/simbrief.css" rel="stylesheet">
+    <link href="../styles/index.css" rel="stylesheet">
+    <link href="../styles/common.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container nav-container">
+        <a class="logo" href="../index.html">
+            <span class="logo-text">CPAS</span>
+            <span class="logo-subtitle">Coastal Peaks Air Service</span>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="fleet.html">Fleet</a></li>
+            <li><a href="members.html">Team</a></li>
+            <li><a href="routes.html">Routes</a></li>
+            <li><a href="training_structure.html">Training</a></li>
+            <li><a href="operations_manual.html">Operations</a></li>
+            <li><a href="addons.html">Add-Ons</a></li>
+            <li><a class="active" href="simbrief_guide.html">Flight Planning</a></li>
+            <li><a href="../index.html#discord">Join</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
+<section class="simbrief-section" style="margin-top: 70px;">
+    <div class="container">
+        <h2 class="section-title">Flight Planning with SimBrief</h2>
+        <p class="section-subtitle">
+            Learn how to create professional flight plans and log your flights using our Discord bot
+        </p>
+
+        <!-- Steps Container -->
+        <div class="steps-container">
+            <!-- Step 1 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-number">1</span>
+                    <div class="step-content">
+                        <h4>Create a SimBrief Account</h4>
+                        <p>If you don't already have one, sign up for a free account at <a
+                                href="https://www.simbrief.com" target="_blank"
+                                rel="noopener noreferrer">SimBrief.com</a>.
+                            This is essential for creating detailed flight plans.</p>
+                        <p><strong>Important:</strong> Make sure your account is set to public to allow the Discord bot
+                            to fetch your flight plans.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-number">2</span>
+                    <div class="step-content">
+                        <h4>Create Your Flight Plan</h4>
+                        <p>Navigate to the Dispatch page and enter your flight details:</p>
+                        <ul>
+                            <li><strong>Departure Airport:</strong> Your starting airport (e.g., NZCH)</li>
+                            <li><strong>Arrival Airport:</strong> Your destination airport</li>
+                            <li><strong>Aircraft:</strong> Select from our fleet or use a similar type</li>
+                            <li><strong>Route:</strong> Enter your planned route or use "Direct"</li>
+                            <li><strong>Passengers:</strong> Set according to your charter mission</li>
+                            <li><strong>Weather Source:</strong> Use any source you prefer</li>
+                            <li><strong>Options:</strong> Enable "Generate PDF" for full OFP access</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-number">3</span>
+                    <div class="step-content">
+                        <h4>Find Your SimBrief User ID</h4>
+                        <p>You'll need your numeric SimBrief User ID (not your username):</p>
+                        <div class="code-block">
+                            <code>1. Log into SimBrief and click your username in the top right</code><br>
+                            <code>2. Select "Account Settings" from the dropdown</code><br>
+                            <code>3. Look for "User ID" in the Account Information section</code><br>
+                            <code>4. It's a numeric value like: 123456</code>
+                        </div>
+                        <p style="margin-top: 10px; font-size: 0.9rem;">
+                            <strong>Alternative:</strong> When viewing a flight plan, check the URL. If it looks like
+                            <code>https://www.simbrief.com/ofp/uads/?userid=123456</code>, your ID is
+                            <code>123456</code>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-number">4</span>
+                    <div class="step-content">
+                        <h4>Use the Discord Bot Command</h4>
+                        <p>Once your flight plan is created, share it with the community using our custom Discord
+                            bot:</p>
+                        <div class="command-example">
+                            <h5><i class="fas fa-terminal"></i> Command Format:</h5>
+                            <div class="code-block">
+                                <code>/simbrief-pirep [Your SimBrief User ID]</code>
+                            </div>
+                            <p><strong>Example:</strong> <code>/simbrief-pirep 123456</code></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Discord Bot Integration -->
+        <div class="discord-bot-section">
+            <h3><i class="fab fa-discord"></i> Discord Bot Integration</h3>
+            <p>Our custom bot will create an embed message with your latest SimBrief flight plan:</p>
+
+            <div class="embed-preview">
+                <div class="embed-header">
+                    <div class="embed-color-bar"></div>
+                    <div class="embed-content">
+                        <div class="embed-author">
+                            <img src="https://via.placeholder.com/20x20/2d6bc9/ffffff?text=P" alt="Avatar">
+                            <span>Pilot#1234</span>
+                            <span class="role-badge role-charter-pilot">Charter Pilot</span>
+                        </div>
+
+                        <div class="embed-thumbnail">
+                            <img src="https://www.simbrief.com/images/icon_navi_color.png" alt="SimBrief Logo">
+                        </div>
+
+                        <div class="embed-title">📋 SimBrief PIREP - CPA123</div>
+
+                        <div class="embed-fields">
+                            <!-- Aircraft field (inline) -->
+                            <div class="embed-field inline">
+                                <div class="field-name">✈️ Aircraft</div>
+                                <div class="field-value">Piper PA-28R Arrow III (PA28)<br>ZK-ABC</div>
+                            </div>
+
+                            <!-- Route field (inline) -->
+                            <div class="embed-field inline">
+                                <div class="field-name">📍 Route</div>
+                                <div class="field-value">NZCH → NZQN<br>Alt: NZMF</div>
+                            </div>
+
+                            <!-- Times field (inline) -->
+                            <div class="embed-field inline">
+                                <div class="field-name">⏱️ Times</div>
+                                <div class="field-value">Flight: 1:45<br>Block: 2:15</div>
+                            </div>
+
+                            <!-- Route text field (block) -->
+                            <div class="embed-field block">
+                                <div class="field-name">🛣️ Route</div>
+                                <div class="field-value">CH V184 DUN V184 ZQN</div>
+                            </div>
+
+                            <!-- Performance field (inline) -->
+                            <div class="embed-field inline">
+                                <div class="field-name">📊 Performance</div>
+                                <div class="field-value">Fuel Burn: 123.5 kg<br>Cruise: FL080</div>
+                            </div>
+
+                            <!-- Weights field (inline) -->
+                            <div class="embed-field inline">
+                                <div class="field-name">⚖️ Weights</div>
+                                <div class="field-value">ZFW: 1200.0 kg<br>TOW: 1400.0 kg</div>
+                            </div>
+
+                            <!-- Wind field (inline) -->
+                            <div class="embed-field inline">
+                                <div class="field-name">💨 Wind</div>
+                                <div class="field-value">Avg Component: 15 kts</div>
+                            </div>
+                        </div>
+
+                        <button class="pdf-button">
+                            <i class="fas fa-file-pdf"></i> View PDF OFP
+                        </button>
+
+                        <div class="embed-footer">
+                            Submitted at 2025-01-15 14:30 | Coastal Peaks Air Service
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="api-response">
+                <h5><i class="fas fa-code"></i> Bot API Call Example:</h5>
+                <code>GET https://www.simbrief.com/api/xml.fetcher.php?userid=123456</code>
+                <div style="margin-top: 10px; font-size: 0.8rem; color: #4b5563;">
+                    <i class="fas fa-info-circle"></i> The bot fetches your latest flight plan via SimBrief's XML API
+                </div>
+            </div>
+        </div>
+
+        <!-- Permissions Section -->
+        <div class="permissions-section">
+            <h3><i class="fas fa-user-shield"></i> Permission Requirements</h3>
+            <p>The <code>/simbrief-pirep</code> command requires one of the following CPAS roles:</p>
+
+            <div class="permissions-grid">
+                <div class="permission-item">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Pilot Under Training</span>
+                </div>
+                <div class="permission-item">
+                    <i class="fas fa-plane"></i>
+                    <span>Charter Pilot</span>
+                </div>
+                <div class="permission-item">
+                    <i class="fas fa-plane-departure"></i>
+                    <span>Senior Charter Pilot</span>
+                </div>
+                <div class="permission-item">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Lead Pilot</span>
+                </div>
+                <div class="permission-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>Instructor</span>
+                </div>
+                <div class="permission-item">
+                    <i class="fas fa-crown"></i>
+                    <span>Administrators</span>
+                </div>
+            </div>
+
+            <p style="font-size: 0.9rem; color: #6b7280; margin-top: 15px;">
+                <i class="fas fa-info-circle"></i> If you don't have permission, you'll receive an error message and the
+                command won't process.
+            </p>
+        </div>
+
+        <!-- Requirements Section -->
+        <div class="requirements-section">
+            <h3><i class="fas fa-clipboard-check"></i> Required Information</h3>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <h5><i class="fas fa-plane-departure"></i> Departure & Arrival</h5>
+                    <p>Must include both airports with proper ICAO codes (e.g., NZCH, NZQN)</p>
+                </div>
+                <div class="requirement-card">
+                    <h5><i class="fas fa-gas-pump"></i> Fuel Planning</h5>
+                    <p>Ensure adequate fuel reserves (45 minutes minimum for CPAS operations)</p>
+                </div>
+                <div class="requirement-card">
+                    <h5><i class="fas fa-users"></i> Passenger Count</h5>
+                    <p>Set realistic passenger numbers based on aircraft capacity</p>
+                </div>
+                <div class="requirement-card">
+                    <h5><i class="fas fa-route"></i> Route Details</h5>
+                    <p>Include waypoints, airways, or use "Direct" for VFR charters</p>
+                </div>
+                <div class="requirement-card">
+                    <h5><i class="fas fa-cloud"></i> Weather Consideration</h5>
+                    <p>Check weather and NOTAMs before finalizing your plan</p>
+                </div>
+                <div class="requirement-card">
+                    <h5><i class="fas fa-cog"></i> Aircraft Configuration</h5>
+                    <p>Select correct aircraft type and configuration for your route</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tips Section -->
+        <div class="tips-section">
+            <h3><i class="fas fa-lightbulb"></i> Pro Tips</h3>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h5><i class="fas fa-save"></i> Save Your Plans</h5>
+                    <p>SimBrief allows you to save flight plans for future use. Save your favorite CPAS routes!</p>
+                </div>
+                <div class="tip-card">
+                    <h5><i class="fas fa-download"></i> Export to MSFS</h5>
+                    <p>Use the "Export" feature to send your flight plan directly to Microsoft Flight Simulator</p>
+                </div>
+                <div class="tip-card">
+                    <h5><i class="fas fa-mobile-alt"></i> Mobile Friendly</h5>
+                    <p>SimBrief works well on mobile devices, perfect for checking your plan during flight</p>
+                </div>
+                <div class="tip-card">
+                    <h5><i class="fas fa-share-alt"></i> Share with Others</h5>
+                    <p>Use the Discord bot to share your flight plans and get feedback from fellow pilots</p>
+                </div>
+                <div class="tip-card">
+                    <h5><i class="fas fa-history"></i> Track Progress</h5>
+                    <p>Regular PIREP submissions help track your flight hours for rank progression</p>
+                </div>
+                <div class="tip-card">
+                    <h5><i class="fas fa-bug"></i> Debugging Help</h5>
+                    <p>If the command fails, try manually visiting:
+                        <code>https://www.simbrief.com/api/xml.fetcher.php?userid=YOUR_ID</code>
+                        to see if it returns valid XML.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screenshots Section -->
+        <div class="screenshots">
+            <div class="screenshot">
+                <img src="https://via.placeholder.com/400x200/2d6bc9/ffffff?text=SimBrief+Dispatch+Page"
+                     alt="SimBrief Dispatch Page">
+                <div class="screenshot-caption">SimBrief Dispatch page where you create your flight plan</div>
+            </div>
+            <div class="screenshot">
+                <img src="https://via.placeholder.com/400x200/059669/ffffff?text=Discord+Command"
+                     alt="Discord Command Example">
+                <div class="screenshot-caption">Example of the /simbrief-pirep command in Discord</div>
+            </div>
+            <div class="screenshot">
+                <img src="https://via.placeholder.com/400x200/d97706/ffffff?text=PDF+OFP+Example" alt="PDF OFP Example">
+                <div class="screenshot-caption">The PDF OFP that opens when clicking "View PDF OFP"</div>
+            </div>
+        </div>
+
+        <!-- Error/Warning Box -->
+        <div class="error-box">
+            <i class="fas fa-exclamation-triangle"></i>
+            <div>
+                <h4>Common Issues & Solutions</h4>
+                <ul>
+                    <li><strong>Permission Denied:</strong> Ensure you have a CPAS pilot role assigned in Discord</li>
+                    <li><strong>Invalid Pilot ID:</strong> Check your SimBrief Account Settings for your numeric User ID
+                    </li>
+                    <li><strong>No Flight Plan Found:</strong> The bot only fetches your <em>latest</em> flight plan -
+                        create one first!
+                    </li>
+                    <li><strong>Private Profile:</strong> Your SimBrief profile must be set to public for the bot to
+                        access your flight plans
+                    </li>
+                    <li><strong>XML Parsing Error:</strong> Sometimes occurs with incomplete or corrupted flight plans
+                    </li>
+                    <li><strong>Rate Limiting:</strong> SimBrief API has rate limits - wait a few minutes before
+                        retrying
+                    </li>
+                    <li><strong>Incomplete Fields:</strong> Ensure all required fields are filled in your SimBrief
+                        flight plan
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Technical Details -->
+        <div class="note-box">
+            <i class="fas fa-info-circle"></i>
+            <div>
+                <h4>Technical Details</h4>
+                <ul>
+                    <li>The bot uses SimBrief's XML API: <code>https://www.simbrief.com/api/xml.fetcher.php?userid=YOUR_ID</code>
+                    </li>
+                    <li>Flight plans are parsed from XML and formatted into a Discord embed</li>
+                    <li>The PDF button links directly to your SimBrief OFP (Operational Flight Plan)</li>
+                    <li>PIREPs are posted to a designated channel (configurable by admins)</li>
+                    <li>All CPAS flight data is logged for community tracking and progression</li>
+                    <li>The system supports both fixed-wing and helicopter operations</li>
+                    <li>Embed fields are dynamically populated based on your SimBrief data</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Final Note -->
+        <div class="note-box" style="margin-top: 20px; background-color: #f0f9ff;">
+            <i class="fas fa-flag-checkered"></i>
+            <div>
+                <h4>Ready to Fly?</h4>
+                <p>Now that you know how to create and share flight plans, you're ready to start flying with CPAS!
+                    Remember:</p>
+                <ol>
+                    <li>Create your flight plan on SimBrief</li>
+                    <li>Use <code>/simbrief-pirep [YOUR_ID]</code> in Discord</li>
+                    <li>Fly the route in Microsoft Flight Simulator</li>
+                    <li>Share your experiences and screenshots in the Discord community!</li>
+                </ol>
+                <p style="margin-top: 15px; font-style: italic;">
+                    Happy flying! ✈️
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer-copyright"><p></p></footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
