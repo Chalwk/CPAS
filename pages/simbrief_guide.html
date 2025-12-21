@@ -56,8 +56,6 @@
                                 href="https://www.simbrief.com" rel="noopener noreferrer"
                                 target="_blank">SimBrief.com</a>.
                             This is essential for creating detailed flight plans.</p>
-                        <p><strong>Important:</strong> Make sure your account is set to public to allow the Discord bot
-                            to fetch your flight plans.</p>
                     </div>
                 </div>
             </div>
@@ -85,12 +83,12 @@
                 <div class="step-header">
                     <span class="step-number">3</span>
                     <div class="step-content">
-                        <h4>Find Your SimBrief User ID</h4>
-                        <p>You'll need your numeric SimBrief User ID (not your username):</p>
+                        <h4>Find Your SimBrief Pilot ID</h4>
+                        <p>You'll need your numeric SimBrief Pilot ID (not your username):</p>
                         <div class="code-block">
                             <code>1. Log into SimBrief and click your username in the top right</code><br>
                             <code>2. Select "Account Settings" from the dropdown</code><br>
-                            <code>3. Look for "User ID" in the Account Information section</code><br>
+                            <code>3. Look for "Pilot ID" in the Account Information section</code><br>
                             <code>4. It's a numeric value like: 123456</code>
                         </div>
                         <p style="margin-top: 10px; font-size: 0.9rem;">
@@ -112,7 +110,7 @@
                         <div class="command-example">
                             <h5><i class="fas fa-terminal"></i> Command Format:</h5>
                             <div class="code-block">
-                                <code>/simbrief-pirep [Your SimBrief User ID]</code>
+                                <code>/simbrief-pirep [Your SimBrief Pilot ID]</code>
                             </div>
                             <p><strong>Example:</strong> <code>/simbrief-pirep 123456</code></p>
                         </div>
@@ -301,16 +299,16 @@
         <div class="screenshots">
             <div class="screenshot">
                 <img alt="SimBrief Dispatch Page"
-                     src="https://via.placeholder.com/400x200/2d6bc9/ffffff?text=SimBrief+Dispatch+Page">
+                     src="../images/simbrief_dispatch.png">
                 <div class="screenshot-caption">SimBrief Dispatch page where you create your flight plan</div>
             </div>
             <div class="screenshot">
                 <img alt="Discord Command Example"
-                     src="https://via.placeholder.com/400x200/059669/ffffff?text=Discord+Command">
+                     src="../images/discord_command_example.png">
                 <div class="screenshot-caption">Example of the /simbrief-pirep command in Discord</div>
             </div>
             <div class="screenshot">
-                <img alt="PDF OFP Example" src="https://via.placeholder.com/400x200/d97706/ffffff?text=PDF+OFP+Example">
+                <img alt="PDF OFP Example" src="../images/PDF_OFP_Example.png">
                 <div class="screenshot-caption">The PDF OFP that opens when clicking "View PDF OFP"</div>
             </div>
         </div>
@@ -321,13 +319,10 @@
                 <h4>Common Issues & Solutions</h4>
                 <ul>
                     <li><strong>Permission Denied:</strong> Ensure you have a CPAS pilot role assigned in Discord</li>
-                    <li><strong>Invalid Pilot ID:</strong> Check your SimBrief Account Settings for your numeric User ID
+                    <li><strong>Invalid Pilot ID:</strong> Check your SimBrief Account Settings for your numeric Pilot ID
                     </li>
                     <li><strong>No Flight Plan Found:</strong> The bot only fetches your <em>latest</em> flight plan -
                         create one first!
-                    </li>
-                    <li><strong>Private Profile:</strong> Your SimBrief profile must be set to public for the bot to
-                        access your flight plans
                     </li>
                     <li><strong>XML Parsing Error:</strong> Sometimes occurs with incomplete or corrupted flight plans
                     </li>
@@ -340,42 +335,6 @@
                 </ul>
             </div>
         </div>
-
-        <div class="note-box">
-            <i class="fas fa-info-circle"></i>
-            <div>
-                <h4>Technical Details</h4>
-                <ul>
-                    <li>The bot uses SimBrief's XML API: <code>https://www.simbrief.com/api/xml.fetcher.php?userid=YOUR_ID</code>
-                    </li>
-                    <li>Flight plans are parsed from XML and formatted into a Discord embed</li>
-                    <li>The PDF button links directly to your SimBrief OFP (Operational Flight Plan)</li>
-                    <li>PIREPs are posted to a designated channel (configurable by admins)</li>
-                    <li>All CPAS flight data is logged for community tracking and progression</li>
-                    <li>The system supports both fixed-wing and helicopter operations</li>
-                    <li>Embed fields are dynamically populated based on your SimBrief data</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="note-box" style="margin-top: 20px; background-color: #f0f9ff;">
-            <i class="fas fa-flag-checkered"></i>
-            <div>
-                <h4>Ready to Fly?</h4>
-                <p>Now that you know how to create and share flight plans, you're ready to start flying with CPAS!
-                    Remember:</p>
-                <ol>
-                    <li>Create your flight plan on SimBrief</li>
-                    <li>Use <code>/simbrief-pirep [YOUR_ID]</code> in Discord</li>
-                    <li>Fly the route in Microsoft Flight Simulator</li>
-                    <li>Share your experiences and screenshots in the Discord community!</li>
-                </ol>
-                <p style="margin-top: 15px; font-style: italic;">
-                    Happy flying! ✈️
-                </p>
-            </div>
-        </div>
-
     </div>
 </section>
 
