@@ -58,6 +58,16 @@
     line-height: 1.6;
 }
 
+.step-content ul {
+    padding-left: 25px;
+    margin-top: 10px;
+}
+
+.step-content li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
 .code-block {
     background: #1e1e1e;
     color: #d4d4d4;
@@ -94,7 +104,6 @@
     border: 1px solid #e2e8f0;
 }
 
-/* Discord Embed Preview Styling */
 .embed-preview {
     background: #36393f;
     border-radius: 8px;
@@ -228,7 +237,6 @@
     background: #4752c4;
 }
 
-/* Requirements Section */
 .requirements-section {
     margin: 50px 0;
 }
@@ -256,7 +264,6 @@
     gap: 10px;
 }
 
-/* Tips Section */
 .tips-section {
     margin: 50px 0;
 }
@@ -284,7 +291,6 @@
     gap: 10px;
 }
 
-/* Screenshots */
 .screenshots {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -312,7 +318,6 @@
     color: #4b5563;
 }
 
-/* Note Boxes */
 .note-box {
     background: #f0f9ff;
     border-left: 5px solid #2d6bc9;
@@ -349,7 +354,6 @@
     margin-bottom: 10px;
 }
 
-/* Permissions Section */
 .permissions-section {
     margin: 40px 0;
 }
@@ -376,7 +380,6 @@
     font-size: 1.2rem;
 }
 
-/* Role badges */
 .role-badge {
     display: inline-flex;
     align-items: center;
@@ -412,7 +415,6 @@
     color: #4c1d95;
 }
 
-/* API Response Box */
 .api-response {
     background: #f0f9ff;
     border: 1px solid #bfdbfe;
@@ -435,7 +437,6 @@
     padding: 0;
 }
 
-/* Error/Warning Box */
 .error-box {
     background: #fef2f2;
     border-left: 5px solid #dc2626;
@@ -468,7 +469,6 @@
     color: #7f1d1d;
 }
 
-/* Debug Box */
 .debug-box {
     background: #1e1e1e;
     color: #d4d4d4;
@@ -486,7 +486,12 @@
     padding: 0;
 }
 
-/* Responsive Design */
+@media (max-width: 768px) {
+    .step-content ul {
+        padding-left: 20px;
+    }
+}
+
 @media (max-width: 768px) {
     .simbrief-section {
         padding: 60px 0;
