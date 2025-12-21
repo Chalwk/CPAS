@@ -61,16 +61,16 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
             }
 
             event.deferReply().queue();
-            String userId = event.getOption("userid").getAsString().trim();
+            String simbriefPilotId = event.getOption("userid").getAsString().trim();
 
-            if (userId.isEmpty()) {
+            if (simbriefPilotId.isEmpty()) {
                 event.getHook().editOriginal("❌ Please provide your SimBrief Pilot ID.")
                         .queue();
                 return;
             }
 
             try {
-                Document doc = SimBriefAPI.fetchFlightPlanByUserId(userId);
+                Document doc = SimBriefAPI.fetchFlightPlanByUserId(simbriefPilotId);
                 Map<String, String> flightPlan = SimBriefAPI.parseFlightPlan(doc);
 
                 if (flightPlan.containsKey("error")) {
@@ -99,7 +99,7 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
                     buttonUrl = flightPlan.get("pdf_url");
                     buttonLabel = "View PDF OFP";
                 } else {
-                    buttonUrl = "https://www.simbrief.com/ofp/uads/?userid=" + userId;
+                    buttonUrl = "https://www.simbrief.com/ofp/uads/?userid=" + simbriefPilotId;
                     buttonLabel = "View Full OFP";
                 }
 
@@ -116,13 +116,14 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
                                 success -> {
                                     event.getHook().editOriginal("✅ PIREP submitted successfully from SimBrief!")
                                             .queue();
-                                    logger.info("SimBrief PIREP submitted by {}: {} -> {}",
+                                    logger.info("SimBrief PIREP submitted by {} (SimBrief ID: {}): {} -> {}",
                                             event.getUser().getAsTag(),
+                                            simbriefPilotId,
                                             flightPlan.get("origin"),
                                             flightPlan.get("destination"));
 
                                     try {
-                                        FlightDataManager.saveFlight(event.getUser(), flightPlan);
+                                        FlightDataManager.saveFlight(event.getUser(), flightPlan, simbriefPilotId);
                                     } catch (Exception e) {
                                         logger.warn("Failed to save flight to JSON (non-critical): {}", e.getMessage());
                                     }
@@ -143,10 +144,10 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
                 }
 
             } catch (Exception e) {
-                logger.error("Error fetching SimBrief data for userid: {}", userId, e);
+                logger.error("Error fetching SimBrief data for userid: {}", simbriefPilotId, e);
                 event.getHook().editOriginal("❌ Could not fetch your latest SimBrief flight plan.\n" +
                                 "**Please check:**\n" +
-                                "• Is your Pilot ID **" + userId + "** correct?\n" +
+                                "• Is your Pilot ID **" + simbriefPilotId + "** correct?\n" +
                                 "• Have you generated a flight plan recently?\n" +
                                 "• Is your SimBrief profile set to public?\n\n" +
                                 "**Find your ID:** Log into SimBrief, go to **Account Settings**. Your numeric 'Pilot ID' or 'User ID' is listed there.")

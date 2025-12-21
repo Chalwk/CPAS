@@ -22,7 +22,7 @@ public class FlightDataManager {
     private static final Logger logger = LoggerFactory.getLogger(FlightDataManager.class);
     private static final ObjectMapper mapper = new ObjectMapper();
 
-    public static void saveFlight(User user, Map<String, String> flightPlan) {
+    public static void saveFlight(User user, Map<String, String> flightPlan, String simbriefPilotId) {
         try {
             ObjectNode flight = mapper.createObjectNode();
 
@@ -30,7 +30,7 @@ public class FlightDataManager {
             flight.put("date", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE));
             flight.put("timestamp", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
             flight.put("pilot", user.getName());
-            flight.put("pilotId", user.getId());
+            flight.put("pilotId", simbriefPilotId);
             flight.put("pilotTag", user.getAsTag());
             flight.put("flightNumber", flightPlan.getOrDefault("flight_number", "N/A"));
             flight.put("callsign", flightPlan.getOrDefault("callsign", "N/A"));
@@ -69,9 +69,9 @@ public class FlightDataManager {
             boolean success = GitHubAPI.appendFlightToJSON(jsonToSave);
 
             if (success) {
-                logger.info("Flight saved for user: {}", user.getAsTag());
+                logger.info("Flight saved for user: {} (SimBrief ID: {})", user.getAsTag(), simbriefPilotId);
             } else {
-                logger.error("Failed to save flight for user: {}", user.getAsTag());
+                logger.error("Failed to save flight for user: {} (SimBrief ID: {})", user.getAsTag(), simbriefPilotId);
             }
 
         } catch (Exception e) {
