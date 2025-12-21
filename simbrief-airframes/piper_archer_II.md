@@ -29,7 +29,7 @@
 * Max Zero Fuel Weight: 2440 lbs
 * Max Takeoff Weight: 2440 lbs
 * Max Landing Weight: 2250 lbs
-* Max Fuel Capacity: 288 lbs
+* Max Fuel Capacity: 288 lbs (48 US Gal)
 * Max Cargo Weight: 200 lbs
 * Default Freight Mode: Default (None)
 
@@ -37,11 +37,11 @@
 
 ### Airframe Equipment:
 
-* Performance Code: A (Vref < 91 kts)
+* Performance Code: B (Vref 91-120 kts)
 * Weight Category: L (Light)
 * ETOPS Threshold: 60 minutes
 * ETOPS Certification: Auto
-* ICAO Equipment: SDFRY
+* ICAO Equipment: SDFGRWY
 * Transponder: C
 * PBN Capability: A1B1C1D1L1O1S1
 * Extra FPL Info (Item 18): RMK/IVAO CPAS CHARTER
@@ -73,5 +73,3 @@
 * Default Descent Profile: NORMAL
 * Takeoff Power: 180 HP
 * Takeoff Thrust Flat Rating: Default
-
----
