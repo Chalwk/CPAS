@@ -68,7 +68,7 @@
 * Fuel Factor: P05
 * Cruise Level Offset: M3500
 * Service Ceiling: 20000 ft
-* Default Cruise Profile: 2500 RPM
+* Default Cruise Profile: 2350 RPM
 * Default Climb Profile: NORMAL
 * Default Descent Profile: NORMAL
 * Takeoff Power: 200 HP
