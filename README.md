@@ -17,9 +17,7 @@ for Microsoft Flight Simulator 2020.
 
 ## About
 
-Coastal Peaks Air Service (CPAS) is a fictional air charter and specialty flight operation set in the South Island of
-New Zealand. Experience scenic flights over the plains of Canterbury, Christchurch, and Banks Peninsula, as well as the
-remote alpine stations and dramatic landscapes of the West Coast and Southern Alps.
+Coastal Peaks Air Service (CPAS) is a new, fictional virtual air charter operating in New Zealand's South Island. We Fly realistic routes over Canterbury, Christchurch, Banks Peninsula, and the dramatic landscapes of the West Coast and Southern Alps.
 
 ## License
 
