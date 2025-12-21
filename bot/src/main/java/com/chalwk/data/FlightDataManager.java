@@ -2,6 +2,7 @@
 
 package com.chalwk.data;
 
+import com.chalwk.github.GitHubAPI;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -9,10 +10,10 @@ import net.dv8tion.jda.api.entities.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Map;
@@ -20,7 +21,6 @@ import java.util.Map;
 public class FlightDataManager {
     private static final Logger logger = LoggerFactory.getLogger(FlightDataManager.class);
     private static final ObjectMapper mapper = new ObjectMapper();
-    private static final String FLIGHTS_FILE = "../data/flights.json";
 
     public static void saveFlight(User user, Map<String, String> flightPlan) {
         try {
@@ -28,7 +28,6 @@ public class FlightDataManager {
 
             flight.put("id", generateFlightId());
             flight.put("date", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE));
-            flight.put("timestamp", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
             flight.put("timestamp", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
             flight.put("pilot", user.getName());
             flight.put("pilotId", user.getId());
@@ -54,54 +53,32 @@ public class FlightDataManager {
             flight.put("status", "completed");
             flight.put("source", "SimBrief");
 
+            String existingJson = readExistingFlights();
             ArrayNode flightsArray;
 
-            File file = new File(FLIGHTS_FILE);
-
-            Path path = Paths.get(FLIGHTS_FILE);
-            if (file.exists()) {
-                String content = new String(Files.readAllBytes(path));
-                flightsArray = (ArrayNode) mapper.readTree(content);
-            } else {
+            if (existingJson == null || existingJson.isEmpty()) {
                 flightsArray = mapper.createArrayNode();
+            } else {
+                flightsArray = (ArrayNode) mapper.readTree(existingJson);
             }
 
             flightsArray.add(flight);
 
             String jsonToSave = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(flightsArray);
-            Files.write(path, jsonToSave.getBytes());
 
-            logger.info("Flight saved locally for user: {}", user.getAsTag());
+            boolean success = GitHubAPI.appendFlightToJSON(jsonToSave);
 
-            commitToGitHub();
+            if (success) {
+                logger.info("Flight saved for user: {}", user.getAsTag());
+            } else {
+                logger.error("Failed to save flight for user: {}", user.getAsTag());
+            }
 
         } catch (Exception e) {
             logger.error("Error saving flight data", e);
         }
     }
 
-
-    private static void commitToGitHub() {
-        try {
-            ProcessBuilder pb = new ProcessBuilder();
-            pb.command("git", "add", "../data/flights.json");
-            pb.directory(new File("../"));
-            Process process = pb.start();
-            process.waitFor();
-
-            pb.command("git", "commit", "-m", "Auto-commit: New flight added via Discord bot");
-            process = pb.start();
-            process.waitFor();
-
-            pb.command("git", "push");
-            process = pb.start();
-            process.waitFor();
-
-            logger.info("Flight data committed to GitHub");
-        } catch (Exception e) {
-            logger.error("Failed to commit to GitHub: {}", e.getMessage());
-        }
-    }
     private static String generateFlightId() {
         return "CPA" + System.currentTimeMillis() % 10000;
     }
@@ -109,5 +86,32 @@ public class FlightDataManager {
     private static String calculateDistance(Map<String, String> flightPlan) {
         // TODO: Implement actual distance calculation
         return flightPlan.getOrDefault("distance", "N/A");
+    }
+
+    private static String readExistingFlights() {
+        try {
+            String token = GitHubAPI.readGitHubToken();
+            if (token == null) return "[]";
+
+            HttpClient client = HttpClient.newHttpClient();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create("https://api.github.com/repos/Chalwk/CPAS/contents/data/flights.json"))
+                    .header("Authorization", "token " + token)
+                    .header("Accept", "application/vnd.github.v3.raw")
+                    .header("User-Agent", "CPAS-Discord-Bot")
+                    .GET()
+                    .build();
+
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+            if (response.statusCode() == 200) {
+                return response.body();
+            } else if (response.statusCode() == 404) {
+                return "[]";
+            }
+        } catch (Exception e) {
+            logger.error("Error reading existing flights", e);
+        }
+        return "[]";
     }
 }
