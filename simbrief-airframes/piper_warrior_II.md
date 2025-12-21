@@ -1,6 +1,5 @@
 # Airframe Info:
 
-* Base Type: C172
 * ICAO Code: P28A
 * Civil Registration: ZK-LJF
 * Fin Number: 999
