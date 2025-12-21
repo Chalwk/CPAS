@@ -29,9 +29,7 @@ public class Constants {
         ROLE_SENIOR_CHARTER_PILOT = Config.getLong("role.senior.charter.pilot", 0L);
         ROLE_LEAD_PILOT = Config.getLong("role.lead.pilot", 0L);
         ROLE_INSTRUCTOR = Config.getLong("role.instructor", 0L);
-
         CHANNEL_PIREP = Config.getLong("channel.pirep", 0L);
-
         ADMIN_IDS = Config.getStringArray("admin.ids");
 
         try {
