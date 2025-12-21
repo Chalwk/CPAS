@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         document.getElementById('viewMap').onclick = () => {
-            alert(`Map view for ${flight.departure} → ${flight.arrival} would open here.\nRoute: ${flight.route}`);
+            alert(`Map for ${flight.departure} → ${flight.arrival} coming soon.\nRoute: ${flight.route}`);
         };
     }
 
