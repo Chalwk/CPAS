@@ -90,7 +90,17 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
                         flightPlan
                 );
 
-                String ofpUrl = "https://www.simbrief.com/ofp/uads/?userid=" + userId;
+                String buttonUrl;
+                String buttonLabel;
+
+                if (flightPlan.containsKey("pdf_url") && flightPlan.get("pdf_url") != null &&
+                        !flightPlan.get("pdf_url").isEmpty()) {
+                    buttonUrl = flightPlan.get("pdf_url");
+                    buttonLabel = "View PDF OFP";
+                } else {
+                    buttonUrl = "https://www.simbrief.com/ofp/uads/?userid=" + userId;
+                    buttonLabel = "View Full OFP";
+                }
 
                 if (Constants.CHANNEL_PIREP != 0) {
                     var channel = event.getGuild().getTextChannelById(Constants.CHANNEL_PIREP);
@@ -98,7 +108,7 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
                         var messageAction = channel.sendMessageEmbeds(pirepEmbed);
 
                         messageAction = messageAction.setComponents(
-                                ActionRow.of(Button.link(ofpUrl, "View Full OFP"))
+                                ActionRow.of(Button.link(buttonUrl, buttonLabel))
                         );
 
                         messageAction.queue(

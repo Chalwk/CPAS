@@ -73,7 +73,6 @@ public class SimBriefAPI {
 
             flightPlan.put("origin", getElementTextFromParent(doc, "origin"));
             flightPlan.put("destination", getElementTextFromParent(doc, "destination"));
-
             flightPlan.put("alternate", getElementTextFromParent(doc, "alternate"));
 
             String estEnroute = getElementText(doc, "est_time_enroute");
@@ -112,6 +111,32 @@ public class SimBriefAPI {
             String estTow = getElementText(doc, "est_tow");
             if (estTow != null && !estTow.isEmpty()) {
                 flightPlan.put("tow", String.format("%.1f", Double.parseDouble(estTow)));
+            }
+
+            NodeList filesList = doc.getElementsByTagName("files");
+            if (filesList.getLength() > 0) {
+                Element files = (Element) filesList.item(0);
+
+                NodeList directoryList = files.getElementsByTagName("directory");
+                if (directoryList.getLength() > 0 && directoryList.item(0).getFirstChild() != null) {
+                    String directory = directoryList.item(0).getFirstChild().getNodeValue();
+
+                    NodeList pdfList = files.getElementsByTagName("pdf");
+                    if (pdfList.getLength() > 0) {
+                        Element pdf = (Element) pdfList.item(0);
+                        NodeList linkList = pdf.getElementsByTagName("link");
+                        if (linkList.getLength() > 0 && linkList.item(0).getFirstChild() != null) {
+                            String pdfLink = linkList.item(0).getFirstChild().getNodeValue();
+
+                            if (directory != null && pdfLink != null) {
+                                if (!directory.endsWith("/")) {
+                                    directory = directory + "/";
+                                }
+                                flightPlan.put("pdf_url", directory + pdfLink);
+                            }
+                        }
+                    }
+                }
             }
 
         } catch (Exception e) {
