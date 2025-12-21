@@ -31,7 +31,7 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
 
     @Override
     public String getCommandName() {
-        return "simbrief-pirep";
+        return "pirep";
     }
 
     @Override
