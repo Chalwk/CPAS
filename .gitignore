@@ -1,5 +1,6 @@
 /.idea/
 /bot/bot.token
+/bot/github.token
 
 /bot/.gradle/
 /bot/gradle/wrapper/gradle-wrapper.jar

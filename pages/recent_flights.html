@@ -1,0 +1,347 @@
+<!-- Copyright (c) 2025. Jericho Crosby (Chalwk) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Recent Flights - Coastal Peaks Air Service</title>
+    <link href="../styles/index.css" rel="stylesheet">
+    <link href="../styles/common.css" rel="stylesheet">
+    <link href="../styles/recent_flights.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container nav-container">
+        <a class="logo" href="../index.html">
+            <span class="logo-text">CPAS</span>
+            <span class="logo-subtitle">Coastal Peaks Air Service</span>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="fleet.html">Fleet</a></li>
+            <li><a href="members.html">Team</a></li>
+            <li><a href="routes.html">Routes</a></li>
+            <li><a href="training_structure.html">Training</a></li>
+            <li><a href="operations_manual.html">Operations</a></li>
+            <li><a href="addons.html">Add-Ons</a></li>
+            <li><a href="simbrief_guide.html">Flight Planning</a></li>
+            <li><a href="recent_flights.html" class="active">Recent Flights</a></li>
+            <li><a href="../index.html#discord">Join</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
+<section class="flights-section" style="margin-top: 70px;">
+    <div class="container">
+        <h2 class="section-title">Recent Flight Operations</h2>
+        <p class="section-subtitle">
+            Track the latest charter flights and operations conducted by CPAS pilots
+        </p>
+
+        <div class="flights-controls">
+            <div class="controls-left">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search flights, pilots, or airports...">
+                </div>
+                <div class="filter-group">
+                    <select id="statusFilter" class="filter-select">
+                        <option value="all">All Status</option>
+                        <option value="completed">Completed</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="scheduled">Scheduled</option>
+                    </select>
+                    <select id="aircraftFilter" class="filter-select">
+                        <option value="all">All Aircraft</option>
+                        <option value="P28A">Piper Archer (P28A)</option>
+                        <option value="R44">Robinson R44</option>
+                        <option value="R66">Robinson R66</option>
+                        <option value="H125">Airbus H125</option>
+                        <option value="H145">Airbus H145</option>
+                    </select>
+                </div>
+            </div>
+            <div class="controls-right">
+                <div class="stats-summary">
+                    <span class="stat-item">
+                        <i class="fas fa-plane-departure"></i>
+                        <span id="totalFlights">0</span> Flights
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-clock"></i>
+                        <span id="totalHours">0</span> Hours
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-gas-pump"></i>
+                        <span id="totalFuel">0</span> kg Fuel
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="flights-container">
+            <div class="flights-table-container">
+                <table class="flights-table" id="flightsTable">
+                    <thead>
+                    <tr>
+                        <th data-sort="flightNumber">Flight #</th>
+                        <th data-sort="date">Date</th>
+                        <th data-sort="pilot">Pilot</th>
+                        <th data-sort="aircraft">Aircraft</th>
+                        <th data-sort="route">Route</th>
+                        <th data-sort="flightTime">Flight Time</th>
+                        <th data-sort="status">Status</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody id="flightsTableBody">
+                    <!-- Populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="flight-details-sidebar" id="flightDetails">
+                <div class="sidebar-header">
+                    <h3>Flight Details</h3>
+                    <button class="close-sidebar" id="closeSidebar">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="sidebar-content">
+                    <div class="detail-section">
+                        <h4><i class="fas fa-info-circle"></i> Flight Information</h4>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">Flight Number:</span>
+                                <span class="detail-value" id="detailFlightNumber">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Callsign:</span>
+                                <span class="detail-value" id="detailCallsign">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Date:</span>
+                                <span class="detail-value" id="detailDate">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Status:</span>
+                                <span class="detail-value status-badge" id="detailStatus">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4><i class="fas fa-route"></i> Route Information</h4>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">Departure:</span>
+                                <span class="detail-value airport-code" id="detailDeparture">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Arrival:</span>
+                                <span class="detail-value airport-code" id="detailArrival">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Alternate:</span>
+                                <span class="detail-value airport-code" id="detailAlternate">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Cruise Altitude:</span>
+                                <span class="detail-value" id="detailCruiseAlt">-</span>
+                            </div>
+                            <div class="detail-item full-width">
+                                <span class="detail-label">Route:</span>
+                                <span class="detail-value" id="detailRoute">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Distance:</span>
+                                <span class="detail-value" id="detailDistance">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4><i class="fas fa-plane"></i> Aircraft Information</h4>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">Aircraft:</span>
+                                <span class="detail-value" id="detailAircraft">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Registration:</span>
+                                <span class="detail-value" id="detailAircraftReg">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">ICAO Code:</span>
+                                <span class="detail-value" id="detailAircraftIcao">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4><i class="fas fa-chart-line"></i> Performance</h4>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">Flight Time:</span>
+                                <span class="detail-value" id="detailFlightTime">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Block Time:</span>
+                                <span class="detail-value" id="detailBlockTime">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Fuel Burn:</span>
+                                <span class="detail-value" id="detailFuelBurn">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">ZFW:</span>
+                                <span class="detail-value" id="detailZFW">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">TOW:</span>
+                                <span class="detail-value" id="detailTOW">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Wind Component:</span>
+                                <span class="detail-value" id="detailWindComponent">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4><i class="fas fa-user-pilot"></i> Pilot Information</h4>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">Pilot:</span>
+                                <span class="detail-value" id="detailPilot">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Pilot ID:</span>
+                                <span class="detail-value" id="detailPilotId">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Discord Tag:</span>
+                                <span class="detail-value" id="detailPilotTag">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4><i class="fas fa-file-alt"></i> Source</h4>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">Source:</span>
+                                <span class="detail-value" id="detailSource">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Timestamp:</span>
+                                <span class="detail-value" id="detailTimestamp">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-actions">
+                        <button class="btn btn-secondary" id="viewSimBrief">
+                            <i class="fas fa-external-link-alt"></i> View SimBrief
+                        </button>
+                        <button class="btn btn-primary" id="viewMap">
+                            <i class="fas fa-map-marked-alt"></i> View Route Map
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination" id="pagination">
+            <button class="pagination-btn" id="prevPage" disabled>
+                <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            <div class="page-numbers" id="pageNumbers"></div>
+            <button class="pagination-btn" id="nextPage">
+                Next <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div class="flights-summary">
+            <div class="summary-card">
+                <h4><i class="fas fa-chart-pie"></i> Flight Statistics</h4>
+                <div class="summary-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #2d6bc9;">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" id="statsTotalFlights">0</div>
+                            <div class="stat-label">Total Flights</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #059669;">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" id="statsAvgFlightTime">0:00</div>
+                            <div class="stat-label">Avg Flight Time</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #7c3aed;">
+                            <i class="fas fa-gas-pump"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" id="statsTotalFuel">0</div>
+                            <div class="stat-label">Total Fuel (kg)</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: #dc2626;">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" id="statsActivePilots">1</div>
+                            <div class="stat-label">Active Pilots</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <h4><i class="fas fa-trophy"></i> Top Pilots This Month</h4>
+                <div class="top-pilots" id="topPilots">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <h4><i class="fas fa-plane-departure"></i> Most Popular Routes</h4>
+                <div class="popular-routes" id="popularRoutes">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <div class="data-refresh">
+            <p><i class="fas fa-sync-alt"></i> Flight data is updated automatically. Last updated: <span
+                    id="lastUpdated">-</span></p>
+            <button class="btn btn-small" id="refreshData">
+                <i class="fas fa-redo"></i> Refresh Data
+            </button>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-copyright"><p></p></footer>
+
+<script src="../script.js"></script>
+<script src="../js/recent_flights.js"></script>
+</body>
+</html>

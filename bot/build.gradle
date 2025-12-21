@@ -41,11 +41,11 @@ dependencies {
     // Database (if you want to store SimBrief user IDs)
     implementation 'org.xerial:sqlite-jdbc:3.44.1.0'
 
-    // HTTP Client (for SimBrief API calls)
-    // Note: Java 11+ has built-in HttpClient, so we don't need extra dependency
-
     // Testing
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.15.2'
 }
 
 jlink {

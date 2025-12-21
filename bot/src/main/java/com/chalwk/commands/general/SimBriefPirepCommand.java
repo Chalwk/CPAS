@@ -5,6 +5,7 @@ package com.chalwk.commands.general;
 import com.chalwk.api.SimBriefAPI;
 import com.chalwk.commands.CommandManager;
 import com.chalwk.config.Constants;
+import com.chalwk.data.FlightDataManager;
 import com.chalwk.utils.PermissionChecker;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.components.actionrow.ActionRow;
@@ -119,6 +120,12 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
                                             event.getUser().getAsTag(),
                                             flightPlan.get("origin"),
                                             flightPlan.get("destination"));
+
+                                    try {
+                                        FlightDataManager.saveFlight(event.getUser(), flightPlan);
+                                    } catch (Exception e) {
+                                        logger.warn("Failed to save flight to JSON (non-critical): {}", e.getMessage());
+                                    }
                                 },
                                 error -> {
                                     event.getHook().editOriginal("❌ Failed to submit PIREP. Please try again.")
