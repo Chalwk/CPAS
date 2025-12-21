@@ -5,7 +5,7 @@
 * Base TypeL C172
 * ICAO Code: PA38
 * Civil Registration: ZK-TMA
-* Fin Number: 505
+* Fin Number: 507
 * SELCAL Code: NONE
 * Mode-S Code: ZZZZZZ
 * OFP Layout: Default
@@ -14,9 +14,9 @@
 * Plan Units: Default
 * Max Diversion: 90 NM
 * Min Runway: 1800 FT
-* Aircraft Name: PA-38 TOMAHAWK
+* Aircraft Name: PIPER TOMAHAWK
 * Engine Type: Lycoming O-235-L2C
-* Comments: Just Flight MSF2020
+* Comments: PA-38-112 / Just Flight MSF2020
 
 ---
 
@@ -72,5 +72,5 @@
 * Default Cruise Profile: 2350 RPM
 * Default Climb Profile: NORMAL
 * Default Descent Profile: NORMAL
-* Takeoff Power: 112 HP
+* Takeoff Power: 120 HP (NOTE: SimBrief won't let me set it lower than 120, even though IRL it's 112)
 * Takeoff Thrust Flat Rating: Default
