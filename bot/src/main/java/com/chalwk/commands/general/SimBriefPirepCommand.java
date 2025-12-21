@@ -8,6 +8,7 @@ import com.chalwk.config.Constants;
 import com.chalwk.utils.PermissionChecker;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.components.actionrow.ActionRow;
+import net.dv8tion.jda.api.components.buttons.Button;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -97,7 +98,7 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
                         var messageAction = channel.sendMessageEmbeds(pirepEmbed);
 
                         messageAction = messageAction.setComponents(
-                                ActionRow.of(net.dv8tion.jda.api.components.buttons.Button.link(ofpUrl, "View Full OFP"))
+                                ActionRow.of(Button.link(ofpUrl, "View Full OFP"))
                         );
 
                         messageAction.queue(
