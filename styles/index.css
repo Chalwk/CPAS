@@ -228,10 +228,8 @@ p {
     display: flex;
     align-items: flex-start
     justify-content: center;
-    margin-top: 70px;
     position: relative;
     text-align: center;
-    padding-top: 40px;
 }
 
 .hero-overlay {
@@ -241,7 +239,6 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
 }
 
 .hero-logo-container {
@@ -254,8 +251,7 @@ p {
 .hero-logo {
     max-width: 100%;
     height: auto;
-    max-height: 350px;
-    margin-bottom: 25px;
+    max-height: 450px;
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
     transition: transform 0.3s ease;
 }
