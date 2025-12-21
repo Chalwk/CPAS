@@ -24,7 +24,7 @@
 * Weight Units: Pounds
 * Max Passengers: 4
 * Passenger Weight: 175 lbs
-* Baggage Weight: 65 lbs
+* Baggage Weight: 35 lbs
 * Empty Weight: 1550 lbs
 * Max Zero Fuel Weight: 2650 lbs
 * Max Takeoff Weight: 2650 lbs
@@ -65,8 +65,8 @@
 
 ### Airframe Performance:
 
-* Fuel Factor: P06
-* Cruise Level Offset: M4000
+* Fuel Factor: P05
+* Cruise Level Offset: M3500
 * Service Ceiling: 20000 ft
 * Default Cruise Profile: 2500 RPM
 * Default Climb Profile: NORMAL
