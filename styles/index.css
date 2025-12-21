@@ -234,7 +234,6 @@ p {
 
 .hero-overlay {
     width: 100%;
-    padding: 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -242,7 +241,6 @@ p {
 }
 
 .hero-logo-container {
-    margin-bottom: 30px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -263,7 +261,6 @@ p {
 .hero-tagline {
     font-size: 2.5rem;
     color: white;
-    margin-bottom: 15px;
     font-weight: 700;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
@@ -271,9 +268,7 @@ p {
 .hero-subtitle {
     font-size: 1.3rem;
     color: var(--light-gray);
-    margin-bottom: 30px;
     max-width: 700px;
-    line-height: 1.6;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
