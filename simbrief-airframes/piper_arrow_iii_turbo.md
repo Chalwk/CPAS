@@ -3,7 +3,7 @@
 ### Airframe Info:
 
 * Base TypeL C172
-* ICAO Code: PA28
+* ICAO Code: P28S
 * Civil Registration: ZK-ART
 * Fin Number: 503
 * SELCAL Code: NONE

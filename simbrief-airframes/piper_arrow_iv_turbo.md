@@ -3,7 +3,7 @@
 ### Airframe Info:
 
 * Base TypeL C172
-* ICAO Code: PA28
+* ICAO Code: P28U
 * Civil Registration: ZK-AT4
 * Fin Number: 504
 * SELCAL Code: NONE

@@ -3,7 +3,7 @@
 ### Airframe Info:
 
 * Base TypeL C172
-* ICAO Code: P28A
+* ICAO Code: PA38
 * Civil Registration: ZK-TMA
 * Fin Number: 505
 * SELCAL Code: NONE
