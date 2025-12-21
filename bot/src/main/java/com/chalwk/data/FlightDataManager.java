@@ -28,11 +28,9 @@ public class FlightDataManager {
             flight.put("id", generateFlightId());
             flight.put("date", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE));
             flight.put("timestamp", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
-
             flight.put("pilot", user.getName());
             flight.put("pilotId", user.getId());
             flight.put("pilotTag", user.getAsTag());
-
             flight.put("flightNumber", flightPlan.getOrDefault("flight_number", "N/A"));
             flight.put("callsign", flightPlan.getOrDefault("callsign", "N/A"));
             flight.put("departure", flightPlan.getOrDefault("origin", "N/A"));
@@ -49,7 +47,7 @@ public class FlightDataManager {
             flight.put("zfw", flightPlan.getOrDefault("zfw", "N/A"));
             flight.put("tow", flightPlan.getOrDefault("tow", "N/A"));
             flight.put("windComponent", flightPlan.getOrDefault("wind_component", "N/A"));
-
+            flight.put("pdfUrl", flightPlan.getOrDefault("pdf_url", "N/A"));
             flight.put("distance", calculateDistance(flightPlan));
             flight.put("status", "completed");
             flight.put("source", "SimBrief");

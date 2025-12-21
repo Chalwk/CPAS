@@ -258,7 +258,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (flight.source === 'SimBrief') {
             viewSimBriefBtn.style.display = 'inline-flex';
             viewSimBriefBtn.onclick = () => {
-                window.open(`https://www.simbrief.com/ofp/uads/?userid=${flight.pilotId}`, '_blank');
+                if (flight.pdfUrl && flight.pdfUrl !== 'N/A') {
+                    window.open(flight.pdfUrl, '_blank');
+                } else {
+                    window.open(`https://www.simbrief.com/ofp/uads/?userid=${flight.pilotId}`, '_blank');
+                }
             };
         } else {
             viewSimBriefBtn.style.display = 'none';
