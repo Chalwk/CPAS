@@ -23,7 +23,7 @@
 
 * Weight Units: Pounds
 * Max Passengers: 4
-* Passenger Weight: 0 lbs
+* Passenger Weight: 175 lbs
 * Baggage Weight: 0 lbs
 * Empty Weight: 1550 lbs
 * Max Zero Fuel Weight: 2650 lbs
