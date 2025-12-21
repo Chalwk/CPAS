@@ -264,10 +264,6 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             viewSimBriefBtn.style.display = 'none';
         }
-
-        document.getElementById('viewMap').onclick = () => {
-            alert(`Map for ${flight.departure} → ${flight.arrival} coming soon.\nRoute: ${flight.route}`);
-        };
     }
 
     function updatePagination() {
