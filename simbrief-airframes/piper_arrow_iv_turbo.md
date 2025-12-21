@@ -2,6 +2,7 @@
 
 ### Airframe Info:
 
+* Base TypeL C172
 * ICAO Code: PA28
 * Civil Registration: ZK-AT4
 * Fin Number: 505

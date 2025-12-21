@@ -2,6 +2,7 @@
 
 ### Airframe Info:
 
+* Base TypeL C172
 * ICAO Code: PA28
 * Civil Registration: ZK-ARR
 * Fin Number: 503
