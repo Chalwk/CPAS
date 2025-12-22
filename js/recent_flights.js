@@ -60,8 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 sortFlights();
             });
         });
-
-        document.getElementById('copyFlightId')?.addEventListener('click', copyFlightIdToClipboard);
     }
 
     function setupAutoRefresh() {
@@ -347,7 +345,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const flight = flightsData.find(f => f.id === flightId);
         if (!flight) return;
 
-        document.getElementById('detailFlightId').textContent = flight.id;
         document.getElementById('detailFlightNumber').textContent = flight.flightNumber;
         document.getElementById('detailCallsign').textContent = flight.callsign;
         document.getElementById('detailDate').textContent = formatDate(flight.date);
@@ -377,14 +374,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.getElementById('detailSource').textContent = flight.source;
         document.getElementById('detailTimestamp').textContent = formatDateTime(flight.timestamp);
-
-        if (flight.lastUpdated) {
-            document.getElementById('detailLastUpdated').textContent = formatDateTime(flight.lastUpdated);
-            document.getElementById('detailLastUpdated').parentElement.style.display = 'flex';
-        } else {
-            document.getElementById('detailLastUpdated').parentElement.style.display = 'none';
-        }
-
         flightDetails.style.display = 'flex';
 
         const viewSimBriefBtn = document.getElementById('viewSimBrief');
@@ -393,27 +382,6 @@ document.addEventListener('DOMContentLoaded', function() {
             viewSimBriefBtn.onclick = () => window.open(flight.pdfUrl, '_blank');
         } else {
             viewSimBriefBtn.style.display = 'none';
-        }
-    }
-
-    function copyFlightIdToClipboard() {
-        const flightId = document.getElementById('detailFlightId').textContent;
-        if (flightId && flightId !== '-') {
-            navigator.clipboard.writeText(flightId)
-                .then(() => {
-                const copyBtn = document.getElementById('copyFlightId');
-                const originalHTML = copyBtn.innerHTML;
-                copyBtn.innerHTML = '<i class="fas fa-check"></i>';
-                copyBtn.style.background = '#059669';
-
-                setTimeout(() => {
-                    copyBtn.innerHTML = originalHTML;
-                    copyBtn.style.background = '';
-                }, 2000);
-            })
-                .catch(err => {
-                console.error('Failed to copy: ', err);
-            });
         }
     }
 
