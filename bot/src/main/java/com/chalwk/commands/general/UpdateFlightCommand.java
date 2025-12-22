@@ -6,10 +6,12 @@ import com.chalwk.commands.CommandManager;
 import com.chalwk.config.Constants;
 import com.chalwk.github.GitHubAPI;
 import com.chalwk.utils.PermissionChecker;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.interactions.commands.OptionType;
@@ -28,7 +30,8 @@ import java.util.List;
 public class UpdateFlightCommand extends ListenerAdapter implements CommandManager {
     private static final Logger logger = LoggerFactory.getLogger(UpdateFlightCommand.class);
     private static final ObjectMapper mapper = new ObjectMapper();
-    private static final List<String> VALID_STATUSES = Arrays.asList("completed", "in-progress", "scheduled", "cancelled", "diverted");
+    private static final List<String> VALID_STATUSES = Arrays.asList(
+            "completed", "in-progress", "scheduled", "cancelled", "diverted");
     private static final String FLIGHTS_FILE_PATH = "data/flights.json";
 
     @Override
@@ -68,41 +71,39 @@ public class UpdateFlightCommand extends ListenerAdapter implements CommandManag
                 return;
             }
 
-            event.deferReply().queue();
-
             String flightId = event.getOption("flight_id").getAsString().trim().toUpperCase();
             String newStatus = event.getOption("status").getAsString().trim().toLowerCase();
 
             if (!VALID_STATUSES.contains(newStatus)) {
-                event.getHook().editOriginal("❌ Invalid status. Valid statuses are: " + String.join(", ", VALID_STATUSES))
+                event.reply("❌ Invalid status. Valid statuses are: " + String.join(", ", VALID_STATUSES))
+                        .setEphemeral(true)
                         .queue();
                 return;
             }
 
+            event.reply("⏳ Updating flight **" + flightId + "**…")
+                    .setEphemeral(true)
+                    .queue();
+
             try {
                 String existingJson = GitHubAPI.getFlightsJSON();
                 if (existingJson == null || existingJson.isEmpty()) {
-                    event.getHook().editOriginal("❌ No flights found in the database.")
-                            .queue();
+                    logger.warn("No flights found in the database.");
                     return;
                 }
 
                 ArrayNode flightsArray = (ArrayNode) mapper.readTree(existingJson);
-                boolean flightFound = false;
-                com.fasterxml.jackson.databind.JsonNode targetFlight = null;
+                JsonNode targetFlight = null;
 
-                for (int i = 0; i < flightsArray.size(); i++) {
-                    var flight = flightsArray.get(i);
+                for (JsonNode flight : flightsArray) {
                     if (flight.has("id") && flight.get("id").asText().equalsIgnoreCase(flightId)) {
-                        flightFound = true;
                         targetFlight = flight;
                         break;
                     }
                 }
 
-                if (!flightFound) {
-                    event.getHook().editOriginal("❌ Flight ID **" + flightId + "** not found.")
-                            .queue();
+                if (targetFlight == null) {
+                    logger.warn("Flight ID {} not found.", flightId);
                     return;
                 }
 
@@ -113,8 +114,7 @@ public class UpdateFlightCommand extends ListenerAdapter implements CommandManag
                         PermissionChecker.isAdmin(event.getMember());
 
                 if (!isOwner) {
-                    event.getHook().editOriginal("❌ You can only update your own flights.")
-                            .queue();
+                    logger.warn("User {} attempted to update flight they do not own.", discordName);
                     return;
                 }
 
@@ -135,37 +135,17 @@ public class UpdateFlightCommand extends ListenerAdapter implements CommandManag
                 if (success) {
                     sendFlightUpdateNotification(event, flightId, oldStatus, newStatus, targetFlight);
 
-                    EmbedBuilder embed = new EmbedBuilder()
-                            .setTitle("✅ Flight Status Updated")
-                            .setColor(0x059669) // Green
-                            .setDescription("Flight **" + flightId + "** status has been updated.")
-                            .addField("Old Status", capitalize(oldStatus), true)
-                            .addField("New Status", capitalize(newStatus), true)
-                            .addField("Route",
-                                    targetFlight.get("departure").asText() + " → " +
-                                            targetFlight.get("arrival").asText(), false)
-                            .setFooter("Updated by " + event.getUser().getAsTag() +
-                                    " • " + LocalDateTime.now().format(
-                                    DateTimeFormatter.ofPattern("MMM dd, yyyy HH:mm")))
-                            .setThumbnail("https://cdn-icons-png.flaticon.com/512/190/190411.png");
-
-                    event.getHook().editOriginalEmbeds(embed.build()).queue();
                     logger.info("Flight {} status updated from {} to {} by {}",
                             flightId, oldStatus, newStatus, event.getUser().getAsTag());
                 } else {
-                    event.getHook().editOriginal("❌ Failed to save the update. Please try again.")
-                            .queue();
+                    logger.warn("Failed to save flight update for {}", flightId);
                 }
 
             } catch (Exception e) {
                 logger.error("Error updating flight status", e);
-                event.getHook().editOriginal("❌ An error occurred while updating the flight status: " + e.getMessage())
-                        .queue();
             }
 
         } catch (Exception e) {
-            event.getHook().editOriginal("❌ An error occurred while processing your request.")
-                    .queue();
             logger.error("Error in UpdateFlightCommand", e);
         }
     }
@@ -174,7 +154,7 @@ public class UpdateFlightCommand extends ListenerAdapter implements CommandManag
                                               String flightId,
                                               String oldStatus,
                                               String newStatus,
-                                              com.fasterxml.jackson.databind.JsonNode flight) {
+                                              JsonNode flight) {
         try {
             if (Constants.CHANNEL_FLIGHT_UPDATES != 0) {
                 var channel = event.getGuild().getTextChannelById(Constants.CHANNEL_FLIGHT_UPDATES);
@@ -219,7 +199,7 @@ public class UpdateFlightCommand extends ListenerAdapter implements CommandManag
         };
     }
 
-    private boolean hasAccessToUpdateFlight(net.dv8tion.jda.api.entities.Member member) {
+    private boolean hasAccessToUpdateFlight(Member member) {
         if (member == null) return false;
         if (PermissionChecker.isAdmin(member)) return true;
 
