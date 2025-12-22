@@ -10,7 +10,7 @@
 * Mode-S Code: ZZZZZZ
 * OFP Layout: Default
 * Flight Rules: Default
-* Type of Flight: General Aviation
+* Type of Flight: Default
 * Plan Units: Kilograms
 * Max Diversion: 50 NM
 * Min Runway: 5100 FT
