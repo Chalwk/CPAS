@@ -12,12 +12,12 @@
 
 # Coastal Peaks Air Service (CPAS)
 
-This repository contains the static website for **Coastal Peaks Air Service (CPAS)**, a virtual air charter organization
-for Microsoft Flight Simulator 2020.
+This repository contains the static website for **Coastal Peaks Air Service (CPAS)**, a Virtual Charter (VC) and specialty flight operator for
+Microsoft Flight Simulator.
 
 ## About
 
-Coastal Peaks Air Service (CPAS) is a new, fictional virtual air charter operating in New Zealand's South Island. We Fly realistic routes over Canterbury, Christchurch, Banks Peninsula, and the dramatic landscapes of the West Coast and Southern Alps.
+Coastal Peaks Air Service (CPAS) is a Virtual Charter (VC) and specialty flight operator for Microsoft Flight Simulator, flying realistic routes across New Zealand’s South Island. Our flights cover Canterbury, Christchurch, Banks Peninsula, and the dramatic landscapes of the West Coast and Southern Alps.
 
 ## License
 
@@ -30,4 +30,4 @@ Aero Club (CAC), GCH Aviation, Helicopter Line, or any other actual aviation ser
 
 ---
 
-© 2025 Coastal Peaks Air Service (CPAS) | Jericho Crosby (Chalwk). All rights reserved.
+© 2025 Coastal Peaks Air Service (CPAS). All rights reserved.
