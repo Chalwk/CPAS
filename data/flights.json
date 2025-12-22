@@ -22,9 +22,9 @@
   "windComponent" : "2",
   "pdfUrl" : "https://www.simbrief.com/ofp/flightplans/NZMCNZGT_PDF_1766287721.pdf",
   "distance" : "N/A",
-  "status" : "completed",
+  "status" : "in-progress",
   "source" : "SimBrief",
-  "lastUpdated" : "2025-12-22T19:02:28.4005725"
+  "lastUpdated" : "2025-12-22T21:31:34.9767431"
 }, {
   "id" : "CPA1287",
   "date" : "2025-12-22",
