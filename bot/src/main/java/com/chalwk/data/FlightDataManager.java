@@ -22,7 +22,7 @@ public class FlightDataManager {
     private static final Logger logger = LoggerFactory.getLogger(FlightDataManager.class);
     private static final ObjectMapper mapper = new ObjectMapper();
 
-    public static void saveFlight(User user, Map<String, String> flightPlan, String simbriefPilotId) {
+    public static void saveFlight(User user, Map<String, String> flightPlan, String simbriefPilotId, String status) {
         try {
             ObjectNode flight = mapper.createObjectNode();
 
@@ -50,7 +50,7 @@ public class FlightDataManager {
             flight.put("windComponent", flightPlan.getOrDefault("wind_component", "N/A"));
             flight.put("pdfUrl", flightPlan.getOrDefault("pdf_url", "N/A"));
             flight.put("distance", calculateDistance(flightPlan));
-            flight.put("status", "completed");
+            flight.put("status", status);
             flight.put("source", "SimBrief");
 
             String existingJson = readExistingFlights();

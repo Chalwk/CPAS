@@ -24,10 +24,15 @@ import org.w3c.dom.Document;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 public class SimBriefPirepCommand extends ListenerAdapter implements CommandManager {
     private static final Logger logger = LoggerFactory.getLogger(SimBriefPirepCommand.class);
+    private static final List<String> VALID_STATUSES = Arrays.asList(
+            "completed", "in-progress", "scheduled", "cancelled", "diverted"
+    );
 
     @Override
     public String getCommandName() {
@@ -40,7 +45,14 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
                 .addOptions(
                         new OptionData(OptionType.STRING, "userid",
                                 "Your SimBrief numeric Pilot/User ID", true)
-                                .setMaxLength(10)
+                                .setMaxLength(10),
+                        new OptionData(OptionType.STRING, "status",
+                                "Status of the flight (default: completed)", false)
+                                .addChoice("Completed", "completed")
+                                .addChoice("In Progress", "in-progress")
+                                .addChoice("Scheduled", "scheduled")
+                                .addChoice("Cancelled", "cancelled")
+                                .addChoice("Diverted", "diverted")
                 );
     }
 
@@ -62,6 +74,18 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
 
             event.deferReply().queue();
             String simbriefPilotId = event.getOption("userid").getAsString().trim();
+
+            String status;
+            if (event.getOption("status") != null) {
+                status = event.getOption("status").getAsString().trim().toLowerCase();
+                if (!VALID_STATUSES.contains(status)) {
+                    event.getHook().editOriginal("❌ Invalid status. Valid statuses are: " + String.join(", ", VALID_STATUSES))
+                            .queue();
+                    return;
+                }
+            } else {
+                status = "completed";
+            }
 
             if (simbriefPilotId.isEmpty()) {
                 event.getHook().editOriginal("❌ Please provide your SimBrief Pilot ID.")
@@ -85,6 +109,8 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
                             .queue();
                     return;
                 }
+
+                flightPlan.put("status", status);
 
                 MessageEmbed pirepEmbed = createSimBriefPirepEmbed(
                         event.getUser(),
@@ -116,14 +142,15 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
                                 success -> {
                                     event.getHook().editOriginal("✅ PIREP submitted successfully from SimBrief!")
                                             .queue();
-                                    logger.info("SimBrief PIREP submitted by {} (SimBrief ID: {}): {} -> {}",
+                                    logger.info("SimBrief PIREP submitted by {} (SimBrief ID: {}): {} -> {}, Status: {}",
                                             event.getUser().getAsTag(),
                                             simbriefPilotId,
                                             flightPlan.get("origin"),
-                                            flightPlan.get("destination"));
+                                            flightPlan.get("destination"),
+                                            status);
 
                                     try {
-                                        FlightDataManager.saveFlight(event.getUser(), flightPlan, simbriefPilotId);
+                                        FlightDataManager.saveFlight(event.getUser(), flightPlan, simbriefPilotId, status);
                                     } catch (Exception e) {
                                         logger.warn("Failed to save flight to JSON (non-critical): {}", e.getMessage());
                                     }
@@ -180,12 +207,18 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
 
         String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
 
+        String status = flightPlan.getOrDefault("status", "completed");
+        String statusEmoji = getStatusEmoji(status);
+        String statusText = capitalizeFirstLetter(status.replace("-", " "));
+
         EmbedBuilder embed = new EmbedBuilder()
                 .setTitle("📋 SimBrief PIREP - " + flightPlan.get("flight_number"))
-                .setColor(0x2D6BC9)
+                .setColor(getStatusColor(status))
                 .setAuthor(user.getAsTag(), null, user.getEffectiveAvatarUrl())
                 .setThumbnail("https://www.simbrief.com/images/sb_logo_small.png")
                 .setFooter("Submitted at " + timestamp + " | Coastal Peaks Air Service");
+
+        embed.addField(statusEmoji + " Status", statusText, true);
 
         String aircraft = flightPlan.containsKey("aircraft_name") && flightPlan.get("aircraft_name") != null &&
                 !flightPlan.get("aircraft_name").isEmpty() ?
@@ -234,5 +267,31 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
         }
 
         return embed.build();
+    }
+
+    private int getStatusColor(String status) {
+        return switch (status) {
+            case "completed" -> 0x059669; // Green
+            case "in-progress" -> 0xf59e0b; // Yellow
+            case "scheduled" -> 0x3b82f6; // Blue
+            case "cancelled" -> 0xef4444; // Red
+            case "diverted" -> 0x8b5cf6; // Purple
+            default -> 0x2D6BC9; // Original blue
+        };
+    }
+
+    private String getStatusEmoji(String status) {
+        return switch (status) {
+            case "completed" -> "✅";
+            case "in-progress", "diverted" -> "🔄";
+            case "scheduled" -> "📅";
+            case "cancelled" -> "❌";
+            default -> "📋";
+        };
+    }
+
+    private String capitalizeFirstLetter(String str) {
+        if (str == null || str.isEmpty()) return str;
+        return str.substring(0, 1).toUpperCase() + str.substring(1);
     }
 }
