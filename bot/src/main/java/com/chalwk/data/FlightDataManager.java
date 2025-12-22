@@ -17,10 +17,9 @@ import java.util.Map;
 public class FlightDataManager {
     private static final Logger logger = LoggerFactory.getLogger(FlightDataManager.class);
     private static final ObjectMapper mapper = new ObjectMapper();
-
+    private static final long CACHE_DURATION_MS = 30000;
     private static String cachedFlightsJson = null;
     private static long lastCacheUpdate = 0;
-    private static final long CACHE_DURATION_MS = 30000;
 
     public static void saveFlight(User user, Map<String, String> flightPlan, String simbriefPilotId, String status) {
         try {

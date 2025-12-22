@@ -9,7 +9,7 @@
     <link href="../styles/index.css" rel="stylesheet">
     <link href="../styles/common.css" rel="stylesheet">
     <link href="../styles/recent_flights.css" rel="stylesheet">
-    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+    <link href="images/logo.ico" rel="icon" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
           rel="stylesheet">
@@ -31,7 +31,7 @@
             <li><a href="operations_manual.html">Operations</a></li>
             <li><a href="addons.html">Add-Ons</a></li>
             <li><a href="flight_planning.html">Flight Planning</a></li>
-            <li><a href="recent_flights.html" class="active">Recent Flights</a></li>
+            <li><a class="active" href="recent_flights.html">Recent Flights</a></li>
             <li><a href="../index.html#discord">Join</a></li>
         </ul>
         <button class="menu-toggle" id="menuToggle">
@@ -51,16 +51,16 @@
             <div class="controls-left">
                 <div class="search-box">
                     <i class="fas fa-search"></i>
-                    <input type="text" id="searchInput" placeholder="Search flights, pilots, or airports...">
+                    <input id="searchInput" placeholder="Search flights, pilots, or airports..." type="text">
                 </div>
                 <div class="filter-group">
-                    <select id="statusFilter" class="filter-select">
+                    <select class="filter-select" id="statusFilter">
                         <option value="all">All Status</option>
                         <option value="completed">Completed</option>
                         <option value="in-progress">In Progress</option>
                         <option value="scheduled">Scheduled</option>
                     </select>
-                    <select id="aircraftFilter" class="filter-select">
+                    <select class="filter-select" id="aircraftFilter">
                         <option value="all">All Aircraft</option>
                         <option value="P28A">Piper Archer (P28A)</option>
                         <option value="R44">Robinson R44</option>
@@ -258,7 +258,7 @@
         </div>
 
         <div class="pagination" id="pagination">
-            <button class="pagination-btn" id="prevPage" disabled>
+            <button class="pagination-btn" disabled id="prevPage">
                 <i class="fas fa-chevron-left"></i> Previous
             </button>
             <div class="page-numbers" id="pageNumbers"></div>
