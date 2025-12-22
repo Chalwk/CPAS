@@ -20,6 +20,7 @@ import java.util.Map;
 
 public class SimBriefAPI {
     private static final Logger logger = LoggerFactory.getLogger(SimBriefAPI.class);
+
     private static final HttpClient client = HttpClient.newBuilder()
             .connectTimeout(Duration.ofSeconds(10))
             .build();

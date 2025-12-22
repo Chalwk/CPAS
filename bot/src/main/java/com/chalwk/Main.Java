@@ -30,14 +30,16 @@ public class Main {
     private static final List<Object> LISTENERS = new ArrayList<>();
     private static JDA jda;
 
+    private static String botToken = null;
+
     public static void main(String[] args) {
         try {
             logger.info("Starting CPAS Discord Bot...");
 
             Config.load();
 
-            String token = readTokenFromFile();
-            if (token == null || token.isEmpty()) {
+            botToken = readTokenFromFile();
+            if (botToken == null || botToken.isEmpty()) {
                 logger.error("Bot token not found or empty. Please create a 'bot.token' file with your token.");
                 System.exit(1);
             }
@@ -45,7 +47,7 @@ public class Main {
             initializeCommands();
             initializeListeners();
 
-            jda = JDABuilder.createDefault(token)
+            jda = JDABuilder.createDefault(botToken)
                     .setStatus(OnlineStatus.ONLINE)
                     .setActivity(Activity.playing("Coastal Peaks Air Service"))
                     .enableIntents(
@@ -96,6 +98,10 @@ public class Main {
     }
 
     private static String readTokenFromFile() {
+        if (botToken != null) {
+            return botToken;
+        }
+
         try {
             return Files.readString(Paths.get("bot.token")).trim();
         } catch (Exception e) {

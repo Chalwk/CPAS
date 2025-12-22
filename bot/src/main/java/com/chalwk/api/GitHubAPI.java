@@ -17,12 +17,21 @@ import java.util.Base64;
 
 public class GitHubAPI {
     private static final Logger logger = LoggerFactory.getLogger(GitHubAPI.class);
-    private static final String token = readGitHubToken();
+
+    private static final String token;
     private static final HttpClient client = HttpClient.newBuilder()
             .connectTimeout(Duration.ofSeconds(10))
             .build();
 
+    static {
+        token = readGitHubToken();
+    }
+
     public static String readGitHubToken() {
+        if (token != null) {
+            return token;
+        }
+
         try {
             return Files.readString(Paths.get("github.token")).trim();
         } catch (IOException e) {
@@ -31,8 +40,12 @@ public class GitHubAPI {
         return null;
     }
 
+    public static boolean hasValidToken() {
+        return token != null && !token.isEmpty();
+    }
+
     public static boolean updateFile(String content, String commitMessage, String filePath) throws Exception {
-        if (token == null || token.isEmpty()) {
+        if (!hasValidToken()) {
             logger.error("GitHub token not found or empty");
             return false;
         }
@@ -67,17 +80,11 @@ public class GitHubAPI {
         }
     }
 
-    public static boolean appendFlightToJSON(String flightData) {
-        try {
-            return updateFile(flightData, "Add flight via Discord ACARS", "data/flights.json");
-        } catch (Exception e) {
-            logger.error("Error saving flight to GitHub", e);
-            return false;
-        }
-    }
-
     public static String getFlightsJSON() throws Exception {
-        if (token == null) return "[]";
+        if (!hasValidToken()) {
+            logger.warn("GitHub token not available, returning empty flights array");
+            return "[]";
+        }
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://api.github.com/repos/Chalwk/CPAS/contents/data/flights.json"))
@@ -98,7 +105,9 @@ public class GitHubAPI {
     }
 
     private static String getFileSHA(String filePath) throws Exception {
-        if (token == null) return null;
+        if (!hasValidToken()) {
+            return null;
+        }
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://api.github.com/repos/Chalwk/CPAS/contents/" + filePath))

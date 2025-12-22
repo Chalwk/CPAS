@@ -10,10 +10,6 @@ import net.dv8tion.jda.api.entities.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Map;
@@ -21,6 +17,10 @@ import java.util.Map;
 public class FlightDataManager {
     private static final Logger logger = LoggerFactory.getLogger(FlightDataManager.class);
     private static final ObjectMapper mapper = new ObjectMapper();
+
+    private static String cachedFlightsJson = null;
+    private static long lastCacheUpdate = 0;
+    private static final long CACHE_DURATION_MS = 30000;
 
     public static void saveFlight(User user, Map<String, String> flightPlan, String simbriefPilotId, String status) {
         try {
@@ -53,7 +53,7 @@ public class FlightDataManager {
             flight.put("status", status);
             flight.put("source", "SimBrief");
 
-            String existingJson = readExistingFlights();
+            String existingJson = getExistingFlights();
             ArrayNode flightsArray;
 
             if (existingJson == null || existingJson.isEmpty()) {
@@ -66,10 +66,12 @@ public class FlightDataManager {
 
             String jsonToSave = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(flightsArray);
 
-            boolean success = GitHubAPI.appendFlightToJSON(jsonToSave);
+            boolean success = GitHubAPI.updateFile(jsonToSave, "Add flight via Discord ACARS", "data/flights.json");
 
             if (success) {
                 logger.info("Flight saved for user: {} (SimBrief ID: {})", user.getAsTag(), simbriefPilotId);
+                cachedFlightsJson = null;
+                lastCacheUpdate = 0;
             } else {
                 logger.error("Failed to save flight for user: {} (SimBrief ID: {})", user.getAsTag(), simbriefPilotId);
             }
@@ -79,39 +81,27 @@ public class FlightDataManager {
         }
     }
 
+    private static String getExistingFlights() {
+        if (cachedFlightsJson != null &&
+                System.currentTimeMillis() - lastCacheUpdate < CACHE_DURATION_MS) {
+            return cachedFlightsJson;
+        }
+
+        try {
+            cachedFlightsJson = GitHubAPI.getFlightsJSON();
+            lastCacheUpdate = System.currentTimeMillis();
+            return cachedFlightsJson;
+        } catch (Exception e) {
+            logger.error("Error reading existing flights", e);
+            return "[]";
+        }
+    }
+
     private static String generateFlightId() {
         return "CPA" + System.currentTimeMillis() % 10000;
     }
 
     private static String calculateDistance(Map<String, String> flightPlan) {
-        // TODO: Implement actual distance calculation
         return flightPlan.getOrDefault("distance", "N/A");
-    }
-
-    private static String readExistingFlights() {
-        try {
-            String token = GitHubAPI.readGitHubToken();
-            if (token == null) return "[]";
-
-            HttpClient client = HttpClient.newHttpClient();
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create("https://api.github.com/repos/Chalwk/CPAS/contents/data/flights.json"))
-                    .header("Authorization", "token " + token)
-                    .header("Accept", "application/vnd.github.v3.raw")
-                    .header("User-Agent", "CPAS-Discord-Bot")
-                    .GET()
-                    .build();
-
-            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-
-            if (response.statusCode() == 200) {
-                return response.body();
-            } else if (response.statusCode() == 404) {
-                return "[]";
-            }
-        } catch (Exception e) {
-            logger.error("Error reading existing flights", e);
-        }
-        return "[]";
     }
 }

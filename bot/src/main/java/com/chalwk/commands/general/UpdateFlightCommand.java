@@ -2,9 +2,9 @@
 
 package com.chalwk.commands.general;
 
+import com.chalwk.api.GitHubAPI;
 import com.chalwk.commands.CommandManager;
 import com.chalwk.config.Constants;
-import com.chalwk.api.GitHubAPI;
 import com.chalwk.utils.PermissionChecker;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -30,8 +30,8 @@ import java.util.List;
 public class UpdateFlightCommand extends ListenerAdapter implements CommandManager {
     private static final Logger logger = LoggerFactory.getLogger(UpdateFlightCommand.class);
     private static final ObjectMapper mapper = new ObjectMapper();
-    private static final List<String> VALID_STATUSES = Arrays.asList(
-            "completed", "in-progress", "scheduled", "cancelled", "diverted");
+    private static final boolean GITHUB_AVAILABLE = GitHubAPI.hasValidToken();
+    private static final List<String> VALID_STATUSES = Arrays.asList("completed", "in-progress", "scheduled", "cancelled", "diverted");
     private static final String FLIGHTS_FILE_PATH = "data/flights.json";
 
     @Override
@@ -71,6 +71,13 @@ public class UpdateFlightCommand extends ListenerAdapter implements CommandManag
                 return;
             }
 
+            if (!GITHUB_AVAILABLE) {
+                event.reply("❌ GitHub integration is currently unavailable. Please try again later.")
+                        .setEphemeral(true)
+                        .queue();
+                return;
+            }
+
             String flightId = event.getOption("flight_id").getAsString().trim().toUpperCase();
             String newStatus = event.getOption("status").getAsString().trim().toLowerCase();
 
@@ -89,6 +96,7 @@ public class UpdateFlightCommand extends ListenerAdapter implements CommandManag
                 String existingJson = GitHubAPI.getFlightsJSON();
                 if (existingJson == null || existingJson.isEmpty()) {
                     logger.warn("No flights found in the database.");
+                    event.getHook().editOriginal("❌ No flights found in the database.").queue();
                     return;
                 }
 
@@ -104,6 +112,7 @@ public class UpdateFlightCommand extends ListenerAdapter implements CommandManag
 
                 if (targetFlight == null) {
                     logger.warn("Flight ID {} not found.", flightId);
+                    event.getHook().editOriginal("❌ Flight ID not found: " + flightId).queue();
                     return;
                 }
 
@@ -115,6 +124,7 @@ public class UpdateFlightCommand extends ListenerAdapter implements CommandManag
 
                 if (!isOwner) {
                     logger.warn("User {} attempted to update flight they do not own.", discordName);
+                    event.getHook().editOriginal("❌ You can only update your own flights!").queue();
                     return;
                 }
 
@@ -134,19 +144,27 @@ public class UpdateFlightCommand extends ListenerAdapter implements CommandManag
 
                 if (success) {
                     sendFlightUpdateNotification(event, flightId, oldStatus, newStatus, targetFlight);
+                    event.getHook().editOriginal("✅ Flight **" + flightId + "** status updated from **" + oldStatus + "** to **" + newStatus + "**").queue();
 
                     logger.info("Flight {} status updated from {} to {} by {}",
                             flightId, oldStatus, newStatus, event.getUser().getAsTag());
                 } else {
                     logger.warn("Failed to save flight update for {}", flightId);
+                    event.getHook().editOriginal("❌ Failed to save flight update to database.").queue();
                 }
 
             } catch (Exception e) {
                 logger.error("Error updating flight status", e);
+                event.getHook().editOriginal("❌ Error updating flight: " + e.getMessage()).queue();
             }
 
         } catch (Exception e) {
             logger.error("Error in UpdateFlightCommand", e);
+            if (event.getHook() != null) {
+                event.getHook().editOriginal("❌ An unexpected error occurred.").queue();
+            } else {
+                event.reply("❌ An unexpected error occurred.").setEphemeral(true).queue();
+            }
         }
     }
 
