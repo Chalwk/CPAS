@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentPage = 1;
     const itemsPerPage = 10;
     let currentSort = { column: 'timestamp', direction: 'desc' };
+    let isRefreshing = false;
+    let autoRefreshInterval;
 
     const flightsTableBody = document.getElementById('flightsTableBody');
     const flightDetails = document.getElementById('flightDetails');
@@ -20,51 +22,129 @@ document.addEventListener('DOMContentLoaded', function() {
     const lastUpdated = document.getElementById('lastUpdated');
 
     loadFlightData();
+    setupAutoRefresh();
+    setupEventListeners();
 
-    closeSidebar.addEventListener('click', () => {
-        flightDetails.style.display = 'none';
-    });
-
-    searchInput.addEventListener('input', filterFlights);
-    statusFilter.addEventListener('change', filterFlights);
-    aircraftFilter.addEventListener('change', filterFlights);
-
-    prevPageBtn.addEventListener('click', () => changePage(currentPage - 1));
-    nextPageBtn.addEventListener('click', () => changePage(currentPage + 1));
-
-    refreshDataBtn.addEventListener('click', loadFlightData);
-
-    document.querySelectorAll('#flightsTable th[data-sort]').forEach(th => {
-        th.addEventListener('click', () => {
-            const column = th.dataset.sort;
-            if (currentSort.column === column) {
-                currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
-            } else {
-                currentSort.column = column;
-                currentSort.direction = 'asc';
-            }
-
-            document.querySelectorAll('#flightsTable th').forEach(h => {
-                h.classList.remove('sorted-asc', 'sorted-desc');
-            });
-            th.classList.add(`sorted-${currentSort.direction}`);
-
-            sortFlights();
+    function setupEventListeners() {
+        closeSidebar.addEventListener('click', () => {
+            flightDetails.style.display = 'none';
         });
-    });
+
+        searchInput.addEventListener('input', filterFlights);
+        statusFilter.addEventListener('change', filterFlights);
+        aircraftFilter.addEventListener('change', filterFlights);
+
+        prevPageBtn.addEventListener('click', () => changePage(currentPage - 1));
+        nextPageBtn.addEventListener('click', () => changePage(currentPage + 1));
+
+        refreshDataBtn.addEventListener('click', () => {
+            loadFlightData();
+            showRefreshNotification();
+        });
+
+        document.querySelectorAll('#flightsTable th[data-sort]').forEach(th => {
+            th.addEventListener('click', () => {
+                const column = th.dataset.sort;
+                if (currentSort.column === column) {
+                    currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+                } else {
+                    currentSort.column = column;
+                    currentSort.direction = 'asc';
+                }
+
+                document.querySelectorAll('#flightsTable th').forEach(h => {
+                    h.classList.remove('sorted-asc', 'sorted-desc');
+                });
+                th.classList.add(`sorted-${currentSort.direction}`);
+
+                sortFlights();
+            });
+        });
+
+        document.getElementById('copyFlightId')?.addEventListener('click', copyFlightIdToClipboard);
+    }
+
+    function setupAutoRefresh() {
+        if (autoRefreshInterval) {
+            clearInterval(autoRefreshInterval);
+        }
+
+        autoRefreshInterval = setInterval(() => {
+            if (!isRefreshing && document.visibilityState === 'visible') {
+                loadFlightData();
+            }
+        }, 30000);
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'visible') {
+                loadFlightData();
+            }
+        });
+    }
+
+    function showRefreshNotification() {
+        const notification = document.createElement('div');
+        notification.className = 'refresh-notification';
+        notification.innerHTML = `
+            <i class="fas fa-check-circle"></i>
+            <span>Flight data refreshed successfully!</span>
+        `;
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #059669;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+        `;
+
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+            notification.style.animation = 'slideOut 0.3s ease';
+            setTimeout(() => notification.remove(), 300);
+        }, 3000);
+
+        if (!document.querySelector('#refreshAnimations')) {
+            const style = document.createElement('style');
+            style.id = 'refreshAnimations';
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+                @keyframes slideOut {
+                    from { transform: translateX(0); opacity: 1; }
+                    to { transform: translateX(100%); opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+    }
 
     async function loadFlightData() {
+        if (isRefreshing) return;
+
+        isRefreshing = true;
+        refreshDataBtn.disabled = true;
+        refreshDataBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Refreshing...';
+
         try {
-            const response = await fetch('../data/flights.json');
+            const response = await fetch('../data/flights.json?t=' + Date.now()); // Cache busting
             if (!response.ok) throw new Error('Failed to load flight data');
 
             const data = await response.json();
             flightsData = data;
 
             lastUpdated.textContent = new Date().toLocaleString();
-
             filterFlights();
-
             updateStatistics();
 
         } catch (error) {
@@ -76,7 +156,44 @@ document.addEventListener('DOMContentLoaded', function() {
                     </td>
                 </tr>
             `;
+
+            showErrorNotification('Failed to load flight data. Please check your connection.');
+        } finally {
+            isRefreshing = false;
+            refreshDataBtn.disabled = false;
+            refreshDataBtn.innerHTML = '<i class="fas fa-redo"></i> Refresh Data';
         }
+    }
+
+    function showErrorNotification(message) {
+        const notification = document.createElement('div');
+        notification.className = 'error-notification';
+        notification.innerHTML = `
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>${message}</span>
+        `;
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #dc2626;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+        `;
+
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+            notification.style.animation = 'slideOut 0.3s ease';
+            setTimeout(() => notification.remove(), 300);
+        }, 5000);
     }
 
     function filterFlights() {
@@ -91,7 +208,8 @@ document.addEventListener('DOMContentLoaded', function() {
             flight.departure.toLowerCase().includes(searchTerm) ||
             flight.arrival.toLowerCase().includes(searchTerm) ||
             flight.aircraftReg.toLowerCase().includes(searchTerm) ||
-            flight.aircraft.toLowerCase().includes(searchTerm);
+            flight.aircraft.toLowerCase().includes(searchTerm) ||
+            flight.id.toLowerCase().includes(searchTerm);
 
             const matchesStatus = statusValue === 'all' || flight.status === statusValue;
 
@@ -113,9 +231,9 @@ document.addEventListener('DOMContentLoaded', function() {
             let aValue = a[currentSort.column];
             let bValue = b[currentSort.column];
 
-            if (currentSort.column === 'date' || currentSort.column === 'timestamp') {
-                aValue = new Date(aValue);
-                bValue = new Date(bValue);
+            if (currentSort.column === 'date' || currentSort.column === 'timestamp' || currentSort.column === 'lastUpdated') {
+                aValue = new Date(aValue || 0);
+                bValue = new Date(bValue || 0);
             } else if (currentSort.column === 'flightTime') {
                 aValue = timeToMinutes(aValue);
                 bValue = timeToMinutes(bValue);
@@ -124,11 +242,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 bValue = bValue.toLowerCase();
             }
 
-            if (currentSort.direction === 'asc') {
-                return aValue > bValue ? 1 : -1;
-            } else {
-                return aValue < bValue ? 1 : -1;
-            }
+            if (aValue < bValue) return currentSort.direction === 'asc' ? -1 : 1;
+            if (aValue > bValue) return currentSort.direction === 'asc' ? 1 : -1;
+            return 0;
         });
 
         currentPage = 1;
@@ -156,6 +272,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <tr data-flight-id="${flight.id}">
                 <td>
                     <div class="flight-number">${flight.flightNumber}</div>
+                    <small style="color: #6b7280; font-size: 0.8rem;">ID: ${flight.id}</small>
                 </td>
                 <td>${formatDate(flight.date)}</td>
                 <td>
@@ -183,13 +300,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 </td>
                 <td>${flight.flightTime}</td>
                 <td>
-                    <span class="status-badge status-${flight.status}">
-                        ${flight.status}
+                    <span class="status-badge status-${flight.status.replace('-', '')}">
+                        ${formatStatus(flight.status)}
                     </span>
                 </td>
                 <td>
                     <div class="table-actions">
-                        <button class="btn-icon view-flight" data-flight-id="${flight.id}">
+                        <button class="btn-icon view-flight" data-flight-id="${flight.id}" title="View Details">
                             <i class="fas fa-eye"></i>
                         </button>
                     </div>
@@ -215,15 +332,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    function formatStatus(status) {
+        const statusMap = {
+            'completed': 'Completed',
+            'in-progress': 'In Progress',
+            'scheduled': 'Scheduled',
+            'cancelled': 'Cancelled',
+            'diverted': 'Diverted'
+        };
+        return statusMap[status] || status;
+    }
+
     function showFlightDetails(flightId) {
         const flight = flightsData.find(f => f.id === flightId);
         if (!flight) return;
 
+        document.getElementById('detailFlightId').textContent = flight.id;
         document.getElementById('detailFlightNumber').textContent = flight.flightNumber;
         document.getElementById('detailCallsign').textContent = flight.callsign;
         document.getElementById('detailDate').textContent = formatDate(flight.date);
-        document.getElementById('detailStatus').textContent = flight.status;
-        document.getElementById('detailStatus').className = `status-badge status-${flight.status}`;
+        document.getElementById('detailStatus').textContent = formatStatus(flight.status);
+        document.getElementById('detailStatus').className = `status-badge status-${flight.status.replace('-', '')}`;
 
         document.getElementById('detailDeparture').textContent = flight.departure;
         document.getElementById('detailArrival').textContent = flight.arrival;
@@ -249,20 +378,42 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('detailSource').textContent = flight.source;
         document.getElementById('detailTimestamp').textContent = formatDateTime(flight.timestamp);
 
+        if (flight.lastUpdated) {
+            document.getElementById('detailLastUpdated').textContent = formatDateTime(flight.lastUpdated);
+            document.getElementById('detailLastUpdated').parentElement.style.display = 'flex';
+        } else {
+            document.getElementById('detailLastUpdated').parentElement.style.display = 'none';
+        }
+
         flightDetails.style.display = 'flex';
 
         const viewSimBriefBtn = document.getElementById('viewSimBrief');
-        if (flight.source === 'SimBrief') {
+        if (flight.source === 'SimBrief' && flight.pdfUrl && flight.pdfUrl !== 'N/A') {
             viewSimBriefBtn.style.display = 'inline-flex';
-            viewSimBriefBtn.onclick = () => {
-                if (flight.pdfUrl && flight.pdfUrl !== 'N/A') {
-                    window.open(flight.pdfUrl, '_blank');
-                } else {
-                    window.open(`https://www.simbrief.com/ofp/uads/?userid=${flight.pilotId}`, '_blank');
-                }
-            };
+            viewSimBriefBtn.onclick = () => window.open(flight.pdfUrl, '_blank');
         } else {
             viewSimBriefBtn.style.display = 'none';
+        }
+    }
+
+    function copyFlightIdToClipboard() {
+        const flightId = document.getElementById('detailFlightId').textContent;
+        if (flightId && flightId !== '-') {
+            navigator.clipboard.writeText(flightId)
+                .then(() => {
+                const copyBtn = document.getElementById('copyFlightId');
+                const originalHTML = copyBtn.innerHTML;
+                copyBtn.innerHTML = '<i class="fas fa-check"></i>';
+                copyBtn.style.background = '#059669';
+
+                setTimeout(() => {
+                    copyBtn.innerHTML = originalHTML;
+                    copyBtn.style.background = '';
+                }, 2000);
+            })
+                .catch(err => {
+                console.error('Failed to copy: ', err);
+            });
         }
     }
 
@@ -309,6 +460,8 @@ document.addEventListener('DOMContentLoaded', function() {
         currentPage = page;
         updateTable();
         updatePagination();
+
+        flightsTableBody.parentElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
     function updateStatistics() {
@@ -340,7 +493,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('statsActivePilots').textContent = uniquePilots.size;
 
         updateTopPilots();
-
         updatePopularRoutes();
     }
 
@@ -425,30 +577,40 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function formatDate(dateString) {
-        const date = new Date(dateString);
-        return date.toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'short',
-            day: 'numeric'
-        });
+        try {
+            const date = new Date(dateString);
+            if (isNaN(date.getTime())) return dateString;
+            return date.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            });
+        } catch (e) {
+            return dateString;
+        }
     }
 
     function formatDateTime(dateTimeString) {
-        const date = new Date(dateTimeString);
-        return date.toLocaleString('en-US', {
-            year: 'numeric',
-            month: 'short',
-            day: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit'
-        });
+        try {
+            const date = new Date(dateTimeString);
+            if (isNaN(date.getTime())) return dateTimeString;
+            return date.toLocaleString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+        } catch (e) {
+            return dateTimeString;
+        }
     }
 
     function timeToMinutes(timeString) {
         if (!timeString || timeString === 'N/A') return 0;
         const parts = timeString.split(':').map(Number);
-        if (parts.length === 2) {
+        if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])) {
             return parts[0] * 60 + parts[1];
         }
         return 0;

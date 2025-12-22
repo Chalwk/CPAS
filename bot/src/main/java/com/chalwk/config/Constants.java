@@ -9,6 +9,7 @@ public class Constants {
     public static long ROLE_LEAD_PILOT;
     public static long ROLE_INSTRUCTOR;
     public static long CHANNEL_PIREP;
+    public static long CHANNEL_FLIGHT_UPDATES;
 
     public static String[] ADMIN_IDS;
 
@@ -31,6 +32,7 @@ public class Constants {
         ROLE_INSTRUCTOR = Config.getLong("role.instructor", 0L);
         CHANNEL_PIREP = Config.getLong("channel.pirep", 0L);
         ADMIN_IDS = Config.getStringArray("admin.ids");
+        CHANNEL_FLIGHT_UPDATES = Config.getLong("channel.flight_updates", 0L);
 
         try {
             BOT_COLOR = Integer.decode(Config.getString("bot.color", "0x2d6bc9"));

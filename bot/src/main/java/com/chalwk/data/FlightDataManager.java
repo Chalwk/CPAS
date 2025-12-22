@@ -27,6 +27,7 @@ public class FlightDataManager {
             ObjectNode flight = mapper.createObjectNode();
 
             flight.put("id", generateFlightId());
+            flight.put("lastUpdated", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
             flight.put("date", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE));
             flight.put("timestamp", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
             flight.put("pilot", user.getName());

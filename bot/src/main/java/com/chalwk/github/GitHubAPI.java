@@ -30,54 +30,80 @@ public class GitHubAPI {
         return null;
     }
 
-    public static boolean appendFlightToJSON(String flightData) {
+    public static boolean updateFile(String content, String commitMessage, String filePath) throws Exception {
         String token = readGitHubToken();
         if (token == null || token.isEmpty()) {
             logger.error("GitHub token not found or empty");
             return false;
         }
 
+        String sha = getFileSHA(filePath);
+        String requestBody = String.format("""
+                {
+                    "message": "%s",
+                    "content": "%s",
+                    "sha": "%s",
+                    "branch": "main"
+                }
+                """, commitMessage, encodeToBase64(content), sha != null ? sha : "");
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://api.github.com/repos/Chalwk/CPAS/contents/" + filePath))
+                .header("Authorization", "token " + token)
+                .header("Accept", "application/vnd.github.v3+json")
+                .header("User-Agent", "CPAS-Discord-Bot")
+                .header("Content-Type", "application/json")
+                .PUT(HttpRequest.BodyPublishers.ofString(requestBody))
+                .build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        if (response.statusCode() == 200 || response.statusCode() == 201) {
+            logger.info("File updated successfully: {} - {}", filePath, commitMessage);
+            return true;
+        } else {
+            logger.error("GitHub API error: {} - {}", response.statusCode(), response.body());
+            return false;
+        }
+    }
+
+    public static boolean appendFlightToJSON(String flightData) {
         try {
-            String sha = getFileSHA();
-            String requestBody = String.format("""
-                    {
-                        "message": "Add flight via Discord ACARS",
-                        "content": "%s",
-                        "sha": "%s",
-                        "branch": "main"
-                    }
-                    """, encodeToBase64(flightData), sha != null ? sha : "");
-
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create("https://api.github.com/repos/Chalwk/CPAS/contents/data/flights.json"))
-                    .header("Authorization", "token " + token)
-                    .header("Accept", "application/vnd.github.v3+json")
-                    .header("User-Agent", "CPAS-Discord-Bot")
-                    .header("Content-Type", "application/json")
-                    .PUT(HttpRequest.BodyPublishers.ofString(requestBody))
-                    .build();
-
-            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-
-            if (response.statusCode() == 200 || response.statusCode() == 201) {
-                logger.info("Flight data saved to GitHub successfully");
-                return true;
-            } else {
-                logger.error("GitHub API error: {} - {}", response.statusCode(), response.body());
-                return false;
-            }
-
+            return updateFile(flightData, "Add flight via Discord ACARS", "data/flights.json");
         } catch (Exception e) {
             logger.error("Error saving flight to GitHub", e);
             return false;
         }
     }
 
-    private static String getFileSHA() throws Exception {
+    public static String getFlightsJSON() throws Exception {
         String token = readGitHubToken();
+        if (token == null) return "[]";
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://api.github.com/repos/Chalwk/CPAS/contents/data/flights.json"))
+                .header("Authorization", "token " + token)
+                .header("Accept", "application/vnd.github.v3.raw")
+                .header("User-Agent", "CPAS-Discord-Bot")
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        if (response.statusCode() == 200) {
+            return response.body();
+        } else if (response.statusCode() == 404) {
+            return "[]";
+        }
+        throw new Exception("Failed to fetch flights: " + response.statusCode());
+    }
+
+    private static String getFileSHA(String filePath) throws Exception {
+        String token = readGitHubToken();
+        if (token == null) return null;
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://api.github.com/repos/Chalwk/CPAS/contents/" + filePath))
                 .header("Authorization", "token " + token)
                 .header("Accept", "application/vnd.github.v3+json")
                 .header("User-Agent", "CPAS-Discord-Bot")
@@ -93,6 +119,7 @@ public class GitHubAPI {
             if (shaStart > 6 && shaEnd > shaStart) {
                 return body.substring(shaStart, shaEnd);
             }
+            return null;
         } else if (response.statusCode() == 404) {
             return null;
         }
