@@ -1,39 +1,65 @@
 Copyright (c) 2025. Jericho Crosby (Chalwk)
 
 ```
-CPAS
+CPAS - COASTAL PEAKS AIR SERVICE
 │
-├───✈ INFO
-│   │   〔❓〕welcome
-│   │   〔📕〕community-rules
-│   │   〔📜〕rank-structure
-│   │   〔🚪〕arrivals-departures
-│   │   〔👋〕introductions
+├── 📢 INFORMATION & WELCOME
+│   ├──〔ℹ️〕about
+│   ├──〔📜〕community-rules
+│   ├──〔🏆〕rank-structure
+│   ├──〔🛫〕arrivals-departures
+│   └──〔👋〕introductions
 │
-├───✈ KNOWLEDGE BASE
-│   └───〔📋〕cpas-overview
-│       │   Flight Planning & PIREP Submission
-│       │   Fleet
+├── 📚 KNOWLEDGE BASE
+│   └───〔📋〕guides
+│       ├──〔📋〕operations-manual
+│       ├──〔🎓〕training-structure
+│       ├──〔🛩️〕fleet-guide
+│       └──〔🗺️〕routes-guide
 │
-├───✈ OPERATIONS
-│   │   flight-planning
-│   │   routes-discussion
-│   │   fleet-discussion
-│   │   pireps
+├── ✈️ FLIGHT OPERATIONS
+│   ├──〔📅〕flight-planning
+│   ├──〔📊〕pirep-submission
+│   ├──〔🔄〕recent-flights
+│   ├──〔🛠️〕route-development
+│   └──〔💬〕operations-chat
 │
-├───✈ TRAINING
-│   │   training-planning
-│   │   checklist-help
+├── 🎓 TRAINING & DEVELOPMENT
+│   ├──〔📚〕training-questions
+│   ├──〔✅〕checklist-help
+│   ├──〔🔄〕check-ride-requests
+│   ├──〔💡〕tips-techniques
+│   └──〔🎯〕training-progress
 │
-├───✈ COMMUNITY
-│   │   general
-│   │   screenshots-media
-│   │   events
+├── 🛠️ FLEET & ADD-ONS
+│   ├──〔🛩️〕fleet-discussion
+│   ├──〔🎨〕livery-sharing
+│   ├──〔🔧〕add-on-support
+│   ├──〔🛠️〕technical-help
+│   └──〔💾〕msfs-setup
 │
-├───✈ COMMS
-│   │   〔🎤〕General
+├── 📸 MEDIA & SHARING
+│   ├──〔📸〕screenshots
+│   ├──〔🎥〕video-clips
+│   ├──〔🗺️〕route-screenshots
+│   └──〔🏞️〕scenery-shots
 │
-├───✈ COUNCIL CHAMBERS
-│   │   〔🛡️〕watchtower
-│   │   〔🎤〕Admin
+├── 💬 COMMUNITY
+│   ├──〔💬〕general-chat
+│   ├──〔🗣️〕aviation-talk
+│   ├──〔🎮〕msfs-discussion
+│   └──〔🤝〕pilot-networking
+│
+├── 🎤 VOICE CHANNELS
+│   ├──〔🔊〕General Chat
+│   ├──〔🎤〕Flight Briefing
+│   ├──〔🎤〕Training Sessions
+│   ├──〔🎤〕Group Flights
+│   └──〔🎤〕ATC Practice
+│
+└── ⚙️ ADMINISTRATION
+    ├──〔👑〕staff-chat
+    ├──〔📋〕applications-review
+    ├──〔📊〕activity-reports
+│   └──〔🎤〕Admin
 ```
