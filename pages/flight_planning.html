@@ -99,8 +99,106 @@
                 <div class="step-header">
                     <span class="step-number">4</span>
                     <div class="step-content">
+                        <h4>Fly Your Planned Route in MSFS</h4>
+                        <p>Once your flight plan is complete, it's time to fly it in Microsoft Flight Simulator:</p>
+                        <ul>
+                            <li><strong>Load Aircraft:</strong> Use the CPAS-approved add-on aircraft</li>
+                            <li><strong>Import Flight Plan:</strong> Use SimBrief's export feature or manually enter
+                                your route
+                            </li>
+                            <li><strong>Complete Flight:</strong> Fly from departure to destination following your plan
+                            </li>
+                            <li><strong>Document Your Flight:</strong> Take screenshots at key moments (see next step)
+                            </li>
+                        </ul>
+                        <div class="screenshot-tip">
+                            <i class="fas fa-camera"></i>
+                            <strong>Pro Tip:</strong> MSFS has a built-in photo mode (Press <code>P</code> or use <code>Ctrl
+                            + Alt + P</code> for high-resolution screenshots)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-number">5</span>
+                    <div class="step-content">
+                        <h4>Document Your Flight with Screenshots</h4>
+                        <p>Capture your flight experience with screenshots to share with the community:</p>
+
+                        <div class="screenshot-checklist">
+                            <h5><i class="fas fa-check-circle"></i> Recommended Screenshots:</h5>
+                            <div class="checklist-grid">
+                                <div class="checklist-item">
+                                    <i class="fas fa-plane-departure"></i>
+                                    <div>
+                                        <strong>Pre-Flight</strong>
+                                        <p>Aircraft at departure gate with engines off</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item">
+                                    <i class="fas fa-takeoff"></i>
+                                    <div>
+                                        <strong>Takeoff</strong>
+                                        <p>Rotating or shortly after takeoff</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item">
+                                    <i class="fas fa-mountain"></i>
+                                    <div>
+                                        <strong>Enroute Scenery</strong>
+                                        <p>Scenic views, interesting terrain, or landmarks</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item">
+                                    <i class="fas fa-landmark"></i>
+                                    <div>
+                                        <strong>Flight Progress</strong>
+                                        <p>In-game map showing your position along the route</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item">
+                                    <i class="fas fa-landing"></i>
+                                    <div>
+                                        <strong>Approach/Landing</strong>
+                                        <p>On final approach or during landing</p>
+                                    </div>
+                                </div>
+                                <div class="checklist-item">
+                                    <i class="fas fa-parking"></i>
+                                    <div>
+                                        <strong>Post-Flight</strong>
+                                        <p>Aircraft parked at destination with engines off</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="screenshot-settings">
+                            <h5><i class="fas fa-cog"></i> Screenshot Settings (MSFS):</h5>
+                            <ul>
+                                <li><strong>Default Key:</strong> <code>P</code> (standard screenshot)</li>
+                                <li><strong>High-Res:</strong> <code>Ctrl + Alt + P</code> (4x resolution)</li>
+                                <li><strong>Photo Mode:</strong> <code>Ctrl + Alt + K</code> (free camera with filters)
+                                </li>
+                                <li><strong>Save Location:</strong> <code>Documents\Pictures\FlightSimulator</code></li>
+                            </ul>
+                            <p class="screenshot-note">
+                                <i class="fas fa-lightbulb"></i> Screenshots help build your flight history and can be
+                                shared in our Discord community channels!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-header">
+                    <span class="step-number">6</span>
+                    <div class="step-content">
                         <h4>Use the Discord Bot Command</h4>
-                        <p>Once your flight plan is created, share it with the community using our custom Discord
+                        <p>Once your flight is complete, share it with the community using our custom Discord
                             bot:</p>
                         <div class="command-example">
                             <h5><i class="fas fa-terminal"></i> Command Format:</h5>
@@ -109,16 +207,25 @@
                             </div>
                             <p><strong>Example:</strong> <code>/pirep 123456</code></p>
                         </div>
+                        <div class="discord-sharing">
+                            <h5><i class="fab fa-discord"></i> Share Your Experience:</h5>
+                            <p>After using the <code>/pirep</code> command, consider sharing your flight screenshots in
+                                our <strong>#flight-screenshots</strong> Discord channel. This helps build our community
+                                gallery and lets others see the amazing routes you've flown!</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Rest of the file remains unchanged from the original -->
         <div class="discord-bot-section">
             <h3><i class="fab fa-discord"></i> Discord Bot Integration</h3>
-            <p>Our custom bot will create an embed message with your latest SimBrief flight plan:</p>
+            <p>Our custom bot will create an embed message with your latest SimBrief flight plan. Share your flight
+                screenshots in Discord to complete your flight report!</p>
 
             <div class="embed-preview">
+                <!-- Embed preview content remains the same -->
                 <div class="embed-header">
                     <div class="embed-color-bar"></div>
                     <div class="embed-content">
@@ -182,6 +289,7 @@
                 </div>
             </div>
 
+            <!-- Rest of the original file continues unchanged -->
             <div class="api-response">
                 <h5><i class="fas fa-code"></i> Bot API Call Example:</h5>
                 <code>GET https://www.simbrief.com/api/xml.fetcher.php?userid=123456</code>
@@ -282,11 +390,9 @@
                     <p>Regular PIREP submissions help track your flight hours for rank progression</p>
                 </div>
                 <div class="tip-card">
-                    <h5><i class="fas fa-bug"></i> Debugging Help</h5>
-                    <p>If the command fails, try manually visiting:
-                        <code>https://www.simbrief.com/api/xml.fetcher.php?userid=YOUR_ID</code>
-                        to see if it returns valid XML.
-                    </p>
+                    <h5><i class="fas fa-camera"></i> Build Your Gallery</h5>
+                    <p>Consistent screenshot documentation creates a visual log of your CPAS career. Share your best
+                        shots in Discord!</p>
                 </div>
             </div>
         </div>
@@ -303,8 +409,8 @@
                 <div class="screenshot-caption">Example of the /pirep command in Discord</div>
             </div>
             <div class="screenshot">
-                <img alt="PDF OFP Example" src="../images/PDF_OFP_Example.png">
-                <div class="screenshot-caption">The PDF OFP that opens when clicking "View PDF OFP"</div>
+                <img alt="MSFS Screenshot Example" src="../images/msfs_screenshot_example.png">
+                <div class="screenshot-caption">Example of a flight screenshot showing approach to NZQN</div>
             </div>
         </div>
 
@@ -327,6 +433,8 @@
                     </li>
                     <li><strong>Incomplete Fields:</strong> Ensure all required fields are filled in your SimBrief
                         flight plan
+                    </li>
+                    <li><strong>Screenshot Issues:</strong> Check MSFS settings if screenshots aren't saving correctly
                     </li>
                 </ul>
             </div>
