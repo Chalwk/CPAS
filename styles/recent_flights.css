@@ -273,6 +273,16 @@
     color: #3730a3;
 }
 
+.status-cancelled {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.status-diverted {
+    background-color: #ede9fe;
+    color: #5b21b6;
+}
+
 .table-actions {
     display: flex;
     gap: 8px;

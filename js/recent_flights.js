@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </td>
                 <td>${flight.flightTime}</td>
                 <td>
-                    <span class="status-badge status-${flight.status.replace('-', '')}">
+                    <span class="status-badge status-${flight.status}">
                         ${formatStatus(flight.status)}
                     </span>
                 </td>
