@@ -1,6 +1,6 @@
 // Copyright (c) 2025. Jericho Crosby (Chalwk)
 
-package com.chalwk.github;
+package com.chalwk.api;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +17,7 @@ import java.util.Base64;
 
 public class GitHubAPI {
     private static final Logger logger = LoggerFactory.getLogger(GitHubAPI.class);
+    private static final String token = readGitHubToken();
     private static final HttpClient client = HttpClient.newBuilder()
             .connectTimeout(Duration.ofSeconds(10))
             .build();
@@ -31,7 +32,6 @@ public class GitHubAPI {
     }
 
     public static boolean updateFile(String content, String commitMessage, String filePath) throws Exception {
-        String token = readGitHubToken();
         if (token == null || token.isEmpty()) {
             logger.error("GitHub token not found or empty");
             return false;
@@ -77,7 +77,6 @@ public class GitHubAPI {
     }
 
     public static String getFlightsJSON() throws Exception {
-        String token = readGitHubToken();
         if (token == null) return "[]";
 
         HttpRequest request = HttpRequest.newBuilder()
@@ -99,7 +98,6 @@ public class GitHubAPI {
     }
 
     private static String getFileSHA(String filePath) throws Exception {
-        String token = readGitHubToken();
         if (token == null) return null;
 
         HttpRequest request = HttpRequest.newBuilder()

@@ -2,7 +2,7 @@
 
 package com.chalwk.data;
 
-import com.chalwk.github.GitHubAPI;
+import com.chalwk.api.GitHubAPI;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;

@@ -4,7 +4,7 @@ package com.chalwk.commands.general;
 
 import com.chalwk.commands.CommandManager;
 import com.chalwk.config.Constants;
-import com.chalwk.github.GitHubAPI;
+import com.chalwk.api.GitHubAPI;
 import com.chalwk.utils.PermissionChecker;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
