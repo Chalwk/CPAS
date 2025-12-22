@@ -11,7 +11,7 @@ CPAS - COASTAL PEAKS AIR SERVICE
 │   └──〔👋〕introductions
 │
 ├── 📚 KNOWLEDGE BASE
-│   └───〔📋〕guides
+│   └───〔🗂️〕guides
 │       ├──〔📋〕operations-manual
 │       ├──〔🎓〕training-structure
 │       ├──〔🛩️〕fleet-guide
