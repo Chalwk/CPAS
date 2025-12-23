@@ -1,6 +1,6 @@
 [ {
   "id" : "CPA8899",
-  "lastUpdated" : "2025-12-23T13:36:48.9000778",
+  "lastUpdated" : "2025-12-23T13:41:54.9424664",
   "date" : "2025-12-23",
   "timestamp" : "2025-12-23T13:36:48.9000778",
   "pilot" : "chalwk",
@@ -23,6 +23,6 @@
   "windComponent" : "-4",
   "pdfUrl" : "https://www.simbrief.com/ofp/flightplans/NZCHNZGT_PDF_1766450211.pdf",
   "distance" : "N/A",
-  "status" : "in-progress",
+  "status" : "completed",
   "source" : "SimBrief"
 } ]
