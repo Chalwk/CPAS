@@ -6,6 +6,7 @@ import com.chalwk.commands.CommandManager;
 import com.chalwk.commands.admin.AssignTrainingRoleCommand;
 import com.chalwk.commands.general.HelpCommand;
 import com.chalwk.commands.general.SimBriefPirepCommand;
+import com.chalwk.commands.general.SpecialMissionCommand;
 import com.chalwk.commands.general.UpdateFlightCommand;
 import com.chalwk.config.Config;
 import com.chalwk.listeners.AutoRoleListener;
@@ -86,9 +87,10 @@ public class Main {
     }
 
     private static void initializeCommands() {
-        COMMANDS.add(new SimBriefPirepCommand());
-        COMMANDS.add(new HelpCommand());
         COMMANDS.add(new AssignTrainingRoleCommand());
+        COMMANDS.add(new HelpCommand());
+        COMMANDS.add(new SimBriefPirepCommand());
+        COMMANDS.add(new SpecialMissionCommand());
         COMMANDS.add(new UpdateFlightCommand());
     }
 

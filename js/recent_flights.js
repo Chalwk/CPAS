@@ -590,7 +590,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('statsAvgFlightTime').textContent =
         `${avgHours}:${avgRemainingMinutes.toString().padStart(2, '0')}`;
 
-        const uniquePilots = new Set(filteredData.map(f => f.pilotId));
+        const uniquePilots = new Set(filteredData.map(f => f.pilot));
         document.getElementById('statsActivePilots').textContent = uniquePilots.size;
 
         updateTopPilots();
@@ -601,15 +601,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const pilotStats = {};
 
         filteredData.forEach(flight => {
-            if (!pilotStats[flight.pilotId]) {
-                pilotStats[flight.pilotId] = {
-                    name: flight.pilot,
+            const pilotName = flight.pilot;
+            if (!pilotStats[pilotName]) {
+                pilotStats[pilotName] = {
+                    name: pilotName,
                     flights: 0,
                     totalTime: 0
                 };
             }
-            pilotStats[flight.pilotId].flights++;
-            pilotStats[flight.pilotId].totalTime += timeToMinutes(flight.flightTime);
+            pilotStats[pilotName].flights++;
+            pilotStats[pilotName].totalTime += timeToMinutes(flight.flightTime);
         });
 
         const topPilots = Object.values(pilotStats)
@@ -624,16 +625,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         topPilotsContainer.innerHTML = topPilots.map((pilot, index) => `
-            <div class="pilot-rank">
-                <div class="rank-number">${index + 1}</div>
-                <div class="pilot-rank-info">
-                    <div class="pilot-rank-name">${pilot.name}</div>
-                    <div class="pilot-rank-flights">
-                        ${pilot.flights} flights • ${Math.floor(pilot.totalTime / 60)}:${(pilot.totalTime % 60).toString().padStart(2, '0')} hours
-                    </div>
+        <div class="pilot-rank">
+            <div class="rank-number">${index + 1}</div>
+            <div class="pilot-rank-info">
+                <div class="pilot-rank-name">${pilot.name}</div>
+                <div class="pilot-rank-flights">
+                    ${pilot.flights} flights • ${Math.floor(pilot.totalTime / 60)}:${(pilot.totalTime % 60).toString().padStart(2, '0')} hours
                 </div>
             </div>
-        `).join('');
+        </div>
+    `).join('');
     }
 
     function updatePopularRoutes() {
