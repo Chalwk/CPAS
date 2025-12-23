@@ -44,7 +44,7 @@ public class UpdateFlightCommand extends ListenerAdapter implements CommandManag
         return Commands.slash(getCommandName(), "Update the status of your flight")
                 .addOptions(
                         new OptionData(OptionType.STRING, "flight_id",
-                                "Flight ID (e.g., CPA1234)", true),
+                                "Flight ID (e.g., CPX1234)", true),
                         new OptionData(OptionType.STRING, "status",
                                 "New status for the flight", true)
                                 .addChoice("Completed", "completed")

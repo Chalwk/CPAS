@@ -97,7 +97,7 @@ public class FlightDataManager {
     }
 
     private static String generateFlightId() {
-        return "CPA" + System.currentTimeMillis() % 10000;
+        return "CPX" + System.currentTimeMillis() % 10000;
     }
 
     private static String calculateDistance(Map<String, String> flightPlan) {
