@@ -67,6 +67,18 @@
                         <option value="H125">Airbus H125</option>
                         <option value="H145">Airbus H145</option>
                     </select>
+                    <select class="filter-select" id="missionFilter">
+                        <option value="all">All Types</option>
+                        <option value="SimBrief">Normal Flights</option>
+                        <option value="MissionReport">Missions</option>
+                        <option value="SAR">Search & Rescue</option>
+                        <option value="MEDEVAC">Medical Evac</option>
+                        <option value="PATIENT">Patient Transfer</option>
+                        <option value="TOUR_GLACIER">Glacier Tours</option>
+                        <option value="TOUR_SIGHTSEEING">Sightseeing</option>
+                        <option value="TRAINING">Training</option>
+                        <option value="FIRE">Firefighting</option>
+                    </select>
                 </div>
             </div>
             <div class="controls-right">
@@ -227,9 +239,6 @@
                                 <span class="detail-label">Pilot ID:</span>
                                 <span class="detail-value" id="detailPilotId">-</span>
                             </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Discord Tag:</span>
-                            </div>
                         </div>
                     </div>
 
@@ -326,7 +335,7 @@
 
         <div class="data-refresh">
             <p><i class="fas fa-sync-alt"></i> Flight data is updated automatically. Last updated: <span
-                    id="lastUpdated">-</span></p>
+                    id="lastUpdated">1</span></p>
             <button class="btn btn-small" id="refreshData">
                 <i class="fas fa-redo"></i> Refresh Data
             </button>

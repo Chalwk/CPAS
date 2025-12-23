@@ -25,7 +25,11 @@ public class FlightDataManager {
         try {
             ObjectNode flight = mapper.createObjectNode();
 
-            flight.put("id", generateFlightId());
+            String flightId = flightPlan.getOrDefault("source", "SimBrief").equals("MissionReport")
+                    ? "MSN" + System.currentTimeMillis() % 10000
+                    : generateFlightId();
+
+            flight.put("id", flightId);
             flight.put("lastUpdated", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
             flight.put("date", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE));
             flight.put("timestamp", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
@@ -40,7 +44,7 @@ public class FlightDataManager {
             flight.put("aircraftIcao", flightPlan.getOrDefault("aircraft_icao", "N/A"));
             flight.put("aircraftReg", flightPlan.getOrDefault("aircraft_reg", "N/A"));
             flight.put("flightTime", flightPlan.getOrDefault("flight_time", "N/A"));
-            flight.put("blockTime", flightPlan.getOrDefault("block_time", "N/A"));
+            flight.put("blockTime", flightPlan.getOrDefault("block_time", flightPlan.getOrDefault("flight_time", "N/A")));
             flight.put("route", flightPlan.getOrDefault("route_text", "DCT"));
             flight.put("cruiseAlt", flightPlan.getOrDefault("cruise_alt", "N/A"));
             flight.put("fuelBurn", flightPlan.getOrDefault("fuel_burn", "N/A"));
@@ -50,7 +54,27 @@ public class FlightDataManager {
             flight.put("pdfUrl", flightPlan.getOrDefault("pdf_url", "N/A"));
             flight.put("distance", calculateDistance(flightPlan));
             flight.put("status", status);
-            flight.put("source", "SimBrief");
+            flight.put("source", flightPlan.getOrDefault("source", "SimBrief"));
+
+            // Mission-specific fields
+            if (flightPlan.containsKey("mission_type")) {
+                flight.put("missionType", flightPlan.get("mission_type"));
+            }
+            if (flightPlan.containsKey("mission_details")) {
+                flight.put("missionDetails", flightPlan.get("mission_details"));
+            }
+            if (flightPlan.containsKey("patients")) {
+                flight.put("patients", flightPlan.get("patients"));
+            }
+            if (flightPlan.containsKey("weather")) {
+                flight.put("weather", flightPlan.get("weather"));
+            }
+            if (flightPlan.containsKey("challenges")) {
+                flight.put("challenges", flightPlan.get("challenges"));
+            }
+            if (flightPlan.containsKey("notes")) {
+                flight.put("notes", flightPlan.get("notes"));
+            }
 
             String existingJson = getExistingFlights();
             ArrayNode flightsArray;
@@ -65,14 +89,18 @@ public class FlightDataManager {
 
             String jsonToSave = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(flightsArray);
 
-            boolean success = GitHubAPI.updateFile(jsonToSave, "Add flight via Discord ACARS", "data/flights.json");
+            String commitMessage = flightPlan.getOrDefault("source", "SimBrief").equals("MissionReport")
+                    ? "Add mission report via Discord"
+                    : "Add flight via Discord ACARS";
+
+            boolean success = GitHubAPI.updateFile(jsonToSave, commitMessage, "data/flights.json");
 
             if (success) {
-                logger.info("Flight saved for user: {} (SimBrief ID: {})", user.getAsTag(), simbriefPilotId);
+                logger.info("Flight saved for user: {} (ID: {})", user.getAsTag(), simbriefPilotId);
                 cachedFlightsJson = null;
                 lastCacheUpdate = 0;
             } else {
-                logger.error("Failed to save flight for user: {} (SimBrief ID: {})", user.getAsTag(), simbriefPilotId);
+                logger.error("Failed to save flight for user: {} (ID: {})", user.getAsTag(), simbriefPilotId);
             }
 
         } catch (Exception e) {

@@ -198,6 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchTerm = searchInput.value.toLowerCase();
         const statusValue = statusFilter.value;
         const aircraftValue = aircraftFilter.value;
+        const missionFilterValue = document.getElementById('missionFilter')?.value || 'all';
 
         filteredData = flightsData.filter(flight => {
             const matchesSearch =
@@ -207,7 +208,9 @@ document.addEventListener('DOMContentLoaded', function() {
             flight.arrival.toLowerCase().includes(searchTerm) ||
             flight.aircraftReg.toLowerCase().includes(searchTerm) ||
             flight.aircraft.toLowerCase().includes(searchTerm) ||
-            flight.id.toLowerCase().includes(searchTerm);
+            flight.id.toLowerCase().includes(searchTerm) ||
+            (flight.missionType && flight.missionType.toLowerCase().includes(searchTerm)) ||
+            (flight.missionDetails && flight.missionDetails.toLowerCase().includes(searchTerm));
 
             const matchesStatus = statusValue === 'all' || flight.status === statusValue;
 
@@ -215,7 +218,12 @@ document.addEventListener('DOMContentLoaded', function() {
             flight.aircraftIcao === aircraftValue ||
             flight.aircraft.toLowerCase().includes(aircraftValue.toLowerCase());
 
-            return matchesSearch && matchesStatus && matchesAircraft;
+            const matchesMission = missionFilterValue === 'all' ||
+            (missionFilterValue === 'SimBrief' && flight.source === 'SimBrief') ||
+            (missionFilterValue === 'MissionReport' && flight.source === 'MissionReport') ||
+            (flight.missionType === missionFilterValue);
+
+            return matchesSearch && matchesStatus && matchesAircraft && matchesMission;
         });
 
         sortFlights();
@@ -257,20 +265,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (pageData.length === 0) {
             flightsTableBody.innerHTML = `
-                <tr>
-                    <td colspan="8" style="text-align: center; padding: 40px; color: #6b7280;">
-                        <i class="fas fa-plane-slash"></i> No flights found matching your criteria.
-                    </td>
-                </tr>
-            `;
+            <tr>
+                <td colspan="8" style="text-align: center; padding: 40px; color: #6b7280;">
+                    <i class="fas fa-plane-slash"></i> No flights found matching your criteria.
+                </td>
+            </tr>
+        `;
             return;
         }
 
-        flightsTableBody.innerHTML = pageData.map(flight => `
-            <tr data-flight-id="${flight.id}">
+        flightsTableBody.innerHTML = pageData.map(flight => {
+            const isMission = flight.source === 'MissionReport';
+            const missionIcon = isMission ? '🚁 ' : '';
+            const missionClass = isMission ? 'mission-row' : '';
+            const missionType = isMission ? getMissionTypeDisplay(flight.missionType) : 'Normal Flight';
+
+            let routeDisplay = flight.route;
+            if (isMission && flight.missionType) {
+                routeDisplay = `${missionIcon}${missionType}`;
+                if (flight.missionDetails) {
+                    routeDisplay += `: ${truncateText(flight.missionDetails, 30)}`;
+                }
+            }
+
+            return `
+            <tr data-flight-id="${flight.id}" class="${missionClass}" data-source="${flight.source}">
                 <td>
                     <div class="flight-number">${flight.flightNumber}</div>
                     <small style="color: #6b7280; font-size: 0.8rem;">ID: ${flight.id}</small>
+                    ${isMission ? '<span class="mission-badge">MISSION</span>' : ''}
                 </td>
                 <td>${formatDate(flight.date)}</td>
                 <td>
@@ -278,6 +301,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="pilot-avatar">${flight.pilot.charAt(0).toUpperCase()}</div>
                         <div>
                             <div>${flight.pilot}</div>
+                            ${isMission ? '<small style="color: #6b7280;">Mission Pilot</small>' : ''}
                         </div>
                     </div>
                 </td>
@@ -294,6 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <i class="fas fa-arrow-right route-arrow"></i>
                             <span class="airport-code">${flight.arrival}</span>
                         </div>
+                        <div class="route-details">${routeDisplay}</div>
                     </div>
                 </td>
                 <td>${flight.flightTime}</td>
@@ -310,7 +335,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </td>
             </tr>
-        `).join('');
+        `;
+        }).join('');
 
         document.querySelectorAll('.view-flight').forEach(btn => {
             btn.addEventListener('click', (e) => {
@@ -374,7 +400,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.getElementById('detailSource').textContent = flight.source;
         document.getElementById('detailTimestamp').textContent = formatDateTime(flight.timestamp);
-        flightDetails.style.display = 'flex';
 
         const viewSimBriefBtn = document.getElementById('viewSimBrief');
         if (flight.source === 'SimBrief' && flight.pdfUrl && flight.pdfUrl !== 'N/A') {
@@ -383,6 +408,114 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             viewSimBriefBtn.style.display = 'none';
         }
+
+        const missionDetailsSection = document.getElementById('missionDetailsSection');
+        if (!missionDetailsSection && flight.source === 'MissionReport') {
+            addMissionDetailsToSidebar(flight);
+        } else if (missionDetailsSection) {
+            if (flight.source === 'MissionReport') {
+                updateMissionDetails(flight);
+            } else {
+                missionDetailsSection.remove();
+            }
+        }
+
+        flightDetails.style.display = 'flex';
+    }
+
+    function addMissionDetailsToSidebar(flight) {
+        const sidebarContent = document.querySelector('.sidebar-content');
+
+        const missionSection = document.createElement('div');
+        missionSection.className = 'detail-section';
+        missionSection.id = 'missionDetailsSection';
+        missionSection.innerHTML = `
+        <h4><i class="fas fa-helicopter"></i> Mission Details</h4>
+        <div class="detail-grid">
+            <div class="detail-item">
+                <span class="detail-label">Mission Type:</span>
+                <span class="detail-value mission-type" id="detailMissionType">${getMissionTypeDisplay(flight.missionType)}</span>
+            </div>
+            ${flight.patients ? `
+            <div class="detail-item">
+                <span class="detail-label">Patients:</span>
+                <span class="detail-value" id="detailPatients">${flight.patients}</span>
+            </div>
+            ` : ''}
+            ${flight.weather ? `
+            <div class="detail-item">
+                <span class="detail-label">Weather:</span>
+                <span class="detail-value" id="detailWeather">${flight.weather}</span>
+            </div>
+            ` : ''}
+            ${flight.missionDetails ? `
+            <div class="detail-item full-width">
+                <span class="detail-label">Details:</span>
+                <span class="detail-value" id="detailMissionDetails">${flight.missionDetails}</span>
+            </div>
+            ` : ''}
+            ${flight.challenges ? `
+            <div class="detail-item full-width">
+                <span class="detail-label">Challenges:</span>
+                <span class="detail-value" id="detailChallenges">${flight.challenges}</span>
+            </div>
+            ` : ''}
+            ${flight.notes ? `
+            <div class="detail-item full-width">
+                <span class="detail-label">Notes:</span>
+                <span class="detail-value" id="detailNotes">${flight.notes}</span>
+            </div>
+            ` : ''}
+        </div>
+    `;
+
+        const sourceSection = document.querySelector('.detail-section:last-child');
+        sidebarContent.insertBefore(missionSection, sourceSection);
+    }
+
+    function updateMissionDetails(flight) {
+        if (document.getElementById('detailMissionType')) {
+            document.getElementById('detailMissionType').textContent = getMissionTypeDisplay(flight.missionType);
+        }
+        if (flight.patients && document.getElementById('detailPatients')) {
+            document.getElementById('detailPatients').textContent = flight.patients;
+        }
+        if (flight.weather && document.getElementById('detailWeather')) {
+            document.getElementById('detailWeather').textContent = flight.weather;
+        }
+        if (flight.missionDetails && document.getElementById('detailMissionDetails')) {
+            document.getElementById('detailMissionDetails').textContent = flight.missionDetails;
+        }
+        if (flight.challenges && document.getElementById('detailChallenges')) {
+            document.getElementById('detailChallenges').textContent = flight.challenges;
+        }
+        if (flight.notes && document.getElementById('detailNotes')) {
+            document.getElementById('detailNotes').textContent = flight.notes;
+        }
+    }
+
+    function getMissionTypeDisplay(type) {
+        const typeMap = {
+            'SAR': 'Search & Rescue',
+            'PATIENT': 'Patient Transfer',
+            'MEDEVAC': 'Medical Evacuation',
+            'FIRE': 'Firefighting',
+            'POLICE': 'Law Enforcement',
+            'SURVEY': 'Aerial Survey',
+            'VIP': 'VIP Transport',
+            'TOUR_GLACIER': 'Glacier Tour',
+            'TOUR_SIGHTSEEING': 'Sightseeing Tour',
+            'TRAINING': 'Training',
+            'MAINTENANCE': 'Maintenance',
+            'TEST': 'Test Flight',
+            'OTHER': 'Other Mission'
+        };
+        return typeMap[type] || type;
+    }
+
+    function truncateText(text, maxLength) {
+        if (!text) return '';
+        return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
     }
 
     function updatePagination() {
