@@ -225,11 +225,11 @@ p {
     height: calc(100vh - 70px);
     min-height: 600px;
     display: flex;
-    align-items: center; /* Changed from flex-start to center */
+    align-items: center;
     justify-content: center;
     position: relative;
     text-align: center;
-    padding-top: 40px; /* Added padding to shift content down */
+    padding-top: 40px;
 }
 
 .hero-overlay {
@@ -263,7 +263,7 @@ p {
     color: white;
     font-weight: 700;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    margin-top: 10px; /* Added margin to separate from logo */
+    margin-top: 10px;
 }
 
 .hero-subtitle {
@@ -288,7 +288,7 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
-    align-items: start; /* Changed from center to start */
+    align-items: start;
 }
 
 .about-text h3 {
