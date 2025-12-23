@@ -27,7 +27,7 @@ public class FlightDataManager {
 
             String flightId = flightPlan.getOrDefault("source", "SimBrief").equals("MissionReport")
                     ? "MSN" + System.currentTimeMillis() % 10000
-                    : generateFlightId();
+                    : flightPlan.getOrDefault("flight_number", generateFlightId());
 
             flight.put("id", flightId);
             flight.put("lastUpdated", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
@@ -35,7 +35,7 @@ public class FlightDataManager {
             flight.put("timestamp", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
             flight.put("pilot", user.getName());
             flight.put("pilotId", simbriefPilotId);
-            flight.put("flightNumber", flightPlan.getOrDefault("flight_number", "N/A"));
+            flight.put("flightNumber", flightId);
             flight.put("callsign", flightPlan.getOrDefault("callsign", "N/A"));
             flight.put("departure", flightPlan.getOrDefault("origin", "N/A"));
             flight.put("arrival", flightPlan.getOrDefault("destination", "N/A"));

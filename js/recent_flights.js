@@ -291,8 +291,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return `
             <tr data-flight-id="${flight.id}" class="${missionClass}" data-source="${flight.source}">
                 <td>
-                    <div class="flight-number">${flight.flightNumber}</div>
-                    <small style="color: #6b7280; font-size: 0.8rem;">ID: ${flight.id}</small>
+                    <div class="flight-number">${flight.id}</div>
                     ${isMission ? '<span class="mission-badge">MISSION</span>' : ''}
                 </td>
                 <td>${formatDate(flight.date)}</td>
@@ -308,7 +307,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td>
                     <div class="aircraft-info">
                         <div class="aircraft-reg">${flight.aircraftReg}</div>
-                        <div class="aircraft-type">${flight.aircraft} (${flight.aircraftIcao})</div>
+                        <div class="aircraft-type">${flight.aircraft}</div>
                     </div>
                 </td>
                 <td>
@@ -371,7 +370,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const flight = flightsData.find(f => f.id === flightId);
         if (!flight) return;
 
-        document.getElementById('detailFlightNumber').textContent = flight.flightNumber;
+        document.getElementById('detailFlightNumber').textContent = flight.id;
         document.getElementById('detailCallsign').textContent = flight.callsign;
         document.getElementById('detailDate').textContent = formatDate(flight.date);
         document.getElementById('detailStatus').textContent = formatStatus(flight.status);
