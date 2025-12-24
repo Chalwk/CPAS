@@ -577,18 +577,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         const totalHours = Math.floor(totalMinutes / 60);
-        const remainingMinutes = totalMinutes % 60;
+        const totalRemainingMinutes = Math.floor(totalMinutes % 60);
 
         const totalTimeDisplay = totalHours > 0
-            ? `${totalHours}h ${remainingMinutes}m`
-            : `${remainingMinutes}m`;
+            ? `${totalHours}h ${totalRemainingMinutes}m`
+            : `${totalRemainingMinutes}m`;
 
         document.getElementById('totalHours').textContent = totalTimeDisplay;
         document.getElementById('statsTotalFuel').textContent = totalFuel.toFixed(1);
 
         const avgMinutes = filteredData.length > 0 ? totalMinutes / filteredData.length : 0;
         const avgHours = Math.floor(avgMinutes / 60);
-        const avgRemainingMinutes = Math.round(avgMinutes % 60);
+        const avgRemainingMinutes = Math.floor(avgMinutes % 60);
 
         const avgTimeDisplay = avgHours > 0
             ? `${avgHours}h ${avgRemainingMinutes}m`
@@ -632,7 +632,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         topPilotsContainer.innerHTML = topPilots.map((pilot, index) => {
             const totalHours = Math.floor(pilot.totalTime / 60);
-            const totalMinutes = pilot.totalTime % 60;
+            const totalMinutes = Math.floor(pilot.totalTime % 60);
             const timeDisplay = totalHours > 0
                 ? `${totalHours}h ${totalMinutes}m`
                 : `${totalMinutes}m`;
@@ -732,13 +732,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 const seconds = parseInt(parts[1], 10);
 
                 if (!isNaN(minutes)) {
-                    return minutes + Math.round(seconds / 60);
+                    return minutes + (seconds / 60);
                 }
             }
 
             const decimalValue = parseFloat(timeString);
             if (!isNaN(decimalValue)) {
-                return Math.round(decimalValue);
+                return decimalValue;
             }
 
             return 0;
@@ -758,14 +758,27 @@ document.addEventListener('DOMContentLoaded', function() {
                 const seconds = parseInt(parts[1], 10);
 
                 if (!isNaN(totalMinutes)) {
-                    const hours = Math.floor(totalMinutes / 60);
-                    const minutes = totalMinutes % 60;
+                    const totalExactMinutes = totalMinutes + (seconds / 60);
+                    const hours = Math.floor(totalExactMinutes / 60);
+                    const minutes = Math.floor(totalExactMinutes % 60);
 
                     if (hours > 0) {
                         return `${hours}h ${minutes}m`;
                     } else {
                         return `${minutes}m`;
                     }
+                }
+            }
+
+            const decimalValue = parseFloat(timeString);
+            if (!isNaN(decimalValue)) {
+                const hours = Math.floor(decimalValue / 60);
+                const minutes = Math.floor(decimalValue % 60);
+
+                if (hours > 0) {
+                    return `${hours}h ${minutes}m`;
+                } else {
+                    return `${minutes}m`;
                 }
             }
 

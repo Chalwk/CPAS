@@ -50,35 +50,37 @@
             <div class="controls-left">
                 <div class="search-box">
                     <i class="fas fa-search"></i>
-                    <input id="searchInput" placeholder="Search flights, pilots, or airports..." type="text">
+                    <label for="searchInput"></label><input id="searchInput"
+                                                            placeholder="Search flights, pilots, or airports..."
+                                                            type="text">
                 </div>
                 <div class="filter-group">
-                    <select class="filter-select" id="statusFilter">
-                        <option value="all">All Status</option>
-                        <option value="completed">Completed</option>
-                        <option value="in-progress">In Progress</option>
-                        <option value="scheduled">Scheduled</option>
-                    </select>
-                    <select class="filter-select" id="aircraftFilter">
-                        <option value="all">All Aircraft</option>
-                        <option value="P28A">Piper Archer (P28A)</option>
-                        <option value="R44">Robinson R44</option>
-                        <option value="R66">Robinson R66</option>
-                        <option value="H125">Airbus H125</option>
-                        <option value="H145">Airbus H145</option>
-                    </select>
-                    <select class="filter-select" id="missionFilter">
-                        <option value="all">All Types</option>
-                        <option value="SimBrief">Normal Flights</option>
-                        <option value="MissionReport">Missions</option>
-                        <option value="SAR">Search & Rescue</option>
-                        <option value="MEDEVAC">Medical Evac</option>
-                        <option value="PATIENT">Patient Transfer</option>
-                        <option value="TOUR_GLACIER">Glacier Tours</option>
-                        <option value="TOUR_SIGHTSEEING">Sightseeing</option>
-                        <option value="TRAINING">Training</option>
-                        <option value="FIRE">Firefighting</option>
-                    </select>
+                    <label for="statusFilter"></label><select class="filter-select" id="statusFilter">
+                    <option value="all">All Status</option>
+                    <option value="completed">Completed</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="scheduled">Scheduled</option>
+                </select>
+                    <label for="aircraftFilter"></label><select class="filter-select" id="aircraftFilter">
+                    <option value="all">All Aircraft</option>
+                    <option value="P28A">Piper Archer (P28A)</option>
+                    <option value="R44">Robinson R44</option>
+                    <option value="R66">Robinson R66</option>
+                    <option value="H125">Airbus H125</option>
+                    <option value="H145">Airbus H145</option>
+                </select>
+                    <label for="missionFilter"></label><select class="filter-select" id="missionFilter">
+                    <option value="all">All Types</option>
+                    <option value="SimBrief">Normal Flights</option>
+                    <option value="MissionReport">Missions</option>
+                    <option value="SAR">Search & Rescue</option>
+                    <option value="MEDEVAC">Medical Evac</option>
+                    <option value="PATIENT">Patient Transfer</option>
+                    <option value="TOUR_GLACIER">Glacier Tours</option>
+                    <option value="TOUR_SIGHTSEEING">Sightseeing</option>
+                    <option value="TRAINING">Training</option>
+                    <option value="FIRE">Firefighting</option>
+                </select>
                 </div>
             </div>
             <div class="controls-right">
