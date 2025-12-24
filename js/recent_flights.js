@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
         refreshDataBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Refreshing...';
 
         try {
-            const response = await fetch('../data/flights.json?t=' + Date.now()); // Cache busting
+            const response = await fetch('../data/flights.json?t=' + Date.now());
             if (!response.ok) throw new Error('Failed to load flight data');
 
             const data = await response.json();
@@ -320,7 +320,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="route-details">${routeDisplay}</div>
                     </div>
                 </td>
-                <td>${flight.flightTime}</td>
+                <td>${formatFlightTimeDisplay(flight.flightTime)}</td>
                 <td>
                     <span class="status-badge status-${flight.status}">
                         ${formatStatus(flight.status)}
@@ -387,8 +387,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('detailAircraftReg').textContent = flight.aircraftReg;
         document.getElementById('detailAircraftIcao').textContent = flight.aircraftIcao;
 
-        document.getElementById('detailFlightTime').textContent = flight.flightTime;
-        document.getElementById('detailBlockTime').textContent = flight.blockTime;
+        document.getElementById('detailFlightTime').textContent = formatFlightTimeDisplay(flight.flightTime);
+        document.getElementById('detailBlockTime').textContent = formatFlightTimeDisplay(flight.blockTime);
         document.getElementById('detailFuelBurn').textContent = `${flight.fuelBurn} kg`;
         document.getElementById('detailZFW').textContent = `${flight.zfw} kg`;
         document.getElementById('detailTOW').textContent = `${flight.tow} kg`;
@@ -579,15 +579,22 @@ document.addEventListener('DOMContentLoaded', function() {
         const totalHours = Math.floor(totalMinutes / 60);
         const remainingMinutes = totalMinutes % 60;
 
-        document.getElementById('totalHours').textContent = `${totalHours}:${remainingMinutes.toString().padStart(2, '0')}`;
-        document.getElementById('totalFuel').textContent = totalFuel.toFixed(1);
+        const totalTimeDisplay = totalHours > 0
+            ? `${totalHours}h ${remainingMinutes}m`
+            : `${remainingMinutes}m`;
+
+        document.getElementById('totalHours').textContent = totalTimeDisplay;
         document.getElementById('statsTotalFuel').textContent = totalFuel.toFixed(1);
 
         const avgMinutes = filteredData.length > 0 ? totalMinutes / filteredData.length : 0;
         const avgHours = Math.floor(avgMinutes / 60);
         const avgRemainingMinutes = Math.round(avgMinutes % 60);
-        document.getElementById('statsAvgFlightTime').textContent =
-        `${avgHours}:${avgRemainingMinutes.toString().padStart(2, '0')}`;
+
+        const avgTimeDisplay = avgHours > 0
+            ? `${avgHours}h ${avgRemainingMinutes}m`
+            : `${avgRemainingMinutes}m`;
+
+        document.getElementById('statsAvgFlightTime').textContent = avgTimeDisplay;
 
         const uniquePilots = new Set(filteredData.map(f => f.pilot));
         document.getElementById('statsActivePilots').textContent = uniquePilots.size;
@@ -623,17 +630,24 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        topPilotsContainer.innerHTML = topPilots.map((pilot, index) => `
-        <div class="pilot-rank">
-            <div class="rank-number">${index + 1}</div>
-            <div class="pilot-rank-info">
-                <div class="pilot-rank-name">${pilot.name}</div>
-                <div class="pilot-rank-flights">
-                    ${pilot.flights} flights • ${Math.floor(pilot.totalTime / 60)}:${(pilot.totalTime % 60).toString().padStart(2, '0')} hours
+        topPilotsContainer.innerHTML = topPilots.map((pilot, index) => {
+            const totalHours = Math.floor(pilot.totalTime / 60);
+            const totalMinutes = pilot.totalTime % 60;
+            const timeDisplay = totalHours > 0
+                ? `${totalHours}h ${totalMinutes}m`
+                : `${totalMinutes}m`;
+
+            return `
+            <div class="pilot-rank">
+                <div class="rank-number">${index + 1}</div>
+                <div class="pilot-rank-info">
+                    <div class="pilot-rank-name">${pilot.name}</div>
+                    <div class="pilot-rank-flights">
+                        ${pilot.flights} flights • ${timeDisplay}
+                    </div>
                 </div>
             </div>
-        </div>
-    `).join('');
+        `}).join('');
     }
 
     function updatePopularRoutes() {
@@ -669,7 +683,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <i class="fas fa-arrow-right" style="margin: 0 10px; color: #9ca3af;"></i>
                     <span class="airport-code">${route.arrival}</span>
                 </div>
-                <div class="route-frequency">
+                    <div class="route-frequency">
                     <i class="fas fa-plane"></i>
                     ${route.count}
                 </div>
@@ -710,11 +724,56 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function timeToMinutes(timeString) {
         if (!timeString || timeString === 'N/A') return 0;
-        const parts = timeString.split(':').map(Number);
-        if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])) {
-            return parts[0] * 60 + parts[1];
+
+        try {
+            const parts = timeString.split(':');
+            if (parts.length === 2) {
+                const minutes = parseInt(parts[0], 10);
+                const seconds = parseInt(parts[1], 10);
+
+                if (!isNaN(minutes)) {
+                    return minutes + Math.round(seconds / 60);
+                }
+            }
+
+            const decimalValue = parseFloat(timeString);
+            if (!isNaN(decimalValue)) {
+                return Math.round(decimalValue);
+            }
+
+            return 0;
+        } catch (e) {
+            console.error('Error parsing time:', timeString, e);
+            return 0;
         }
-        return 0;
+    }
+
+    function formatFlightTimeDisplay(timeString) {
+        if (!timeString || timeString === 'N/A') return 'N/A';
+
+        try {
+            const parts = timeString.split(':');
+            if (parts.length === 2) {
+                const totalMinutes = parseInt(parts[0], 10);
+                const seconds = parseInt(parts[1], 10);
+
+                if (!isNaN(totalMinutes)) {
+                    const hours = Math.floor(totalMinutes / 60);
+                    const minutes = totalMinutes % 60;
+
+                    if (hours > 0) {
+                        return `${hours}h ${minutes}m`;
+                    } else {
+                        return `${minutes}m`;
+                    }
+                }
+            }
+
+            return timeString;
+        } catch (e) {
+            console.error('Error formatting flight time:', timeString, e);
+            return timeString;
+        }
     }
 
     updatePagination();
