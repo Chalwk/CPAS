@@ -359,10 +359,6 @@
     flex-shrink: 0;
 }
 
-.routes-note {
-    margin-top: 40px;
-}
-
 .note-box {
     background: linear-gradient(to right, #f8fafc, #e6f0ff);
     border-left: 4px solid #2d6bc9;
