@@ -386,6 +386,10 @@
     font-size: 0.95rem;
 }
 
+.section-subtitle {
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .routes-section {
         padding: 60px 0;

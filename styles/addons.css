@@ -178,6 +178,10 @@
     margin-bottom: 10px;
 }
 
+.section-subtitle {
+    text-align: center;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
