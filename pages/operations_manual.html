@@ -72,124 +72,250 @@
             </div>
         </div>
 
-        <div class="manual-section" id="preflight">
-            <h3><i class="fas fa-clipboard-list"></i> Pre-Flight Procedures</h3>
+        <div class="manual-section" id="discord-commands">
+            <h3><i class="fab fa-discord"></i> Discord Bot Commands</h3>
+            <p class="section-subtitle">Flight reporting and management through our Discord bot</p>
 
-            <div class="procedure-card">
-                <h4>Basic Pre-Flight (All Flights)</h4>
-                <ol>
-                    <li><strong>Choose Aircraft:</strong> Select appropriate aircraft for route and rank</li>
-                    <li><strong>Check Weather:</strong> Use in-game weather or add-ons. Don't fly in impossible
-                        conditions
-                    </li>
-                    <li><strong>Flight Plan:</strong> Know your route, alternates, and fuel requirements</li>
-                    <li><strong>Checklists:</strong> Complete the appropriate checklist for your aircraft</li>
-                    <li><strong>Briefing:</strong> For complex flights, consider a quick self-briefing</li>
-                </ol>
+            <div class="commands-grid">
+                <div class="command-card">
+                    <div class="command-header">
+                        <h4><i class="fas fa-file-alt"></i> /pirep</h4>
+                        <span class="command-badge primary">Standard Flights</span>
+                    </div>
+                    <p class="command-description">Submit a PIREP using your latest SimBrief flight plan for normal,
+                        scheduled flights.</p>
+                    <div class="command-usage">
+                        <strong>Usage:</strong>
+                        <p>/pirep [Pilot ID] [status (optional)]</p>
+                    </div>
+                    <div class="command-params">
+                        <strong>Parameters:</strong>
+                        <ul>
+                            <li><code>pilot id</code>: Your SimBrief numeric Pilot/User ID (required)</li>
+                            <li><code>status</code>: Flight status (completed, in-progress, scheduled, cancelled,
+                                diverted)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="command-notes">
+                        <strong>Notes:</strong>
+                        <ul>
+                            <li>Automatically fetches your latest SimBrief flight plan</li>
+                            <li>For standard passenger/cargo charter flights</li>
+                            <li>Posts to <strong>#pirep-submission</strong> channel</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-header">
+                        <h4><i class="fas fa-helicopter"></i> /missionreport</h4>
+                        <span class="command-badge danger">Special Operations</span>
+                    </div>
+                    <p class="command-description">Submit special mission reports for non-standard operations not
+                        supported by SimBrief.</p>
+                    <div class="command-usage">
+                        <strong>Usage:</strong>
+                        <p>/missionreport [type] [aircraft] [callsign] ...</p>
+                    </div>
+                    <div class="command-params">
+                        <strong>Mission Types:</strong>
+                        <ul>
+                            <li>Search & Rescue (SAR)</li>
+                            <li>Medical Evacuation (MEDEVAC)</li>
+                            <li>Patient Transfer</li>
+                            <li>Firefighting Support</li>
+                            <li>Aerial Tours</li>
+                            <li>Law Enforcement</li>
+                            <li>VIP Transport</li>
+                            <li>Training Flights</li>
+                        </ul>
+                    </div>
+                    <div class="command-notes">
+                        <strong>Notes:</strong>
+                        <ul>
+                            <li>For HEMS, SAR, tours, training, and other non-scheduled ops</li>
+                            <li>Custom flight reporting without SimBrief requirement</li>
+                            <li>Supports detailed mission parameters</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-header">
+                        <h4><i class="fas fa-sync-alt"></i> /updateflight</h4>
+                        <span class="command-badge warning">Flight Management</span>
+                    </div>
+                    <p class="command-description">Update the status of an existing flight record in our database.</p>
+                    <div class="command-usage">
+                        <strong>Usage:</strong>
+                        <p>/updateflight [flight ID] [new status]</p>
+                    </div>
+                    <div class="command-params">
+                        <strong>Parameters:</strong>
+                        <ul>
+                            <li><code>flight id</code>: Flight ID (e.g., CPX1234)</li>
+                            <li><code>status</code>: New status (completed, in-progress, scheduled, cancelled, diverted)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="command-notes">
+                        <strong>Notes:</strong>
+                        <ul>
+                            <li>Update flight status as your operation progresses</li>
+                            <li>Only update your own flights (admins can update any)</li>
+                            <li>Automatic notifications in <strong>#pirep-submission</strong> channel</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-header">
+                        <h4><i class="fas fa-question-circle"></i> /help</h4>
+                        <span class="command-badge info">General</span>
+                    </div>
+                    <p class="command-description">Show help information about all available bot commands and
+                        features.</p>
+                    <div class="command-usage">
+                        <strong>Usage:</strong>
+                        <p>/help</p>
+                    </div>
+                    <div class="command-params">
+                        <strong>Features:</strong>
+                        <ul>
+                            <li>Lists all available commands</li>
+                            <li>Provides usage information</li>
+                            <li>Links to documentation</li>
+                        </ul>
+                    </div>
+                    <div class="command-notes">
+                        <strong>Notes:</strong>
+                        <ul>
+                            <li>Quick reference for all bot functions</li>
+                            <li>Includes links to website and GitHub</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <div class="procedure-card">
-                <h4>Charter-Specific Preparation</h4>
-                <ul>
-                    <li><strong>Passenger Count:</strong> Don't exceed aircraft capacity</li>
-                    <li><strong>Route Knowledge:</strong> Familiarize with terrain, airspace, challenges</li>
-                    <li><strong>Alternates:</strong> Always have a backup plan (weather, mechanical)</li>
-                    <li><strong>Time Planning:</strong> Allow buffer for delays</li>
-                </ul>
+            <div class="manual-section" id="preflight">
+                <h3><i class="fas fa-clipboard-list"></i> Pre-Flight Procedures</h3>
+
+                <div class="procedure-card">
+                    <h4>Basic Pre-Flight (All Flights)</h4>
+                    <ol>
+                        <li><strong>Choose Aircraft:</strong> Select appropriate aircraft for route and rank</li>
+                        <li><strong>Check Weather:</strong> Use in-game weather or add-ons. Don't fly in impossible
+                            conditions
+                        </li>
+                        <li><strong>Flight Plan:</strong> Know your route, alternates, and fuel requirements</li>
+                        <li><strong>Checklists:</strong> Complete the appropriate checklist for your aircraft</li>
+                        <li><strong>Briefing:</strong> For complex flights, consider a quick self-briefing</li>
+                    </ol>
+                </div>
+
+                <div class="procedure-card">
+                    <h4>Charter-Specific Preparation</h4>
+                    <ul>
+                        <li><strong>Passenger Count:</strong> Don't exceed aircraft capacity</li>
+                        <li><strong>Route Knowledge:</strong> Familiarize with terrain, airspace, challenges</li>
+                        <li><strong>Alternates:</strong> Always have a backup plan (weather, mechanical)</li>
+                        <li><strong>Time Planning:</strong> Allow buffer for delays</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="manual-section" id="inflight">
+                <h3><i class="fas fa-plane"></i> In-Flight Operations</h3>
+
+                <div class="inflight-rules">
+                    <div class="rule-box">
+                        <h5><i class="fas fa-comment-alt"></i> Communication</h5>
+                        <ul>
+                            <li>Use appropriate frequencies (<a href="./routes.html">see routes</a>)</li>
+                            <li>No ATC? Use Common Traffic Advisory Frequency (CTAF) concepts</li>
+                            <li>Position reports on longer flights (self-announce)</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-box">
+                        <h5><i class="fas fa-mountain"></i> Terrain & Weather</h5>
+                        <ul>
+                            <li>Maintain safe altitude above terrain</li>
+                            <li>Turn back if weather deteriorates</li>
+                            <li>Mountain flying: know valley directions and escape routes</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-box">
+                        <h5><i class="fas fa-gas-pump"></i> Fuel Management</h5>
+                        <ul>
+                            <li>Land with at least 45 minutes fuel reserve</li>
+                            <li>Monitor fuel consumption in mountains (higher burn)</li>
+                            <li>Plan refueling stops on long routes</li>
+                        </ul>
+                    </div>
+
+                    <div class="rule-box">
+                        <h5><i class="fas fa-user-friends"></i> Passenger Comfort</h5>
+                        <ul>
+                            <li>Smooth takeoffs and landings</li>
+                            <li>Gentle turns and altitude changes</li>
+                            <li>Point out scenery (in your imagination!)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="manual-section" id="aircraft">
+                <h3><i class="fas fa-cogs"></i> Aircraft Use Policy</h3>
+
+                <div class="aircraft-policy">
+                    <h4>Aircraft Assignment by Rank</h4>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Aircraft</th>
+                            <th>Minimum Rank</th>
+                            <th>Notes</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Piper Tomahawk/Warrior</td>
+                            <td>Pilot Under Training</td>
+                            <td>Training and local flights</td>
+                        </tr>
+                        <tr>
+                            <td>R44, Piper Archer</td>
+                            <td>Charter Pilot</td>
+                            <td>Basic charter operations</td>
+                        </tr>
+                        <tr>
+                            <td>R66, Piper Arrow, H125</td>
+                            <td>Senior Charter Pilot</td>
+                            <td>Complex charters, mountain</td>
+                        </tr>
+                        <tr>
+                            <td>H145</td>
+                            <td>Lead Pilot</td>
+                            <td>Advanced/Special operations</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="policy-note">
+                    <h5><i class="fas fa-exclamation-triangle"></i> Important Notes</h5>
+                    <ul>
+                        <li>Fly aircraft you're comfortable with - not just highest available</li>
+                        <li>Complete aircraft-specific training before first flight</li>
+                        <li>Report any persistent aircraft issues in Discord</li>
+                        <li>Custom liveries welcome but keep professional appearance</li>
+                    </ul>
+                </div>
             </div>
         </div>
-
-        <div class="manual-section" id="inflight">
-            <h3><i class="fas fa-plane"></i> In-Flight Operations</h3>
-
-            <div class="inflight-rules">
-                <div class="rule-box">
-                    <h5><i class="fas fa-comment-alt"></i> Communication</h5>
-                    <ul>
-                        <li>Use appropriate frequencies (<a href="./routes.html">see routes</a>)</li>
-                        <li>No ATC? Use Common Traffic Advisory Frequency (CTAF) concepts</li>
-                        <li>Position reports on longer flights (self-announce)</li>
-                    </ul>
-                </div>
-
-                <div class="rule-box">
-                    <h5><i class="fas fa-mountain"></i> Terrain & Weather</h5>
-                    <ul>
-                        <li>Maintain safe altitude above terrain</li>
-                        <li>Turn back if weather deteriorates</li>
-                        <li>Mountain flying: know valley directions and escape routes</li>
-                    </ul>
-                </div>
-
-                <div class="rule-box">
-                    <h5><i class="fas fa-gas-pump"></i> Fuel Management</h5>
-                    <ul>
-                        <li>Land with at least 45 minutes fuel reserve</li>
-                        <li>Monitor fuel consumption in mountains (higher burn)</li>
-                        <li>Plan refueling stops on long routes</li>
-                    </ul>
-                </div>
-
-                <div class="rule-box">
-                    <h5><i class="fas fa-user-friends"></i> Passenger Comfort</h5>
-                    <ul>
-                        <li>Smooth takeoffs and landings</li>
-                        <li>Gentle turns and altitude changes</li>
-                        <li>Point out scenery (in your imagination!)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="manual-section" id="aircraft">
-            <h3><i class="fas fa-cogs"></i> Aircraft Use Policy</h3>
-
-            <div class="aircraft-policy">
-                <h4>Aircraft Assignment by Rank</h4>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Aircraft</th>
-                        <th>Minimum Rank</th>
-                        <th>Notes</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Piper Tomahawk/Warrior</td>
-                        <td>Pilot Under Training</td>
-                        <td>Training and local flights</td>
-                    </tr>
-                    <tr>
-                        <td>R44, Piper Archer</td>
-                        <td>Charter Pilot</td>
-                        <td>Basic charter operations</td>
-                    </tr>
-                    <tr>
-                        <td>R66, Piper Arrow, H125</td>
-                        <td>Senior Charter Pilot</td>
-                        <td>Complex charters, mountain</td>
-                    </tr>
-                    <tr>
-                        <td>H145</td>
-                        <td>Lead Pilot</td>
-                        <td>Advanced/Special operations</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="policy-note">
-                <h5><i class="fas fa-exclamation-triangle"></i> Important Notes</h5>
-                <ul>
-                    <li>Fly aircraft you're comfortable with - not just highest available</li>
-                    <li>Complete aircraft-specific training before first flight</li>
-                    <li>Report any persistent aircraft issues in Discord</li>
-                    <li>Custom liveries welcome but keep professional appearance</li>
-                </ul>
-            </div>
-        </div>
-    </div>
 </section>
 
 <footer class="footer-copyright"><p></p></footer>
