@@ -69,7 +69,7 @@ public class SimBriefAPI {
             flightPlan.put("callsign", getElementText(doc, "callsign"));
 
             flightPlan.put("aircraft_icao", getElementText(doc, "icaocode"));
-            flightPlan.put("aircraft_name", getElementText(doc, "name"));
+            flightPlan.put("aircraft_name", getElementText(doc, "name")); // todo: Fix this (REF to aircraft/name, not origin/name
             flightPlan.put("aircraft_reg", getElementText(doc, "reg"));
 
             flightPlan.put("origin", getElementTextFromParent(doc, "origin"));
