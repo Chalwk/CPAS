@@ -2,7 +2,7 @@
 
 ### Airframe Info:
 
-* Base TypeL C172
+* Base Type: C172
 * ICAO Code: PA38
 * Civil Registration: ZK-TMA
 * Fin Number: Default

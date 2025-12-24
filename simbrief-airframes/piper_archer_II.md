@@ -2,7 +2,7 @@
 
 ### Airframe Info:
 
-* Base TypeL C172
+* Base Type: C172
 * ICAO Code: P28A
 * Civil Registration: ZK-ARC
 * Fin Number: Default

@@ -2,7 +2,7 @@
 
 ### Airframe Info:
 
-* Base TypeL C172
+* Base Type: C172
 * ICAO Code: P28U
 * Civil Registration: ZK-AT4
 * Fin Number: Default
@@ -16,7 +16,7 @@
 * Min Runway: 2100 FT
 * Aircraft Name: PIPER ARROW IV (T)
 * Engine Type: TIO-360-C1C6
-* Comments: PA-28R-201T TURBO / Just Flight MSF2020 / Lycoming Engine
+* Comments: PA-28R-201T / Just Flight MSF2020 / Lycoming Engine
 
 ---
 
