@@ -3,7 +3,7 @@
 ### Airframe Info:
 
 * Base Type: C172
-* ICAO Code: P28S
+* ICAO Code: P28T
 * Civil Registration: ZK-ART
 * Fin Number: Default
 * SELCAL Code: NONE
@@ -14,7 +14,7 @@
 * Plan Units: Default
 * Max Diversion: 150 NM
 * Min Runway: 2100 FT
-* Aircraft Name: PIPER ARROW III (T)
+* Aircraft Name: PIPER ARROW III
 * Engine Type: TIO-360-C1A6D
 * Comments: PA-28R-201T / Just Flight MSF2020 / Lycoming Engine
 

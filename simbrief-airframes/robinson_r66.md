@@ -14,9 +14,9 @@
 * Plan Units: Default
 * Max Diversion: 80 NM
 * Min Runway: 100 FT (Helipad)
-* Aircraft Name: ROBINSON R66 TURBINE
+* Aircraft Name: ROBINSON R66
 * Engine Type: Rolls-Royce RR300
-* Comments: R66 Turbine / CowanSim Payware / CPAS Extended Range Ops
+* Comments: CowanSim Payware / CPAS Extended Range Ops
 
 ---
 

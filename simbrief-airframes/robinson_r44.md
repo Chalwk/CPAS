@@ -4,7 +4,7 @@
 
 * Base Type: C172
 * ICAO Code: R44
-* Civil Registration: ZK-HEL
+* Civil Registration: ZK-R44
 * Fin Number: Default
 * SELCAL Code: NONE
 * Mode-S Code: ZZZZZZ

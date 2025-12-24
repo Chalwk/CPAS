@@ -4,7 +4,7 @@
 
 * Base Type: C172
 * ICAO Code: P28A
-* Civil Registration: ZK-LJF
+* Civil Registration: ZK‑WII
 * Fin Number: Default
 * SELCAL Code: NONE
 * Mode-S Code: ZZZZZZ
