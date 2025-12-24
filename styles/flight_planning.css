@@ -354,32 +354,6 @@
     margin-bottom: 10px;
 }
 
-.permissions-section {
-    margin: 40px 0;
-}
-
-.permissions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin: 20px 0;
-}
-
-.permission-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    background: #f8fafc;
-    border-radius: 6px;
-    font-size: 0.9rem;
-}
-
-.permission-item i {
-    color: #2d6bc9;
-    font-size: 1.2rem;
-}
-
 .role-badge {
     display: inline-flex;
     align-items: center;
@@ -435,38 +409,6 @@
     color: #1e40af;
     background: transparent;
     padding: 0;
-}
-
-.error-box {
-    background: #fef2f2;
-    border-left: 5px solid #dc2626;
-    padding: 25px;
-    border-radius: 8px;
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    margin: 20px 0;
-}
-
-.error-box i {
-    font-size: 1.8rem;
-    color: #dc2626;
-    margin-top: 5px;
-}
-
-.error-box h4 {
-    margin-top: 0;
-    color: #dc2626;
-}
-
-.error-box ul {
-    margin: 15px 0;
-    padding-left: 20px;
-}
-
-.error-box li {
-    margin-bottom: 8px;
-    color: #7f1d1d;
 }
 
 .debug-box {

@@ -69,11 +69,14 @@
                         <ul>
                             <li><strong>Departure Airport:</strong> Your starting airport (e.g., NZCH)</li>
                             <li><strong>Arrival Airport:</strong> Your destination airport</li>
-                            <li><strong>Aircraft:</strong> Select from our fleet or use a similar type</li>
+                            <li>
+                                <strong>Aircraft:</strong>
+                                Select from our fleet
+                                (<a href="fleet.html">See our SimBrief Airframes on the Fleet Page</a>)
+                            </li>
                             <li><strong>Route:</strong> Enter your planned route or use "Direct"</li>
                             <li><strong>Passengers:</strong> Set according to your charter mission</li>
-                            <li><strong>Weather Source:</strong> Use any source you prefer</li>
-                            <li><strong>Options:</strong> Enable "Generate PDF" for full OFP access</li>
+                            <li><strong>Options:</strong> Click "View PDF" for full OFP access</li>
                         </ul>
                         <div class="airline-code-note">
                             <h5><i class="fas fa-plane-circle-check"></i> CPAS Airline Code:</h5>
@@ -91,10 +94,11 @@
                         <h4>Find Your SimBrief Pilot ID</h4>
                         <p>You'll need your numeric SimBrief Pilot ID (not your username):</p>
                         <div class="code-block">
-                            <code>1. Log into SimBrief and click your username in the top right</code><br>
-                            <code>2. Select "Account Settings" from the dropdown</code><br>
-                            <code>3. Look for "Pilot ID" in the Account Information section</code><br>
-                            <code>4. It's a numeric value like: 123456</code>
+                            <code>1. Log in to SimBrief and open <strong>Account Settings</strong>.</code><br>
+                            <code>2. In the <strong>Your SimBrief Data</strong> section, locate your <strong>Pilot
+                                ID</strong>.</code><br>
+                            <code>3. This is a numeric value (e.g., <code>123456</code>). You'll need it when
+                                submitting your flight on Discord.</code>
                         </div>
                     </div>
                 </div>
@@ -304,43 +308,6 @@
             </div>
         </div>
 
-        <div class="permissions-section">
-            <h3><i class="fas fa-user-shield"></i> Permission Requirements</h3>
-            <p>The <code>/pirep</code> command requires one of the following CPAS roles:</p>
-
-            <div class="permissions-grid">
-                <div class="permission-item">
-                    <i class="fas fa-user-graduate"></i>
-                    <span>Pilot Under Training</span>
-                </div>
-                <div class="permission-item">
-                    <i class="fas fa-plane"></i>
-                    <span>Charter Pilot</span>
-                </div>
-                <div class="permission-item">
-                    <i class="fas fa-plane-departure"></i>
-                    <span>Senior Charter Pilot</span>
-                </div>
-                <div class="permission-item">
-                    <i class="fas fa-user-tie"></i>
-                    <span>Lead Pilot</span>
-                </div>
-                <div class="permission-item">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                    <span>Instructor</span>
-                </div>
-                <div class="permission-item">
-                    <i class="fas fa-crown"></i>
-                    <span>Administrators</span>
-                </div>
-            </div>
-
-            <p style="font-size: 0.9rem; color: #6b7280; margin-top: 15px;">
-                <i class="fas fa-info-circle"></i> If you don't have permission, you'll receive an error message and the
-                command won't process.
-            </p>
-        </div>
-
         <div class="requirements-section">
             <h3><i class="fas fa-clipboard-check"></i> Required Information</h3>
             <div class="requirements-grid">
@@ -415,33 +382,7 @@
             </div>
             <div class="screenshot">
                 <img alt="MSFS Screenshot Example" src="../images/msfs_screenshot_example.png">
-                <div class="screenshot-caption">Example of a flight screenshot showing approach to NZQN</div>
-            </div>
-        </div>
-
-        <div class="error-box">
-            <i class="fas fa-exclamation-triangle"></i>
-            <div>
-                <h4>Common Issues & Solutions</h4>
-                <ul>
-                    <li><strong>Permission Denied:</strong> Ensure you have a CPAS pilot role assigned in Discord</li>
-                    <li><strong>Invalid Pilot ID:</strong> Check your SimBrief Account Settings for your numeric Pilot
-                        ID
-                    </li>
-                    <li><strong>No Flight Plan Found:</strong> The bot only fetches your <em>latest</em> flight plan -
-                        create one first!
-                    </li>
-                    <li><strong>XML Parsing Error:</strong> Sometimes occurs with incomplete or corrupted flight plans
-                    </li>
-                    <li><strong>Rate Limiting:</strong> SimBrief API has rate limits - wait a few minutes before
-                        retrying
-                    </li>
-                    <li><strong>Incomplete Fields:</strong> Ensure all required fields are filled in your SimBrief
-                        flight plan
-                    </li>
-                    <li><strong>Screenshot Issues:</strong> Check MSFS settings if screenshots aren't saving correctly
-                    </li>
-                </ul>
+                <div class="screenshot-caption">Example of a flight screenshot showing approach to NZQN (coming soon!)</div>
             </div>
         </div>
     </div>
