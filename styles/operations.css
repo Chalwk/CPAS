@@ -121,6 +121,11 @@ tbody tr:hover {
     border-left: 5px solid #f59e0b;
 }
 
+.policy-note ul {
+    padding-left: 5px;
+    margin-top: 10px;
+}
+
 .principle {
     background: white;
     padding: 25px;
