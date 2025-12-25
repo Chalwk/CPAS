@@ -1,7 +1,6 @@
 # CPAS Pilot Rank Structure
 
-Our virtual air charter operates with a structured rank system designed for progressive skill development and
-operational responsibility.
+We operate with a structured rank system designed for progressive skill development and operational responsibility.
 
 ## **Operational Ranks**
 
