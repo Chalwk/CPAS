@@ -16,7 +16,7 @@
 * Min Runway: 1800 FT
 * Aircraft Name: PIPER TOMAHAWK
 * Engine Type: Lycoming O-235-L2C
-* Comments: PA-38-112 / SimBrief won't let me set it lower than 120 (112 IRL) / Just Flight MSF2020
+* Comments: PA-38-112 / Just Flight MSF2020
 
 ---
 
