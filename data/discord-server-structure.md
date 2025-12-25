@@ -10,56 +10,32 @@ CPAS - COASTAL PEAKS AIR SERVICE
 │   ├──〔🛫〕arrivals-departures
 │   └──〔👋〕introductions
 │
-├── 📚 KNOWLEDGE BASE
-│   └───〔🗂️〕guides (forum)
-│       ├── Operations Manual
-│       ├── Training Structure
-│       ├── Fleet Guide
-│       └── Routes Guide
-│
 ├── ✈️ FLIGHT OPERATIONS
-│   ├──〔📅〕flight-planning
 │   ├──〔📊〕pirep-submission
-│   ├──〔🔄〕recent-flights
-│   ├──〔🛠️〕route-development
-│   └──〔💬〕operations-chat
+│   ├──〔📅〕flight-planning
+│   └──〔🛠️〕technical-help
 │
-├── 🎓 TRAINING & DEVELOPMENT
-│   ├──〔📚〕training-questions
-│   ├──〔✅〕checklist-help
-│   ├──〔🔄〕check-ride-requests
-│   ├──〔💡〕tips-techniques
-│   └──〔🎯〕training-progress
-│
-├── 🛠️ FLEET & ADD-ONS
+├── 🛩️ FLEET & TRAINING
 │   ├──〔🛩️〕fleet-discussion
-│   ├──〔🎨〕livery-sharing
-│   ├──〔🔧〕add-on-support
-│   ├──〔🛠️〕technical-help
-│   └──〔💾〕msfs-setup
+│   ├──〔📚〕training-questions
+│   └──〔💡〕tips-techniques
 │
 ├── 📸 MEDIA & SHARING
-│   ├──〔📸〕screenshots
+│   ├──〔🗺️〕screenshots
 │   ├──〔🎥〕video-clips
-│   ├──〔🗺️〕route-screenshots
-│   └──〔🏞️〕scenery-shots
+│   └──〔🎨〕livery-sharing
 │
 ├── 💬 COMMUNITY
 │   ├──〔💬〕general-chat
-│   ├──〔🗣️〕aviation-talk
-│   ├──〔🎮〕msfs-discussion
-│   └──〔🤝〕pilot-networking
+│   └──〔🗣️〕aviation-talk
 │
 ├── 🎤 VOICE CHANNELS
-│   ├──〔🔊〕General Chat
-│   ├──〔🎤〕Flight Briefing
-│   ├──〔🎤〕Training Sessions
-│   ├──〔🎤〕Group Flights
-│   └──〔🎤〕ATC Practice
+│   ├──〔🔊〕General Lounge
+│   ├──〔✈️〕Flight Operations
+│   └──〔🎓〕Training Sessions
 │
-└── ⚙️ ADMINISTRATION
-    ├──〔👑〕staff-chat
-    ├──〔📋〕applications-review
-    ├──〔📊〕activity-reports
-    └──〔🎤〕Admin
+├── ⚙️ ADMINISTRATION (Hidden)
+│   ├──〔👑〕staff-chat
+│   ├──〔📋〕applications-review
+│   └──〔🎤〕Admin
 ```
