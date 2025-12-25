@@ -3,7 +3,7 @@ Copyright (c) 2025. Jericho Crosby (Chalwk)
 ```
 CPAS - COASTAL PEAKS AIR SERVICE
 │
-├── 📢 INFORMATION & WELCOME
+├── 📢 INFO
 │   ├──〔ℹ️〕about
 │   ├──〔📜〕community-rules
 │   ├──〔🏆〕rank-structure
