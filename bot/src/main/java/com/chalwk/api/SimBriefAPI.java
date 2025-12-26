@@ -67,6 +67,7 @@ public class SimBriefAPI {
 
             flightPlan.put("flight_number", getElementText(doc, "icao_airline") + getElementText(doc, "flight_number"));
             flightPlan.put("callsign", getElementText(doc, "callsign"));
+            flightPlan.put("route_distance", getElementText(doc, "route_distance"));
 
             NodeList aircraftList = doc.getElementsByTagName("aircraft");
             Element aircraft = (Element) aircraftList.item(0);
@@ -84,42 +85,13 @@ public class SimBriefAPI {
             flightPlan.put("alternate", getElementTextFromParent(doc, "alternate"));
 
             String estEnroute = getElementText(doc, "est_time_enroute");
-            if (estEnroute != null && !estEnroute.isEmpty()) {
-                flightPlan.put("flight_time", formatFlightTime(Integer.parseInt(estEnroute)));
-            }
+            flightPlan.put("flight_time", formatFlightTime(Integer.parseInt(estEnroute)));
 
             String estBlock = getElementText(doc, "est_block");
-            if (estBlock != null && !estBlock.isEmpty()) {
-                flightPlan.put("block_time", formatFlightTime(Integer.parseInt(estBlock)));
-            }
-
-            flightPlan.put("departure_time", getElementText(doc, "sched_out"));
-            flightPlan.put("arrival_time", getElementText(doc, "sched_in"));
+            flightPlan.put("block_time", formatFlightTime(Integer.parseInt(estBlock)));
 
             flightPlan.put("route_text", getElementText(doc, "route"));
             flightPlan.put("cruise_alt", getElementText(doc, "initial_altitude"));
-            flightPlan.put("cruise_temp", getElementText(doc, "avg_temp_dev"));
-            flightPlan.put("wind_component", getElementText(doc, "avg_wind_comp"));
-
-            String planBurn = getElementText(doc, "enroute_burn");
-            if (planBurn != null && !planBurn.isEmpty()) {
-                flightPlan.put("fuel_burn", String.format("%.1f", Double.parseDouble(planBurn)));
-            }
-
-            String planRamp = getElementText(doc, "plan_ramp");
-            if (planRamp != null && !planRamp.isEmpty()) {
-                flightPlan.put("fuel_total", String.format("%.1f", Double.parseDouble(planRamp)));
-            }
-
-            String estZfw = getElementText(doc, "est_zfw");
-            if (estZfw != null && !estZfw.isEmpty()) {
-                flightPlan.put("zfw", String.format("%.1f", Double.parseDouble(estZfw)));
-            }
-
-            String estTow = getElementText(doc, "est_tow");
-            if (estTow != null && !estTow.isEmpty()) {
-                flightPlan.put("tow", String.format("%.1f", Double.parseDouble(estTow)));
-            }
 
             NodeList filesList = doc.getElementsByTagName("files");
             if (filesList.getLength() > 0) {

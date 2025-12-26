@@ -381,7 +381,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('detailAlternate').textContent = flight.alternate;
         document.getElementById('detailCruiseAlt').textContent = `${flight.cruiseAlt} ft`;
         document.getElementById('detailRoute').textContent = flight.route;
-        document.getElementById('detailDistance').textContent = flight.distance + (flight.distance !== 'N/A' ? ' nm' : '');
+        document.getElementById('detailDistance').textContent = flight.route_distance + (flight.route_distance !== 'N/A' ? ' nm' : '');
 
         document.getElementById('detailAircraft').textContent = flight.aircraft;
         document.getElementById('detailAircraftReg').textContent = flight.aircraftReg;
@@ -563,12 +563,10 @@ document.addEventListener('DOMContentLoaded', function() {
         filteredData.forEach(flight => {
             totalMinutes += timeToMinutes(flight.flightTime);
 
-            if (flight.distance && flight.distance !== 'N/A') {
-                let distStr = flight.distance.toString();
-                let distNum = parseFloat(distStr.replace(/[^\d.-]/g, ''));
-                if (!isNaN(distNum)) {
-                    totalDistance += distNum;
-                }
+            let distStr = flight.route_distance.toString();
+            let distNum = parseFloat(distStr.replace(/[^\d.-]/g, ''));
+            if (!isNaN(distNum)) {
+                totalDistance += distNum;
             }
         });
 

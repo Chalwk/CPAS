@@ -47,7 +47,7 @@ public class FlightDataManager {
             flight.put("blockTime", flightPlan.getOrDefault("block_time", flightPlan.getOrDefault("flight_time", "N/A")));
             flight.put("route", flightPlan.getOrDefault("route_text", "DCT"));
             flight.put("cruiseAlt", flightPlan.getOrDefault("cruise_alt", "N/A"));
-            flight.put("distance", flightPlan.getOrDefault("distance", "N/A"));
+            flight.put("route_distance", flightPlan.getOrDefault("route_distance", "N/A"));
             flight.put("status", status);
             flight.put("source", flightPlan.getOrDefault("source", "SimBrief"));
 
@@ -124,9 +124,5 @@ public class FlightDataManager {
 
     private static String generateFlightId() {
         return "CPX" + System.currentTimeMillis() % 10000;
-    }
-
-    private static String calculateDistance(Map<String, String> flightPlan) {
-        return flightPlan.getOrDefault("distance", "N/A");
     }
 }

@@ -17,7 +17,7 @@
   "blockTime" : "76:55",
   "route" : "LUNT1R AVOCA Q309 BELEE BELE1L",
   "cruiseAlt" : "3000",
-  "distance" : "N/A",
+  "route_distance" : "99",
   "status" : "completed",
   "source" : "SimBrief",
   "pax_count" : "2"
