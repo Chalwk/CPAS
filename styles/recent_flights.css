@@ -92,11 +92,6 @@
     border-color: #2d6bc9;
 }
 
-.controls-right {
-    display: flex;
-    align-items: center;
-}
-
 .stats-summary {
     display: flex;
     gap: 25px;

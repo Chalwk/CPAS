@@ -584,6 +584,7 @@ document.addEventListener('DOMContentLoaded', function() {
             : `${totalRemainingMinutes}m`;
 
         document.getElementById('totalHours').textContent = totalTimeDisplay;
+        document.getElementById('totalFuel').textContent = totalFuel.toFixed(1);
         document.getElementById('statsTotalFuel').textContent = totalFuel.toFixed(1);
 
         const avgMinutes = filteredData.length > 0 ? totalMinutes / filteredData.length : 0;
