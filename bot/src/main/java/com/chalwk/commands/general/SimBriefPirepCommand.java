@@ -6,11 +6,9 @@ import com.chalwk.api.SimBriefAPI;
 import com.chalwk.commands.CommandManager;
 import com.chalwk.config.Constants;
 import com.chalwk.data.FlightDataManager;
-import com.chalwk.utils.PermissionChecker;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.components.actionrow.ActionRow;
 import net.dv8tion.jda.api.components.buttons.Button;
-import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -66,13 +64,6 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
     @Override
     public void handleCommand(SlashCommandInteractionEvent event) {
         try {
-            if (!hasAccessToPirep(event.getMember())) {
-                event.reply("❌ You don't have permission to submit PIREPs. You need to be assigned a pilot role!")
-                        .setEphemeral(true)
-                        .queue();
-                return;
-            }
-
             event.deferReply().queue();
             String simbriefPilotId = event.getOption("userid").getAsString().trim();
 
@@ -187,20 +178,6 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
                     .queue();
             logger.error("Error in SimBrief PIREP command", e);
         }
-    }
-
-    private boolean hasAccessToPirep(Member member) {
-        if (member == null) return false;
-        if (PermissionChecker.isAdmin(member)) return true;
-
-        return member.getRoles().stream()
-                .anyMatch(role ->
-                        role.getIdLong() == Constants.ROLE_PILOT_UNDER_TRAINING ||
-                                role.getIdLong() == Constants.ROLE_CHARTER_PILOT ||
-                                role.getIdLong() == Constants.ROLE_SENIOR_CHARTER_PILOT ||
-                                role.getIdLong() == Constants.ROLE_LEAD_PILOT ||
-                                role.getIdLong() == Constants.ROLE_INSTRUCTOR
-                );
     }
 
     private MessageEmbed createSimBriefPirepEmbed(net.dv8tion.jda.api.entities.User user,

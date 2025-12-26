@@ -11,7 +11,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import net.dv8tion.jda.api.EmbedBuilder;
-import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.interactions.commands.OptionType;
@@ -64,13 +63,6 @@ public class UpdateFlightCommand extends ListenerAdapter implements CommandManag
     @Override
     public void handleCommand(SlashCommandInteractionEvent event) {
         try {
-            if (!hasAccessToUpdateFlight(event.getMember())) {
-                event.reply("❌ You don't have permission to update flights. You need to be assigned a pilot role!")
-                        .setEphemeral(true)
-                        .queue();
-                return;
-            }
-
             if (!GITHUB_AVAILABLE) {
                 event.reply("❌ GitHub integration is currently unavailable. Please try again later.")
                         .setEphemeral(true)
@@ -215,20 +207,6 @@ public class UpdateFlightCommand extends ListenerAdapter implements CommandManag
             case "diverted" -> 0x8b5cf6; // Purple
             default -> 0x6b7280; // Gray
         };
-    }
-
-    private boolean hasAccessToUpdateFlight(Member member) {
-        if (member == null) return false;
-        if (PermissionChecker.isAdmin(member)) return true;
-
-        return member.getRoles().stream()
-                .anyMatch(role ->
-                        role.getIdLong() == Constants.ROLE_PILOT_UNDER_TRAINING ||
-                                role.getIdLong() == Constants.ROLE_CHARTER_PILOT ||
-                                role.getIdLong() == Constants.ROLE_SENIOR_CHARTER_PILOT ||
-                                role.getIdLong() == Constants.ROLE_LEAD_PILOT ||
-                                role.getIdLong() == Constants.ROLE_INSTRUCTOR
-                );
     }
 
     private String capitalize(String str) {

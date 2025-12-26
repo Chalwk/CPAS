@@ -5,7 +5,6 @@ package com.chalwk.commands.general;
 import com.chalwk.commands.CommandManager;
 import com.chalwk.config.Constants;
 import com.chalwk.data.FlightDataManager;
-import com.chalwk.utils.PermissionChecker;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -77,13 +76,6 @@ public class SpecialMissionCommand extends ListenerAdapter implements CommandMan
     @Override
     public void handleCommand(SlashCommandInteractionEvent event) {
         try {
-            if (!hasAccessToMissionReport(event.getMember())) {
-                event.reply("❌ You don't have permission to submit mission reports. You need to be assigned a pilot role!")
-                        .setEphemeral(true)
-                        .queue();
-                return;
-            }
-
             event.deferReply().queue();
 
             Map<String, String> missionData = new HashMap<>();
@@ -258,19 +250,5 @@ public class SpecialMissionCommand extends ListenerAdapter implements CommandMan
             case "FIXED_OTHER" -> "Fixed Wing (Other)";
             default -> "Aircraft";
         };
-    }
-
-    private boolean hasAccessToMissionReport(net.dv8tion.jda.api.entities.Member member) {
-        if (member == null) return false;
-        if (PermissionChecker.isAdmin(member)) return true;
-
-        return member.getRoles().stream()
-                .anyMatch(role ->
-                        role.getIdLong() == Constants.ROLE_PILOT_UNDER_TRAINING ||
-                                role.getIdLong() == Constants.ROLE_CHARTER_PILOT ||
-                                role.getIdLong() == Constants.ROLE_SENIOR_CHARTER_PILOT ||
-                                role.getIdLong() == Constants.ROLE_LEAD_PILOT ||
-                                role.getIdLong() == Constants.ROLE_INSTRUCTOR
-                );
     }
 }
