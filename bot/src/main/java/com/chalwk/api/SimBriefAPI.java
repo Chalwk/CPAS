@@ -73,7 +73,11 @@ public class SimBriefAPI {
             flightPlan.put("aircraft_icao", getElementText(aircraft, "icaocode"));
             flightPlan.put("aircraft_name", getElementText(aircraft, "name"));
             flightPlan.put("aircraft_reg", getElementText(aircraft, "reg"));
-            flightPlan.put("pax_count", getElementText(aircraft, "pax_count"));
+
+            NodeList weightsList = doc.getElementsByTagName("weights");
+            Element weights = (Element) weightsList.item(0);
+            String paxCount = getElementText(weights, "pax_count");
+            flightPlan.put("pax_count", paxCount);
 
             flightPlan.put("origin", getElementTextFromParent(doc, "origin"));
             flightPlan.put("destination", getElementTextFromParent(doc, "destination"));
