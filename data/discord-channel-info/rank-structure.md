@@ -43,4 +43,4 @@ We operate with a structured rank system designed for progressive skill developm
 * Owner/Leader of Coastal Peaks Air Service
 
 **Note:** Detailed rank requirements, privileges, and progression criteria can be found in
-our [Training Structure](https://chalwk.github.io/CPAS/pages/training_structure.html).
+our [Training Structure](https://chalwk.github.io/CPAS/pages/training.html).

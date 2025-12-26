@@ -8,7 +8,7 @@ Our comprehensive **Code of Conduct** and operational standards are maintained i
 
 ## Quick Start References
 - **Operations Manual:** [Website](https://chalwk.github.io/CPAS/pages/operations_manual.html)
-- **Training Structure:** [Website](https://chalwk.github.io/CPAS/pages/training_structure.html)
+- **Training Structure:** [Website](https://chalwk.github.io/CPAS/pages/training.html)
 - **Fleet & Routes:** [Website](https://chalwk.github.io/CPAS)
 
 ## :person_raising_hand: Need Help or Have Questions?

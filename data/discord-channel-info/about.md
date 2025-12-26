@@ -16,7 +16,7 @@ Welcome to **Coastal Peaks Air Service** (CPAS), a Virtual Charter (VC) and spec
 - **Website:** [CPAS](https://chalwk.github.io/CPAS/)
 - **Fleet & Checklists:** [Fleet Page](https://chalwk.github.io/CPAS/pages/fleet.html)
 - **Charter Routes:** [Routes Page](https://chalwk.github.io/CPAS/pages/routes.html)
-- **Training:** [Training Page](https://chalwk.github.io/CPAS/pages/training_structure.html)
+- **Training:** [Training Page](https://chalwk.github.io/CPAS/pages/training.html)
 - **Operations:** [Operations Manual](https://chalwk.github.io/CPAS/pages/operations_manual.html)
 
 **Happy flying! We're glad you're here.**
