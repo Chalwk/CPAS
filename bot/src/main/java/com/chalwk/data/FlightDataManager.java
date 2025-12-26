@@ -47,15 +47,11 @@ public class FlightDataManager {
             flight.put("blockTime", flightPlan.getOrDefault("block_time", flightPlan.getOrDefault("flight_time", "N/A")));
             flight.put("route", flightPlan.getOrDefault("route_text", "DCT"));
             flight.put("cruiseAlt", flightPlan.getOrDefault("cruise_alt", "N/A"));
-            flight.put("fuelBurn", flightPlan.getOrDefault("fuel_burn", "N/A"));
-            flight.put("zfw", flightPlan.getOrDefault("zfw", "N/A"));
-            flight.put("tow", flightPlan.getOrDefault("tow", "N/A"));
-            flight.put("windComponent", flightPlan.getOrDefault("wind_component", "N/A"));
-            flight.put("distance", calculateDistance(flightPlan));
+            flight.put("distance", flightPlan.getOrDefault("distance", "N/A"));
             flight.put("status", status);
             flight.put("source", flightPlan.getOrDefault("source", "SimBrief"));
 
-            // Mission-specific fields
+
             if (flightPlan.containsKey("mission_type")) {
                 flight.put("missionType", flightPlan.get("mission_type"));
             }

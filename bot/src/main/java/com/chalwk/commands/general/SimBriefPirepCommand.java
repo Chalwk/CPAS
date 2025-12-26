@@ -10,6 +10,7 @@ import com.chalwk.utils.PermissionChecker;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.components.actionrow.ActionRow;
 import net.dv8tion.jda.api.components.buttons.Button;
+import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -188,7 +189,7 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
         }
     }
 
-    private boolean hasAccessToPirep(net.dv8tion.jda.api.entities.Member member) {
+    private boolean hasAccessToPirep(Member member) {
         if (member == null) return false;
         if (PermissionChecker.isAdmin(member)) return true;
 
@@ -248,23 +249,6 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
             routeText = routeText.substring(0, 197) + "...";
         }
         embed.addField("🛣️ Route", routeText != null ? routeText : "Direct", false);
-        if (flightPlan.containsKey("fuel_burn")) {
-            embed.addField("📊 Performance", String.format("Fuel Burn: %s kg\nCruise: %s",
-                            flightPlan.get("fuel_burn"),
-                            flightPlan.get("cruise_alt")),
-                    true);
-        }
-
-        if (flightPlan.containsKey("zfw")) {
-            embed.addField("⚖️ Weights", String.format("ZFW: %s kg\nTOW: %s kg",
-                            flightPlan.get("zfw"),
-                            flightPlan.get("tow")),
-                    true);
-        }
-
-        if (flightPlan.containsKey("wind_component")) {
-            embed.addField("💨 Wind", "Avg Component: " + flightPlan.get("wind_component") + " kts", true);
-        }
 
         return embed.build();
     }

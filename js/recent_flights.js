@@ -381,7 +381,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('detailAlternate').textContent = flight.alternate;
         document.getElementById('detailCruiseAlt').textContent = `${flight.cruiseAlt} ft`;
         document.getElementById('detailRoute').textContent = flight.route;
-        document.getElementById('detailDistance').textContent = flight.distance;
+        document.getElementById('detailDistance').textContent = flight.distance + (flight.distance !== 'N/A' ? ' nm' : '');
 
         document.getElementById('detailAircraft').textContent = flight.aircraft;
         document.getElementById('detailAircraftReg').textContent = flight.aircraftReg;
@@ -390,10 +390,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.getElementById('detailFlightTime').textContent = formatFlightTimeDisplay(flight.flightTime);
         document.getElementById('detailBlockTime').textContent = formatFlightTimeDisplay(flight.blockTime);
-        document.getElementById('detailFuelBurn').textContent = `${flight.fuelBurn} kg`;
-        document.getElementById('detailZFW').textContent = `${flight.zfw} kg`;
-        document.getElementById('detailTOW').textContent = `${flight.tow} kg`;
-        document.getElementById('detailWindComponent').textContent = `${flight.windComponent} kts`;
 
         document.getElementById('detailPilot').textContent = flight.pilot;
         document.getElementById('detailPilotId').textContent = flight.pilotId;
@@ -562,11 +558,18 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('statsTotalFlights').textContent = filteredData.length;
 
         let totalMinutes = 0;
-        let totalFuel = 0;
+        let totalDistance = 0;
 
         filteredData.forEach(flight => {
             totalMinutes += timeToMinutes(flight.flightTime);
-            totalFuel += parseFloat(flight.fuelBurn) || 0;
+
+            if (flight.distance && flight.distance !== 'N/A') {
+                let distStr = flight.distance.toString();
+                let distNum = parseFloat(distStr.replace(/[^\d.-]/g, ''));
+                if (!isNaN(distNum)) {
+                    totalDistance += distNum;
+                }
+            }
         });
 
         const totalHours = Math.floor(totalMinutes / 60);
@@ -577,8 +580,8 @@ document.addEventListener('DOMContentLoaded', function() {
             : `${totalRemainingMinutes}m`;
 
         document.getElementById('totalHours').textContent = totalTimeDisplay;
-        document.getElementById('totalFuel').textContent = totalFuel.toFixed(1);
-        document.getElementById('statsTotalFuel').textContent = totalFuel.toFixed(1);
+        document.getElementById('totalDistance').textContent = totalDistance.toFixed(1);
+        document.getElementById('statsTotalDistance').textContent = totalDistance.toFixed(1);
 
         const avgMinutes = filteredData.length > 0 ? totalMinutes / filteredData.length : 0;
         const avgHours = Math.floor(avgMinutes / 60);

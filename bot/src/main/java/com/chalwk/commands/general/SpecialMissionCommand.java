@@ -126,10 +126,6 @@ public class SpecialMissionCommand extends ListenerAdapter implements CommandMan
             missionData.put("flight_number", missionData.get("callsign"));
             missionData.put("route_text", "Mission: " + getMissionTypeDisplay(missionData.get("mission_type")));
             missionData.put("cruise_alt", "VFR");
-            missionData.put("fuel_burn", "N/A");
-            missionData.put("zfw", "N/A");
-            missionData.put("tow", "N/A");
-            missionData.put("wind_component", "N/A");
             missionData.put("distance", "N/A");
             missionData.put("alternate", "N/A");
             missionData.put("pdf_url", "N/A");
