@@ -400,14 +400,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('detailSource').textContent = flight.source;
         document.getElementById('detailTimestamp').textContent = formatDateTime(flight.timestamp);
 
-        const viewSimBriefBtn = document.getElementById('viewSimBrief');
-        if (flight.source === 'SimBrief' && flight.pdfUrl && flight.pdfUrl !== 'N/A') {
-            viewSimBriefBtn.style.display = 'inline-flex';
-            viewSimBriefBtn.onclick = () => window.open(flight.pdfUrl, '_blank');
-        } else {
-            viewSimBriefBtn.style.display = 'none';
-        }
-
         const missionDetailsSection = document.getElementById('missionDetailsSection');
         if (!missionDetailsSection && flight.source === 'MissionReport') {
             addMissionDetailsToSidebar(flight);

@@ -51,7 +51,6 @@ public class FlightDataManager {
             flight.put("zfw", flightPlan.getOrDefault("zfw", "N/A"));
             flight.put("tow", flightPlan.getOrDefault("tow", "N/A"));
             flight.put("windComponent", flightPlan.getOrDefault("wind_component", "N/A"));
-            flight.put("pdfUrl", flightPlan.getOrDefault("pdf_url", "N/A"));
             flight.put("distance", calculateDistance(flightPlan));
             flight.put("status", status);
             flight.put("source", flightPlan.getOrDefault("source", "SimBrief"));

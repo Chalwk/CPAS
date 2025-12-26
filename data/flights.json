@@ -21,7 +21,6 @@
   "zfw" : "955.0",
   "tow" : "1051.0",
   "windComponent" : "-4",
-  "pdfUrl" : "https://www.simbrief.com/ofp/flightplans/NZCHNZGT_PDF_1766450211.pdf",
   "distance" : "N/A",
   "status" : "completed",
   "source" : "SimBrief"
@@ -48,7 +47,6 @@
   "zfw" : "773.0",
   "tow" : "852.0",
   "windComponent" : "-5",
-  "pdfUrl" : "https://www.simbrief.com/ofp/flightplans/NZCHNZHK_PDF_1766621437.pdf",
   "distance" : "N/A",
   "status" : "scheduled",
   "source" : "SimBrief"
