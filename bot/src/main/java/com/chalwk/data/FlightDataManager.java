@@ -74,6 +74,9 @@ public class FlightDataManager {
             if (flightPlan.containsKey("notes")) {
                 flight.put("notes", flightPlan.get("notes"));
             }
+            if (flightPlan.containsKey("pax_count")) {
+                flight.put("pax_count", flightPlan.get("pax_count"));
+            }
 
             String existingJson = getExistingFlights();
             ArrayNode flightsArray;

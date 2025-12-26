@@ -386,6 +386,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('detailAircraft').textContent = flight.aircraft;
         document.getElementById('detailAircraftReg').textContent = flight.aircraftReg;
         document.getElementById('detailAircraftIcao').textContent = flight.aircraftIcao;
+        document.getElementById('detailPaxCount').textContent = flight.pax_count || '-';
 
         document.getElementById('detailFlightTime').textContent = formatFlightTimeDisplay(flight.flightTime);
         document.getElementById('detailBlockTime').textContent = formatFlightTimeDisplay(flight.blockTime);

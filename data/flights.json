@@ -23,7 +23,8 @@
   "windComponent" : "-4",
   "distance" : "N/A",
   "status" : "completed",
-  "source" : "SimBrief"
+  "source" : "SimBrief",
+  "pax_count" : "1"
 }, {
   "id" : "CPX002",
   "lastUpdated" : "2025-12-25T13:10:18.6124544",
@@ -49,5 +50,6 @@
   "windComponent" : "-5",
   "distance" : "N/A",
   "status" : "scheduled",
-  "source" : "SimBrief"
+  "source" : "SimBrief",
+  "pax_count" : "1"
 } ]
