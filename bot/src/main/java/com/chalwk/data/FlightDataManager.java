@@ -51,7 +51,6 @@ public class FlightDataManager {
             flight.put("status", status);
             flight.put("source", flightPlan.getOrDefault("source", "SimBrief"));
 
-
             if (flightPlan.containsKey("mission_type")) {
                 flight.put("missionType", flightPlan.get("mission_type"));
             }
