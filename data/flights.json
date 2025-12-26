@@ -1,1 +1,24 @@
-[]
+[ {
+  "id" : "CPX002",
+  "lastUpdated" : "2025-12-27T08:41:07.436312",
+  "date" : "2025-12-27",
+  "timestamp" : "2025-12-27T08:41:07.436312",
+  "pilot" : "chalwk",
+  "pilotId" : "340778",
+  "flightNumber" : "CPX002",
+  "callsign" : "ZKWII",
+  "departure" : "NZCH",
+  "arrival" : "NZHK",
+  "alternate" : "NZCH",
+  "aircraft" : "PIPER WARRIOR II",
+  "aircraftIcao" : "P28A",
+  "aircraftReg" : "ZK-WII",
+  "flightTime" : "56:55",
+  "blockTime" : "76:55",
+  "route" : "LUNT1R AVOCA Q309 BELEE BELE1L",
+  "cruiseAlt" : "3000",
+  "distance" : "N/A",
+  "status" : "completed",
+  "source" : "SimBrief",
+  "pax_count" : "2"
+} ]
