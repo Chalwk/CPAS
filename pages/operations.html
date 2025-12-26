@@ -1,0 +1,618 @@
+<!-- Copyright (c) 2025. Jericho Crosby (Chalwk) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Operations & Flight Planning - Coastal Peaks Air Service</title>
+    <link href="../styles/operations.css" rel="stylesheet">
+    <link href="../styles/index.css" rel="stylesheet">
+    <link href="../styles/common.css" rel="stylesheet">
+    <link href="../images/logo.ico" rel="icon" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container nav-container">
+        <a class="logo" href="../index.html">
+            <span class="logo-text">CPAS</span>
+            <span class="logo-subtitle">Coastal Peaks Air Service</span>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="fleet.html">Fleet</a></li>
+            <li><a href="routes.html">Routes</a></li>
+            <li><a href="training_structure.html">Training</a></li>
+            <li><a href="addons.html">Add-Ons</a></li>
+            <li><a class="active" href="operations.html">Operations</a></li>
+            <li><a href="recent_flights.html">Recent Flights</a></li>
+            <li><a href="../index.html#discord">Join</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
+<section class="simbrief-section" style="margin-top: 70px;">
+    <div class="container">
+        <h2 class="section-title">CPAS Operations & Flight Planning</h2>
+        <p class="section-subtitle">
+            Complete guide to virtual charter operations, flight planning, and reporting
+        </p>
+
+        <div class="quick-links">
+            <a href="#fundamentals" class="quick-link"><i class="fas fa-flag"></i> Fundamentals</a>
+            <a href="#aircraft-policy" class="quick-link"><i class="fas fa-cogs"></i> Aircraft Policy</a>
+            <a href="#flight-planning" class="quick-link"><i class="fas fa-route"></i> Flight Planning</a>
+            <a href="#reporting" class="quick-link"><i class="fab fa-discord"></i> Flight Reporting</a>
+            <a href="#procedures" class="quick-link"><i class="fas fa-clipboard-list"></i> Procedures</a>
+        </div>
+
+        <div class="manual-card" id="fundamentals">
+            <div class="card-header">
+                <h3><i class="fas fa-flag"></i> Fundamental Principles</h3>
+                <span class="card-badge">Core Rules</span>
+            </div>
+            <div class="card-body">
+                <div class="principle-grid">
+                    <div class="principle-item">
+                        <div class="principle-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h4>Virtual First</h4>
+                        <p>This is simulation for enjoyment. Follow real-world principles but focus on fun and
+                            learning over perfection.</p>
+                    </div>
+                    <div class="principle-item">
+                        <div class="principle-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Community Spirit</h4>
+                        <p>Help fellow pilots, share knowledge, and maintain a supportive environment for all skill
+                            levels.</p>
+                    </div>
+                    <div class="principle-item">
+                        <div class="principle-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Realistic Boundaries</h4>
+                        <p>Fly within your skill level and aircraft capabilities. Progress through ranks for
+                            advanced operations.</p>
+                    </div>
+                    <div class="principle-item">
+                        <div class="principle-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h4>Professional Identification</h4>
+                        <p>Use ICAO airline code <strong>CPX</strong> in all flight planning, reporting, and
+                            communication.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="manual-card" id="aircraft-policy">
+            <div class="card-header">
+                <h3><i class="fas fa-cogs"></i> Aircraft Use Policy</h3>
+                <span class="card-badge">Rank-Based Access</span>
+            </div>
+            <div class="card-body">
+                <div class="policy-intro">
+                    <p>Aircraft access is based on rank to ensure safe progression. Fly what you're comfortable
+                        with, not just the highest available.</p>
+                </div>
+
+                <div class="aircraft-table">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Aircraft Type</th>
+                            <th>Minimum Rank</th>
+                            <th>Primary Use</th>
+                            <th>Notes</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Piper Tomahawk/Warrior</td>
+                            <td>Pilot Under Training</td>
+                            <td>Training, local flights</td>
+                            <td>Entry-level trainer</td>
+                        </tr>
+                        <tr>
+                            <td>R44, Piper Archer</td>
+                            <td>Charter Pilot</td>
+                            <td>Basic charter operations</td>
+                            <td>VFR passenger charters</td>
+                        </tr>
+                        <tr>
+                            <td>R66, Piper Arrow, H125</td>
+                            <td>Senior Charter Pilot</td>
+                            <td>Complex charters, mountain ops</td>
+                            <td>Requires endorsements</td>
+                        </tr>
+                        <tr>
+                            <td>Piper Seneca V</td>
+                            <td>Senior Charter Pilot</td>
+                            <td>Multi-engine, IFR charters</td>
+                            <td>Requires Multi-Engine endorsement</td>
+                        </tr>
+                        <tr>
+                            <td>H145</td>
+                            <td>Lead Pilot</td>
+                            <td>Advanced/Special operations</td>
+                            <td>Turbine & mountain endorsements</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="policy-notes">
+                    <h5><i class="fas fa-exclamation-triangle"></i> Important Notes</h5>
+                    <ul>
+                        <li><strong>Comfort First:</strong> Fly aircraft you're comfortable with, not just highest
+                            available rank
+                        </li>
+                        <li><strong>Training Required:</strong> Complete aircraft-specific training before first
+                            flight
+                        </li>
+                        <li><strong>Issue Reporting:</strong> Report persistent aircraft issues in Discord</li>
+                        <li><strong>Liveries:</strong> Custom liveries welcome but maintain professional appearance
+                        </li>
+                        <li><strong>Endorsements:</strong> Certain aircraft require specific endorsements (see <a
+                                href="training_structure.html">Training page</a>)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="manual-card" id="flight-planning">
+            <div class="card-header">
+                <h3><i class="fas fa-route"></i> Flight Planning with SimBrief</h3>
+                <span class="card-badge">Step-by-Step Guide</span>
+            </div>
+            <div class="card-body">
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">1</span>
+                        <div class="step-content">
+                            <h4>Create a SimBrief Account</h4>
+                            <p>If you don't already have one, sign up for a free account at <a
+                                    href="https://www.simbrief.com" rel="noopener noreferrer"
+                                    target="_blank">SimBrief.com</a>.
+                                This is essential for creating detailed flight plans.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">2</span>
+                        <div class="step-content">
+                            <h4>Create Your Flight Plan</h4>
+                            <p>Navigate to the Dispatch page and enter your flight details:</p>
+                            <ul>
+                                <li><strong>Departure Airport:</strong> Your starting airport (e.g., NZCH)</li>
+                                <li><strong>Arrival Airport:</strong> Your destination airport</li>
+                                <li>
+                                    <strong>Aircraft:</strong>
+                                    Select from our fleet
+                                    (<a href="fleet.html">See our SimBrief Airframes on the Fleet Page</a>)
+                                </li>
+                                <li><strong>Route:</strong> Enter your planned route or use "Direct"</li>
+                                <li><strong>Passengers:</strong> Set according to your charter mission</li>
+                                <li><strong>Options:</strong> Click "View PDF" for full OFP access</li>
+                            </ul>
+                            <div class="airline-code-note">
+                                <h5><i class="fas fa-plane-circle-check"></i> CPAS Airline Code:</h5>
+                                <p>When creating your flight plan in SimBrief, use the ICAO airline code:
+                                    <code>CPX</code>
+                                    for Coastal Peaks Air Service.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">3</span>
+                        <div class="step-content">
+                            <h4>Find Your SimBrief Pilot ID</h4>
+                            <p>You'll need your numeric SimBrief Pilot ID (not your username):</p>
+                            <div class="code-block">
+                                <code>1. Log in to SimBrief and open <strong>Account Settings</strong>.</code><br>
+                                <code>2. In the <strong>Your SimBrief Data</strong> section, locate your <strong>Pilot
+                                    ID</strong>.</code><br>
+                                <code>3. This is a numeric value (e.g., <code>123456</code>). You'll need it when
+                                    submitting your flight on Discord.</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">4</span>
+                        <div class="step-content">
+                            <h4>Fly Your Planned Route in MSFS</h4>
+                            <p>Once your flight plan is complete, it's time to fly it in Microsoft Flight Simulator:</p>
+                            <ul>
+                                <li><strong>Load Aircraft:</strong> Use the CPAS-approved add-on aircraft</li>
+                                <li><strong>Import Flight Plan:</strong> Use SimBrief's export feature or manually enter
+                                    your route
+                                </li>
+                                <li><strong>Complete Flight:</strong> Fly from departure to destination following your
+                                    plan
+                                </li>
+                                <li><strong>Document Your Flight:</strong> Take screenshots at key moments (see next
+                                    step)
+                                </li>
+                            </ul>
+                            <div class="screenshot-tip">
+                                <i class="fas fa-camera"></i>
+                                <strong>Pro Tip:</strong> MSFS has a built-in photo mode (Press <code>P</code> or use
+                                <code>Ctrl
+                                    + Alt + P</code> for high-resolution screenshots)
+                            </div>
+                            <div class="weather-requirement">
+                                <i class="fas fa-cloud-sun"></i>
+                                <div>
+                                    <h5><i class="fas fa-exclamation-circle"></i> CPAS Weather Requirement</h5>
+                                    <p><strong>LIVE WEATHER IS MANDATORY:</strong> All CPAS flights must be conducted
+                                        using <strong>Live Weather</strong>
+                                        in Microsoft Flight Simulator. This ensures realistic conditions matching the
+                                        actual New Zealand environment
+                                        and is essential for proper flight training and charter operations.</p>
+                                    <p><em>Using preset or clear weather defeats the purpose of realistic virtual
+                                        charter operations.</em></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">5</span>
+                        <div class="step-content">
+                            <h4>Document Your Flight with Screenshots</h4>
+                            <p>Capture your flight experience with screenshots to share with the community:</p>
+
+                            <div class="screenshot-checklist">
+                                <h5><i class="fas fa-check-circle"></i> Recommended Screenshots:</h5>
+                                <div class="checklist-grid">
+                                    <div class="checklist-item">
+                                        <i class="fas fa-plane-departure"></i>
+                                        <div>
+                                            <strong>Pre-Flight</strong>
+                                            <p>Aircraft at departure gate with engines off</p>
+                                        </div>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <i class="fas fa-takeoff"></i>
+                                        <div>
+                                            <strong>Takeoff</strong>
+                                            <p>Rotating or shortly after takeoff</p>
+                                        </div>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <i class="fas fa-mountain"></i>
+                                        <div>
+                                            <strong>Enroute Scenery</strong>
+                                            <p>Scenic views, interesting terrain, or landmarks</p>
+                                        </div>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <i class="fas fa-landmark"></i>
+                                        <div>
+                                            <strong>Flight Progress</strong>
+                                            <p>In-game map showing your position along the route</p>
+                                        </div>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <i class="fas fa-landing"></i>
+                                        <div>
+                                            <strong>Approach/Landing</strong>
+                                            <p>On final approach or during landing</p>
+                                        </div>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <i class="fas fa-parking"></i>
+                                        <div>
+                                            <strong>Post-Flight</strong>
+                                            <p>Aircraft parked at destination with engines off</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-number">6</span>
+                        <div class="step-content">
+                            <h4>Use the Discord Bot to Report Your Flight</h4>
+                            <p>Once your flight is complete, share it with the community using our custom Discord
+                                bot:</p>
+                            <div class="command-example">
+                                <h5><i class="fas fa-terminal"></i> Command Format:</h5>
+                                <div class="code-block">
+                                    <code>/pirep [Your SimBrief Pilot ID]</code>
+                                </div>
+                                <p><strong>Example:</strong> <code>/pirep 123456</code></p>
+                            </div>
+                            <div class="discord-sharing">
+                                <h5><i class="fab fa-discord"></i> Share Your Experience:</h5>
+                                <p>After using the <code>/pirep</code> command, consider sharing your flight screenshots
+                                    in
+                                    our <strong>#flight-screenshots</strong> Discord channel. This helps build our
+                                    community
+                                    gallery and lets others see the amazing routes you've flown!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="manual-card" id="reporting">
+            <div class="card-header">
+                <h3><i class="fab fa-discord"></i> Flight Reporting System</h3>
+                <span class="card-badge">Discord Bot Commands</span>
+            </div>
+            <div class="card-body">
+                <p class="card-intro">Use our Discord bot to submit flight reports and manage your operations:</p>
+
+                <div class="command-overview">
+                    <div class="command-row">
+                        <div class="command">
+                            <h4><code>/pirep [pilot_id]</code></h4>
+                            <p class="command-desc">Standard flight reporting using your latest SimBrief plan</p>
+                            <div class="command-details">
+                                <strong>For:</strong> Normal passenger/cargo charter flights<br>
+                                <strong>Posts to:</strong> #pirep-submission channel<br>
+                                <strong>Requires:</strong> Valid SimBrief Pilot ID
+                            </div>
+                        </div>
+                        <div class="command">
+                            <h4><code>/missionreport</code></h4>
+                            <p class="command-desc">Special operations not covered by SimBrief</p>
+                            <div class="command-details">
+                                <strong>For:</strong> SAR, MEDEVAC, tours, training, firefighting<br>
+                                <strong>Supports:</strong> Custom mission parameters<br>
+                                <strong>Flexible:</strong> No SimBrief required
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="command-row">
+                        <div class="command">
+                            <h4><code>/updateflight [flight_id] [status]</code></h4>
+                            <p class="command-desc">Update status of existing flight records</p>
+                            <div class="command-details">
+                                <strong>Status options:</strong> completed, in-progress, scheduled, cancelled,
+                                diverted<br>
+                                <strong>Updates:</strong> Flight database and Discord channel<br>
+                                <strong>Note:</strong> Can only update your own flights
+                            </div>
+                        </div>
+                        <div class="command">
+                            <h4><code>/help</code></h4>
+                            <p class="command-desc">Get assistance with all bot commands</p>
+                            <div class="command-details">
+                                <strong>Provides:</strong> Command list and usage information<br>
+                                <strong>Includes:</strong> Links to documentation<br>
+                                <strong>Available:</strong> To all pilots 24/7
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reporting-flow">
+                    <h5><i class="fas fa-sync-alt"></i> Standard Reporting Flow</h5>
+                    <ol>
+                        <li><strong>Plan:</strong> Create flight plan in SimBrief (or plan mission)</li>
+                        <li><strong>Fly:</strong> Complete flight in MSFS</li>
+                        <li><strong>Report:</strong> Use appropriate Discord bot command</li>
+                        <li><strong>Share:</strong> Post screenshots in #screenshots</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="manual-card" id="procedures">
+            <div class="card-header">
+                <h3><i class="fas fa-clipboard-list"></i> Operational Procedures</h3>
+                <span class="card-badge">Flight Guidelines</span>
+            </div>
+            <div class="card-body">
+                <div class="procedure-section">
+                    <h4><i class="fas fa-plane-departure"></i> Pre-Flight Requirements</h4>
+                    <div class="requirement-grid">
+                        <div class="requirement">
+                            <h5>Aircraft Selection</h5>
+                            <p>Choose aircraft appropriate for route and your current rank. Refer to aircraft policy
+                                above.</p>
+                        </div>
+                        <div class="requirement">
+                            <h5>Live Weather Check</h5>
+                            <p><strong>Mandatory:</strong> Review current conditions and do not fly in impossible or unsafe
+                                weather.</p>
+                        </div>
+                        <div class="requirement">
+                            <h5>Route Planning</h5>
+                            <p>Know your route, alternates, and fuel requirements. Use SimBrief for complex flights.</p>
+                        </div>
+                        <div class="requirement">
+                            <h5>Checklist Completion</h5>
+                            <p>Complete appropriate aircraft checklist before departure (<a href="fleet.html">available
+                                here</a>).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="procedure-section">
+                    <h4><i class="fas fa-plane"></i> In-Flight Standards</h4>
+                    <div class="standard-grid">
+                        <div class="standard">
+                            <h5><i class="fas fa-tower"></i> Communication</h5>
+                            <ul>
+                                <li>Use appropriate frequencies (<a href="routes.html">see routes page</a>)</li>
+                                <li>No ATC? Use Common Traffic Advisory Frequency (CTAF) concepts</li>
+                                <li>Position reports on longer flights</li>
+                            </ul>
+                        </div>
+                        <div class="standard">
+                            <h5><i class="fas fa-mountain"></i> Terrain & Weather</h5>
+                            <ul>
+                                <li>Maintain safe altitude above terrain</li>
+                                <li>Turn back if weather deteriorates</li>
+                                <li>Mountain flying: know valley directions and escape routes</li>
+                            </ul>
+                        </div>
+                        <div class="standard">
+                            <h5><i class="fas fa-gas-pump"></i> Fuel Management</h5>
+                            <ul>
+                                <li>Land with at least 45 minutes fuel reserve</li>
+                                <li>Monitor fuel consumption in mountains</li>
+                                <li>Plan refueling stops on long routes</li>
+                            </ul>
+                        </div>
+                        <div class="standard">
+                            <h5><i class="fas fa-user-friends"></i> Passenger Consideration</h5>
+                            <ul>
+                                <li>Smooth takeoffs and landings</li>
+                                <li>Gentle turns and altitude changes</li>
+                                <li>Point out scenery (in your imagination!)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charter-tips">
+                    <h5><i class="fas fa-lightbulb"></i> Charter-Specific Tips</h5>
+                    <ul>
+                        <li><strong>Route Knowledge:</strong> Familiarize with terrain, airspace, and challenges</li>
+                        <li><strong>Alternates:</strong> Always have a backup plan (weather, mechanical)</li>
+                        <li><strong>Time Planning:</strong> Allow buffer for delays in passenger operations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="discord-bot-section">
+            <h3><i class="fab fa-discord"></i> Discord Bot Integration</h3>
+            <p>Our custom bot creates an embed message with your latest SimBrief flight plan. Share your flight screenshots
+                in Discord to complete your flight report!</p>
+
+            <div class="embed-preview">
+                <div class="embed-header">
+                    <div class="embed-color-bar"></div>
+                    <div class="embed-content">
+                        <div class="embed-author">
+                            <img alt="Avatar" src="https://via.placeholder.com/20x20/2d6bc9/ffffff?text=P">
+                            <span>Pilot#1234</span>
+                            <span class="role-badge role-charter-pilot">Charter Pilot</span>
+                        </div>
+
+                        <div class="embed-thumbnail">
+                            <img alt="SimBrief Logo" src="https://www.simbrief.com/images/icon_navi_color.png">
+                        </div>
+
+                        <div class="embed-title">📋 SimBrief PIREP - CPX123</div>
+
+                        <div class="embed-fields">
+                            <div class="embed-field inline">
+                                <div class="field-name">✈️ Aircraft</div>
+                                <div class="field-value">Piper PA-28R-201 Arrow III (P28R)<br>ZK-ARR</div>
+                            </div>
+
+                            <div class="embed-field inline">
+                                <div class="field-name">📍 Route</div>
+                                <div class="field-value">NZCH → NZQN<br>Alt: NZMF</div>
+                            </div>
+
+                            <div class="embed-field inline">
+                                <div class="field-name">⏱️ Times</div>
+                                <div class="field-value">Flight: 1:45<br>Block: 2:15</div>
+                            </div>
+
+                            <div class="embed-field block">
+                                <div class="field-name">🛣️ Route</div>
+                                <div class="field-value">CH V184 DUN V184 ZQN</div>
+                            </div>
+
+                            <div class="embed-field inline">
+                                <div class="field-name">📊 Performance</div>
+                                <div class="field-value">Fuel Burn: 123.5 kg<br>Cruise: FL080</div>
+                            </div>
+
+                            <div class="embed-field inline">
+                                <div class="field-name">⚖️ Weights</div>
+                                <div class="field-value">ZFW: 1200.0 kg<br>TOW: 1400.0 kg</div>
+                            </div>
+
+                            <div class="embed-field inline">
+                                <div class="field-name">💨 Wind</div>
+                                <div class="field-value">Avg Component: 15 kts</div>
+                            </div>
+                        </div>
+
+                        <button class="pdf-button">
+                            <i class="fas fa-file-pdf"></i> View PDF OFP
+                        </button>
+
+                        <div class="embed-footer">
+                            Submitted at 2025-01-15 14:30 | Coastal Peaks Air Service
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tips-section">
+            <h3><i class="fas fa-lightbulb"></i> Pro Tips</h3>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h5><i class="fas fa-save"></i> Save Your Plans</h5>
+                    <p>SimBrief allows you to save flight plans for future use. Save your favorite CPAS routes!</p>
+                </div>
+                <div class="tip-card">
+                    <h5><i class="fas fa-download"></i> Export to MSFS</h5>
+                    <p>Use the "Export" feature to send your flight plan directly to Microsoft Flight Simulator</p>
+                </div>
+                <div class="tip-card">
+                    <h5><i class="fas fa-mobile-alt"></i> Mobile Friendly</h5>
+                    <p>SimBrief works well on mobile devices, perfect for checking your plan during flight</p>
+                </div>
+                <div class="tip-card">
+                    <h5><i class="fas fa-share-alt"></i> Share with Others</h5>
+                    <p>Use the Discord bot to share your flight plans and get feedback from fellow pilots</p>
+                </div>
+                <div class="tip-card">
+                    <h5><i class="fas fa-history"></i> Track Progress</h5>
+                    <p>Regular PIREP submissions help track your flight hours for rank progression</p>
+                </div>
+                <div class="tip-card">
+                    <h5><i class="fas fa-camera"></i> Build Your Gallery</h5>
+                    <p>Consistent screenshot documentation creates a visual log of your CPAS career. Share your best shots
+                        in Discord!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-copyright"><p></p></footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

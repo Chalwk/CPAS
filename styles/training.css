@@ -85,12 +85,33 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    position: relative;
+}
+
+/* Vertical bars between steps */
+.overview-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 10%;
+    bottom: 10%;
+    width: 1px;
+    background: #cbd5e1;
+}
+
+/* Adjust positioning for different screen sizes */
+@media (min-width: 768px) {
+    .overview-step:not(:last-child)::after {
+        right: -10px;
+    }
 }
 
 .overview-step {
     display: flex;
     gap: 15px;
     align-items: flex-start;
+    position: relative;
+    padding-right: 20px;
 }
 
 .step-icon {
