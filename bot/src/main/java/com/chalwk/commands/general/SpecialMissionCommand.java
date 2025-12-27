@@ -76,7 +76,7 @@ public class SpecialMissionCommand extends ListenerAdapter implements CommandMan
     @Override
     public void handleCommand(SlashCommandInteractionEvent event) {
         try {
-            event.deferReply().queue();
+            event.deferReply(true).queue();
 
             Map<String, String> missionData = new HashMap<>();
 
@@ -136,8 +136,7 @@ public class SpecialMissionCommand extends ListenerAdapter implements CommandMan
             sendToMissionChannel(event, missionData);
 
         } catch (Exception e) {
-            event.getHook().editOriginal("❌ An error occurred while submitting your mission report: " + e.getMessage())
-                    .queue();
+            event.getHook().editOriginal("❌ An error occurred while submitting your mission report: " + e.getMessage()).queue();
         }
     }
 

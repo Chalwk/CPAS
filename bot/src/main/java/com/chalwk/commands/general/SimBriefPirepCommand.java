@@ -64,7 +64,8 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
     @Override
     public void handleCommand(SlashCommandInteractionEvent event) {
         try {
-            event.deferReply().queue();
+            event.deferReply(true).queue();
+
             String simbriefPilotId = event.getOption("userid").getAsString().trim();
 
             String status;

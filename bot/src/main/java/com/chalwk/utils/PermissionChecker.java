@@ -3,6 +3,7 @@
 package com.chalwk.utils;
 
 import com.chalwk.config.Constants;
+import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.Member;
 
 import java.util.Arrays;
@@ -12,9 +13,8 @@ public class PermissionChecker {
     public static boolean isAdmin(Member member) {
         if (member == null) return false;
 
-        if (member.hasPermission(net.dv8tion.jda.api.Permission.ADMINISTRATOR)) {
+        if (member.hasPermission(Permission.ADMINISTRATOR))
             return true;
-        }
 
         if (Constants.ADMIN_IDS != null) {
             String userId = member.getId();
