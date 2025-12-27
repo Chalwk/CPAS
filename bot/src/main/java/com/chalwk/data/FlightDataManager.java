@@ -29,6 +29,15 @@ public class FlightDataManager {
                     ? "MSN" + System.currentTimeMillis() % 10000
                     : flightPlan.getOrDefault("flight_number", generateFlightId());
 
+            String source = flightPlan.getOrDefault("source", "SimBrief");
+            if ("SimBrief".equals(source)) {
+                if (isDuplicateFlight(flightId, simbriefPilotId)) {
+                    logger.warn("Duplicate SimBrief flight detected: Plan ID {} for pilot {}",
+                            flightId, simbriefPilotId);
+                    return;
+                }
+            }
+
             flight.put("id", flightId);
             flight.put("lastUpdated", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
             flight.put("date", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE));
@@ -49,7 +58,7 @@ public class FlightDataManager {
             flight.put("cruiseAlt", flightPlan.getOrDefault("cruise_alt", "N/A"));
             flight.put("route_distance", flightPlan.getOrDefault("route_distance", "N/A"));
             flight.put("status", status);
-            flight.put("source", flightPlan.getOrDefault("source", "SimBrief"));
+            flight.put("source", source);
 
             if (flightPlan.containsKey("mission_type")) {
                 flight.put("missionType", flightPlan.get("mission_type"));
@@ -105,6 +114,33 @@ public class FlightDataManager {
         }
     }
 
+    private static boolean isDuplicateFlight(String planId, String pilotId) {
+        try {
+            String existingJson = getExistingFlights();
+            if (existingJson == null || existingJson.isEmpty() || existingJson.equals("[]")) {
+                return false;
+            }
+
+            ArrayNode flightsArray = (ArrayNode) mapper.readTree(existingJson);
+
+            for (int i = 0; i < flightsArray.size(); i++) {
+                var flight = flightsArray.get(i);
+                String existingId = flight.has("id") ? flight.get("id").asText() : null;
+                String existingPilotId = flight.has("pilotId") ? flight.get("pilotId").asText() : null;
+                String existingSource = flight.has("source") ? flight.get("source").asText() : null;
+
+                if (planId.equals(existingId) &&
+                        pilotId.equals(existingPilotId) &&
+                        "SimBrief".equals(existingSource)) {
+                    return true;
+                }
+            }
+        } catch (Exception e) {
+            logger.error("Error checking for duplicate flights", e);
+        }
+        return false;
+    }
+
     private static String getExistingFlights() {
         if (cachedFlightsJson != null &&
                 System.currentTimeMillis() - lastCacheUpdate < CACHE_DURATION_MS) {
@@ -123,5 +159,9 @@ public class FlightDataManager {
 
     private static String generateFlightId() {
         return "CPX" + System.currentTimeMillis() % 10000;
+    }
+
+    public static boolean isFlightDuplicate(String flightId, String pilotId) {
+        return isDuplicateFlight(flightId, pilotId);
     }
 }

@@ -103,6 +103,13 @@ public class SimBriefPirepCommand extends ListenerAdapter implements CommandMana
                     return;
                 }
 
+                String flightNumber = flightPlan.get("flight_number");
+                if (FlightDataManager.isFlightDuplicate(flightNumber, simbriefPilotId)) {
+                    event.getHook().editOriginal("❌ This flight plan has already been submitted! Flight ID: " + flightNumber)
+                            .queue();
+                    return;
+                }
+
                 flightPlan.put("status", status);
 
                 MessageEmbed pirepEmbed = createSimBriefPirepEmbed(
