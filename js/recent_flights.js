@@ -265,12 +265,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (pageData.length === 0) {
             flightsTableBody.innerHTML = `
-            <tr>
-                <td colspan="8" style="text-align: center; padding: 40px; color: #6b7280;">
-                    <i class="fas fa-plane-slash"></i> No flights found matching your criteria.
-                </td>
-            </tr>
-        `;
+        <tr>
+            <td colspan="10" style="text-align: center; padding: 40px; color: #6b7280;">
+                <i class="fas fa-plane-slash"></i> No flights found matching your criteria.
+            </td>
+        </tr>
+    `;
             return;
         }
 
@@ -279,6 +279,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const missionIcon = isMission ? '🚁 ' : '';
             const missionClass = isMission ? 'mission-row' : '';
             const missionType = isMission ? getMissionTypeDisplay(flight.missionType) : 'Normal Flight';
+
+            const departureDate = flight.departure_date || flight.date;
+            const departureDateFormatted = formatDate(departureDate);
+            const departureTime = flight.departure_time_utc || 'N/A';
+            const arrivalTime = flight.arrival_time_utc || 'N/A';
 
             let routeDisplay = flight.route;
             if (isMission && flight.missionType) {
@@ -289,52 +294,64 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             return `
-            <tr data-flight-id="${flight.id}" class="${missionClass}" data-source="${flight.source}">
-                <td>
-                    <div class="flight-number">${flight.id}</div>
-                    ${isMission ? '<span class="mission-badge">MISSION</span>' : ''}
-                </td>
-                <td>${formatDate(flight.date)}</td>
-                <td>
-                    <div class="pilot-info">
-                        <div class="pilot-avatar">${flight.pilot.charAt(0).toUpperCase()}</div>
-                        <div>
-                            <div>${flight.pilot}</div>
-                            ${isMission ? '<small style="color: #6b7280;">Mission Pilot</small>' : ''}
-                        </div>
+        <tr data-flight-id="${flight.id}" class="${missionClass}" data-source="${flight.source}">
+            <td>
+                <div class="flight-number">${flight.id}</div>
+                ${isMission ? '<span class="mission-badge">MISSION</span>' : ''}
+            </td>
+            <td>${departureDateFormatted}</td>
+            <td>
+                <div class="time-info">
+                    <div class="time-display">${departureTime}</div>
+                    <small class="time-label">UTC</small>
+                </div>
+            </td>
+            <td>
+                <div class="time-info">
+                    <div class="time-display">${arrivalTime}</div>
+                    <small class="time-label">UTC</small>
+                </div>
+            </td>
+            <td>
+                <div class="pilot-info">
+                    <div class="pilot-avatar">${flight.pilot.charAt(0).toUpperCase()}</div>
+                    <div>
+                        <div>${flight.pilot}</div>
+                        ${isMission ? '<small style="color: #6b7280;">Mission Pilot</small>' : ''}
                     </div>
-                </td>
-                <td>
-                    <div class="aircraft-info">
-                        <div class="aircraft-reg">${flight.aircraftReg}</div>
-                        <div class="aircraft-type">${flight.aircraft}</div>
+                </div>
+            </td>
+            <td>
+                <div class="aircraft-info">
+                    <div class="aircraft-reg">${flight.aircraftReg}</div>
+                    <div class="aircraft-type">${flight.aircraft}</div>
+                </div>
+            </td>
+            <td>
+                <div class="route-info">
+                    <div class="route-airports">
+                        <span class="airport-code">${flight.departure}</span>
+                        <i class="fas fa-arrow-right route-arrow"></i>
+                        <span class="airport-code">${flight.arrival}</span>
                     </div>
-                </td>
-                <td>
-                    <div class="route-info">
-                        <div class="route-airports">
-                            <span class="airport-code">${flight.departure}</span>
-                            <i class="fas fa-arrow-right route-arrow"></i>
-                            <span class="airport-code">${flight.arrival}</span>
-                        </div>
-                        <div class="route-details">${routeDisplay}</div>
-                    </div>
-                </td>
-                <td>${formatFlightTimeDisplay(flight.flightTime)}</td>
-                <td>
-                    <span class="status-badge status-${flight.status}">
-                        ${formatStatus(flight.status)}
-                    </span>
-                </td>
-                <td>
-                    <div class="table-actions">
-                        <button class="btn-icon view-flight" data-flight-id="${flight.id}" title="View Details">
-                            <i class="fas fa-eye"></i>
-                        </button>
-                    </div>
-                </td>
-            </tr>
-        `;
+                    <div class="route-details">${routeDisplay}</div>
+                </div>
+            </td>
+            <td>${formatFlightTimeDisplay(flight.flightTime)}</td>
+            <td>
+                <span class="status-badge status-${flight.status}">
+                    ${formatStatus(flight.status)}
+                </span>
+            </td>
+            <td>
+                <div class="table-actions">
+                    <button class="btn-icon view-flight" data-flight-id="${flight.id}" title="View Details">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+            </td>
+        </tr>
+    `;
         }).join('');
 
         document.querySelectorAll('.view-flight').forEach(btn => {
@@ -396,6 +413,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.getElementById('detailSource').textContent = flight.source;
         document.getElementById('detailTimestamp').textContent = formatDateTime(flight.timestamp);
+
+        const routeSection = document.querySelector('.detail-section:nth-child(2)');
+
+        let departureTimeItem = document.getElementById('detailDepartureTime');
+        let arrivalTimeItem = document.getElementById('detailArrivalTime');
+
+        if (!departureTimeItem) {
+            const departureDiv = document.createElement('div');
+            departureDiv.className = 'detail-item';
+            departureDiv.innerHTML = `
+            <span class="detail-label">Departure (UTC):</span>
+            <span class="detail-value" id="detailDepartureTime">-</span>
+        `;
+
+            const arrivalDiv = document.createElement('div');
+            arrivalDiv.className = 'detail-item';
+            arrivalDiv.innerHTML = `
+            <span class="detail-label">Arrival (UTC):</span>
+            <span class="detail-value" id="detailArrivalTime">-</span>
+        `;
+
+            const cruiseAltItem = document.querySelector('.detail-item:has(#detailCruiseAlt)');
+            if (cruiseAltItem) {
+                cruiseAltItem.parentNode.insertBefore(departureDiv, cruiseAltItem.nextSibling);
+                cruiseAltItem.parentNode.insertBefore(arrivalDiv, departureDiv.nextSibling);
+            }
+        }
+
+        document.getElementById('detailDepartureTime').textContent = flight.departure_time_utc || 'N/A';
+        document.getElementById('detailArrivalTime').textContent = flight.arrival_time_utc || 'N/A';
 
         const missionDetailsSection = document.getElementById('missionDetailsSection');
         if (!missionDetailsSection && flight.source === 'MissionReport') {
@@ -690,11 +737,12 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             const date = new Date(dateString);
             if (isNaN(date.getTime())) return dateString;
-            return date.toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric'
-            });
+
+            const day = date.getDate();
+            const month = date.getMonth() + 1;
+            const year = date.getFullYear().toString().slice(-2);
+
+            return `${day}/${month}/${year}`;
         } catch (e) {
             return dateString;
         }

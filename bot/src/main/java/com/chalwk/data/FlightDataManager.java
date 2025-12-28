@@ -1,4 +1,4 @@
-// Copyright (c) 2025. Jericho Crosby (Chalwk)
+/* Copyright (c) 2025. Jericho Crosby (Chalwk) */
 
 package com.chalwk.data;
 
@@ -36,6 +36,16 @@ public class FlightDataManager {
                             flightId, simbriefPilotId);
                     return;
                 }
+            }
+
+            flight.put("departure_date", flightPlan.getOrDefault("departure_date", "N/A"));
+            flight.put("departure_time_utc", flightPlan.getOrDefault("departure_time_utc", "N/A"));
+            flight.put("arrival_time_utc", flightPlan.getOrDefault("arrival_time_utc", "N/A"));
+            flight.put("scheduled_departure", flightPlan.getOrDefault("scheduled_departure", "N/A"));
+            flight.put("scheduled_arrival", flightPlan.getOrDefault("scheduled_arrival", "N/A"));
+
+            if (!flightPlan.containsKey("departure_date")) {
+                flight.put("departure_date", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE));
             }
 
             flight.put("id", flightId);

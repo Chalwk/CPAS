@@ -15,6 +15,10 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -63,6 +67,35 @@ public class SimBriefAPI {
                     flightPlan.put("error", errorMsg != null ? errorMsg : "Unknown error");
                     return flightPlan;
                 }
+            }
+
+            String schedOutTimestamp = getElementText(doc, "sched_out");
+            String schedInTimestamp = getElementText(doc, "sched_in");
+
+            if (schedOutTimestamp != null && schedInTimestamp != null) {
+                long outTime = Long.parseLong(schedOutTimestamp);
+                long inTime = Long.parseLong(schedInTimestamp);
+
+                LocalDateTime outDateTime = Instant.ofEpochSecond(outTime)
+                        .atZone(ZoneId.of("UTC"))
+                        .toLocalDateTime();
+
+                LocalDateTime inDateTime = Instant.ofEpochSecond(inTime)
+                        .atZone(ZoneId.of("UTC"))
+                        .toLocalDateTime();
+
+                DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
+
+                flightPlan.put("departure_date", outDateTime.format(dateFormatter));
+                flightPlan.put("departure_time_utc", outDateTime.format(timeFormatter));
+                flightPlan.put("arrival_time_utc", inDateTime.format(timeFormatter));
+                flightPlan.put("scheduled_departure", outDateTime.toString());
+                flightPlan.put("scheduled_arrival", inDateTime.toString());
+
+                logger.info("Parsed scheduled times - Departure: {}, Arrival: {}",
+                        flightPlan.get("departure_time_utc"),
+                        flightPlan.get("arrival_time_utc"));
             }
 
             flightPlan.put("flight_number", getElementText(doc, "icao_airline") + getElementText(doc, "flight_number"));

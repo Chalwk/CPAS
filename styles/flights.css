@@ -141,7 +141,20 @@
     cursor: pointer;
     user-select: none;
     position: relative;
+    white-space: nowrap;
 }
+
+/* Adjust column widths for the new layout */
+.flights-table th:nth-child(1) { width: 8%; } /* Flight # */
+.flights-table th:nth-child(2) { width: 8%; } /* Date */
+.flights-table th:nth-child(3) { width: 7%; } /* Departure (UTC) */
+.flights-table th:nth-child(4) { width: 7%; } /* Arrival (UTC) */
+.flights-table th:nth-child(5) { width: 12%; } /* Pilot */
+.flights-table th:nth-child(6) { width: 10%; } /* Aircraft */
+.flights-table th:nth-child(7) { width: 18%; } /* Route */
+.flights-table th:nth-child(8) { width: 8%; } /* Flight Time */
+.flights-table th:nth-child(9) { width: 8%; } /* Status */
+.flights-table th:nth-child(10) { width: 6%; } /* Actions */
 
 .flights-table th:hover {
     background-color: #2d6bc9;
@@ -237,6 +250,36 @@
     padding: 16px 15px;
     color: #374151;
     font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+/* Time display styles */
+.time-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.time-display {
+    font-weight: 500;
+    color: #374151;
+    font-size: 0.95rem;
+    font-family: 'Courier New', monospace;
+}
+
+.time-label {
+    color: #6b7280;
+    font-size: 0.8rem;
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* For mission reports without scheduled times */
+.time-info .time-display:empty::after {
+    content: 'N/A';
+    color: #9ca3af;
+    font-style: italic;
 }
 
 .flight-number {
@@ -494,6 +537,15 @@
     font-weight: 500;
     color: #1a365d;
     font-size: 0.95rem;
+}
+
+/* UTC time display in sidebar */
+.detail-item .detail-value .utc-time {
+    font-family: 'Courier New', monospace;
+    background: #f3f4f6;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9rem;
 }
 
 .mission-type {
@@ -801,6 +853,40 @@
     }
 }
 
+@media (max-width: 992px) {
+    .flights-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .flights-table th,
+    .flights-table td {
+        white-space: nowrap;
+    }
+
+    .flights-table th:nth-child(1),
+    .flights-table th:nth-child(2),
+    .flights-table th:nth-child(3),
+    .flights-table th:nth-child(4),
+    .flights-table th:nth-child(8),
+    .flights-table th:nth-child(9),
+    .flights-table th:nth-child(10) {
+        min-width: 80px;
+    }
+
+    .flights-table th:nth-child(5) {
+        min-width: 120px;
+    }
+
+    .flights-table th:nth-child(6) {
+        min-width: 100px;
+    }
+
+    .flights-table th:nth-child(7) {
+        min-width: 180px;
+    }
+}
+
 @media (max-width: 768px) {
     .flights-controls {
         flex-direction: column;
@@ -825,11 +911,6 @@
         width: 100%;
     }
 
-    .flights-table {
-        display: block;
-        overflow-x: auto;
-    }
-
     .summary-stats {
         grid-template-columns: 1fr;
     }
@@ -842,5 +923,47 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+    }
+
+    .time-info {
+        align-items: flex-start;
+    }
+
+    .time-display {
+        font-size: 0.9rem;
+    }
+
+    .time-label {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .flights-table-container {
+        margin: 0 -15px;
+        border-radius: 0;
+    }
+
+    .flights-table {
+        font-size: 0.85rem;
+    }
+
+    .flights-table td {
+        padding: 12px 10px;
+    }
+
+    .pilot-avatar {
+        width: 28px;
+        height: 28px;
+        font-size: 0.75rem;
+    }
+
+    .airport-code {
+        font-size: 0.8rem;
+        padding: 2px 6px;
+    }
+
+    .time-display {
+        font-size: 0.85rem;
     }
 }
