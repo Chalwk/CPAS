@@ -144,28 +144,36 @@
     white-space: nowrap;
 }
 
-/* Adjust column widths for the new layout */
-.flights-table th:nth-child(1) { width: 8%; } /* Flight # */
-.flights-table th:nth-child(2) { width: 8%; } /* Date */
-.flights-table th:nth-child(3) { width: 7%; } /* Departure (UTC) */
-.flights-table th:nth-child(4) { width: 7%; } /* Arrival (UTC) */
-.flights-table th:nth-child(5) { width: 12%; } /* Pilot */
-.flights-table th:nth-child(6) { width: 10%; } /* Aircraft */
-.flights-table th:nth-child(7) { width: 18%; } /* Route */
-.flights-table th:nth-child(8) { width: 8%; } /* Flight Time */
-.flights-table th:nth-child(9) { width: 8%; } /* Status */
-.flights-table th:nth-child(10) { width: 6%; } /* Actions */
+.flights-table th:nth-child(1) { width: 8%; }
+.flights-table th:nth-child(2) { width: 8%; }
+.flights-table th:nth-child(3) { width: 7%; }
+.flights-table th:nth-child(4) { width: 7%; }
+.flights-table th:nth-child(5) { width: 12%; }
+.flights-table th:nth-child(6) { width: 10%; }
+.flights-table th:nth-child(7) { width: 18%; }
+.flights-table th:nth-child(8) { width: 8%; }
+.flights-table th:nth-child(9) { width: 8%; }
+.flights-table th:nth-child(10) { width: 6%; }
 
 .flights-table th:hover {
     background-color: #2d6bc9;
+}
+
+.flights-table th {
+    position: relative;
+    padding-right: 30px;
 }
 
 .flights-table th::after {
     content: '↕';
     position: absolute;
     right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     opacity: 0.5;
     font-size: 0.8rem;
+    line-height: 1;
+    pointer-events: none;
 }
 
 .flights-table th.sorted-asc::after {
@@ -253,7 +261,6 @@
     vertical-align: middle;
 }
 
-/* Time display styles */
 .time-info {
     display: flex;
     flex-direction: column;
@@ -275,7 +282,6 @@
     letter-spacing: 0.3px;
 }
 
-/* For mission reports without scheduled times */
 .time-info .time-display:empty::after {
     content: 'N/A';
     color: #9ca3af;
@@ -539,7 +545,6 @@
     font-size: 0.95rem;
 }
 
-/* UTC time display in sidebar */
 .detail-item .detail-value .utc-time {
     font-family: 'Courier New', monospace;
     background: #f3f4f6;
