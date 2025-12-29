@@ -606,9 +606,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         let totalMinutes = 0;
         let totalDistance = 0;
+        let countedFlights = 0;
 
         filteredData.forEach(flight => {
-            totalMinutes += timeToMinutes(flight.flightTime);
+            if (flight.status === 'completed' || flight.status === 'diverted') {
+                totalMinutes += timeToMinutes(flight.flightTime);
+                countedFlights++;
+            }
 
             let distStr = flight.route_distance.toString();
             let distNum = parseFloat(distStr.replace(/[^\d.-]/g, ''));
@@ -628,7 +632,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('totalDistance').textContent = totalDistance.toFixed(1);
         document.getElementById('statsTotalDistance').textContent = totalDistance.toFixed(1);
 
-        const avgMinutes = filteredData.length > 0 ? totalMinutes / filteredData.length : 0;
+        const avgMinutes = countedFlights > 0 ? totalMinutes / countedFlights : 0;
         const avgHours = Math.floor(avgMinutes / 60);
         const avgRemainingMinutes = Math.floor(avgMinutes % 60);
 
@@ -657,8 +661,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     totalTime: 0
                 };
             }
-            pilotStats[pilotName].flights++;
-            pilotStats[pilotName].totalTime += timeToMinutes(flight.flightTime);
+
+            if (flight.status === 'completed' || flight.status === 'diverted') {
+                pilotStats[pilotName].flights++;
+                pilotStats[pilotName].totalTime += timeToMinutes(flight.flightTime);
+            }
         });
 
         const topPilots = Object.values(pilotStats)
@@ -689,7 +696,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
             </div>
-        `}).join('');
+        `;
+        }).join('');
     }
 
     function updatePopularRoutes() {
