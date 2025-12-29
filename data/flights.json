@@ -5,7 +5,7 @@
   "scheduled_departure" : "2025-12-29T19:35",
   "scheduled_arrival" : "2025-12-29T20:50",
   "id" : "CPX003",
-  "lastUpdated" : "2025-12-29T09:29:54.1889348",
+  "lastUpdated" : "2025-12-30T08:59:30.4215251",
   "date" : "2025-12-29",
   "timestamp" : "2025-12-29T09:29:54.1889348",
   "pilot" : "chalwk",
@@ -23,7 +23,7 @@
   "route" : "DCT MAMUS Y886 ELRUV ELRU4B",
   "cruiseAlt" : "16000",
   "route_distance" : "119",
-  "status" : "scheduled",
+  "status" : "completed",
   "source" : "SimBrief",
   "pax_count" : "5"
 }, {
