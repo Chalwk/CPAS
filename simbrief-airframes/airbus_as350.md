@@ -16,7 +16,7 @@
 * Min Runway: 100 FT (Helipad)
 * Aircraft Name: AIRBUS AS350 H125
 * Engine Type: Turbomeca Arriel 2B
-* Comments: AS350 B3e / CowanSim Payware / CPAS Mountain Operations
+* Comments: AS350 B3e
 
 ---
 
@@ -45,7 +45,7 @@
 * ICAO Equipment: SDFGRWY
 * Transponder: C
 * PBN Capability: A1B1C1D1L1O1S1
-* Extra FPL Info (Item 18): RMK/IVAO CPAS CHARTER
+* Extra FPL Info (Item 18): RMK/COWANSIM, CPAS CHARTER
 
 ---
 

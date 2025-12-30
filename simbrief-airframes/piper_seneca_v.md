@@ -1,10 +1,10 @@
-# Robinson R44
+# Piper Arrow IV Turbo
 
 ### Airframe Info:
 
-* Base Type: C172
-* ICAO Code: R44
-* Civil Registration: ZK-R44
+* Base Type: C414
+* ICAO Code: P34T
+* Civil Registration: ZK-SEN
 * Fin Number: Default
 * SELCAL Code: NONE
 * Mode-S Code: ZZZZZZ
@@ -12,26 +12,26 @@
 * Flight Rules: Default
 * Type of Flight: Default
 * Plan Units: Default
-* Max Diversion: 50 NM
-* Min Runway: 100 FT (Helipad)
-* Aircraft Name: ROBINSON R44
-* Engine Type: Lycoming O-540-F1B5
-* Comments: R44 Raven II / FlightSim.to
+* Max Diversion: 189 NM
+* Min Runway: 2700 FT
+* Aircraft Name: PIPER SENECA V
+* Engine Type: Continental TSIO-360
+* Comments: PA-34T
 
 ---
 
 ### Airframe Weights:
 
 * Weight Units: Pounds
-* Max Passengers: 3
+* Max Passengers: 5
 * Passenger Weight: 175 lbs
-* Baggage Weight: 0 lbs
-* Empty Weight: 1450 lbs
-* Max Zero Fuel Weight: 2400 lbs
-* Max Takeoff Weight: 2400 lbs
-* Max Landing Weight: 2400 lbs
-* Max Fuel Capacity: 198 lbs (33 US Gal)
-* Max Cargo Weight: none
+* Baggage Weight: 55 lbs
+* Empty Weight: 3212 lbs
+* Max Zero Fuel Weight: 4365 lbs
+* Max Takeoff Weight: 4365 lbs
+* Max Landing Weight: 4513 lbs
+* Max Fuel Capacity: 732 lbs (60 US Gal)
+* Max Cargo Weight: 1153 lbs
 * Default Freight Mode: Default (None)
 
 ---
@@ -42,9 +42,9 @@
 * Weight Category: L (Light)
 * ETOPS Threshold: 60 minutes
 * ETOPS Certification: Auto
-* ICAO Equipment: SDFGRWY
-* Transponder: C
-* PBN Capability: A1B1C1D1L1O1S1
+* ICAO Equipment: SBDFGRY
+* Transponder: S
+* PBN Capability: B2C2D2O2S2
 * Extra FPL Info (Item 18): RMK/IVAO CPAS CHARTER
 
 ---
@@ -68,9 +68,9 @@
 
 * Fuel Factor: P00
 * Cruise Level Offset: P0000
-* Service Ceiling: 14000 ft
-* Default Cruise Profile: MAX-SPEED
-* Default Climb Profile: BEST-RATE
-* Default Descent Profile: NORMAL
-* Takeoff Power: 245 HP
+* Service Ceiling: 25000 ft
+* Default Cruise Profile: 2300/31.0 RPM
+* Default Climb Profile: 120 KIAS
+* Default Descent Profile: 180 KIAS
+* Takeoff Power: N/A
 * Takeoff Thrust Flat Rating: Default

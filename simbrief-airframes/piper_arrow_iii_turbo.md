@@ -16,7 +16,7 @@
 * Min Runway: 2100 FT
 * Aircraft Name: PIPER ARROW III
 * Engine Type: TIO-360-C1A6D
-* Comments: PA-28R-201T / Just Flight MSF2020 / Lycoming Engine
+* Comments: PA-28R-201T
 
 ---
 
@@ -45,7 +45,7 @@
 * ICAO Equipment: SDFGRWY
 * Transponder: C
 * PBN Capability: A1B1C1D1L1O1S1
-* Extra FPL Info (Item 18): RMK/IVAO CPAS CHARTER
+* Extra FPL Info (Item 18): RMK/JUST FLIGHT, CPAS CHARTER
 
 ---
 

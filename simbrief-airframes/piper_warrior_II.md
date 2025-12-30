@@ -16,7 +16,7 @@
 * Min Runway: 2000 FT
 * Aircraft Name: PIPER WARRIOR II
 * Engine Type: Lycoming O-320-D3G
-* Comments: PA-28-161 / Just Flight MSF2020
+* Comments: PA-28-161
 
 ---
 

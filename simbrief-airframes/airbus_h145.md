@@ -13,10 +13,10 @@
 * Type of Flight: Default
 * Plan Units: Kilograms
 * Max Diversion: 50 NM
-* Min Runway: 5100 FT
+* Min Runway: 10 FT
 * Aircraft Name: AIRBUS H145
 * Engine Type: SAFRAN ARRIEL 2E
-* Comments: H145 Twin / Hype Performance Group
+* Comments: H145 Twin
 
 ---
 
@@ -45,7 +45,7 @@
 * ICAO Equipment: SDFGRY
 * Transponder: C
 * PBN Capability: D2
-* Extra FPL Info (Item 18): RMK/IVAO CPAS CHARTER
+* Extra FPL Info (Item 18): RMK/HYPE PERFORMANCE GROUP, CPAS CHARTER
 
 ---
 

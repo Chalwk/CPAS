@@ -16,7 +16,7 @@
 * Min Runway: 1800 FT
 * Aircraft Name: PIPER TOMAHAWK
 * Engine Type: Lycoming O-235-L2C
-* Comments: PA-38-112 / Just Flight MSF2020
+* Comments: PA-38-112
 
 ---
 
@@ -45,7 +45,7 @@
 * ICAO Equipment: SDFGRWY
 * Transponder: C
 * PBN Capability: A1B1C1D1L1O1S1
-* Extra FPL Info (Item 18): RMK/IVAO CPAS CHARTER
+* Extra FPL Info (Item 18): RMK/JUST FLIGHT, CPAS CHARTER
 
 ---
 

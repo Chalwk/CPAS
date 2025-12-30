@@ -16,7 +16,7 @@
 * Min Runway: 1900 FT
 * Aircraft Name: PIPER ARCHER II
 * Engine Type: Lycoming O-360-A4M
-* Comments: PA-28-181 / Just Flight MSF2020
+* Comments: PA-28-181
 
 ---
 
@@ -45,7 +45,7 @@
 * ICAO Equipment: SDFGRWY
 * Transponder: C
 * PBN Capability: A1B1C1D1L1O1S1
-* Extra FPL Info (Item 18): RMK/IVAO CPAS CHARTER
+* Extra FPL Info (Item 18): RMK/JUST FLIGHT, CPAS CHARTER
 
 ---
 

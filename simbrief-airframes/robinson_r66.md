@@ -16,7 +16,7 @@
 * Min Runway: 100 FT (Helipad)
 * Aircraft Name: ROBINSON R66
 * Engine Type: Rolls-Royce RR300
-* Comments: CowanSim Payware / CPAS Extended Range Ops
+* Comments: Robinson R66 Turbine / CowanSim
 
 ---
 
