@@ -15,7 +15,7 @@
 * Max Diversion: 50 NM
 * Min Runway: 10 FT
 * Aircraft Name: AIRBUS H145
-* Engine Type: SAFRAN ARRIEL 2E
+* Engine Type: Safran Arriel 2E
 * Comments: H145 Twin
 
 ---

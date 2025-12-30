@@ -15,7 +15,7 @@
 * Max Diversion: 150 NM
 * Min Runway: 2100 FT
 * Aircraft Name: PIPER ARROW III
-* Engine Type: TIO-360-C1A6D
+* Engine Type: Continental TIO-360-C1A6D
 * Comments: PA-28R-201T
 
 ---

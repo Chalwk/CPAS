@@ -15,7 +15,7 @@
 * Max Diversion: 160 NM
 * Min Runway: 2100 FT
 * Aircraft Name: PIPER ARROW IV
-* Engine Type: TIO-360-C1C6
+* Engine Type: Continental TIO-360-C1C6
 * Comments: PA-28RT-201
 
 ---
