@@ -19,6 +19,20 @@
     --transition: all 0.3s ease;
     --nav-divider-color: #000000;
     --nav-divider: '·';
+    --discord-color: #5865F2;
+    --discord-hover-color: #4752c4;
+    --note-bg-color: #f0f9ff;
+    --note-border-color: #bae6fd;
+    --note-title-color: #0369a1;
+    --code-bg-color: #1e293b;
+    --code-color: #f8fafc;
+    --footer-text-color: #4a5568;
+    --shadow-color: 0, 0, 0;
+    --shadow-alpha: 0.1;
+    --navbar-shadow: 0 2px 10px rgba(var(--shadow-color), var(--shadow-alpha));
+    --mobile-menu-shadow: 0 10px 15px rgba(var(--shadow-color), var(--shadow-alpha));
+    --white: #ffffff;
+    --black: #000000;
 }
 
 body {
@@ -92,7 +106,7 @@ p {
 
 .btn-primary {
     background-color: var(--secondary-color);
-    color: white;
+    color: var(--white);
 }
 
 .btn-primary:hover {
@@ -108,8 +122,8 @@ p {
 }
 
 .btn-discord {
-    background-color: #5865F2;
-    color: white;
+    background-color: var(--discord-color);
+    color: var(--white);
     font-size: 1.2rem;
     padding: 15px 40px;
     display: inline-flex;
@@ -122,14 +136,14 @@ p {
 }
 
 .btn-discord:hover {
-    background-color: #4752c4;
+    background-color: var(--discord-hover-color);
     transform: translateY(-3px);
     box-shadow: var(--box-shadow);
 }
 
 .navbar {
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--white);
+    box-shadow: var(--navbar-shadow);
     position: fixed;
     width: 100%;
     top: 0;
@@ -242,14 +256,14 @@ footer p {
     margin: 0 auto 15px;
     max-width: 800px;
     padding: 0 15px;
-    color: #4a5568;
+    color: var(--footer-text-color);
     font-size: 0.9rem;
 }
 
 .footer-copyright {
     text-align: center;
     padding: 25px 0;
-    color: #4a5568;
+    color: var(--footer-text-color);
     font-size: 0.9rem;
     max-width: 800px;
     margin: 0 auto;
@@ -274,7 +288,7 @@ footer p {
     margin-right: auto;
     padding: 0 15px;
     font-size: 0.9rem;
-    color: #4a5568;
+    color: var(--footer-text-color);
 }
 
 .icao-info {
@@ -282,21 +296,21 @@ footer p {
 }
 
 .airline-code-note {
-    background-color: #f0f9ff;
-    border: 1px solid #bae6fd;
+    background-color: var(--note-bg-color);
+    border: 1px solid var(--note-border-color);
     border-radius: 6px;
     padding: 15px;
     margin: 15px 0;
 }
 
 .airline-code-note h5 {
-    color: #0369a1;
+    color: var(--note-title-color);
     margin-top: 0;
 }
 
 .airline-code-note code {
-    background-color: #1e293b;
-    color: #f8fafc;
+    background-color: var(--code-bg-color);
+    color: var(--code-color);
     padding: 4px 8px;
     border-radius: 4px;
     font-weight: bold;
@@ -314,11 +328,11 @@ footer p {
         top: 70px;
         left: -100%;
         width: 100%;
-        background-color: white;
+        background-color: var(--white);
         flex-direction: column;
         align-items: center;
         padding: 20px 0;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--mobile-menu-shadow);
         transition: var(--transition);
         z-index: 999;
     }
