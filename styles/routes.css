@@ -386,6 +386,140 @@
     text-align: center;
 }
 
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 8px;
+}
+
+.pagination-btn {
+    padding: 10px 16px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    color: #4a5568;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 40px;
+    text-align: center;
+}
+
+.pagination-btn:hover:not(.disabled):not(.active) {
+    background: #f7fafc;
+    border-color: #cbd5e0;
+    color: #2d3748;
+}
+
+.pagination-btn.active {
+    background: #2d6bc9;
+    color: white;
+    border-color: #2d6bc9;
+}
+
+.pagination-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #f8fafc;
+}
+
+.pagination-btn.ellipsis {
+    background: none;
+    border: none;
+    cursor: default;
+    min-width: 20px;
+}
+
+.pagination-info {
+    margin-left: 20px;
+    color: #718096;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.cards-per-page-selector {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cards-per-page-selector label {
+    color: #4a5568;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.cards-per-page-selector select {
+    padding: 8px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background: white;
+    color: #4a5568;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.cards-per-page-selector select:hover {
+    border-color: #cbd5e0;
+}
+
+.cards-per-page-selector select:focus {
+    outline: none;
+    border-color: #2d6bc9;
+    box-shadow: 0 0 0 3px rgba(45, 107, 201, 0.1);
+}
+
+.routes-grid, .itineraries-container {
+    min-height: 500px;
+    transition: opacity 0.3s ease;
+}
+
+.routes-grid.fade-out, .itineraries-container.fade-out {
+    opacity: 0.5;
+}
+
+.pagination-tab-indicator {
+    background: #2d6bc9;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.tab-btn .page-count {
+    display: none;
+    margin-left: 8px;
+    background: #e2e8f0;
+    color: #4a5568;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.tab-btn.active .page-count {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
 @media (max-width: 768px) {
     .routes-section {
         padding: 60px 0;
@@ -439,6 +573,31 @@
         margin-bottom: 10px;
         margin-right: 0;
     }
+
+    .pagination-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    .pagination-info {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .cards-per-page-selector {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tab-btn .page-count {
+        display: inline-block;
+    }
 }
 
 @media (max-width: 576px) {
@@ -448,11 +607,21 @@
         opacity: 1;
         transform: translateY(0);
     }
+
+    .pagination-btn {
+        padding: 8px 12px;
+        min-width: 36px;
+        font-size: 0.85rem;
+    }
 }
 
 @media print {
     .routes-grid,
     .itineraries-container {
         grid-template-columns: 1fr;
+    }
+
+    .pagination-container {
+        display: none;
     }
 }

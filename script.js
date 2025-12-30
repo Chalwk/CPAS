@@ -99,6 +99,31 @@ function animateOnScroll() {
     });
 }
 
+function setupRouteTabs() {
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    if (tabButtons.length === 0) return;
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const tabId = button.getAttribute('data-tab');
+
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            button.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+
+            if (window.routesPagination) {
+                setTimeout(() => {
+                    window.routesPagination.paginateTab(tabId);
+                }, 10);
+            }
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const cards = document.querySelectorAll('.aircraft-card, .checklist-card');
     cards.forEach(card => {
@@ -108,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     setTimeout(animateOnScroll, 300);
+    setupRouteTabs();
 });
 
 window.addEventListener('scroll', animateOnScroll);
