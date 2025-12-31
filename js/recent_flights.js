@@ -317,7 +317,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="pilot-avatar">${flight.pilot.charAt(0).toUpperCase()}</div>
                     <div>
                         <div>${flight.pilot}</div>
-                        ${isMission ? '<small style="color: #6b7280;">Mission Pilot</small>' : ''}
                     </div>
                 </div>
             </td>
