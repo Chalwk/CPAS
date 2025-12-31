@@ -3,7 +3,7 @@
 ### Airframe Info:
 
 * Base Type: C172
-* ICAO Code: H125
+* ICAO Code: AS50
 * Civil Registration: ZK-H25
 * Fin Number: Default
 * SELCAL Code: NONE
@@ -14,7 +14,7 @@
 * Plan Units: Default
 * Max Diversion: 70 NM
 * Min Runway: 100 FT (Helipad)
-* Aircraft Name: AIRBUS AS350 H125
+* Aircraft Name: AIRBUS H125
 * Engine Type: Turbomeca Arriel 2B
 * Comments: AS350 B3e
 
