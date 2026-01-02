@@ -1,2 +1,16 @@
 /.idea/
 /CPAS-Discord-Bot/
+
+bot.token
+github.token
+
+.gradle/
+/gradle/wrapper/gradle-wrapper.jar
+
+/build/
+/bot-1.0.0.jar
+/run-bot.bat
+
+*.iml
+*.ipr
+*.iws
