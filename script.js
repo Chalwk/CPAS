@@ -1,4 +1,4 @@
-// Copyright (c) 2025. Jericho Crosby (Chalwk)
+// Copyright (c) 2025-2026. Jericho Crosby (Chalwk)
 
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.querySelector('.nav-menu');

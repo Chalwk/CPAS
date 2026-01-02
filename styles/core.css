@@ -1,4 +1,4 @@
-/* Copyright (c) 2025. Jericho Crosby (Chalwk) */
+/* Copyright (c) 2025-2026. Jericho Crosby (Chalwk) */
 
 * {
     margin: 0;
@@ -271,7 +271,7 @@ footer p {
 }
 
 .footer-copyright::before {
-    content: "© 2025 Coastal Peaks Air Service (CPAS). All rights reserved.";
+    content: "© 2025-2026 Coastal Peaks Air Service (CPAS). All rights reserved.";
     display: block;
     text-align: center;
     margin-bottom: 10px;

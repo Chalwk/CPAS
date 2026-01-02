@@ -29,4 +29,4 @@ services, including the Canterbury Aero Club (CAC), GCH Aviation, or Helicopter 
 
 ---
 
-© 2025 Coastal Peaks Air Service (CPAS). All rights reserved.
+© 2025-2026 Coastal Peaks Air Service (CPAS). All rights reserved.
