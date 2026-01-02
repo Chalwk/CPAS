@@ -1,9 +1,0 @@
-Coastal Peaks Air Service (CPAS) Proprietary License - Bot Code
-
-Copyright (c) Coastal Peaks Air Service (CPAS). All rights reserved.
-
-The Discord bot code contained in this folder is the exclusive property of Coastal Peaks Air Service (CPAS), represented by Jericho Crosby (Chalwk).
-
-No part of this code may be copied, distributed, modified, or used in any manner without the express written permission of the copyright holder.
-
-For inquiries about licensing, collaboration, or permission to use this bot code, contact Jericho Crosby (Chalwk) via Discord.
