@@ -28,7 +28,8 @@ Alps, offering an experience distinct from traditional virtual airlines.
 
 **© 2025-2026 Jericho Crosby (Chalwk). All rights reserved.**
 
-All content in this repository, including source code, images, and documentation, is proprietary. **You may not copy, redistribute, or use any assets without explicit prior written permission.**
+All content in this repository, including source code, images, and documentation, is proprietary. **You may not copy,
+redistribute, or use any assets without explicit prior written permission.**
 
 For the full legal terms, please read the [LICENSE](LICENSE) file.
 
