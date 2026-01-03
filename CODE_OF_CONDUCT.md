@@ -139,7 +139,7 @@
 🟡 Charter Pilot         - Basic charter operations, VFR/IFR
 🟠 Senior Charter Pilot  - Advanced operations, multiple aircraft certifications
 🔴 Lead Pilot            - Full fleet access, mentoring role
-🟣 Instructor           - Training authority, checkride administration
+🟣 Instructor            - Training authority, checkride administration
 ```
 
 ### 3. Endorsement System
