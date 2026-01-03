@@ -209,8 +209,8 @@
 
 ### 3. Support Channels
 
-* **Technical Issues:** #tech-support channel
-* **Training Questions:** #training-questions channel
+* **Technical Issues:** `#tech-support` channel
+* **Training Questions:** `#training-questions` channel
 * **Member Concerns:** Direct message to moderators or admin
 * **Suggestions:** Use designated suggestions channel
 
@@ -385,8 +385,8 @@
 ### 3. Contact Points
 
 * **General Questions:** Appropriate Discord channels
-* **Training Inquiries:** Training staff or #training-questions
-* **Technical Issues:** #tech-support channel
+* **Training Inquiries:** Training staff or `#training-questions`
+* **Technical Issues:** `#tech-support` channel
 * **Personal Concerns:** Direct message to Chalwk or senior admin
 * **Rule Violations:** Report to moderators immediately
 
