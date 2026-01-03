@@ -1,3 +1,7 @@
+© 2025-2026 Jericho Crosby (Chalwk)
+
+---
+
 # CPAS Pilot Rank Structure
 
 We operate with a structured rank system designed for progressive skill development and operational responsibility.

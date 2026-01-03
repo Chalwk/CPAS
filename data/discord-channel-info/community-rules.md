@@ -1,3 +1,7 @@
+© 2025-2026 Jericho Crosby (Chalwk)
+
+---
+
 # Coastal Peaks Air Service - Community Rules & Standards
 
 Before taking to the virtual skies, please familiarize yourself with our community standards and operational guidelines.

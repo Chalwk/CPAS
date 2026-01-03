@@ -12,6 +12,8 @@
   </a>
 </div>
 
+---
+
 # Coastal Peaks Air Service (CPAS)
 
 This repository contains the static website for **Coastal Peaks Air Service (CPAS)**, a Virtual Charter (VC) and
@@ -20,9 +22,17 @@ tours, charters, and HEMS missions, flying realistic routes across New Zealand's
 flights cover Canterbury, Christchurch, Banks Peninsula, and the dramatic landscapes of the West Coast and Southern
 Alps, offering an experience distinct from traditional virtual airlines.
 
+---
+
 ## License
 
-This repository and all associated content are proprietary. See the [LICENSE](LICENSE) file for details.
+**© 2025-2026 Jericho Crosby (Chalwk). All rights reserved.**
+
+All content in this repository, including source code, images, and documentation, is proprietary. **You may not copy, redistribute, or use any assets without explicit prior written permission.**
+
+For the full legal terms, please read the [LICENSE](LICENSE) file.
+
+---
 
 ## Disclaimer
 
@@ -30,5 +40,3 @@ Coastal Peaks Air Service (CPAS) is not affiliated with, sponsored by, or repres
 services, including the Canterbury Aero Club (CAC), GCH Aviation, or Helicopter Line.
 
 ---
-
-© 2025-2026 Coastal Peaks Air Service (CPAS). All rights reserved.

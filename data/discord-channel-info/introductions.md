@@ -1,3 +1,7 @@
+© 2025-2026 Jericho Crosby (Chalwk)
+
+---
+
 > # :warning: Privacy & Safety Reminder
 > When introducing yourself, please don't share personal information such as:
 >

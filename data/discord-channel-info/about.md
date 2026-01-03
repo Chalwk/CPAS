@@ -1,3 +1,7 @@
+© 2025-2026 Jericho Crosby (Chalwk)
+
+---
+
 Welcome to **Coastal Peaks Air Service** (CPAS), a Virtual Charter (VC) and specialty flight operator for Microsoft
 Flight Simulator. We operate general aviation aircraft and helicopters for tours, charters, and HEMS missions, flying
 realistic routes across New Zealand's South Island. Our flights cover Canterbury, Christchurch, Banks Peninsula, and the

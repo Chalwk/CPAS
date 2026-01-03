@@ -1,4 +1,6 @@
-Copyright (c) 2025-2026. Jericho Crosby (Chalwk)
+© 2025-2026 Jericho Crosby (Chalwk)
+
+---
 
 ```
 CPAS - COASTAL PEAKS AIR SERVICE
