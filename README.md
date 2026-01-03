@@ -2,6 +2,8 @@
   <img src="images/logo.png" alt="Coastal Peaks Air Service" width="350">
 </div>
 
+---
+
 <div align="center">
   <a href="https://chalwk.github.io/CPAS/">
     <img src="https://img.shields.io/badge/VISIT_WEBSITE-6ee7b7?style=for-the-badge&logo=github" 
