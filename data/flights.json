@@ -411,7 +411,7 @@
   "scheduled_departure" : "2026-01-05T15:45",
   "scheduled_arrival" : "2026-01-05T17:35",
   "id" : "CPX009",
-  "lastUpdated" : "2026-01-06T07:41:59.8935307",
+  "lastUpdated" : "2026-01-06T07:47:41.5035332",
   "date" : "2026-01-06",
   "timestamp" : "2026-01-06T07:41:59.8945299",
   "pilot" : "chalwk",
@@ -429,7 +429,7 @@
   "route" : "PALS1R GUPUT Y266 ELRUV ELRU2A",
   "cruiseAlt" : "24000",
   "route_distance" : "218",
-  "status" : "completed",
+  "status" : "scheduled",
   "source" : "SimBrief",
   "pax_count" : "3"
 } ]
