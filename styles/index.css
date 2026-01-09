@@ -1,7 +1,7 @@
 /* © 2025-2026 Jericho Crosby (Chalwk) */
 
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url('../images/hero_background.png');
     background-size: cover;
     background-position: center;
@@ -205,7 +205,7 @@
 .code-value {
     display: block;
     font-family: 'Montserrat', monospace;
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--secondary-color);
     margin: 10px 0;
