@@ -1,0 +1,21 @@
+title: Coastal Peaks Air Service (CPAS)
+description: Virtual Charter & Specialty Flight Operations for Microsoft Flight Simulator
+baseurl: "/CPAS"
+url: "https://chalwk.github.io"
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - .gitignore
+  - README.md
+  - LICENSE
+  - CODE_OF_CONDUCT.md
+  - run.bat
+
+collections:
+  checklists:
+    output: true
+    permalink: /checklists/:name.html

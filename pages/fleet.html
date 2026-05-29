@@ -1,42 +1,9 @@
-<!-- © 2025-2026 Jericho Crosby (Chalwk) -->
+---
+layout: default
+title: Our Fleet
+---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Our Fleet - Coastal Peaks Air Service</title>
-    <link href="../styles/fleet.css" rel="stylesheet">
-    <link href="../styles/index.css" rel="stylesheet">
-    <link href="../styles/core.css" rel="stylesheet">
-    <link href="../images/logo.png" rel="icon" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
-          rel="stylesheet">
-</head>
-<body>
-
-<nav class="navbar">
-    <div class="container nav-container">
-        <a class="logo" href="../index.html">
-            <span class="logo-text">CPAS</span>
-            <span class="logo-subtitle">Coastal Peaks Air Service</span>
-        </a>
-        <ul class="nav-menu">
-            <li><a href="../index.html">Home</a></li>
-            <li><a class="active" href="fleet.html">Fleet</a></li>
-            <li><a href="routes.html">Routes</a></li>
-            <li><a href="training.html">Training</a></li>
-            <li><a href="operations.html">Operations</a></li>
-            <li><a href="flights.html">Live Flights</a></li>
-            <li><a href="addons.html">Add-Ons</a></li>
-            <li><a href="../index.html#discord">Join</a></li>
-        </ul>
-        <button class="menu-toggle" id="menuToggle">
-            <i class="fas fa-bars"></i>
-        </button>
-    </div>
-</nav>
+<!-- Copyright (c) 2025-2026 Jericho Crosby (Chalwk) -->
 
 <section class="checklists-section" style="margin-top: 70px;">
     <div class="container">
@@ -63,14 +30,13 @@
                     <p><strong>Capacity:</strong> 4 total (1 pilot + 3 passengers)</p>
                     <p><strong>Add-on by:</strong> <a
                             href="https://flightsim.to/file/20566/robinson-r44-raven-ii-helicopter-project"
-                            rel="noopener noreferrer" target="_blank">Rotor Sim Pilot</a></p>
-                    <p><strong>SimBrief Airframe:</strong> <a href="#"
-                                                              rel="noopener noreferrer" target="_blank">N/A</a>
-                    </p>
+                            target="_blank">Rotor Sim Pilot</a></p>
+                    <p><strong>SimBrief Airframe:</strong> <a href="#">N/A</a></p>
                     <p>A nimble and reliable light helicopter, perfect for training, sightseeing, and small charter
-                        operations. Ideal for pilots seeking hands-on utility and versatile missions.</p>
+                        operations.</p>
                     <div class="checklist-link">
-                        <a class="btn btn-primary" href="../pages/checklists/robinson_r44.html">View Checklist</a>
+                        <a class="btn btn-primary" href="{{ '/checklists/robinson_r44.html' | relative_url }}">View
+                            Checklist</a>
                     </div>
                 </div>
             </div>
@@ -88,16 +54,14 @@
                     <p><strong>ICAO Code:</strong> R66</p>
                     <p><strong>Role:</strong> Extended range passenger transport, utility operations</p>
                     <p><strong>Capacity:</strong> 5 total (1 pilot + 4 passengers)</p>
-                    <p><strong>Add-on by:</strong> <a href="https://cowansim.com/product/r66-for-msfs/"
-                                                      rel="noopener noreferrer"
-                                                      target="_blank">CowanSim Group</a></p>
-                    <p><strong>SimBrief Airframe:</strong> <a href="#"
-                                                              rel="noopener noreferrer" target="_blank">N/A</a>
-                    </p>
+                    <p><strong>Add-on by:</strong> <a href="https://cowansim.com/product/r66-for-msfs/" target="_blank">CowanSim
+                        Group</a></p>
+                    <p><strong>SimBrief Airframe:</strong> <a href="#">N/A</a></p>
                     <p>A modern turbine helicopter offering greater range and comfort. Suited for executive transport,
                         charter missions, and utility operations.</p>
                     <div class="checklist-link">
-                        <a class="btn btn-primary" href="../pages/checklists/robinson_r66.html">View Checklist</a>
+                        <a class="btn btn-primary" href="{{ '/checklists/robinson_r66.html' | relative_url }}">View
+                            Checklist</a>
                     </div>
                 </div>
             </div>
@@ -116,15 +80,13 @@
                     <p><strong>Role:</strong> Versatile utility, scenic flights, alpine operations</p>
                     <p><strong>Capacity:</strong> 6 total (1 pilot + 5 passengers)</p>
                     <p><strong>Add-on by:</strong> <a href="https://cowansim.com/product/h125-for-msfs/"
-                                                      rel="noopener noreferrer"
                                                       target="_blank">CowanSim Group</a></p>
-                    <p><strong>SimBrief Airframe:</strong> <a href="#"
-                                                              rel="noopener noreferrer" target="_blank">N/A</a>
-                    </p>
+                    <p><strong>SimBrief Airframe:</strong> <a href="#">N/A</a></p>
                     <p>A high-performance single-engine helicopter, ideal for sightseeing, utility work, and mountain
                         operations.</p>
                     <div class="checklist-link">
-                        <a class="btn btn-primary" href="../pages/checklists/airbus_as350_h125.html">View Checklist</a>
+                        <a class="btn btn-primary" href="{{ '/checklists/airbus_as350_h125.html' | relative_url }}">View
+                            Checklist</a>
                     </div>
                 </div>
             </div>
@@ -142,17 +104,16 @@
                     <p><strong>ICAO Code:</strong> H145</p>
                     <p><strong>Role:</strong> Premium passenger transport, SAR, high-altitude operations</p>
                     <p><strong>Capacity:</strong> 9 total (1 pilot + 8 passengers)</p>
-                    <p><strong>Add-on by:</strong> <a
-                            href="https://www.hypeperformancegroup.com/products/xxxx?srsltid=AfmBOoqLan0ujLySnW-iSfqZDeCyLUZa2R2k8ctacA3RSPwpFCSLlTno"
-                            rel="noopener noreferrer" target="_blank">Hype Performance Group</a></p>
+                    <p><strong>Add-on by:</strong> <a href="https://www.hypeperformancegroup.com/products/xxxx"
+                                                      target="_blank">Hype Performance Group</a></p>
                     <p><strong>SimBrief Airframe:</strong> <a
-                            href="https://dispatch.simbrief.com/airframes/share/340778_1766366263601"
-                            rel="noopener noreferrer" target="_blank">View on SimBrief</a>
-                    </p>
+                            href="https://dispatch.simbrief.com/airframes/share/340778_1766366263601" target="_blank">View
+                        on SimBrief</a></p>
                     <p>A twin-engine helicopter optimized for passenger comfort and safety. Perfect for executive
                         charters, medevac scenarios, and high-altitude missions.</p>
                     <div class="checklist-link">
-                        <a class="btn btn-primary" href="../pages/checklists/airbus_h145.html">View Checklist</a>
+                        <a class="btn btn-primary" href="{{ '/checklists/airbus_h145.html' | relative_url }}">View
+                            Checklist</a>
                     </div>
                 </div>
             </div>
@@ -172,15 +133,15 @@
                     <p><strong>Capacity:</strong> 2 total (1 pilot + 1 passenger)</p>
                     <p><strong>Add-on by:</strong> <a
                             href="https://www.justflight.com/product/pa38-tomahawk-microsoft-flight-simulator"
-                            rel="noopener noreferrer" target="_blank">Just Flight</a></p>
+                            target="_blank">Just Flight</a></p>
                     <p><strong>SimBrief Airframe:</strong> <a
-                            href="https://dispatch.simbrief.com/airframes/share/340778_1766333364135"
-                            rel="noopener noreferrer" target="_blank">View on SimBrief</a>
-                    </p>
+                            href="https://dispatch.simbrief.com/airframes/share/340778_1766333364135" target="_blank">View
+                        on SimBrief</a></p>
                     <p>A lightweight, responsive trainer aircraft perfect for student pilots, touch-and-go practice, and
                         short recreational flights.</p>
                     <div class="checklist-link">
-                        <a class="btn btn-primary" href="../pages/checklists/piper_tomahawk.html">View Checklist</a>
+                        <a class="btn btn-primary" href="{{ '/checklists/piper_tomahawk.html' | relative_url }}">View
+                            Checklist</a>
                     </div>
                 </div>
             </div>
@@ -200,14 +161,15 @@
                     <p><strong>Capacity:</strong> 4 total (1 pilot + 3 passengers)</p>
                     <p><strong>Add-on by:</strong> <a
                             href="https://www.justflight.com/in-development/pa28-161-warrior-ii-microsoft-flight-simulator"
-                            rel="noopener noreferrer" target="_blank">Just Flight</a></p>
+                            target="_blank">Just Flight</a></p>
                     <p><strong>SimBrief Airframe:</strong> <a
-                            href="https://dispatch.simbrief.com/airframes/share/340778_1766244084642"
-                            rel="noopener noreferrer" target="_blank">View on SimBrief</a></p>
+                            href="https://dispatch.simbrief.com/airframes/share/340778_1766244084642" target="_blank">View
+                        on SimBrief</a></p>
                     <p>A reliable single-engine aircraft for training, local hops, and light charter work. Its forgiving
                         handling makes it ideal for newer pilots.</p>
                     <div class="checklist-link">
-                        <a class="btn btn-primary" href="../pages/checklists/piper_warrior_II.html">View Checklist</a>
+                        <a class="btn btn-primary" href="{{ '/checklists/piper_warrior_II.html' | relative_url }}">View
+                            Checklist</a>
                     </div>
                 </div>
             </div>
@@ -226,17 +188,16 @@
                     <p><strong>Role:</strong> Comfortable passenger shuttle, longer-range charters</p>
                     <p><strong>Capacity:</strong> 4 total (1 pilot + 3 passengers)</p>
                     <p><strong>Add-on by:</strong> <a
-                            href="https://www.carenado.com/sitecarenado/product/pa28-181-msfs2020/"
-                            rel="noopener noreferrer"
-                            target="_blank">Carenado</a></p>
-                    <p><strong>SimBrief Airframe:</strong> <a
-                            href="https://dispatch.simbrief.com/airframes/share/340778_1766328917179"
-                            rel="noopener noreferrer" target="_blank">View on SimBrief</a>
+                            href="https://www.carenado.com/sitecarenado/product/pa28-181-msfs2020/" target="_blank">Carenado</a>
                     </p>
+                    <p><strong>SimBrief Airframe:</strong> <a
+                            href="https://dispatch.simbrief.com/airframes/share/340778_1766328917179" target="_blank">View
+                        on SimBrief</a></p>
                     <p>A versatile and comfortable four-seat aircraft suited for short to medium-range charters and
                         recreational flights.</p>
                     <div class="checklist-link">
-                        <a class="btn btn-primary" href="./checklists/piper_archer_II.html">View Checklist</a>
+                        <a class="btn btn-primary" href="{{ '/checklists/piper_archer_II.html' | relative_url }}">View
+                            Checklist</a>
                     </div>
                 </div>
             </div>
@@ -256,15 +217,15 @@
                     <p><strong>Capacity:</strong> 4 total (1 pilot + 3 passengers)</p>
                     <p><strong>Add-on by:</strong> <a
                             href="https://www.justflight.com/product/pa-28r-arrow-iii-microsoft-flight-simulator"
-                            rel="noopener noreferrer" target="_blank">Just Flight</a></p>
+                            target="_blank">Just Flight</a></p>
                     <p><strong>SimBrief Airframe:</strong> <a
-                            href="https://dispatch.simbrief.com/airframes/share/340778_1766329122254"
-                            rel="noopener noreferrer" target="_blank">View on SimBrief</a>
-                    </p>
+                            href="https://dispatch.simbrief.com/airframes/share/340778_1766329122254" target="_blank">View
+                        on SimBrief</a></p>
                     <p>A retractable-gear single-engine aircraft for advanced pilot operations, perfect for
                         cross-country charters and complex flight scenarios.</p>
                     <div class="checklist-link">
-                        <a class="btn btn-primary" href="../pages/checklists/piper_arrow_iii.html">View Checklist</a>
+                        <a class="btn btn-primary" href="{{ '/checklists/piper_arrow_iii.html' | relative_url }}">View
+                            Checklist</a>
                     </div>
                 </div>
             </div>
@@ -284,15 +245,14 @@
                     <p><strong>Capacity:</strong> 4 total (1 pilot + 3 passengers)</p>
                     <p><strong>Add-on by:</strong> <a
                             href="https://www.justflight.com/product/pa-28r-turbo-arrow-iii-iv-microsoft-flight-simulator"
-                            rel="noopener noreferrer" target="_blank">Just Flight</a></p>
+                            target="_blank">Just Flight</a></p>
                     <p><strong>SimBrief Airframe:</strong> <a
-                            href="https://dispatch.simbrief.com/airframes/share/340778_1766329587898"
-                            rel="noopener noreferrer" target="_blank">View on SimBrief</a>
-                    </p>
+                            href="https://dispatch.simbrief.com/airframes/share/340778_1766329587898" target="_blank">View
+                        on SimBrief</a></p>
                     <p>A turbocharged variant offering higher speeds and better climb rates. Ideal for advanced pilots
                         operating at higher altitudes or longer charter routes.</p>
                     <div class="checklist-link">
-                        <a class="btn btn-primary" href="../pages/checklists/piper_arrow_iii_turbo.html">View
+                        <a class="btn btn-primary" href="{{ '/checklists/piper_arrow_iii_turbo.html' | relative_url }}">View
                             Checklist</a>
                     </div>
                 </div>
@@ -313,15 +273,14 @@
                     <p><strong>Capacity:</strong> 4 total (1 pilot + 3 passengers)</p>
                     <p><strong>Add-on by:</strong> <a
                             href="https://www.justflight.com/product/pa-28r-turbo-arrow-iii-iv-microsoft-flight-simulator"
-                            rel="noopener noreferrer" target="_blank">Just Flight</a></p>
+                            target="_blank">Just Flight</a></p>
                     <p><strong>SimBrief Airframe:</strong> <a
-                            href="https://dispatch.simbrief.com/airframes/share/340778_1766329702945"
-                            rel="noopener noreferrer" target="_blank">View on SimBrief</a>
-                    </p>
+                            href="https://dispatch.simbrief.com/airframes/share/340778_1766329702945" target="_blank">View
+                        on SimBrief</a></p>
                     <p>Premium complex single-engine aircraft with turbo performance, suited for executive charters,
                         long-range missions, and high-performance flight training.</p>
                     <div class="checklist-link">
-                        <a class="btn btn-primary" href="../pages/checklists/piper_arrow_iv_turbo.html">View
+                        <a class="btn btn-primary" href="{{ '/checklists/piper_arrow_iv_turbo.html' | relative_url }}">View
                             Checklist</a>
                     </div>
                 </div>
@@ -340,33 +299,38 @@
                     <p><strong>ICAO Code:</strong> P34T</p>
                     <p><strong>Role:</strong> Light twin charter, IFR operations, alpine and coastal routes</p>
                     <p><strong>Capacity:</strong> 6 total (1-2 pilots + 4-5 passengers)</p>
-                    <p><strong>Add-on by:</strong>
-                        <a href="https://www.carenado.com/sitecarenado/product/pa34t-v-msfs2020/"
-                           rel="noopener noreferrer" target="_blank">Carenado</a>
+                    <p><strong>Add-on by:</strong> <a
+                            href="https://www.carenado.com/sitecarenado/product/pa34t-v-msfs2020/" target="_blank">Carenado</a>
                     </p>
-                    <p><strong>SimBrief Airframe:</strong>
-                        <a href="https://dispatch.simbrief.com/airframes/share/340778_1766899226380"
-                           rel="noopener noreferrer" target="_blank">View on SimBrief</a>
-                    </p>
-                    <p>
-                        A capable and refined light twin-engine aircraft offering redundancy, stability, and true IFR
+                    <p><strong>SimBrief Airframe:</strong> <a
+                            href="https://dispatch.simbrief.com/airframes/share/340778_1766899226380" target="_blank">View
+                        on SimBrief</a></p>
+                    <p>A capable and refined light twin-engine aircraft offering redundancy, stability, and true IFR
                         capability. Ideal for longer regional charters, poor-weather operations, and mountainous terrain
-                        where performance margins matter.
-                    </p>
+                        where performance margins matter.</p>
                     <div class="checklist-link">
-                        <a class="btn btn-primary" href="../pages/checklists/piper_seneca_v.html">
-                            View Checklist
-                        </a>
+                        <a class="btn btn-primary" href="{{ '/checklists/piper_seneca_v.html' | relative_url }}">View
+                            Checklist</a>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
 
-<footer class="footer-copyright"><p></p></footer>
+<div id="perfModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="modalAircraftName">Performance Data</h2>
+            <span id="closeModalBtn" class="modal-close">&times;</span>
+        </div>
+        <div id="modalContent" class="modal-body">
+            <p>Loading performance data...</p>
+        </div>
+    </div>
+</div>
 
-<script src="../script.js"></script>
 <script>
     function animateChecklistsOnScroll() {
         const checklistCards = document.querySelectorAll('.checklist-card');
@@ -380,7 +344,7 @@
         });
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const checklistCards = document.querySelectorAll('.checklist-card');
         checklistCards.forEach(card => {
             card.style.opacity = '0';
@@ -392,5 +356,138 @@
 
     window.addEventListener('scroll', animateChecklistsOnScroll);
 </script>
-</body>
-</html>
+
+<script>
+    const performanceFiles = {
+        "Robinson R44": "robinson_r44.lnmperf",
+        "Robinson R66": "robinson_r66.lnmperf",
+        "Airbus H125": "airbus_as350_h125.lnmperf",
+        "Airbus H145": "airbus_h145.lnmperf",
+        "Piper Tomahawk": "piper_tomahawk.lnmperf",
+        "Piper Warrior II": "piper_warrior_II.lnmperf"
+    };
+
+    function fetchAndShowPerformance(aircraftName) {
+        const filename = performanceFiles[aircraftName];
+        if (!filename) {
+            document.getElementById("modalContent").innerHTML = `<p class="error">No performance file found for "${aircraftName}".</p>`;
+            document.getElementById("perfModal").style.display = "block";
+            return;
+        }
+
+        const baseUrl = "{{ '/' | relative_url }}".replace(/\/$/, '');
+        const perfPath = `${baseUrl}/little_navmap/${encodeURIComponent(filename)}`;
+
+        fetch(perfPath)
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP ${response.status} - file not found`);
+                return response.text();
+            })
+            .then(xmlText => {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, "text/xml");
+                if (xmlDoc.querySelector("parsererror")) throw new Error("Invalid XML format");
+
+                const getText = (selector) => xmlDoc.querySelector(selector)?.textContent || "-";
+
+                const name = getText("Name");
+                const aircraftType = getText("AircraftType");
+                const description = getText("Description");
+                const fuelAsVolume = xmlDoc.querySelector("FuelAsVolume")?.textContent === "1";
+                const jetFuel = xmlDoc.querySelector("JetFuel")?.textContent === "1";
+
+                const climbFuel = getText("Climb FuelFlowLbsGalPerHour");
+                const climbSpeed = getText("Climb SpeedKtsTAS");
+                const climbVert = getText("Climb VertSpeedFtPerMin");
+
+                const cruiseFuel = getText("Cruise FuelFlowLbsGalPerHour");
+                const cruiseSpeed = getText("Cruise SpeedKtsTAS");
+
+                const descentFuel = getText("Descent FuelFlowLbsGalPerHour");
+                const descentSpeed = getText("Descent SpeedKtsTAS");
+                const descentVert = getText("Descent VertSpeedFtPerMin");
+
+                const altFuel = getText("Alternate FuelFlowLbsGalPerHour");
+                const altSpeed = getText("Alternate SpeedKtsTAS");
+
+                const usableFuel = getText("UsableFuelLbsGal");
+                const reserveFuel = getText("ReserveFuelLbsGal");
+                const taxiFuel = getText("TaxiFuelLbsGal");
+                const contingency = getText("ContingencyFuelPercent");
+
+                let html = `<p><strong>${name}</strong> (${aircraftType})</p>`;
+                if (description && description !== "-") html += `<p><em>${description}</em></p>`;
+
+                html += `<table class="perf-table">
+                            <thead>
+                                <tr><th>Phase</th><th>Fuel Flow (${fuelAsVolume ? "gal/hr" : "lbs/hr"})</th><th>Speed (KTAS)</th><th>Vert. Speed (fpm)</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Climb</td><td>${climbFuel}</td><td>${climbSpeed}</td><td>${climbVert}</td></tr>
+                                <tr><td>Cruise</td><td>${cruiseFuel}</td><td>${cruiseSpeed}</td><td>-</td></tr>
+                                <tr><td>Descent</td><td>${descentFuel}</td><td>${descentSpeed}</td><td>${descentVert}</td></tr>
+                                <tr><td>Alternate</td><td>${altFuel}</td><td>${altSpeed}</td><td>-</td></tr>
+                            </tbody>
+                         </table>`;
+
+                html += `<table class="perf-table">
+                            <tbody>
+                                <tr><th>Usable Fuel</th><td>${usableFuel} ${fuelAsVolume ? "gal" : "lbs"}</td></tr>
+                                <tr><th>Reserve Fuel</th><td>${reserveFuel} ${fuelAsVolume ? "gal" : "lbs"}</td></tr>
+                                <tr><th>Taxi Fuel</th><td>${taxiFuel} ${fuelAsVolume ? "gal" : "lbs"}</td></tr>
+                                <tr><th>Contingency</th><td>${contingency}%</td></tr>
+                                <tr><th>Fuel Type</th><td>${jetFuel ? "Jet Fuel" : "Avgas"}</td></tr>
+                            </tbody>
+                         </table>`;
+
+                document.getElementById("modalContent").innerHTML = html;
+                document.getElementById("modalAircraftName").innerText = name;
+                document.getElementById("perfModal").style.display = "block";
+            })
+            .catch(error => {
+                console.error("Performance load error:", error);
+                document.getElementById("modalContent").innerHTML = `<p class="error">Could not load performance data for "${aircraftName}".<br>Make sure the file "<strong>${filename}</strong>" exists inside the <code>_little-navmap</code> folder.</p>`;
+                document.getElementById("perfModal").style.display = "block";
+            });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".checklist-card");
+        cards.forEach(card => {
+            const aircraftTitle = card.querySelector(".checklist-header h3");
+            if (!aircraftTitle) return;
+            const aircraftName = aircraftTitle.innerText.trim();
+
+            const checklistDiv = card.querySelector(".checklist-link");
+            if (!checklistDiv) return;
+
+            const perfBtn = document.createElement("a");
+            perfBtn.href = "javascript:void(0)";
+            perfBtn.className = "btn btn-secondary";
+            perfBtn.innerText = "View Performance";
+            perfBtn.style.marginLeft = "10px";
+            perfBtn.addEventListener("click", (e) => {
+                e.preventDefault();
+                fetchAndShowPerformance(aircraftName);
+            });
+
+            const existingBtn = checklistDiv.querySelector(".btn-primary");
+            if (existingBtn) {
+                existingBtn.insertAdjacentElement("afterend", perfBtn);
+            } else {
+                checklistDiv.appendChild(perfBtn);
+            }
+        });
+
+        const modal = document.getElementById("perfModal");
+        const closeBtn = document.getElementById("closeModalBtn");
+        if (closeBtn) {
+            closeBtn.onclick = function () {
+                modal.style.display = "none";
+            };
+        }
+        window.onclick = function (event) {
+            if (event.target === modal) modal.style.display = "none";
+        };
+    });
+</script>

@@ -1,42 +1,9 @@
-<!-- © 2025-2026 Jericho Crosby (Chalwk) -->
+---
+layout: default
+title: Flights
+---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Live Flights - Coastal Peaks Air Service</title>
-    <link href="../styles/index.css" rel="stylesheet">
-    <link href="../styles/core.css" rel="stylesheet">
-    <link href="../styles/flights.css" rel="stylesheet">
-    <link href="../images/logo.png" rel="icon" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
-          rel="stylesheet">
-</head>
-<body>
-
-<nav class="navbar">
-    <div class="container nav-container">
-        <a class="logo" href="../index.html">
-            <span class="logo-text">CPAS</span>
-            <span class="logo-subtitle">Coastal Peaks Air Service</span>
-        </a>
-        <ul class="nav-menu">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="fleet.html">Fleet</a></li>
-            <li><a href="routes.html">Routes</a></li>
-            <li><a href="training.html">Training</a></li>
-            <li><a href="operations.html">Operations</a></li>
-            <li><a class="active" href="flights.html">Live Flights</a></li>
-            <li><a href="addons.html">Add-Ons</a></li>
-            <li><a href="../index.html#discord">Join</a></li>
-        </ul>
-        <button class="menu-toggle" id="menuToggle">
-            <i class="fas fa-bars"></i>
-        </button>
-    </div>
-</nav>
+<!-- Copyright (c) 2025-2026 Jericho Crosby (Chalwk) -->
 
 <section class="flights-section" style="margin-top: 70px;">
     <div class="container">
@@ -121,9 +88,7 @@
                         <th>Actions</th>
                     </tr>
                     </thead>
-                    <tbody id="flightsTableBody">
-                    <!-- Populated by JavaScript -->
-                    </tbody>
+                    <tbody id="flightsTableBody"></tbody>
                 </table>
             </div>
 
@@ -303,22 +268,19 @@
 
             <div class="summary-card">
                 <h4><i class="fas fa-trophy"></i> Top Pilots This Month</h4>
-                <div class="top-pilots" id="topPilots">
-                    <!-- Populated by JavaScript -->
-                </div>
+                <div class="top-pilots" id="topPilots"></div>
             </div>
 
             <div class="summary-card">
                 <h4><i class="fas fa-plane-departure"></i> Most Popular Routes</h4>
-                <div class="popular-routes" id="popularRoutes">
-                    <!-- Populated by JavaScript -->
-                </div>
+                <div class="popular-routes" id="popularRoutes"></div>
             </div>
         </div>
 
         <div class="data-refresh">
-            <p><i class="fas fa-sync-alt"></i> Flight data is updated automatically. Last updated: <span
-                    id="lastUpdated">1</span></p>
+            <p><i class="fas fa-sync-alt"></i>
+                Flight data is updated automatically. Last updated: <span id="lastUpdated">1</span>
+            </p>
             <button class="btn btn-small" id="refreshData">
                 <i class="fas fa-redo"></i> Refresh Data
             </button>
@@ -326,9 +288,7 @@
     </div>
 </section>
 
-<footer class="footer-copyright"><p></p></footer>
-
-<script src="../script.js"></script>
-<script src="../js/recent_flights.js"></script>
-</body>
-</html>
+<script>
+    window.CPAS_BASEURL = '{{ site.baseurl }}';
+</script>
+<script src="{{ '/assets/js/recent_flights.js' | relative_url }}"></script>

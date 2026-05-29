@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="images/logo.png" alt="Coastal Peaks Air Service" width="350">
+  <img src="assets/images/logo.png" alt="Coastal Peaks Air Service" width="350">
 </div>
 
 ---
@@ -26,7 +26,7 @@ Alps, offering an experience distinct from traditional virtual airlines.
 
 ## License
 
-**© 2025-2026 Jericho Crosby (Chalwk). All rights reserved.**
+**Copyright (c) 2025-2026 Jericho Crosby (Chalwk). All rights reserved.**
 
 All content in this repository, including source code, images, and documentation, is proprietary. **You may not copy,
 redistribute, or use any assets without explicit prior written permission.**

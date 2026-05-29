@@ -1,54 +1,23 @@
-<!-- © 2025-2026 Jericho Crosby (Chalwk) -->
+---
+layout: default
+title: Home
+---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Coastal Peaks Air Service - (CPAS)</title>
-    <link href="styles/index.css" rel="stylesheet">
-    <link href="styles/core.css" rel="stylesheet">
-    <link href="images/logo.png" rel="icon" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
-          rel="stylesheet">
-</head>
-<body>
+<!-- Copyright (c) 2025-2026 Jericho Crosby (Chalwk) -->
 
-<nav class="navbar">
-    <div class="container nav-container">
-        <a class="logo" href="index.html">
-            <span class="logo-text">CPAS</span>
-            <span class="logo-subtitle">Coastal Peaks Air Service</span>
-        </a>
-        <ul class="nav-menu">
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="pages/fleet.html">Fleet</a></li>
-            <li><a href="pages/routes.html">Routes</a></li>
-            <li><a href="pages/training.html">Training</a></li>
-            <li><a href="pages/operations.html">Operations</a></li>
-            <li><a href="pages/flights.html">Live Flights</a></li>
-            <li><a href="pages/addons.html">Add-Ons</a></li>
-            <li><a href="#discord">Join</a></li>
-        </ul>
-        <button class="menu-toggle" id="menuToggle">
-            <i class="fas fa-bars"></i>
-        </button>
-    </div>
-</nav>
-
-<header class="hero" id="home">
+<section class="hero" id="home">
     <div class="hero-overlay">
         <div class="container">
             <div class="hero-logo-container">
-                <img alt="Coastal Peaks Air Service Logo" class="hero-logo" src="images/logo.png">
+                <img alt="Coastal Peaks Air Service Logo" class="hero-logo"
+                     src="{{ '/assets/images/logo.png' | relative_url }}">
             </div>
             <p class="hero-tagline">Linking the Garden City to the West Coast</p>
             <p class="hero-subtitle">Virtual Charter (VC) & Specialty Flight Operations</p>
             <a class="btn btn-primary" href="#discord">Join Our Virtual Charter</a>
         </div>
     </div>
-</header>
+</section>
 
 <section class="section about-section" id="about">
     <div class="container">
@@ -64,7 +33,7 @@
             </div>
             <div class="about-image">
                 <img alt="Mountain and coastal landscape"
-                     src="images/about.png">
+                     src="assets/images/about.png">
             </div>
             <div class="combined-info-box">
                 <div class="combined-box-header">
@@ -148,9 +117,3 @@
         </div>
     </div>
 </section>
-
-<footer class="footer-copyright"><p></p></footer>
-
-<script src="script.js"></script>
-</body>
-</html>

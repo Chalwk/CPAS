@@ -1,0 +1,112 @@
+/* Copyright (c) 2025-2026 Jericho Crosby (Chalwk) */
+
+.checklist-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #f9fafc;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.checklist-container h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #1e2a3a;
+    border-left: 5px solid #2c7da0;
+    padding-left: 1rem;
+}
+
+.checklist-container h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+
+.checklist-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.checklist-content th,
+.checklist-content td {
+    border: 1px solid #e2e8f0;
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.checklist-content th {
+    background-color: #2c7da0;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.checklist-content tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.checklist-content tr:hover {
+    background-color: #f1f5f9;
+    transition: background 0.2s ease;
+}
+
+.checklist-content td:first-child {
+    font-weight: 500;
+    background-color: #fef9e3;
+    width: 30%;
+}
+
+.checklist-content ul,
+.checklist-content ol {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.checklist-content li {
+    margin: 0.25rem 0;
+}
+
+.checklist-container .back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    background: #e2e8f0;
+    color: #1e2a3a;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.checklist-container .back-link:hover {
+    background: #cbd5e1;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .checklist-container {
+        padding: 1rem;
+    }
+    .checklist-content table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .checklist-content td:first-child {
+        width: auto;
+    }
+}

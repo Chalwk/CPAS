@@ -1,0 +1,20 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% if page.title %}{{ page.title }} - {% endif %}
+        {{ site.title }}
+    </title>
+    <link rel="stylesheet" href="{{ '/assets/css/core.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/flights.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/addons.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/fleet.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/operations.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/routes.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/training.css' | relative_url }}">
+    <link rel="icon" href="{{ '/images/logo.png' | relative_url }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    {% seo %}
+</head>

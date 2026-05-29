@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article class="airframe-container">
+    <div class="container">
+        <h1>{{ page.title | default: page.name | replace: ".md", "" }}</h1>
+        <div class="airframe-content">
+            {{ content }}
+        </div>
+        <p><a href="{{ '/pages/fleet.html' | relative_url }}">← Back to Fleet</a></p>
+    </div>
+</article>
