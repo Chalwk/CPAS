@@ -1,6 +1,7 @@
 ---
 layout: checklist
 title: Robinson R44 Raven II
+perf_file: robinson_r44.lnmperf
 ---
 
 # Robinson R44 Raven II

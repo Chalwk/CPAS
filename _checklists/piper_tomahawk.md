@@ -1,6 +1,7 @@
 ---
 layout: checklist
 title: Piper Tomahawk (PA-38-112)
+perf_file: piper_tomahawk.lnmperf
 ---
 
 # Piper Tomahawk (PA-38-112)

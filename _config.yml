@@ -135,11 +135,9 @@ sass:
 
 # jekyll-seo-tag - injects <title>, meta description, OG/Twitter tags via {% seo %}.
 # jekyll-sitemap - auto-generates sitemap.xml at build time.
-# jekyll-feed    - generates /feed.xml (Atom) for the site.
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-feed
 
 # -----------------------------------------------------------------------------
 # Collections

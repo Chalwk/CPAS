@@ -1,6 +1,7 @@
 ---
 layout: checklist
 title: Airbus H125 (AS350 B3e)
+perf_file: airbus_as350_h125.lnmperf
 ---
 
 # Airbus H125 (AS350 B3e)

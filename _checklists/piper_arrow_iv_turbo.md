@@ -1,6 +1,7 @@
 ---
 layout: checklist
 title: Piper Turbo Arrow IV (PA-28RT-201)
+perf_file: piper_turbo_arrow_IV.lnmperf
 ---
 
 # Piper Turbo Arrow IV (PA-28RT-201)

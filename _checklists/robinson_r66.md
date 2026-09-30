@@ -1,6 +1,7 @@
 ---
 layout: checklist
 title: Robinson R66 Turbine
+perf_file: robinson_r66.lnmperf
 ---
 
 # Robinson R66 Turbine

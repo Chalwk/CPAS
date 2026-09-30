@@ -1,6 +1,7 @@
 ---
 layout: checklist
 title: Piper Turbo Arrow III (PA-28R-201T)
+perf_file: piper_turbo_arrow_III.lnmperf
 ---
 
 # Piper Turbo Arrow III (PA-28R-201T)

@@ -459,6 +459,16 @@ css: [fleet, checklist]
                             </tbody>
                          </table>`;
 
+                html += `<div class="perf-download"
+                              style="margin-top:20px;padding-top:15px;border-top:1px solid #333;">
+                            <a class="btn btn-secondary"
+                               style="display:inline-block;padding:10px 18px;text-decoration:none;"
+                               href="${perfPath}"
+                               download="${filename}">
+                                <i class="fas fa-download"></i> Download ${filename}
+                            </a>
+                         </div>`;
+
                 document.getElementById("modalContent").innerHTML = html;
                 document.getElementById("modalAircraftName").innerText = name;
                 document.getElementById("perfModal").style.display = "block";

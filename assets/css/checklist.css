@@ -97,16 +97,135 @@
     text-decoration: none;
 }
 
+.checklist-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 1.75rem;
+}
+
+.checklist-toolbar .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 18px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.checklist-toolbar .btn i {
+    font-size: 0.95em;
+}
+
+.checklist-toolbar .btn:hover {
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+.checklist-toolbar .btn:active {
+    transform: translateY(0);
+}
+
+.checklist-toolbar .btn:disabled {
+    opacity: 0.65;
+    cursor: progress;
+    transform: none;
+}
+
+.checklist-toolbar .btn-primary {
+    background: #2c7da0;
+    color: #ffffff;
+}
+
+.checklist-toolbar .btn-primary:hover {
+    background: #256b8a;
+    color: #ffffff;
+}
+
+.checklist-toolbar .btn-secondary {
+    background: #4a5568;
+    color: #ffffff;
+}
+
+.checklist-toolbar .btn-secondary:hover {
+    background: #2d3748;
+    color: #ffffff;
+}
+
+.checklist-content tr {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.checklist-content h1,
+.checklist-content h2,
+.checklist-content h3 {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    page-break-after: avoid;
+    break-after: avoid;
+}
+
+.checklist-content thead {
+    display: table-header-group;
+}
+
 @media (max-width: 768px) {
     .checklist-container {
         padding: 1rem;
     }
+
     .checklist-content table {
         display: block;
         overflow-x: auto;
         white-space: nowrap;
     }
+
     .checklist-content td:first-child {
         width: auto;
+    }
+
+    .checklist-toolbar .btn {
+        flex: 1 1 100%;
+    }
+}
+
+@media print {
+
+    .navbar,
+    .footer-copyright,
+    .checklist-toolbar,
+    .checklist-container .back-link,
+    .back-link-bottom {
+        display: none !important;
+    }
+
+    .checklist-container {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .checklist-content table {
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .checklist-content tr,
+    .checklist-content h1,
+    .checklist-content h2,
+    .checklist-content h3 {
+        page-break-inside: avoid;
     }
 }

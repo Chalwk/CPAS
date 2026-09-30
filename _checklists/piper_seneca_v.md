@@ -1,6 +1,7 @@
 ---
 layout: checklist
 title: Piper Seneca V (PA-34-220T)
+perf_file: piper_seneca_V.lnmperf
 ---
 
 # Piper Seneca V (PA-34-220T)

@@ -2,9 +2,201 @@
 layout: default
 ---
 <link rel="stylesheet" href="{{ '/assets/css/checklist.css' | relative_url }}">
+
 <article class="checklist-container">
     <p><a href="{{ '/pages/fleet/' | relative_url }}" class="back-link">← Back to Fleet</a></p>
+
     <div class="container">
-        <div class="checklist-content">{{ content }}</div>
+
+        <div class="checklist-toolbar" id="checklistToolbar">
+            <button type="button" class="btn btn-primary" data-download="pdf">
+                <i class="fas fa-file-pdf"></i> Download PDF
+            </button>
+            <button type="button" class="btn btn-secondary" data-download="txt">
+                <i class="fas fa-file-lines"></i> Download Text
+            </button>
+            {%- if page.perf_file %}
+            <a class="btn btn-secondary" href="{{ '/little_navmap/' | append: page.perf_file | relative_url }}"
+                download="{{ page.perf_file }}">
+                <i class="fas fa-download"></i> Download .lnmperf
+            </a>
+            {%- endif %}
+        </div>
+
+        <div class="checklist-content" id="checklistContent">{{ content }}</div>
+
+        <p class="back-link-bottom">
+            <a href="{{ '/pages/fleet/' | relative_url }}" class="back-link">← Back to Fleet</a>
+        </p>
     </div>
 </article>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+<script>
+    (function () {
+        'use strict';
+
+        function clean(str) {
+            return String(str).replace(/\s+/g, ' ').trim();
+        }
+
+        function slugify(str) {
+            return String(str)
+                .trim()
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, '_')
+                .replace(/^_+|_+$/g, '');
+        }
+
+        function downloadBlob(filename, data, mime) {
+            var blob = new Blob([data], { type: mime || 'text/plain;charset=utf-8' });
+            var url = URL.createObjectURL(blob);
+            var link = document.createElement('a');
+            link.href = url;
+            link.download = filename;
+            link.style.display = 'none';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            window.setTimeout(function () { URL.revokeObjectURL(url); }, 1500);
+        }
+
+        function toPlainText(root) {
+            var out = [];
+
+            function walk(el) {
+                var tag = el.tagName.toLowerCase();
+
+                if (/^h[1-6]$/.test(tag)) {
+                    var heading = clean(el.textContent);
+                    if (heading) {
+                        out.push('');
+                        out.push(heading.toUpperCase());
+                        out.push(new Array(heading.length + 1).join('-'));
+                        out.push('');
+                    }
+                    return;
+                }
+
+                if (tag === 'table') {
+                    var rows = el.querySelectorAll('tr');
+                    for (var i = 0; i < rows.length; i++) {
+                        var cells = rows[i].children;
+                        if (!cells.length) continue;
+
+                        var allHeaders = true;
+                        for (var j = 0; j < cells.length; j++) {
+                            if (cells[j].tagName.toLowerCase() !== 'th') {
+                                allHeaders = false;
+                                break;
+                            }
+                        }
+                        if (allHeaders) continue;
+
+                        var parts = [];
+                        for (var k = 0; k < cells.length; k++) {
+                            parts.push(clean(cells[k].textContent));
+                        }
+                        out.push(parts.join('  :  '));
+                    }
+                    out.push('');
+                    return;
+                }
+
+                if (tag === 'ul' || tag === 'ol') {
+                    var items = el.children;
+                    var n = 0;
+                    for (var m = 0; m < items.length; m++) {
+                        if (items[m].tagName.toLowerCase() !== 'li') continue;
+                        n++;
+                        out.push((tag === 'ol' ? n + '. ' : '- ') + clean(items[m].textContent));
+                    }
+                    out.push('');
+                    return;
+                }
+
+                if (tag === 'p') {
+                    var para = clean(el.textContent);
+                    if (para) out.push(para);
+                    return;
+                }
+
+                if (tag === 'hr') {
+                    out.push('');
+                    out.push('----------------------------------------');
+                    out.push('');
+                    return;
+                }
+
+                var children = el.children;
+                for (var c = 0; c < children.length; c++) walk(children[c]);
+            }
+
+            var top = root.children;
+            for (var t = 0; t < top.length; t++) walk(top[t]);
+
+            return out.join('\n').replace(/\n{3,}/g, '\n\n').trim() + '\n';
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var content = document.getElementById('checklistContent');
+            var toolbar = document.getElementById('checklistToolbar');
+            if (!content || !toolbar) return;
+
+            var heading = content.querySelector('h1');
+            var title = heading ? clean(heading.textContent) : 'Checklist';
+            var baseName = slugify(title) || 'checklist';
+
+            var txtBtn = toolbar.querySelector('[data-download="txt"]');
+            if (txtBtn) {
+                txtBtn.addEventListener('click', function () {
+                    var header =
+                        'Coastal Peaks Air Service (CPAS)\n' +
+                        title + ' — Checklist\n' +
+                        'Source: ' + window.location.href + '\n' +
+                        'Generated: ' + new Date().toLocaleString() + '\n' +
+                        '----------------------------------------\n';
+
+                    downloadBlob(
+                        baseName + '.txt',
+                        header + '\n' + toPlainText(content),
+                        'text/plain;charset=utf-8'
+                    );
+                });
+            }
+
+            var pdfBtn = toolbar.querySelector('[data-download="pdf"]');
+            if (pdfBtn) {
+                pdfBtn.addEventListener('click', function () {
+                    if (typeof window.html2pdf === 'undefined') {
+                        window.print();
+                        return;
+                    }
+
+                    var original = pdfBtn.innerHTML;
+                    pdfBtn.disabled = true;
+                    pdfBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating…';
+
+                    var restore = function () {
+                        pdfBtn.disabled = false;
+                        pdfBtn.innerHTML = original;
+                    };
+
+                    window.html2pdf().set({
+                        margin: [12, 10, 14, 10],
+                        filename: baseName + '.pdf',
+                        image: { type: 'jpeg', quality: 0.98 },
+                        html2canvas: {
+                            scale: 2,
+                            useCORS: true,
+                            backgroundColor: '#ffffff',
+                            scrollY: 0
+                        },
+                        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                        pagebreak: { mode: ['css', 'legacy'], avoid: ['tr', 'h1', 'h2', 'h3'] }
+                    }).from(content).save().then(restore).catch(restore);
+                });
+            }
+        });
+    })();
+</script>

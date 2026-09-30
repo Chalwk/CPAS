@@ -1,6 +1,7 @@
 ---
 layout: checklist
 title: Airbus H145
+perf_file: airbus_h145.lnmperf
 ---
 
 # Airbus H145

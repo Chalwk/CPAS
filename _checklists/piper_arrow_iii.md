@@ -1,6 +1,7 @@
 ---
 layout: checklist
 title: Piper Arrow III (PA-28R-201)
+perf_file: piper_arrow_III.lnmperf
 ---
 
 # Piper Arrow III (PA-28R-201)

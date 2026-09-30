@@ -1,6 +1,7 @@
 ---
 layout: checklist
 title: Piper Warrior II (PA-28-161)
+perf_file: piper_warrior_II.lnmperf
 ---
 
 # Piper Warrior II (PA-28-161) 

@@ -1,6 +1,7 @@
 ---
 layout: checklist
 title: Piper Archer II (PA-28-181)
+perf_file: piper_archer_II.lnmperf
 ---
 
 # Piper Archer II (PA-28-181)
