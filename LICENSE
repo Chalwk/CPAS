@@ -1,68 +1,37 @@
-Coastal Peaks Air Service (CPAS) - Proprietary License
+Jericho Crosby (Chalwk) - Proprietary License
 
 Copyright (c) 2025-2026 Jericho Crosby (Chalwk). All rights reserved.
 
-The "Coastal Peaks Air Service" and "CPAS" names, logo, and all associated
-materials are proprietary assets of Jericho Crosby (Chalwk).
+This repository and all its contents, including but not limited to source code, software projects, scripts, HTML files,
+Cascading Style Sheets (CSS), JavaScript, images, graphics, design elements, documentation, configuration files, and any
+other materials (collectively, the "Proprietary Assets"), are the exclusive intellectual property of Jericho Crosby
+(Chalwk).
 
-This repository and all its contents, including but not limited to source code,
-software projects, scripts, HTML files, Cascading Style Sheets (CSS), JavaScript,
-images, graphics, design elements, documentation, configuration files, and any
-other materials (collectively, the "Proprietary Assets"), are the exclusive
-intellectual property of Jericho Crosby (Chalwk).
-
-The Proprietary Assets are made available solely for personal viewing and
-interaction through the official CPAS website (https://chalwk.github.io/CPAS/)
-and its associated GitHub repository (https://github.com/Chalwk/CPAS).
-No license or right to use, copy, modify, distribute, publish, transmit, display,
-sublicense, create derivative works from, reverse engineer, decompile, or
-disassemble any part of the Proprietary Assets is granted, implied, or otherwise
-conferred.
+The Proprietary Assets are made available solely for personal viewing and interaction through the official
+chalwk.github.io/CPAS website and its associated GitHub repository. No license or right to use, copy, modify, distribute,
+publish, transmit, display, sublicense, create derivative works from, reverse engineer, decompile, or disassemble any
+part of the Proprietary Assets is granted, implied, or otherwise conferred.
 
 1. Strictly Prohibited Actions. You are expressly prohibited from:
 
    * Copying, reproducing, or downloading any Proprietary Asset.
-   * Distributing, sharing, publishing, or making available any Proprietary
-     Asset to any third party.
-   * Modifying, adapting, translating, or creating derivative works based upon
-     the Proprietary Assets.
-   * Using any Proprietary Asset as part of another project, website, software
-     product, service, or repository.
-   * Attempting to extract source code, designs, algorithms, concepts, or
-     functionality for independent use.
+   * Distributing, sharing, publishing, or making available any Proprietary Asset to any third party.
+   * Modifying, adapting, translating, or creating derivative works based upon the Proprietary Assets.
+   * Using any Proprietary Asset as part of another project, website, software product, service, or repository.
+   * Attempting to extract source code, designs, algorithms, concepts, or functionality for independent use.
 
-2. Contributions. Notwithstanding the prohibitions in Section 1, if you submit
-   a contribution to this repository (via pull request, patch, or any other
-   form), you grant Jericho Crosby (Chalwk) a perpetual, worldwide, non-exclusive,
-   royalty-free, irrevocable license to reproduce, prepare derivative works of,
-   publicly display, publicly perform, sublicense, and distribute your
-   contribution and such derivative works, and to relicense your contribution
-   under any license terms, including the proprietary terms of this License.
+2. No Warranty. The Proprietary Assets are provided "AS IS," without warranty of any kind, express or implied, including
+   but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement.
 
-   By submitting a contribution, you represent that you have the legal right to
-   grant the above license and that your contribution is your original work or
-   is submitted with sufficient permissions from any third party rights holders.
+3. Limitation of Liability. In no event shall the copyright holder be liable for any claim, damages, or other liability,
+   whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the Proprietary Assets
+   or the use or dealings in them.
 
-   This section does not grant you any right to use, copy, modify, distribute,
-   or create derivative works from the Proprietary Assets except as necessary to
-   prepare and submit your contribution.
+4. Violations. Any unauthorized use of the Proprietary Assets constitutes a violation of this license and applicable
+   copyright laws. The copyright holder reserves the right to pursue all legal and equitable remedies available, including
+   injunctive relief and monetary damages.
 
-3. No Warranty. The Proprietary Assets are provided "AS IS," without warranty
-   of any kind, express or implied, including but not limited to the warranties
-   of merchantability, fitness for a particular purpose, and non-infringement.
-
-4. Limitation of Liability. In no event shall the copyright holder be liable
-   for any claim, damages, or other liability, whether in an action of contract,
-   tort, or otherwise, arising from, out of, or in connection with the
-   Proprietary Assets or the use or dealings in them.
-
-5. Violations. Any unauthorized use of the Proprietary Assets constitutes a
-   violation of this license and applicable copyright laws. The copyright
-   holder reserves the right to pursue all legal and equitable remedies
-   available, including injunctive relief and monetary damages.
-
-For licensing inquiries, collaboration proposals, contribution questions, or to
-report usage concerns, please contact Jericho Crosby (Chalwk):
+For licensing inquiries, collaboration proposals, or to report usage concerns, please contact Jericho Crosby (Chalwk):
 
 Primary Contact (email): chalwk.dev@gmail.com
 Discord: chalwk
