@@ -162,12 +162,7 @@ collections:
 # Defaults
 # -----------------------------------------------------------------------------
 
-# Front matter defaults applied to pages/documents that don't set their own
-# values. Rules apply top-to-bottom; later (more specific) rules override
-# earlier ones when several match.
 defaults:
-  # Global default - every page uses the `default` layout and the site-wide
-  # social/OG preview image unless overridden.
   - scope:
       path: ""
     values:
@@ -175,14 +170,16 @@ defaults:
       image:
         path: /assets/images/logo.png
         alt: "Coastal Peaks Air Service Logo"
+  - scope:
+      path: "pages"
+    values:
+      permalink: /pages/:basename/
 
-  # Checklists collection - wrap content in the `checklist` layout.
   - scope:
       type: "checklists"
     values:
       layout: checklist
 
-  # Airframes collection - wrap content in the `airframe` layout.
   - scope:
       type: "airframes"
     values:
