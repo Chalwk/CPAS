@@ -1,5 +1,8 @@
-source "https://rubygems.org"
-gem "jekyll", "~> 4.3"
-gem "jekyll-feed"
-gem "jekyll-seo-tag"
+source 'https://rubygems.org'
+gem 'jekyll', '~> 4.3'
+gem 'jekyll-sitemap'
+gem 'jekyll-seo-tag'
+gem 'webrick'
 gem 'wdm', '>= 0.1.0'
+gem 'tzinfo'
+gem 'tzinfo-data'

@@ -103,10 +103,6 @@ established: "December 19, 2025"
 # Only rebuild files that changed since the last build. Speeds up local dev.
 incremental: true
 
-# Use "pretty" URLs site-wide: /pages/training/ instead of /pages/training.html.
-# Collections override this with their own permalink setting below.
-permalink: pretty
-
 # Repo files that shouldn't be published into _site/.
 exclude:
   - Gemfile
@@ -152,15 +148,15 @@ plugins:
 # Custom content types. Each entry defines where files live (underscore-prefixed
 # folder at the project root) and how their output URLs are shaped.
 collections:
-  # _checklists/  ->  /checklists/<filename>/
+  # _checklists/ - /checklists/<filename>/
   checklists:
     output: true
-    permalink: /checklists/:slug/
+    permalink: /checklists/:path/
 
-  # _airframes/   ->  /airframes/<filename>/
+  # _airframes/  - /airframes/<filename>/
   airframes:
     output: true
-    permalink: /airframes/:slug/
+    permalink: /airframes/:path/
 
 # -----------------------------------------------------------------------------
 # Defaults
