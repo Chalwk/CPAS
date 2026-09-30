@@ -90,6 +90,11 @@
     font-size: 0.9rem;
 }
 
+/* Vertical spacing between stacked buttons in the checklist link area. */
+.checklist-link .btn+.btn {
+    margin-top: 10px;
+}
+
 .icon-helicopter {
     color: #2d6bc9;
 }
@@ -146,8 +151,15 @@
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .modal-header {
