@@ -9,7 +9,7 @@ perf_file: piper_warrior_II.lnmperf
 ## EXTERIOR PREFLIGHT (WALK-AROUND)
 
 | Check Item                  | Action                                                 |
-|-----------------------------|--------------------------------------------------------|
+| --------------------------- | ------------------------------------------------------ |
 | Tie-downs / Chocks / Covers | **REMOVED**                                            |
 | Fuel Quantity               | **CHECK VISUALLY** (Drain samples from both wings)     |
 | Fuel Caps                   | **SECURED**                                            |
@@ -24,7 +24,7 @@ perf_file: piper_warrior_II.lnmperf
 ## COCKPIT PREPARATION
 
 | Check Item           | Action                                    |
-|----------------------|-------------------------------------------|
+| -------------------- | ----------------------------------------- |
 | Parking Brake        | **SET**                                   |
 | Mixture              | **IDLE CUTOFF**                           |
 | Throttle             | **1/2 INCH**                              |
@@ -41,7 +41,7 @@ perf_file: piper_warrior_II.lnmperf
 ## ENGINE START
 
 | Check Item        | Action                                                           |
-|-------------------|------------------------------------------------------------------|
+| ----------------- | ---------------------------------------------------------------- |
 | Area              | **CLEAR**                                                        |
 | Mixture           | **RICH**                                                         |
 | Throttle          | **1/4 INCH**                                                     |
@@ -54,7 +54,7 @@ perf_file: piper_warrior_II.lnmperf
 ## RUN-UP AND MAG CHECK
 
 | Check Item             | Action                                                                                          |
-|------------------------|-------------------------------------------------------------------------------------------------|
+| ---------------------- | ----------------------------------------------------------------------------------------------- |
 | Location               | **RUN-UP AREA** (Pointed into wind)                                                             |
 | Parking Brake          | **SET**                                                                                         |
 | Flight Controls        | **FREE & CORRECT** (Full movement check)                                                        |
@@ -71,7 +71,7 @@ perf_file: piper_warrior_II.lnmperf
 ## BEFORE TAXI
 
 | Check Item         | Action                                      |
-|--------------------|---------------------------------------------|
+| ------------------ | ------------------------------------------- |
 | Flaps              | **UP**                                      |
 | Avionics Master    | **ON** (Allow 1 min for GPS initialization) |
 | Transponder        | **STANDBY** (Mode C if available)           |
@@ -84,7 +84,7 @@ perf_file: piper_warrior_II.lnmperf
 ## TAXI
 
 | Check Item    | Action                                                         |
-|---------------|----------------------------------------------------------------|
+| ------------- | -------------------------------------------------------------- |
 | Taxi Light    | **ON** (As required)                                           |
 | Fuel Pump     | **ON** for taxi on rough ground or low fuel                    |
 | Engine Gauges | **MONITOR** (Oil temp/pressure in green)                       |
@@ -94,7 +94,7 @@ perf_file: piper_warrior_II.lnmperf
 ## BEFORE TAKEOFF
 
 | Check Item         | Action                                              |
-|--------------------|-----------------------------------------------------|
+| ------------------ | --------------------------------------------------- |
 | Parking Brake      | **SET** (At run-up/holding area)                    |
 | Flight Controls    | **FREE & CORRECT** (Final check)                    |
 | Flaps              | **AS DESIRED** (Typically 0-10° for normal takeoff) |
@@ -110,7 +110,7 @@ perf_file: piper_warrior_II.lnmperf
 ## TAKEOFF
 
 | Check Item         | Action                                           |
-|--------------------|--------------------------------------------------|
+| ------------------ | ------------------------------------------------ |
 | Area               | **CLEAR** (Final check of runway)                |
 | Flaps              | **AS DESIRED**                                   |
 | Fuel Pump          | **ON**                                           |
@@ -123,38 +123,38 @@ perf_file: piper_warrior_II.lnmperf
 ## CLIMB
 
 | Check Item    | Action                                      |
-|---------------|---------------------------------------------|
+| ------------- | ------------------------------------------- |
 | Fuel Pump     | **OFF** (Above 500 ft AGL, positive rate)   |
 | Flaps         | **UP** (If used, retract gradually)         |
-| Climb Speed   | **79-85 KIAS** (Vy 79, cruise climb 85)     |
+| Climb Speed   | **85 KTAS** (Vy 79 KIAS)         |
 | Mixture       | **LEAN** (Above 3000 ft MSL for best power) |
 | Engine Gauges | **MONITOR** (CHT ≤ 400°F, Oil Temp ≤ 245°F) |
 
 ## CRUISE
 
 | Check Item    | Action                                                |
-|---------------|-------------------------------------------------------|
+| ------------- | ----------------------------------------------------- |
 | Power Setting | **2300-2500 RPM** (65-75% power)                      |
 | Mixture       | **LEAN** (For peak EGT or per POH)                    |
-| Cruise Speed  | **105-115 KIAS** (75% power at 8000 ft)               |
-| Fuel Flow     | **CHECK** (8.5-9.5 GPH at 75% power)                  |
+| Cruise Speed  | **115 KTAS** (75% power at 8000 ft)                   |
+| Fuel Flow     | **CHECK** (8.5 GPH at 75% power)                      |
 | Engine Gauges | **MONITOR** (CHT 300-380°F, Oil Temp 180-220°F ideal) |
 | Fuel Tanks    | **BALANCE** (Switch tanks hourly if not using BOTH)   |
 
 ## DESCENT
 
 | Check Item     | Action                                                        |
-|----------------|---------------------------------------------------------------|
+| -------------- | ------------------------------------------------------------- |
 | Mixture        | **RICH** (Below 3000 ft MSL)                                  |
 | Carb Heat      | **AS REQUIRED** (ON when below green arc or visible moisture) |
-| Descent Speed  | **100-120 KIAS** (With 500-700 FPM descent)                   |
+| Descent Speed  | **100 KTAS** (500 FPM descent)                                |
 | Engine Cooling | **MONITOR** (Keep CHT > 250°F during descent)                 |
 | Fuel Pump      | **ON** (For landing)                                          |
 
 ## BEFORE LANDING
 
 | Check Item     | Action                                                      |
-|----------------|-------------------------------------------------------------|
+| -------------- | ----------------------------------------------------------- |
 | Fuel Selector  | **BOTH** (Or fullest tank)                                  |
 | Fuel Pump      | **ON**                                                      |
 | Mixture        | **FULL RICH**                                               |
@@ -168,7 +168,7 @@ perf_file: piper_warrior_II.lnmperf
 ## LANDING
 
 | Check Item      | Action                               |
-|-----------------|--------------------------------------|
+| --------------- | ------------------------------------ |
 | Final Approach  | **65-70 KIAS** (With flaps)          |
 | Flare           | **GENTLY** (Power to idle, hold off) |
 | Touchdown       | **MAIN WHEELS FIRST**                |
@@ -179,7 +179,7 @@ perf_file: piper_warrior_II.lnmperf
 ## AFTER LANDING / TAXI-IN
 
 | Check Item    | Action                      |
-|---------------|-----------------------------|
+| ------------- | --------------------------- |
 | Flaps         | **UP**                      |
 | Transponder   | **STANDBY**                 |
 | Lights        | **AS REQUIRED**             |
@@ -189,7 +189,7 @@ perf_file: piper_warrior_II.lnmperf
 ## ENGINE SHUTDOWN
 
 | Check Item        | Action                                                  |
-|-------------------|---------------------------------------------------------|
+| ----------------- | ------------------------------------------------------- |
 | Parking Brake     | **SET**                                                 |
 | Avionics / Radios | **OFF**                                                 |
 | Fuel Pump         | **OFF**                                                 |
@@ -200,7 +200,7 @@ perf_file: piper_warrior_II.lnmperf
 ## SECURING AIRCRAFT
 
 | Check Item          | Action                        |
-|---------------------|-------------------------------|
+| ------------------- | ----------------------------- |
 | Control Lock        | **INSTALL** (If available)    |
 | Pitot Cover         | **INSTALL**                   |
 | Tie-downs           | **SECURED**                   |

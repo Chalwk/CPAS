@@ -9,7 +9,7 @@ perf_file: piper_archer_II.lnmperf
 ## EXTERIOR PREFLIGHT (WALK-AROUND)
 
 | Check Item                  | Action                                                 |
-|-----------------------------|--------------------------------------------------------|
+| --------------------------- | ------------------------------------------------------ |
 | Tie-downs / Chocks / Covers | **REMOVED**                                            |
 | Fuel Quantity               | **CHECK VISUALLY** (Both tanks, drain samples)         |
 | Fuel Caps                   | **SECURED**                                            |
@@ -25,7 +25,7 @@ perf_file: piper_archer_II.lnmperf
 ## COCKPIT PREPARATION
 
 | Check Item           | Action                                         |
-|----------------------|------------------------------------------------|
+| -------------------- | ---------------------------------------------- |
 | Parking Brake        | **SET**                                        |
 | Mixture              | **IDLE CUTOFF**                                |
 | Throttle             | **1/2 INCH**                                   |
@@ -43,7 +43,7 @@ perf_file: piper_archer_II.lnmperf
 ## ENGINE START
 
 | Check Item    | Action                                              |
-|---------------|-----------------------------------------------------|
+| ------------- | --------------------------------------------------- |
 | Area          | **CLEAR**                                           |
 | Mixture       | **RICH**                                            |
 | Throttle      | **1/4 INCH**                                        |
@@ -57,7 +57,7 @@ perf_file: piper_archer_II.lnmperf
 ## RUN-UP AND MAG CHECK
 
 | Check Item         | Action                                                                                          |
-|--------------------|-------------------------------------------------------------------------------------------------|
+| ------------------ | ----------------------------------------------------------------------------------------------- |
 | Location           | **RUN-UP AREA** (Pointed into wind)                                                             |
 | Parking Brake      | **SET**                                                                                         |
 | Flight Controls    | **FREE & CORRECT**                                                                              |
@@ -74,7 +74,7 @@ perf_file: piper_archer_II.lnmperf
 ## BEFORE TAXI
 
 | Check Item         | Action                                     |
-|--------------------|--------------------------------------------|
+| ------------------ | ------------------------------------------ |
 | Flaps              | **UP** (Verify)                            |
 | Avionics Master    | **ON**                                     |
 | Transponder        | **STANDBY**                                |
@@ -87,7 +87,7 @@ perf_file: piper_archer_II.lnmperf
 ## TAXI
 
 | Check Item         | Action                                                         |
-|--------------------|----------------------------------------------------------------|
+| ------------------ | -------------------------------------------------------------- |
 | Taxi Light         | **ON** (As required)                                           |
 | Fuel Pump          | **ON** for taxi on rough ground or low fuel                    |
 | Engine Gauges      | **MONITOR** (Oil temp/pressure in green)                       |
@@ -98,7 +98,7 @@ perf_file: piper_archer_II.lnmperf
 ## BEFORE TAKEOFF
 
 | Check Item         | Action                                              |
-|--------------------|-----------------------------------------------------|
+| ------------------ | --------------------------------------------------- |
 | Parking Brake      | **SET**                                             |
 | Flight Controls    | **FREE & CORRECT** (Final check)                    |
 | Flaps              | **AS DESIRED** (Typically 0-10° for normal takeoff) |
@@ -115,7 +115,7 @@ perf_file: piper_archer_II.lnmperf
 ## TAKEOFF
 
 | Check Item         | Action                                          |
-|--------------------|-------------------------------------------------|
+| ------------------ | ----------------------------------------------- |
 | Area               | **CLEAR** (Final runway check)                  |
 | Flaps              | **AS DESIRED**                                  |
 | Fuel Pump          | **ON**                                          |
@@ -129,10 +129,10 @@ perf_file: piper_archer_II.lnmperf
 ## CLIMB
 
 | Check Item    | Action                                      |
-|---------------|---------------------------------------------|
+| ------------- | ------------------------------------------- |
 | Fuel Pump     | **OFF** (Above 500 ft AGL)                  |
 | Flaps         | **UP** (If used, retract gradually)         |
-| Climb Speed   | **79-85 KIAS** (Vy 79, cruise climb 85)     |
+| Climb Speed   | **80 KTAS** (Vy 79 KIAS)         |
 | Propeller     | **2700 RPM** (Full forward for climb)       |
 | Mixture       | **LEAN** (Above 3000 ft MSL for best power) |
 | Engine Gauges | **MONITOR** (CHT ≤ 450°F, Oil Temp ≤ 245°F) |
@@ -140,24 +140,24 @@ perf_file: piper_archer_II.lnmperf
 ## CRUISE
 
 | Check Item    | Action                                                       |
-|---------------|--------------------------------------------------------------|
+| ------------- | ------------------------------------------------------------ |
 | Power Setting | **2300-2500 RPM** (65-75% power)<br>**22-24" MP**            |
 | Propeller     | **SET DESIRED RPM** (Typically 2400-2500 for cruise)         |
 | Mixture       | **LEAN** (For peak EGT or 50°F rich of peak)                 |
-| Cruise Speed  | **110-120 KIAS** (75% power at 8000 ft)                      |
-| Fuel Flow     | **CHECK** (9-10 GPH at 75% power)                            |
+| Cruise Speed  | **122 KTAS** (75% power at 8000 ft)                          |
+| Fuel Flow     | **CHECK** (10.0 GPH at 75% power)                            |
 | Engine Gauges | **MONITOR** (CHT 300-400°F, Oil Temp 180-220°F ideal)        |
 | Fuel Tanks    | **BALANCE** (Switch tanks every 30-60 min if not using BOTH) |
 
 ## DESCENT
 
 | Check Item     | Action                                 |
-|----------------|----------------------------------------|
+| -------------- | -------------------------------------- |
 | Power          | **REDUCE** (15-18" MP, 2000-2200 RPM)  |
 | Mixture        | **RICH** (Below 3000 ft MSL)           |
 | Carb Heat      | **AS REQUIRED** (ON when MP below 15") |
-| Descent Speed  | **100-120 KIAS**                       |
-| Descent Rate   | **500-700 FPM**                        |
+| Descent Speed  | **100 KTAS**                           |
+| Descent Rate   | **500 FPM**                            |
 | Engine Cooling | **MONITOR** (Keep CHT > 250°F)         |
 | Fuel Pump      | **ON** (For landing)                   |
 | Propeller      | **HIGH RPM** (Full forward)            |
@@ -165,7 +165,7 @@ perf_file: piper_archer_II.lnmperf
 ## BEFORE LANDING
 
 | Check Item     | Action                                                                 |
-|----------------|------------------------------------------------------------------------|
+| -------------- | ---------------------------------------------------------------------- |
 | Fuel Selector  | **BOTH**                                                               |
 | Fuel Pump      | **ON**                                                                 |
 | Mixture        | **FULL RICH**                                                          |
@@ -180,7 +180,7 @@ perf_file: piper_archer_II.lnmperf
 ## LANDING
 
 | Check Item      | Action                               |
-|-----------------|--------------------------------------|
+| --------------- | ------------------------------------ |
 | Final Approach  | **70-75 KIAS** (With flaps)          |
 | Flare           | **GENTLY** (Power to idle, hold off) |
 | Touchdown       | **MAIN WHEELS FIRST**                |
@@ -192,7 +192,7 @@ perf_file: piper_archer_II.lnmperf
 ## AFTER LANDING / TAXI-IN
 
 | Check Item    | Action                               |
-|---------------|--------------------------------------|
+| ------------- | ------------------------------------ |
 | Flaps         | **UP**                               |
 | Transponder   | **STANDBY**                          |
 | Lights        | **AS REQUIRED**                      |
@@ -203,7 +203,7 @@ perf_file: piper_archer_II.lnmperf
 ## ENGINE SHUTDOWN
 
 | Check Item        | Action                                    |
-|-------------------|-------------------------------------------|
+| ----------------- | ----------------------------------------- |
 | Parking Brake     | **SET**                                   |
 | Avionics / Radios | **OFF**                                   |
 | Fuel Pump         | **OFF**                                   |
@@ -214,7 +214,7 @@ perf_file: piper_archer_II.lnmperf
 ## SECURING AIRCRAFT
 
 | Check Item          | Action                        |
-|---------------------|-------------------------------|
+| ------------------- | ----------------------------- |
 | Control Lock        | **INSTALL**                   |
 | Pitot Cover         | **INSTALL**                   |
 | Tie-downs           | **SECURED**                   |

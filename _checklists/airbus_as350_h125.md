@@ -9,7 +9,7 @@ perf_file: airbus_as350_h125.lnmperf
 ## EXTERIOR PREFLIGHT (WALK-AROUND)
 
 | Check Item                 | Action                                                     |
-|----------------------------|------------------------------------------------------------|
+| -------------------------- | ---------------------------------------------------------- |
 | Tie-downs / Rotor Brake    | **REMOVED / DISENGAGED**                                   |
 | Main Rotor Blades          | **CHECK** (Condition, freedom of movement, blade stops)    |
 | Tail Rotor                 | **CHECK** (Condition, security, freedom)                   |
@@ -24,7 +24,7 @@ perf_file: airbus_as350_h125.lnmperf
 ## COCKPIT PREPARATION
 
 | Check Item           | Action                       |
-|----------------------|------------------------------|
+| -------------------- | ---------------------------- |
 | Parking Brake        | **SET**                      |
 | Battery Master 1 & 2 | **ON**                       |
 | External Power       | **CONNECTED** (If available) |
@@ -39,7 +39,7 @@ perf_file: airbus_as350_h125.lnmperf
 ## AVIONICS POWER-UP
 
 | Check Item                      | Action                                   |
-|---------------------------------|------------------------------------------|
+| ------------------------------- | ---------------------------------------- |
 | Avionics Master                 | **ON**                                   |
 | VEMD (Vehicle & Engine Display) | **CHECK** (Power-up sequence normal)     |
 | PFD / MFD                       | **INITIALIZE** (Allow full boot)         |
@@ -52,7 +52,7 @@ perf_file: airbus_as350_h125.lnmperf
 ## ENGINE START
 
 | Check Item               | Action                                                                                                                                               |
-|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Area                     | **CLEAR** (Rotor arc 360° clear)                                                                                                                     |
 | Master Warning / Caution | **CLEAR**                                                                                                                                            |
 | Fuel Boost Pump          | **ON**                                                                                                                                               |
@@ -65,7 +65,7 @@ perf_file: airbus_as350_h125.lnmperf
 ## GROUND CHECKS & RUN-UP
 
 | Check Item        | Action                                                                                                            |
-|-------------------|-------------------------------------------------------------------------------------------------------------------|
+| ----------------- | ----------------------------------------------------------------------------------------------------------------- |
 | Engine Warm-up    | **2-3 MINUTES** at 65% N1 (Oil temp > 40°C)                                                                       |
 | Engine Parameters | **CHECK STABLE**:<br>• Oil Pressure: 3.5-5.5 bar<br>• Oil Temp: 40-120°C<br>• ITT: ≤ 750°C<br>• Fuel Flow: Stable |
 | Flight Controls   | **FREE & CORRECT** (Full deflection check)                                                                        |
@@ -77,7 +77,7 @@ perf_file: airbus_as350_h125.lnmperf
 ## BEFORE TAKEOFF
 
 | Check Item             | Action                                                                         |
-|------------------------|--------------------------------------------------------------------------------|
+| ---------------------- | ------------------------------------------------------------------------------ |
 | Briefing               | **TAKEOFF / DEPARTURE / EMERGENCY**                                            |
 | Weight & Balance       | **VERIFY** (Within limits)                                                     |
 | Performance Charts     | **CONSULT** (Hover ceiling, OGE/IGE)                                           |
@@ -90,7 +90,7 @@ perf_file: airbus_as350_h125.lnmperf
 ## HOVER CHECK
 
 | Check Item         | Action                                                                                       |
-|--------------------|----------------------------------------------------------------------------------------------|
+| ------------------ | -------------------------------------------------------------------------------------------- |
 | Lift to Hover      | **SMOOTH COLLECTIVE** to Nr 391-397 RPM                                                      |
 | Engine Parameters  | **MONITOR**:<br>• Nr: 391-397 RPM<br>• N1: As required<br>• ITT: ≤ 750°C<br>• Torque: ≤ 100% |
 | Vibrations         | **CHECK NORMAL**                                                                             |
@@ -101,9 +101,9 @@ perf_file: airbus_as350_h125.lnmperf
 ## AFTER TAKEOFF / CLIMB
 
 | Check Item         | Action                                      |
-|--------------------|---------------------------------------------|
+| ------------------ | ------------------------------------------- |
 | Engine Parameters  | **MONITOR** (ITT, Torque, Ng within limits) |
-| Climb Speed        | **70-80 KIAS** (Best rate)                  |
+| Climb Speed        | **75 KTAS** (Best rate)                     |
 | Vibrations         | **CHECK** (No unusual vibrations)           |
 | Warning Systems    | **MONITOR** (Master Caution/Warning)        |
 | Engine Instruments | **SCAN** (Every 30-60 seconds)              |
@@ -111,9 +111,9 @@ perf_file: airbus_as350_h125.lnmperf
 ## CRUISE
 
 | Check Item        | Action                                                                                             |
-|-------------------|----------------------------------------------------------------------------------------------------|
+| ----------------- | -------------------------------------------------------------------------------------------------- |
 | Power Setting     | **SET** (Monitor torque ≤ 100%)                                                                    |
-| Cruise Speed      | **120-130 KIAS** (Max cruise 140 KIAS)                                                             |
+| Cruise Speed      | **120 KTAS** (Max cruise 140 KIAS)                                                                 |
 | Engine Parameters | **MONITOR**:<br>• Nr: 391-397 RPM<br>• ITT: ≤ 750°C<br>• Torque: ≤ 100%<br>• Oil Temp/Press: Green |
 | Fuel Management   | **MONITOR** (Consumption, balance)                                                                 |
 | Vibrations        | **CONTINUOUS MONITOR**                                                                             |
@@ -122,9 +122,9 @@ perf_file: airbus_as350_h125.lnmperf
 ## DESCENT / APPROACH
 
 | Check Item        | Action                               |
-|-------------------|--------------------------------------|
+| ----------------- | ------------------------------------ |
 | Power Reduction   | **GRADUAL** (Monitor ITT and torque) |
-| Descent Speed     | **70-90 KIAS**                       |
+| Descent Speed     | **100 KTAS**                         |
 | Approach Briefing | **COMPLETE**                         |
 | Landing Area      | **IDENTIFY & BRIEF**                 |
 | Engine Parameters | **MONITOR** (ITT cooling rate)       |
@@ -133,7 +133,7 @@ perf_file: airbus_as350_h125.lnmperf
 ## BEFORE LANDING
 
 | Check Item         | Action                                 |
-|--------------------|----------------------------------------|
+| ------------------ | -------------------------------------- |
 | Final Approach     | **60-70 KIAS** (Adjust for conditions) |
 | Landing Area       | **FINAL CHECK** (Clear, suitable)      |
 | Seat Belts         | **SECURED**                            |
@@ -144,7 +144,7 @@ perf_file: airbus_as350_h125.lnmperf
 ## LANDING
 
 | Check Item      | Action                       |
-|-----------------|------------------------------|
+| --------------- | ---------------------------- |
 | Flare           | **INITIATE** at 30-50 ft AGL |
 | Collective      | **SMOOTH UP** for cushion    |
 | Touchdown       | **LEVEL SKIDS**              |
@@ -154,7 +154,7 @@ perf_file: airbus_as350_h125.lnmperf
 ## ENGINE SHUTDOWN
 
 | Check Item           | Action                                  |
-|----------------------|-----------------------------------------|
+| -------------------- | --------------------------------------- |
 | Cool-down            | **2-3 MINUTES** at 65% N1 (ITT < 500°C) |
 | Engine Mode Selector | **GROUND IDLE**                         |
 | Fuel Shutoff Valve   | **CLOSE**                               |
@@ -166,7 +166,7 @@ perf_file: airbus_as350_h125.lnmperf
 ## SECURING AIRCRAFT
 
 | Check Item   | Action                              |
-|--------------|-------------------------------------|
+| ------------ | ----------------------------------- |
 | Rotor Brake  | **APPLY** (Wait for Nr < 10%)       |
 | Tie-downs    | **SECURE** (Main rotor, tail rotor) |
 | Blade Socks  | **INSTALL** (If required)           |

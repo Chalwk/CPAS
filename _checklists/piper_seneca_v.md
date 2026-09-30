@@ -8,28 +8,28 @@ perf_file: piper_seneca_V.lnmperf
 
 ## EXTERIOR PREFLIGHT (WALK-AROUND)
 
-| Check Item                  | Action                                                                                                                                   |
-|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Tie-downs / Chocks / Covers | **REMOVED**                                                                                                                              |
-| Fuel Quantity               | **CHECK VISUALLY** (Both mains & tip tanks - 98 gal total, 92 gal usable)<br> *Drain samples from all sumps (4 main, 2 tip tank drains)* |
-| Fuel Caps                   | **SECURED** (Mains and tip tanks)                                                                                                        |
-| Oil Level (Both Engines)    | **CHECK** (8 quarts each, min 6 quarts, max 12 quarts)<br> *Use turbo-rated oil (Aeroshell W100 Plus or equivalent)*                     |
-| Oil Caps / Dipsticks        | **SECURED**                                                                                                                              |
-| Turbochargers / Exhaust     | **VISUAL CHECK** (No cracks, sooting, or oil leaks around both turbo systems)                                                            |
-| Intercoolers                | **CHECK** (Fins clear of debris, no damage)                                                                                              |
-| Propellers (Both)           | **CHECK** (No nicks, secure, spinner fasteners tight)                                                                                    |
-| Landing Gear                | **DOWN & VISUAL CHECK** (Struts inflated, tires 44 psi mains, 60 psi nose)                                                               |
-| Gear Doors                  | **CHECK** (No damage, secure, hydraulic leaks)                                                                                           |
-| Control Surfaces            | **FREE & CORRECT** (Ailerons, Elevator, Rudder, Flaps, Trim tabs, Cowl flaps)                                                            |
-| Pitot Tubes (2)             | **COVERS REMOVED** (Left & right systems)                                                                                                |
-| Static Ports (2)            | **CLEAR**                                                                                                                                |
-| Empennage                   | **CHECK** (Horizontal & vertical stabilizer, elevator, rudder, trim tabs)                                                                |
-| Master Switches (Both)      | **OFF** during walk-around                                                                                                               |
+| Check Item                  | Action                                                                                                                      |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Tie-downs / Chocks / Covers | **REMOVED**                                                                                                                 |
+| Fuel Quantity               | **CHECK VISUALLY** (Both mains & tip tanks - 122 gal usable)<br> *Drain samples from all sumps (4 main, 2 tip tank drains)* |
+| Fuel Caps                   | **SECURED** (Mains and tip tanks)                                                                                           |
+| Oil Level (Both Engines)    | **CHECK** (8 quarts each, min 6 quarts, max 12 quarts)<br> *Use turbo-rated oil (Aeroshell W100 Plus or equivalent)*        |
+| Oil Caps / Dipsticks        | **SECURED**                                                                                                                 |
+| Turbochargers / Exhaust     | **VISUAL CHECK** (No cracks, sooting, or oil leaks around both turbo systems)                                               |
+| Intercoolers                | **CHECK** (Fins clear of debris, no damage)                                                                                 |
+| Propellers (Both)           | **CHECK** (No nicks, secure, spinner fasteners tight)                                                                       |
+| Landing Gear                | **DOWN & VISUAL CHECK** (Struts inflated, tires 44 psi mains, 60 psi nose)                                                  |
+| Gear Doors                  | **CHECK** (No damage, secure, hydraulic leaks)                                                                              |
+| Control Surfaces            | **FREE & CORRECT** (Ailerons, Elevator, Rudder, Flaps, Trim tabs, Cowl flaps)                                               |
+| Pitot Tubes (2)             | **COVERS REMOVED** (Left & right systems)                                                                                   |
+| Static Ports (2)            | **CLEAR**                                                                                                                   |
+| Empennage                   | **CHECK** (Horizontal & vertical stabilizer, elevator, rudder, trim tabs)                                                   |
+| Master Switches (Both)      | **OFF** during walk-around                                                                                                  |
 
 ## COCKPIT PREPARATION
 
 | Check Item               | Action                                                |
-|--------------------------|-------------------------------------------------------|
+| ------------------------ | ----------------------------------------------------- |
 | Parking Brake            | **SET**                                               |
 | Battery Masters (2)      | **OFF**                                               |
 | Avionics Master          | **OFF**                                               |
@@ -53,7 +53,7 @@ perf_file: piper_seneca_V.lnmperf
 ## ENGINE START (LEFT FIRST, THEN RIGHT)
 
 | Check Item              | Action                                                           |
-|-------------------------|------------------------------------------------------------------|
+| ----------------------- | ---------------------------------------------------------------- |
 | Area                    | **CLEAR BOTH SIDES**                                             |
 | Battery Masters         | **BOTH ON**                                                      |
 | Fuel Pump (Left Main)   | **ON** (Prime 4-6 sec cold, 2-3 sec hot)                         |
@@ -70,7 +70,7 @@ perf_file: piper_seneca_V.lnmperf
 ## RUN-UP AND SYSTEMS CHECK
 
 | Check Item                  | Action                                                                                            |
-|-----------------------------|---------------------------------------------------------------------------------------------------|
+| --------------------------- | ------------------------------------------------------------------------------------------------- |
 | Location                    | **RUN-UP AREA** (Pointed into wind, clear area)                                                   |
 | Parking Brake               | **SET**                                                                                           |
 | Flight Controls             | **FREE & CORRECT** (Full deflection)                                                              |
@@ -91,7 +91,7 @@ perf_file: piper_seneca_V.lnmperf
 ## BEFORE TAKEOFF
 
 | Check Item          | Action                                                                                                                                                           |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Parking Brake       | **RELEASED**                                                                                                                                                     |
 | Flight Controls     | **FREE & CORRECT** (Final check)                                                                                                                                 |
 | Fuel Selectors      | **MAINS ON** (Tip tanks OFF for takeoff)                                                                                                                         |
@@ -114,7 +114,7 @@ perf_file: piper_seneca_V.lnmperf
 ## TAKEOFF
 
 | Check Item         | Action                                                                                             |
-|--------------------|----------------------------------------------------------------------------------------------------|
+| ------------------ | -------------------------------------------------------------------------------------------------- |
 | Area               | **CLEAR** (Final runway check both directions)                                                     |
 | Throttles          | **SMOOTHLY TO FULL** (36" MP, 2700 RPM, synchronize)                                               |
 | Engine Instruments | **MONITOR BOTH** (Oil pressure 60-90 psi, CHT < 420°F)                                             |
@@ -126,12 +126,12 @@ perf_file: piper_seneca_V.lnmperf
 ## CLIMB
 
 | Check Item    | Action                                                                                       |
-|---------------|----------------------------------------------------------------------------------------------|
+| ------------- | -------------------------------------------------------------------------------------------- |
 | Gear          | **UP & VERIFIED** (3 green lights out)                                                       |
 | Flaps         | **UP** (If used, retract after positive rate)                                                |
 | Fuel Pumps    | **MAIN PUMPS OFF** (Above 500 ft AGL, positive rate)                                         |
 | Climb Power   | **32" MP / 2500 RPM** (75% power)<br> *Turbo maintains MP to critical altitude (~16,000 ft)* |
-| Climb Speed   | **110 KIAS** (Normal multi-engine climb)<br> *For engine cooling and visibility*             |
+| Climb Speed   | **100 KTAS** (1000 FPM, normal multi-engine climb)<br> *For engine cooling and visibility*   |
 | Mixtures      | **LEAN FOR CLIMB** (Above 5000 ft, monitor EGT)                                              |
 | Cowl Flaps    | **AS REQUIRED** (Adjust to maintain CHT 300-380°F)                                           |
 | Engine Gauges | **MONITOR CLOSELY** (CHT ≤ 420°F, Oil Temp ≤ 245°F, compare both engines)                    |
@@ -140,12 +140,12 @@ perf_file: piper_seneca_V.lnmperf
 ## CRUISE
 
 | Check Item        | Action                                                                                                       |
-|-------------------|--------------------------------------------------------------------------------------------------------------|
+| ----------------- | ------------------------------------------------------------------------------------------------------------ |
 | Optimum Altitude  | **12,000-18,000 ft** (Turbo efficiency range)                                                                |
 | Power Setting     | **28-30" MP / 2300-2400 RPM** (65-75% power)<br> *Use turbo controllers to maintain desired MP*              |
 | Mixtures          | **LEAN CAREFULLY**<br> *Best power: 100°F rich of peak EGT*<br> *Best economy: 50°F lean of peak EGT*        |
-| True Airspeed     | **180-200 KTAS** (75% power at 16,000 ft)                                                                    |
-| Fuel Flow (Total) | **24-28 GPH** (75% power, both engines)                                                                      |
+| True Airspeed     | **170 KTAS** (75% power at 16,000 ft)                                                                        |
+| Fuel Flow (Total) | **24 GPH** (75% power, both engines)                                                                         |
 | Engine Gauges     | **MONITOR BOTH** (CHT 320-380°F ideal, Oil Temp 180-220°F ideal)<br> *Compare engines - max CHT spread 50°F* |
 | Cowl Flaps        | **ADJUST** (Usually partially closed in cruise)                                                              |
 | Fuel Management   | **BALANCE** (Switch tanks every 30-45 minutes)<br> *Tip tanks: Use for cruise, OFF for takeoff/landing*      |
@@ -154,12 +154,12 @@ perf_file: piper_seneca_V.lnmperf
 ## DESCENT (SHOCK COOLING PREVENTION)
 
 | Check Item           | Action                                                                                               |
-|----------------------|------------------------------------------------------------------------------------------------------|
+| -------------------- | ---------------------------------------------------------------------------------------------------- |
 | Power Reduction      | **GRADUAL & SYMMETRICAL** (Reduce MP 2-3" at a time)                                                 |
 | Descent Power        | **18-20" MP / 2000-2200 RPM** (Initial descent)<br> *Keep power above 15" MP to prevent overcooling* |
 | Cooling Rate Limit   | **< 50°F/min CHT decrease** (Critical for turbo engines)                                             |
 | Mixtures             | **ENRICH** (Below 10,000 ft MSL)                                                                     |
-| Descent Speed        | **140-160 KIAS** (With 500-1000 FPM descent)<br> *Do not exceed 195 KIAS (Vne)*                      |
+| Descent Speed        | **130 KTAS** (700 FPM descent)<br> *Do not exceed 195 KIAS (Vne)*                                    |
 | Cowl Flaps           | **CLOSED** (To prevent overcooling)                                                                  |
 | Turbo Controllers    | **FULL FORWARD** (During descent)                                                                    |
 | Fuel Pumps (Main)    | **BOTH ON** (Below 3000 ft AGL)                                                                      |
@@ -169,7 +169,7 @@ perf_file: piper_seneca_V.lnmperf
 ## BEFORE LANDING
 
 | Check Item             | Action                                                                                                         |
-|------------------------|----------------------------------------------------------------------------------------------------------------|
+| ---------------------- | -------------------------------------------------------------------------------------------------------------- |
 | Fuel Selectors         | **MAINS ON** (Tip tanks OFF)                                                                                   |
 | Fuel Pumps (Main)      | **BOTH ON**                                                                                                    |
 | Mixtures               | **FULL RICH** (Below 5000 ft MSL)                                                                              |
@@ -188,7 +188,7 @@ perf_file: piper_seneca_V.lnmperf
 ## LANDING
 
 | Check Item         | Action                                                        |
-|--------------------|---------------------------------------------------------------|
+| ------------------ | ------------------------------------------------------------- |
 | Final Approach     | **100 KIAS** (With full flaps, adjust for conditions)         |
 | Threshold Crossing | **90 KIAS** (50 ft over threshold)                            |
 | Flare              | **GENTLY** (Power to idle at 10-20 ft, gradual back pressure) |
@@ -201,7 +201,7 @@ perf_file: piper_seneca_V.lnmperf
 ## AFTER LANDING / TAXI-IN
 
 | Check Item     | Action                                                        |
-|----------------|---------------------------------------------------------------|
+| -------------- | ------------------------------------------------------------- |
 | Flaps          | **UP**                                                        |
 | Transponder    | **STANDBY**                                                   |
 | Landing Lights | **OFF**                                                       |
@@ -215,7 +215,7 @@ perf_file: piper_seneca_V.lnmperf
 ## ENGINE SHUTDOWN (TURBO COOL-DOWN CRITICAL)
 
 | Check Item        | Action                                                                                                      |
-|-------------------|-------------------------------------------------------------------------------------------------------------|
+| ----------------- | ----------------------------------------------------------------------------------------------------------- |
 | Cool-Down Period  | **5 MINUTES MINIMUM** (At 1000-1200 RPM)<br> > **CRITICAL:** Allows turbo bearings to cool before oil stops |
 | CHT Check         | **< 300°F BOTH** (Before shutdown - ideally below 250°F)                                                    |
 | Parking Brake     | **SET**                                                                                                     |
@@ -231,7 +231,7 @@ perf_file: piper_seneca_V.lnmperf
 ## SECURING AIRCRAFT
 
 | Check Item          | Action                                                                          |
-|---------------------|---------------------------------------------------------------------------------|
+| ------------------- | ------------------------------------------------------------------------------- |
 | Control Locks       | **INSTALL** (Aileron, elevator, rudder if available)                            |
 | Pitot Covers (2)    | **INSTALL**                                                                     |
 | Static Port Covers  | **INSTALL** (If available)                                                      |

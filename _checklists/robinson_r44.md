@@ -9,7 +9,7 @@ perf_file: robinson_r44.lnmperf
 ## EXTERIOR PREFLIGHT (WALK-AROUND)
 
 | Check Item                | Action                                                    |
-|---------------------------|-----------------------------------------------------------|
+| ------------------------- | --------------------------------------------------------- |
 | Tie-downs / Rotor Brake   | **REMOVED / DISENGAGED**                                  |
 | Main Rotor Blades         | **CHECK** (Condition, freedom of movement, stops aligned) |
 | Tail Rotor                | **CHECK** (Condition, security)                           |
@@ -24,7 +24,7 @@ perf_file: robinson_r44.lnmperf
 ## COCKPIT PREPARATION
 
 | Check Item          | Action                          |
-|---------------------|---------------------------------|
+| ------------------- | ------------------------------- |
 | Parking Brake       | **SET**                         |
 | Battery Master      | **ON**                          |
 | Fuel Selector       | **ON** (Both tanks)             |
@@ -41,7 +41,7 @@ perf_file: robinson_r44.lnmperf
 ## ENGINE START
 
 | Check Item    | Action                                                 |
-|---------------|--------------------------------------------------------|
+| ------------- | ------------------------------------------------------ |
 | Area          | **CLEAR** (Rotor arc clear)                            |
 | Fuel Pump     | **ON** (Electric boost pump)                           |
 | Mixture       | **FULL RICH** (Push in)                                |
@@ -55,7 +55,7 @@ perf_file: robinson_r44.lnmperf
 ## RUN-UP AND GROUND CHECKS
 
 | Check Item         | Action                                                                                                         |
-|--------------------|----------------------------------------------------------------------------------------------------------------|
+| ------------------ | -------------------------------------------------------------------------------------------------------------- |
 | Engine Warm-up     | **2-3 MINUTES** at 2000 RPM (Oil temp > 100°F)                                                                 |
 | Magnetos Check     | **PERFORM** at 2000 RPM<br>Both → L → Both → R → Both<br>Max drop: **150 RPM**<br>Difference L/R: **< 50 RPM** |
 | Carb Heat Check    | **ON** (Expect 75-125 RPM drop)<br>**OFF** after check                                                         |
@@ -67,7 +67,7 @@ perf_file: robinson_r44.lnmperf
 ## BEFORE TAKEOFF
 
 | Check Item             | Action                                                |
-|------------------------|-------------------------------------------------------|
+| ---------------------- | ----------------------------------------------------- |
 | Briefing               | **TAKEOFF / DEPARTURE / EMERGENCY**                   |
 | Fuel                   | **SELECTOR ON / QUANTITY CHECKED**                    |
 | Mixture                | **FULL RICH**                                         |
@@ -81,7 +81,7 @@ perf_file: robinson_r44.lnmperf
 ## TAKEOFF
 
 | Check Item         | Action                                           |
-|--------------------|--------------------------------------------------|
+| ------------------ | ------------------------------------------------ |
 | Area               | **CLEAR** (Final check)                          |
 | Collective         | **SMOOTH UP** to 2700 RPM (Governor engaged)     |
 | Engine Instruments | **MONITOR** (Oil pressure 30-60 psi, CHT rising) |
@@ -93,7 +93,7 @@ perf_file: robinson_r44.lnmperf
 ## HOVER CHECK
 
 | Check Item     | Action                                    |
-|----------------|-------------------------------------------|
+| -------------- | ----------------------------------------- |
 | Engine Gauges  | **CHECK NORMAL** (Oil pressure/temp, CHT) |
 | Rotor RPM      | **2700 ±50**                              |
 | Vibration      | **CHECK** (No unusual vibrations)         |
@@ -104,8 +104,8 @@ perf_file: robinson_r44.lnmperf
 ## CLIMB
 
 | Check Item    | Action                                                |
-|---------------|-------------------------------------------------------|
-| Airspeed      | **60-70 KIAS** (Best rate climb)                      |
+| ------------- | ----------------------------------------------------- |
+| Airspeed      | **70 KTAS** (Best rate climb)                         |
 | RPM           | **2700** (Governor controlled)                        |
 | Mixture       | **LEAN** above 3000 ft MSL for best power             |
 | Carb Heat     | **AS REQUIRED** (Below green arc or visible moisture) |
@@ -114,30 +114,30 @@ perf_file: robinson_r44.lnmperf
 ## CRUISE
 
 | Check Item    | Action                                                |
-|---------------|-------------------------------------------------------|
+| ------------- | ----------------------------------------------------- |
 | Power Setting | **21-23 INCH MP** (65-75% power)                      |
 | RPM           | **2700**                                              |
 | Mixture       | **LEAN** for best power or per POH                    |
-| Cruise Speed  | **110-120 KIAS** (75% power)                          |
-| Fuel Flow     | **15-18 GPH** (At 75% power)                          |
+| Cruise Speed  | **108 KTAS** (75% power)                              |
+| Fuel Flow     | **16 GPH** (At 75% power)                             |
 | Engine Gauges | **MONITOR** (CHT 300-400°F, Oil Temp 180-220°F ideal) |
 | Fuel Tanks    | **CHECK BALANCE** (Monitor both tanks)                |
 
 ## DESCENT
 
 | Check Item     | Action                                        |
-|----------------|-----------------------------------------------|
+| -------------- | --------------------------------------------- |
 | Mixture        | **RICH** (Below 3000 ft MSL)                  |
 | Carb Heat      | **AS REQUIRED** (ON when MP below green arc)  |
-| Descent Rate   | **500-700 FPM**                               |
-| Airspeed       | **70-90 KIAS**                                |
+| Descent Rate   | **800 FPM**                                   |
+| Airspeed       | **80 KTAS**                                   |
 | RPM            | **2700** (Governor on)                        |
 | Engine Cooling | **MONITOR** (Keep CHT > 250°F during descent) |
 
 ## BEFORE LANDING
 
 | Check Item        | Action                             |
-|-------------------|------------------------------------|
+| ----------------- | ---------------------------------- |
 | Approach Briefing | **COMPLETE**                       |
 | Fuel              | **SELECTOR ON / QUANTITY CHECKED** |
 | Mixture           | **FULL RICH**                      |
@@ -150,7 +150,7 @@ perf_file: robinson_r44.lnmperf
 ## LANDING
 
 | Check Item     | Action                                   |
-|----------------|------------------------------------------|
+| -------------- | ---------------------------------------- |
 | Final Approach | **60-65 KIAS**                           |
 | Deceleration   | **FLARE GENTLY** to reduce forward speed |
 | Collective     | **SMOOTH UP** to cushion landing         |
@@ -161,7 +161,7 @@ perf_file: robinson_r44.lnmperf
 ## SHUTDOWN
 
 | Check Item       | Action                                    |
-|------------------|-------------------------------------------|
+| ---------------- | ----------------------------------------- |
 | Engine Cool-down | **2-3 MINUTES** at 2000 RPM (CHT < 300°F) |
 | Governor         | **OFF**                                   |
 | Throttle         | **IDLE** (Twist grip closed)              |
@@ -174,11 +174,10 @@ perf_file: robinson_r44.lnmperf
 ## SECURING AIRCRAFT
 
 | Check Item          | Action                            |
-|---------------------|-----------------------------------|
+| ------------------- | --------------------------------- |
 | Rotor Brake         | **APPLY** (Wait for Nr < 100 RPM) |
 | Tie-downs           | **SECURED**                       |
 | Blade Socks         | **INSTALL** (If available)        |
 | Pitot Cover         | **INSTALL**                       |
 | Doors               | **LOCKED**                        |
 | Baggage / Documents | **REMOVED**                       |
-

@@ -9,18 +9,18 @@ perf_file: robinson_r66.lnmperf
 ## PERFORMANCE LIMITATIONS
 
 | Parameter            | Value                                       |
-|----------------------|---------------------------------------------|
+| -------------------- | ------------------------------------------- |
 | Max Gross Weight     | 2,700 lbs (1,225 kg)                        |
 | VNE (Never Exceed)   | 130 KIAS                                    |
 | VY (Best Rate Climb) | 70 KIAS                                     |
 | Max Temp (MGT)       | Start: 850°C peak, Flight: 750°C continuous |
 | Rotor RPM (Nr)       | Normal: 100-104%, Minimum: 90% (in flight)  |
-| Fuel Capacity        | 279 L usable                                |
+| Fuel Capacity        | 73.6 gal (279 L) usable                     |
 
 ## PREFLIGHT INSPECTION (EXTERIOR)
 
 | Check Item               | Action                                                          |
-|--------------------------|-----------------------------------------------------------------|
+| ------------------------ | --------------------------------------------------------------- |
 | Tie-downs / Rotor Brake  | **REMOVED / OFF**                                               |
 | Main & Tail Rotor Blades | **CHECK** (Condition, hinges, blade stops, track)               |
 | Engine Air Intake        | **CHECK CLEAR** (Screened intake at tail boom base)             |
@@ -35,7 +35,7 @@ perf_file: robinson_r66.lnmperf
 ## COCKPIT PREPARATION
 
 | Check Item                         | Action                                                                                                                                                      |
-|------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Seats & Harnesses                  | **ADJUSTED / SECURED**                                                                                                                                      |
 | Cyclic / Collective                | **CENTERED / FULL DOWN**<br>Friction devices: **CHECK & SET** as desired (Cyclic friction knob on center console; Collective friction lever on collective). |
 | Rotor Brake                        | **OFF** (Verify fully disengaged, light out)                                                                                                                |
@@ -63,7 +63,7 @@ perf_file: robinson_r66.lnmperf
 ## ENGINE START
 
 | Check Item              | Action                                                                                                                                                                       |
-|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Area                    | **CLEAR** (Rotor arc 360°) / Seats / Harnesses                                                                                                                               |
 | Throttle (Twist Grip)   | **CLOSED (IDLE)** for start sequence. Do not pre-open.                                                                                                                       |
 | Ignition / Start Switch | **START** (Hold to begin spool-up)                                                                                                                                           |
@@ -78,7 +78,7 @@ perf_file: robinson_r66.lnmperf
 ## GROUND CHECKS & RUN-UP
 
 | Check Item             | Action                                                                                |
-|------------------------|---------------------------------------------------------------------------------------|
+| ---------------------- | ------------------------------------------------------------------------------------- |
 | Engine Warm-up         | **2 MINUTES** at idle (Oil temp rising toward green)                                  |
 | Flight Controls        | **FREE & CORRECT** (Full deflection, check friction)                                  |
 | Engine Gauges          | **CHECK STABLE**: MGT ≤ 750°C, Oil P/T, Fuel Flow                                     |
@@ -93,7 +93,7 @@ perf_file: robinson_r66.lnmperf
 ## BEFORE TAKEOFF
 
 | Check Item                  | Action                                                                              |
-|-----------------------------|-------------------------------------------------------------------------------------|
+| --------------------------- | ----------------------------------------------------------------------------------- |
 | Briefing                    | **TAKEOFF / DEPARTURE / EMERGENCY**<br>Include: Engine failure point, landing areas |
 | Weight & Balance            | **VERIFY** (Max Gross: 2,700 lbs; within CG limits)                                 |
 | Transponder                 | **ALT/ON** (Set code as required)                                                   |
@@ -107,7 +107,7 @@ perf_file: robinson_r66.lnmperf
 ## HOVER CHECK
 
 | Check Item     | Action                                                                                                                 |
-|----------------|------------------------------------------------------------------------------------------------------------------------|
+| -------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | Lift to Hover  | **SMOOTH COLLECTIVE** (Clear area, light on skids)                                                                     |
 | Engine & Rotor | **MONITOR:**<br>• Rotor RPM (Nr): 98-102% (governed)<br>• MGT: ≤ 750°C<br>• Torque: Check normal for weight/conditions |
 | Vibrations     | **CHECK NORMAL** (No unusual airframe/rotor vibrations)                                                                |
@@ -117,10 +117,10 @@ perf_file: robinson_r66.lnmperf
 ## CLIMB & CRUISE
 
 | Check Item            | Action                                                           |
-|-----------------------|------------------------------------------------------------------|
-| Climb Speed           | **70-80 KIAS** (Best rate ~70 KIAS)                              |
+| --------------------- | ---------------------------------------------------------------- |
+| Climb Speed           | **75 KTAS** (best rate ~70 KIAS)                      |
 | Cruise Torque / Power | **65-75% Torque** (Monitor MGT ≤ 750°C, N2 ~100%)                |
-| Cruise Speed          | **110-120 KIAS** (VNE: 130 KIAS)                                 |
+| Cruise Speed          | **110 KTAS** (VNE: 130 KIAS)                                     |
 | Max Continuous Torque | **≤80%** (Monitor MGT ≤ 750°C)                                   |
 | Cabin Environment     | **ADJUST** (Vent/Heat as needed)                                 |
 | Engine Scan           | **CONTINUOUS:** Torque, N1/N2, MGT, Oil Temp/Pressure, Fuel Flow |
@@ -130,16 +130,16 @@ perf_file: robinson_r66.lnmperf
 ## DESCENT & APPROACH
 
 | Check Item        | Action                                                                       |
-|-------------------|------------------------------------------------------------------------------|
+| ----------------- | ---------------------------------------------------------------------------- |
 | Power Reduction   | **GRADUAL** - reduce torque to ~40-50% for descent; monitor MGT cooling rate |
-| Descent Speed     | **70-90 KIAS**                                                               |
+| Descent Speed     | **80 KTAS**                                                                  |
 | Approach Briefing | **COMPLETE** (Type of approach, missed approach, emergencies)                |
 | Landing Area      | **IDENTIFY & BRIEF** (Wind, obstacles, surface condition)                    |
 
 ## BEFORE LANDING
 
 | Check Item           | Action                                              |
-|----------------------|-----------------------------------------------------|
+| -------------------- | --------------------------------------------------- |
 | Final Approach Speed | **60-70 KIAS** (Adjust for wind/weight)             |
 | Torque               | **Adjust to ~30-40%** (Maintain rotor RPM 100 ± 2%) |
 | Landing Area         | **FINAL CHECK** (Clear, wind, obstacles, surface)   |
@@ -149,7 +149,7 @@ perf_file: robinson_r66.lnmperf
 ## LANDING
 
 | Check Item | Action                                                 |
-|------------|--------------------------------------------------------|
+| ---------- | ------------------------------------------------------ |
 | Flare      | **INITIATE** at 30-50 ft AGL                           |
 | Collective | **CUSHION** to maintain rotor RPM and smooth touchdown |
 | Touchdown  | **LEVEL SKIDS** (Avoid side/downward drift)            |
@@ -158,7 +158,7 @@ perf_file: robinson_r66.lnmperf
 ## ENGINE SHUTDOWN
 
 | Check Item                | Action                                                                                     |
-|---------------------------|--------------------------------------------------------------------------------------------|
+| ------------------------- | ------------------------------------------------------------------------------------------ |
 | Engine Cool-down          | **2 MINUTES** at idle (MGT < 500°C)<br>*Allow longer if MGT is high for subsequent start.* |
 | Condition Lever           | **OFF / FUEL CUTOFF** (Full aft)                                                           |
 | Engine                    | **MONITOR** to stop (N1/N2 to 0%)                                                          |
@@ -172,7 +172,7 @@ perf_file: robinson_r66.lnmperf
 ## SECURING AIRCRAFT
 
 | Check Item            | Action                                |
-|-----------------------|---------------------------------------|
+| --------------------- | ------------------------------------- |
 | Rotor Brake           | **APPLY** (Wait for Nr < 20% ~80 RPM) |
 | Tie-downs             | **SECURE** (Main rotor, tail, skids)  |
 | Pitot / Intake Covers | **INSTALL** (As required for parking) |

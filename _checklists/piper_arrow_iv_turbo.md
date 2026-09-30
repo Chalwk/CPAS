@@ -8,26 +8,26 @@ perf_file: piper_turbo_arrow_IV.lnmperf
 
 ## EXTERIOR PREFLIGHT (WALK-AROUND)
 
-| Check Item                  | Action                                                                          |
-|-----------------------------|---------------------------------------------------------------------------------|
-| Tie-downs / Chocks / Covers | **REMOVED**                                                                     |
-| Fuel Quantity               | **CHECK VISUALLY** (Drain samples from both wings, 72 gal total, 68 gal usable) |
-| Fuel Caps                   | **SECURED**                                                                     |
-| Oil Level                   | **CHECK** (8 quarts, min 6 quarts, max 12 quarts)                               |
-| Oil Cap / Dipstick          | **SECURED**                                                                     |
-| Gear & Doors                | **VISUAL CHECK** (No damage, secure)                                            |
-| Control Surfaces            | **FREE & CORRECT** (Ailerons, Elevator, Rudder, Flaps, Trim tabs)               |
-| Pitot Tube Cover            | **REMOVED**                                                                     |
-| Static Ports                | **CLEAR**                                                                       |
-| Tires / Brakes              | **CHECK** (Condition / Inflation, 24 psi mains, 36 psi nose)                    |
-| Propeller                   | **CHECK** (No nicks, secure)                                                    |
-| Turbocharger / Exhaust      | **VISUAL CHECK** (No visible damage or leaks)                                   |
-| Master Switch               | **OFF** during walk-around                                                      |
+| Check Item                  | Action                                                            |
+| --------------------------- | ----------------------------------------------------------------- |
+| Tie-downs / Chocks / Covers | **REMOVED**                                                       |
+| Fuel Quantity               | **CHECK VISUALLY** (Drain samples from both wings, 72 gal usable) |
+| Fuel Caps                   | **SECURED**                                                       |
+| Oil Level                   | **CHECK** (8 quarts, min 6 quarts, max 12 quarts)                 |
+| Oil Cap / Dipstick          | **SECURED**                                                       |
+| Gear & Doors                | **VISUAL CHECK** (No damage, secure)                              |
+| Control Surfaces            | **FREE & CORRECT** (Ailerons, Elevator, Rudder, Flaps, Trim tabs) |
+| Pitot Tube Cover            | **REMOVED**                                                       |
+| Static Ports                | **CLEAR**                                                         |
+| Tires / Brakes              | **CHECK** (Condition / Inflation, 24 psi mains, 36 psi nose)      |
+| Propeller                   | **CHECK** (No nicks, secure)                                      |
+| Turbocharger / Exhaust      | **VISUAL CHECK** (No visible damage or leaks)                     |
+| Master Switch               | **OFF** during walk-around                                        |
 
 ## COCKPIT PREPARATION
 
 | Check Item           | Action                                                |
-|----------------------|-------------------------------------------------------|
+| -------------------- | ----------------------------------------------------- |
 | Parking Brake        | **SET**                                               |
 | Battery / Alternator | **OFF**                                               |
 | Avionics Master      | **OFF**                                               |
@@ -47,7 +47,7 @@ perf_file: piper_turbo_arrow_IV.lnmperf
 ## ENGINE START
 
 | Check Item    | Action                                           |
-|---------------|--------------------------------------------------|
+| ------------- | ------------------------------------------------ |
 | Area          | **CLEAR**                                        |
 | Master Switch | **ON** (Check gear lights: 3 green)              |
 | Fuel Pump     | **ON** (Prime 3-5 seconds cold, 1-2 seconds hot) |
@@ -62,7 +62,7 @@ perf_file: piper_turbo_arrow_IV.lnmperf
 ## RUN-UP AND SYSTEMS CHECK
 
 | Check Item         | Action                                                                                          |
-|--------------------|-------------------------------------------------------------------------------------------------|
+| ------------------ | ----------------------------------------------------------------------------------------------- |
 | Location           | **RUN-UP AREA** (Pointed into wind)                                                             |
 | Parking Brake      | **SET**                                                                                         |
 | Flight Controls    | **FREE & CORRECT**                                                                              |
@@ -80,7 +80,7 @@ perf_file: piper_turbo_arrow_IV.lnmperf
 ## BEFORE TAKEOFF
 
 | Check Item        | Action                                           |
-|-------------------|--------------------------------------------------|
+| ----------------- | ------------------------------------------------ |
 | Parking Brake     | **RELEASED**                                     |
 | Flight Controls   | **FREE & CORRECT** (Final check)                 |
 | Fuel Selector     | **BOTH**                                         |
@@ -98,7 +98,7 @@ perf_file: piper_turbo_arrow_IV.lnmperf
 ## TAKEOFF
 
 | Check Item         | Action                                               |
-|--------------------|------------------------------------------------------|
+| ------------------ | ---------------------------------------------------- |
 | Area               | **CLEAR** (Final runway check)                       |
 | Throttle           | **FULL** (Smoothly, monitor MP: 36-38" at sea level) |
 | Engine Instruments | **MONITOR** (Oil pressure 25-100 psi, CHT rising)    |
@@ -110,12 +110,12 @@ perf_file: piper_turbo_arrow_IV.lnmperf
 ## CLIMB
 
 | Check Item    | Action                                            |
-|---------------|---------------------------------------------------|
+| ------------- | ------------------------------------------------- |
 | Gear          | **UP & VERIFIED** (3 green lights out)            |
 | Flaps         | **UP** (If used)                                  |
 | Fuel Pump     | **OFF** (Above 500 ft AGL, positive rate)         |
 | Climb Power   | **29" MP / 2500 RPM** (75% power below 10,000 ft) |
-| Climb Speed   | **100 KIAS** (Normal climb, gear up)              |
+| Climb Speed   | **100 KTAS** (Normal climb, gear up; 900 FPM)     |
 | Mixture       | **LEAN** (Above 5000 ft for best power)           |
 | Cowl Flaps    | **AS REQUIRED** (Adjust to maintain CHT ≤ 400°F)  |
 | Engine Gauges | **MONITOR** (CHT ≤ 400°F, Oil Temp ≤ 245°F)       |
@@ -123,11 +123,11 @@ perf_file: piper_turbo_arrow_IV.lnmperf
 ## CRUISE
 
 | Check Item    | Action                                                                                                                                |
-|---------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Power Setting | **24-27" MP / 2300-2500 RPM** (65-75% power)<br> *Turbocharged: Maintain MP with altitude (approx 1" loss per 1000 ft without turbo)* |
 | Mixture       | **LEAN** (For peak EGT or 50°F rich of peak)                                                                                          |
-| Cruise Speed  | **140-155 KIAS** (75% power at 10,000 ft)                                                                                             |
-| Fuel Flow     | **CHECK** (12-14 GPH at 75% power)                                                                                                    |
+| Cruise Speed  | **157 KTAS** (75% power at 10,000 ft)                                                                                                 |
+| Fuel Flow     | **CHECK** (12.5 GPH at 75% power)                                                                                                     |
 | Engine Gauges | **MONITOR** (CHT 300-380°F, Oil Temp 180-220°F ideal)                                                                                 |
 | Cowl Flaps    | **ADJUST** (As needed for cooling)                                                                                                    |
 | Fuel Tanks    | **BALANCE** (Switch tanks every 30-60 minutes)                                                                                        |
@@ -135,11 +135,11 @@ perf_file: piper_turbo_arrow_IV.lnmperf
 ## DESCENT
 
 | Check Item     | Action                                                        |
-|----------------|---------------------------------------------------------------|
+| -------------- | ------------------------------------------------------------- |
 | Power          | **REDUCE** (15-18" MP, 2000-2200 RPM)                         |
 | Mixture        | **ENRICH** (As required for smooth operation)                 |
 | Carb Heat      | **AS REQUIRED** (ON when below green arc or visible moisture) |
-| Descent Speed  | **120-140 KIAS** (With 500-1000 FPM descent)                  |
+| Descent Speed  | **130 KTAS** (500 FPM descent)                                |
 | Cowl Flaps     | **CLOSED** (To prevent overcooling)                           |
 | Engine Cooling | **MONITOR** (Keep CHT > 250°F during descent)                 |
 | Fuel Pump      | **ON** (Below 3000 ft AGL or when power < 15")                |
@@ -147,7 +147,7 @@ perf_file: piper_turbo_arrow_IV.lnmperf
 ## BEFORE LANDING
 
 | Check Item     | Action                                                         |
-|----------------|----------------------------------------------------------------|
+| -------------- | -------------------------------------------------------------- |
 | Fuel Selector  | **BOTH** (Or fullest tank)                                     |
 | Fuel Pump      | **ON**                                                         |
 | Mixture        | **FULL RICH** (Below 5000 ft MSL)                              |
@@ -163,7 +163,7 @@ perf_file: piper_turbo_arrow_IV.lnmperf
 ## LANDING
 
 | Check Item      | Action                               |
-|-----------------|--------------------------------------|
+| --------------- | ------------------------------------ |
 | Final Approach  | **70-75 KIAS** (With full flaps)     |
 | Flare           | **GENTLY** (Power to idle, hold off) |
 | Touchdown       | **MAIN WHEELS FIRST**                |
@@ -174,7 +174,7 @@ perf_file: piper_turbo_arrow_IV.lnmperf
 ## AFTER LANDING / TAXI-IN
 
 | Check Item    | Action                                    |
-|---------------|-------------------------------------------|
+| ------------- | ----------------------------------------- |
 | Flaps         | **UP**                                    |
 | Transponder   | **STANDBY**                               |
 | Fuel Pump     | **OFF** (Unless low fuel or rough ground) |
@@ -185,7 +185,7 @@ perf_file: piper_turbo_arrow_IV.lnmperf
 ## ENGINE SHUTDOWN
 
 | Check Item        | Action                       |
-|-------------------|------------------------------|
+| ----------------- | ---------------------------- |
 | Parking Brake     | **SET**                      |
 | Avionics / Radios | **OFF**                      |
 | Fuel Pump         | **OFF**                      |
@@ -197,7 +197,7 @@ perf_file: piper_turbo_arrow_IV.lnmperf
 ## SECURING AIRCRAFT
 
 | Check Item          | Action                        |
-|---------------------|-------------------------------|
+| ------------------- | ----------------------------- |
 | Control Lock        | **INSTALL**                   |
 | Pitot Cover         | **INSTALL**                   |
 | Tie-downs           | **SECURED** (3-point minimum) |

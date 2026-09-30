@@ -9,7 +9,7 @@ perf_file: piper_tomahawk.lnmperf
 ## EXTERIOR PREFLIGHT (WALK-AROUND)
 
 | Check Item                  | Action                                          |
-|-----------------------------|-------------------------------------------------|
+| --------------------------- | ----------------------------------------------- |
 | Tie-downs / Chocks / Covers | **REMOVED**                                     |
 | Fuel Quantity               | **CHECK VISUALLY** (Both tanks, drain samples)  |
 | Fuel Caps                   | **SECURED**                                     |
@@ -25,7 +25,7 @@ perf_file: piper_tomahawk.lnmperf
 ## COCKPIT PREPARATION
 
 | Check Item           | Action                                    |
-|----------------------|-------------------------------------------|
+| -------------------- | ----------------------------------------- |
 | Parking Brake        | **SET**                                   |
 | Mixture              | **IDLE CUTOFF**                           |
 | Throttle             | **1/2 INCH**                              |
@@ -42,7 +42,7 @@ perf_file: piper_tomahawk.lnmperf
 ## ENGINE START
 
 | Check Item        | Action                                                 |
-|-------------------|--------------------------------------------------------|
+| ----------------- | ------------------------------------------------------ |
 | Area              | **CLEAR**                                              |
 | Mixture           | **RICH**                                               |
 | Throttle          | **1/4 INCH**                                           |
@@ -56,7 +56,7 @@ perf_file: piper_tomahawk.lnmperf
 ## RUN-UP AND MAG CHECK
 
 | Check Item         | Action                                                                                          |
-|--------------------|-------------------------------------------------------------------------------------------------|
+| ------------------ | ----------------------------------------------------------------------------------------------- |
 | Location           | **RUN-UP AREA** (Pointed into wind)                                                             |
 | Parking Brake      | **SET**                                                                                         |
 | Flight Controls    | **FREE & CORRECT**                                                                              |
@@ -73,7 +73,7 @@ perf_file: piper_tomahawk.lnmperf
 ## BEFORE TAXI
 
 | Check Item         | Action                                     |
-|--------------------|--------------------------------------------|
+| ------------------ | ------------------------------------------ |
 | Flaps              | **UP** (Crank verify)                      |
 | Avionics Master    | **ON**                                     |
 | Transponder        | **STANDBY**                                |
@@ -86,7 +86,7 @@ perf_file: piper_tomahawk.lnmperf
 ## TAXI
 
 | Check Item         | Action                                                         |
-|--------------------|----------------------------------------------------------------|
+| ------------------ | -------------------------------------------------------------- |
 | Taxi Light         | **ON** (As required)                                           |
 | Fuel Pump          | **ON** for taxi if low fuel or rough ground                    |
 | Engine Gauges      | **MONITOR** (Oil temp/pressure in green)                       |
@@ -96,7 +96,7 @@ perf_file: piper_tomahawk.lnmperf
 ## BEFORE TAKEOFF
 
 | Check Item         | Action                                              |
-|--------------------|-----------------------------------------------------|
+| ------------------ | --------------------------------------------------- |
 | Parking Brake      | **SET**                                             |
 | Flight Controls    | **FREE & CORRECT** (Final check)                    |
 | Flaps              | **AS DESIRED** (Typically 0-10° for normal takeoff) |
@@ -112,7 +112,7 @@ perf_file: piper_tomahawk.lnmperf
 ## TAKEOFF
 
 | Check Item         | Action                               |
-|--------------------|--------------------------------------|
+| ------------------ | ------------------------------------ |
 | Area               | **CLEAR** (Final runway check)       |
 | Flaps              | **AS DESIRED**                       |
 | Fuel Pump          | **ON**                               |
@@ -126,39 +126,39 @@ perf_file: piper_tomahawk.lnmperf
 ## CLIMB
 
 | Check Item    | Action                                      |
-|---------------|---------------------------------------------|
+| ------------- | ------------------------------------------- |
 | Fuel Pump     | **OFF** (Above 500 ft AGL)                  |
 | Flaps         | **UP** (If used, retract gradually)         |
-| Climb Speed   | **75-80 KIAS** (Vy 75)                      |
+| Climb Speed   | **70 KTAS** (Vy 75 KIAS)         |
 | Mixture       | **LEAN** (Above 3000 ft MSL)                |
 | Engine Gauges | **MONITOR** (CHT ≤ 450°F, Oil Temp ≤ 245°F) |
 
 ## CRUISE
 
 | Check Item    | Action                                                    |
-|---------------|-----------------------------------------------------------|
+| ------------- | --------------------------------------------------------- |
 | Power Setting | **2300-2400 RPM** (65-75% power)                          |
 | Mixture       | **LEAN** (For peak EGT or per POH)                        |
-| Cruise Speed  | **100-110 KIAS** (75% power at 8000 ft)                   |
-| Fuel Flow     | **CHECK** (7.5-8.5 GPH at 75% power)                      |
+| Cruise Speed  | **98 KTAS** (75% power at 8000 ft)                        |
+| Fuel Flow     | **CHECK** (6.5 GPH at 75% power)                          |
 | Engine Gauges | **MONITOR** (CHT 300-400°F, Oil Temp 180-220°F ideal)     |
 | Fuel Tanks    | **BALANCE** (Switch tanks every 30 min if not using BOTH) |
 
 ## DESCENT
 
 | Check Item     | Action                                        |
-|----------------|-----------------------------------------------|
+| -------------- | --------------------------------------------- |
 | Mixture        | **RICH** (Below 3000 ft MSL)                  |
 | Carb Heat      | **AS REQUIRED** (ON when below green arc)     |
-| Descent Speed  | **90-100 KIAS**                               |
-| Descent Rate   | **500-700 FPM**                               |
+| Descent Speed  | **90 KTAS**                                   |
+| Descent Rate   | **500 FPM**                                   |
 | Engine Cooling | **MONITOR** (Keep CHT > 250°F during descent) |
 | Fuel Pump      | **ON** (For landing)                          |
 
 ## BEFORE LANDING
 
 | Check Item     | Action                                                    |
-|----------------|-----------------------------------------------------------|
+| -------------- | --------------------------------------------------------- |
 | Fuel Selector  | **BOTH**                                                  |
 | Fuel Pump      | **ON**                                                    |
 | Mixture        | **FULL RICH**                                             |
@@ -172,7 +172,7 @@ perf_file: piper_tomahawk.lnmperf
 ## LANDING
 
 | Check Item      | Action                               |
-|-----------------|--------------------------------------|
+| --------------- | ------------------------------------ |
 | Final Approach  | **65-70 KIAS** (With flaps)          |
 | Flare           | **GENTLY** (Power to idle, hold off) |
 | Touchdown       | **MAIN WHEELS FIRST**                |
@@ -183,7 +183,7 @@ perf_file: piper_tomahawk.lnmperf
 ## AFTER LANDING / TAXI-IN
 
 | Check Item    | Action                      |
-|---------------|-----------------------------|
+| ------------- | --------------------------- |
 | Flaps         | **UP** (Crank fully up)     |
 | Transponder   | **STANDBY**                 |
 | Lights        | **AS REQUIRED**             |
@@ -193,7 +193,7 @@ perf_file: piper_tomahawk.lnmperf
 ## ENGINE SHUTDOWN
 
 | Check Item        | Action                                    |
-|-------------------|-------------------------------------------|
+| ----------------- | ----------------------------------------- |
 | Parking Brake     | **SET**                                   |
 | Avionics / Radios | **OFF**                                   |
 | Fuel Pump         | **OFF**                                   |
@@ -204,11 +204,10 @@ perf_file: piper_tomahawk.lnmperf
 ## SECURING AIRCRAFT
 
 | Check Item          | Action                        |
-|---------------------|-------------------------------|
+| ------------------- | ----------------------------- |
 | Control Lock        | **INSTALL** (If available)    |
 | Pitot Cover         | **INSTALL**                   |
 | Tie-downs           | **SECURED**                   |
 | Fuel Selector       | **OFF** (If leaving aircraft) |
 | Baggage / Documents | **REMOVED**                   |
 | Door                | **LOCKED**                    |
-
