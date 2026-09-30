@@ -155,12 +155,12 @@ collections:
   # _checklists/  ->  /checklists/<filename>/
   checklists:
     output: true
-    permalink: /checklists/:name/
+    permalink: /checklists/:slug/
 
   # _airframes/   ->  /airframes/<filename>/
   airframes:
     output: true
-    permalink: /airframes/:name/
+    permalink: /airframes/:slug/
 
 # -----------------------------------------------------------------------------
 # Defaults
