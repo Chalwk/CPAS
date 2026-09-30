@@ -11,7 +11,7 @@
         </Header>
         <Options>
             <Name>Piper Tomahawk (PA-38-112)</Name>
-            <AircraftType>P38T</AircraftType>
+            <AircraftType>PA38</AircraftType>
             <Simulator>MSFS</Simulator>
             <Description>Two-seat, low-wing trainer, single-engine piston, ideal for flight training and VFR practice.
             </Description>
@@ -21,13 +21,13 @@
         <Perf>
             <ContingencyFuelPercent>5.0</ContingencyFuelPercent>
             <MinRunwayLengthFt>1300.000</MinRunwayLengthFt>
-            <ReserveFuelLbsGal>20.000</ReserveFuelLbsGal>
+            <ReserveFuelLbsGal>5.000</ReserveFuelLbsGal>
             <RunwayType>PAVED</RunwayType>
             <TaxiFuelLbsGal>1.000</TaxiFuelLbsGal>
             <UsableFuelLbsGal>30.000</UsableFuelLbsGal>
             <Alternate>
-                <FuelFlowLbsGalPerHour>8.000</FuelFlowLbsGalPerHour>
-                <SpeedKtsTAS>80.000</SpeedKtsTAS>
+                <FuelFlowLbsGalPerHour>5.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>82.000</SpeedKtsTAS>
             </Alternate>
             <Climb>
                 <FuelFlowLbsGalPerHour>8.500</FuelFlowLbsGalPerHour>
@@ -35,7 +35,7 @@
                 <VertSpeedFtPerMin>600.000</VertSpeedFtPerMin>
             </Climb>
             <Cruise>
-                <FuelFlowLbsGalPerHour>8.000</FuelFlowLbsGalPerHour>
+                <FuelFlowLbsGalPerHour>6.500</FuelFlowLbsGalPerHour>
                 <SpeedKtsTAS>98.000</SpeedKtsTAS>
             </Cruise>
             <Descent>

@@ -24,10 +24,10 @@
             <ReserveFuelLbsGal>20.000</ReserveFuelLbsGal>
             <RunwayType>PAVED</RunwayType>
             <TaxiFuelLbsGal>2.000</TaxiFuelLbsGal>
-            <UsableFuelLbsGal>123.000</UsableFuelLbsGal>
+            <UsableFuelLbsGal>122.000</UsableFuelLbsGal>
             <Alternate>
-                <FuelFlowLbsGalPerHour>22.000</FuelFlowLbsGalPerHour>
-                <SpeedKtsTAS>150.000</SpeedKtsTAS>
+                <FuelFlowLbsGalPerHour>20.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>155.000</SpeedKtsTAS>
             </Alternate>
             <Climb>
                 <FuelFlowLbsGalPerHour>40.000</FuelFlowLbsGalPerHour>

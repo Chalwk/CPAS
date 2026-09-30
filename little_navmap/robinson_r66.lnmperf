@@ -13,22 +13,20 @@
             <Name>Robinson R66 Turbine</Name>
             <AircraftType>R66</AircraftType>
             <Simulator>MSFS</Simulator>
-            <Description>Five-seat light utility/trainer helicopter, powered by a Rolls-Royce RR300 turboshaft
-                engine[citation:3]. Features a separate 300 lb baggage compartment[citation:8].
-            </Description>
+            <Description>Five-seat light utility/trainer helicopter powered by a Rolls-Royce RR300 turboshaft. Burns Jet A/A-1.</Description>
             <FuelAsVolume>1</FuelAsVolume>
             <JetFuel>1</JetFuel>
         </Options>
         <Perf>
             <ContingencyFuelPercent>5.0</ContingencyFuelPercent>
             <MinRunwayLengthFt>0</MinRunwayLengthFt>
-            <ReserveFuelLbsGal>30.000</ReserveFuelLbsGal>
+            <ReserveFuelLbsGal>15.000</ReserveFuelLbsGal>
             <RunwayType>VERTICAL</RunwayType>
             <TaxiFuelLbsGal>3.000</TaxiFuelLbsGal>
-            <UsableFuelLbsGal>493.000</UsableFuelLbsGal>
+            <UsableFuelLbsGal>73.600</UsableFuelLbsGal>
             <Alternate>
-                <FuelFlowLbsGalPerHour>23.000</FuelFlowLbsGalPerHour>
-                <SpeedKtsTAS>105.000</SpeedKtsTAS>
+                <FuelFlowLbsGalPerHour>20.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>100.000</SpeedKtsTAS>
             </Alternate>
             <Climb>
                 <FuelFlowLbsGalPerHour>25.000</FuelFlowLbsGalPerHour>

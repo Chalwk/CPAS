@@ -26,17 +26,17 @@
             <TaxiFuelLbsGal>1.500</TaxiFuelLbsGal>
             <UsableFuelLbsGal>48.000</UsableFuelLbsGal>
             <Alternate>
-                <FuelFlowLbsGalPerHour>9.500</FuelFlowLbsGalPerHour>
-                <SpeedKtsTAS>115.000</SpeedKtsTAS>
+                <FuelFlowLbsGalPerHour>8.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>110.000</SpeedKtsTAS>
             </Alternate>
             <Climb>
                 <FuelFlowLbsGalPerHour>14.000</FuelFlowLbsGalPerHour>
                 <SpeedKtsTAS>80.000</SpeedKtsTAS>
-                <VertSpeedFtPerMin>690.000</VertSpeedFtPerMin>
+                <VertSpeedFtPerMin>660.000</VertSpeedFtPerMin>
             </Climb>
             <Cruise>
                 <FuelFlowLbsGalPerHour>10.000</FuelFlowLbsGalPerHour>
-                <SpeedKtsTAS>128.000</SpeedKtsTAS>
+                <SpeedKtsTAS>122.000</SpeedKtsTAS>
             </Cruise>
             <Descent>
                 <FuelFlowLbsGalPerHour>6.000</FuelFlowLbsGalPerHour>

@@ -4,7 +4,7 @@
     <AircraftPerf>
         <Header>
             <CreationDate>2025-12-15T17:40:00+13:00</CreationDate>
-            <FileVersion>1.0</FileVersion>
+            <FileVersion>1.1</FileVersion>
             <ProgramName>Little Navmap</ProgramName>
             <ProgramVersion>3.0.18</ProgramVersion>
             <Documentation>https://www.littlenavmap.org/lnmperf.html</Documentation>
@@ -22,25 +22,25 @@
             <ContingencyFuelPercent>5.0</ContingencyFuelPercent>
             <ExtraFuelLbsGal>0.000</ExtraFuelLbsGal>
             <MinRunwayLengthFt>1350.000</MinRunwayLengthFt>
-            <ReserveFuelLbsGal>30.000</ReserveFuelLbsGal>
+            <ReserveFuelLbsGal>6.500</ReserveFuelLbsGal>
             <RunwayType>PAVED</RunwayType>
             <TaxiFuelLbsGal>1.500</TaxiFuelLbsGal>
             <UsableFuelLbsGal>48.000</UsableFuelLbsGal>
             <Alternate>
-                <FuelFlowLbsGalPerHour>10.0</FuelFlowLbsGalPerHour>
-                <SpeedKtsTAS>90.000</SpeedKtsTAS>
+                <FuelFlowLbsGalPerHour>7.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>100.000</SpeedKtsTAS>
             </Alternate>
             <Climb>
-                <FuelFlowLbsGalPerHour>10.5</FuelFlowLbsGalPerHour>
+                <FuelFlowLbsGalPerHour>12.000</FuelFlowLbsGalPerHour>
                 <SpeedKtsTAS>85.000</SpeedKtsTAS>
                 <VertSpeedFtPerMin>650.000</VertSpeedFtPerMin>
             </Climb>
             <Cruise>
-                <FuelFlowLbsGalPerHour>9.0</FuelFlowLbsGalPerHour>
-                <SpeedKtsTAS>120.000</SpeedKtsTAS>
+                <FuelFlowLbsGalPerHour>8.500</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>115.000</SpeedKtsTAS>
             </Cruise>
             <Descent>
-                <FuelFlowLbsGalPerHour>4.0</FuelFlowLbsGalPerHour>
+                <FuelFlowLbsGalPerHour>4.000</FuelFlowLbsGalPerHour>
                 <SpeedKtsTAS>100.000</SpeedKtsTAS>
                 <VertSpeedFtPerMin>500.000</VertSpeedFtPerMin>
             </Descent>

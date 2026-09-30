@@ -11,7 +11,7 @@
         </Header>
         <Options>
             <Name>Piper Turbo Arrow IV (PA-28RT-201)</Name>
-            <AircraftType>P28T</AircraftType>
+            <AircraftType>P28U</AircraftType>
             <Simulator>MSFS</Simulator>
             <Description>Turbocharged single-engine piston, 4 seats, retractable gear, T-tail, 200 hp Continental TSIO-360. Standard PA-28RT-201T performance.
             </Description>
@@ -26,8 +26,8 @@
             <TaxiFuelLbsGal>1.500</TaxiFuelLbsGal>
             <UsableFuelLbsGal>72.000</UsableFuelLbsGal>
             <Alternate>
-                <FuelFlowLbsGalPerHour>11.500</FuelFlowLbsGalPerHour>
-                <SpeedKtsTAS>140.000</SpeedKtsTAS>
+                <FuelFlowLbsGalPerHour>10.500</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>150.000</SpeedKtsTAS>
             </Alternate>
             <Climb>
                 <FuelFlowLbsGalPerHour>17.000</FuelFlowLbsGalPerHour>

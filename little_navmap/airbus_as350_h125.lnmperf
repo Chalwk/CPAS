@@ -11,7 +11,7 @@
         </Header>
         <Options>
             <Name>Airbus H125 (AS350 B3e)</Name>
-            <AircraftType>H125</AircraftType>
+            <AircraftType>AS50</AircraftType>
             <Simulator>MSFS</Simulator>
             <Description>Light single-engine turbine helicopter, versatile, used for sightseeing, EMS, utility, and
                 training.
@@ -25,22 +25,22 @@
             <ReserveFuelLbsGal>30.000</ReserveFuelLbsGal>
             <RunwayType>VERTICAL</RunwayType>
             <TaxiFuelLbsGal>3.000</TaxiFuelLbsGal>
-            <UsableFuelLbsGal>170.000</UsableFuelLbsGal>
+            <UsableFuelLbsGal>143.000</UsableFuelLbsGal>
             <Alternate>
-                <FuelFlowLbsGalPerHour>80.000</FuelFlowLbsGalPerHour>
-                <SpeedKtsTAS>90.000</SpeedKtsTAS>
+                <FuelFlowLbsGalPerHour>38.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>105.000</SpeedKtsTAS>
             </Alternate>
             <Climb>
-                <FuelFlowLbsGalPerHour>95.000</FuelFlowLbsGalPerHour>
+                <FuelFlowLbsGalPerHour>60.000</FuelFlowLbsGalPerHour>
                 <SpeedKtsTAS>75.000</SpeedKtsTAS>
                 <VertSpeedFtPerMin>1500.000</VertSpeedFtPerMin>
             </Climb>
             <Cruise>
-                <FuelFlowLbsGalPerHour>80.000</FuelFlowLbsGalPerHour>
-                <SpeedKtsTAS>108.000</SpeedKtsTAS>
+                <FuelFlowLbsGalPerHour>46.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>120.000</SpeedKtsTAS>
             </Cruise>
             <Descent>
-                <FuelFlowLbsGalPerHour>45.000</FuelFlowLbsGalPerHour>
+                <FuelFlowLbsGalPerHour>28.000</FuelFlowLbsGalPerHour>
                 <SpeedKtsTAS>100.000</SpeedKtsTAS>
                 <VertSpeedFtPerMin>1000.000</VertSpeedFtPerMin>
             </Descent>

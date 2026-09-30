@@ -11,7 +11,7 @@
         </Header>
         <Options>
             <Name>Airbus H145</Name>
-            <AircraftType>H145</AircraftType>
+            <AircraftType>EC45</AircraftType>
             <Simulator>MSFS</Simulator>
             <Description>Medium twin-engine helicopter, 1+8 seats, turbine-powered, used for EMS, VIP, and utility.
             </Description>
@@ -24,22 +24,22 @@
             <ReserveFuelLbsGal>50.000</ReserveFuelLbsGal>
             <RunwayType>VERTICAL</RunwayType>
             <TaxiFuelLbsGal>5.000</TaxiFuelLbsGal>
-            <UsableFuelLbsGal>242.000</UsableFuelLbsGal>
+            <UsableFuelLbsGal>239.000</UsableFuelLbsGal>
             <Alternate>
-                <FuelFlowLbsGalPerHour>180.000</FuelFlowLbsGalPerHour>
+                <FuelFlowLbsGalPerHour>80.000</FuelFlowLbsGalPerHour>
                 <SpeedKtsTAS>120.000</SpeedKtsTAS>
             </Alternate>
             <Climb>
-                <FuelFlowLbsGalPerHour>200.000</FuelFlowLbsGalPerHour>
+                <FuelFlowLbsGalPerHour>105.000</FuelFlowLbsGalPerHour>
                 <SpeedKtsTAS>110.000</SpeedKtsTAS>
                 <VertSpeedFtPerMin>1500.000</VertSpeedFtPerMin>
             </Climb>
             <Cruise>
-                <FuelFlowLbsGalPerHour>180.000</FuelFlowLbsGalPerHour>
-                <SpeedKtsTAS>123.000</SpeedKtsTAS>
+                <FuelFlowLbsGalPerHour>88.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>128.000</SpeedKtsTAS>
             </Cruise>
             <Descent>
-                <FuelFlowLbsGalPerHour>120.000</FuelFlowLbsGalPerHour>
+                <FuelFlowLbsGalPerHour>50.000</FuelFlowLbsGalPerHour>
                 <SpeedKtsTAS>100.000</SpeedKtsTAS>
                 <VertSpeedFtPerMin>1000.000</VertSpeedFtPerMin>
             </Descent>
