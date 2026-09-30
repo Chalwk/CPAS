@@ -24,11 +24,10 @@ class RoutesPagination {
 
     setup() {
         this.setupTabs();
-        this.setupCardsPerPageSelector();
         this.updatePageCounts();
 
         const activeTab = document.querySelector('.tab-content.active');
-        if (activeTab) {
+        if (activeTab && activeTab.id) {
             this.paginateTab(activeTab.id);
         }
     }
@@ -38,194 +37,149 @@ class RoutesPagination {
 
         tabButtons.forEach(button => {
             button.addEventListener('click', (e) => {
-                const tabId = e.target.dataset.tab;
+                const tabId = e.currentTarget.dataset.tab;
+                if (!tabId) return;
 
                 const currentActiveTab = document.querySelector('.tab-content.active');
-                if (currentActiveTab) {
-                    this.currentPages[currentActiveTab.id] = this.getCurrentPage();
+                if (currentActiveTab && currentActiveTab.id) {
+                    this.currentPages[currentActiveTab.id] = this.getCurrentPage(currentActiveTab.id);
                 }
 
-                setTimeout(() => {
-                    this.paginateTab(tabId);
-                    this.updatePageCounts();
-                }, 10);
+                // Activate tab
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                e.currentTarget.classList.add('active');
+
+                const targetTab = document.getElementById(tabId);
+                if (!targetTab) return;
+                targetTab.classList.add('active');
+
+                // Reset to page 1 the first time a tab is opened (optional)
+                if (!this.currentPages[tabId]) this.currentPages[tabId] = 1;
+
+                this.paginateTab(tabId);
+                this.updatePageCounts();
             });
         });
     }
 
-    setupCardsPerPageSelector() {
-        const container = document.createElement('div');
-        container.className = 'cards-per-page-selector';
-
-        const label = document.createElement('label');
-        label.textContent = 'Cards per page:';
-
-        const select = document.createElement('select');
-        this.cardsPerPageOptions.forEach(option => {
-            const opt = document.createElement('option');
-            opt.value = option;
-            opt.textContent = option;
-            if (option === this.cardsPerPage) opt.selected = true;
-            select.appendChild(opt);
-        });
-
-        select.addEventListener('change', (e) => {
-            this.cardsPerPage = parseInt(e.target.value);
-
-            const tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(tab => {
-                if (tab.id) {
-                    this.currentPages[tab.id] = this.getCurrentPage();
-                }
-            });
-
-            const activeTab = document.querySelector('.tab-content.active');
-            if (activeTab && activeTab.id) {
-                this.paginateTab(activeTab.id);
-                this.updatePageCounts();
-            }
-        });
-
-        container.appendChild(label);
-        container.appendChild(select);
-
-        const paginationContainers = document.querySelectorAll('.pagination-container');
-        paginationContainers.forEach(container => {
-            const existingSelector = container.querySelector('.cards-per-page-selector');
-            if (existingSelector) existingSelector.remove();
-
-            const newSelector = container.cloneNode(true);
-            newSelector.querySelector('select').value = this.cardsPerPage;
-            container.appendChild(newSelector);
-        });
+    getGrid(tabContent) {
+        return tabContent.querySelector('.routes-grid') || tabContent.querySelector('.itineraries-container');
     }
 
     paginateTab(tabId) {
         const tabContent = document.getElementById(tabId);
         if (!tabContent) return;
 
-        let gridContainer = tabContent.querySelector('.routes-grid') ||
-        tabContent.querySelector('.itineraries-container');
-
+        const gridContainer = this.getGrid(tabContent);
         if (!gridContainer) return;
 
         const cards = Array.from(gridContainer.querySelectorAll('.route-card, .itinerary-card'));
         const totalCards = cards.length;
-        const currentPage = this.currentPages[tabId] || 1;
         const totalPages = Math.ceil(totalCards / this.cardsPerPage);
 
-        if (currentPage > totalPages && totalPages > 0) {
-            this.currentPages[tabId] = totalPages;
+        let currentPage = this.currentPages[tabId] || 1;
+        if (totalPages > 0 && currentPage > totalPages) {
+            currentPage = totalPages;
+            this.currentPages[tabId] = currentPage;
         }
+        if (totalPages === 0) currentPage = 1;
 
-        cards.forEach(card => card.style.display = 'none');
+        // Hide all first
+        cards.forEach(card => {
+            card.style.display = 'none';
+            card.style.animation = '';
+        });
 
-        const startIndex = (this.currentPages[tabId] - 1) * this.cardsPerPage;
+        // Show the slice for this page
+        const startIndex = (currentPage - 1) * this.cardsPerPage;
         const endIndex = startIndex + this.cardsPerPage;
-
         cards.slice(startIndex, endIndex).forEach(card => {
             card.style.display = 'flex';
             card.style.animation = 'fadeIn 0.5s ease';
         });
 
         this.createPaginationControls(tabContent, totalCards, totalPages);
-        this.updatePaginationInfo(tabContent, totalCards);
     }
 
     createPaginationControls(tabContent, totalCards, totalPages) {
-        let paginationContainer = tabContent.querySelector('.pagination-container');
-        const currentPage = this.currentPages[tabContent.id];
+        // Remove any existing container
+        const existing = tabContent.querySelector('.pagination-container');
+        if (existing) existing.remove();
 
-        if (paginationContainer) {
-            paginationContainer.remove();
-        }
+        if (totalPages <= 1) return;
 
-        if (totalPages <= 1) {
-            return;
-        }
+        const tabId = tabContent.id;
+        const currentPage = this.currentPages[tabId] || 1;
 
-        paginationContainer = document.createElement('div');
+        const paginationContainer = document.createElement('div');
         paginationContainer.className = 'pagination-container';
 
+        // "Showing X–Y of Z" info
+        const infoDiv = document.createElement('div');
+        infoDiv.className = 'pagination-info';
+        const startCard = ((currentPage - 1) * this.cardsPerPage) + 1;
+        const endCard = Math.min(currentPage * this.cardsPerPage, totalCards);
+        infoDiv.textContent = `Showing ${startCard}-${endCard} of ${totalCards} routes`;
+        paginationContainer.appendChild(infoDiv);
+
+        // Pagination buttons
         const pagination = document.createElement('ul');
         pagination.className = 'pagination';
 
-        const prevButton = this.createPageButton('«', 'previous', currentPage === 1);
-        prevButton.addEventListener('click', () => {
+        pagination.appendChild(this._makeButton('«', 'previous', currentPage === 1, false, () => {
             if (currentPage > 1) {
-                this.currentPages[tabContent.id] = currentPage - 1;
-                this.paginateTab(tabContent.id);
+                this.currentPages[tabId] = currentPage - 1;
+                this.paginateTab(tabId);
             }
-        });
-        pagination.appendChild(prevButton);
+        }));
 
         const maxVisiblePages = 5;
         let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
         let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
-
         if (endPage - startPage + 1 < maxVisiblePages) {
             startPage = Math.max(1, endPage - maxVisiblePages + 1);
         }
 
         if (startPage > 1) {
-            const firstPageButton = this.createPageButton(1, 'page');
-            firstPageButton.addEventListener('click', () => {
-                this.currentPages[tabContent.id] = 1;
-                this.paginateTab(tabContent.id);
-            });
-            pagination.appendChild(firstPageButton);
-
+            pagination.appendChild(this._makeButton(1, 'page', false, false, () => {
+                this.currentPages[tabId] = 1;
+                this.paginateTab(tabId);
+            }));
             if (startPage > 2) {
-                const ellipsis = this.createPageButton('...', 'ellipsis');
-                pagination.appendChild(ellipsis);
+                pagination.appendChild(this._makeButton('...', 'ellipsis', true, false, null));
             }
         }
 
         for (let i = startPage; i <= endPage; i++) {
-            const pageButton = this.createPageButton(
-                i,
-                'page',
-                false,
-                i === currentPage
-            );
-
-            if (i === currentPage) {
-                pageButton.classList.add('active');
-            }
-
-            pageButton.addEventListener('click', () => {
-                this.currentPages[tabContent.id] = i;
-                this.paginateTab(tabContent.id);
+            const isActive = i === currentPage;
+            const btn = this._makeButton(i, 'page', false, isActive, () => {
+                this.currentPages[tabId] = i;
+                this.paginateTab(tabId);
             });
-
-            pagination.appendChild(pageButton);
+            pagination.appendChild(btn);
         }
 
         if (endPage < totalPages) {
             if (endPage < totalPages - 1) {
-                const ellipsis = this.createPageButton('...', 'ellipsis');
-                pagination.appendChild(ellipsis);
+                pagination.appendChild(this._makeButton('...', 'ellipsis', true, false, null));
             }
-
-            const lastPageButton = this.createPageButton(totalPages, 'page');
-            lastPageButton.addEventListener('click', () => {
-                this.currentPages[tabContent.id] = totalPages;
-                this.paginateTab(tabContent.id);
-            });
-            pagination.appendChild(lastPageButton);
+            pagination.appendChild(this._makeButton(totalPages, 'page', false, false, () => {
+                this.currentPages[tabId] = totalPages;
+                this.paginateTab(tabId);
+            }));
         }
 
-        const nextButton = this.createPageButton('»', 'next', currentPage === totalPages);
-        nextButton.addEventListener('click', () => {
+        pagination.appendChild(this._makeButton('»', 'next', currentPage === totalPages, false, () => {
             if (currentPage < totalPages) {
-                this.currentPages[tabContent.id] = currentPage + 1;
-                this.paginateTab(tabContent.id);
+                this.currentPages[tabId] = currentPage + 1;
+                this.paginateTab(tabId);
             }
-        });
-        pagination.appendChild(nextButton);
+        }));
 
         paginationContainer.appendChild(pagination);
 
+        // Cards-per-page selector
         const selectorContainer = document.createElement('div');
         selectorContainer.className = 'cards-per-page-selector';
 
@@ -242,16 +196,13 @@ class RoutesPagination {
         });
 
         select.addEventListener('change', (e) => {
-            this.cardsPerPage = parseInt(e.target.value);
-
-            const tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(tab => {
-                if (tab.id) {
-                    this.currentPages[tab.id] = 1;
-                }
-            });
-
-            this.paginateTab(tabContent.id);
+            this.cardsPerPage = parseInt(e.target.value, 10);
+            // Reset every tab back to page 1
+            Object.keys(this.currentPages).forEach(k => { this.currentPages[k] = 1; });
+            const activeTab = document.querySelector('.tab-content.active');
+            if (activeTab && activeTab.id) {
+                this.paginateTab(activeTab.id);
+            }
             this.updatePageCounts();
         });
 
@@ -262,82 +213,50 @@ class RoutesPagination {
         tabContent.appendChild(paginationContainer);
     }
 
-    createPageButton(text, type = 'page', disabled = false, active = false) {
+    _makeButton(text, type, disabled, active, onClick) {
         const li = document.createElement('li');
         const button = document.createElement('button');
 
         button.className = `pagination-btn ${type}`;
         button.textContent = text;
 
-        if (disabled) {
-            button.classList.add('disabled');
-        }
+        if (disabled) button.classList.add('disabled');
+        if (active) button.classList.add('active');
+        if (type === 'ellipsis') button.disabled = true;
 
-        if (active) {
-            button.classList.add('active');
-        }
-
-        if (type === 'ellipsis') {
-            button.disabled = true;
+        if (onClick) {
+            button.addEventListener('click', onClick);
         }
 
         li.appendChild(button);
         return li;
     }
 
-    updatePaginationInfo(tabContent, totalCards) {
-        const currentPage = this.currentPages[tabContent.id];
-        const startCard = ((currentPage - 1) * this.cardsPerPage) + 1;
-        const endCard = Math.min(currentPage * this.cardsPerPage, totalCards);
-
-        let infoDiv = tabContent.querySelector('.pagination-info');
-
-        if (!infoDiv) {
-            infoDiv = document.createElement('div');
-            infoDiv.className = 'pagination-info';
-            const paginationContainer = tabContent.querySelector('.pagination-container');
-            if (paginationContainer) {
-                paginationContainer.insertBefore(infoDiv, paginationContainer.firstChild);
-            }
-        }
-
-        infoDiv.textContent = `Showing ${startCard}-${endCard} of ${totalCards} routes`;
-    }
-
     updatePageCounts() {
-        const tabButtons = document.querySelectorAll('.tab-btn');
-
-        tabButtons.forEach(button => {
+        document.querySelectorAll('.tab-btn').forEach(button => {
             const tabId = button.dataset.tab;
             const tabContent = document.getElementById(tabId);
+            if (!tabContent) return;
 
-            if (tabContent) {
-                let gridContainer = tabContent.querySelector('.routes-grid') ||
-                tabContent.querySelector('.itineraries-container');
+            const gridContainer = this.getGrid(tabContent);
+            if (!gridContainer) return;
 
-                if (gridContainer) {
-                    const cards = gridContainer.querySelectorAll('.route-card, .itinerary-card');
-                    const totalPages = Math.ceil(cards.length / this.cardsPerPage);
+            const cards = gridContainer.querySelectorAll('.route-card, .itinerary-card');
+            const totalPages = Math.ceil(cards.length / this.cardsPerPage);
 
-                    let pageCount = button.querySelector('.page-count');
-                    if (!pageCount) {
-                        pageCount = document.createElement('span');
-                        pageCount.className = 'page-count';
-                        button.appendChild(pageCount);
-                    }
-
-                    pageCount.textContent = totalPages > 1 ? `${totalPages}p` : '';
-                }
+            let pageCount = button.querySelector('.page-count');
+            if (!pageCount) {
+                pageCount = document.createElement('span');
+                pageCount.className = 'page-count';
+                button.appendChild(pageCount);
             }
+
+            pageCount.textContent = totalPages > 1 ? `${totalPages}p` : '';
         });
     }
 
-    getCurrentPage() {
-        const activeTab = document.querySelector('.tab-content.active');
-        if (activeTab && activeTab.id) {
-            return this.currentPages[activeTab.id] || 1;
-        }
-        return 1;
+    getCurrentPage(tabId) {
+        return this.currentPages[tabId] || 1;
     }
 }
 

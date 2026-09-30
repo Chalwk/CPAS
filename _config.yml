@@ -1,21 +1,185 @@
-title: Coastal Peaks Air Service (CPAS)
-description: Virtual Charter & Specialty Flight Operations for Microsoft Flight Simulator
-baseurl: "/CPAS"
+# -----------------------------------------------------------------------------
+# Coastal Peaks Air Service (CPAS)
+# Virtual Charter & Specialty Flight Operations for Microsoft Flight Simulator
+# Copyright (c) 2025-2026 Jericho Crosby (Chalwk). All rights reserved.
+# -----------------------------------------------------------------------------
+
+# -----------------------------------------------------------------------------
+# Site identity
+# -----------------------------------------------------------------------------
+
+# Site name. Used in <title>, SEO tags, and the header.
+title: "Coastal Peaks Air Service (CPAS)"
+
+# Short tagline shown in the hero / meta description contexts.
+tagline: "Linking the Garden City to the West Coast"
+
+# Description consumed by jekyll-seo-tag for the meta description and OG tags.
+description: "Virtual Charter & Specialty Flight Operations for Microsoft Flight Simulator."
+
+# -----------------------------------------------------------------------------
+# URLs and locale
+# -----------------------------------------------------------------------------
+
+# Canonical production URL (used by jekyll-seo-tag, sitemap, absolute links).
 url: "https://chalwk.github.io"
 
-markdown: kramdown
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+# Subpath the site is served from. CPAS is published under /CPAS on GH Pages.
+baseurl: "/CPAS"
 
+# Locale / regional settings.
+#   lang      - ISO 639-1 code for the <html lang="..."> attribute.
+#   locale    - language_REGION (used by jekyll-seo-tag).
+#   og_locale - OpenGraph locale string.
+lang: en-NZ
+locale: en_NZ
+og_locale: en_NZ
+
+# IANA timezone. Affects Liquid `date:` filters and the footer year.
+timezone: Pacific/Auckland
+
+# -----------------------------------------------------------------------------
+# Author
+# -----------------------------------------------------------------------------
+
+# Consumed by jekyll-seo-tag and referenced throughout the site.
+author:
+  name: "Jericho Crosby (Chalwk)"
+  url: "https://github.com/Chalwk"
+
+# -----------------------------------------------------------------------------
+# SEO / social metadata
+# -----------------------------------------------------------------------------
+
+# Separator between page title and site title in <title>.
+title_separator: "|"
+
+# Large image card for Twitter/X sharing.
+twitter:
+  card: summary_large_image
+
+# -----------------------------------------------------------------------------
+# Assets
+# -----------------------------------------------------------------------------
+
+# Browser tab icon (relative to site root, resolved via relative_url).
+favicon: /assets/images/logo.png
+
+# -----------------------------------------------------------------------------
+# External links
+# -----------------------------------------------------------------------------
+
+# Central place for every outbound link used across the site.
+# Referenced in templates as {{ site.links.<key> }}.
+links:
+  discord: https://discord.gg/NsndXgYfxQ
+  github: https://github.com/Chalwk
+  simbrief: https://www.simbrief.com
+  navigraph: https://navigraph.com
+  flightsim_to: https://flightsim.to
+  email: chalwk.dev@gmail.com
+
+# -----------------------------------------------------------------------------
+# Operator info (CPAS-specific)
+# -----------------------------------------------------------------------------
+
+# ICAO three-letter code used in SimBrief, PIREPs, and ATC comms.
+icao_code: CPX
+
+# Branding abbreviation.
+service_abbreviation: CPAS
+
+# Founding date (shown on the About section).
+established: "December 19, 2025"
+
+# -----------------------------------------------------------------------------
+# Build behavior
+# -----------------------------------------------------------------------------
+
+# Only rebuild files that changed since the last build. Speeds up local dev.
+incremental: true
+
+# Repo files that shouldn't be published into _site/.
 exclude:
-  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
   - README.md
   - LICENSE
   - CODE_OF_CONDUCT.md
   - run.bat
 
+# Markdown engine.
+markdown: kramdown
+kramdown:
+  # Disable syntax highlighting - snippets render as plain <code> blocks.
+  syntax_highlighter: nil
+  input: GFM
+  # Single newlines are NOT turned into <br>. Use two trailing spaces or a
+  # backslash for an intentional line break.
+  hard_wrap: false
+  toc_levels: 2..6
+
+sass:
+  style: compressed
+  quiet_deps: true
+
+# -----------------------------------------------------------------------------
+# Plugins
+# -----------------------------------------------------------------------------
+
+# jekyll-seo-tag - injects <title>, meta description, OG/Twitter tags via {% seo %}.
+# jekyll-sitemap - auto-generates sitemap.xml at build time.
+# jekyll-feed    - generates /feed.xml (Atom) for the site.
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# -----------------------------------------------------------------------------
+# Collections
+# -----------------------------------------------------------------------------
+
+# Custom content types. Each entry defines where files live (underscore-prefixed
+# folder at the project root) and how their output URLs are shaped.
 collections:
+  # _checklists/  ->  /checklists/<filename>.html
   checklists:
     output: true
     permalink: /checklists/:name.html
+
+  # _airframes/   ->  /airframes/<filename>.html
+  airframes:
+    output: true
+    permalink: /airframes/:name.html
+
+# -----------------------------------------------------------------------------
+# Defaults
+# -----------------------------------------------------------------------------
+
+# Front matter defaults applied to pages/documents that don't set their own
+# values. Rules apply top-to-bottom; later (more specific) rules override
+# earlier ones when several match.
+defaults:
+  # Global default - every page uses the `default` layout and the site-wide
+  # social/OG preview image unless overridden.
+  - scope:
+      path: ""
+    values:
+      layout: default
+      image:
+        path: /assets/images/logo.png
+        alt: "Coastal Peaks Air Service Logo"
+
+  # Checklists collection - wrap content in the `checklist` layout.
+  - scope:
+      type: "checklists"
+    values:
+      layout: checklist
+
+  # Airframes collection - wrap content in the `airframe` layout.
+  - scope:
+      type: "airframes"
+    values:
+      layout: airframe

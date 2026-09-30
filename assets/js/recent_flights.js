@@ -1,6 +1,6 @@
 /* Copyright (c) 2025-2026 Jericho Crosby (Chalwk) */
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     let flightsData = [];
     let filteredData = [];
     let currentPage = 1;
@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('searchInput');
     const statusFilter = document.getElementById('statusFilter');
     const aircraftFilter = document.getElementById('aircraftFilter');
+    const missionFilter = document.getElementById('missionFilter');
     const prevPageBtn = document.getElementById('prevPage');
     const nextPageBtn = document.getElementById('nextPage');
     const pageNumbers = document.getElementById('pageNumbers');
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         searchInput.addEventListener('input', filterFlights);
         statusFilter.addEventListener('change', filterFlights);
         aircraftFilter.addEventListener('change', filterFlights);
+        if (missionFilter) missionFilter.addEventListener('change', filterFlights);
 
         prevPageBtn.addEventListener('click', () => changePage(currentPage - 1));
         nextPageBtn.addEventListener('click', () => changePage(currentPage + 1));
@@ -87,44 +89,12 @@ document.addEventListener('DOMContentLoaded', function() {
             <i class="fas fa-check-circle"></i>
             <span>Flight data refreshed successfully!</span>
         `;
-        notification.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #059669;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            z-index: 1000;
-            animation: slideIn 0.3s ease;
-        `;
-
         document.body.appendChild(notification);
 
         setTimeout(() => {
             notification.style.animation = 'slideOut 0.3s ease';
             setTimeout(() => notification.remove(), 300);
         }, 3000);
-
-        if (!document.querySelector('#refreshAnimations')) {
-            const style = document.createElement('style');
-            style.id = 'refreshAnimations';
-            style.textContent = `
-                @keyframes slideIn {
-                    from { transform: translateX(100%); opacity: 0; }
-                    to { transform: translateX(0); opacity: 1; }
-                }
-                @keyframes slideOut {
-                    from { transform: translateX(0); opacity: 1; }
-                    to { transform: translateX(100%); opacity: 0; }
-                }
-            `;
-            document.head.appendChild(style);
-        }
     }
 
     async function loadFlightData() {
@@ -149,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Error loading flight data:', error);
             flightsTableBody.innerHTML = `
                 <tr>
-                    <td colspan="8" style="text-align: center; padding: 40px; color: #dc2626;">
+                    <td colspan="10" style="text-align: center; padding: 40px; color: #dc2626;">
                         <i class="fas fa-exclamation-circle"></i> Unable to load flight data. Please try again later.
                     </td>
                 </tr>
@@ -170,22 +140,6 @@ document.addEventListener('DOMContentLoaded', function() {
             <i class="fas fa-exclamation-triangle"></i>
             <span>${message}</span>
         `;
-        notification.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #dc2626;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            z-index: 1000;
-            animation: slideIn 0.3s ease;
-        `;
-
         document.body.appendChild(notification);
 
         setTimeout(() => {
@@ -198,30 +152,36 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchTerm = searchInput.value.toLowerCase();
         const statusValue = statusFilter.value;
         const aircraftValue = aircraftFilter.value;
-        const missionFilterValue = document.getElementById('missionFilter')?.value || 'all';
+        const missionFilterValue = missionFilter ? missionFilter.value : 'all';
 
         filteredData = flightsData.filter(flight => {
-            const matchesSearch =
-            flight.flightNumber.toLowerCase().includes(searchTerm) ||
-            flight.pilot.toLowerCase().includes(searchTerm) ||
-            flight.departure.toLowerCase().includes(searchTerm) ||
-            flight.arrival.toLowerCase().includes(searchTerm) ||
-            flight.aircraftReg.toLowerCase().includes(searchTerm) ||
-            flight.aircraft.toLowerCase().includes(searchTerm) ||
-            flight.id.toLowerCase().includes(searchTerm) ||
-            (flight.missionType && flight.missionType.toLowerCase().includes(searchTerm)) ||
-            (flight.missionDetails && flight.missionDetails.toLowerCase().includes(searchTerm));
+            const haystack = [
+                flight.id,
+                flight.flightNumber,
+                flight.callsign,
+                flight.pilot,
+                flight.departure,
+                flight.arrival,
+                flight.aircraft,
+                flight.aircraftReg,
+                flight.aircraftIcao,
+                flight.route,
+                flight.missionType,
+                flight.missionDetails
+            ].filter(Boolean).join(' ').toLowerCase();
+
+            const matchesSearch = !searchTerm || haystack.includes(searchTerm);
 
             const matchesStatus = statusValue === 'all' || flight.status === statusValue;
 
             const matchesAircraft = aircraftValue === 'all' ||
-            flight.aircraftIcao === aircraftValue ||
-            flight.aircraft.toLowerCase().includes(aircraftValue.toLowerCase());
+                flight.aircraftIcao === aircraftValue ||
+                (flight.aircraft && flight.aircraft.toLowerCase().includes(aircraftValue.toLowerCase()));
 
             const matchesMission = missionFilterValue === 'all' ||
-            (missionFilterValue === 'SimBrief' && flight.source === 'SimBrief') ||
-            (missionFilterValue === 'MissionReport' && flight.source === 'MissionReport') ||
-            (flight.missionType === missionFilterValue);
+                (missionFilterValue === 'SimBrief' && flight.source === 'SimBrief') ||
+                (missionFilterValue === 'MissionReport' && flight.source === 'MissionReport') ||
+                (flight.missionType === missionFilterValue);
 
             return matchesSearch && matchesStatus && matchesAircraft && matchesMission;
         });
@@ -237,15 +197,26 @@ document.addEventListener('DOMContentLoaded', function() {
             let aValue = a[currentSort.column];
             let bValue = b[currentSort.column];
 
-            if (currentSort.column === 'date' || currentSort.column === 'timestamp' || currentSort.column === 'lastUpdated') {
-                aValue = new Date(aValue || 0);
-                bValue = new Date(bValue || 0);
+            // Fallbacks for aliases
+            if (currentSort.column === 'flightNumber') {
+                aValue = a.id;
+                bValue = b.id;
+            }
+
+            if (currentSort.column === 'date' || currentSort.column === 'departure_date' ||
+                currentSort.column === 'timestamp' || currentSort.column === 'lastUpdated') {
+                aValue = new Date(aValue || 0).getTime() || 0;
+                bValue = new Date(bValue || 0).getTime() || 0;
             } else if (currentSort.column === 'flightTime') {
                 aValue = timeToMinutes(aValue);
                 bValue = timeToMinutes(bValue);
             } else if (typeof aValue === 'string') {
                 aValue = aValue.toLowerCase();
-                bValue = bValue.toLowerCase();
+                bValue = (bValue || '').toLowerCase();
+            } else if (aValue == null) {
+                aValue = '';
+            } else if (bValue == null) {
+                bValue = '';
             }
 
             if (aValue < bValue) return currentSort.direction === 'asc' ? -1 : 1;
@@ -265,12 +236,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (pageData.length === 0) {
             flightsTableBody.innerHTML = `
-        <tr>
-            <td colspan="10" style="text-align: center; padding: 40px; color: #6b7280;">
-                <i class="fas fa-plane-slash"></i> No flights found matching your criteria.
-            </td>
-        </tr>
-    `;
+                <tr>
+                    <td colspan="10" style="text-align: center; padding: 40px; color: #6b7280;">
+                        <i class="fas fa-plane-slash"></i> No flights found matching your criteria.
+                    </td>
+                </tr>
+            `;
             return;
         }
 
@@ -285,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const departureTime = flight.departure_time_utc || 'N/A';
             const arrivalTime = flight.arrival_time_utc || 'N/A';
 
-            let routeDisplay = flight.route;
+            let routeDisplay = flight.route || '';
             if (isMission && flight.missionType) {
                 routeDisplay = `${missionIcon}${missionType}`;
                 if (flight.missionDetails) {
@@ -294,63 +265,63 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             return `
-        <tr data-flight-id="${flight.id}" class="${missionClass}" data-source="${flight.source}">
-            <td>
-                <div class="flight-number">${flight.id}</div>
-                ${isMission ? '<span class="mission-badge">MISSION</span>' : ''}
-            </td>
-            <td>${departureDateFormatted}</td>
-            <td>
-                <div class="time-info">
-                    <div class="time-display">${departureTime}</div>
-                    <small class="time-label">UTC</small>
-                </div>
-            </td>
-            <td>
-                <div class="time-info">
-                    <div class="time-display">${arrivalTime}</div>
-                    <small class="time-label">UTC</small>
-                </div>
-            </td>
-            <td>
-                <div class="pilot-info">
-                    <div class="pilot-avatar">${flight.pilot.charAt(0).toUpperCase()}</div>
-                    <div>
-                        <div>${flight.pilot}</div>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <div class="aircraft-info">
-                    <div class="aircraft-reg">${flight.aircraftReg}</div>
-                    <div class="aircraft-type">${flight.aircraft}</div>
-                </div>
-            </td>
-            <td>
-                <div class="route-info">
-                    <div class="route-airports">
-                        <span class="airport-code">${flight.departure}</span>
-                        <i class="fas fa-arrow-right route-arrow"></i>
-                        <span class="airport-code">${flight.arrival}</span>
-                    </div>
-                    <div class="route-details">${routeDisplay}</div>
-                </div>
-            </td>
-            <td>${formatFlightTimeDisplay(flight.flightTime)}</td>
-            <td>
-                <span class="status-badge status-${flight.status}">
-                    ${formatStatus(flight.status)}
-                </span>
-            </td>
-            <td>
-                <div class="table-actions">
-                    <button class="btn-icon view-flight" data-flight-id="${flight.id}" title="View Details">
-                        <i class="fas fa-eye"></i>
-                    </button>
-                </div>
-            </td>
-        </tr>
-    `;
+                <tr data-flight-id="${flight.id}" class="${missionClass}" data-source="${flight.source}">
+                    <td>
+                        <div class="flight-number">${flight.id}</div>
+                        ${isMission ? '<span class="mission-badge">MISSION</span>' : ''}
+                    </td>
+                    <td>${departureDateFormatted}</td>
+                    <td>
+                        <div class="time-info">
+                            <div class="time-display">${departureTime}</div>
+                            <small class="time-label">UTC</small>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="time-info">
+                            <div class="time-display">${arrivalTime}</div>
+                            <small class="time-label">UTC</small>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="pilot-info">
+                            <div class="pilot-avatar">${(flight.pilot || '?').charAt(0).toUpperCase()}</div>
+                            <div>
+                                <div>${flight.pilot || 'Unknown'}</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="aircraft-info">
+                            <div class="aircraft-reg">${flight.aircraftReg || '-'}</div>
+                            <div class="aircraft-type">${flight.aircraft || '-'}</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="route-info">
+                            <div class="route-airports">
+                                <span class="airport-code">${flight.departure || '-'}</span>
+                                <i class="fas fa-arrow-right route-arrow"></i>
+                                <span class="airport-code">${flight.arrival || '-'}</span>
+                            </div>
+                            <div class="route-details">${routeDisplay}</div>
+                        </div>
+                    </td>
+                    <td>${formatFlightTimeDisplay(flight.flightTime)}</td>
+                    <td>
+                        <span class="status-badge status-${flight.status}">
+                            ${formatStatus(flight.status)}
+                        </span>
+                    </td>
+                    <td>
+                        <div class="table-actions">
+                            <button class="btn-icon view-flight" data-flight-id="${flight.id}" title="View Details">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `;
         }).join('');
 
         document.querySelectorAll('.view-flight').forEach(btn => {
@@ -365,7 +336,7 @@ document.addEventListener('DOMContentLoaded', function() {
             row.addEventListener('click', (e) => {
                 if (!e.target.closest('.table-actions')) {
                     const flightId = row.dataset.flightId;
-                    showFlightDetails(flightId);
+                    if (flightId) showFlightDetails(flightId);
                 }
             });
         });
@@ -387,62 +358,65 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!flight) return;
 
         document.getElementById('detailFlightNumber').textContent = flight.id;
-        document.getElementById('detailCallsign').textContent = flight.callsign;
-        document.getElementById('detailDate').textContent = formatDate(flight.date);
+        document.getElementById('detailCallsign').textContent = flight.callsign || '-';
+        document.getElementById('detailDate').textContent = formatDate(flight.date || flight.departure_date);
         document.getElementById('detailStatus').textContent = formatStatus(flight.status);
-        document.getElementById('detailStatus').className = `status-badge status-${flight.status.replace('-', '')}`;
+        document.getElementById('detailStatus').className = `status-badge status-${(flight.status || '').replace('-', '')}`;
 
-        document.getElementById('detailDeparture').textContent = flight.departure;
-        document.getElementById('detailArrival').textContent = flight.arrival;
-        document.getElementById('detailAlternate').textContent = flight.alternate;
-        document.getElementById('detailCruiseAlt').textContent = `${flight.cruiseAlt} ft`;
-        document.getElementById('detailRoute').textContent = flight.route;
-        document.getElementById('detailDistance').textContent = flight.route_distance + (flight.route_distance !== 'N/A' ? ' nm' : '');
+        document.getElementById('detailDeparture').textContent = flight.departure || '-';
+        document.getElementById('detailArrival').textContent = flight.arrival || '-';
+        document.getElementById('detailAlternate').textContent = flight.alternate || '-';
+        document.getElementById('detailCruiseAlt').textContent = flight.cruiseAlt ? `${flight.cruiseAlt} ft` : '-';
+        document.getElementById('detailRoute').textContent = flight.route || '-';
 
-        document.getElementById('detailAircraft').textContent = flight.aircraft;
-        document.getElementById('detailAircraftReg').textContent = flight.aircraftReg;
-        document.getElementById('detailAircraftIcao').textContent = flight.aircraftIcao;
+        const distVal = flight.route_distance;
+        document.getElementById('detailDistance').textContent =
+            (distVal && distVal !== 'N/A') ? `${distVal} nm` : 'N/A';
+
+        document.getElementById('detailAircraft').textContent = flight.aircraft || '-';
+        document.getElementById('detailAircraftReg').textContent = flight.aircraftReg || '-';
+        document.getElementById('detailAircraftIcao').textContent = flight.aircraftIcao || '-';
         document.getElementById('detailPaxCount').textContent = flight.pax_count || '-';
 
         document.getElementById('detailFlightTime').textContent = formatFlightTimeDisplay(flight.flightTime);
         document.getElementById('detailBlockTime').textContent = formatFlightTimeDisplay(flight.blockTime);
 
-        document.getElementById('detailPilot').textContent = flight.pilot;
-        document.getElementById('detailPilotId').textContent = flight.pilotId;
+        document.getElementById('detailPilot').textContent = flight.pilot || '-';
+        document.getElementById('detailPilotId').textContent = flight.pilotId || '-';
 
-        document.getElementById('detailSource').textContent = flight.source;
+        document.getElementById('detailSource').textContent = flight.source || '-';
         document.getElementById('detailTimestamp').textContent = formatDateTime(flight.timestamp);
 
-        const routeSection = document.querySelector('.detail-section:nth-child(2)');
-
+        // Departure/Arrival UTC insertion (only once per page load)
         let departureTimeItem = document.getElementById('detailDepartureTime');
         let arrivalTimeItem = document.getElementById('detailArrivalTime');
 
         if (!departureTimeItem) {
-            const departureDiv = document.createElement('div');
-            departureDiv.className = 'detail-item';
-            departureDiv.innerHTML = `
-            <span class="detail-label">Departure (UTC):</span>
-            <span class="detail-value" id="detailDepartureTime">-</span>
-        `;
-
-            const arrivalDiv = document.createElement('div');
-            arrivalDiv.className = 'detail-item';
-            arrivalDiv.innerHTML = `
-            <span class="detail-label">Arrival (UTC):</span>
-            <span class="detail-value" id="detailArrivalTime">-</span>
-        `;
-
             const cruiseAltItem = document.querySelector('.detail-item:has(#detailCruiseAlt)');
             if (cruiseAltItem) {
+                const departureDiv = document.createElement('div');
+                departureDiv.className = 'detail-item';
+                departureDiv.innerHTML = `
+                    <span class="detail-label">Departure (UTC):</span>
+                    <span class="detail-value" id="detailDepartureTime">-</span>
+                `;
+                const arrivalDiv = document.createElement('div');
+                arrivalDiv.className = 'detail-item';
+                arrivalDiv.innerHTML = `
+                    <span class="detail-label">Arrival (UTC):</span>
+                    <span class="detail-value" id="detailArrivalTime">-</span>
+                `;
                 cruiseAltItem.parentNode.insertBefore(departureDiv, cruiseAltItem.nextSibling);
                 cruiseAltItem.parentNode.insertBefore(arrivalDiv, departureDiv.nextSibling);
             }
         }
 
-        document.getElementById('detailDepartureTime').textContent = flight.departure_time_utc || 'N/A';
-        document.getElementById('detailArrivalTime').textContent = flight.arrival_time_utc || 'N/A';
+        const depTimeEl = document.getElementById('detailDepartureTime');
+        const arrTimeEl = document.getElementById('detailArrivalTime');
+        if (depTimeEl) depTimeEl.textContent = flight.departure_time_utc || 'N/A';
+        if (arrTimeEl) arrTimeEl.textContent = flight.arrival_time_utc || 'N/A';
 
+        // Mission details
         const missionDetailsSection = document.getElementById('missionDetailsSection');
         if (!missionDetailsSection && flight.source === 'MissionReport') {
             addMissionDetailsToSidebar(flight);
@@ -459,73 +433,58 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function addMissionDetailsToSidebar(flight) {
         const sidebarContent = document.querySelector('.sidebar-content');
-
         const missionSection = document.createElement('div');
         missionSection.className = 'detail-section';
         missionSection.id = 'missionDetailsSection';
         missionSection.innerHTML = `
-        <h4><i class="fas fa-helicopter"></i> Mission Details</h4>
-        <div class="detail-grid">
-            <div class="detail-item">
-                <span class="detail-label">Mission Type:</span>
-                <span class="detail-value mission-type" id="detailMissionType">${getMissionTypeDisplay(flight.missionType)}</span>
+            <h4><i class="fas fa-helicopter"></i> Mission Details</h4>
+            <div class="detail-grid">
+                <div class="detail-item">
+                    <span class="detail-label">Mission Type:</span>
+                    <span class="detail-value mission-type" id="detailMissionType">${getMissionTypeDisplay(flight.missionType)}</span>
+                </div>
+                ${flight.patients ? `
+                <div class="detail-item">
+                    <span class="detail-label">Patients:</span>
+                    <span class="detail-value" id="detailPatients">${flight.patients}</span>
+                </div>` : ''}
+                ${flight.weather ? `
+                <div class="detail-item">
+                    <span class="detail-label">Weather:</span>
+                    <span class="detail-value" id="detailWeather">${flight.weather}</span>
+                </div>` : ''}
+                ${flight.missionDetails ? `
+                <div class="detail-item full-width">
+                    <span class="detail-label">Details:</span>
+                    <span class="detail-value" id="detailMissionDetails">${flight.missionDetails}</span>
+                </div>` : ''}
+                ${flight.challenges ? `
+                <div class="detail-item full-width">
+                    <span class="detail-label">Challenges:</span>
+                    <span class="detail-value" id="detailChallenges">${flight.challenges}</span>
+                </div>` : ''}
+                ${flight.notes ? `
+                <div class="detail-item full-width">
+                    <span class="detail-label">Notes:</span>
+                    <span class="detail-value" id="detailNotes">${flight.notes}</span>
+                </div>` : ''}
             </div>
-            ${flight.patients ? `
-            <div class="detail-item">
-                <span class="detail-label">Patients:</span>
-                <span class="detail-value" id="detailPatients">${flight.patients}</span>
-            </div>
-            ` : ''}
-            ${flight.weather ? `
-            <div class="detail-item">
-                <span class="detail-label">Weather:</span>
-                <span class="detail-value" id="detailWeather">${flight.weather}</span>
-            </div>
-            ` : ''}
-            ${flight.missionDetails ? `
-            <div class="detail-item full-width">
-                <span class="detail-label">Details:</span>
-                <span class="detail-value" id="detailMissionDetails">${flight.missionDetails}</span>
-            </div>
-            ` : ''}
-            ${flight.challenges ? `
-            <div class="detail-item full-width">
-                <span class="detail-label">Challenges:</span>
-                <span class="detail-value" id="detailChallenges">${flight.challenges}</span>
-            </div>
-            ` : ''}
-            ${flight.notes ? `
-            <div class="detail-item full-width">
-                <span class="detail-label">Notes:</span>
-                <span class="detail-value" id="detailNotes">${flight.notes}</span>
-            </div>
-            ` : ''}
-        </div>
-    `;
-
-        const sourceSection = document.querySelector('.detail-section:last-child');
+        `;
+        const sourceSection = sidebarContent.lastElementChild;
         sidebarContent.insertBefore(missionSection, sourceSection);
     }
 
     function updateMissionDetails(flight) {
-        if (document.getElementById('detailMissionType')) {
-            document.getElementById('detailMissionType').textContent = getMissionTypeDisplay(flight.missionType);
-        }
-        if (flight.patients && document.getElementById('detailPatients')) {
-            document.getElementById('detailPatients').textContent = flight.patients;
-        }
-        if (flight.weather && document.getElementById('detailWeather')) {
-            document.getElementById('detailWeather').textContent = flight.weather;
-        }
-        if (flight.missionDetails && document.getElementById('detailMissionDetails')) {
-            document.getElementById('detailMissionDetails').textContent = flight.missionDetails;
-        }
-        if (flight.challenges && document.getElementById('detailChallenges')) {
-            document.getElementById('detailChallenges').textContent = flight.challenges;
-        }
-        if (flight.notes && document.getElementById('detailNotes')) {
-            document.getElementById('detailNotes').textContent = flight.notes;
-        }
+        const setIfExists = (id, value) => {
+            const el = document.getElementById(id);
+            if (el && value) el.textContent = value;
+        };
+        setIfExists('detailMissionType', getMissionTypeDisplay(flight.missionType));
+        setIfExists('detailPatients', flight.patients);
+        setIfExists('detailWeather', flight.weather);
+        setIfExists('detailMissionDetails', flight.missionDetails);
+        setIfExists('detailChallenges', flight.challenges);
+        setIfExists('detailNotes', flight.notes);
     }
 
     function getMissionTypeDisplay(type) {
@@ -544,7 +503,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'TEST': 'Test Flight',
             'OTHER': 'Other Mission'
         };
-        return typeMap[type] || type;
+        return typeMap[type] || type || 'Mission';
     }
 
     function truncateText(text, maxLength) {
@@ -613,16 +572,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 countedFlights++;
             }
 
-            let distStr = flight.route_distance.toString();
-            let distNum = parseFloat(distStr.replace(/[^\d.-]/g, ''));
-            if (!isNaN(distNum)) {
-                totalDistance += distNum;
+            if (flight.route_distance != null && flight.route_distance !== 'N/A') {
+                const distNum = parseFloat(String(flight.route_distance).replace(/[^\d.-]/g, ''));
+                if (!isNaN(distNum)) totalDistance += distNum;
             }
         });
 
         const totalHours = Math.floor(totalMinutes / 60);
         const totalRemainingMinutes = Math.floor(totalMinutes % 60);
-
         const totalTimeDisplay = totalHours > 0
             ? `${totalHours}h ${totalRemainingMinutes}m`
             : `${totalRemainingMinutes}m`;
@@ -634,14 +591,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const avgMinutes = countedFlights > 0 ? totalMinutes / countedFlights : 0;
         const avgHours = Math.floor(avgMinutes / 60);
         const avgRemainingMinutes = Math.floor(avgMinutes % 60);
-
         const avgTimeDisplay = avgHours > 0
             ? `${avgHours}h ${avgRemainingMinutes}m`
             : `${avgRemainingMinutes}m`;
 
         document.getElementById('statsAvgFlightTime').textContent = avgTimeDisplay;
 
-        const uniquePilots = new Set(filteredData.map(f => f.pilot));
+        const uniquePilots = new Set(filteredData.map(f => f.pilot).filter(Boolean));
         document.getElementById('statsActivePilots').textContent = uniquePilots.size;
 
         updateTopPilots();
@@ -650,17 +606,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateTopPilots() {
         const pilotStats = {};
-
         filteredData.forEach(flight => {
-            const pilotName = flight.pilot;
+            const pilotName = flight.pilot || 'Unknown';
             if (!pilotStats[pilotName]) {
-                pilotStats[pilotName] = {
-                    name: pilotName,
-                    flights: 0,
-                    totalTime: 0
-                };
+                pilotStats[pilotName] = { name: pilotName, flights: 0, totalTime: 0 };
             }
-
             if (flight.status === 'completed' || flight.status === 'diverted') {
                 pilotStats[pilotName].flights++;
                 pilotStats[pilotName].totalTime += timeToMinutes(flight.flightTime);
@@ -684,25 +634,24 @@ document.addEventListener('DOMContentLoaded', function() {
             const timeDisplay = totalHours > 0
                 ? `${totalHours}h ${totalMinutes}m`
                 : `${totalMinutes}m`;
-
             return `
-            <div class="pilot-rank">
-                <div class="rank-number">${index + 1}</div>
-                <div class="pilot-rank-info">
-                    <div class="pilot-rank-name">${pilot.name}</div>
-                    <div class="pilot-rank-flights">
-                        ${pilot.flights} flights • ${timeDisplay}
+                <div class="pilot-rank">
+                    <div class="rank-number">${index + 1}</div>
+                    <div class="pilot-rank-info">
+                        <div class="pilot-rank-name">${pilot.name}</div>
+                        <div class="pilot-rank-flights">
+                            ${pilot.flights} flights • ${timeDisplay}
+                        </div>
                     </div>
                 </div>
-            </div>
-        `;
+            `;
         }).join('');
     }
 
     function updatePopularRoutes() {
         const routeStats = {};
-
         filteredData.forEach(flight => {
+            if (!flight.departure || !flight.arrival) return;
             const routeKey = `${flight.departure}-${flight.arrival}`;
             if (!routeStats[routeKey]) {
                 routeStats[routeKey] = {
@@ -732,7 +681,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <i class="fas fa-arrow-right" style="margin: 0 10px; color: #9ca3af;"></i>
                     <span class="airport-code">${route.arrival}</span>
                 </div>
-                    <div class="route-frequency">
+                <div class="route-frequency">
                     <i class="fas fa-plane"></i>
                     ${route.count}
                 </div>
@@ -743,54 +692,40 @@ document.addEventListener('DOMContentLoaded', function() {
     function formatDate(dateString) {
         try {
             const date = new Date(dateString);
-            if (isNaN(date.getTime())) return dateString;
-
+            if (isNaN(date.getTime())) return dateString || '-';
             const day = date.getDate();
             const month = date.getMonth() + 1;
             const year = date.getFullYear().toString().slice(-2);
-
             return `${day}/${month}/${year}`;
         } catch (e) {
-            return dateString;
+            return dateString || '-';
         }
     }
 
     function formatDateTime(dateTimeString) {
         try {
             const date = new Date(dateTimeString);
-            if (isNaN(date.getTime())) return dateTimeString;
+            if (isNaN(date.getTime())) return dateTimeString || '-';
             return date.toLocaleString('en-US', {
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit'
+                year: 'numeric', month: 'short', day: 'numeric',
+                hour: '2-digit', minute: '2-digit', second: '2-digit'
             });
         } catch (e) {
-            return dateTimeString;
+            return dateTimeString || '-';
         }
     }
 
     function timeToMinutes(timeString) {
         if (!timeString || timeString === 'N/A') return 0;
-
         try {
-            const parts = timeString.split(':');
+            const parts = String(timeString).split(':');
             if (parts.length === 2) {
                 const minutes = parseInt(parts[0], 10);
-                const seconds = parseInt(parts[1], 10);
-
-                if (!isNaN(minutes)) {
-                    return minutes + (seconds / 60);
-                }
+                const seconds = parseInt(parts[1], 10) || 0;
+                if (!isNaN(minutes)) return minutes + (seconds / 60);
             }
-
             const decimalValue = parseFloat(timeString);
-            if (!isNaN(decimalValue)) {
-                return decimalValue;
-            }
-
+            if (!isNaN(decimalValue)) return decimalValue;
             return 0;
         } catch (e) {
             console.error('Error parsing time:', timeString, e);
@@ -800,38 +735,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function formatFlightTimeDisplay(timeString) {
         if (!timeString || timeString === 'N/A') return 'N/A';
-
         try {
-            const parts = timeString.split(':');
+            const parts = String(timeString).split(':');
             if (parts.length === 2) {
                 const totalMinutes = parseInt(parts[0], 10);
-                const seconds = parseInt(parts[1], 10);
-
+                const seconds = parseInt(parts[1], 10) || 0;
                 if (!isNaN(totalMinutes)) {
                     const totalExactMinutes = totalMinutes + (seconds / 60);
                     const hours = Math.floor(totalExactMinutes / 60);
                     const minutes = Math.floor(totalExactMinutes % 60);
-
-                    if (hours > 0) {
-                        return `${hours}h ${minutes}m`;
-                    } else {
-                        return `${minutes}m`;
-                    }
+                    return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`;
                 }
             }
-
             const decimalValue = parseFloat(timeString);
             if (!isNaN(decimalValue)) {
                 const hours = Math.floor(decimalValue / 60);
                 const minutes = Math.floor(decimalValue % 60);
-
-                if (hours > 0) {
-                    return `${hours}h ${minutes}m`;
-                } else {
-                    return `${minutes}m`;
-                }
+                return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`;
             }
-
             return timeString;
         } catch (e) {
             console.error('Error formatting flight time:', timeString, e);

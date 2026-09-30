@@ -3,64 +3,52 @@
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.querySelector('.nav-menu');
 
-if (menuToggle) {
+if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        menuToggle.innerHTML = navMenu.classList.contains('active')
+        const isOpen = navMenu.classList.toggle('active');
+        menuToggle.innerHTML = isOpen
             ? '<i class="fas fa-times"></i>'
             : '<i class="fas fa-bars"></i>';
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
     });
 }
 
 const navLinks = document.querySelectorAll('.nav-menu a');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
+        if (!navMenu) return;
         navMenu.classList.remove('active');
-        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-    });
-});
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            if (navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-            }
-
-            window.scrollTo({
-                top: targetElement.offsetTop - 80,
-                behavior: 'smooth'
-            });
+        if (menuToggle) {
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            menuToggle.setAttribute('aria-expanded', 'false');
         }
     });
 });
 
-const tabButtons = document.querySelectorAll('.tab-btn');
-const tabContents = document.querySelectorAll('.tab-content');
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
 
-if (tabButtons.length > 0) {
-    tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const tabId = button.getAttribute('data-tab');
+        const targetElement = document.querySelector(targetId);
+        if (!targetElement) return;
 
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            tabContents.forEach(content => content.classList.remove('active'));
+        e.preventDefault();
 
-            button.classList.add('active');
-            const targetTab = document.getElementById(tabId);
-            if (targetTab) {
-                targetTab.classList.add('active');
+        if (navMenu && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            if (menuToggle) {
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                menuToggle.setAttribute('aria-expanded', 'false');
             }
+        }
+
+        window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
         });
     });
-}
+});
 
 function highlightNavOnScroll() {
     const sections = document.querySelectorAll('section[id], header[id]');
@@ -87,11 +75,9 @@ window.addEventListener('load', highlightNavOnScroll);
 
 function animateOnScroll() {
     const cards = document.querySelectorAll('.aircraft-card, .checklist-card');
-
     cards.forEach(card => {
         const cardPosition = card.getBoundingClientRect().top;
         const screenPosition = window.innerHeight / 1.2;
-
         if (cardPosition < screenPosition) {
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
@@ -99,32 +85,7 @@ function animateOnScroll() {
     });
 }
 
-function setupRouteTabs() {
-    const tabButtons = document.querySelectorAll('.tab-btn');
-    const tabContents = document.querySelectorAll('.tab-content');
-
-    if (tabButtons.length === 0) return;
-
-    tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const tabId = button.getAttribute('data-tab');
-
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            tabContents.forEach(content => content.classList.remove('active'));
-
-            button.classList.add('active');
-            document.getElementById(tabId).classList.add('active');
-
-            if (window.routesPagination) {
-                setTimeout(() => {
-                    window.routesPagination.paginateTab(tabId);
-                }, 10);
-            }
-        });
-    });
-}
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.aircraft-card, .checklist-card');
     cards.forEach(card => {
         card.style.opacity = '0';
@@ -133,7 +94,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     setTimeout(animateOnScroll, 300);
-    setupRouteTabs();
 });
 
 window.addEventListener('scroll', animateOnScroll);
