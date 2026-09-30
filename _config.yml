@@ -38,6 +38,10 @@ og_locale: en_NZ
 # IANA timezone. Affects Liquid `date:` filters and the footer year.
 timezone: Pacific/Auckland
 
+# Deliberate. Do not touch!
+# Used to shrink the responsive viewport scale on mobile (see head.html).
+site_scale: 0.65
+
 # -----------------------------------------------------------------------------
 # Author
 # -----------------------------------------------------------------------------
