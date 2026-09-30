@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmperf.xsd">
+    <AircraftPerf>
+        <Header>
+            <CreationDate>2026-09-30T12:00:00+13:00</CreationDate>
+            <FileVersion>1.1</FileVersion>
+            <ProgramName>Little Navmap</ProgramName>
+            <ProgramVersion>3.0.18</ProgramVersion>
+            <Documentation>https://www.littlenavmap.org/lnmperf.html</Documentation>
+        </Header>
+        <Options>
+            <Name>Piper Seneca V (PA-34-220T)</Name>
+            <AircraftType>PA34</AircraftType>
+            <Simulator>MSFS</Simulator>
+            <Description>Twin-engine turbocharged piston, 6 seats, retractable gear, 2x 220 hp Continental TSIO-360. Fuel flow is total for both engines.
+            </Description>
+            <FuelAsVolume>1</FuelAsVolume>
+            <JetFuel>0</JetFuel>
+        </Options>
+        <Perf>
+            <ContingencyFuelPercent>5.0</ContingencyFuelPercent>
+            <MinRunwayLengthFt>2000.000</MinRunwayLengthFt>
+            <ReserveFuelLbsGal>20.000</ReserveFuelLbsGal>
+            <RunwayType>PAVED</RunwayType>
+            <TaxiFuelLbsGal>2.000</TaxiFuelLbsGal>
+            <UsableFuelLbsGal>123.000</UsableFuelLbsGal>
+            <Alternate>
+                <FuelFlowLbsGalPerHour>22.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>150.000</SpeedKtsTAS>
+            </Alternate>
+            <Climb>
+                <FuelFlowLbsGalPerHour>40.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>100.000</SpeedKtsTAS>
+                <VertSpeedFtPerMin>1000.000</VertSpeedFtPerMin>
+            </Climb>
+            <Cruise>
+                <FuelFlowLbsGalPerHour>24.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>170.000</SpeedKtsTAS>
+            </Cruise>
+            <Descent>
+                <FuelFlowLbsGalPerHour>12.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>130.000</SpeedKtsTAS>
+                <VertSpeedFtPerMin>700.000</VertSpeedFtPerMin>
+            </Descent>
+        </Perf>
+    </AircraftPerf>
+</LittleNavmap>

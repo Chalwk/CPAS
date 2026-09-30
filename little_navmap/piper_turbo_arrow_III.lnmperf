@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmperf.xsd">
+    <AircraftPerf>
+        <Header>
+            <CreationDate>2026-09-30T12:00:00+13:00</CreationDate>
+            <FileVersion>1.1</FileVersion>
+            <ProgramName>Little Navmap</ProgramName>
+            <ProgramVersion>3.0.18</ProgramVersion>
+            <Documentation>https://www.littlenavmap.org/lnmperf.html</Documentation>
+        </Header>
+        <Options>
+            <Name>Piper Turbo Arrow III (PA-28R-201T)</Name>
+            <AircraftType>P28T</AircraftType>
+            <Simulator>MSFS</Simulator>
+            <Description>Turbocharged single-engine piston, 4 seats, retractable gear, 200 hp Continental TSIO-360. Standard PA-28R-201T performance.
+            </Description>
+            <FuelAsVolume>1</FuelAsVolume>
+            <JetFuel>0</JetFuel>
+        </Options>
+        <Perf>
+            <ContingencyFuelPercent>5.0</ContingencyFuelPercent>
+            <MinRunwayLengthFt>1700.000</MinRunwayLengthFt>
+            <ReserveFuelLbsGal>10.000</ReserveFuelLbsGal>
+            <RunwayType>PAVED</RunwayType>
+            <TaxiFuelLbsGal>1.500</TaxiFuelLbsGal>
+            <UsableFuelLbsGal>72.000</UsableFuelLbsGal>
+            <Alternate>
+                <FuelFlowLbsGalPerHour>11.500</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>140.000</SpeedKtsTAS>
+            </Alternate>
+            <Climb>
+                <FuelFlowLbsGalPerHour>17.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>100.000</SpeedKtsTAS>
+                <VertSpeedFtPerMin>900.000</VertSpeedFtPerMin>
+            </Climb>
+            <Cruise>
+                <FuelFlowLbsGalPerHour>12.500</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>155.000</SpeedKtsTAS>
+            </Cruise>
+            <Descent>
+                <FuelFlowLbsGalPerHour>8.000</FuelFlowLbsGalPerHour>
+                <SpeedKtsTAS>130.000</SpeedKtsTAS>
+                <VertSpeedFtPerMin>500.000</VertSpeedFtPerMin>
+            </Descent>
+        </Perf>
+    </AircraftPerf>
+</LittleNavmap>
