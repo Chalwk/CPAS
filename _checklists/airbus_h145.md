@@ -1,6 +1,7 @@
 ---
 layout: checklist
 title: Airbus H145
+permalink: /checklists/airbus_h145/
 ---
 
 # Airbus H145
@@ -8,7 +9,7 @@ title: Airbus H145
 ## POWER UP / INITIAL COCKPIT PREPARATION
 
 | Check Item            | Action                                    |
-|-----------------------|-------------------------------------------|
+| --------------------- | ----------------------------------------- |
 | Battery Master Switch | ENGAGE → **ON** (anti-collision light ON) |
 | Master List           | Power/Up Test **OK**                      |
 | VMS                   | NUM / WEIGHT / VALIDATE / PREVIOUS        |
@@ -22,7 +23,7 @@ title: Airbus H145
 ## ENGINE START
 
 | Check Item               | Action                                                                                                                                    |
-|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | Prime Pumps 1 & 2        | **ON**                                                                                                                                    |
 | Area                     | **CLEAR**                                                                                                                                 |
 | ENG 1 Main Switch        | **IDLE** (Monitor: N1 ~60-65%, N2 ~100%, TOT ≤ 800°C peak then stabilize ≤ 750°C, MGB oil pressure 3-5 bar, oil temp rising, no warnings) |
@@ -34,7 +35,7 @@ title: Airbus H145
 ## AVIONICS / SYSTEM CONFIGURATION
 
 | Check Item                | Action                    |
-|---------------------------|---------------------------|
+| ------------------------- | ------------------------- |
 | Avionics Master 1 & 2     | **ON**                    |
 | Standby Battery           | **ON**                    |
 | DC Receptacle             | **AS REQUIRED**           |
@@ -46,7 +47,7 @@ title: Airbus H145
 ## PREFLIGHT TESTS
 
 | Check Item             | Action                                        |
-|------------------------|-----------------------------------------------|
+| ---------------------- | --------------------------------------------- |
 | Pre Flight Test Switch | **PERFORM** (Master List: Pre Flight Test OK) |
 | Hydraulic Test         | **PERFORM** SYS 1 & SYS 2                     |
 | AFCS / Trim Test       | **PERFORM**                                   |
@@ -55,7 +56,7 @@ title: Airbus H145
 ## BEFORE TAKEOFF
 
 | Check Item             | Action                                                                                                           |
-|------------------------|------------------------------------------------------------------------------------------------------------------|
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | Briefing               | **TAKEOFF / DEPARTURE / EMERGENCY**                                                                              |
 | DA / DH Bugs           | **SET** (IFR)                                                                                                    |
 | ENG Main Switches      | **FLIGHT** (Nr ≥ 101%; monitor TOT ≤ 750°C, oil pressure/temp normal, vibrations low, hydraulic pressure normal) |
@@ -67,7 +68,7 @@ title: Airbus H145
 ## HOVER CHECK
 
 | Check Item                  | Action                                                                                                                          |
-|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | Warnings / Master List      | **CHECK**                                                                                                                       |
 | FLI (First Limit Indicator) | **CHECK** (no parameters near limits)                                                                                           |
 | ENG / ROTOR Parameters      | **CHECK NORMAL** (Nr 101-104%, torque normal, TOT ≤ 750°C, oil pressure/temp stable, vibrations low, hydraulic pressure normal) |
@@ -75,7 +76,7 @@ title: Airbus H145
 ## AFTER TAKEOFF
 
 | Check Item      | Action                      |
-|-----------------|-----------------------------|
+| --------------- | --------------------------- |
 | Instruments     | **CHECK**                   |
 | External Lights | **AS REQUIRED**             |
 | OAT             | **CHECK** (icing awareness) |
@@ -83,7 +84,7 @@ title: Airbus H145
 ## CRUISE (IFR / EN-ROUTE)
 
 | Check Item                 | Action                                                                                                                                                 |
-|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Flight Instruments & FMS   | **CHECK** (Monitor: engine parameters normal, torque within limits, Nr stable 100-101%, fuel balanced, electrical load normal, cabin temp as required) |
 | MSA / Altitude Corrections | **CHECK**                                                                                                                                              |
 | Fuel Quantity              | **CHECK SUFFICIENT**                                                                                                                                   |
@@ -91,7 +92,7 @@ title: Airbus H145
 ## BEFORE LANDING / APPROACH
 
 | Check Item             | Action                                                                                                          |
-|------------------------|-----------------------------------------------------------------------------------------------------------------|
+| ---------------------- | --------------------------------------------------------------------------------------------------------------- |
 | Approach Briefing      | **COMPLETE**                                                                                                    |
 | Approach Loaded        | **VERIFIED** (FMS)                                                                                              |
 | NAV Aids / Frequencies | **SET**                                                                                                         |
@@ -102,7 +103,7 @@ title: Airbus H145
 ## AFTER LANDING
 
 | Check Item          | Action                                                          |
-|---------------------|-----------------------------------------------------------------|
+| ------------------- | --------------------------------------------------------------- |
 | Cyclic & Collective | **CENTERED / LOCKED**                                           |
 | Autopilot           | **OFF**                                                         |
 | Weather Radar       | **STANDBY**                                                     |
@@ -111,7 +112,7 @@ title: Airbus H145
 ## ENGINE SHUTDOWN
 
 | Check Item              | Action                                                                   |
-|-------------------------|--------------------------------------------------------------------------|
+| ----------------------- | ------------------------------------------------------------------------ |
 | Cooldown                | **MIN 30 SECONDS** (Monitor TOT decreasing, oil temp stabilizing)        |
 | Transfer Pumps          | **OFF**                                                                  |
 | Pilot / Static Heat     | **OFF**                                                                  |
@@ -123,10 +124,9 @@ title: Airbus H145
 ## SECURING AIRCRAFT
 
 | Check Item             | Action                               |
-|------------------------|--------------------------------------|
+| ---------------------- | ------------------------------------ |
 | External Lights        | **OFF**                              |
 | Heating / Ventilation  | **OFF**                              |
 | MFD4                   | VMS Page / Flight Report **CHECKED** |
 | EFB / Portable Devices | **OFF**                              |
 | Battery Master Switch  | **OFF**                              |
-
