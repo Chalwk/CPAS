@@ -1,7 +1,6 @@
 ---
-layout: checklist
+layout: airframe
 title: Piper Archer II (PA-28-181)
-permalink: /airframes/piper_archer_II.html
 ---
 
 # Piper Archer II (PA-28-181)

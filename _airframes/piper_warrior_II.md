@@ -1,7 +1,6 @@
 ---
-layout: checklist
+layout: airframe
 title: Piper Warrior II (PA-28-161)
-permalink: /airframes/piper_warrior_II.html
 ---
 
 # Piper Warrior II (PA-28-161)

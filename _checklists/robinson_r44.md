@@ -1,7 +1,6 @@
 ---
 layout: checklist
 title: Robinson R44 Raven II
-permalink: /checklists/robinson_r44.html
 ---
 
 # Robinson R44 Raven II

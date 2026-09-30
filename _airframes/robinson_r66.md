@@ -1,7 +1,6 @@
 ---
-layout: checklist
+layout: airframe
 title: Robinson R66 Turbine
-permalink: /airframes/robinson_r66.html
 ---
 
 # Robinson R66 Turbine

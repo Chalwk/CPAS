@@ -1,7 +1,6 @@
 ---
-layout: checklist
+layout: airframe
 title: Robinson R44 Raven II
-permalink: /airframes/robinson_r44.html
 ---
 
 # Robinson R44 Raven II

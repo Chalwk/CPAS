@@ -1,7 +1,6 @@
 ---
-layout: checklist
+layout: airframe
 title: Piper Turbo Arrow IV (PA-28RT-201)
-permalink: /airframes/piper_arrow_iv_turbo.html
 ---
 
 # Piper Turbo Arrow IV (PA-28RT-201)

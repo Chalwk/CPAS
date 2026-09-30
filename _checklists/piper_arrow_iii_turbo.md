@@ -1,7 +1,6 @@
 ---
 layout: checklist
 title: Piper Turbo Arrow III (PA-28R-201T)
-permalink: /checklists/piper_arrow_iii_turbo.html
 ---
 
 # Piper Turbo Arrow III (PA-28R-201T)

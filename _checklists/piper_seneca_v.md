@@ -1,7 +1,6 @@
 ---
 layout: checklist
 title: Piper Seneca V (PA-34-220T)
-permalink: /checklists/piper_seneca_v.html
 ---
 
 # Piper Seneca V (PA-34-220T)

@@ -1,7 +1,6 @@
 ---
-layout: checklist
+layout: airframe
 title: Airbus H125 (AS350 B3e)
-permalink: /airframes/airbus_as350_h125.html
 ---
 
 # Airbus H125 (AS350 B3e)

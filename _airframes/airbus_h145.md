@@ -1,7 +1,6 @@
 ---
-layout: checklist
+layout: airframe
 title: Airbus H145
-permalink: /airframes/airbus_h145.html
 ---
 
 # Airbus H145

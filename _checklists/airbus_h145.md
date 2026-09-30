@@ -1,7 +1,6 @@
 ---
 layout: checklist
 title: Airbus H145
-permalink: /checklists/airbus_h145.html
 ---
 
 # Airbus H145

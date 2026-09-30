@@ -1,10 +1,9 @@
 ---
-layout: checklist
+layout: airframe
 title: Piper Turbo Arrow III (PA-28R-201T)
-permalink: /airframes/piper_arrow_iii_turbo.html
 ---
 
-Piper Turbo Arrow III (PA-28R-201T)
+# Piper Turbo Arrow III (PA-28R-201T)
 
 ### Airframe Info:
 

@@ -1,7 +1,6 @@
 ---
 layout: checklist
 title: Piper Warrior II (PA-28-161)
-permalink: /checklists/piper_warrior_II.html
 ---
 
 # Piper Warrior II (PA-28-161) 

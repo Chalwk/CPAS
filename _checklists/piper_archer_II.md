@@ -1,7 +1,6 @@
 ---
 layout: checklist
 title: Piper Archer II (PA-28-181)
-permalink: /checklists/piper_archer_II.html
 ---
 
 # Piper Archer II (PA-28-181)

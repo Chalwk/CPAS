@@ -1,10 +1,9 @@
 ---
-layout: checklist
-title: Piper Archer III (PA-28R-201)
-permalink: /airframes/piper_arrow_iii.html
+layout: airframe
+title: Piper Arrow III (PA-28R-201)
 ---
 
-# Piper Archer III (PA-28R-201)
+# Piper Arrow III (PA-28R-201)
 
 ### Airframe Info:
 

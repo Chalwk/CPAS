@@ -1,7 +1,6 @@
 ---
 layout: checklist
 title: Airbus H125 (AS350 B3e)
-permalink: /checklists/airbus_as350_h125.html
 ---
 
 # Airbus H125 (AS350 B3e)

@@ -1,10 +1,9 @@
 ---
 layout: checklist
-title: Piper Archer III (PA-28R-201)
-permalink: /checklists/piper_arrow_iii.html
+title: Piper Arrow III (PA-28R-201)
 ---
 
-# Piper Archer III (PA-28R-201)
+# Piper Arrow III (PA-28R-201)
 
 ## EXTERIOR PREFLIGHT (WALK-AROUND)
 

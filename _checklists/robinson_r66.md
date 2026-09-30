@@ -1,7 +1,6 @@
 ---
 layout: checklist
 title: Robinson R66 Turbine
-permalink: /checklists/robinson_r66.html
 ---
 
 # Robinson R66 Turbine

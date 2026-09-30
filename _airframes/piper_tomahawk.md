@@ -1,7 +1,6 @@
 ---
-layout: checklist
+layout: airframe
 title: Piper Tomahawk (PA-38-112)
-permalink: /airframes/piper_tomahawk.html
 ---
 
 # Piper Tomahawk (PA-38-112)

@@ -1,7 +1,6 @@
 ---
-layout: checklist
+layout: airframe
 title: Piper Seneca V (PA-34-220T)
-permalink: /airframes/piper_seneca_v.html
 ---
 
 # Piper Seneca V (PA-34-220T)

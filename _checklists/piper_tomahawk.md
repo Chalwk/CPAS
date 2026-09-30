@@ -1,7 +1,6 @@
 ---
 layout: checklist
 title: Piper Tomahawk (PA-38-112)
-permalink: /checklists/piper_tomahawk.html
 ---
 
 # Piper Tomahawk (PA-38-112)
