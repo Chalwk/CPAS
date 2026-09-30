@@ -26,7 +26,7 @@ permalink: /checklists/airbus_h145.html
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | Prime Pumps 1 & 2        | **ON**                                                                                                                                    |
 | Area                     | **CLEAR**                                                                                                                                 |
-| ENG 1 Main Switch        | **IDLE** (Monitor: N1 ~60–65%, N2 ~100%, TOT ≤ 800°C peak then stabilize ≤ 750°C, MGB oil pressure 3–5 bar, oil temp rising, no warnings) |
+| ENG 1 Main Switch        | **IDLE** (Monitor: N1 ~60-65%, N2 ~100%, TOT ≤ 800°C peak then stabilize ≤ 750°C, MGB oil pressure 3-5 bar, oil temp rising, no warnings) |
 | ENG 2 Main Switch        | **IDLE** (Monitor same parameters as ENG 1; ensure stable fuel flow, no cautions)                                                         |
 | Start/Up Test            | **CHECK OK**                                                                                                                              |
 | Prime Pumps              | **OFF**                                                                                                                                   |
@@ -71,7 +71,7 @@ permalink: /checklists/airbus_h145.html
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | Warnings / Master List      | **CHECK**                                                                                                                       |
 | FLI (First Limit Indicator) | **CHECK** (no parameters near limits)                                                                                           |
-| ENG / ROTOR Parameters      | **CHECK NORMAL** (Nr 101–104%, torque normal, TOT ≤ 750°C, oil pressure/temp stable, vibrations low, hydraulic pressure normal) |
+| ENG / ROTOR Parameters      | **CHECK NORMAL** (Nr 101-104%, torque normal, TOT ≤ 750°C, oil pressure/temp stable, vibrations low, hydraulic pressure normal) |
 
 ## AFTER TAKEOFF
 
@@ -85,7 +85,7 @@ permalink: /checklists/airbus_h145.html
 
 | Check Item                 | Action                                                                                                                                                 |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Flight Instruments & FMS   | **CHECK** (Monitor: engine parameters normal, torque within limits, Nr stable 100–101%, fuel balanced, electrical load normal, cabin temp as required) |
+| Flight Instruments & FMS   | **CHECK** (Monitor: engine parameters normal, torque within limits, Nr stable 100-101%, fuel balanced, electrical load normal, cabin temp as required) |
 | MSA / Altitude Corrections | **CHECK**                                                                                                                                              |
 | Fuel Quantity              | **CHECK SUFFICIENT**                                                                                                                                   |
 

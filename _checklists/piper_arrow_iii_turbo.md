@@ -83,7 +83,7 @@ permalink: /checklists/piper_arrow_iii_turbo.html
 | Gear System            | **CHECK** (Warning horn when throttle reduced to idle with gear up)                                                                  |
 | Flaps                  | **OPERATE** (Cycle to 25° and retract, check indicator)                                                                              |
 | CHT/EGT Monitoring     | **CHECK** (All cylinders within 50°F of each other at run-up RPM)                                                                    |
-| Throttle               | **1000–1200 RPM** (After checks)                                                                                                     |
+| Throttle               | **1000-1200 RPM** (After checks)                                                                                                     |
 
 ## BEFORE TAKEOFF (TURBO)
 

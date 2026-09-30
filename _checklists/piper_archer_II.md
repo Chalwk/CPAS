@@ -13,7 +13,7 @@ permalink: /checklists/piper_archer_II.html
 | Tie-downs / Chocks / Covers | **REMOVED**                                            |
 | Fuel Quantity               | **CHECK VISUALLY** (Both tanks, drain samples)         |
 | Fuel Caps                   | **SECURED**                                            |
-| Oil Level                   | **CHECK** (6–8 quarts, min 5 quarts)                   |
+| Oil Level                   | **CHECK** (6-8 quarts, min 5 quarts)                   |
 | Oil Cap / Dipstick          | **SECURED**                                            |
 | Propeller                   | **CHECK** (Condition, nicks, security)                 |
 | Control Surfaces            | **FREE & CORRECT** (Ailerons, Elevator, Rudder, Flaps) |
@@ -49,10 +49,10 @@ permalink: /checklists/piper_archer_II.html
 | Throttle      | **1/4 INCH**                                        |
 | Carb Heat     | **OFF**                                             |
 | Ignition      | **START** (Release at 800-1000 RPM)                 |
-| Oil Pressure  | **CHECK** (Green arc: 60–90 psi within 30 sec)      |
+| Oil Pressure  | **CHECK** (Green arc: 60-90 psi within 30 sec)      |
 | Fuel Pump     | **OFF** after start                                 |
 | Alternator    | **CHECK** (Ammeter charging, low voltage light out) |
-| Engine Gauges | **MONITOR** (CHT rising, Oil Temp 100–245°F)        |
+| Engine Gauges | **MONITOR** (CHT rising, Oil Temp 100-245°F)        |
 
 ## RUN-UP AND MAG CHECK
 
@@ -61,15 +61,15 @@ permalink: /checklists/piper_archer_II.html
 | Location           | **RUN-UP AREA** (Pointed into wind)                                                             |
 | Parking Brake      | **SET**                                                                                         |
 | Flight Controls    | **FREE & CORRECT**                                                                              |
-| Throttle           | **1700–1800 RPM**                                                                               |
-| Engine Instruments | **CHECK GREEN** (Oil pressure 60–90 psi, Oil temp rising)                                       |
+| Throttle           | **1700-1800 RPM**                                                                               |
+| Engine Instruments | **CHECK GREEN** (Oil pressure 60-90 psi, Oil temp rising)                                       |
 | Magnetos           | **CHECK** (BOTH → L → BOTH → R → BOTH)<br>Max drop: **175 RPM**<br>Difference L/R: **< 50 RPM** |
 | Carb Heat          | **CHECK** (ON: expect RPM drop, then OFF)                                                       |
-| Propeller Cycle    | **CHECK** (Reduce RPM to 1500, cycle prop 2-3 times)<br>RPM drop: **200–300 RPM**               |
-| Vacuum / Suction   | **CHECK** (4.5–5.5 inHg)                                                                        |
+| Propeller Cycle    | **CHECK** (Reduce RPM to 1500, cycle prop 2-3 times)<br>RPM drop: **200-300 RPM**               |
+| Vacuum / Suction   | **CHECK** (4.5-5.5 inHg)                                                                        |
 | Amps / Volts       | **CHECK** (Charging normal)                                                                     |
 | Avionics / Radios  | **CHECK**                                                                                       |
-| Throttle           | **1000–1200 RPM** (After checks)                                                                |
+| Throttle           | **1000-1200 RPM** (After checks)                                                                |
 
 ## BEFORE TAXI
 
@@ -101,7 +101,7 @@ permalink: /checklists/piper_archer_II.html
 |--------------------|-----------------------------------------------------|
 | Parking Brake      | **SET**                                             |
 | Flight Controls    | **FREE & CORRECT** (Final check)                    |
-| Flaps              | **AS DESIRED** (Typically 0–10° for normal takeoff) |
+| Flaps              | **AS DESIRED** (Typically 0-10° for normal takeoff) |
 | Trim               | **TAKEOFF** (2-3 turns nose up)                     |
 | Fuel Selector      | **BOTH**                                            |
 | Fuel Pump          | **ON**                                              |
@@ -120,9 +120,9 @@ permalink: /checklists/piper_archer_II.html
 | Flaps              | **AS DESIRED**                                  |
 | Fuel Pump          | **ON**                                          |
 | Throttle           | **FULL** (Smoothly to 2700 RPM)                 |
-| Engine Instruments | **MONITOR** (Oil pressure 60–90 psi, MP 25–27") |
+| Engine Instruments | **MONITOR** (Oil pressure 60-90 psi, MP 25-27") |
 | Airspeed           | **ALIVE** at 40 KIAS                            |
-| Rotation           | **55–60 KIAS**                                  |
+| Rotation           | **55-60 KIAS**                                  |
 | Vy (Best Rate)     | **79 KIAS**                                     |
 | Vx (Best Angle)    | **66 KIAS**                                     |
 
@@ -132,7 +132,7 @@ permalink: /checklists/piper_archer_II.html
 |---------------|---------------------------------------------|
 | Fuel Pump     | **OFF** (Above 500 ft AGL)                  |
 | Flaps         | **UP** (If used, retract gradually)         |
-| Climb Speed   | **79–85 KIAS** (Vy 79, cruise climb 85)     |
+| Climb Speed   | **79-85 KIAS** (Vy 79, cruise climb 85)     |
 | Propeller     | **2700 RPM** (Full forward for climb)       |
 | Mixture       | **LEAN** (Above 3000 ft MSL for best power) |
 | Engine Gauges | **MONITOR** (CHT ≤ 450°F, Oil Temp ≤ 245°F) |
@@ -141,23 +141,23 @@ permalink: /checklists/piper_archer_II.html
 
 | Check Item    | Action                                                       |
 |---------------|--------------------------------------------------------------|
-| Power Setting | **2300–2500 RPM** (65–75% power)<br>**22–24" MP**            |
+| Power Setting | **2300-2500 RPM** (65-75% power)<br>**22-24" MP**            |
 | Propeller     | **SET DESIRED RPM** (Typically 2400-2500 for cruise)         |
 | Mixture       | **LEAN** (For peak EGT or 50°F rich of peak)                 |
-| Cruise Speed  | **110–120 KIAS** (75% power at 8000 ft)                      |
-| Fuel Flow     | **CHECK** (9–10 GPH at 75% power)                            |
-| Engine Gauges | **MONITOR** (CHT 300–400°F, Oil Temp 180–220°F ideal)        |
+| Cruise Speed  | **110-120 KIAS** (75% power at 8000 ft)                      |
+| Fuel Flow     | **CHECK** (9-10 GPH at 75% power)                            |
+| Engine Gauges | **MONITOR** (CHT 300-400°F, Oil Temp 180-220°F ideal)        |
 | Fuel Tanks    | **BALANCE** (Switch tanks every 30-60 min if not using BOTH) |
 
 ## DESCENT
 
 | Check Item     | Action                                 |
 |----------------|----------------------------------------|
-| Power          | **REDUCE** (15–18" MP, 2000–2200 RPM)  |
+| Power          | **REDUCE** (15-18" MP, 2000-2200 RPM)  |
 | Mixture        | **RICH** (Below 3000 ft MSL)           |
 | Carb Heat      | **AS REQUIRED** (ON when MP below 15") |
-| Descent Speed  | **100–120 KIAS**                       |
-| Descent Rate   | **500–700 FPM**                        |
+| Descent Speed  | **100-120 KIAS**                       |
+| Descent Rate   | **500-700 FPM**                        |
 | Engine Cooling | **MONITOR** (Keep CHT > 250°F)         |
 | Fuel Pump      | **ON** (For landing)                   |
 | Propeller      | **HIGH RPM** (Full forward)            |
@@ -174,14 +174,14 @@ permalink: /checklists/piper_archer_II.html
 | Seat Belts     | **SECURED**                                                            |
 | Door           | **LATCHED**                                                            |
 | Flaps          | **AS DESIRED** (Typically 10° on downwind, 25° on base, full on final) |
-| Approach Speed | **70–80 KIAS** (70 with full flaps, 80 with no flaps)                  |
+| Approach Speed | **70-80 KIAS** (70 with full flaps, 80 with no flaps)                  |
 | Trim           | **SET** for approach speed                                             |
 
 ## LANDING
 
 | Check Item      | Action                               |
 |-----------------|--------------------------------------|
-| Final Approach  | **70–75 KIAS** (With flaps)          |
+| Final Approach  | **70-75 KIAS** (With flaps)          |
 | Flare           | **GENTLY** (Power to idle, hold off) |
 | Touchdown       | **MAIN WHEELS FIRST**                |
 | After Touchdown | **NOSE WHEEL DOWN** (Gently)         |

@@ -75,7 +75,7 @@ permalink: /checklists/piper_arrow_iv_turbo.html
 | Fuel Flow          | **CHECK** (Steady)                                                                              |
 | Gear System        | **CHECK** (Warning horn when throttle reduced with gear up)                                     |
 | Flaps              | **OPERATE** (Cycle to 25° and retract)                                                          |
-| Throttle           | **1000–1200 RPM** (After checks)                                                                |
+| Throttle           | **1000-1200 RPM** (After checks)                                                                |
 
 ## BEFORE TAKEOFF
 

@@ -79,7 +79,7 @@ permalink: /checklists/piper_arrow_iii.html
 | Flaps                   | **OPERATE** (Cycle to 25° and retract, check indicator)                                                                |
 | Autopilot (if equipped) | **TEST** (Turn on, verify disengage functions)                                                                         |
 | Stall Warning           | **TEST** (Should sound at flaps 0°, approx 65 KIAS)                                                                    |
-| Throttle                | **1000–1200 RPM** (After checks)                                                                                       |
+| Throttle                | **1000-1200 RPM** (After checks)                                                                                       |
 
 ## BEFORE TAKEOFF
 

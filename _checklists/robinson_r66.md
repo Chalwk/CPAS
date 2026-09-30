@@ -87,7 +87,7 @@ permalink: /checklists/robinson_r66.html
 | Rotor Brake            | **VERIFY OFF** (Light out, handle fully disengaged)                                   |
 | Transponder            | **Set as required** (ALT/ON for departure)                                            |
 | Throttle (Twist Grip)  | **FLIGHT / OPEN** - set fully open; governor should bring N2 to 100%.                 |
-| Low Rotor RPM Warning  | **TEST** – Reduce throttle until warning activates (~90% Nr), then restore to FLIGHT. |
+| Low Rotor RPM Warning  | **TEST** - Reduce throttle until warning activates (~90% Nr), then restore to FLIGHT. |
 | Hydraulic System       | **CHECK** (Cyclic/collective forces normal)                                           |
 
 ## BEFORE TAKEOFF
@@ -118,21 +118,21 @@ permalink: /checklists/robinson_r66.html
 
 | Check Item            | Action                                                           |
 |-----------------------|------------------------------------------------------------------|
-| Climb Speed           | **70–80 KIAS** (Best rate ~70 KIAS)                              |
-| Cruise Torque / Power | **65–75% Torque** (Monitor MGT ≤ 750°C, N2 ~100%)                |
-| Cruise Speed          | **110–120 KIAS** (VNE: 130 KIAS)                                 |
+| Climb Speed           | **70-80 KIAS** (Best rate ~70 KIAS)                              |
+| Cruise Torque / Power | **65-75% Torque** (Monitor MGT ≤ 750°C, N2 ~100%)                |
+| Cruise Speed          | **110-120 KIAS** (VNE: 130 KIAS)                                 |
 | Max Continuous Torque | **≤80%** (Monitor MGT ≤ 750°C)                                   |
 | Cabin Environment     | **ADJUST** (Vent/Heat as needed)                                 |
 | Engine Scan           | **CONTINUOUS:** Torque, N1/N2, MGT, Oil Temp/Pressure, Fuel Flow |
-| Fuel Management       | **MONITOR** (Endurance ~3.5–4 hrs at cruise)                     |
+| Fuel Management       | **MONITOR** (Endurance ~3.5-4 hrs at cruise)                     |
 | Anti-Ice / Pitot Heat | **AS REQUIRED**                                                  |
 
 ## DESCENT & APPROACH
 
 | Check Item        | Action                                                                       |
 |-------------------|------------------------------------------------------------------------------|
-| Power Reduction   | **GRADUAL** - reduce torque to ~40–50% for descent; monitor MGT cooling rate |
-| Descent Speed     | **70–90 KIAS**                                                               |
+| Power Reduction   | **GRADUAL** - reduce torque to ~40-50% for descent; monitor MGT cooling rate |
+| Descent Speed     | **70-90 KIAS**                                                               |
 | Approach Briefing | **COMPLETE** (Type of approach, missed approach, emergencies)                |
 | Landing Area      | **IDENTIFY & BRIEF** (Wind, obstacles, surface condition)                    |
 
@@ -140,8 +140,8 @@ permalink: /checklists/robinson_r66.html
 
 | Check Item           | Action                                              |
 |----------------------|-----------------------------------------------------|
-| Final Approach Speed | **60–70 KIAS** (Adjust for wind/weight)             |
-| Torque               | **Adjust to ~30–40%** (Maintain rotor RPM 100 ± 2%) |
+| Final Approach Speed | **60-70 KIAS** (Adjust for wind/weight)             |
+| Torque               | **Adjust to ~30-40%** (Maintain rotor RPM 100 ± 2%) |
 | Landing Area         | **FINAL CHECK** (Clear, wind, obstacles, surface)   |
 | Seat Belts           | **SECURED**                                         |
 | Engine Instruments   | **CHECK NORMAL**                                    |
@@ -150,7 +150,7 @@ permalink: /checklists/robinson_r66.html
 
 | Check Item | Action                                                 |
 |------------|--------------------------------------------------------|
-| Flare      | **INITIATE** at 30–50 ft AGL                           |
+| Flare      | **INITIATE** at 30-50 ft AGL                           |
 | Collective | **CUSHION** to maintain rotor RPM and smooth touchdown |
 | Touchdown  | **LEVEL SKIDS** (Avoid side/downward drift)            |
 | Collective | **FULL DOWN**                                          |

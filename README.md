@@ -14,7 +14,7 @@ experience distinct from traditional virtual airlines.
 
 ## Copyright & License
 
-**© 2025–2026 Jericho Crosby (Chalwk). All Rights Reserved.**
+**© 2025-2026 Jericho Crosby (Chalwk). All Rights Reserved.**
 
 This repository and all its contents are **proprietary assets**.  
 You are permitted to **view** the website and this repository for informational purposes only.

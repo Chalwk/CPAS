@@ -86,7 +86,7 @@ permalink: /checklists/piper_seneca_v.html
 | Autopilot / Flight Director | **TEST** (If equipped, verify disengage functions)                                                |
 | De-ice / Anti-ice           | **TEST AS REQUIRED** (Pitot heat, prop heat, windshield heat)                                     |
 | RPM Sync                    | **SYNCHRONIZE** (Use propeller controls to match RPM)                                             |
-| Throttles                   | **1000–1200 RPM** (After checks, synchronized)                                                    |
+| Throttles                   | **1000-1200 RPM** (After checks, synchronized)                                                    |
 
 ## BEFORE TAKEOFF
 

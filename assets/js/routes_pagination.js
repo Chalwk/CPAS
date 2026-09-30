@@ -115,7 +115,7 @@ class RoutesPagination {
         const paginationContainer = document.createElement('div');
         paginationContainer.className = 'pagination-container';
 
-        // "Showing X–Y of Z" info
+        // "Showing X-Y of Z" info
         const infoDiv = document.createElement('div');
         infoDiv.className = 'pagination-info';
         const startCard = ((currentPage - 1) * this.cardsPerPage) + 1;
