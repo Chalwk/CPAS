@@ -13,7 +13,7 @@ css: [index]
                 <img alt="Coastal Peaks Air Service Logo" class="hero-logo"
                     src="{{ '/assets/images/logo.png' | relative_url }}">
             </div>
-            <p class="hero-tagline">Linking the Garden City to the West Coast</p>
+            <p class="hero-tagline">{{ site.tagline }}</p>
             <p class="hero-subtitle">Virtual Charter (VC) & Specialty Flight Operations</p>
             <a class="btn btn-primary" href="#discord">Join Our Virtual Charter</a>
         </div>
@@ -25,7 +25,7 @@ css: [index]
         <h2 class="section-title">About CPAS</h2>
         <div class="about-content">
             <div class="about-text">
-                <p><strong>Coastal Peaks Air Service (CPAS)</strong>, established on <strong>December 19, 2025</strong>,
+                <p><strong>{{ site.title }}</strong>, established on <strong>{{ site.established }}</strong>,
                     is a Virtual Charter (VC) and specialty flight operator for Microsoft Flight Simulator. We operate
                     general aviation aircraft and helicopters for tours, charters, and HEMS missions, flying realistic
                     routes across New Zealand's South Island. Our flights cover Canterbury, Christchurch, Banks
@@ -73,12 +73,12 @@ css: [index]
                         <div class="codes-container">
                             <div class="code-item">
                                 <span class="code-label">Service Abbreviation</span>
-                                <span class="code-value">CPAS</span>
+                                <span class="code-value">{{ site.service_abbreviation }}</span>
                                 <span class="code-explanation">Used in general communication and branding</span>
                             </div>
                             <div class="code-item">
                                 <span class="code-label">ICAO Code</span>
-                                <span class="code-value">CPX</span>
+                                <span class="code-value">{{ site.icao_code }}</span>
                                 <span class="code-explanation">Official three-letter code for aviation systems</span>
                             </div>
                         </div>
@@ -91,10 +91,10 @@ css: [index]
 
 <section class="section discord-section" id="discord">
     <div class="container">
-        <h2 class="section-title">Apply to Coastal Peaks Air Service</h2>
+        <h2 class="section-title">Apply to {{ site.title }}</h2>
 
         <div class="discord-container">
-            <a class="btn btn-discord" href="https://discord.gg/NsndXgYfxQ" target="_blank" rel="noopener">
+            <a class="btn btn-discord" href="{{ site.links.discord }}" target="_blank" rel="noopener">
                 <i class="fab fa-discord"></i> Apply via Discord
             </a>
 
