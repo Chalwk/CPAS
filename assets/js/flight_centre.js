@@ -19,6 +19,14 @@
         'itinerary': 'Itinerary'
     };
 
+    const TAB_LABELS = {
+        'fixed-wing': 'Fixed-Wing Routes',
+        'helicopter': 'Helicopter Routes',
+        'scenic': 'Scenic Tours',
+        'heli-hike': 'Heli-Hike Tours',
+        'itinerary': 'Multi-Day Itineraries'
+    };
+
     class FlightCentre {
         constructor(routes) {
             this.allRoutes = Array.isArray(routes) ? routes : [];
@@ -260,12 +268,20 @@
         renderCount(filtered) {
             const total = filtered.length;
             const totalInTab = this.allRoutes.filter(r => r.category === this.activeTab).length;
+            const totalAll = this.allRoutes.length;
+            const tabLabel = TAB_LABELS[this.activeTab] || CATEGORY_LABELS[this.activeTab] || this.activeTab;
 
+            let primary;
             if (total === totalInTab) {
-                this.els.count.textContent = `Showing all ${total} ${total === 1 ? 'flight' : 'flights'}`;
+                primary = `Showing all ${total} ${total === 1 ? 'flight' : 'flights'} for ${tabLabel}`;
             } else {
-                this.els.count.textContent = `Showing ${total} of ${totalInTab} ${totalInTab === 1 ? 'flight' : 'flights'}`;
+                primary = `Showing ${total} of ${totalInTab} ${totalInTab === 1 ? 'flight' : 'flights'} for ${tabLabel}`;
             }
+
+            this.els.count.innerHTML =
+                `<span class="fc-count-primary">${this.escape(primary)}</span>` +
+                `<span class="fc-count-sep" aria-hidden="true">•</span>` +
+                `<span class="fc-count-total">Total Flights: ${totalAll}</span>`;
         }
 
         toggleEmptyState(filtered) {
