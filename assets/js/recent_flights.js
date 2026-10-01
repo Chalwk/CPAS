@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
             flightsData = await response.json();
 
             lastUpdated.textContent = new Date().toLocaleString();
-            filterFlights();
+            filterFlights(false);
             updateStatistics();
 
         } catch (error) {
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 5000);
     }
 
-    function filterFlights() {
+    function filterFlights(resetPage = true) {
         const searchTerm = searchInput.value.toLowerCase();
         const statusValue = statusFilter.value;
         const aircraftValue = aircraftFilter.value;
@@ -186,13 +186,13 @@ document.addEventListener('DOMContentLoaded', function () {
             return matchesSearch && matchesStatus && matchesAircraft && matchesMission;
         });
 
-        sortFlights();
+        sortFlights(resetPage);
         updatePagination();
         updateTable();
         updateStatistics();
     }
 
-    function sortFlights() {
+    function sortFlights(resetPage = true) {
         filteredData.sort((a, b) => {
             let aValue = a[currentSort.column];
             let bValue = b[currentSort.column];
@@ -224,7 +224,10 @@ document.addEventListener('DOMContentLoaded', function () {
             return 0;
         });
 
-        currentPage = 1;
+        if (resetPage) {
+            currentPage = 1;
+        }
+
         updateTable();
         updatePagination();
     }
@@ -514,6 +517,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function updatePagination() {
         const totalPages = Math.ceil(filteredData.length / itemsPerPage);
 
+        if (totalPages > 0 && currentPage > totalPages) {
+            currentPage = totalPages;
+        }
+
         prevPageBtn.disabled = currentPage === 1;
         nextPageBtn.disabled = currentPage === totalPages || totalPages === 0;
 
@@ -536,16 +543,19 @@ document.addEventListener('DOMContentLoaded', function () {
         if (currentPage < totalPages - 2) pages.push('...');
         if (totalPages > 1) pages.push(totalPages);
 
-        pages.forEach(page => {
-            if (page === '...') {
-                pageNumbers.innerHTML += '<span class="page-number">...</span>';
+        pages.forEach(p => {
+            const pageBtn = document.createElement('span');
+            pageBtn.className = 'page-number';
+
+            if (p === '...') {
+                pageBtn.textContent = '...';
             } else {
-                const pageBtn = document.createElement('span');
-                pageBtn.className = `page-number ${page === currentPage ? 'active' : ''}`;
-                pageBtn.textContent = page;
-                pageBtn.addEventListener('click', () => changePage(page));
-                pageNumbers.appendChild(pageBtn);
+                pageBtn.textContent = p;
+                if (p === currentPage) pageBtn.classList.add('active');
+                pageBtn.addEventListener('click', () => changePage(p));
             }
+
+            pageNumbers.appendChild(pageBtn);
         });
     }
 
