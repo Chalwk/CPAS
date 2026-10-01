@@ -24,6 +24,7 @@
     gap: 10px;
     color: #4b5563;
     font-size: 0.95rem;
+    flex-wrap: wrap;
 }
 
 .weather-status i {
@@ -32,6 +33,15 @@
 
 .weather-status strong {
     color: var(--primary-color);
+}
+
+.weather-status-sep {
+    color: #cbd5e1;
+}
+
+.weather-auto {
+    font-size: 0.82rem;
+    color: #94a3b8;
 }
 
 .weather-note {
@@ -192,6 +202,7 @@
     background: #f8fafc;
     border-radius: 6px;
     border: 1px solid #e2e8f0;
+    min-width: 0;
 }
 
 .wf.full {
@@ -218,12 +229,52 @@
     font-size: 0.95rem;
     color: var(--primary-color);
     font-weight: 600;
+    word-break: break-word;
+}
+
+.wf-value .muted {
+    color: #6b7280;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.spread-pill {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 1px 7px;
+    border-radius: 10px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+.spread-pill.risk-low {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.spread-pill.risk-med {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.spread-pill.risk-high {
+    background: #fee2e2;
+    color: #991b1b;
 }
 
 .raw-metar {
     background: #1e293b;
     border-radius: 6px;
     padding: 12px 14px;
+    position: relative;
+}
+
+.raw-metar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
 }
 
 .raw-metar-label {
@@ -232,7 +283,6 @@
     letter-spacing: 1px;
     color: #94a3b8;
     font-weight: 700;
-    margin-bottom: 6px;
 }
 
 .raw-metar code {
@@ -245,22 +295,89 @@
     white-space: pre-wrap;
 }
 
+.copy-metar {
+    background: transparent;
+    border: 1px solid #475569;
+    color: #cbd5e1;
+    border-radius: 5px;
+    padding: 3px 8px;
+    font-size: 0.72rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.copy-metar:hover {
+    background: #334155;
+    color: #f1f5f9;
+    border-color: #64748b;
+}
+
+.copy-metar.copied {
+    background: #065f46;
+    color: #d1fae5;
+    border-color: #065f46;
+}
+
 .weather-card-footer {
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: space-between;
+    gap: 10px;
     color: #6b7280;
     font-size: 0.82rem;
     padding-top: 10px;
     border-top: 1px solid #f0f0f0;
+    flex-wrap: wrap;
 }
 
 .weather-card-footer i {
     color: var(--secondary-color);
 }
 
+.footer-left {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer-right {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #9ca3af;
+    font-size: 0.75rem;
+}
+
+.freshness-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #9ca3af;
+    margin-right: 2px;
+}
+
+.freshness-dot.fresh {
+    background: #10b981;
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+.freshness-dot.stale {
+    background: #f59e0b;
+    box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+}
+
+.freshness-dot.old {
+    background: #ef4444;
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
 .weather-card.loading .loading-text,
-.weather-card.error .error-text {
+.weather-card.error .error-text,
+.weather-card.no-metar .error-text {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -276,6 +393,32 @@
 
 .weather-card.error .error-text {
     color: #dc2626;
+}
+
+.weather-card.no-metar .error-text {
+    color: #6b7280;
+}
+
+.weather-card.loading .weather-card-body {
+    position: relative;
+}
+
+.skeleton-line {
+    height: 12px;
+    background: linear-gradient(90deg, #e5e7eb 0%, #f3f4f6 40%, #e5e7eb 80%);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s infinite linear;
+    border-radius: 6px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
 }
 
 .weather-legend {
@@ -352,7 +495,8 @@
 @media print {
 
     .weather-controls,
-    .weather-note {
+    .weather-note,
+    .copy-metar {
         display: none;
     }
 
