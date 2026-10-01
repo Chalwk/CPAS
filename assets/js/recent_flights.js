@@ -6,8 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentPage = 1;
     const itemsPerPage = 10;
     let currentSort = { column: 'timestamp', direction: 'desc' };
-    let isRefreshing = false;
-    let autoRefreshInterval;
 
     const flightsTableBody = document.getElementById('flightsTableBody');
     const flightDetails = document.getElementById('flightDetails');
@@ -23,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const lastUpdated = document.getElementById('lastUpdated');
 
     loadFlightData();
-    setupAutoRefresh();
     setupEventListeners();
 
     function setupEventListeners() {
@@ -64,24 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    function setupAutoRefresh() {
-        if (autoRefreshInterval) {
-            clearInterval(autoRefreshInterval);
-        }
-
-        autoRefreshInterval = setInterval(() => {
-            if (!isRefreshing && document.visibilityState === 'visible') {
-                loadFlightData();
-            }
-        }, 30000);
-
-        document.addEventListener('visibilitychange', () => {
-            if (document.visibilityState === 'visible') {
-                loadFlightData();
-            }
-        });
-    }
-
     function showRefreshNotification() {
         const notification = document.createElement('div');
         notification.className = 'refresh-notification';
@@ -97,55 +76,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 3000);
     }
 
-    async function loadFlightData() {
-        if (isRefreshing) return;
+    function loadFlightData() {
+        flightsData = Array.isArray(window.CPAS_FLIGHTS) ? window.CPAS_FLIGHTS : [];
 
-        isRefreshing = true;
-        refreshDataBtn.disabled = true;
-        refreshDataBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Refreshing...';
-
-        try {
-            const base = window.CPAS_BASEURL || '';
-            const response = await fetch(`${base}/data/flights.json?t=${Date.now()}`);
-            if (!response.ok) throw new Error('Failed to load flight data');
-
-            flightsData = await response.json();
-
-            lastUpdated.textContent = new Date().toLocaleString();
-            filterFlights(false);
-            updateStatistics();
-
-        } catch (error) {
-            console.error('Error loading flight data:', error);
-            flightsTableBody.innerHTML = `
-                <tr>
-                    <td colspan="10" style="text-align: center; padding: 40px; color: #dc2626;">
-                        <i class="fas fa-exclamation-circle"></i> Unable to load flight data. Please try again later.
-                    </td>
-                </tr>
-            `;
-
-            showErrorNotification('Failed to load flight data. Please check your connection.');
-        } finally {
-            isRefreshing = false;
-            refreshDataBtn.disabled = false;
-            refreshDataBtn.innerHTML = '<i class="fas fa-redo"></i> Refresh Data';
-        }
-    }
-
-    function showErrorNotification(message) {
-        const notification = document.createElement('div');
-        notification.className = 'error-notification';
-        notification.innerHTML = `
-            <i class="fas fa-exclamation-triangle"></i>
-            <span>${message}</span>
-        `;
-        document.body.appendChild(notification);
-
-        setTimeout(() => {
-            notification.style.animation = 'slideOut 0.3s ease';
-            setTimeout(() => notification.remove(), 300);
-        }, 5000);
+        lastUpdated.textContent = new Date().toLocaleString();
+        filterFlights(false);
+        updateStatistics();
     }
 
     function filterFlights(resetPage = true) {

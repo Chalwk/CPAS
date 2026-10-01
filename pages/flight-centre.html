@@ -1,0 +1,167 @@
+---
+layout: default
+title: Flight Centre
+css: [flight_centre]
+---
+
+<!-- Copyright (c) 2025-2026 Jericho Crosby (Chalwk) -->
+
+<section class="fc-section" style="margin-top: 70px;">
+    <div class="container">
+        <h2 class="section-title">Flight Centre</h2>
+        <p class="section-subtitle">Find your next flight - filter by route, aircraft, operation, or conditions.</p>
+
+        <!-- Category tabs -->
+        <div class="fc-tabs">
+            <div class="fc-tabs-header" id="fcTabsHeader">
+                <button class="fc-tab-btn active" data-tab="fixed-wing">
+                    <i class="fas fa-plane"></i> Fixed-Wing Routes
+                    <span class="fc-tab-count"></span>
+                </button>
+                <button class="fc-tab-btn" data-tab="helicopter">
+                    <i class="fas fa-helicopter"></i> Helicopter Routes
+                    <span class="fc-tab-count"></span>
+                </button>
+                <button class="fc-tab-btn" data-tab="scenic">
+                    <i class="fas fa-mountain"></i> Scenic Tours
+                    <span class="fc-tab-count"></span>
+                </button>
+                <button class="fc-tab-btn" data-tab="heli-hike">
+                    <i class="fas fa-hiking"></i> Heli-Hike Tours
+                    <span class="fc-tab-count"></span>
+                </button>
+                <button class="fc-tab-btn" data-tab="itinerary">
+                    <i class="fas fa-calendar-alt"></i> Multi-Day Itineraries
+                    <span class="fc-tab-count"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Shared filter panel (applies within the active tab) -->
+        <div class="fc-filters" id="fcFilters">
+            <div class="fc-filter-grid">
+                <div class="fc-filter">
+                    <label for="fcFrom"><i class="fas fa-plane-departure"></i> From</label>
+                    <select id="fcFrom">
+                        <option value="">Any Airport</option>
+                        {% assign froms = site.data.routes | map: "from" | uniq | sort %}
+                        {% for f in froms %}<option value="{{ f }}">{{ f }}</option>{% endfor %}
+                    </select>
+                </div>
+
+                <div class="fc-filter">
+                    <label for="fcTo"><i class="fas fa-plane-arrival"></i> To</label>
+                    <select id="fcTo">
+                        <option value="">Any Airport</option>
+                        {% assign tos = site.data.routes | map: "to" | uniq | sort %}
+                        {% for t in tos %}<option value="{{ t }}">{{ t }}</option>{% endfor %}
+                    </select>
+                </div>
+
+                <div class="fc-filter">
+                    <label for="fcAircraft"><i class="fas fa-helicopter"></i> Aircraft</label>
+                    <select id="fcAircraft">
+                        <option value="">Any Aircraft</option>
+                        {% assign all_aircraft = "" | split: "" %}
+                        {% for r in site.data.routes %}
+                        {% for a in r.aircraft %}
+                        {% assign all_aircraft = all_aircraft | push: a %}
+                        {% endfor %}
+                        {% endfor %}
+                        {% assign unique_aircraft = all_aircraft | uniq | sort %}
+                        {% for a in unique_aircraft %}<option value="{{ a }}">{{ a }}</option>{% endfor %}
+                    </select>
+                </div>
+
+                <div class="fc-filter">
+                    <label for="fcOperation"><i class="fas fa-briefcase"></i> Operation</label>
+                    <select id="fcOperation">
+                        <option value="">Any Operation</option>
+                        {% assign ops = site.data.routes | map: "operation" | uniq | sort %}
+                        {% for o in ops %}<option value="{{ o }}">{{ o }}</option>{% endfor %}
+                    </select>
+                </div>
+
+                <div class="fc-filter">
+                    <label for="fcConditions"><i class="fas fa-cloud-sun"></i> Conditions</label>
+                    <select id="fcConditions">
+                        <option value="">Any Conditions</option>
+                        {% assign all_cond = "" | split: "" %}
+                        {% for r in site.data.routes %}
+                        {% for c in r.conditions %}
+                        {% assign all_cond = all_cond | push: c %}
+                        {% endfor %}
+                        {% endfor %}
+                        {% assign unique_cond = all_cond | uniq | sort %}
+                        {% for c in unique_cond %}<option value="{{ c }}">{{ c }}</option>{% endfor %}
+                    </select>
+                </div>
+
+                <div class="fc-filter">
+                    <label for="fcDifficulty"><i class="fas fa-signal"></i> Difficulty</label>
+                    <select id="fcDifficulty">
+                        <option value="">Any Difficulty</option>
+                        <option value="1">★ Easy</option>
+                        <option value="2">★★ Light</option>
+                        <option value="3">★★★ Moderate</option>
+                        <option value="4">★★★★ Challenging</option>
+                        <option value="5">★★★★★ Expert</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="fc-filter-actions">
+                <button class="btn btn-primary" id="fcSearch">
+                    <i class="fas fa-search"></i> Search Flights
+                </button>
+                <button class="btn btn-secondary" id="fcReset">
+                    <i class="fas fa-undo"></i> Reset
+                </button>
+            </div>
+        </div>
+
+        <div class="fc-results-header">
+            <div class="fc-results-count" id="fcCount">Showing all routes</div>
+            <div class="fc-sort">
+                <label for="fcSort">
+                    <i class="fas fa-sort"></i> Sort
+                    <select id="fcSort">
+                        <option value="default">Default</option>
+                        <option value="distance-asc">Distance (shortest first)</option>
+                        <option value="distance-desc">Distance (longest first)</option>
+                        <option value="difficulty-asc">Difficulty (easiest first)</option>
+                        <option value="difficulty-desc">Difficulty (hardest first)</option>
+                        <option value="alpha">Route (A→Z)</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+
+        <div class="fc-results" id="fcResults"></div>
+
+        <div class="fc-empty" id="fcEmpty" hidden>
+            <i class="fas fa-plane-slash"></i>
+            <h3>No flights match your filters</h3>
+            <p>Try widening your search, or reset the filters to see every route.</p>
+            <button class="btn btn-primary" id="fcEmptyReset">Reset Filters</button>
+        </div>
+
+        <div class="fc-pagination" id="fcPagination"></div>
+    </div>
+</section>
+
+<!-- Brief Modal -->
+<div class="fc-modal" id="fcModal" aria-hidden="true">
+    <div class="fc-modal-backdrop" data-close-modal></div>
+    <div class="fc-modal-content" role="dialog" aria-modal="true" aria-labelledby="fcModalTitle">
+        <button class="fc-modal-close" id="fcModalClose" aria-label="Close brief">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="fc-modal-body" id="fcModalBody"></div>
+    </div>
+</div>
+
+<script>
+    window.CPAS_ROUTES = {{ site.data.routes | jsonify }};
+</script>
+<script src="{{ '/assets/js/flight_centre.js' | relative_url }}"></script>

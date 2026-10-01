@@ -1,0 +1,969 @@
+# -----------------------------------------------------------------------------
+# Coastal Peaks Air Service (CPAS)
+# Flight Centre Route Catalogue
+#
+# Copyright (c) 2025-2026 Jericho Crosby (Chalwk). All rights reserved.
+# -----------------------------------------------------------------------------
+
+# Fixed-Wing ---------------------------------------------------------------
+
+- id: fw-nzch-nzqn-archer
+  from: NZCH
+  to: NZQN
+  from_name: Christchurch International
+  to_name: Queenstown
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 274
+  duration: "~2h 15m"
+  aircraft:
+    - Piper Archer II
+    - Piper Archer III
+    - Piper Warrior II
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Alpine
+  difficulty: 4
+  description: Christchurch to Queenstown via Mackenzie Country. Scenic routing over Lake Tekapo and the Mount Cook region.
+  tags:
+    - Southern Alps
+    - Lake Tekapo
+    - The Remarkables
+  highlights:
+    - Southern Alps crossing
+    - Lake Tekapo overflight
+    - Queenstown approach over The Remarkables
+  airspace:
+    - "Depart NZCH: Contact Christchurch Approach 119.1"
+    - "Transition through Christchurch Control Area (CTA) - FL150 or below"
+    - "Mackenzie Basin: Class G airspace, remain below 13,000 ft"
+    - "NZQN arrival: Queenstown Control 124.8, expect visual approach Runway 23"
+    - "RNAV (GNSS) approaches available at NZQN"
+  alternate: "NZMC (Mount Cook) for stopover"
+
+- id: fw-nzch-nzhk-arthurs
+  from: NZCH
+  to: NZHK
+  from_name: Christchurch International
+  to_name: Hokitika
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 103
+  duration: "~55m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+    - Piper Archer III
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Coastal
+  difficulty: 3
+  description: Christchurch to Hokitika via Arthur's Pass. The classic West Coast access route.
+  tags:
+    - Arthur's Pass
+    - West Coast
+    - Rainforest
+  highlights:
+    - Arthur's Pass crossing
+    - Coastal approach to NZHK
+    - West Coast rainforest views
+  airspace:
+    - "Depart NZCH: Christchurch Tower 118.1"
+    - "Westbound via Waimakariri River corridor"
+    - "Arthur's Pass: Class G, maintain 7,500 ft MSL minimum for terrain clearance"
+    - "NZHK arrival: Hokitika Tower 118.7"
+    - "Hokitika Control Zone active 0800-1700 local"
+    - "Non-radar area west of divide, position reporting required"
+
+- id: fw-nzch-nzmc-alpine
+  from: NZCH
+  to: NZMC
+  from_name: Christchurch International
+  to_name: Mount Cook
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 113
+  duration: "~1h 00m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+    - Piper Archer III
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Alpine
+  difficulty: 5
+  description: Alpine access to Mount Cook Airport. Challenging mountain conditions and high-altitude operations.
+  tags:
+    - Aoraki / Mount Cook
+    - High Alpine
+    - Turbulence
+  highlights:
+    - Runway 05/23 at 1,800 ft AMSL
+    - Mountain turbulence
+    - Rapid weather changes
+  airspace:
+    - "Mount Cook Flight Information Zone (FIZ)"
+    - "Mandatory area frequency 122.5 within 10 NM"
+    - "Class G airspace, no ATC service"
+    - "VFR only - no instrument approaches"
+    - "Must maintain visual contact with terrain at all times"
+    - "Mountain wave activity common - avoid lee of ranges"
+
+- id: fw-nzhk-nzgm-shuttle
+  from: NZHK
+  to: NZGM
+  from_name: Hokitika
+  to_name: Greymouth
+  category: fixed-wing
+  operation: Transfer
+  distance_nm: 22
+  duration: "~15m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Piper Tomahawk
+    - Piper Warrior II
+  flight_rules: VFR
+  conditions:
+    - Coastal
+  difficulty: 1
+  description: West Coast shuttle between Hokitika and Greymouth. Quick, scenic coastal hop.
+  tags:
+    - Tasman Sea
+    - Coastal
+    - Short Hop
+  highlights:
+    - Tasman Sea coastline
+    - Low-level coastal views
+    - Quick 15-minute flight
+  airspace:
+    - "NZHK: Hokitika Control Zone (Class D) 118.7"
+    - "NZGM: Greymouth Flight Information Zone (FIZ) 122.7"
+    - "Coastal corridor: Class G below 1500 ft AGL"
+    - "VFR flight following available from Hokitika Tower"
+    - "Watch for military low-level training (NOTAMs)"
+  alternate: "Inter-town transfers, medical evac training"
+
+- id: fw-nzch-nzqn-seneca
+  from: NZCH
+  to: NZQN
+  from_name: Christchurch International
+  to_name: Queenstown
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 274
+  duration: "~1h 40m"
+  aircraft:
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Mountain
+    - Alpine
+    - IMC
+  difficulty: 3
+  description: Direct alpine crossing at higher altitudes. Ideal for premium charter flights with faster cruise.
+  tags:
+    - Premium Charter
+    - IFR
+    - Southern Alps
+  highlights:
+    - 180 KTAS cruise for reduced flight time
+    - IFR capability for reliable alpine crossings
+    - Dual engines for enhanced safety over remote terrain
+  airspace:
+    - "Depart NZCH: Christchurch Control 119.1"
+    - "Climb to FL180+ for best performance and turbulence avoidance"
+    - "Route: Direct NZQN or via RNAV waypoints for IFR"
+    - "NZQN arrival: Queenstown Control 124.8, RNAV or visual approach"
+    - "Engine-out procedures: Maintain altitude to clear terrain"
+  alternate: "NZMC (Mount Cook) or NZGY (Glenorchy)"
+
+- id: fw-nzch-nzhk-coastal
+  from: NZCH
+  to: NZHK
+  from_name: Christchurch International
+  to_name: Hokitika
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 210
+  duration: "~1h 35m"
+  aircraft:
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Coastal
+    - Mountain
+    - IMC
+  difficulty: 2
+  description: Extended coastal routing via Kaikoura and the West Coast. Showcases Seneca V range and comfort for scenic coastal charters.
+  tags:
+    - Kaikoura
+    - Marlborough
+    - West Coast
+  highlights:
+    - Kaikoura Peninsula whale watching (aerial view)
+    - Marlborough Sounds overflight
+    - West Coast rainforest and glacier views
+    - Higher altitude for panoramic coastal vistas
+  airspace:
+    - "Depart NZCH: Christchurch Tower 118.1"
+    - "Coastal route: NZCH → Kaikoura → West Coast → NZHK"
+    - "IFR preferred for coastal weather (common low cloud)"
+    - "NZHK arrival: Hokitika Tower 118.7"
+    - "Fuel planning: Seneca V range allows non-stop with reserves"
+    - "Watch for military low-level training along coast"
+  alternate: "Optional stop at NZKI (Kaikoura) for fuel/scenic break"
+
+- id: fw-nzch-banks-seneca
+  from: NZCH
+  to: NZCH
+  from_name: Christchurch International
+  to_name: Christchurch International
+  category: fixed-wing
+  operation: Tour
+  distance_nm: 0
+  duration: "1.5-2 hours"
+  aircraft:
+    - Piper Seneca V
+  flight_rules: VFR
+  conditions:
+    - Coastal
+  difficulty: 2
+  description: Premium scenic tour combining Banks Peninsula, Lyttelton Harbour, and Canterbury Plains. Ideal for small group charters.
+  tags:
+    - Banks Peninsula
+    - Lyttelton
+    - Round Trip
+  highlights:
+    - Fast transit between scenic points
+    - Air-conditioned comfort for passenger experience
+    - IFR capability for reliable scheduling despite coastal weather
+  airspace:
+    - "Depart NZCH: Christchurch Tower 118.1"
+    - "Route: NZCH → Banks Peninsula → Lyttelton Harbour → Canterbury Plains → Return"
+    - "Operate at 7,500-10,000 ft for best views and smooth air"
+    - "Remain clear of Christchurch Class C airspace"
+    - "CTAF for Banks Peninsula area: 123.1"
+
+- id: fw-nzch-nztu-nzqn-multi
+  from: NZCH
+  to: NZQN
+  from_name: Christchurch International
+  to_name: Queenstown
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 274
+  duration: "~2h 30m"
+  aircraft:
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Mountain
+    - Alpine
+  difficulty: 4
+  description: Multi-stop executive charter via Timaru demonstrating Seneca V flexibility for business itineraries with quick turnarounds.
+  tags:
+    - Multi-Stop
+    - Executive
+    - Timaru
+  highlights:
+    - Quick turnarounds at regional airports
+    - Cabin space for briefcases and small luggage
+    - Quieter cabin than single-engine alternatives
+  airspace:
+    - "NZCH departure: Christchurch Control 119.1"
+    - "NZTU (Timaru): Control Zone 118.1, quick turnaround procedures"
+    - "NZQN arrival: Queenstown Tower 124.8"
+    - "Flight planning: Consider weight and balance with partial fuel at NZTU"
+  alternate: "NZGY (Glenorchy) if NZQN weather marginal"
+  warning: "Monitor weather trends for alpine crossing segment"
+
+# Helicopter ---------------------------------------------------------------
+
+- id: hel-nzch-nzmf-r66
+  from: NZCH
+  to: NZMF
+  from_name: Christchurch International
+  to_name: Milford Sound
+  category: helicopter
+  operation: Charter
+  distance_nm: 300
+  duration: "~2h 30m"
+  aircraft:
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+    - Remote
+  difficulty: 5
+  description: Christchurch direct to Milford Sound with the R66's extended range and turbine power. Perfect for premium tours and time-sensitive transfers.
+  tags:
+    - Milford Sound
+    - Extended Range
+    - Fiordland
+  highlights:
+    - 300+ nm range for non-stop flights
+    - Turbine reliability for alpine conditions
+    - Enclosed luggage compartment for passenger gear
+    - Higher cruise speed (120+ kts)
+  airspace:
+    - "NZCH departure: Christchurch Tower 118.1"
+    - "Route: Direct or via Arthur's Pass depending on weather"
+    - "Milford Sound (NZMF): Special rules airspace 122.1"
+    - "Fuel planning critical - limited refueling options en route"
+    - "Consider Te Anau (NZMO) for weather alternates"
+    - "Turbine performance allows higher altitude routing over ranges"
+  warning: "Requires turbine helicopter endorsement"
+
+- id: hel-nzhk-franz
+  from: NZHK
+  to: NZFJ
+  from_name: Hokitika
+  to_name: Franz Josef
+  category: helicopter
+  operation: Tour
+  distance_nm: 45
+  duration: "~40m"
+  aircraft:
+    - Airbus H125
+    - Robinson R66
+    - Robinson R44
+  flight_rules: VFR
+  conditions:
+    - Glacier
+    - Alpine
+    - Mountain
+  difficulty: 4
+  description: Hokitika to Franz Josef Glacier for glacier tours and alpine drops.
+  tags:
+    - Franz Josef
+    - Glacier
+    - Confined LZ
+  highlights:
+    - Confined landing zones
+    - Glacier landing practice
+    - Mountain weather navigation
+  airspace:
+    - "Depart NZHK: Contact Hokitika Tower 118.7"
+    - "Franz Josef Glacier area: Class G, uncontrolled"
+    - "Common Traffic Advisory Frequency (CTAF): 123.1"
+    - "Glacier landing zones: Helicopter Landing Areas (HLAs)"
+    - "Mountain flying rules apply: one-way valley traffic"
+    - "Watch for other tour operators - high traffic in summer"
+  warning: "Requires mountain flying experience"
+
+- id: hel-nzqn-minaret
+  from: NZQN
+  to: NZQN
+  from_name: Queenstown
+  to_name: Minaret Station
+  category: helicopter
+  operation: Charter
+  distance_nm: 30
+  duration: "~35m"
+  aircraft:
+    - Airbus H145
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Alpine
+  difficulty: 4
+  description: Queenstown to remote high-country stations and luxury lodges in the Wakatipu Basin.
+  tags:
+    - Luxury Lodge
+    - Remote Access
+    - Wakatipu
+  highlights:
+    - Private farm strips
+    - Grass landing pads
+    - Alpine valley approaches
+  airspace:
+    - "Depart NZQN: Queenstown Tower 124.8"
+    - "Wakatipu Basin: Class D airspace"
+    - "Minaret Station: Private airstrip in Class G"
+    - "Lodge frequencies: 122.9 (CTAF for station airstrips)"
+    - "Mountain radio service: 130.6 for area broadcasts"
+    - "Terrain clearance: 500 ft minimum over uninhabited areas"
+
+- id: hel-nzgm-punakaiki
+  from: NZGM
+  to: NZGM
+  from_name: Greymouth
+  to_name: Punakaiki
+  category: helicopter
+  operation: Survey
+  distance_nm: 20
+  duration: "~30m"
+  aircraft:
+    - Robinson R66
+    - Robinson R44
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Coastal
+  difficulty: 3
+  description: Low-level coastal survey along the West Coast to the Pancake Rocks.
+  tags:
+    - Pancake Rocks
+    - Low-Level
+    - Photography
+  highlights:
+    - Pancake Rocks aerial photography
+    - Coastal erosion surveys
+    - Tourism scenic flights
+  airspace:
+    - "NZGM: Greymouth FIZ 122.7"
+    - "Coastal route: Class G below 1500 ft"
+    - "Paparoa National Park: Flight below 500 ft requires special permission"
+    - "Low-level corridors: Follow SH6 highway for navigation"
+    - "Marine VHF monitoring: Channel 16 for maritime activity"
+    - "Military Restricted Area R380 occasionally active - check NOTAMs"
+
+# Scenic Tours -------------------------------------------------------------
+
+- id: tour-r66-alpine-explorer
+  from: NZCH
+  to: NZCH
+  from_name: Christchurch International
+  to_name: Christchurch International
+  category: scenic
+  operation: Tour
+  distance_nm: 0
+  duration: "2-3 hours"
+  aircraft:
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+  difficulty: 4
+  description: Designed specifically for the R66's capabilities, showcasing extended range and turbine performance in challenging alpine environments.
+  tags:
+    - R66 Special
+    - High Country
+    - Lake Landings
+  highlights:
+    - High-altitude lake landings (Lake Coleridge, Lake Heron)
+    - Extended coastal range to Kaikoura Peninsula
+    - Multiple remote high-country station visits in one trip
+    - Turbine-powered hover capability for photography
+  airspace:
+    - "Turbine engine allows higher density altitude operations"
+    - "Extended range enables direct routing over uninhabited areas"
+    - "Enhanced instrumentation for marginal weather capability"
+    - "Consider load planning - useful load ~1,200 lbs"
+    - "Ideal for premium passenger experience with quieter cabin"
+  warning: "R66 requires turbine management attention - monitor ITT and torque"
+
+- id: tour-port-hills
+  from: NZCH
+  to: NZCH
+  from_name: Christchurch International
+  to_name: Christchurch International
+  category: scenic
+  operation: Tour
+  distance_nm: 0
+  duration: "30-45 min"
+  aircraft:
+    - Robinson R66
+    - Airbus H125
+    - Robinson R44
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Urban
+  difficulty: 2
+  description: Departing from CAC - breathtaking views of Christchurch, Lyttelton Harbour, and the volcanic formations of the Port Hills.
+  tags:
+    - Port Hills
+    - Lyttelton
+    - Christchurch
+  highlights:
+    - Summit Road and Crater Rim
+    - Lyttelton Harbour & Quail Island
+    - Godley Head & Taylor's Mistake
+    - Christchurch CBD bird's-eye view
+  airspace:
+    - "Christchurch Control Zone (CTR) transition approval required"
+    - "Remain west of Christchurch Class C airspace (below 1500 ft AGL)"
+    - "Lyttelton Harbour: Class G, but within Christchurch CTR lateral boundaries"
+    - "Godley Head: Coastal warning area - watch for ships' cranes"
+    - "CTAF for Port Hills area: 123.1"
+    - "Must remain clear of Christchurch International traffic patterns"
+  warning: "Watch for nor'westers - common afternoon turbulence"
+
+- id: tour-waimakariri
+  from: NZCH
+  to: NZCH
+  from_name: Christchurch International
+  to_name: Christchurch International
+  category: scenic
+  operation: Tour
+  distance_nm: 0
+  duration: "45-60 min"
+  aircraft:
+    - Robinson R66
+    - Airbus H125
+    - Airbus H145
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - River
+  difficulty: 2
+  description: Follow the braided Waimakariri River from the foothills to the sea, with stunning coastal views of Pegasus Bay.
+  tags:
+    - Waimakariri
+    - Pegasus Bay
+    - Braided River
+  highlights:
+    - Braided river patterns (unique aerial view)
+    - Coastal wetlands & birdlife
+    - Ashley River confluence
+    - Kaiapoi & Woodend townships
+    - Pegasus Bay coastline
+  airspace:
+    - "Waimakariri area has Class D airspace - remain west of controlled zone"
+    - "Christchurch Control Area (CTA) floor at 1500 ft in this sector"
+    - "Kaiapoi zone: Transition at or below 1000 ft AGL"
+    - "Coastal route: Class G below 500 ft along beach"
+    - "Flight following available from Christchurch Information 124.4"
+    - "Avoid Woodbourne Military Airspace (R383) to north"
+
+- id: tour-canterbury-plains
+  from: NZCH
+  to: NZCH
+  from_name: Christchurch International
+  to_name: Christchurch International
+  category: scenic
+  operation: Tour
+  distance_nm: 0
+  duration: "1.5-2 hours"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+    - Piper Archer III
+  flight_rules: VFR
+  conditions:
+    - Plains
+  difficulty: 1
+  description: Low-level flight over the patchwork of Canterbury farms with options for coastal or inland routing to various airstrips.
+  tags:
+    - Canterbury Plains
+    - Farmland
+    - Aerial
+  highlights:
+    - Patchwork farmland patterns
+    - Rangiora (NZRT) & Ashburton (NZAS) overflights
+    - Mt Hutt & Southern Alps backdrop
+    - Multiple farm strip options
+  airspace:
+    - "Canterbury Plains: Mix of Class D and Class G"
+    - "Rangiora (NZRT): Uncontrolled, CTAF 123.1"
+    - "Ashburton (NZAS): Flight Information Zone, 122.7"
+    - "Farm strips: All Class G, landowner permission required"
+    - "Avoid Christchurch Control Zone without clearance"
+    - "Military low-level routes through area - check NOTAMs"
+  alternate: "Rangiora (NZRT), Ashburton (NZAS), or any farm strip with permission"
+  warning: "Canterbury's nor'west arch often visible to the west"
+
+- id: tour-coastal-oamaru
+  from: NZCH
+  to: NZOU
+  from_name: Christchurch International
+  to_name: Oamaru
+  category: scenic
+  operation: Tour
+  distance_nm: 135
+  duration: "2-2.5 hours"
+  aircraft:
+    - Piper Archer II
+    - Piper Archer III
+  flight_rules: VFR
+  conditions:
+    - Coastal
+  difficulty: 2
+  description: Christchurch to Oamaru (NZOU) following the coastline with options for low-level coastal flying or higher cruise.
+  tags:
+    - Moeraki Boulders
+    - Victorian Oamaru
+    - Coastal
+  highlights:
+    - Waimakariri River mouth departure
+    - Coastal views of Pegasus Bay
+    - Ashley & Waipara river mouths
+    - Moeraki Boulders (famous spherical rocks)
+    - Oamaru's Victorian precinct view
+  airspace:
+    - "Coastal corridor: Class G below 1500 ft, Class C above"
+    - "Timaru (NZTU) Control Zone: Class D, frequency 118.1"
+    - "Oamaru (NZOU): Flight Information Zone, 123.1"
+    - "Must cross Timaru CTR at approved points or above 2500 ft"
+    - "Maritime Patrol: Coastwatch operations common"
+    - "Check for military exercise areas offshore"
+  warning: "Monitor weather - coastal fog common mornings"
+
+- id: tour-alpine-foothills
+  from: NZCH
+  to: NZCH
+  from_name: Christchurch International
+  to_name: Christchurch International
+  category: scenic
+  operation: Tour
+  distance_nm: 0
+  duration: "Custom"
+  aircraft:
+    - Airbus H125
+    - Piper Archer II
+    - Piper Archer III
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Alpine
+  difficulty: 3
+  description: Explore the transition from plains to mountains, suitable for both aircraft types with different operational considerations.
+  tags:
+    - Foothills
+    - Mixed Operations
+    - Custom
+  highlights:
+    - Confined area landings in foothills (helicopter)
+    - Low-level valley flying
+    - Access to high-country stations
+    - Rangiora (NZRT) or Glenorchy (NZGY) stop (fixed-wing)
+  airspace:
+    - "Foothills area: Class G, uncontrolled"
+    - "Glenorchy (NZGY): Uncontrolled airstrip, CTAF 122.9"
+    - "Hororata (NZHT): Private strip, prior permission required"
+    - "Helicopter: Special rules for mountain flying apply"
+    - "Fixed-wing: Minimum safe altitude 2000 ft above highest terrain"
+    - "Mountain radio frequency: 130.6 for area broadcasts"
+  alternate: "Hororata (NZHT), Glenorchy (NZGY), or high-country farm strips"
+  warning: "Mountain weather changes rapidly - careful planning required"
+
+# Heli-Hike Tours ----------------------------------------------------------
+
+- id: hike-tasman-glacier
+  from: NZGT
+  to: NZGT
+  from_name: Glentanner Station
+  to_name: Tasman Glacier
+  category: heli-hike
+  operation: Tour
+  distance_nm: 0
+  duration: "2-3 hours"
+  aircraft:
+    - Airbus H145
+    - Airbus H125
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Glacier
+    - Alpine
+    - Mountain
+  difficulty: 4
+  description: The ultimate glacier experience. Land on the Tasman Glacier for a guided hike among seracs and ice formations. Based on real-world Helicopter Line tours.
+  tags:
+    - Tasman Glacier
+    - Heli-Hike
+    - Blue Ice
+  highlights:
+    - Landing at 2,200 m on the Tasman Glacier
+    - 45-60 minute guided hike with crampons
+    - Views of Hochstetter Icefall
+    - Blue ice exploration
+    - Glacier geology interpretation
+  airspace:
+    - "Depart from: Glentanner Station or Mount Cook Airport"
+    - "Tasman Glacier Landing Zone: S43° 37.5' E170° 10.5'"
+    - "Mount Cook Flight Information Zone (FIZ) - 122.5 MHz"
+    - "Glacier landing requires special training"
+    - "Monitor mountain weather: 130.6 MHz"
+    - "H145 preferred for group tours (up to 8 passengers)"
+    - "R66 for premium small groups (4 passengers)"
+  warning: "Glacier conditions change rapidly"
+
+- id: hike-alpine-explorer
+  from: NZMC
+  to: NZMC
+  from_name: Mount Cook Airport
+  to_name: Sealy Range / Hooker Valley
+  category: heli-hike
+  operation: Tour
+  distance_nm: 0
+  duration: "1.5-2 hours"
+  aircraft:
+    - Airbus H125
+    - Robinson R66
+    - Airbus H145
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+  difficulty: 5
+  description: Multiple alpine landings with short hikes. Experience different terrains from glacier to rocky ridges.
+  tags:
+    - Multiple Landings
+    - High Altitude
+    - Ridge Hikes
+  highlights:
+    - Sealy Range ridge landing (1,800 m)
+    - Hooker Valley overlook
+    - Blue Lakes area (ancient glacier terminal)
+    - Optional Tasman Glacier terminal lake
+  airspace:
+    - "Multiple confined area landings"
+    - "Route: NZMC → Sealy Range → Hooker Valley → Blue Lakes"
+    - "All landings above 1,500 m ASL"
+    - "High density altitude operations"
+    - "Passenger weight and balance critical"
+    - "H125 excels in high-altitude performance"
+
+- id: hike-summit-view
+  from: NZMC
+  to: NZMC
+  from_name: Mount Cook Airport
+  to_name: Main Divide
+  category: heli-hike
+  operation: Tour
+  distance_nm: 0
+  duration: "3-4 hours"
+  aircraft:
+    - Airbus H145
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+    - Remote
+  difficulty: 5
+  description: Land near the Main Divide for breathtaking views of Aoraki/Mount Cook. Includes alpine flora hike and glacier education.
+  tags:
+    - Premium
+    - Main Divide
+    - Highest Landing
+  highlights:
+    - Landing at 2,400 m near the Main Divide
+    - 360° views of Mount Cook, Tasman, and Hooker Glaciers
+    - Alpine plant identification (mountain buttercup, snow gentians)
+    - Glacier formation education
+  airspace:
+    - "Highest landing at approximately 2,400 m ASL"
+    - "Extreme high-altitude operations"
+    - "Turbine helicopters only (H145/H125 preferred)"
+    - "Weather minimums: Cloud base 3,000 ft, visibility 10 km"
+    - "Passenger oxygen available on H145"
+    - "Maximum group size: 6 passengers"
+
+- id: hike-family-glacier
+  from: NZGT
+  to: NZGT
+  from_name: Glentanner Station
+  to_name: Tasman Glacier (lower)
+  category: heli-hike
+  operation: Tour
+  distance_nm: 0
+  duration: "1-1.5 hours"
+  aircraft:
+    - Airbus H145
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Glacier
+    - Alpine
+  difficulty: 2
+  description: Shorter, more accessible glacier experience suitable for families. Gentle landing with easy walking.
+  tags:
+    - Family
+    - Accessible
+    - Lower Glacier
+  highlights:
+    - Lower altitude glacier landing (1,800 m)
+    - Easy 30-minute walk on gentle ice
+    - Ice cave exploration (when safe)
+    - Glacier meltwater streams
+    - Child-friendly interpretation
+  airspace:
+    - "Special family briefing included"
+    - "Minimum age: 8 years"
+    - "H145 accommodates up to 8 (ideal for families)"
+    - "All safety equipment provided (crampons, helmets)"
+    - "Warmer landing site selected for comfort"
+    - "Shorter flight time ideal for children"
+
+- id: hike-photography-special
+  from: NZMC
+  to: NZMC
+  from_name: Mount Cook Airport
+  to_name: Glacier & Lakes
+  category: heli-hike
+  operation: Tour
+  distance_nm: 0
+  duration: "2.5-3.5 hours"
+  aircraft:
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Glacier
+    - Alpine
+    - Golden Hour
+  difficulty: 4
+  description: Designed for photographers. Multiple landings at golden hour with door-off flying for aerial photography.
+  tags:
+    - Photography
+    - Door-Off
+    - Sunrise / Sunset
+  highlights:
+    - Door-off flying for clear shots
+    - Sunrise/sunset landings
+    - Multiple locations: Glacier, lakes, peaks
+    - Time at each location for setup
+  airspace:
+    - "Door-off operations require special briefing"
+    - "Reduced passenger capacity for equipment"
+    - "Early morning/late evening operations"
+    - "R66 ideal for smoother ride and visibility"
+    - "H125 with doors removed for best access"
+    - "Maximum 3 photographers + guide"
+
+- id: hike-alpine-lakes
+  from: NZMC
+  to: NZMC
+  from_name: Mount Cook Airport
+  to_name: Alpine Lakes
+  category: heli-hike
+  operation: Tour
+  distance_nm: 0
+  duration: "2-2.5 hours"
+  aircraft:
+    - Airbus H145
+    - Airbus H125
+    - Robinson R66
+    - Robinson R44
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Lakes
+  difficulty: 3
+  description: Explore the stunning alpine lakes around Mount Cook. Land at secluded lakes for short hikes and photography.
+  tags:
+    - Alpine Lakes
+    - Turquoise Water
+    - Photography
+  highlights:
+    - Lake Mueller (glacial turquoise waters)
+    - Hooker Lake (iceberg viewing)
+    - Sealy Tarns (reflection photography)
+    - Blue Lakes (color-changing waters)
+  airspace:
+    - "Lakeside confined area landings"
+    - "Watch for wind gusts off water"
+    - "R44 suitable for 2-3 passengers"
+    - "H145 for larger groups to multiple lakes"
+    - "All landings require firm, stable ground"
+    - "Avoid disturbing wildlife habitats"
+
+# Itineraries --------------------------------------------------------------
+
+- id: itin-south-island
+  from: NZCH
+  to: NZCH
+  from_name: Christchurch International
+  to_name: South Island Loop
+  category: itinerary
+  operation: Itinerary
+  distance_nm: 0
+  duration: "3 Days"
+  aircraft:
+    - Robinson R66
+    - Airbus H145
+    - Piper Archer II
+    - Piper Archer III
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Alpine
+    - Coastal
+  difficulty: 3
+  description: South Island Scenic Tour - three days exploring Mount Cook, Queenstown, and the West Coast.
+  tags:
+    - Multi-Day
+    - Scenic Tour
+    - Loop
+  highlights:
+    - "Day 1: NZCH → NZMC - Mount Cook glacier flight training"
+    - "Day 2: NZMC → NZQN - Alpine crossing to Queenstown"
+    - "Day 3: NZQN → NZHK → NZCH - Coastal return via West Coast"
+  airspace:
+    - "Day 1: Class G, Mount Cook FIZ 122.5"
+    - "Day 2: Class D arrival, Queenstown Tower 124.8"
+    - "Day 3: Multiple CTR transitions, flight planning required"
+
+- id: itin-west-coast-industry
+  from: NZCH
+  to: NZCH
+  from_name: Christchurch International
+  to_name: West Coast
+  category: itinerary
+  operation: Itinerary
+  distance_nm: 0
+  duration: "2 Days"
+  aircraft:
+    - Robinson R66
+    - Airbus H125
+    - Piper Seneca V
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 3
+  description: West Coast Industry Support - crew transport and site survey missions over two days.
+  tags:
+    - Multi-Day
+    - Industry
+    - Crew Transport
+  highlights:
+    - "Day 1: NZCH → NZHK - Crew transport to West Coast"
+    - "Day 1: NZHK → Remote strips - Site survey flights"
+    - "Day 2: West Coast circuits - Equipment transport"
+    - "Day 2: NZHK → NZCH - Return with personnel"
+  airspace:
+    - "West Coast uncontrolled airstrips in Class G"
+    - "Hokitika CTR, then Arthur's Pass crossing"
+
+- id: itin-wine-food
+  from: NZCH
+  to: NZCH
+  from_name: Christchurch International
+  to_name: Waitaki / Central Otago
+  category: itinerary
+  operation: Itinerary
+  distance_nm: 0
+  duration: "2 Days"
+  aircraft:
+    - Piper Archer II
+    - Piper Archer III
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Plains
+  difficulty: 2
+  description: Wine & Food Tour - a two-day culinary journey through the Waitaki Valley and Central Otago.
+  tags:
+    - Multi-Day
+    - Wine Tour
+    - Culinary
+  highlights:
+    - "Day 1: NZCH → NZOU - Waitaki Valley vineyards"
+    - "Day 1: Scenic coastal flight - Oamaru to Moeraki"
+    - "Day 2: NZOU → NZQN - Central Otago wineries"
+    - "Day 2: Return to NZCH via Mackenzie Country"
+  airspace:
+    - "Coastal Class G, Oamaru CTAF 123.1"
+    - "Queenstown CTR, then Class G high country"
