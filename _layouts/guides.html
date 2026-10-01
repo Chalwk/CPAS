@@ -41,3 +41,21 @@ layout: default
         </p>
     </div>
 </article>
+
+<script>
+    (function () {
+        var base = '{{ site.baseurl }}';
+        if (!base || base === '/') return;
+
+        var root = document.getElementById('guideContent');
+        if (!root) return;
+
+        root.querySelectorAll('a[href^="/"]').forEach(function (a) {
+            var href = a.getAttribute('href');
+            if (!href) return;
+            if (href === base) return;
+            if (href.indexOf(base + '/') === 0) return;
+            a.setAttribute('href', base + href);
+        });
+    })();
+</script>
