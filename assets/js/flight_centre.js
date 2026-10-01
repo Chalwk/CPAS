@@ -817,7 +817,7 @@
                                 <i class="fas fa-paper-plane"></i> SimBrief
                             </a>
                             <a class="fc-btn fc-btn-map" href="${mapURL}" target="_blank" rel="noopener" title="Open Route Map">
-                                <i class="fas fa-map"></i> Map
+                                <i class="fas fa-map"></i> SkyVector Map
                             </a>
                         </div>
                     </div>
@@ -914,7 +914,7 @@
                             <i class="fas fa-paper-plane"></i> Open in SimBrief
                         </a>
                         <a class="fc-btn fc-btn-map" href="${mapURL}" target="_blank" rel="noopener">
-                            <i class="fas fa-map"></i> Route Map
+                            <i class="fas fa-map"></i> SkyVector Map
                         </a>
                     </div>
                 </div>
