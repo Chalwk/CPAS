@@ -278,7 +278,7 @@ title: Flights
 
         <div class="data-refresh">
             <p><i class="fas fa-sync-alt"></i>
-                Flight data is updated automatically. Last updated: <span id="lastUpdated">1</span>
+                Flight data is updated automatically. Last updated: <span id="lastUpdated">-</span>
             </p>
             <button class="btn btn-small" id="refreshData">
                 <i class="fas fa-redo"></i> Refresh Data
@@ -289,6 +289,6 @@ title: Flights
 
 <script>
     window.CPAS_BASEURL = '{{ site.baseurl }}';
-    window.CPAS_FLIGHTS = {{ site.data.flights | jsonify }};
+    window.CPAS_FLIGHTS_URL = '{{ '/assets/data/flights.json' | relative_url }}';
 </script>
-<script src="{{ '/assets/js/recent_flights.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/recent_flights.js' | relative_url }}"></script>

@@ -162,6 +162,7 @@ css: [flight_centre]
 </div>
 
 <script>
-    window.CPAS_ROUTES = {{ site.data.routes | jsonify }};
+    window.CPAS_BASEURL = '{{ site.baseurl }}';
+    window.CPAS_ROUTES_URL = '{{ '/assets/data/routes.json' | relative_url }}';
 </script>
-<script src="{{ '/assets/js/flight_centre.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/flight_centre.js' | relative_url }}"></script>

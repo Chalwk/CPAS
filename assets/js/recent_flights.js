@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const refreshDataBtn = document.getElementById('refreshData');
     const lastUpdated = document.getElementById('lastUpdated');
 
-    loadFlightData();
     setupEventListeners();
+    loadFlightData();
 
     function setupEventListeners() {
         closeSidebar.addEventListener('click', () => {
@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
         prevPageBtn.addEventListener('click', () => changePage(currentPage - 1));
         nextPageBtn.addEventListener('click', () => changePage(currentPage + 1));
 
-        refreshDataBtn.addEventListener('click', () => {
-            loadFlightData();
+        refreshDataBtn.addEventListener('click', async () => {
+            await loadFlightData();
             showRefreshNotification();
         });
 
@@ -76,8 +76,28 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 3000);
     }
 
-    function loadFlightData() {
-        flightsData = Array.isArray(window.CPAS_FLIGHTS) ? window.CPAS_FLIGHTS : [];
+    async function loadFlightData() {
+        if (flightsTableBody) {
+            flightsTableBody.innerHTML = `
+                <tr>
+                    <td colspan="10" style="text-align: center; padding: 40px; color: #6b7280;">
+                        <i class="fas fa-spinner fa-spin"></i> Loading flights...
+                    </td>
+                </tr>
+            `;
+        }
+
+        try {
+            const url = window.CPAS_FLIGHTS_URL;
+            if (!url) throw new Error('CPAS_FLIGHTS_URL is not defined');
+            const res = await fetch(url, { cache: 'no-cache' });
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const data = await res.json();
+            flightsData = Array.isArray(data) ? data : [];
+        } catch (err) {
+            console.error('[flights] Failed to load flights:', err);
+            flightsData = [];
+        }
 
         lastUpdated.textContent = new Date().toLocaleString();
         filterFlights(false);

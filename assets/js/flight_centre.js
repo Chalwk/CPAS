@@ -582,8 +582,27 @@
         }
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const routes = window.CPAS_ROUTES || [];
+    async function bootstrap() {
+        let routes = [];
+        const url = window.CPAS_ROUTES_URL;
+        if (!url) {
+            console.error('[flight-centre] CPAS_ROUTES_URL is not defined');
+        } else {
+            try {
+                const res = await fetch(url, { cache: 'no-cache' });
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const data = await res.json();
+                if (Array.isArray(data)) routes = data;
+            } catch (err) {
+                console.error('[flight-centre] Failed to load routes:', err);
+            }
+        }
         window.flightCentre = new FlightCentre(routes);
-    });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', bootstrap);
+    } else {
+        bootstrap();
+    }
 })();
