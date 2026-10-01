@@ -14,7 +14,7 @@ Arthur's Pass is the most well-known VFR crossing of the Southern Alps. It links
 
 1. Depart [Christchurch (NZCH)](/guides/nzch/). Expect a clearance westbound via the Waimakariri River corridor.
 2. Follow the **Waimakariri River** upstream through the gorge.
-3. Cross **Arthur's Pass** (2,750 ft pass saddle) at a minimum of **7,500 ft MSL** - higher if terrain clearance or turbulence demands it.
+3. Cross **Arthur's Pass** (3,018 ft pass saddle) at a minimum of **7,500 ft MSL** - higher if terrain clearance or turbulence demands it.
 4. Descend west of the divide into the **Otira Valley** and then the **Tarāmakau River**.
 5. Continue west, descending toward the coast and joining the Hokitika Control Zone.
 

@@ -1,5 +1,5 @@
 ---
-title: Rakitata Island
+title: Rangitata Island
 icao: NZRI
 category: airport
 permalink: /guides/nzri/
@@ -9,7 +9,7 @@ icon: fa-tractor
 
 ## Overview
 
-Rakitata Island is a private strip on the Canterbury Plains between Ashburton and Timaru. It is used by the landowner and for occasional charter work.
+Rangitata Island is a private strip on the Canterbury Plains between Ashburton and Timaru. It is used by the landowner and for occasional charter work.
 
 ## Runways
 

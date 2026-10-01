@@ -31,7 +31,7 @@ Mount Cook Airport sits at the head of the Mackenzie Basin, at the foot of Aorak
 ## Local Procedures
 
 - **FIZ:** 122.5 within 10 NM. Broadcast position and intentions.
-- **VFR only:** No instrument approaches published.
+- **IFR:** RNAV (GNSS) approaches published; no ATC, FIZ procedures apply.
 - **Visual contact with terrain:** Required at all times.
 - **One-way valley traffic:** Standard mountain rules apply.
 
