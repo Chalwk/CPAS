@@ -8,7 +8,7 @@ css: [flight_centre]
 
 <!-- Leaflet (CDN) -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 
 <section class="fc-section" style="margin-top: 70px;">
     <div class="container">
@@ -135,15 +135,25 @@ css: [flight_centre]
             <div class="fc-map-wrap" id="fcMapWrap" hidden>
                 <div class="fc-map-inner" id="fcMap"></div>
                 <div class="fc-map-legend" aria-hidden="true">
-                    <span class="fc-map-legend-item"><i class="fc-map-legend-swatch" style="background:#059669"></i>Easy</span>
-                    <span class="fc-map-legend-item"><i class="fc-map-legend-swatch" style="background:#0891b2"></i>Light</span>
-                    <span class="fc-map-legend-item"><i class="fc-map-legend-swatch" style="background:#2d6bc9"></i>Moderate</span>
-                    <span class="fc-map-legend-item"><i class="fc-map-legend-swatch" style="background:#f59e0b"></i>Challenging</span>
-                    <span class="fc-map-legend-item"><i class="fc-map-legend-swatch" style="background:#dc2626"></i>Expert</span>
+                    <span class="fc-map-legend-item"><i class="fc-map-legend-swatch"
+                            style="background:#059669"></i>Easy</span>
+                    <span class="fc-map-legend-item"><i class="fc-map-legend-swatch"
+                            style="background:#0891b2"></i>Light</span>
+                    <span class="fc-map-legend-item"><i class="fc-map-legend-swatch"
+                            style="background:#2d6bc9"></i>Moderate</span>
+                    <span class="fc-map-legend-item"><i class="fc-map-legend-swatch"
+                            style="background:#f59e0b"></i>Challenging</span>
+                    <span class="fc-map-legend-item"><i class="fc-map-legend-swatch"
+                            style="background:#dc2626"></i>Expert</span>
+                    <span class="fc-map-legend-item"><i class="fc-map-legend-swatch"
+                            style="background:transparent;border:2px dashed #1a365d"></i>Round trip</span>
+                    <span class="fc-map-legend-item"><i class="fc-map-legend-swatch"
+                            style="background:#ffffff;border:2px solid #1a365d"></i>Alternate / stop</span>
                 </div>
                 <div class="fc-map-hint">
                     <i class="fas fa-info-circle"></i>
                     Hover a route card to highlight it on the map. Click a line to focus its card.
+                    Dashed rings are round trips flown from that base; hollow dots are alternates or optional stops.
                 </div>
             </div>
         </div>

@@ -38,6 +38,14 @@
     // Approximate NZ bounding box used as the default map view.
     const NZ_CENTER = [-43.5, 171.0];
     const NZ_ZOOM = 6;
+    const ICAO_PATTERN = /\bNZ[A-Z]{2}\b/g;
+
+    // Routes whose map path can't be derived from `from`/`to` alone (multi-stop charters).
+    const ROUTE_PATH_OVERRIDES = {
+        'fw-nzch-nztu-nzqn-multi': ['NZCH', 'NZTU', 'NZQN']
+    };
+
+    const MARKER_NAVY = '#1a365d';
 
     class FlightCentre {
         constructor(routes, airports) {
@@ -65,6 +73,7 @@
                 this.cacheEls();
                 if (!this.els.results) return;
                 this.buildRoutes();
+                this.auditAirports();
                 this.bindEvents();
                 this.bindTabs();
                 this.bindMap();
@@ -225,55 +234,188 @@
             this.mapRouteLayer = window.L.layerGroup().addTo(this.map);
         }
 
+        // ---- MAP DATA HELPERS -------------------------------------------
+
+        codesIn(text) {
+            return String(text == null ? '' : text).match(ICAO_PATTERN) || [];
+        }
+
+        referencedCodes(r) {
+            const chunks = [r.description, r.alternate, r.warning]
+                .concat(r.highlights || [], r.airspace || []);
+            const out = new Set();
+            chunks.forEach(t => this.codesIn(t).forEach(c => out.add(c)));
+            return Array.from(out);
+        }
+
+        // Itineraries list their legs per day in `highlights`, e.g. "Day 1: NZCH -> NZMC".
+        // Each line becomes its own chain of legs; nothing is joined across days.
+        itinerarySequences(r) {
+            return (r.highlights || [])
+                .map(line => this.codesIn(line).filter((c, i, a) => i === 0 || c !== a[i - 1]))
+                .filter(seq => seq.length > 1);
+        }
+
+        // Works out what to draw for a route:
+        //   { kind: 'path', segments: [[ICAO, ICAO], ...], stops: [ICAO, ...] }   - one or more legs
+        //   { kind: 'loop', segments: [], stops: [ICAO] }                         - round trip from a base
+        //   null                                                                  - can't be drawn
+        resolveRoute(r) {
+            let sequences;
+            if (ROUTE_PATH_OVERRIDES[r.id]) {
+                sequences = [ROUTE_PATH_OVERRIDES[r.id]];
+            } else if (r.category === 'itinerary') {
+                sequences = this.itinerarySequences(r);
+            } else if (r.from && r.to && r.from !== r.to) {
+                sequences = [[r.from, r.to]];
+            } else {
+                sequences = [];
+            }
+
+            // Nothing to join: a sortie, scenic loop or heli-hike that starts and ends at its base.
+            if (sequences.length === 0) {
+                const base = r.from;
+                return (base && this.airports[base])
+                    ? { kind: 'loop', segments: [], stops: [base] }
+                    : null;
+            }
+
+            const stops = [];
+            const segments = [];
+            const seen = new Set();
+
+            sequences.forEach(seq => {
+                seq.forEach((code, i) => {
+                    if (!this.airports[code]) return;
+                    if (!stops.includes(code)) stops.push(code);
+
+                    const next = seq[i + 1];
+                    if (next && next !== code && this.airports[next]) {
+                        const pair = [code, next].sort().join('>');
+                        if (!seen.has(pair)) {
+                            seen.add(pair);
+                            segments.push([code, next]);
+                        }
+                    }
+                });
+            });
+
+            return segments.length ? { kind: 'path', segments, stops } : null;
+        }
+
+        auditAirports() {
+            const used = new Set();
+            const missing = {};
+
+            const note = (code, id) => {
+                used.add(code);
+                if (!this.airports[code]) (missing[code] = missing[code] || new Set()).add(id);
+            };
+
+            this.allRoutes.forEach(r => {
+                [r.from, r.to].forEach(c => { if (c) note(c, r.id); });
+                (ROUTE_PATH_OVERRIDES[r.id] || []).forEach(c => note(c, r.id));
+                this.referencedCodes(r).forEach(c => note(c, r.id));
+            });
+
+            Object.keys(missing).sort().forEach(code => {
+                console.warn(
+                    `[flight-centre] ${code} is used by routes but missing from airports.json: ` +
+                    Array.from(missing[code]).join(', ')
+                );
+            });
+
+            const unused = Object.keys(this.airports).filter(c => !used.has(c)).sort();
+            if (unused.length) {
+                console.warn(
+                    `[flight-centre] airports.json has entries no route uses: ${unused.join(', ')}`
+                );
+            }
+        }
+
+        // ---- MAP DRAWING ------------------------------------------------
+
         // Draw every route in the given list. Clears previous layers.
         renderMap(routes) {
             if (!this.map || !this.mapRouteLayer) return;
 
+            const L = window.L;
+
             this.mapRouteLayer.clearLayers();
             this.mapRouteLayers = {};
             this.mapMarkerLayers = {};
+            this.highlightedKey = null;
 
             const bounds = [];
+            const endpoints = new Set();   // airfields routes start/end/stop at
+            const alternates = new Set();  // airfields only named as alternates / optional stops
 
             routes.forEach(r => {
-                const from = this.airports[r.from];
-                const to = this.airports[r.to];
-                if (!from || !to) return;
+                this.referencedCodes(r).forEach(c => {
+                    if (this.airports[c]) alternates.add(c);
+                });
+
+                const geo = this.resolveRoute(r);
+                if (!geo) return;
 
                 const color = DIFFICULTY_COLORS[r.difficulty] || DIFFICULTY_COLORS[3];
-                const latlngs = [
-                    [from.lat, from.lon],
-                    [to.lat, to.lon]
-                ];
+                let layer;
 
-                const line = window.L.polyline(latlngs, {
-                    color: color,
-                    weight: 3,
-                    opacity: 0.75,
-                    lineCap: 'round',
-                    lineJoin: 'round'
-                });
+                if (geo.kind === 'path') {
+                    const legs = geo.segments.map(([a, b]) => [
+                        [this.airports[a].lat, this.airports[a].lon],
+                        [this.airports[b].lat, this.airports[b].lon]
+                    ]);
 
-                line._cpasKey = r._key;
-                line.on('mouseover', () => {
-                    line.setStyle({ weight: 6, opacity: 1 });
+                    layer = L.polyline(legs, {
+                        color: color,
+                        weight: 3,
+                        opacity: 0.75,
+                        lineCap: 'round',
+                        lineJoin: 'round'
+                    });
+                } else {
+                    // Round trip from a base: dashed ring around the base airfield.
+                    const base = geo.stops[0];
+                    const airport = this.airports[base];
+
+                    layer = L.circleMarker([airport.lat, airport.lon], {
+                        radius: 12,
+                        color: color,
+                        weight: 3,
+                        opacity: 0.75,
+                        fill: false,
+                        dashArray: '4 4'
+                    });
+
+                    layer.bindTooltip(
+                        `<strong>${this.escape(r.to_name || airport.name || base)}</strong><br>` +
+                        `${this.escape(r._categoryLabel)} · round trip from ${this.escape(base)}`,
+                        { direction: 'top', offset: [0, -10], sticky: true }
+                    );
+                }
+
+                layer._cpasKey = r._key;
+                layer.on('mouseover', () => {
+                    this.styleLayer(layer, true);
                     this.highlightCard(r._key, true);
                 });
-                line.on('mouseout', () => {
-                    if (this.highlightedKey !== r._key) {
-                        line.setStyle({ weight: 3, opacity: 0.75 });
-                    } else {
-                        line.setStyle({ weight: 6, opacity: 1 });
-                    }
+                layer.on('mouseout', () => {
+                    this.styleLayer(layer, this.highlightedKey === r._key);
                     this.highlightCard(r._key, false);
                 });
-                line.on('click', () => this.focusCard(r._key));
+                layer.on('click', () => this.focusCard(r._key));
 
-                line.addTo(this.mapRouteLayer);
-                this.mapRouteLayers[r._key] = line;
+                layer.addTo(this.mapRouteLayer);
+                this.mapRouteLayers[r._key] = layer;
 
-                this.ensureMarker(r.from, from, color, bounds);
-                this.ensureMarker(r.to, to, color, bounds);
+                geo.stops.forEach(c => endpoints.add(c));
+            });
+
+            // Markers are added last so they sit on top of the lines and rings.
+            endpoints.forEach(code => this.ensureMarker(code, bounds, false));
+            alternates.forEach(code => {
+                if (!endpoints.has(code)) this.ensureMarker(code, bounds, true);
             });
 
             // Fit map to the visible routes if any are shown.
@@ -284,26 +426,37 @@
             }
         }
 
-        ensureMarker(icao, airport, color, bounds) {
-            bounds.push([airport.lat, airport.lon]);
+        // Solid navy dot = airfield a route flies to/from.
+        // Hollow dot     = alternate or optional stop named in a route (doesn't affect map bounds).
+        ensureMarker(icao, bounds, isAlternate) {
+            const airport = this.airports[icao];
+            if (!airport) return;
+
+            if (!isAlternate) bounds.push([airport.lat, airport.lon]);
 
             if (this.mapMarkerLayers[icao]) return;
 
             const marker = window.L.circleMarker([airport.lat, airport.lon], {
                 radius: 4,
-                color: '#ffffff',
+                color: isAlternate ? MARKER_NAVY : '#ffffff',
                 weight: 2,
-                fillColor: '#1a365d',
+                fillColor: isAlternate ? '#ffffff' : MARKER_NAVY,
                 fillOpacity: 1
             });
 
             marker.bindTooltip(
-                `<strong>${this.escape(icao)}</strong><br>${this.escape(airport.name || '')}`,
+                `<strong>${this.escape(icao)}</strong><br>${this.escape(airport.name || '')}` +
+                (isAlternate ? '<br><em>Alternate / optional stop</em>' : ''),
                 { direction: 'top', offset: [0, -6] }
             );
 
             marker.addTo(this.mapRouteLayer);
             this.mapMarkerLayers[icao] = marker;
+        }
+
+        styleLayer(layer, on) {
+            if (!layer) return;
+            layer.setStyle(on ? { weight: 6, opacity: 1 } : { weight: 3, opacity: 0.75 });
         }
 
         // Highlight a single route on the map (used from card hover / click).
@@ -313,34 +466,36 @@
             // Reset any previous highlight.
             if (this.highlightedKey && this.mapRouteLayers[this.highlightedKey]) {
                 const prev = this.mapRouteLayers[this.highlightedKey];
-                prev.setStyle({ weight: 3, opacity: 0.75 });
+                this.styleLayer(prev, false);
                 if (prev.bringToFront) prev.bringToFront();
             }
 
-            const line = this.mapRouteLayers[key];
-            if (!line) {
+            const layer = this.mapRouteLayers[key];
+            if (!layer) {
                 this.highlightedKey = null;
                 return;
             }
 
-            line.setStyle({ weight: 6, opacity: 1 });
-            if (line.bringToFront) line.bringToFront();
+            this.styleLayer(layer, true);
+            if (layer.bringToFront) layer.bringToFront();
             this.highlightedKey = key;
 
             // Pan the map to the highlighted route.
-            if (line.getBounds) {
-                this.map.fitBounds(line.getBounds(), {
+            if (layer.getBounds) {
+                this.map.fitBounds(layer.getBounds(), {
                     padding: [60, 60],
                     maxZoom: 9,
                     animate: true
                 });
+            } else if (layer.getLatLng) {
+                this.map.panTo(layer.getLatLng(), { animate: true });
             }
         }
 
         clearHighlight() {
             if (!this.map) return;
             if (this.highlightedKey && this.mapRouteLayers[this.highlightedKey]) {
-                this.mapRouteLayers[this.highlightedKey].setStyle({ weight: 3, opacity: 0.75 });
+                this.styleLayer(this.mapRouteLayers[this.highlightedKey], false);
             }
             this.highlightedKey = null;
         }
