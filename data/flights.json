@@ -479,7 +479,7 @@
     "patients": "0",
     "weather": "CAVOK, light winds, excellent visibility.",
     "challenges": "None.",
-    "notes": "Passengers enjoyed the flight. Arrived ahead of schedule.",
+    "notes": "Arrived ahead of schedule.",
     "pax_count": "3"
   },
   {
@@ -549,7 +549,6 @@
     "patients": "0",
     "weather": "Clear skies, unlimited visibility, light winds.",
     "challenges": "None.",
-    "notes": "Passengers enjoyed spectacular views of Mount Cook.",
     "pax_count": "2"
   },
   {
@@ -619,7 +618,7 @@
     "patients": "0",
     "weather": "IFR conditions, cloud tops at 12000ft, light icing reported.",
     "challenges": "Icing conditions required deviation from planned route.",
-    "notes": "Diverted around weather. Arrived safely with VIP passenger comfortable.",
+    "notes": "Diverted around weather.",
     "pax_count": "4"
   },
   {
@@ -654,7 +653,7 @@
     "patients": "0",
     "weather": "VFR, light winds, excellent coastal visibility.",
     "challenges": "None.",
-    "notes": "Spotted several whales near Kaikoura. Passengers delighted.",
+    "notes": "Spotted several whales (addon) near Kaikoura.",
     "pax_count": "3"
   },
   {
@@ -689,7 +688,7 @@
     "patients": "0",
     "weather": "VFR, nor'west arch visible, moderate turbulence.",
     "challenges": "Turbulence in the lee of the hills.",
-    "notes": "Great views despite turbulence. Passengers enjoyed the experience.",
+    "notes": "Great views despite turbulence.",
     "pax_count": "4"
   },
   {
@@ -724,7 +723,7 @@
     "patients": "0",
     "weather": "VFR throughout, light winds.",
     "challenges": "Quick turnarounds required efficient ground handling.",
-    "notes": "On schedule. Passengers appreciated the flexibility.",
+    "notes": "On schedule.",
     "pax_count": "2"
   },
   {
@@ -794,7 +793,7 @@
     "patients": "0",
     "weather": "VFR, scattered cloud at 4000ft, light winds.",
     "challenges": "Confined landing zone on the glacier.",
-    "notes": "Excellent conditions. Passengers thrilled with the experience.",
+    "notes": "Excellent conditions.",
     "pax_count": "2"
   },
   {
@@ -829,7 +828,7 @@
     "patients": "0",
     "weather": "VFR, calm winds.",
     "challenges": "Mountain terrain required careful approach.",
-    "notes": "Smooth flight. Guests arrived relaxed.",
+    "notes": "Smooth flight.",
     "pax_count": "4"
   },
   {
@@ -899,7 +898,7 @@
     "patients": "0",
     "weather": "CAVOK, excellent visibility, light winds.",
     "challenges": "High altitude operations required careful performance planning.",
-    "notes": "Spectacular views. Passengers enjoyed multiple landings.",
+    "notes": "Spectacular views.",
     "pax_count": "3"
   },
   {
@@ -934,7 +933,7 @@
     "patients": "0",
     "weather": "VFR, nor'wester causing moderate turbulence.",
     "challenges": "Turbulence in the lee of the hills.",
-    "notes": "Good flight despite bumpy conditions. Passengers enjoyed the views.",
+    "notes": "Good flight despite bumpy conditions.",
     "pax_count": "2"
   },
   {
@@ -1004,7 +1003,7 @@
     "patients": "0",
     "weather": "VFR, light winds, excellent visibility.",
     "challenges": "None.",
-    "notes": "Smooth flight. Passengers enjoyed the patchwork farmland views.",
+    "notes": "Smooth flight.",
     "pax_count": "2"
   },
   {
@@ -1074,7 +1073,7 @@
     "patients": "0",
     "weather": "VFR, light winds, good visibility.",
     "challenges": "Mountain weather changes rapidly.",
-    "notes": "Good flight. Passengers enjoyed the remote landings.",
+    "notes": "Good flight.",
     "pax_count": "4"
   },
   {
@@ -1109,7 +1108,6 @@
     "patients": "0",
     "weather": "Clear skies, light winds, excellent visibility.",
     "challenges": "High altitude landing required careful approach.",
-    "notes": "Passengers enjoyed the hike among seracs and ice formations.",
     "pax_count": "6"
   },
   {
@@ -1144,7 +1142,7 @@
     "patients": "0",
     "weather": "VFR, scattered cloud at 6000ft.",
     "challenges": "Confined area landings at high altitude.",
-    "notes": "Great experience. Passengers enjoyed the variety of terrain.",
+    "notes": "Great experience.",
     "pax_count": "3"
   },
   {
@@ -1179,7 +1177,7 @@
     "patients": "0",
     "weather": "CAVOK, unlimited visibility, light winds.",
     "challenges": "Extreme high-altitude operations.",
-    "notes": "Breathtaking views of Aoraki/Mount Cook. Passengers loved the alpine flora.",
+    "notes": "Breathtaking views of Aoraki/Mount Cook.",
     "pax_count": "5"
   },
   {
@@ -1214,7 +1212,7 @@
     "patients": "0",
     "weather": "VFR, light winds, good visibility.",
     "challenges": "Passenger comfort and safety for children.",
-    "notes": "Kids loved the ice cave exploration. Great family experience.",
+    "notes": "Great experience.",
     "pax_count": "8"
   },
   {
@@ -1249,7 +1247,7 @@
     "patients": "0",
     "weather": "Clear skies, golden hour lighting, light winds.",
     "challenges": "Door-off operations required special briefing and safety checks.",
-    "notes": "Photographers captured amazing shots. Very successful mission.",
+    "notes": "Very successful mission.",
     "pax_count": "3"
   },
   {
@@ -1284,7 +1282,7 @@
     "patients": "0",
     "weather": "VFR, light winds, excellent visibility.",
     "challenges": "Wind gusts off the water required careful landing techniques.",
-    "notes": "Beautiful reflections on the lakes. Passengers enjoyed short hikes.",
+    "notes": "Beautiful reflections on the lakes.",
     "pax_count": "6"
   },
   {
@@ -1389,7 +1387,7 @@
     "patients": "0",
     "weather": "VFR, light winds, good visibility.",
     "challenges": "Long flight with multiple legs.",
-    "notes": "Tour completed successfully. Passengers enjoyed the entire experience.",
+    "notes": "Tour completed successfully.",
     "pax_count": "3"
   },
   {
@@ -1494,7 +1492,6 @@
     "patients": "0",
     "weather": "VFR, light winds, good visibility.",
     "challenges": "None.",
-    "notes": "Passengers enjoyed the scenic coastal route. Great wine tasting in Waitaki Valley.",
     "pax_count": "2"
   },
   {
@@ -1529,7 +1526,7 @@
     "patients": "0",
     "weather": "VFR, light winds.",
     "challenges": "None.",
-    "notes": "Tour completed. Passengers enjoyed the wineries and scenic flight.",
+    "notes": "Tour completed.",
     "pax_count": "2"
   },
   {
@@ -1704,7 +1701,7 @@
     "patients": "0",
     "weather": "VFR, light winds, good visibility.",
     "challenges": "None.",
-    "notes": "Enjoyable flight. Passengers appreciated the commentary.",
+    "notes": "Enjoyable flight.",
     "pax_count": "4"
   },
   {
@@ -1739,7 +1736,7 @@
     "patients": "0",
     "weather": "VFR, light winds.",
     "challenges": "None.",
-    "notes": "Smooth flight. Passenger arrived relaxed and on time.",
+    "notes": "Smooth flight.",
     "pax_count": "3"
   },
   {
@@ -1774,7 +1771,7 @@
     "patients": "0",
     "weather": "VFR, scattered cloud at 5000ft.",
     "challenges": "Confined landing zone.",
-    "notes": "Good conditions. Passengers enjoyed the glacier walk.",
+    "notes": "Good conditions.",
     "pax_count": "4"
   },
   {
@@ -1809,7 +1806,7 @@
     "patients": "0",
     "weather": "VFR, calm winds.",
     "challenges": "Mountain terrain.",
-    "notes": "Smooth flight. Guests arrived happy.",
+    "notes": "Smooth flight.",
     "pax_count": "6"
   },
   {
@@ -1984,7 +1981,7 @@
     "patients": "0",
     "weather": "VFR, light winds.",
     "challenges": "None.",
-    "notes": "On time. Passenger satisfied with service.",
+    "notes": "On time.",
     "pax_count": "2"
   },
   {
@@ -2124,7 +2121,7 @@
     "patients": "0",
     "weather": "VFR, light winds, good visibility.",
     "challenges": "None.",
-    "notes": "Smooth flight. Guests enjoyed the scenic approach.",
+    "notes": "Smooth flight.",
     "pax_count": "4"
   },
   {
@@ -2229,7 +2226,7 @@
     "patients": "0",
     "weather": "Light westerly 5 to 10 kt. Cloud building on the Main Divide after midday, visibility 50 km plus. Temperature 21C, QNH 1011.",
     "challenges": "Short landing slot between other operators required careful timing.",
-    "notes": "Flight completed on schedule with excellent feedback from guides. Arrived 5 minutes ahead of schedule.",
+    "notes": "Arrived 5 minutes ahead of schedule.",
     "pax_count": "2"
   },
   {
@@ -2334,7 +2331,6 @@
     "patients": "0",
     "weather": "Light westerly 5 to 10 kt. Peaks obscured above 8,000 ft, visibility greater than 20 km. Temperature 13C, QNH 1005. Strong UV and high density altitude at the airfield.",
     "challenges": "None.",
-    "notes": "Guests were delighted with the views of Aoraki.",
     "pax_count": "6"
   },
   {
@@ -2473,8 +2469,6 @@
     "missionDetails": "Day 1 of the Wine and Food Tour, Christchurch to Oamaru, with a heritage precinct lunch and a winery visit.",
     "patients": "0",
     "weather": "Fresh north-easterly sea breeze 15 to 20 kt. Scattered stratocumulus at 3,000 ft and broken cloud above 7,000 ft, visibility 12 km in haze. Temperature 19C, QNH 1013. At Oamaru: moderate nor'wester 15 to 22 kt, gusting 30 near the foothills.",
-    "challenges": "Guests asked for a longer loop, so fuel was monitored closely.",
-    "notes": "Children enjoyed the scenery and took photos throughout.",
     "pax_count": "3"
   },
   {
@@ -2509,7 +2503,7 @@
     "patients": "0",
     "weather": "Light and variable winds with a north-easterly sea breeze developing by early afternoon. Low stratus along the coast clearing by late morning, visibility greater than 20 km. Temperature 22C, QNH 1002. Afternoon thunderstorms possible on the foothills. At Queenstown: light southerly 6 to 10 kt.",
     "challenges": "None.",
-    "notes": "Passengers loved the views. Fuel used about 63 L.",
+    "notes": "Fuel used about 63 L.",
     "pax_count": "3"
   },
   {
@@ -2544,7 +2538,6 @@
     "patients": "0",
     "weather": "Light north-westerly 8 kt at the surface, 20 kt at 6,000 ft. Clear over the lake with cloud on the western ranges, visibility greater than 20 km. Temperature 21C, QNH 1028. At Christchurch: calm at first, then a light north-easterly 8 to 12 kt.",
     "challenges": "Slightly high cabin temperature while on the ground.",
-    "notes": "Excellent flight, with strong passenger feedback.",
     "pax_count": "3"
   },
   {
@@ -2579,7 +2572,7 @@
     "patients": "0",
     "weather": "Light and variable winds with a north-easterly sea breeze developing by early afternoon. Cloud hanging on the Tasman glacier terminal, visibility 40 km. Temperature 18C, QNH 1021. Strong UV and high density altitude at the airfield.",
     "challenges": "Minor thermal turbulence over the plains.",
-    "notes": "Flight completed on schedule with excellent feedback from guides. Fuel used about 251 L.",
+    "notes": "Fuel used about 251 L.",
     "pax_count": "4"
   },
   {
@@ -2614,7 +2607,6 @@
     "patients": "1",
     "weather": "Fresh north-easterly sea breeze 15 to 20 kt. Low cloud in the valleys, clearing toward the coast, visibility 12 km in haze. Temperature 20C, QNH 1010. Afternoon thunderstorms possible on the foothills.",
     "challenges": "Late patient readiness delayed departure by 20 minutes.",
-    "notes": "Medical team thanked the crew.",
     "pax_count": "2"
   },
   {
@@ -2789,7 +2781,7 @@
     "patients": "0",
     "weather": "Warm nor'wester 20 kt, 35 kt at 8,000 ft. Scattered stratocumulus at 3,000 ft and broken cloud above 7,000 ft, visibility 12 km in haze. Temperature 23C, QNH 1007. Strong thermals and smoke columns visible from 30 NM.",
     "challenges": "Dip site access was tight and required careful approach.",
-    "notes": "Fire controller thanked the crew for the information. Landed with 40 minutes of fuel remaining.",
+    "notes": "Landed with 40 minutes of fuel remaining.",
     "pax_count": "0"
   },
   {
@@ -2928,8 +2920,7 @@
     "missionDetails": "Day 3 of the South Island Scenic Tour, first sector from Queenstown to Hokitika over Haast Pass and the glacier coast.",
     "patients": "0",
     "weather": "Light and variable winds with a north-easterly sea breeze developing by early afternoon. Few cloud at 6,000 ft, visibility greater than 20 km. Temperature 27C, QNH 1028. At Hokitika: light southerly 6 to 10 kt.",
-    "challenges": "Guests asked for a longer loop, so fuel was monitored closely.",
-    "notes": "Children enjoyed the scenery and took photos throughout. Fuel used about 401 L.",
+    "notes": "Fuel used about 401 L.",
     "pax_count": "4"
   },
   {
@@ -3063,7 +3054,7 @@
     "patients": "0",
     "weather": "Light southerly 6 to 10 kt. Scattered high cloud above 15,000 ft, visibility 50 km plus. Temperature 20C, QNH 1028. At Hokitika: light westerly 5 to 10 kt.",
     "challenges": "Brief hold at the runway while an arrival passed.",
-    "notes": "Client very happy with the service. Arrived 15 minutes ahead of schedule.",
+    "notes": "Arrived 15 minutes ahead of schedule.",
     "pax_count": "2"
   },
   {
@@ -3168,7 +3159,6 @@
     "patients": "0",
     "weather": "Gusty westerly 20 kt with turbulence below 5,000 ft. Scattered stratocumulus at 3,000 ft and broken cloud above 7,000 ft, visibility 12 km in haze. Temperature 27C, QNH 1015. Strong UV and high density altitude at the airfield.",
     "challenges": "Crosswind component of 12 kt on landing.",
-    "notes": "Passengers loved the views.",
     "pax_count": "4"
   },
   {
@@ -3273,7 +3263,7 @@
     "patients": "0",
     "weather": "Light westerly 5 to 10 kt. Lenticular cloud over the Main Divide, visibility greater than 20 km. Temperature 19C, QNH 1007. Strong UV and high density altitude at the airfield.",
     "challenges": "High altitude landing required careful power management.",
-    "notes": "Flight completed on schedule with excellent feedback from guides. Fuel used about 265 L.",
+    "notes": "Fuel used about 265 L.",
     "pax_count": "5"
   },
   {
@@ -3308,7 +3298,7 @@
     "patients": "0",
     "weather": "Calm at first, then a light north-easterly 8 to 12 kt. Fresh snow on the ranges above 1,800 m, visibility greater than 20 km. Temperature 22C, QNH 1018. Smoke haze drifting in from the foothills.",
     "challenges": "Short landing slot between other operators required careful timing.",
-    "notes": "Two guests asked to book the longer Summit View trip next time. Fuel used about 163 L.",
+    "notes": "Fuel used about 163 L.",
     "pax_count": "7"
   },
   {
@@ -3343,7 +3333,6 @@
     "patients": "0",
     "weather": "Light southerly 6 to 10 kt. Cloud building on the Main Divide after midday, visibility greater than 20 km. Temperature 19C, QNH 1002.",
     "challenges": "Nothing significant.",
-    "notes": "Two guests asked to book the longer Summit View trip next time.",
     "pax_count": "4"
   },
   {
@@ -3448,7 +3437,7 @@
     "patients": "0",
     "weather": "Calm at first, then a light north-easterly 8 to 12 kt. Isolated cumulus with tops near 9,000 ft, visibility 50 km plus. Temperature 21C, QNH 1025.",
     "challenges": "High altitude landing required careful power management.",
-    "notes": "Guests took excellent photos in the afternoon light. Fuel used about 206 L.",
+    "notes": "Fuel used about 206 L.",
     "pax_count": "4"
   },
   {
@@ -3517,7 +3506,6 @@
     "missionDetails": "Scenic tour of the Canterbury Plains and foothills, passing Oxford, the Rakaia Gorge and Lake Ellesmere.",
     "patients": "0",
     "weather": "Warm nor'wester 20 kt, 35 kt at 8,000 ft. Cloud building after midday, scattered cumulus at 4,000 ft, visibility 15 km, reducing to 8 km in showers. Temperature 23C, QNH 1025. Afternoon thunderstorms possible on the foothills.",
-    "challenges": "Passenger requests for low passes required careful terrain clearance.",
     "notes": "Smooth and enjoyable tour with great visibility. Fuel used about 59 L.",
     "pax_count": "1"
   },
@@ -3553,7 +3541,7 @@
     "patients": "0",
     "weather": "Fresh north-easterly sea breeze 15 to 20 kt. Overcast at 7,000 ft with light drizzle patches, visibility 12 km in haze. Temperature 15C, QNH 1005. Strong UV and high density altitude at the airfield.",
     "challenges": "Katabatic wind off the glacier required a slow, controlled approach.",
-    "notes": "Guests took excellent photos in the afternoon light. Departure delayed 15 minutes for weather.",
+    "notes": "Departure delayed 15 minutes for weather.",
     "pax_count": "1"
   },
   {
@@ -3722,7 +3710,6 @@
     "patients": "0",
     "weather": "Fresh north-easterly sea breeze 15 to 20 kt. Scattered stratocumulus at 3,000 ft and broken cloud above 7,000 ft, visibility 12 km in haze. Temperature 24C, QNH 1016. Smoke haze drifting in from the foothills.",
     "challenges": "Short landing slot between other operators required careful timing.",
-    "notes": "Flight completed on schedule with excellent feedback from guides.",
     "pax_count": "3"
   },
   {
@@ -3757,7 +3744,7 @@
     "patients": "0",
     "weather": "Light north-westerly 8 kt at the surface, 20 kt at 6,000 ft. Showers along the coastal strip, visibility 40 km. Temperature 21C, QNH 1024. Smoke haze drifting in from the foothills.",
     "challenges": "Busy radio at Christchurch with a mix of airline and GA traffic.",
-    "notes": "Flight completed on schedule with excellent feedback from guides. Fuel used about 76 L.",
+    "notes": "Fuel used about 76 L.",
     "pax_count": "3"
   },
   {
@@ -3792,7 +3779,6 @@
     "patients": "0",
     "weather": "Calm at first, then a light north-easterly 8 to 12 kt. Cloud building on the Main Divide after midday, visibility greater than 20 km. Temperature 16C, QNH 1010. Afternoon thunderstorms possible on the foothills.",
     "challenges": "Nothing significant.",
-    "notes": "Guests took excellent photos in the afternoon light.",
     "pax_count": "3"
   },
   {
@@ -3827,7 +3813,7 @@
     "patients": "0",
     "weather": "Warm nor'wester 20 kt, 35 kt at 8,000 ft. Broken cloud at 4,500 ft with a few showers, visibility 12 km in haze. Temperature 24C, QNH 1008. At Timaru: warm nor'wester 20 kt, 35 kt at 8,000 ft.",
     "challenges": "Tight schedule for the passengers' connecting meeting.",
-    "notes": "Discreet handling at both ends appreciated by the clients. Departure delayed 21 minutes for weather.",
+    "notes": "Departure delayed 21 minutes for weather.",
     "pax_count": "2"
   },
   {
@@ -3862,7 +3848,7 @@
     "patients": "0",
     "weather": "Warm nor'wester 20 kt, 35 kt at 8,000 ft. Overcast at 7,000 ft with light drizzle patches, visibility 12 km in haze. Temperature 22C, QNH 1019. Afternoon thunderstorms possible on the foothills.",
     "challenges": "Brief wait for weather to clear at the destination.",
-    "notes": "Smooth ride with excellent catering on board. Fuel used about 66 L.",
+    "notes": "Fuel used about 66 L.",
     "pax_count": "2"
   },
   {
@@ -3932,7 +3918,7 @@
     "patients": "0",
     "weather": "North-westerly 18 kt gusting 28 across the plains. Broken cloud at 5,500 ft, tops layered to 10,000 ft, visibility 15 km, reducing to 8 km in showers. Temperature 23C, QNH 1025. At Queenstown: gusty westerly 20 kt with turbulence below 5,000 ft.",
     "challenges": "Crosswind component of 12 kt on landing.",
-    "notes": "Excellent flight, with strong passenger feedback. Arrived 5 minutes ahead of schedule.",
+    "notes": "Arrived 5 minutes ahead of schedule.",
     "pax_count": "2"
   },
   {
@@ -3967,7 +3953,7 @@
     "patients": "0",
     "weather": "Light north-westerly 8 kt at the surface, 20 kt at 6,000 ft. Scattered cloud at 5,000 ft, visibility greater than 20 km. Temperature 21C, QNH 1024.",
     "challenges": "Handled a busy VFR traffic period around the city.",
-    "notes": "Excellent flight, with strong passenger feedback. Fuel used about 218 L.",
+    "notes": "Fuel used about 218 L.",
     "pax_count": "1"
   },
   {
@@ -4002,7 +3988,7 @@
     "patients": "0",
     "weather": "Warm nor'wester 20 kt, 35 kt at 8,000 ft. Broken cloud at 5,500 ft, tops layered to 10,000 ft, visibility 12 km in haze. Temperature 20C, QNH 1020. At Hokitika: fresh north-easterly sea breeze 15 to 20 kt.",
     "challenges": "Bumpy air near the headland.",
-    "notes": "Passengers loved the views. Departure delayed 11 minutes for weather.",
+    "notes": "Departure delayed 11 minutes for weather.",
     "pax_count": "2"
   },
   {
@@ -4037,7 +4023,7 @@
     "patients": "0",
     "weather": "Warm nor'wester 20 kt, 35 kt at 8,000 ft. Scattered stratocumulus at 3,000 ft and broken cloud above 7,000 ft, visibility 12 km in haze. Temperature 25C, QNH 1010. At Christchurch: north-westerly 18 kt gusting 28 across the plains.",
     "challenges": "Handled a busy VFR traffic period around the city.",
-    "notes": "Excellent flight, with strong passenger feedback. Departure delayed 13 minutes for weather.",
+    "notes": "Departure delayed 13 minutes for weather.",
     "pax_count": "2"
   },
   {
@@ -4071,7 +4057,6 @@
     "missionDetails": "Port Hills and Banks Peninsula scenic helicopter tour with views over Lyttelton Harbour and Governors Bay.",
     "patients": "0",
     "weather": "Calm at first, then a light north-easterly 8 to 12 kt. Scattered cloud at 5,000 ft, visibility greater than 20 km. Temperature 22C, QNH 1014. Hot and dry across the plains, thermal turbulence below 7,000 ft.",
-    "challenges": "Passenger requests for low passes required careful terrain clearance.",
     "notes": "The couple celebrated an anniversary on board. Fuel used about 51 L.",
     "pax_count": "3"
   },
@@ -4142,7 +4127,7 @@
     "patients": "1",
     "weather": "Strong nor'wester 25 to 30 kt gusting 45, moderate to severe turbulence forecast in the lee of the Alps. Overcast at 1,500 ft with rain at times, visibility 3 to 5 km in rain. Temperature 16C, QNH 1008. At Queenstown: moderate nor'wester 15 to 22 kt, gusting 30 near the foothills.",
     "challenges": "Late patient readiness delayed departure by 20 minutes.",
-    "notes": "Medical team thanked the crew. Fuel used about 191 L.",
+    "notes": "Fuel used about 191 L.",
     "pax_count": "2"
   },
   {
@@ -4177,7 +4162,6 @@
     "patients": "0",
     "weather": "Light north-westerly 8 kt at the surface, 20 kt at 6,000 ft. Lenticular cloud over the Main Divide, visibility 30 km. Temperature 14C, QNH 1028. Smoke haze drifting in from the foothills.",
     "challenges": "Katabatic wind off the glacier required a slow, controlled approach.",
-    "notes": "Guests were delighted with the views of Aoraki.",
     "pax_count": "3"
   },
   {
@@ -4211,8 +4195,6 @@
     "missionDetails": "Day 1 of the Wine and Food Tour, Christchurch to Oamaru, with a heritage precinct lunch and a winery visit.",
     "patients": "0",
     "weather": "Light westerly 5 to 10 kt. Low stratus along the coast clearing by late morning, visibility 40 km. Temperature 22C, QNH 1006. At Oamaru: light southerly 6 to 10 kt.",
-    "challenges": "Passenger requests for low passes required careful terrain clearance.",
-    "notes": "The couple celebrated an anniversary on board.",
     "pax_count": "2"
   },
   {
@@ -4311,7 +4293,7 @@
     "patients": "0",
     "weather": "Light southerly 6 to 10 kt. Isolated cumulus with tops near 9,000 ft, visibility 50 km plus. Temperature 17C, QNH 1016. At Christchurch: light and variable winds with a north-easterly sea breeze developing by early afternoon.",
     "challenges": "Minor delay awaiting passenger arrival.",
-    "notes": "Children enjoyed the scenery and took photos throughout. Fuel used about 126 L.",
+    "notes": "Fuel used about 126 L.",
     "pax_count": "2"
   },
   {
@@ -4346,7 +4328,7 @@
     "patients": "0",
     "weather": "Calm at first, then a light north-easterly 8 to 12 kt. Cloud hanging on the Tasman glacier terminal, visibility 30 km. Temperature 17C, QNH 1011.",
     "challenges": "None.",
-    "notes": "Two guests asked to book the longer Summit View trip next time. Fuel used about 357 L.",
+    "notes": "Fuel used about 357 L.",
     "pax_count": "5"
   },
   {
@@ -4416,7 +4398,6 @@
     "patients": "0",
     "weather": "Light northerly 5 to 8 kt. Cloud capping the Remarkables, visibility greater than 20 km. Temperature 17C, QNH 1025. Cool, crisp air and the first snow on the high peaks. At Queenstown: light winds, high pressure settled over the island.",
     "challenges": "Passenger cabin comfort was a priority in the turbulence.",
-    "notes": "Discreet handling at both ends appreciated by the clients.",
     "pax_count": "2"
   },
   {
@@ -4447,11 +4428,11 @@
     "status": "completed",
     "source": "MissionReport",
     "missionType": "VIP",
-    "missionDetails": "Private scenic charter for 2 guests of a corporate sponsor. Custom routing arranged the day before, with a request for low-level passes over the coast and plains.",
+    "missionDetails": "Private scenic charter for 2 guests.",
     "patients": "0",
     "weather": "Moderate south-westerly 15 to 20 kt with passing showers. Broken low cloud at 3,500 ft clearing by mid-morning, visibility 12 km in haze. Temperature 16C, QNH 1024.",
     "challenges": "Tight schedule for the passengers' connecting meeting.",
-    "notes": "Client requested a repeat booking next month. Fuel used about 231 L.",
+    "notes": "Fuel used about 231 L.",
     "pax_count": "2"
   },
   {
@@ -4486,7 +4467,7 @@
     "patients": "0",
     "weather": "Northerly 15 kt ahead of an approaching front. Broken cloud at 4,500 ft with a few showers, visibility 15 km, reducing to 8 km in showers. Temperature 15C, QNH 1018.",
     "challenges": "Tracked north of the direct route to avoid showers.",
-    "notes": "Guests asked to extend the flight next time. Fuel used about 189 L.",
+    "notes": "Fuel used about 189 L.",
     "pax_count": "1"
   },
   {
@@ -4521,7 +4502,6 @@
     "patients": "0",
     "weather": "Light south-westerly 8 kt. Fresh snow on the ranges above 1,800 m, visibility 30 km. Temperature 11C, QNH 1017.",
     "challenges": "Cloud forming on the ridge required a revised landing site.",
-    "notes": "Two guests asked to book the longer Summit View trip next time.",
     "pax_count": "3"
   },
   {
@@ -4555,7 +4535,6 @@
     "missionDetails": "Sightseeing flight from Christchurch to Mount Cook via Lake Tekapo, Lake Pukaki and the Hooker Valley for two couples.",
     "patients": "0",
     "weather": "Cool southerly 15 kt, gusting 25. Broken cloud at 4,500 ft with a few showers, visibility 15 km, reducing to 8 km in showers. Temperature 20C, QNH 1021. At Mount Cook: cool southerly 15 kt, gusting 25.",
-    "challenges": "Passenger requests for low passes required careful terrain clearance.",
     "notes": "The couple celebrated an anniversary on board. Landed with 51 minutes of fuel remaining.",
     "pax_count": "3"
   },
@@ -4836,7 +4815,6 @@
     "patients": "0",
     "weather": "Moderate south-westerly 15 to 20 kt with passing showers. Scattered stratocumulus at 3,000 ft and broken cloud above 7,000 ft, visibility 20 km with local reductions in rain. Temperature 15C, QNH 1014.",
     "challenges": "Cloud base forced a lower cruise level through the pass.",
-    "notes": "Excellent flight, with strong passenger feedback.",
     "pax_count": "5"
   },
   {
@@ -4867,7 +4845,7 @@
     "status": "completed",
     "source": "MissionReport",
     "missionType": "VIP",
-    "missionDetails": "Private scenic charter for 2 executives. Custom routing arranged the day before, with a request for low-level passes over the coast and plains.",
+    "missionDetails": "Private scenic charter for 2 executives.",
     "patients": "0",
     "weather": "Light winds, high pressure settled over the island. Clear skies, visibility 40 km. Temperature 16C, QNH 1007.",
     "challenges": "Late passenger change required a revised load sheet.",
@@ -4906,7 +4884,7 @@
     "patients": "0",
     "weather": "Northerly 15 kt ahead of an approaching front. Cloud building after midday, scattered cumulus at 4,000 ft, visibility 15 km, reducing to 8 km in showers. Temperature 19C, QNH 1014. At Queenstown: northerly 15 kt ahead of an approaching front.",
     "challenges": "Tight schedule for the passengers' connecting meeting.",
-    "notes": "Discreet handling at both ends appreciated by the clients. Arrived 8 minutes ahead of schedule.",
+    "notes": "Arrived 8 minutes ahead of schedule.",
     "pax_count": "3"
   },
   {
@@ -4969,8 +4947,7 @@
     "missionDetails": "Waimakariri and Pegasus Bay scenic: gorge, river mouth, Kaiapoi and a low coastal return past New Brighton.",
     "patients": "0",
     "weather": "Westerly 18 kt gusting 28 aloft. Broken low cloud at 3,500 ft clearing by mid-morning, visibility 15 km, reducing to 8 km in showers. Temperature 22C, QNH 1019.",
-    "challenges": "Passenger requests for low passes required careful terrain clearance.",
-    "notes": "Excellent flight, with strong passenger feedback. Landed with 59 minutes of fuel remaining.",
+    "notes": "Landed with 59 minutes of fuel remaining.",
     "pax_count": "6"
   },
   {
@@ -5075,7 +5052,7 @@
     "patients": "0",
     "weather": "Light winds, high pressure settled over the island. Clear skies, visibility 30 km. Temperature 20C, QNH 1003.",
     "challenges": "Tight time window for delivery.",
-    "notes": "Client very happy with the service. Arrived 14 minutes ahead of schedule.",
+    "notes": "Arrived 14 minutes ahead of schedule.",
     "pax_count": "2"
   },
   {
@@ -5285,7 +5262,7 @@
     "patients": "0",
     "weather": "Northerly 15 kt ahead of an approaching front. Broken low cloud at 3,500 ft clearing by mid-morning, visibility 12 km in haze. Temperature 15C, QNH 1013.",
     "challenges": "Tight schedule for the passengers' connecting meeting.",
-    "notes": "Client requested a repeat booking next month. Fuel used about 69 L.",
+    "notes": "Fuel used about 69 L.",
     "pax_count": "2"
   },
   {
@@ -5320,7 +5297,7 @@
     "patients": "0",
     "weather": "Northerly 15 kt ahead of an approaching front. Overcast at 7,000 ft with light drizzle patches, visibility 15 km, reducing to 8 km in showers. Temperature 16C, QNH 1016. At Queenstown: northerly 15 kt ahead of an approaching front.",
     "challenges": "Passenger cabin comfort was a priority in the turbulence.",
-    "notes": "Smooth ride with excellent catering on board. Arrived 3 minutes ahead of schedule.",
+    "notes": "Arrived 3 minutes ahead of schedule.",
     "pax_count": "2"
   },
   {
@@ -5354,8 +5331,7 @@
     "missionDetails": "Scenic Mackenzie Country flight to Mount Cook with views of Aoraki and the turquoise lakes.",
     "patients": "0",
     "weather": "Calm morning, light easterly developing. Scattered cloud at 5,000 ft, visibility 30 km. Temperature 11C, QNH 1016. At Mount Cook: light south-westerly 8 kt.",
-    "challenges": "Guests asked for a longer loop, so fuel was monitored closely.",
-    "notes": "Children enjoyed the scenery and took photos throughout. Fuel used about 47 L.",
+    "notes": "Fuel used about 47 L.",
     "pax_count": "1"
   },
   {
@@ -5390,7 +5366,6 @@
     "patients": "0",
     "weather": "Light northerly 5 to 8 kt. Sea haze along the coast, visibility 50 km plus. Temperature 18C, QNH 1012.",
     "challenges": "Short landing slot between other operators required careful timing.",
-    "notes": "Passengers enjoyed the walk among seracs and ice formations.",
     "pax_count": "6"
   },
   {
@@ -5424,8 +5399,7 @@
     "missionDetails": "Day 1 of the Wine and Food Tour, Christchurch to Oamaru, with a heritage precinct lunch and a winery visit.",
     "patients": "0",
     "weather": "Cool southerly 15 kt, gusting 25. Sea fog patches along the coast, visibility 15 km, reducing to 8 km in showers. Temperature 4C, QNH 1009. At Oamaru: cool southerly 15 kt, gusting 25.",
-    "challenges": "Guests asked for a longer loop, so fuel was monitored closely.",
-    "notes": "Guests asked to extend the flight next time. Landed with 37 minutes of fuel remaining.",
+    "notes": "Landed with 37 minutes of fuel remaining.",
     "pax_count": "2"
   },
   {
@@ -5495,7 +5469,6 @@
     "patients": "0",
     "weather": "Northerly 15 kt ahead of an approaching front. Overcast at 7,000 ft with light drizzle patches, visibility 15 km, reducing to 8 km in showers. Temperature 9C, QNH 1015. At Queenstown: northerly 15 kt ahead of an approaching front.",
     "challenges": "Handled a busy VFR traffic period around the city.",
-    "notes": "Guests asked to extend the flight next time.",
     "pax_count": "2"
   },
   {
@@ -5530,7 +5503,7 @@
     "patients": "0",
     "weather": "Moderate south-westerly 15 to 20 kt with passing showers. Clear over the lake with cloud on the western ranges, visibility 20 km with local reductions in rain. Temperature 11C, QNH 1010. At Christchurch: cool southerly 15 kt, gusting 25.",
     "challenges": "Crosswind component of 12 kt on landing.",
-    "notes": "Excellent flight, with strong passenger feedback. Fuel used about 115 L.",
+    "notes": "Fuel used about 115 L.",
     "pax_count": "2"
   },
   {
@@ -5565,7 +5538,6 @@
     "patients": "0",
     "weather": "Light winds, high pressure settled over the island. Few cloud at 6,000 ft, visibility 50 km plus. Temperature 6C, QNH 1004.",
     "challenges": "Snow glare made depth perception difficult on approach.",
-    "notes": "Passengers enjoyed the walk among seracs and ice formations.",
     "pax_count": "5"
   },
   {
@@ -5635,7 +5607,7 @@
     "patients": "0",
     "weather": "Light northerly 5 to 8 kt. Few cumulus at 4,500 ft, visibility 40 km. Temperature 7C, QNH 1004. Cool, crisp air and the first snow on the high peaks.",
     "challenges": "Passenger cabin comfort was a priority in the turbulence.",
-    "notes": "Smooth ride with excellent catering on board. Fuel used about 52 L.",
+    "notes": "Fuel used about 52 L.",
     "pax_count": "1"
   },
   {
@@ -5740,7 +5712,6 @@
     "patients": "0",
     "weather": "Light winds, high pressure settled over the island. Clear skies, visibility greater than 20 km. Temperature 15C, QNH 1009. At Queenstown: light northerly 5 to 8 kt.",
     "challenges": "None.",
-    "notes": "Guests asked to extend the flight next time.",
     "pax_count": "5"
   },
   {
@@ -5810,7 +5781,7 @@
     "patients": "0",
     "weather": "Cool southerly 15 kt, gusting 25. Cloud building after midday, scattered cumulus at 4,000 ft, visibility 20 km with local reductions in rain. Temperature 12C, QNH 1004. Cool, crisp air and the first snow on the high peaks. At Christchurch: cool southerly 15 kt, gusting 25.",
     "challenges": "Light rain reduced forward visibility on the climb out.",
-    "notes": "Excellent flight, with strong passenger feedback. Arrived 5 minutes ahead of schedule.",
+    "notes": "Arrived 5 minutes ahead of schedule.",
     "pax_count": "5"
   },
   {
@@ -5880,7 +5851,6 @@
     "patients": "1",
     "weather": "Strong southerly 25 kt gusting 40 behind a cold front. Overcast at 1,500 ft with rain at times, visibility 2000 m in heavy showers. Temperature 9C, QNH 1003.",
     "challenges": "Weather at the destination required a revised approach.",
-    "notes": "Medical team thanked the crew.",
     "pax_count": "2"
   },
   {
@@ -6043,7 +6013,7 @@
     "patients": "0",
     "weather": "Light south-westerly 8 kt. Few cloud at 6,000 ft, visibility 40 km. Temperature 11C, QNH 1018. Cool, crisp air and the first snow on the high peaks. At Christchurch: light northerly 5 to 8 kt.",
     "challenges": "Minor thermal turbulence over the plains.",
-    "notes": "Children enjoyed the scenery and took photos throughout. Arrived 8 minutes ahead of schedule.",
+    "notes": "Arrived 8 minutes ahead of schedule.",
     "pax_count": "3"
   },
   {
@@ -6113,7 +6083,7 @@
     "patients": "0",
     "weather": "Light winds under a cold, clear high. Few cumulus at 4,500 ft, visibility 30 km. Temperature 10C, QNH 1013.",
     "challenges": "High altitude landing required careful power management.",
-    "notes": "Guests were delighted with the views of Aoraki. Fuel used about 203 L.",
+    "notes": "Fuel used about 203 L.",
     "pax_count": "4"
   },
   {
@@ -6148,7 +6118,7 @@
     "patients": "0",
     "weather": "Cold south-westerly 15 to 20 kt with scattered snow showers on the tops. Broken cloud at 4,500 ft with a few showers, visibility 12 km in haze. Temperature 10C, QNH 1027.",
     "challenges": "Late passenger change required a revised load sheet.",
-    "notes": "Smooth ride with excellent catering on board. Arrived 11 minutes ahead of schedule.",
+    "notes": "Arrived 11 minutes ahead of schedule.",
     "pax_count": "2"
   },
   {
@@ -6183,7 +6153,6 @@
     "patients": "0",
     "weather": "Cold south-westerly 15 to 20 kt with scattered snow showers on the tops. Overcast at 7,000 ft with light drizzle patches, visibility 15 km, reducing to 8 km in showers. Temperature 11C, QNH 1005. Freezing level near 1,000 m, icing risk above 6,000 ft in cloud. At Queenstown: cold south-westerly 15 to 20 kt with scattered snow showers on the tops.",
     "challenges": "Cloud base forced a lower cruise level through the pass.",
-    "notes": "Discreet handling at both ends appreciated by the clients.",
     "pax_count": "2"
   },
   {
@@ -6276,7 +6245,7 @@
     "patients": "0",
     "weather": "Light north-westerly 8 kt. CAVOK, visibility 50 km plus. Temperature 8C, QNH 1018. Freezing level 1,400 m with light icing in cloud.",
     "challenges": "High altitude landing required careful power management.",
-    "notes": "Passengers enjoyed the walk among seracs and ice formations. Landed with 46 minutes of fuel remaining.",
+    "notes": "Landed with 46 minutes of fuel remaining.",
     "pax_count": "5"
   },
   {
@@ -6311,7 +6280,6 @@
     "patients": "0",
     "weather": "Light winds under a cold, clear high. Few cumulus at 4,500 ft, visibility 30 km. Temperature 11C, QNH 1005. Snow lying above 800 m. At Timaru: light westerly 10 kt.",
     "challenges": "Busy radio at Christchurch with a mix of airline and GA traffic.",
-    "notes": "Discreet handling at both ends appreciated by the clients.",
     "pax_count": "4"
   },
   {
@@ -6346,7 +6314,7 @@
     "patients": "0",
     "weather": "Calm with a hard frost on the ground. Isolated cumulus with tops near 9,000 ft, visibility 40 km. Temperature 7C, QNH 1005.",
     "challenges": "Busy radio at Christchurch with a mix of airline and GA traffic.",
-    "notes": "Smooth ride with excellent catering on board. Arrived 6 minutes ahead of schedule.",
+    "notes": "Arrived 6 minutes ahead of schedule.",
     "pax_count": "4"
   },
   {
@@ -6544,7 +6512,7 @@
     "patients": "0",
     "weather": "Light north-westerly 8 kt. Scattered high cloud above 15,000 ft, visibility greater than 20 km. Temperature 10C, QNH 1008.",
     "challenges": "Searching in low light as the day faded.",
-    "notes": "Task completed with police satisfied. Fuel used about 138 L.",
+    "notes": "Fuel used about 138 L.",
     "pax_count": "1"
   },
   {
@@ -6649,7 +6617,6 @@
     "patients": "0",
     "weather": "Calm with a hard frost on the ground. Peaks obscured above 8,000 ft, visibility 40 km. Temperature 7C, QNH 1023.",
     "challenges": "Soft snow at the landing site needed a gentle touch-down.",
-    "notes": "Passengers enjoyed the walk among seracs and ice formations.",
     "pax_count": "3"
   },
   {
@@ -6718,8 +6685,6 @@
     "missionDetails": "Alpine foothills sightseeing flight past Lake Coleridge, the Rakaia Gorge and Mount Hutt with views of the Main Divide.",
     "patients": "0",
     "weather": "Southerly 15 kt, gusting 25 with a cold feel. Scattered stratocumulus at 3,000 ft and broken cloud above 7,000 ft, visibility 20 km with local reductions in rain. Temperature 7C, QNH 1019.",
-    "challenges": "Passenger requests for low passes required careful terrain clearance.",
-    "notes": "Excellent flight, with strong passenger feedback.",
     "pax_count": "4"
   },
   {
@@ -6881,8 +6846,7 @@
     "missionDetails": "Sightseeing flight to Hokitika with views of Arthur's Pass, Lake Brunner and the West Coast surf.",
     "patients": "0",
     "weather": "Cold south-westerly 15 to 20 kt with scattered snow showers on the tops. Broken cloud at 5,500 ft, tops layered to 10,000 ft, visibility 20 km with local reductions in rain. Temperature 11C, QNH 1010. Snow lying above 800 m. At Hokitika: southerly 15 kt, gusting 25 with a cold feel.",
-    "challenges": "Guests asked for a longer loop, so fuel was monitored closely.",
-    "notes": "Excellent flight, with strong passenger feedback. Departure delayed 18 minutes for weather.",
+    "notes": "Departure delayed 18 minutes for weather.",
     "pax_count": "2"
   },
   {
@@ -6917,7 +6881,7 @@
     "patients": "0",
     "weather": "Cold south-westerly 15 to 20 kt with scattered snow showers on the tops. Cloud capping the Remarkables, visibility 15 km, reducing to 8 km in showers. Temperature 6C, QNH 1013. Snow showers to 600 m on the foothills. At Minaret Station: moderate nor'wester 20 kt, gusting 30 at altitude.",
     "challenges": "Cloud base forced a lower cruise level through the pass.",
-    "notes": "Passengers loved the views. Fuel used about 74 L.",
+    "notes": "Fuel used about 74 L.",
     "pax_count": "4"
   },
   {
@@ -7022,7 +6986,7 @@
     "patients": "0",
     "weather": "Cold south-westerly 15 to 20 kt with scattered snow showers on the tops. Broken cloud at 4,500 ft with a few showers, visibility 20 km with local reductions in rain. Temperature 12C, QNH 1018. At Mount Cook: cold south-westerly 15 to 20 kt with scattered snow showers on the tops.",
     "challenges": "Tight schedule for the passengers' connecting meeting.",
-    "notes": "Smooth ride with excellent catering on board. Landed with 60 minutes of fuel remaining.",
+    "notes": "Landed with 60 minutes of fuel remaining.",
     "pax_count": "2"
   },
   {
@@ -7191,7 +7155,7 @@
     "patients": "0",
     "weather": "Westerly 20 kt with turbulence below 8,000 ft. Cloud building on the Main Divide after midday, visibility 20 km with local reductions in rain. Temperature 7C, QNH 1004. Freezing level near 1,000 m, icing risk above 6,000 ft in cloud.",
     "challenges": "Crosswind component of 12 kt on landing.",
-    "notes": "Guests took excellent photos in the afternoon light. Departure delayed 11 minutes for weather.",
+    "notes": "Departure delayed 11 minutes for weather.",
     "pax_count": "7"
   },
   {
@@ -7226,7 +7190,7 @@
     "patients": "0",
     "weather": "Southerly 15 kt, gusting 25 with a cold feel. Cloud building after midday, scattered cumulus at 4,000 ft, visibility 15 km, reducing to 8 km in showers. Temperature 11C, QNH 1010. At Christchurch: southerly 15 kt, gusting 25 with a cold feel.",
     "challenges": "Brief wait for weather to clear at the destination.",
-    "notes": "Excellent flight, with strong passenger feedback. Landed with 62 minutes of fuel remaining.",
+    "notes": "Landed with 62 minutes of fuel remaining.",
     "pax_count": "1"
   },
   {
@@ -7435,8 +7399,7 @@
     "missionDetails": "Scenic tour of the Canterbury Plains and foothills, passing Oxford, the Rakaia Gorge and Lake Ellesmere.",
     "patients": "0",
     "weather": "Calm with a hard frost on the ground. Isolated cumulus with tops near 9,000 ft, visibility greater than 20 km. Temperature 8C, QNH 1014.",
-    "challenges": "Guests asked for a longer loop, so fuel was monitored closely.",
-    "notes": "Excellent flight, with strong passenger feedback. Arrived 15 minutes ahead of schedule.",
+    "notes": "Arrived 15 minutes ahead of schedule.",
     "pax_count": "2"
   },
   {
@@ -7505,8 +7468,7 @@
     "missionDetails": "Sightseeing flight around the volcanic rim of Banks Peninsula, with a coastal return over Pegasus Bay and Brooklands.",
     "patients": "0",
     "weather": "Westerly 20 kt with turbulence below 8,000 ft. Sea fog patches along the coast, visibility 20 km with local reductions in rain. Temperature 7C, QNH 1009.",
-    "challenges": "Passenger requests for low passes required careful terrain clearance.",
-    "notes": "Passengers loved the views. Fuel used about 181 L.",
+    "notes": "Fuel used about 181 L.",
     "pax_count": "2"
   },
   {
@@ -7716,7 +7678,7 @@
     "patients": "0",
     "weather": "Cold south-westerly 15 to 20 kt with scattered snow showers on the tops. Broken low cloud at 3,500 ft clearing by mid-morning, visibility 15 km, reducing to 8 km in showers. Temperature 13C, QNH 1004. At Christchurch: westerly 20 kt with turbulence below 8,000 ft.",
     "challenges": "Handled a busy VFR traffic period around the city.",
-    "notes": "Children enjoyed the scenery and took photos throughout. Fuel used about 86 L.",
+    "notes": "Fuel used about 86 L.",
     "pax_count": "2"
   },
   {
@@ -7751,7 +7713,7 @@
     "patients": "0",
     "weather": "Light westerly 10 kt. Peaks obscured above 8,000 ft, visibility 50 km plus. Temperature 10C, QNH 1009. Freezing level 1,400 m with light icing in cloud.",
     "challenges": "Minor thermal turbulence over the plains.",
-    "notes": "Guests took excellent photos in the afternoon light. Fuel used about 270 L.",
+    "notes": "Fuel used about 270 L.",
     "pax_count": "4"
   },
   {
@@ -7782,11 +7744,11 @@
     "status": "completed",
     "source": "MissionReport",
     "missionType": "VIP",
-    "missionDetails": "Private scenic charter for 1 company directors. Custom routing arranged the day before, with a request for low-level passes over the coast and plains.",
+    "missionDetails": "Private scenic charter for 1 company directors.",
     "patients": "0",
     "weather": "Light north-westerly 8 kt. Isolated cumulus with tops near 9,000 ft, visibility greater than 20 km. Temperature 9C, QNH 1026. Frost on the aircraft at start-up, de-iced before departure.",
     "challenges": "None.",
-    "notes": "Discreet handling at both ends appreciated by the clients. Landed with 46 minutes of fuel remaining.",
+    "notes": "Landed with 46 minutes of fuel remaining.",
     "pax_count": "1"
   },
   {
@@ -7855,8 +7817,7 @@
     "missionDetails": "Foothills explorer tour with a gentle climb toward the Craigieburn and Torlesse ranges.",
     "patients": "0",
     "weather": "Cold south-westerly 15 to 20 kt with scattered snow showers on the tops. Broken cloud at 5,500 ft, tops layered to 10,000 ft, visibility 12 km in haze. Temperature 11C, QNH 1025.",
-    "challenges": "Passenger requests for low passes required careful terrain clearance.",
-    "notes": "Children enjoyed the scenery and took photos throughout. Fuel used about 58 L.",
+    "notes": "Fuel used about 58 L.",
     "pax_count": "2"
   },
   {
@@ -7926,7 +7887,7 @@
     "patients": "0",
     "weather": "Settled with a light south-easterly 8 kt. Fresh snow on the ranges above 1,800 m, visibility 40 km. Temperature 12C, QNH 1024. Lingering snow on the alpine routes above 1,500 m.",
     "challenges": "Cloud forming on the ridge required a revised landing site.",
-    "notes": "Guests took excellent photos in the afternoon light. Landed with 74 minutes of fuel remaining.",
+    "notes": "Landed with 74 minutes of fuel remaining.",
     "pax_count": "7"
   },
   {
@@ -7961,7 +7922,7 @@
     "patients": "0",
     "weather": "Moderate nor'wester 15 to 25 kt, gusting 35 at altitude. Broken cloud at 5,500 ft, tops layered to 10,000 ft, visibility 15 km, reducing to 8 km in showers. Temperature 9C, QNH 1027. At Milford Sound: gusty westerly 20 kt, turbulence below 6,000 ft.",
     "challenges": "Late passenger change required a revised load sheet.",
-    "notes": "Smooth ride with excellent catering on board. Landed with 35 minutes of fuel remaining.",
+    "notes": "Landed with 35 minutes of fuel remaining.",
     "pax_count": "5"
   },
   {
@@ -7996,7 +7957,6 @@
     "patients": "0",
     "weather": "Light westerly 6 to 10 kt. Clear skies, visibility 50 km plus. Temperature 7C, QNH 1013.",
     "challenges": "Katabatic wind off the glacier required a slow, controlled approach.",
-    "notes": "Guests were delighted with the views of Aoraki.",
     "pax_count": "7"
   },
   {
@@ -8066,7 +8026,6 @@
     "patients": "0",
     "weather": "Cool southerly 15 kt, gusting 28. Cloud building after midday, scattered cumulus at 4,000 ft, visibility 12 km in haze. Temperature 14C, QNH 1022. At Mount Cook: gusty westerly 20 kt, turbulence below 6,000 ft.",
     "challenges": "Handled a busy VFR traffic period around the city.",
-    "notes": "Guests asked to extend the flight next time.",
     "pax_count": "3"
   },
   {
@@ -8136,7 +8095,6 @@
     "patients": "0",
     "weather": "Light and variable winds. Isolated cumulus with tops near 9,000 ft, visibility 30 km. Temperature 18C, QNH 1025. At Queenstown: light westerly 6 to 10 kt.",
     "challenges": "Minor thermal turbulence over the plains.",
-    "notes": "Excellent flight, with strong passenger feedback.",
     "pax_count": "3"
   },
   {
@@ -8171,7 +8129,7 @@
     "patients": "0",
     "weather": "Moderate nor'wester 15 to 25 kt, gusting 35 at altitude. Cloud building after midday, scattered cumulus at 4,000 ft, visibility 15 km, reducing to 8 km in showers. Temperature 14C, QNH 1002. At Hokitika: cool southerly 15 kt, gusting 28.",
     "challenges": "Crosswind component of 12 kt on landing.",
-    "notes": "Children enjoyed the scenery and took photos throughout. Departure delayed 18 minutes for weather.",
+    "notes": "Departure delayed 18 minutes for weather.",
     "pax_count": "3"
   },
   {
@@ -8206,7 +8164,7 @@
     "patients": "0",
     "weather": "Gusty westerly 20 kt, turbulence below 6,000 ft. Scattered stratocumulus at 3,000 ft and broken cloud above 7,000 ft, visibility 12 km in haze. Temperature 12C, QNH 1005. At Christchurch: moderate nor'wester 15 to 25 kt, gusting 35 at altitude.",
     "challenges": "Tracked north of the direct route to avoid showers.",
-    "notes": "Passengers loved the views. Fuel used about 117 L.",
+    "notes": "Fuel used about 117 L.",
     "pax_count": "3"
   },
   {
@@ -8241,7 +8199,7 @@
     "patients": "0",
     "weather": "Fresh south-westerly 18 kt with showers. Sea fog patches along the coast, visibility 20 km with local reductions in rain. Temperature 14C, QNH 1012. Spring snow melt feeding the braided rivers.",
     "challenges": "Tracked north of the direct route to avoid showers.",
-    "notes": "Children enjoyed the scenery and took photos throughout. Fuel used about 173 L.",
+    "notes": "Fuel used about 173 L.",
     "pax_count": "4"
   },
   {
@@ -8276,7 +8234,6 @@
     "patients": "0",
     "weather": "Moderate nor'wester 15 to 25 kt, gusting 35 at altitude. Broken cloud at 5,500 ft, tops layered to 10,000 ft, visibility 20 km with local reductions in rain. Temperature 13C, QNH 1019.",
     "challenges": "Handled a busy VFR traffic period around the city.",
-    "notes": "Excellent flight, with strong passenger feedback.",
     "pax_count": "6"
   },
   {
@@ -8345,8 +8302,6 @@
     "missionDetails": "Day 1 of the Wine and Food Tour, Christchurch to Oamaru, with a heritage precinct lunch and a winery visit.",
     "patients": "0",
     "weather": "Moderate nor'wester 15 to 25 kt, gusting 35 at altitude. Scattered stratocumulus at 3,000 ft and broken cloud above 7,000 ft, visibility 15 km, reducing to 8 km in showers. Temperature 8C, QNH 1014. At Oamaru: gusty westerly 20 kt, turbulence below 6,000 ft.",
-    "challenges": "Passenger requests for low passes required careful terrain clearance.",
-    "notes": "Guests asked to extend the flight next time.",
     "pax_count": "2"
   },
   {
@@ -8521,7 +8476,7 @@
     "patients": "0",
     "weather": "Settled with a light south-easterly 8 kt. Cloud building on the Main Divide after midday, visibility greater than 20 km. Temperature 9C, QNH 1006.",
     "challenges": "None.",
-    "notes": "Guests took excellent photos in the afternoon light. Fuel used about 304 L.",
+    "notes": "Fuel used about 304 L.",
     "pax_count": "7"
   },
   {
@@ -8626,7 +8581,6 @@
     "patients": "0",
     "weather": "Light westerly 6 to 10 kt. CAVOK, visibility 50 km plus. Temperature 12C, QNH 1027. Fresh snow on the ranges overnight above 1,200 m.",
     "challenges": "Maintaining a safe separation from terrain on the edge of the survey area.",
-    "notes": "Photography coverage met the client specification.",
     "pax_count": "2"
   },
   {
@@ -8765,8 +8719,6 @@
     "missionDetails": "Foothills explorer by helicopter, following the Waimakariri Gorge to the Craigieburn Range and back across the plains.",
     "patients": "0",
     "weather": "Light and variable winds. CAVOK, visibility greater than 20 km. Temperature 18C, QNH 1014.",
-    "challenges": "Passenger requests for low passes required careful terrain clearance.",
-    "notes": "Excellent flight, with strong passenger feedback.",
     "pax_count": "1"
   },
   {
