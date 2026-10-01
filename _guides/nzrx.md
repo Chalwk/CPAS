@@ -1,0 +1,48 @@
+---
+title: Roxburgh
+icao: NZRX
+category: airport
+permalink: /guides/nzrx/
+description: "Small Central Otago strip in the Teviot Valley."
+icon: fa-plane
+---
+
+## Overview
+
+Roxburgh is a small grass strip serving the Teviot Valley community and the Roxburgh hydro dam. It sits in a narrow valley.
+
+## Runways
+
+| Designator | Length | Surface | Notes         |
+| ---------- | ------ | ------- | ------------- |
+| 14/32      | 600 m  | Grass   | Valley floor. |
+
+## Frequencies
+
+| Service | Frequency | Notes |
+| ------- | --------- | ----- |
+| CTAF    | 118.1     |       |
+
+## Elevation
+
+380 ft AMSL.
+
+## Local Procedures
+
+- Valley winds - check windsock carefully.
+
+## Hazards
+
+- Confined valley.
+- Powerlines.
+
+## Recommended Approaches
+
+- **Visual 32:** From the north.
+
+## Nearby Airfields
+
+- [Alexandra (NZLX)](/guides/nzlx/)
+- [Queenstown (NZQN)](/guides/nzqn/)
+
+*For flight simulation use only. Always check weather, minimum altitudes and your aircraft limits before flying these routes.*

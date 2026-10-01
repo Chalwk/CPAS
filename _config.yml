@@ -156,6 +156,11 @@ collections:
     output: true
     permalink: /airframes/:path/
 
+  # _guides/ - /guides/<filename>/
+  guides:
+    output: true
+    permalink: /guides/:path/
+
 # -----------------------------------------------------------------------------
 # Defaults
 # -----------------------------------------------------------------------------
@@ -182,3 +187,9 @@ defaults:
       type: "airframes"
     values:
       layout: airframe
+      
+  - scope:
+      type: "guides"
+    values:
+      layout: guides
+      css: [guides]

@@ -1,0 +1,60 @@
+---
+title: Mount Cook
+icao: NZMC
+category: airport
+permalink: /guides/nzmc/
+description: "Alpine aerodrome in the Aoraki/Mount Cook National Park. High-altitude and mountain weather."
+icon: fa-mountain
+---
+
+## Overview
+
+Mount Cook Airport sits at the head of the Mackenzie Basin, at the foot of Aoraki/Mount Cook. The airfield is inside the Mount Cook Flight Information Zone (FIZ) with no ATC service and significant terrain in every direction.
+
+## Runways
+
+| Designator | Length  | Surface        | Notes                   |
+| ---------- | ------- | -------------- | ----------------------- |
+| 05/23      | 1,800 m | Grass / gravel | Runway 05 rises uphill. |
+
+## Frequencies
+
+| Service        | Frequency | Notes                    |
+| -------------- | --------- | ------------------------ |
+| FIZ            | 122.5     | Mandatory area frequency |
+| Mountain radio | 130.6     | Area broadcasts          |
+
+## Elevation
+
+1,800 ft AMSL.
+
+## Local Procedures
+
+- **FIZ:** 122.5 within 10 NM. Broadcast position and intentions.
+- **VFR only:** No instrument approaches published.
+- **Visual contact with terrain:** Required at all times.
+- **One-way valley traffic:** Standard mountain rules apply.
+
+## Hazards
+
+- Mountain wave and downdrafts.
+- High density altitude - reduce payload.
+- Rapid weather change - the valley can close in minutes.
+- Katabatic winds off the Tasman Glacier.
+
+## Recommended Approaches
+
+- **Visual 23:** From the south, over Lake Pukaki and Glentanner.
+- **Visual 05:** Uphill, arriving from the north - expect turbulence.
+
+## Nearby Airfields
+
+- [Glentanner Station (NZGT)](/guides/nzgt/)
+- [Pukaki (NZUK)](/guides/nzuk/)
+- [Omarama (NZOA)](/guides/nzoa/)
+
+## Related Routes
+
+- [Mount Cook Valley](/guides/mt-cook-valley/)
+
+*For flight simulation use only. Always check weather, minimum altitudes and your aircraft limits before flying these routes.*

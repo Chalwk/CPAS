@@ -1,0 +1,50 @@
+---
+title: Picton
+icao: NZPN
+category: airport
+permalink: /guides/nzpn/
+description: "Small Marlborough aerodrome at the head of Queen Charlotte Sound."
+icon: fa-water
+---
+
+## Overview
+
+Picton (Koromiko) is a small aerodrome serving the Picton township and the Marlborough Sounds. It sits in a valley with limited options for go-arounds, making it suitable only for competent pilots.
+
+## Runways
+
+| Designator | Length | Surface | Notes                                  |
+| ---------- | ------ | ------- | -------------------------------------- |
+| 05/23      | 640 m  | Asphalt | Short, one-way operations recommended. |
+
+## Frequencies
+
+| Service | Frequency | Notes                                 |
+| ------- | --------- | ------------------------------------- |
+| CTAF    | 118.1     | Shared with Woodbourne Tower airspace |
+
+## Elevation
+
+115 ft AMSL.
+
+## Local Procedures
+
+- **One-way operations:** Runway 23 preferred for landing (uphill).
+- **Departures:** Runway 05 (downhill) preferred.
+- **No go-around:** Terrain at the southern end limits go-around options - commit only with stable approach.
+
+## Hazards
+
+- Short runway, valley terrain, and limited overshoot.
+- Turbulence in strong winds.
+
+## Recommended Approaches
+
+- **Visual 23:** Standard arrival from the north over the Sounds.
+
+## Nearby Airfields
+
+- [Woodbourne / Blenheim (NZWB)](/guides/nzwb/)
+- [Nelson (NZNS)](/guides/nzns/)
+
+*For flight simulation use only. Always check weather, minimum altitudes and your aircraft limits before flying these routes.*

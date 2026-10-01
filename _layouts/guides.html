@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<!-- Copyright (c) 2025-2026 Jericho Crosby (Chalwk) -->
+
+<article class="guide-container">
+    <div class="container">
+
+        <p class="back-link-top">
+            <a href="{{ '/pages/guides/' | relative_url }}" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Guides
+            </a>
+        </p>
+
+        <header class="guide-header">
+            {% if page.icon %}
+            <div class="guide-header-icon">
+                <i class="fas {{ page.icon }}"></i>
+            </div>
+            {% endif %}
+            <div class="guide-header-text">
+                <h1>{{ page.title }}</h1>
+                {% if page.icao %}
+                <span class="guide-icao"><i class="fas fa-hashtag"></i> {{ page.icao }}</span>
+                {% endif %}
+                {% if page.description %}
+                <p class="guide-description">{{ page.description }}</p>
+                {% endif %}
+            </div>
+        </header>
+
+        <div class="guide-content" id="guideContent">
+            {{ content }}
+        </div>
+
+        <p class="back-link-bottom">
+            <a href="{{ '/pages/guides/' | relative_url }}" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Guides
+            </a>
+        </p>
+    </div>
+</article>

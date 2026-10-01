@@ -1,0 +1,67 @@
+---
+layout: default
+title: Guides
+css: [guides]
+permalink: /pages/guides/
+---
+
+<!-- Copyright (c) 2025-2026 Jericho Crosby (Chalwk) -->
+
+<section class="guides-section" style="margin-top: 70px;">
+    <div class="container">
+        <h2 class="section-title">Airport &amp; Route Guides</h2>
+        <p class="section-subtitle">
+            Reference cards for every airfield in the CPAS network, plus scenic and VFR corridor guides
+            across the South Island. Click any card to open the full guide.
+        </p>
+
+        {% assign airports = site.guides | where: "category", "airport" | sort: "icao" %}
+        {% assign scenic = site.guides | where: "category", "scenic" | sort: "title" %}
+
+        <div class="guides-group">
+            <h3 class="guides-group-title">
+                <i class="fas fa-map-marker-alt"></i> Airport Guides
+                <span class="guides-count">{{ airports | size }}</span>
+            </h3>
+            <div class="guides-grid">
+                {% for guide in airports %}
+                <a class="guide-card" href="{{ guide.url | relative_url }}">
+                    <div class="guide-card-icon">
+                        <i class="fas {{ guide.icon | default: 'fa-plane' }}"></i>
+                    </div>
+                    <div class="guide-card-body">
+                        <span class="guide-card-icao">{{ guide.icao }}</span>
+                        <h4>{{ guide.title }}</h4>
+                        {% if guide.description %}
+                        <p>{{ guide.description | truncate: 110 }}</p>
+                        {% endif %}
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="guides-group">
+            <h3 class="guides-group-title">
+                <i class="fas fa-mountain"></i> Scenic &amp; VFR Corridors
+                <span class="guides-count">{{ scenic | size }}</span>
+            </h3>
+            <div class="guides-grid">
+                {% for guide in scenic %}
+                <a class="guide-card" href="{{ guide.url | relative_url }}">
+                    <div class="guide-card-icon">
+                        <i class="fas {{ guide.icon | default: 'fa-mountain' }}"></i>
+                    </div>
+                    <div class="guide-card-body">
+                        <span class="guide-card-icao">Scenic</span>
+                        <h4>{{ guide.title }}</h4>
+                        {% if guide.description %}
+                        <p>{{ guide.description | truncate: 110 }}</p>
+                        {% endif %}
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,52 @@
+---
+title: Milford Sound
+icao: NZMF
+category: airport
+permalink: /guides/nzmf/
+description: "One of the world's most scenic approaches. Special rules airspace."
+icon: fa-mountain
+---
+
+## Overview
+
+Milford Sound is a short sealed strip at the head of the fiord, surrounded by towering terrain. It uses Special Rules airspace to manage the intense scenic traffic.
+
+## Runways
+
+| Designator | Length | Surface | Notes                                                   |
+| ---------- | ------ | ------- | ------------------------------------------------------- |
+| 11/29      | 700 m  | Asphalt | One-way preferred: land 11, depart 29 (or as directed). |
+
+## Frequencies
+
+| Service       | Frequency | Notes         |
+| ------------- | --------- | ------------- |
+| Special Rules | 122.1     | Milford Sound |
+
+## Elevation
+
+10 ft AMSL.
+
+## Local Procedures
+
+- **Special Rules:** Mandatory broadcasts and standard arrival/departure corridors.
+- **One-way valley traffic:** All aircraft follow the published corridor.
+- **No go-around options** in the valley - commit only with a stable approach.
+
+## Hazards
+
+- Extreme terrain.
+- Heavy scenic traffic.
+- Weather can close the valley in minutes.
+
+## Recommended Approaches
+
+- **Visual 11:** Over the fiord, straight-in.
+- **Visual 29:** Rarely used due to terrain.
+
+## Nearby Airfields
+
+- [Te Anau / Manapouri (NZMO)](/guides/nzmo/)
+- [Queenstown (NZQN)](/guides/nzqn/)
+
+*For flight simulation use only. Always check weather, minimum altitudes and your aircraft limits before flying these routes.*
