@@ -6,7 +6,6 @@
 # -----------------------------------------------------------------------------
 
 # Fixed-Wing ---------------------------------------------------------------
-
 - id: fw-nzch-nzqn-archer
   from: NZCH
   to: NZQN
@@ -385,8 +384,2039 @@
     - "NZCH arrival: Christchurch Approach 119.1"
   alternate: "NZMC (Mount Cook) for weather or scenic stop"
 
-# Helicopter ---------------------------------------------------------------
+- id: fw-chch-timaru
+  from: NZCH
+  to: NZTU
+  from_name: Christchurch International
+  to_name: Timaru
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 80
+  duration: "~45m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Plains
+    - Coastal
+  difficulty: 1
+  description: "Christchurch International to Timaru for regional South Canterbury charter."
+  tags:
+    - "Regional"
+    - "South Island"
+  highlights:
+    - "Christchurch International departure"
+    - "Timaru arrival"
+    - "Coastal routing option"
+    - "Flexible VFR routing for charter work"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Remain clear of controlled airspace unless cleared"
 
+- id: fw-timaru-chch
+  from: NZTU
+  to: NZCH
+  from_name: Timaru
+  to_name: Christchurch International
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 80
+  duration: "~45m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Plains
+    - Coastal
+  difficulty: 1
+  description: "Timaru to Christchurch International for Canterbury return charter."
+  tags:
+    - "Canterbury"
+    - "South Island"
+  highlights:
+    - "Timaru departure"
+    - "Christchurch International arrival"
+    - "Coastal routing option"
+    - "Flexible VFR routing for charter work"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Remain clear of controlled airspace unless cleared"
+  alternate: "NZAS (Ashburton)"
+
+- id: fw-chch-oamaru
+  from: NZCH
+  to: NZOU
+  from_name: Christchurch International
+  to_name: Oamaru
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 125
+  duration: "~1h 05m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Plains
+    - Coastal
+  difficulty: 2
+  description: "Christchurch International to Oamaru for coastal North Otago charter."
+  tags:
+    - "Coastal"
+    - "South Island"
+  highlights:
+    - "Christchurch International departure"
+    - "Oamaru arrival"
+    - "Coastal routing option"
+    - "Flexible VFR routing for charter work"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Remain clear of controlled airspace unless cleared"
+
+- id: fw-oamaru-chch
+  from: NZOU
+  to: NZCH
+  from_name: Oamaru
+  to_name: Christchurch International
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 125
+  duration: "~1h 05m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Plains
+    - Coastal
+  difficulty: 2
+  description: "Oamaru to Christchurch International for North Otago return charter."
+  tags:
+    - "North"
+    - "South Island"
+  highlights:
+    - "Oamaru departure"
+    - "Christchurch International arrival"
+    - "Coastal routing option"
+    - "Flexible VFR routing for charter work"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Remain clear of controlled airspace unless cleared"
+  alternate: "NZAS (Ashburton)"
+
+- id: fw-chch-dunedin
+  from: NZCH
+  to: NZDN
+  from_name: Christchurch International
+  to_name: Dunedin International
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 200
+  duration: "~1h 30m"
+  aircraft:
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Mountain
+    - Coastal
+  difficulty: 3
+  description: "Christchurch International to Dunedin International for long regional charter through South Canterbury and Otago."
+  tags:
+    - "Long"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Christchurch International departure"
+    - "Dunedin International arrival"
+    - "Coastal routing option"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+  alternate: "NZTU (Timaru)"
+
+- id: fw-dunedin-chch
+  from: NZDN
+  to: NZCH
+  from_name: Dunedin International
+  to_name: Christchurch International
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 200
+  duration: "~1h 30m"
+  aircraft:
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Mountain
+    - Coastal
+  difficulty: 3
+  description: "Dunedin International to Christchurch International for Otago to Canterbury executive return charter."
+  tags:
+    - "Otago"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Dunedin International departure"
+    - "Christchurch International arrival"
+    - "Coastal routing option"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+  alternate: "NZTU (Timaru)"
+
+- id: fw-dunedin-taieri
+  from: NZDN
+  to: NZTI
+  from_name: Dunedin International
+  to_name: Taieri
+  category: fixed-wing
+  operation: Transfer
+  distance_nm: 20
+  duration: "~10m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+  flight_rules: VFR
+  conditions:
+    - Plains
+  difficulty: 1
+  description: "Dunedin International to Taieri for short Dunedin area repositioning and training sector."
+  tags:
+    - "Short"
+    - "South Island"
+  highlights:
+    - "Dunedin International departure"
+    - "Taieri arrival"
+    - "Flexible VFR routing for charter work"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Remain clear of controlled airspace unless cleared"
+
+- id: fw-taieri-dunedin
+  from: NZTI
+  to: NZDN
+  from_name: Taieri
+  to_name: Dunedin International
+  category: fixed-wing
+  operation: Transfer
+  distance_nm: 20
+  duration: "~10m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+  flight_rules: VFR
+  conditions:
+    - Plains
+  difficulty: 1
+  description: "Taieri to Dunedin International for Taieri return repositioning and training sector."
+  tags:
+    - "Taieri"
+    - "South Island"
+  highlights:
+    - "Taieri departure"
+    - "Dunedin International arrival"
+    - "Flexible VFR routing for charter work"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Remain clear of controlled airspace unless cleared"
+
+- id: fw-dunedin-invercargill
+  from: NZDN
+  to: NZNV
+  from_name: Dunedin International
+  to_name: Invercargill
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 95
+  duration: "~45m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Coastal
+    - Plains
+  difficulty: 2
+  description: "Dunedin International to Invercargill for Otago to Southland regional charter."
+  tags:
+    - "Otago"
+    - "South Island"
+  highlights:
+    - "Dunedin International departure"
+    - "Invercargill arrival"
+    - "Coastal routing option"
+    - "Flexible VFR routing for charter work"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Remain clear of controlled airspace unless cleared"
+
+- id: fw-invercargill-dunedin
+  from: NZNV
+  to: NZDN
+  from_name: Invercargill
+  to_name: Dunedin International
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 95
+  duration: "~45m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Coastal
+    - Plains
+  difficulty: 2
+  description: "Invercargill to Dunedin International for Southland to Otago return charter."
+  tags:
+    - "Southland"
+    - "South Island"
+  highlights:
+    - "Invercargill departure"
+    - "Dunedin International arrival"
+    - "Coastal routing option"
+    - "Flexible VFR routing for charter work"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Remain clear of controlled airspace unless cleared"
+
+- id: fw-chch-invercargill
+  from: NZCH
+  to: NZNV
+  from_name: Christchurch International
+  to_name: Invercargill
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 280
+  duration: "~1h 50m"
+  aircraft:
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Mountain
+    - Coastal
+  difficulty: 3
+  description: "Christchurch International to Invercargill for long-range South Island executive charter."
+  tags:
+    - "Long-Range"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Christchurch International departure"
+    - "Invercargill arrival"
+    - "Coastal routing option"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+  alternate: "NZDN (Dunedin)"
+  warning: "Southern weather requires flexible alternates"
+
+- id: fw-invercargill-chch
+  from: NZNV
+  to: NZCH
+  from_name: Invercargill
+  to_name: Christchurch International
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 280
+  duration: "~1h 50m"
+  aircraft:
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Mountain
+    - Coastal
+  difficulty: 3
+  description: "Invercargill to Christchurch International for South Island executive return charter."
+  tags:
+    - "South"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Invercargill departure"
+    - "Christchurch International arrival"
+    - "Coastal routing option"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+  alternate: "NZDN (Dunedin)"
+  warning: "Southern weather requires flexible alternates"
+
+- id: fw-queenstown-wanaka
+  from: NZQN
+  to: NZWF
+  from_name: Queenstown
+  to_name: Wanaka
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 35
+  duration: "~15m"
+  aircraft:
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Alpine
+    - Mountain
+  difficulty: 3
+  description: "Queenstown to Wanaka for Southern Lakes high-country charter."
+  tags:
+    - "Southern"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Queenstown departure"
+    - "Wanaka arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+  alternate: "NZMC (Mount Cook)"
+  warning: "Crown Range weather can close the direct route"
+
+- id: fw-wanaka-queenstown
+  from: NZWF
+  to: NZQN
+  from_name: Wanaka
+  to_name: Queenstown
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 35
+  duration: "~15m"
+  aircraft:
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Alpine
+    - Mountain
+  difficulty: 3
+  description: "Wanaka to Queenstown for Wanaka return high-country charter."
+  tags:
+    - "Wanaka"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Wanaka departure"
+    - "Queenstown arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+  alternate: "NZMO (Manapouri)"
+
+- id: fw-wanaka-alexandra
+  from: NZWF
+  to: NZLX
+  from_name: Wanaka
+  to_name: Alexandra
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 35
+  duration: "~20m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - High Country
+  difficulty: 2
+  description: "Wanaka to Alexandra for Upper Clutha to Central Otago regional charter."
+  tags:
+    - "Upper"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Wanaka departure"
+    - "Alexandra arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-alexandra-wanaka
+  from: NZLX
+  to: NZWF
+  from_name: Alexandra
+  to_name: Wanaka
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 35
+  duration: "~20m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - High Country
+  difficulty: 2
+  description: "Alexandra to Wanaka for Central Otago to Wanaka return charter."
+  tags:
+    - "Central"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Alexandra departure"
+    - "Wanaka arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+  alternate: "NZOA (Omarama)"
+
+- id: fw-queenstown-alexandra
+  from: NZQN
+  to: NZLX
+  from_name: Queenstown
+  to_name: Alexandra
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 35
+  duration: "~15m"
+  aircraft:
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Mountain
+    - High Country
+  difficulty: 3
+  description: "Queenstown to Alexandra for Wakatipu to Central Otago executive charter."
+  tags:
+    - "Wakatipu"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Queenstown departure"
+    - "Alexandra arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+  alternate: "NZWF (Wanaka)"
+
+- id: fw-alexandra-queenstown
+  from: NZLX
+  to: NZQN
+  from_name: Alexandra
+  to_name: Queenstown
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 35
+  duration: "~15m"
+  aircraft:
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Mountain
+    - High Country
+  difficulty: 3
+  description: "Alexandra to Queenstown for Central Otago to Queenstown return charter."
+  tags:
+    - "Central"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Alexandra departure"
+    - "Queenstown arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+  alternate: "NZWF (Wanaka)"
+
+- id: fw-queenstown-roxburgh
+  from: NZQN
+  to: NZRX
+  from_name: Queenstown
+  to_name: Roxburgh
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 50
+  duration: "~25m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - High Country
+  difficulty: 3
+  description: "Queenstown to Roxburgh for Wakatipu to Teviot Valley charter."
+  tags:
+    - "Wakatipu"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Queenstown departure"
+    - "Roxburgh arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-roxburgh-queenstown
+  from: NZRX
+  to: NZQN
+  from_name: Roxburgh
+  to_name: Queenstown
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 50
+  duration: "~25m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - High Country
+  difficulty: 3
+  description: "Roxburgh to Queenstown for Teviot Valley to Queenstown return charter."
+  tags:
+    - "Teviot"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Roxburgh departure"
+    - "Queenstown arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+  alternate: "NZLX (Alexandra)"
+
+- id: fw-alexandra-invercargill
+  from: NZLX
+  to: NZNV
+  from_name: Alexandra
+  to_name: Invercargill
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 95
+  duration: "~45m"
+  aircraft:
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Mountain
+    - Plains
+  difficulty: 3
+  description: "Alexandra to Invercargill for Central Otago to Southland positioning charter."
+  tags:
+    - "Central"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Alexandra departure"
+    - "Invercargill arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+  alternate: "NZDN (Dunedin)"
+
+- id: fw-invercargill-alexandra
+  from: NZNV
+  to: NZLX
+  from_name: Invercargill
+  to_name: Alexandra
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 95
+  duration: "~45m"
+  aircraft:
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Mountain
+    - Plains
+  difficulty: 3
+  description: "Invercargill to Alexandra for Southland to Central Otago return charter."
+  tags:
+    - "Southland"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Invercargill departure"
+    - "Alexandra arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+  alternate: "NZDN (Dunedin)"
+
+- id: fw-queenstown-manapouri
+  from: NZQN
+  to: NZMO
+  from_name: Queenstown
+  to_name: Te Anau / Manapouri
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 65
+  duration: "~30m"
+  aircraft:
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Mountain
+    - Alpine
+    - Remote
+  difficulty: 3
+  description: "Queenstown to Te Anau / Manapouri for Fiordland access charter."
+  tags:
+    - "Fiordland"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Queenstown departure"
+    - "Te Anau / Manapouri arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+  alternate: "NZWF (Wanaka)"
+  warning: "Fiordland weather can change rapidly"
+
+- id: fw-manapouri-queenstown
+  from: NZMO
+  to: NZQN
+  from_name: Te Anau / Manapouri
+  to_name: Queenstown
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 65
+  duration: "~30m"
+  aircraft:
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Mountain
+    - Alpine
+    - Remote
+  difficulty: 3
+  description: "Te Anau / Manapouri to Queenstown for Fiordland return charter."
+  tags:
+    - "Fiordland"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Te Anau / Manapouri departure"
+    - "Queenstown arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+  alternate: "NZWF (Wanaka)"
+  warning: "Fiordland weather can change rapidly"
+
+- id: fw-dunedin-queenstown
+  from: NZDN
+  to: NZQN
+  from_name: Dunedin International
+  to_name: Queenstown
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 95
+  duration: "~45m"
+  aircraft:
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Mountain
+    - Alpine
+  difficulty: 3
+  description: "Dunedin International to Queenstown for Otago to Southern Lakes executive charter."
+  tags:
+    - "Otago"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Dunedin International departure"
+    - "Queenstown arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-queenstown-dunedin
+  from: NZQN
+  to: NZDN
+  from_name: Queenstown
+  to_name: Dunedin International
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 95
+  duration: "~45m"
+  aircraft:
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Mountain
+    - Alpine
+  difficulty: 3
+  description: "Queenstown to Dunedin International for Southern Lakes to Otago return charter."
+  tags:
+    - "Southern"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Queenstown departure"
+    - "Dunedin International arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-chch-westport
+  from: NZCH
+  to: NZWS
+  from_name: Christchurch International
+  to_name: Westport
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 140
+  duration: "~1h 05m"
+  aircraft:
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Mountain
+    - Coastal
+  difficulty: 4
+  description: "Christchurch International to Westport for Canterbury to Buller industry charter."
+  tags:
+    - "Canterbury"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Christchurch International departure"
+    - "Westport arrival"
+    - "Coastal routing option"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+  alternate: "NZHK (Hokitika)"
+  warning: "West Coast rain and cloud require flexible routing"
+
+- id: fw-westport-chch
+  from: NZWS
+  to: NZCH
+  from_name: Westport
+  to_name: Christchurch International
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 140
+  duration: "~1h 05m"
+  aircraft:
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Mountain
+    - Coastal
+  difficulty: 4
+  description: "Westport to Christchurch International for Buller to Canterbury return industry charter."
+  tags:
+    - "Buller"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Westport departure"
+    - "Christchurch International arrival"
+    - "Coastal routing option"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+  alternate: "NZHK (Hokitika)"
+  warning: "West Coast rain and cloud require flexible routing"
+
+- id: fw-hokitika-westport
+  from: NZHK
+  to: NZWS
+  from_name: Hokitika
+  to_name: Westport
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 75
+  duration: "~40m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 3
+  description: "Hokitika to Westport for West Coast regional transfer."
+  tags:
+    - "West"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Hokitika departure"
+    - "Westport arrival"
+    - "Coastal routing option"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-westport-hokitika
+  from: NZWS
+  to: NZHK
+  from_name: Westport
+  to_name: Hokitika
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 75
+  duration: "~40m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 3
+  description: "Westport to Hokitika for West Coast return regional transfer."
+  tags:
+    - "West"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Westport departure"
+    - "Hokitika arrival"
+    - "Coastal routing option"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-greymouth-westport
+  from: NZGM
+  to: NZWS
+  from_name: Greymouth
+  to_name: Westport
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 50
+  duration: "~25m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 2
+  description: "Greymouth to Westport for Buller and Paparoa regional charter."
+  tags:
+    - "Buller"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Greymouth departure"
+    - "Westport arrival"
+    - "Coastal routing option"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-westport-greymouth
+  from: NZWS
+  to: NZGM
+  from_name: Westport
+  to_name: Greymouth
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 50
+  duration: "~25m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 2
+  description: "Westport to Greymouth for Greymouth return regional charter."
+  tags:
+    - "Greymouth"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Westport departure"
+    - "Greymouth arrival"
+    - "Coastal routing option"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-nelson-picton
+  from: NZNS
+  to: NZPN
+  from_name: Nelson
+  to_name: Picton
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 40
+  duration: "~20m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 2
+  description: "Nelson to Picton for Marlborough Sounds regional shuttle."
+  tags:
+    - "Marlborough"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Nelson departure"
+    - "Picton arrival"
+    - "Coastal routing option"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-picton-nelson
+  from: NZPN
+  to: NZNS
+  from_name: Picton
+  to_name: Nelson
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 40
+  duration: "~20m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 2
+  description: "Picton to Nelson for Marlborough Sounds return shuttle."
+  tags:
+    - "Marlborough"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Picton departure"
+    - "Nelson arrival"
+    - "Coastal routing option"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-picton-woodbourne
+  from: NZPN
+  to: NZWB
+  from_name: Picton
+  to_name: Woodbourne
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 20
+  duration: "~10m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+  flight_rules: VFR
+  conditions:
+    - Plains
+    - Coastal
+  difficulty: 1
+  description: "Picton to Woodbourne for Marlborough crew repositioning."
+  tags:
+    - "Marlborough"
+    - "South Island"
+  highlights:
+    - "Picton departure"
+    - "Woodbourne arrival"
+    - "Coastal routing option"
+    - "Flexible VFR routing for charter work"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Remain clear of controlled airspace unless cleared"
+
+- id: fw-woodbourne-picton
+  from: NZWB
+  to: NZPN
+  from_name: Woodbourne
+  to_name: Picton
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 20
+  duration: "~10m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+  flight_rules: VFR
+  conditions:
+    - Plains
+    - Coastal
+  difficulty: 1
+  description: "Woodbourne to Picton for Marlborough return crew repositioning."
+  tags:
+    - "Marlborough"
+    - "South Island"
+  highlights:
+    - "Woodbourne departure"
+    - "Picton arrival"
+    - "Coastal routing option"
+    - "Flexible VFR routing for charter work"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Remain clear of controlled airspace unless cleared"
+
+- id: fw-nelson-motueka
+  from: NZNS
+  to: NZMK
+  from_name: Nelson
+  to_name: Motueka
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 30
+  duration: "~15m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Plains
+  difficulty: 1
+  description: "Nelson to Motueka for Tasman regional transfer."
+  tags:
+    - "Tasman"
+    - "South Island"
+  highlights:
+    - "Nelson departure"
+    - "Motueka arrival"
+    - "Coastal routing option"
+    - "Flexible VFR routing for charter work"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Remain clear of controlled airspace unless cleared"
+
+- id: fw-motueka-nelson
+  from: NZMK
+  to: NZNS
+  from_name: Motueka
+  to_name: Nelson
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 30
+  duration: "~15m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Plains
+  difficulty: 1
+  description: "Motueka to Nelson for Tasman return transfer."
+  tags:
+    - "Tasman"
+    - "South Island"
+  highlights:
+    - "Motueka departure"
+    - "Nelson arrival"
+    - "Coastal routing option"
+    - "Flexible VFR routing for charter work"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Remain clear of controlled airspace unless cleared"
+
+- id: fw-nelson-takaka
+  from: NZNS
+  to: NZTK
+  from_name: Nelson
+  to_name: Takaka
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 45
+  duration: "~25m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Coastal
+  difficulty: 2
+  description: "Nelson to Takaka for Golden Bay charter across Takaka Hill."
+  tags:
+    - "Golden"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Nelson departure"
+    - "Takaka arrival"
+    - "Coastal routing option"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-takaka-nelson
+  from: NZTK
+  to: NZNS
+  from_name: Takaka
+  to_name: Nelson
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 45
+  duration: "~25m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Coastal
+  difficulty: 2
+  description: "Takaka to Nelson for Golden Bay return charter across Takaka Hill."
+  tags:
+    - "Golden"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Takaka departure"
+    - "Nelson arrival"
+    - "Coastal routing option"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-woodbourne-kaikoura
+  from: NZWB
+  to: NZKI
+  from_name: Woodbourne
+  to_name: Kaikoura
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 65
+  duration: "~30m"
+  aircraft:
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 3
+  description: "Woodbourne to Kaikoura for Marlborough to Kaikoura coastal charter."
+  tags:
+    - "Marlborough"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Woodbourne departure"
+    - "Kaikoura arrival"
+    - "Coastal routing option"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-kaikoura-woodbourne
+  from: NZKI
+  to: NZWB
+  from_name: Kaikoura
+  to_name: Woodbourne
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 65
+  duration: "~30m"
+  aircraft:
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 3
+  description: "Kaikoura to Woodbourne for Kaikoura to Marlborough return charter."
+  tags:
+    - "Kaikoura"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Kaikoura departure"
+    - "Woodbourne arrival"
+    - "Coastal routing option"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-chch-kaikoura
+  from: NZCH
+  to: NZKI
+  from_name: Christchurch International
+  to_name: Kaikoura
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 90
+  duration: "~50m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 2
+  description: "Christchurch International to Kaikoura for Kaikoura wildlife and regional charter."
+  tags:
+    - "Kaikoura"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Christchurch International departure"
+    - "Kaikoura arrival"
+    - "Coastal routing option"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-kaikoura-chch
+  from: NZKI
+  to: NZCH
+  from_name: Kaikoura
+  to_name: Christchurch International
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 90
+  duration: "~50m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 2
+  description: "Kaikoura to Christchurch International for Kaikoura return regional charter."
+  tags:
+    - "Kaikoura"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Kaikoura departure"
+    - "Christchurch International arrival"
+    - "Coastal routing option"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-nelson-murchison
+  from: NZNS
+  to: NZMR
+  from_name: Nelson
+  to_name: Murchison
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 65
+  duration: "~35m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Remote
+  difficulty: 3
+  description: "Nelson to Murchison for inland Tasman back-country charter."
+  tags:
+    - "Inland"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Nelson departure"
+    - "Murchison arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-murchison-nelson
+  from: NZMR
+  to: NZNS
+  from_name: Murchison
+  to_name: Nelson
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 65
+  duration: "~35m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Remote
+  difficulty: 3
+  description: "Murchison to Nelson for Murchison return back-country charter."
+  tags:
+    - "Murchison"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Murchison departure"
+    - "Nelson arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-murchison-westport
+  from: NZMR
+  to: NZWS
+  from_name: Murchison
+  to_name: Westport
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 40
+  duration: "~20m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Remote
+  difficulty: 3
+  description: "Murchison to Westport for Buller interior to West Coast regional charter."
+  tags:
+    - "Buller"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Murchison departure"
+    - "Westport arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-westport-murchison
+  from: NZWS
+  to: NZMR
+  from_name: Westport
+  to_name: Murchison
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 40
+  duration: "~20m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Remote
+  difficulty: 3
+  description: "Westport to Murchison for Westport to Buller interior return charter."
+  tags:
+    - "Westport"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Westport departure"
+    - "Murchison arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-chch-rakitata
+  from: NZCH
+  to: NZRI
+  from_name: Christchurch International
+  to_name: Rakitata Island
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 65
+  duration: "~40m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+  flight_rules: VFR
+  conditions:
+    - Plains
+  difficulty: 1
+  description: "Christchurch International to Rakitata Island for Rakitata Island private-strip charter."
+  tags:
+    - "Rakitata"
+    - "South Island"
+  highlights:
+    - "Christchurch International departure"
+    - "Rakitata Island arrival"
+    - "Flexible VFR routing for charter work"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Remain clear of controlled airspace unless cleared"
+
+- id: fw-rakitata-chch
+  from: NZRI
+  to: NZCH
+  from_name: Rakitata Island
+  to_name: Christchurch International
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 65
+  duration: "~40m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+  flight_rules: VFR
+  conditions:
+    - Plains
+  difficulty: 1
+  description: "Rakitata Island to Christchurch International for Rakitata Island return private-strip charter."
+  tags:
+    - "Rakitata"
+    - "South Island"
+  highlights:
+    - "Rakitata Island departure"
+    - "Christchurch International arrival"
+    - "Flexible VFR routing for charter work"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Remain clear of controlled airspace unless cleared"
+
+- id: fw-timaru-rakitata
+  from: NZTU
+  to: NZRI
+  from_name: Timaru
+  to_name: Rakitata Island
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 20
+  duration: "~10m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+  flight_rules: VFR
+  conditions:
+    - Plains
+  difficulty: 1
+  description: "Timaru to Rakitata Island for South Canterbury short-strip charter."
+  tags:
+    - "South"
+    - "South Island"
+  highlights:
+    - "Timaru departure"
+    - "Rakitata Island arrival"
+    - "Flexible VFR routing for charter work"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Remain clear of controlled airspace unless cleared"
+
+- id: fw-rakitata-timaru
+  from: NZRI
+  to: NZTU
+  from_name: Rakitata Island
+  to_name: Timaru
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 20
+  duration: "~10m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+  flight_rules: VFR
+  conditions:
+    - Plains
+  difficulty: 1
+  description: "Rakitata Island to Timaru for Rakitata Island return short-strip charter."
+  tags:
+    - "Rakitata"
+    - "South Island"
+  highlights:
+    - "Rakitata Island departure"
+    - "Timaru arrival"
+    - "Flexible VFR routing for charter work"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Remain clear of controlled airspace unless cleared"
+
+- id: fw-chch-springfield
+  from: NZCH
+  to: NZSF
+  from_name: Christchurch International
+  to_name: Springfield
+  category: fixed-wing
+  operation: Training
+  distance_nm: 20
+  duration: "~10m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+  flight_rules: VFR
+  conditions:
+    - Plains
+    - Mountain
+  difficulty: 1
+  description: "Christchurch International to Springfield for foothill proficiency and charter sector."
+  tags:
+    - "Foothill"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Christchurch International departure"
+    - "Springfield arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-springfield-chch
+  from: NZSF
+  to: NZCH
+  from_name: Springfield
+  to_name: Christchurch International
+  category: fixed-wing
+  operation: Training
+  distance_nm: 20
+  duration: "~10m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+  flight_rules: VFR
+  conditions:
+    - Plains
+    - Mountain
+  difficulty: 1
+  description: "Springfield to Christchurch International for foothill return proficiency sector."
+  tags:
+    - "Foothill"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Springfield departure"
+    - "Christchurch International arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-chch-ashburton
+  from: NZCH
+  to: NZAS
+  from_name: Christchurch International
+  to_name: Ashburton
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 45
+  duration: "~25m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Plains
+  difficulty: 1
+  description: "Christchurch International to Ashburton for Canterbury short-haul charter."
+  tags:
+    - "Canterbury"
+    - "South Island"
+  highlights:
+    - "Christchurch International departure"
+    - "Ashburton arrival"
+    - "Flexible VFR routing for charter work"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Remain clear of controlled airspace unless cleared"
+
+- id: fw-ashburton-chch
+  from: NZAS
+  to: NZCH
+  from_name: Ashburton
+  to_name: Christchurch International
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 45
+  duration: "~25m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Plains
+  difficulty: 1
+  description: "Ashburton to Christchurch International for Canterbury return short-haul charter."
+  tags:
+    - "Canterbury"
+    - "South Island"
+  highlights:
+    - "Ashburton departure"
+    - "Christchurch International arrival"
+    - "Flexible VFR routing for charter work"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Remain clear of controlled airspace unless cleared"
+
+- id: fw-chch-omarama
+  from: NZCH
+  to: NZOA
+  from_name: Christchurch International
+  to_name: Omarama
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 150
+  duration: "~1h 10m"
+  aircraft:
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Mountain
+    - Alpine
+  difficulty: 4
+  description: "Christchurch International to Omarama for Mackenzie high-country charter."
+  tags:
+    - "Mackenzie"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Christchurch International departure"
+    - "Omarama arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+  alternate: "NZMC (Mount Cook)"
+  warning: "Omarama has active gliding and winch-launch operations"
+
+- id: fw-omarama-chch
+  from: NZOA
+  to: NZCH
+  from_name: Omarama
+  to_name: Christchurch International
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 150
+  duration: "~1h 10m"
+  aircraft:
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: IFR
+  conditions:
+    - Mountain
+    - Alpine
+  difficulty: 4
+  description: "Omarama to Christchurch International for Mackenzie return high-country charter."
+  tags:
+    - "Mackenzie"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Omarama departure"
+    - "Christchurch International arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+  alternate: "NZMC (Mount Cook)"
+  warning: "Omarama has active gliding and winch-launch operations"
+
+- id: fw-wanaka-omarama
+  from: NZWF
+  to: NZOA
+  from_name: Wanaka
+  to_name: Omarama
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 40
+  duration: "~20m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - High Country
+  difficulty: 3
+  description: "Wanaka to Omarama for Upper Clutha to Upper Waitaki high-country charter."
+  tags:
+    - "Upper"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Wanaka departure"
+    - "Omarama arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-omarama-wanaka
+  from: NZOA
+  to: NZWF
+  from_name: Omarama
+  to_name: Wanaka
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 40
+  duration: "~20m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - High Country
+  difficulty: 3
+  description: "Omarama to Wanaka for Upper Waitaki to Wanaka return high-country charter."
+  tags:
+    - "Upper"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Omarama departure"
+    - "Wanaka arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-pukaki-mountcook
+  from: NZUK
+  to: NZMC
+  from_name: Pukaki
+  to_name: Mount Cook
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 30
+  duration: "~15m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+  difficulty: 4
+  description: "Pukaki to Mount Cook for short Aoraki / Mount Cook repositioning charter."
+  tags:
+    - "Short"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Pukaki departure"
+    - "Mount Cook arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-mountcook-pukaki
+  from: NZMC
+  to: NZUK
+  from_name: Mount Cook
+  to_name: Pukaki
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 30
+  duration: "~15m"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+  difficulty: 4
+  description: "Mount Cook to Pukaki for short Mackenzie Basin return repositioning."
+  tags:
+    - "Short"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Mount Cook departure"
+    - "Pukaki arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-mountcook-glentanner
+  from: NZMC
+  to: NZGT
+  from_name: Mount Cook
+  to_name: Glentanner Station
+  category: fixed-wing
+  operation: Transfer
+  distance_nm: 20
+  duration: "~10m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+  difficulty: 2
+  description: "Mount Cook to Glentanner Station for Aoraki tourism-area transfer."
+  tags:
+    - "Aoraki"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Mount Cook departure"
+    - "Glentanner Station arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+- id: fw-glentanner-mountcook
+  from: NZGT
+  to: NZMC
+  from_name: Glentanner Station
+  to_name: Mount Cook
+  category: fixed-wing
+  operation: Transfer
+  distance_nm: 20
+  duration: "~10m"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+  difficulty: 2
+  description: "Glentanner Station to Mount Cook for Aoraki tourism-area return transfer."
+  tags:
+    - "Aoraki"
+    - "South Island"
+    - "High Country"
+  highlights:
+    - "Glentanner Station departure"
+    - "Mount Cook arrival"
+    - "Terrain-sensitive mountain routing"
+  airspace:
+    - "Use current published departure and arrival procedures"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and monitor cloud on mountain sectors"
+
+# Helicopter ---------------------------------------------------------------
 - id: hel-nzch-nzmf-r66
   from: NZCH
   to: NZMF
@@ -601,8 +2631,1909 @@
     - "Stewart Island: Remote terrain, limited emergency landing options"
   alternate: "NZNV (Invercargill) or NZMO (Manapouri)"
 
-# Scenic Tours -------------------------------------------------------------
+- id: hel-chch-nzmc-h125
+  from: NZCH
+  to: NZMC
+  from_name: Christchurch International
+  to_name: Mount Cook
+  category: helicopter
+  operation: Charter
+  distance_nm: 115
+  duration: "~55m"
+  aircraft:
+    - Airbus H125
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Alpine
+  difficulty: 4
+  description: "Christchurch International to Mount Cook for alpine transfer to Mount Cook."
+  tags:
+    - "Alpine"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Christchurch International departure"
+    - "Mount Cook arrival"
+    - "Terrain-focused helicopter routing"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain visual terrain clearance and reassess weather continuously"
 
+- id: hel-nzmc-nzch-h125
+  from: NZMC
+  to: NZCH
+  from_name: Mount Cook
+  to_name: Christchurch International
+  category: helicopter
+  operation: Charter
+  distance_nm: 115
+  duration: "~55m"
+  aircraft:
+    - Airbus H125
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Alpine
+  difficulty: 4
+  description: "Mount Cook to Christchurch International for alpine return charter from Mount Cook."
+  tags:
+    - "Alpine"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Mount Cook departure"
+    - "Christchurch International arrival"
+    - "Terrain-focused helicopter routing"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain visual terrain clearance and reassess weather continuously"
+
+- id: hel-chch-nzwf-heli
+  from: NZCH
+  to: NZWF
+  from_name: Christchurch International
+  to_name: Wanaka
+  category: helicopter
+  operation: Charter
+  distance_nm: 175
+  duration: "~1h 25m"
+  aircraft:
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Alpine
+  difficulty: 4
+  description: "Christchurch International to Wanaka for long-range Wakatipu and Wanaka transfer."
+  tags:
+    - "Long-Range"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Christchurch International departure"
+    - "Wanaka arrival"
+    - "Terrain-focused helicopter routing"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain visual terrain clearance and reassess weather continuously"
+
+- id: hel-nzwf-nzqn-heli
+  from: NZWF
+  to: NZQN
+  from_name: Wanaka
+  to_name: Queenstown
+  category: helicopter
+  operation: Transfer
+  distance_nm: 30
+  duration: "~15m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Alpine
+  difficulty: 3
+  description: "Wanaka to Queenstown for Wanaka to Queenstown helicopter transfer."
+  tags:
+    - "Wanaka"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Wanaka departure"
+    - "Queenstown arrival"
+    - "Terrain-focused helicopter routing"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain visual terrain clearance and reassess weather continuously"
+
+- id: hel-nzqn-nzwf-heli
+  from: NZQN
+  to: NZWF
+  from_name: Queenstown
+  to_name: Wanaka
+  category: helicopter
+  operation: Transfer
+  distance_nm: 30
+  duration: "~15m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Alpine
+  difficulty: 3
+  description: "Queenstown to Wanaka for Queenstown to Wanaka helicopter transfer."
+  tags:
+    - "Queenstown"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Queenstown departure"
+    - "Wanaka arrival"
+    - "Terrain-focused helicopter routing"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain visual terrain clearance and reassess weather continuously"
+
+- id: hel-nzqn-nzmo-heli
+  from: NZQN
+  to: NZMO
+  from_name: Queenstown
+  to_name: Te Anau / Manapouri
+  category: helicopter
+  operation: Charter
+  distance_nm: 60
+  duration: "~30m"
+  aircraft:
+    - Robinson R66
+    - Airbus H125
+    - Airbus H145
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Remote
+  difficulty: 4
+  description: "Queenstown to Te Anau / Manapouri for Southern Lakes to Fiordland helicopter charter."
+  tags:
+    - "Southern"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Queenstown departure"
+    - "Te Anau / Manapouri arrival"
+    - "Terrain-focused helicopter routing"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain visual terrain clearance and reassess weather continuously"
+    - "Carry suitable fuel reserves and identify practical diversion areas"
+
+- id: hel-nzmo-nzqn-heli
+  from: NZMO
+  to: NZQN
+  from_name: Te Anau / Manapouri
+  to_name: Queenstown
+  category: helicopter
+  operation: Charter
+  distance_nm: 60
+  duration: "~30m"
+  aircraft:
+    - Robinson R66
+    - Airbus H125
+    - Airbus H145
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Remote
+  difficulty: 4
+  description: "Te Anau / Manapouri to Queenstown for Fiordland to Southern Lakes helicopter charter."
+  tags:
+    - "Fiordland"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Te Anau / Manapouri departure"
+    - "Queenstown arrival"
+    - "Terrain-focused helicopter routing"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain visual terrain clearance and reassess weather continuously"
+    - "Carry suitable fuel reserves and identify practical diversion areas"
+
+- id: hel-nzmo-nzmf-heli
+  from: NZMO
+  to: NZMF
+  from_name: Te Anau / Manapouri
+  to_name: Milford Sound
+  category: helicopter
+  operation: Charter
+  distance_nm: 60
+  duration: "~30m"
+  aircraft:
+    - Robinson R66
+    - Airbus H125
+    - Airbus H145
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+    - Remote
+  difficulty: 5
+  description: "Te Anau / Manapouri to Milford Sound for Te Anau / Manapouri to Milford Sound access flight."
+  tags:
+    - "Te"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Te Anau / Manapouri departure"
+    - "Milford Sound arrival"
+    - "Terrain-focused helicopter routing"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain visual terrain clearance and reassess weather continuously"
+    - "Carry suitable fuel reserves and identify practical diversion areas"
+
+- id: hel-nzmf-nzmo-heli
+  from: NZMF
+  to: NZMO
+  from_name: Milford Sound
+  to_name: Te Anau / Manapouri
+  category: helicopter
+  operation: Charter
+  distance_nm: 60
+  duration: "~30m"
+  aircraft:
+    - Robinson R66
+    - Airbus H125
+    - Airbus H145
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+    - Remote
+  difficulty: 5
+  description: "Milford Sound to Te Anau / Manapouri for Milford Sound to Te Anau / Manapouri return transfer."
+  tags:
+    - "Milford"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Milford Sound departure"
+    - "Te Anau / Manapouri arrival"
+    - "Terrain-focused helicopter routing"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain visual terrain clearance and reassess weather continuously"
+    - "Carry suitable fuel reserves and identify practical diversion areas"
+
+- id: hel-nznv-nzrc-heli
+  from: NZNV
+  to: NZRC
+  from_name: Invercargill
+  to_name: Stewart Island / Oban
+  category: helicopter
+  operation: Charter
+  distance_nm: 35
+  duration: "~15m"
+  aircraft:
+    - Airbus H125
+    - Airbus H145
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Remote
+  difficulty: 4
+  description: "Invercargill to Stewart Island / Oban for Southland to Stewart Island helicopter charter."
+  tags:
+    - "Southland"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Invercargill departure"
+    - "Stewart Island / Oban arrival"
+    - "Low-level visual route option"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+    - "Carry suitable fuel reserves and identify practical diversion areas"
+
+- id: hel-nzrc-nznv-heli
+  from: NZRC
+  to: NZNV
+  from_name: Stewart Island / Oban
+  to_name: Invercargill
+  category: helicopter
+  operation: Charter
+  distance_nm: 35
+  duration: "~15m"
+  aircraft:
+    - Airbus H125
+    - Airbus H145
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Remote
+  difficulty: 4
+  description: "Stewart Island / Oban to Invercargill for Stewart Island to Southland helicopter return."
+  tags:
+    - "Stewart"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Stewart Island / Oban departure"
+    - "Invercargill arrival"
+    - "Low-level visual route option"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+    - "Carry suitable fuel reserves and identify practical diversion areas"
+
+- id: hel-nzhk-nzfj-heli
+  from: NZHK
+  to: NZFJ
+  from_name: Hokitika
+  to_name: Franz Josef
+  category: helicopter
+  operation: Tour
+  distance_nm: 45
+  duration: "~25m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Glacier
+    - Alpine
+    - Mountain
+  difficulty: 4
+  description: "Hokitika to Franz Josef for West Coast glacier access charter."
+  tags:
+    - "West"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Hokitika departure"
+    - "Franz Josef arrival"
+    - "Terrain-focused helicopter routing"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain visual terrain clearance and reassess weather continuously"
+
+- id: hel-nzfj-nzhk-heli
+  from: NZFJ
+  to: NZHK
+  from_name: Franz Josef
+  to_name: Hokitika
+  category: helicopter
+  operation: Transfer
+  distance_nm: 45
+  duration: "~25m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Glacier
+    - Alpine
+    - Mountain
+  difficulty: 4
+  description: "Franz Josef to Hokitika for Franz Josef to Hokitika return helicopter transfer."
+  tags:
+    - "Franz"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Franz Josef departure"
+    - "Hokitika arrival"
+    - "Terrain-focused helicopter routing"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain visual terrain clearance and reassess weather continuously"
+
+- id: hel-nzgm-nzws-heli
+  from: NZGM
+  to: NZWS
+  from_name: Greymouth
+  to_name: Westport
+  category: helicopter
+  operation: Transfer
+  distance_nm: 50
+  duration: "~25m"
+  aircraft:
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 3
+  description: "Greymouth to Westport for West Coast regional helicopter transfer."
+  tags:
+    - "West"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Greymouth departure"
+    - "Westport arrival"
+    - "Low-level visual route option"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain visual terrain clearance and reassess weather continuously"
+
+- id: hel-nzws-nzgm-heli
+  from: NZWS
+  to: NZGM
+  from_name: Westport
+  to_name: Greymouth
+  category: helicopter
+  operation: Transfer
+  distance_nm: 50
+  duration: "~25m"
+  aircraft:
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 3
+  description: "Westport to Greymouth for Buller to Greymouth return helicopter transfer."
+  tags:
+    - "Buller"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Westport departure"
+    - "Greymouth arrival"
+    - "Low-level visual route option"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain visual terrain clearance and reassess weather continuously"
+
+- id: hel-nzns-nzmk-heli
+  from: NZNS
+  to: NZMK
+  from_name: Nelson
+  to_name: Motueka
+  category: helicopter
+  operation: Transfer
+  distance_nm: 30
+  duration: "~15m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Coastal
+  difficulty: 2
+  description: "Nelson to Motueka for Tasman Bay regional helicopter transfer."
+  tags:
+    - "Tasman"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Nelson departure"
+    - "Motueka arrival"
+    - "Low-level visual route option"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+
+- id: hel-nzmk-nzns-heli
+  from: NZMK
+  to: NZNS
+  from_name: Motueka
+  to_name: Nelson
+  category: helicopter
+  operation: Transfer
+  distance_nm: 30
+  duration: "~15m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Coastal
+  difficulty: 2
+  description: "Motueka to Nelson for Motueka to Nelson return helicopter transfer."
+  tags:
+    - "Motueka"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Motueka departure"
+    - "Nelson arrival"
+    - "Low-level visual route option"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+
+- id: hel-nzns-nztk-heli
+  from: NZNS
+  to: NZTK
+  from_name: Nelson
+  to_name: Takaka
+  category: helicopter
+  operation: Transfer
+  distance_nm: 40
+  duration: "~20m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Coastal
+  difficulty: 3
+  description: "Nelson to Takaka for Golden Bay helicopter connection."
+  tags:
+    - "Golden"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Nelson departure"
+    - "Takaka arrival"
+    - "Low-level visual route option"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain visual terrain clearance and reassess weather continuously"
+
+- id: hel-nztk-nzns-heli
+  from: NZTK
+  to: NZNS
+  from_name: Takaka
+  to_name: Nelson
+  category: helicopter
+  operation: Transfer
+  distance_nm: 40
+  duration: "~20m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Coastal
+  difficulty: 3
+  description: "Takaka to Nelson for Golden Bay to Nelson return helicopter connection."
+  tags:
+    - "Golden"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Takaka departure"
+    - "Nelson arrival"
+    - "Low-level visual route option"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain visual terrain clearance and reassess weather continuously"
+
+- id: hel-nzdn-nznv-heli
+  from: NZDN
+  to: NZNV
+  from_name: Dunedin International
+  to_name: Invercargill
+  category: helicopter
+  operation: Charter
+  distance_nm: 90
+  duration: "~45m"
+  aircraft:
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Remote
+  difficulty: 3
+  description: "Dunedin International to Invercargill for Otago to Southland helicopter charter."
+  tags:
+    - "Otago"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Dunedin International departure"
+    - "Invercargill arrival"
+    - "Low-level visual route option"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+    - "Carry suitable fuel reserves and identify practical diversion areas"
+
+- id: hel-nznv-nzdn-heli
+  from: NZNV
+  to: NZDN
+  from_name: Invercargill
+  to_name: Dunedin International
+  category: helicopter
+  operation: Charter
+  distance_nm: 90
+  duration: "~45m"
+  aircraft:
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Remote
+  difficulty: 3
+  description: "Invercargill to Dunedin International for Southland to Otago helicopter return."
+  tags:
+    - "Southland"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Invercargill departure"
+    - "Dunedin International arrival"
+    - "Low-level visual route option"
+  airspace:
+    - "Use current published procedures and local helicopter operating information"
+    - "Check current AIP and NOTAMs before flight"
+    - "Carry suitable fuel reserves and identify practical diversion areas"
+
+- id: hel-nzqn-routeburn
+  from: NZQN
+  to: NZQN
+  from_name: Queenstown
+  to_name: Routeburn Track and Routeburn Flats
+  category: helicopter
+  operation: Charter
+  distance_nm: 55
+  duration: "~25m"
+  aircraft:
+    - Airbus H145
+    - Airbus H125
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Alpine
+    - Remote
+  difficulty: 4
+  description: "Helicopter operation from Queenstown to Routeburn Track and Routeburn Flats for Routeburn lodge and track access."
+  tags:
+    - "Routeburn"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Routeburn Track and Routeburn Flats"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+    - "Confirm landing site suitability, fuel endurance and a practical weather escape route"
+  warning: "Weather around the Main Divide can close the route quickly"
+
+- id: hel-nzqn-rees
+  from: NZQN
+  to: NZQN
+  from_name: Queenstown
+  to_name: Rees Valley high-country stations
+  category: helicopter
+  operation: Charter
+  distance_nm: 45
+  duration: "~25m"
+  aircraft:
+    - Airbus H125
+    - Robinson R66
+    - Robinson R44
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Remote
+  difficulty: 4
+  description: "Helicopter operation from Queenstown to Rees Valley high-country stations for Rees Valley station charter."
+  tags:
+    - "Rees"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Rees Valley high-country stations"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+    - "Confirm landing site suitability, fuel endurance and a practical weather escape route"
+  warning: "Confirm landing area and local station permission"
+
+- id: hel-nzqn-walter
+  from: NZQN
+  to: NZQN
+  from_name: Queenstown
+  to_name: Walter Peak and Lake Wakatipu high-country lodges
+  category: helicopter
+  operation: Charter
+  distance_nm: 30
+  duration: "~15m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Lakes
+  difficulty: 2
+  description: "Helicopter operation from Queenstown to Walter Peak and Lake Wakatipu high-country lodges for Wakatipu lodge transfer."
+  tags:
+    - "Wakatipu"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Walter Peak and Lake Wakatipu high-country lodges"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+
+- id: hel-nzqn-glenorchy
+  from: NZQN
+  to: NZQN
+  from_name: Queenstown
+  to_name: Glenorchy and Paradise Valley
+  category: helicopter
+  operation: Tour
+  distance_nm: 35
+  duration: "~20m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Lakes
+  difficulty: 3
+  description: "Helicopter operation from Queenstown to Glenorchy and Paradise Valley for Glenorchy and Paradise sightseeing."
+  tags:
+    - "Glenorchy"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Glenorchy and Paradise Valley"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+
+- id: hel-nzwf-robroy
+  from: NZWF
+  to: NZWF
+  from_name: Wanaka
+  to_name: Rob Roy Glacier
+  category: helicopter
+  operation: Tour
+  distance_nm: 45
+  duration: "~25m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Glacier
+    - Alpine
+    - Mountain
+  difficulty: 4
+  description: "Helicopter operation from Wanaka to Rob Roy Glacier for Rob Roy Glacier scenic and landing mission."
+  tags:
+    - "Rob"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Rob Roy Glacier"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+  warning: "Glacier conditions change quickly"
+
+- id: hel-nzwf-treble
+  from: NZWF
+  to: NZWF
+  from_name: Wanaka
+  to_name: Treble Cone and Matukituki Valley
+  category: helicopter
+  operation: Charter
+  distance_nm: 40
+  duration: "~20m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Alpine
+  difficulty: 3
+  description: "Helicopter operation from Wanaka to Treble Cone and Matukituki Valley for Treble Cone and Matukituki access."
+  tags:
+    - "Treble"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Treble Cone and Matukituki Valley"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+
+- id: hel-nzwf-hawea
+  from: NZWF
+  to: NZWF
+  from_name: Wanaka
+  to_name: Lake Hawea high-country lodges
+  category: helicopter
+  operation: Charter
+  distance_nm: 35
+  duration: "~20m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Lakes
+    - Mountain
+  difficulty: 2
+  description: "Helicopter operation from Wanaka to Lake Hawea high-country lodges for Lake Hawea lodge and scenic transfer."
+  tags:
+    - "Lake"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Lake Hawea high-country lodges"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+
+- id: hel-nzmc-hooker
+  from: NZMC
+  to: NZMC
+  from_name: Mount Cook
+  to_name: Hooker Valley and Mueller Lake
+  category: helicopter
+  operation: Tour
+  distance_nm: 40
+  duration: "~20m"
+  aircraft:
+    - Airbus H125
+    - Airbus H145
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+    - Lakes
+  difficulty: 4
+  description: "Helicopter operation from Mount Cook to Hooker Valley and Mueller Lake for Aoraki alpine sightseeing and landing."
+  tags:
+    - "Aoraki"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Hooker Valley and Mueller Lake"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+  warning: "High density altitude and katabatic winds require care"
+
+- id: hel-nzmc-tasman-terminal
+  from: NZMC
+  to: NZMC
+  from_name: Mount Cook
+  to_name: Tasman Glacier terminal lake
+  category: helicopter
+  operation: Tour
+  distance_nm: 55
+  duration: "~25m"
+  aircraft:
+    - Airbus H125
+    - Airbus H145
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Glacier
+    - Alpine
+  difficulty: 5
+  description: "Helicopter operation from Mount Cook to Tasman Glacier terminal lake for Tasman Glacier terminal photography and landing."
+  tags:
+    - "Tasman"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Tasman Glacier terminal lake"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+  warning: "Glacier surface and weather must be checked before landing"
+
+- id: hel-nzmc-aoraki-ridge
+  from: NZMC
+  to: NZMC
+  from_name: Mount Cook
+  to_name: Aoraki / Mount Cook alpine ridge viewpoint
+  category: helicopter
+  operation: Tour
+  distance_nm: 60
+  duration: "~30m"
+  aircraft:
+    - Airbus H125
+    - Airbus H145
+  flight_rules: VFR
+  conditions:
+    - Glacier
+    - Alpine
+    - Mountain
+  difficulty: 5
+  description: "Helicopter operation from Mount Cook to Aoraki / Mount Cook alpine ridge viewpoint for high-altitude Aoraki sightseeing."
+  tags:
+    - "High-Altitude"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Aoraki / Mount Cook alpine ridge viewpoint"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+  warning: "Extreme altitude operations and weather margins apply"
+
+- id: hel-nzmc-sealy
+  from: NZMC
+  to: NZMC
+  from_name: Mount Cook
+  to_name: Sealy Range and Hooker Valley viewpoints
+  category: helicopter
+  operation: Tour
+  distance_nm: 50
+  duration: "~25m"
+  aircraft:
+    - Airbus H125
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+  difficulty: 5
+  description: "Helicopter operation from Mount Cook to Sealy Range and Hooker Valley viewpoints for high-country photography charter."
+  tags:
+    - "High-Country"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Sealy Range and Hooker Valley viewpoints"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+  warning: "High density altitude affects payload and performance"
+
+- id: hel-nzgt-lakes
+  from: NZGT
+  to: NZGT
+  from_name: Glentanner Station
+  to_name: Lake Pukaki and Tasman Valley
+  category: helicopter
+  operation: Tour
+  distance_nm: 35
+  duration: "~20m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Lakes
+  difficulty: 3
+  description: "Helicopter operation from Glentanner Station to Lake Pukaki and Tasman Valley for Mackenzie Basin scenic helicopter tour."
+  tags:
+    - "Mackenzie"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Lake Pukaki and Tasman Valley"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+
+- id: hel-nzhk-fox
+  from: NZHK
+  to: NZHK
+  from_name: Hokitika
+  to_name: Fox Glacier
+  category: helicopter
+  operation: Tour
+  distance_nm: 45
+  duration: "~25m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Glacier
+    - Alpine
+  difficulty: 4
+  description: "Helicopter operation from Hokitika to Fox Glacier for Fox Glacier scenic charter."
+  tags:
+    - "Fox"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Fox Glacier"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+  warning: "Glacier weather and landing conditions vary rapidly"
+
+- id: hel-nzhk-waiho
+  from: NZHK
+  to: NZHK
+  from_name: Hokitika
+  to_name: Waiho Valley and West Coast glacier country
+  category: helicopter
+  operation: Survey
+  distance_nm: 40
+  duration: "~20m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Glacier
+    - Mountain
+    - Coastal
+  difficulty: 4
+  description: "Helicopter operation from Hokitika to Waiho Valley and West Coast glacier country for Waiho Valley glacier survey."
+  tags:
+    - "Waiho"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Waiho Valley and West Coast glacier country"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+    - "Check coastal wind, visibility and marine activity"
+  warning: "Stay clear of unstable glacier and river surfaces"
+
+- id: hel-nzgm-paparoa
+  from: NZGM
+  to: NZGM
+  from_name: Greymouth
+  to_name: Paparoa National Park and Pancake Rocks
+  category: helicopter
+  operation: Survey
+  distance_nm: 30
+  duration: "~15m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 3
+  description: "Helicopter operation from Greymouth to Paparoa National Park and Pancake Rocks for Paparoa coastal photography and survey."
+  tags:
+    - "Paparoa"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Paparoa National Park and Pancake Rocks"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+    - "Check coastal wind, visibility and marine activity"
+  warning: "Low-level operations require strict terrain and environmental awareness"
+
+- id: hel-nzws-buller
+  from: NZWS
+  to: NZWS
+  from_name: Westport
+  to_name: Buller Gorge and West Coast forests
+  category: helicopter
+  operation: Survey
+  distance_nm: 40
+  duration: "~20m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Coastal
+  difficulty: 3
+  description: "Helicopter operation from Westport to Buller Gorge and West Coast forests for Buller infrastructure and forestry survey."
+  tags:
+    - "Buller"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Buller Gorge and West Coast forests"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+    - "Check coastal wind, visibility and marine activity"
+  warning: "Avoid confined valleys in deteriorating weather"
+
+- id: hel-nzns-goldenbay
+  from: NZNS
+  to: NZNS
+  from_name: Nelson
+  to_name: Golden Bay and Abel Tasman coast
+  category: helicopter
+  operation: Tour
+  distance_nm: 55
+  duration: "~30m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 3
+  description: "Helicopter operation from Nelson to Golden Bay and Abel Tasman coast for Golden Bay scenic helicopter tour."
+  tags:
+    - "Golden"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Golden Bay and Abel Tasman coast"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+    - "Check coastal wind, visibility and marine activity"
+  warning: "High traffic is possible during summer scenic operations"
+
+- id: hel-nzns-marlborough
+  from: NZNS
+  to: NZNS
+  from_name: Nelson
+  to_name: Marlborough Sounds and Queen Charlotte Sound
+  category: helicopter
+  operation: Tour
+  distance_nm: 65
+  duration: "~35m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 3
+  description: "Helicopter operation from Nelson to Marlborough Sounds and Queen Charlotte Sound for Marlborough Sounds scenic charter."
+  tags:
+    - "Marlborough"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Marlborough Sounds and Queen Charlotte Sound"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+    - "Check coastal wind, visibility and marine activity"
+  warning: "Check current marine and low-level operational constraints"
+
+- id: hel-nzwb-sounds
+  from: NZWB
+  to: NZWB
+  from_name: Woodbourne
+  to_name: Marlborough Sounds lodge network
+  category: helicopter
+  operation: Charter
+  distance_nm: 50
+  duration: "~25m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 3
+  description: "Helicopter operation from Woodbourne to Marlborough Sounds lodge network for Marlborough Sounds lodge transfer."
+  tags:
+    - "Marlborough"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Marlborough Sounds lodge network"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+    - "Check coastal wind, visibility and marine activity"
+  warning: "Landing sites are subject to local permission and conditions"
+
+- id: hel-nzki-seaward
+  from: NZKI
+  to: NZKI
+  from_name: Kaikoura
+  to_name: Kaikoura Seaward Range and Peninsula
+  category: helicopter
+  operation: Tour
+  distance_nm: 35
+  duration: "~20m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 4
+  description: "Helicopter operation from Kaikoura to Kaikoura Seaward Range and Peninsula for Kaikoura wildlife and mountain charter."
+  tags:
+    - "Kaikoura"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Kaikoura Seaward Range and Peninsula"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+    - "Check coastal wind, visibility and marine activity"
+  warning: "Marine and mountain weather can differ sharply"
+
+- id: hel-nzki-hanmer
+  from: NZKI
+  to: NZKI
+  from_name: Kaikoura
+  to_name: Hanmer Springs high country
+  category: helicopter
+  operation: Charter
+  distance_nm: 55
+  duration: "~30m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - High Country
+  difficulty: 3
+  description: "Helicopter operation from Kaikoura to Hanmer Springs high country for Kaikoura to Hanmer high-country helicopter access."
+  tags:
+    - "Kaikoura"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Hanmer Springs high country"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+
+- id: hel-nzch-hanmer
+  from: NZCH
+  to: NZCH
+  from_name: Christchurch International
+  to_name: Hanmer Springs and Hanmer Range
+  category: helicopter
+  operation: Tour
+  distance_nm: 65
+  duration: "~35m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - High Country
+  difficulty: 3
+  description: "Helicopter operation from Christchurch International to Hanmer Springs and Hanmer Range for Hanmer Springs charter and scenic flight."
+  tags:
+    - "Hanmer"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Hanmer Springs and Hanmer Range"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+
+- id: hel-nzch-arthurs
+  from: NZCH
+  to: NZCH
+  from_name: Christchurch International
+  to_name: Arthur's Pass and Waimakariri headwaters
+  category: helicopter
+  operation: Tour
+  distance_nm: 70
+  duration: "~35m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Alpine
+  difficulty: 4
+  description: "Helicopter operation from Christchurch International to Arthur's Pass and Waimakariri headwaters for Arthur's Pass helicopter scenic charter."
+  tags:
+    - "Arthur'S"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Arthur's Pass and Waimakariri headwaters"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+  warning: "Mountain wave and cloud can build quickly in the pass"
+
+- id: hel-nzch-mthutt
+  from: NZCH
+  to: NZCH
+  from_name: Christchurch International
+  to_name: Mount Hutt and Rakaia headwaters
+  category: helicopter
+  operation: Tour
+  distance_nm: 45
+  duration: "~25m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Alpine
+  difficulty: 3
+  description: "Helicopter operation from Christchurch International to Mount Hutt and Rakaia headwaters for Mount Hutt and Rakaia headwaters tour."
+  tags:
+    - "Mount"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Mount Hutt and Rakaia headwaters"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+
+- id: hel-nzti-otago
+  from: NZTI
+  to: NZTI
+  from_name: Taieri
+  to_name: Otago Peninsula and Taieri coast
+  category: helicopter
+  operation: Survey
+  distance_nm: 35
+  duration: "~20m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Coastal
+  difficulty: 2
+  description: "Helicopter operation from Taieri to Otago Peninsula and Taieri coast for Otago Peninsula aerial survey."
+  tags:
+    - "Otago"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Otago Peninsula and Taieri coast"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Check coastal wind, visibility and marine activity"
+
+- id: hel-nzdn-catlins
+  from: NZDN
+  to: NZDN
+  from_name: Dunedin International
+  to_name: Catlins coast and Nugget Point
+  category: helicopter
+  operation: Survey
+  distance_nm: 55
+  duration: "~30m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Coastal
+  difficulty: 3
+  description: "Helicopter operation from Dunedin International to Catlins coast and Nugget Point for Catlins coastal survey."
+  tags:
+    - "Catlins"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Catlins coast and Nugget Point"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Check coastal wind, visibility and marine activity"
+
+- id: hel-nznv-stewart
+  from: NZNV
+  to: NZNV
+  from_name: Invercargill
+  to_name: Foveaux Strait and Stewart Island gateway
+  category: helicopter
+  operation: Tour
+  distance_nm: 90
+  duration: "~45m"
+  aircraft:
+    - Airbus H125
+    - Airbus H145
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Remote
+  difficulty: 4
+  description: "Helicopter operation from Invercargill to Foveaux Strait and Stewart Island gateway for Southland to Stewart Island scenic charter."
+  tags:
+    - "Southland"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Foveaux Strait and Stewart Island gateway"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Check coastal wind, visibility and marine activity"
+    - "Confirm landing site suitability, fuel endurance and a practical weather escape route"
+  warning: "Foveaux Strait weather can deteriorate quickly"
+
+- id: hel-nzmo-doubtful
+  from: NZMO
+  to: NZMO
+  from_name: Te Anau / Manapouri
+  to_name: Doubtful Sound and Deep Cove
+  category: helicopter
+  operation: Tour
+  distance_nm: 85
+  duration: "~40m"
+  aircraft:
+    - Airbus H145
+    - Airbus H125
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Remote
+    - Coastal
+  difficulty: 5
+  description: "Helicopter operation from Te Anau / Manapouri to Doubtful Sound and Deep Cove for Doubtful Sound remote access charter."
+  tags:
+    - "Doubtful"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Doubtful Sound and Deep Cove"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+    - "Check coastal wind, visibility and marine activity"
+    - "Confirm landing site suitability, fuel endurance and a practical weather escape route"
+  warning: "Fiordland weather is highly changeable"
+
+- id: hel-nzmo-dusky
+  from: NZMO
+  to: NZMO
+  from_name: Te Anau / Manapouri
+  to_name: Dusky Sound and remote Fiordland
+  category: helicopter
+  operation: Charter
+  distance_nm: 115
+  duration: "~55m"
+  aircraft:
+    - Airbus H145
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Remote
+    - Coastal
+  difficulty: 5
+  description: "Helicopter operation from Te Anau / Manapouri to Dusky Sound and remote Fiordland for Dusky Sound specialist expedition charter."
+  tags:
+    - "Dusky"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Dusky Sound and remote Fiordland"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+    - "Check coastal wind, visibility and marine activity"
+    - "Confirm landing site suitability, fuel endurance and a practical weather escape route"
+  warning: "Remote operations require strict fuel and weather planning"
+
+- id: hel-nzmo-kepler
+  from: NZMO
+  to: NZMO
+  from_name: Te Anau / Manapouri
+  to_name: Kepler Track and Lake Te Anau
+  category: helicopter
+  operation: Tour
+  distance_nm: 35
+  duration: "~20m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Lakes
+  difficulty: 3
+  description: "Helicopter operation from Te Anau / Manapouri to Kepler Track and Lake Te Anau for Kepler and Te Anau scenic charter."
+  tags:
+    - "Kepler"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Kepler Track and Lake Te Anau"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+
+- id: hel-nzqn-earnslaw
+  from: NZQN
+  to: NZQN
+  from_name: Queenstown
+  to_name: Earnslaw Burn and Mount Earnslaw
+  category: helicopter
+  operation: Tour
+  distance_nm: 65
+  duration: "~30m"
+  aircraft:
+    - Airbus H145
+    - Airbus H125
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+    - Remote
+  difficulty: 5
+  description: "Helicopter operation from Queenstown to Earnslaw Burn and Mount Earnslaw for Earnslaw Burn specialist heli-tour."
+  tags:
+    - "Earnslaw"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Earnslaw Burn and Mount Earnslaw"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+    - "Confirm landing site suitability, fuel endurance and a practical weather escape route"
+  warning: "Mountain weather and wind shear can change rapidly"
+
+- id: hel-nzqn-harris
+  from: NZQN
+  to: NZQN
+  from_name: Queenstown
+  to_name: Harris Mountains and Routeburn approaches
+  category: helicopter
+  operation: Charter
+  distance_nm: 75
+  duration: "~35m"
+  aircraft:
+    - Airbus H125
+    - Airbus H145
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+    - Remote
+  difficulty: 5
+  description: "Helicopter operation from Queenstown to Harris Mountains and Routeburn approaches for Harris Mountains scenic and utility charter."
+  tags:
+    - "Harris"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Harris Mountains and Routeburn approaches"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+    - "Confirm landing site suitability, fuel endurance and a practical weather escape route"
+  warning: "Routeburn weather and terrain require conservative planning"
+
+- id: hel-nzwf-mtaspiring
+  from: NZWF
+  to: NZWF
+  from_name: Wanaka
+  to_name: Mount Aspiring National Park gateway
+  category: helicopter
+  operation: Charter
+  distance_nm: 80
+  duration: "~40m"
+  aircraft:
+    - Airbus H125
+    - Airbus H145
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+    - Remote
+  difficulty: 5
+  description: "Helicopter operation from Wanaka to Mount Aspiring National Park gateway for Mount Aspiring specialist charter."
+  tags:
+    - "Mount"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Mount Aspiring National Park gateway"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+    - "Confirm landing site suitability, fuel endurance and a practical weather escape route"
+  warning: "National park terrain and weather require careful planning"
+
+- id: hel-nzns-nelsonlakes
+  from: NZNS
+  to: NZNS
+  from_name: Nelson
+  to_name: Nelson Lakes and Lake Rotoiti
+  category: helicopter
+  operation: Tour
+  distance_nm: 55
+  duration: "~30m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Lakes
+  difficulty: 3
+  description: "Helicopter operation from Nelson to Nelson Lakes and Lake Rotoiti for Nelson Lakes scenic helicopter tour."
+  tags:
+    - "Nelson"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Nelson Lakes and Lake Rotoiti"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+
+- id: hel-nzns-kahurangi
+  from: NZNS
+  to: NZNS
+  from_name: Nelson
+  to_name: Kahurangi National Park alpine ranges
+  category: helicopter
+  operation: Survey
+  distance_nm: 70
+  duration: "~35m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Alpine
+    - Remote
+  difficulty: 4
+  description: "Helicopter operation from Nelson to Kahurangi National Park alpine ranges for Kahurangi alpine survey and scenic charter."
+  tags:
+    - "Kahurangi"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Kahurangi National Park alpine ranges"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+    - "Confirm landing site suitability, fuel endurance and a practical weather escape route"
+  warning: "Remote terrain and weather require conservative routing"
+
+- id: hel-nzpn-sounds
+  from: NZPN
+  to: NZPN
+  from_name: Picton
+  to_name: Queen Charlotte Track and Marlborough Sounds
+  category: helicopter
+  operation: Charter
+  distance_nm: 50
+  duration: "~25m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 3
+  description: "Helicopter operation from Picton to Queen Charlotte Track and Marlborough Sounds for Picton lodge and track access."
+  tags:
+    - "Picton"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Queen Charlotte Track and Marlborough Sounds"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+    - "Check coastal wind, visibility and marine activity"
+  warning: "Landing areas require local permission"
+
+- id: hel-nzmr-karamea
+  from: NZMR
+  to: NZMR
+  from_name: Murchison
+  to_name: Buller and Karamea hinterland
+  category: helicopter
+  operation: Survey
+  distance_nm: 65
+  duration: "~35m"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Remote
+  difficulty: 4
+  description: "Helicopter operation from Murchison to Buller and Karamea hinterland for Murchison to northern West Coast utility survey."
+  tags:
+    - "Murchison"
+    - "Helicopter"
+    - "South Island"
+  highlights:
+    - "Buller and Karamea hinterland"
+    - "Confined-area or remote landing option"
+    - "Aerial access beyond the main road network"
+  airspace:
+    - "Use current local helicopter procedures and landing-site requirements"
+    - "Check current AIP and NOTAMs before flight"
+    - "Maintain conservative terrain clearance and avoid committing to valleys with deteriorating weather"
+    - "Confirm landing site suitability, fuel endurance and a practical weather escape route"
+  warning: "Confined terrain and low cloud can limit valley access"
+
+# Scenic Tours -------------------------------------------------------------
 - id: tour-r66-alpine-explorer
   from: NZCH
   to: NZCH
@@ -897,8 +4828,338 @@
     - "Weather: Check Fiordland forecast - conditions can change rapidly"
   warning: "Mountain flying experience required for the Main Divide crossing"
 
-# Heli-Hike Tours ----------------------------------------------------------
+- id: tour-nzch-southern-alps
+  from: NZCH
+  to: NZCH
+  from_name: Christchurch International
+  to_name: Christchurch International
+  category: scenic
+  operation: Tour
+  distance_nm: 0
+  duration: "1.5-2 hours"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Plains
+    - Mountain
+    - Alpine
+  difficulty: 3
+  description: "A Christchurch loop over the Canterbury Plains, foothills, and a southern edge of the Southern Alps."
+  tags:
+    - "Southern Alps"
+    - "Canterbury"
+    - "Loop"
+  highlights:
+    - "Canterbury Plains farmland"
+    - "Port Hills and foothills"
+    - "Southern Alps panorama"
+  airspace:
+    - "Use current Christchurch departure and rejoin procedures"
+    - "Remain clear of controlled airspace unless cleared"
+    - "Check nor'wester development over the foothills"
 
+- id: tour-nzqn-remarkables
+  from: NZQN
+  to: NZQN
+  from_name: Queenstown
+  to_name: Queenstown
+  category: scenic
+  operation: Tour
+  distance_nm: 0
+  duration: "45-60 min"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Lakes
+    - Alpine
+  difficulty: 3
+  description: "Queenstown basin scenic loop around Lake Wakatipu, The Remarkables, and Arrowtown."
+  tags:
+    - "Queenstown"
+    - "Wakatipu"
+    - "The Remarkables"
+  highlights:
+    - "Lake Wakatipu"
+    - "The Remarkables"
+    - "Arrowtown and Gibbston"
+  airspace:
+    - "Coordinate Queenstown arrival and departure requirements"
+    - "Monitor high-density scenic traffic"
+    - "Maintain visual terrain clearance"
+  warning: "Afternoon valley winds can build quickly"
+
+- id: tour-nzwf-upperclutha
+  from: NZWF
+  to: NZWF
+  from_name: Wanaka
+  to_name: Wanaka
+  category: scenic
+  operation: Tour
+  distance_nm: 0
+  duration: "45-60 min"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Lakes
+    - Mountain
+  difficulty: 3
+  description: "Wanaka basin scenic loop covering Lake Wanaka, Lake Hawea, and the upper Clutha."
+  tags:
+    - "Wanaka"
+    - "Upper Clutha"
+    - "Lakes"
+  highlights:
+    - "Lake Wanaka"
+    - "Lake Hawea"
+    - "Upper Clutha river corridor"
+  airspace:
+    - "Wanaka has active helicopter and skydiving operations"
+    - "Use current local traffic information"
+    - "Maintain separation from gliding and parachuting activity"
+  warning: "Mountain cloud can form around the surrounding ranges"
+
+- id: tour-nzdn-otago-coast
+  from: NZDN
+  to: NZDN
+  from_name: Dunedin International
+  to_name: Dunedin International
+  category: scenic
+  operation: Tour
+  distance_nm: 0
+  duration: "60-75 min"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Plains
+  difficulty: 2
+  description: "Dunedin coastal loop along Otago Harbour, the Otago Peninsula, and the Pacific coast."
+  tags:
+    - "Otago Peninsula"
+    - "Coastal"
+    - "Dunedin"
+  highlights:
+    - "Otago Harbour"
+    - "Otago Peninsula"
+    - "Coastal cliffs and beaches"
+  airspace:
+    - "Coordinate Dunedin controlled airspace"
+    - "Check current local coastal traffic restrictions"
+    - "Monitor wind on the peninsula"
+  warning: "Sea fog can reduce coastal visibility"
+
+- id: tour-nzns-tasmanbay
+  from: NZNS
+  to: NZNS
+  from_name: Nelson
+  to_name: Nelson
+  category: scenic
+  operation: Tour
+  distance_nm: 0
+  duration: "50-65 min"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 2
+  description: "Nelson scenic loop over Tasman Bay, the Maitai Valley, and the Abel Tasman gateway."
+  tags:
+    - "Nelson"
+    - "Tasman Bay"
+    - "Abel Tasman"
+  highlights:
+    - "Tasman Bay"
+    - "Nelson hinterland"
+    - "Abel Tasman coastline"
+  airspace:
+    - "Coordinate Nelson controlled airspace"
+    - "Check current coastal traffic and local scenic operations"
+    - "Remain clear of terrain and special-use airspace"
+  warning: "Summer scenic traffic can be heavy"
+
+- id: tour-nzwb-marlborough
+  from: NZWB
+  to: NZWB
+  from_name: Woodbourne
+  to_name: Woodbourne
+  category: scenic
+  operation: Tour
+  distance_nm: 0
+  duration: "60-75 min"
+  aircraft:
+    - Piper Archer II
+    - Piper Seneca V
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Plains
+  difficulty: 2
+  description: "Woodbourne loop through the Wairau Valley and Marlborough Sounds."
+  tags:
+    - "Marlborough"
+    - "Sounds"
+    - "Wine Country"
+  highlights:
+    - "Wairau Valley vineyards"
+    - "Marlborough Sounds"
+    - "Queen Charlotte Sound"
+  airspace:
+    - "Use current Woodbourne procedures"
+    - "Check current military and special-use airspace"
+    - "Monitor coastal wind and low cloud"
+
+- id: tour-nzki-kaikoura
+  from: NZKI
+  to: NZKI
+  from_name: Kaikoura
+  to_name: Kaikoura
+  category: scenic
+  operation: Tour
+  distance_nm: 0
+  duration: "45-60 min"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+    - Robinson R44
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 3
+  description: "Kaikoura Peninsula loop combining coastal marine views with the Seaward Kaikoura Range."
+  tags:
+    - "Kaikoura"
+    - "Peninsula"
+    - "Mountains"
+  highlights:
+    - "Kaikoura Peninsula"
+    - "Seaward Kaikoura Range"
+    - "Pacific coastline"
+  airspace:
+    - "Use current Kaikoura local procedures"
+    - "Maintain safe altitude and distance around wildlife and terrain"
+    - "Check marine traffic and coastal weather"
+
+- id: tour-nzmo-fiordland
+  from: NZMO
+  to: NZMO
+  from_name: Te Anau / Manapouri
+  to_name: Te Anau / Manapouri
+  category: scenic
+  operation: Tour
+  distance_nm: 0
+  duration: "75-90 min"
+  aircraft:
+    - Robinson R66
+    - Airbus H125
+    - Airbus H145
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+    - Remote
+  difficulty: 5
+  description: "Te Anau / Manapouri Fiordland loop over lakes, valleys, and the eastern edge of the national park."
+  tags:
+    - "Fiordland"
+    - "Te Anau"
+    - "Remote"
+  highlights:
+    - "Lake Te Anau"
+    - "Kepler and Murchison ranges"
+    - "Fiordland valleys"
+  airspace:
+    - "Use current NZMO local procedures"
+    - "Maintain conservative terrain clearance"
+    - "Check Fiordland weather immediately before departure"
+  warning: "Cloud and precipitation can close valleys rapidly"
+
+- id: tour-nzhk-glacier-coast
+  from: NZHK
+  to: NZHK
+  from_name: Hokitika
+  to_name: Hokitika
+  category: scenic
+  operation: Tour
+  distance_nm: 0
+  duration: "60-75 min"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Glacier
+    - Coastal
+    - Mountain
+  difficulty: 4
+  description: "Hokitika West Coast loop combining beaches, rainforest, and the Franz Josef glacier region."
+  tags:
+    - "West Coast"
+    - "Glacier"
+    - "Rainforest"
+  highlights:
+    - "Tasman Sea coastline"
+    - "West Coast rainforest"
+    - "Southern Alps glacier country"
+  airspace:
+    - "Use current Hokitika procedures"
+    - "Check West Coast low cloud and visibility"
+    - "Avoid committing to narrow mountain valleys"
+  warning: "West Coast weather often changes faster than the east coast"
+
+- id: tour-nztu-southcanterbury
+  from: NZTU
+  to: NZTU
+  from_name: Timaru
+  to_name: Timaru
+  category: scenic
+  operation: Tour
+  distance_nm: 0
+  duration: "60-75 min"
+  aircraft:
+    - Piper Tomahawk
+    - Piper Warrior II
+    - Piper Archer II
+  flight_rules: VFR
+  conditions:
+    - Plains
+    - Coastal
+  difficulty: 1
+  description: "Timaru regional scenic loop over South Canterbury farmland, river mouths, and the coast."
+  tags:
+    - "South Canterbury"
+    - "Coast"
+    - "Farmland"
+  highlights:
+    - "Timaru coast"
+    - "Pareora and Opihi districts"
+    - "Canterbury foothills"
+  airspace:
+    - "Use current Timaru procedures"
+    - "Remain clear of controlled airspace unless cleared"
+    - "Check coastal fog and local aerial work"
+  warning: "Morning sea fog may affect the coast"
+
+# Heli-Hike Tours ----------------------------------------------------------
 - id: hike-tasman-glacier
   from: NZGT
   to: NZGT
@@ -1157,8 +5418,437 @@
     - "Watch for variable mountain weather and wind shear"
   warning: "Weather in the Earnslaw Burn can change rapidly"
 
-# Itineraries --------------------------------------------------------------
+- id: hike-nzqn-routeburn
+  from: NZQN
+  to: NZQN
+  from_name: Queenstown
+  to_name: Routeburn Valley alpine landing
+  category: heli-hike
+  operation: Tour
+  distance_nm: 65
+  duration: "2.5-3.5 hours"
+  aircraft:
+    - Airbus H145
+    - Airbus H125
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+    - Remote
+  difficulty: 5
+  description: "A Routeburn heli-hike into the Darran-facing ranges with an alpine landing and guided walk."
+  tags:
+    - "Routeburn"
+    - "Heli-Hike"
+    - "Alpine"
+  highlights:
+    - "Routeburn Valley landing"
+    - "Alpine track section"
+    - "Main Divide views"
+  airspace:
+    - "Terrain-sensitive flight through the Southern Alps"
+    - "Use current Queenstown and local heli operating information"
+    - "Landing site must be assessed before touchdown"
+  warning: "Weather near the Main Divide can change quickly"
 
+- id: hike-nzwf-robroy
+  from: NZWF
+  to: NZWF
+  from_name: Wanaka
+  to_name: Rob Roy Glacier alpine landing
+  category: heli-hike
+  operation: Tour
+  distance_nm: 60
+  duration: "2.5-3 hours"
+  aircraft:
+    - Airbus H125
+    - Robinson R66
+    - Airbus H145
+  flight_rules: VFR
+  conditions:
+    - Glacier
+    - Alpine
+    - Mountain
+  difficulty: 5
+  description: "A Wanaka heli-hike to the Rob Roy Glacier area with a short alpine walk."
+  tags:
+    - "Rob Roy"
+    - "Glacier"
+    - "Heli-Hike"
+  highlights:
+    - "Rob Roy Glacier views"
+    - "Matukituki Valley"
+    - "Short alpine hike"
+  airspace:
+    - "Use current Wanaka local procedures"
+    - "Confirm landing site and park operating requirements"
+    - "Maintain strong terrain and weather margins"
+  warning: "Glacier conditions and cloud can change rapidly"
+
+- id: hike-nzwf-mtaspiring
+  from: NZWF
+  to: NZWF
+  from_name: Wanaka
+  to_name: Mount Aspiring National Park landing
+  category: heli-hike
+  operation: Tour
+  distance_nm: 85
+  duration: "3-4 hours"
+  aircraft:
+    - Airbus H125
+    - Airbus H145
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+    - Remote
+  difficulty: 5
+  description: "A specialist Mount Aspiring heli-hike with remote alpine landing and guided track access."
+  tags:
+    - "Mount Aspiring"
+    - "Remote"
+    - "Heli-Hike"
+  highlights:
+    - "Remote valley landing"
+    - "Alpine walk"
+    - "Southern Alps views"
+  airspace:
+    - "Remote terrain operation"
+    - "Confirm landing site permission and park requirements"
+    - "Maintain a weather escape route"
+  warning: "Remote weather and wind can close the route"
+
+- id: hike-nzmc-tasman-terminal
+  from: NZMC
+  to: NZMC
+  from_name: Mount Cook
+  to_name: Tasman Glacier terminal heli-hike
+  category: heli-hike
+  operation: Tour
+  distance_nm: 55
+  duration: "2-3 hours"
+  aircraft:
+    - Airbus H125
+    - Airbus H145
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Glacier
+    - Alpine
+  difficulty: 5
+  description: "Tasman Glacier terminal experience combining helicopter access with a guided ice-field walk."
+  tags:
+    - "Tasman Glacier"
+    - "Glacier Walk"
+    - "Heli-Hike"
+  highlights:
+    - "Tasman Glacier terminal lake"
+    - "Glacial ice features"
+    - "Alpine geology"
+  airspace:
+    - "Use current Mount Cook FIZ information"
+    - "Landing location must be selected for current surface conditions"
+    - "Weight and balance are critical at altitude"
+  warning: "Glacier surface and weather change rapidly"
+
+- id: hike-nzmc-hooker
+  from: NZMC
+  to: NZMC
+  from_name: Mount Cook
+  to_name: Hooker Valley alpine landing
+  category: heli-hike
+  operation: Tour
+  distance_nm: 40
+  duration: "2-2.5 hours"
+  aircraft:
+    - Airbus H125
+    - Robinson R66
+    - Airbus H145
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+    - Lakes
+  difficulty: 4
+  description: "A shorter Aoraki heli-hike centred on Hooker Valley viewpoints and alpine lakes."
+  tags:
+    - "Aoraki"
+    - "Hooker Valley"
+    - "Family Hike"
+  highlights:
+    - "Hooker Valley viewpoints"
+    - "Hooker Lake"
+    - "Glacial landscapes"
+  airspace:
+    - "Use current Mount Cook FIZ procedures"
+    - "Select firm landing ground and avoid sensitive areas"
+    - "Monitor mountain wind and visibility"
+
+- id: hike-nzmc-mueller
+  from: NZMC
+  to: NZMC
+  from_name: Mount Cook
+  to_name: Mueller Lake and Sealy Range viewpoint
+  category: heli-hike
+  operation: Tour
+  distance_nm: 45
+  duration: "2.5-3 hours"
+  aircraft:
+    - Airbus H125
+    - Airbus H145
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+  difficulty: 5
+  description: "An advanced alpine hike with a landing near the Mueller and Sealy Range viewpoints."
+  tags:
+    - "Mueller Lake"
+    - "Sealy Range"
+    - "High Altitude"
+  highlights:
+    - "Mueller Lake views"
+    - "Sealy Range"
+    - "Aoraki panorama"
+  airspace:
+    - "High-altitude helicopter operations"
+    - "Plan passenger load carefully"
+    - "Use conservative weather minimums"
+  warning: "High winds and cloud can make the landing site unusable"
+
+- id: hike-nzhk-fox-glacier
+  from: NZHK
+  to: NZHK
+  from_name: Hokitika
+  to_name: Fox Glacier guided landing
+  category: heli-hike
+  operation: Tour
+  distance_nm: 55
+  duration: "2-3 hours"
+  aircraft:
+    - Airbus H125
+    - Airbus H145
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Glacier
+    - Alpine
+  difficulty: 4
+  description: "West Coast glacier hike using helicopter access to the Fox Glacier region."
+  tags:
+    - "Fox Glacier"
+    - "West Coast"
+    - "Heli-Hike"
+  highlights:
+    - "Glacier landing"
+    - "Guided ice walk"
+    - "Southern Alps views"
+  airspace:
+    - "Use current West Coast local procedures"
+    - "Glacier landing site selected from current conditions"
+    - "Coordinate with other scenic operators"
+  warning: "Glacier conditions are dynamic and can change during the sortie"
+
+- id: hike-nzns-abel-tasman
+  from: NZNS
+  to: NZNS
+  from_name: Nelson
+  to_name: Abel Tasman coastal landing and walk
+  category: heli-hike
+  operation: Tour
+  distance_nm: 50
+  duration: "2-3 hours"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 3
+  description: "A coastal heli-hike into the Abel Tasman area with beach or ridge landing options."
+  tags:
+    - "Abel Tasman"
+    - "Coastal Walk"
+    - "Heli-Hike"
+  highlights:
+    - "Golden beaches"
+    - "Bush and coastal track"
+    - "Tasman Bay"
+  airspace:
+    - "Use current Nelson local procedures"
+    - "Beach landing requires suitable tide, surface, and local permission"
+    - "Avoid wildlife and public concentration areas"
+  warning: "Summer scenic traffic can be busy"
+
+- id: hike-nzki-kaikoura
+  from: NZKI
+  to: NZKI
+  from_name: Kaikoura
+  to_name: Kaikoura Seaward Range landing
+  category: heli-hike
+  operation: Tour
+  distance_nm: 40
+  duration: "2-2.5 hours"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Coastal
+  difficulty: 4
+  description: "A Kaikoura heli-hike combining the peninsula with a short Seaward Range landing."
+  tags:
+    - "Kaikoura"
+    - "Seaward Range"
+    - "Heli-Hike"
+  highlights:
+    - "Kaikoura coastline"
+    - "Mountain landing"
+    - "Pacific views"
+  airspace:
+    - "Use current Kaikoura local information"
+    - "Landing area must be suitable for slope and rotor wash considerations"
+    - "Maintain distance from wildlife concentrations"
+  warning: "Coastal and mountain weather can differ sharply"
+
+- id: hike-nzmo-kepler
+  from: NZMO
+  to: NZMO
+  from_name: Te Anau / Manapouri
+  to_name: Kepler Track alpine landing
+  category: heli-hike
+  operation: Tour
+  distance_nm: 50
+  duration: "2-3 hours"
+  aircraft:
+    - Airbus H125
+    - Robinson R66
+    - Airbus H145
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Lakes
+  difficulty: 4
+  description: "A Te Anau heli-hike accessing the Kepler Track and Lake Te Anau mountain edge."
+  tags:
+    - "Kepler"
+    - "Te Anau"
+    - "Heli-Hike"
+  highlights:
+    - "Lake Te Anau"
+    - "Kepler Track"
+    - "Fiordland mountain views"
+  airspace:
+    - "Use current NZMO procedures"
+    - "Remote landing site assessment required"
+    - "Maintain a weather escape option"
+  warning: "Fiordland cloud and rain can arrive quickly"
+
+- id: hike-nzqn-glenorchy
+  from: NZQN
+  to: NZQN
+  from_name: Queenstown
+  to_name: Glenorchy high-country walk
+  category: heli-hike
+  operation: Tour
+  distance_nm: 35
+  duration: "1.5-2.5 hours"
+  aircraft:
+    - Robinson R44
+    - Robinson R66
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Lakes
+  difficulty: 3
+  description: "A shorter Queenstown heli-hike to Glenorchy and the Rees or Dart valley approaches."
+  tags:
+    - "Glenorchy"
+    - "Rees Valley"
+    - "Heli-Hike"
+  highlights:
+    - "Lake Wakatipu"
+    - "Glenorchy basin"
+    - "Short high-country walk"
+  airspace:
+    - "Coordinate Queenstown airspace"
+    - "Check local landing permissions"
+    - "Maintain separation from other scenic operators"
+
+- id: hike-nzqn-earnslaw-burn
+  from: NZQN
+  to: NZQN
+  from_name: Queenstown
+  to_name: Earnslaw Burn waterfall landing
+  category: heli-hike
+  operation: Tour
+  distance_nm: 65
+  duration: "3-4 hours"
+  aircraft:
+    - Airbus H145
+    - Airbus H125
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+    - Remote
+  difficulty: 5
+  description: "A premium heli-hike into the Earnslaw Burn with a remote landing below the glacier-fed waterfalls."
+  tags:
+    - "Earnslaw Burn"
+    - "Waterfall"
+    - "Premium"
+  highlights:
+    - "Earnslaw Glacier waterfall"
+    - "Remote alpine walk"
+    - "Forbes Mountains views"
+  airspace:
+    - "Use current Queenstown procedures"
+    - "Remote landing site and terrain assessment required"
+    - "Maintain escape routing throughout the valley"
+  warning: "Weather and wind shear can change rapidly"
+
+- id: hike-nzmr-buller
+  from: NZMR
+  to: NZMR
+  from_name: Murchison
+  to_name: Buller Gorge wilderness landing
+  category: heli-hike
+  operation: Tour
+  distance_nm: 60
+  duration: "2-3 hours"
+  aircraft:
+    - Airbus H125
+    - Airbus H145
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Remote
+  difficulty: 4
+  description: "A Murchison-based heli-hike into the Buller Gorge hinterland."
+  tags:
+    - "Buller Gorge"
+    - "West Coast"
+    - "Heli-Hike"
+  highlights:
+    - "Buller River gorge"
+    - "Native forest"
+    - "Remote landing"
+  airspace:
+    - "Use current Murchison local information"
+    - "Avoid committing to narrow valleys when cloud is lowering"
+    - "Landing site requires suitable firm ground"
+  warning: "West Coast weather can close the gorge quickly"
+
+# Itineraries --------------------------------------------------------------
 - id: itin-south-island
   from: NZCH
   to: NZCH
@@ -1330,3 +6020,286 @@
     - "Day 3: Queenstown CTR, mountain radio service 130.6"
     - "All Fiordland operations require weather checks and flight planning"
   warning: "Fiordland weather is highly changeable - build flexibility into the itinerary"
+
+- id: itin-central-lakes
+  from: NZQN
+  to: NZQN
+  from_name: Queenstown
+  to_name: Central Otago & Southern Lakes
+  category: itinerary
+  operation: Itinerary
+  distance_nm: 0
+  duration: "3 Days"
+  aircraft:
+    - Robinson R66
+    - Airbus H125
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Alpine
+    - Lakes
+  difficulty: 4
+  description: "Three-day Southern Lakes programme covering Queenstown, Wanaka, Alexandra, and high-country access"
+  tags:
+    - "Multi-Day"
+    - "Central Otago"
+    - "Southern Lakes"
+  highlights:
+    - "Day 1: NZQN -> NZWF -> Central Otago lodge transfer"
+    - "Day 2: NZWF -> NZLX -> NZQN high-country loop"
+    - "Day 3: NZQN -> NZMO -> NZQN Fiordland extension"
+  airspace:
+    - "Use current procedures at each controlled or unattended aerodrome"
+    - "Mountain weather briefing required each day"
+    - "Keep a weather escape plan for alpine sectors"
+
+- id: itin-west-coast-glacier-circuit
+  from: NZCH
+  to: NZCH
+  from_name: Christchurch International
+  to_name: West Coast Glacier Circuit
+  category: itinerary
+  operation: Itinerary
+  distance_nm: 0
+  duration: "3 Days"
+  aircraft:
+    - Robinson R66
+    - Airbus H125
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Coastal
+    - Glacier
+  difficulty: 4
+  description: "Three-day West Coast circuit linking Christchurch, Hokitika, the glacier country, and the upper Buller"
+  tags:
+    - "Multi-Day"
+    - "West Coast"
+    - "Glacier"
+  highlights:
+    - "Day 1: NZCH -> NZHK via Arthur's Pass"
+    - "Day 2: NZHK -> NZFJ -> NZWS helicopter or short regional legs"
+    - "Day 3: NZWS -> NZCH via the alpine corridor"
+  airspace:
+    - "Use current AIP and NOTAMs for the alpine crossings"
+    - "Coordinate mixed fixed-wing and helicopter operations"
+    - "West Coast weather must be checked daily"
+  warning: "West Coast weather may require route changes"
+
+- id: itin-top-of-south
+  from: NZNS
+  to: NZNS
+  from_name: Nelson
+  to_name: Top of the South Expedition
+  category: itinerary
+  operation: Itinerary
+  distance_nm: 0
+  duration: "3 Days"
+  aircraft:
+    - Robinson R66
+    - Airbus H125
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+    - Remote
+  difficulty: 3
+  description: "Three-day Nelson, Marlborough, and Golden Bay programme combining regional charters with scenic helicopter sectors"
+  tags:
+    - "Multi-Day"
+    - "Nelson"
+    - "Marlborough"
+    - "Golden Bay"
+  highlights:
+    - "Day 1: NZNS -> NZPN -> NZWB"
+    - "Day 2: NZWB -> NZKI coastal charter option"
+    - "Day 3: NZNS -> NZMK -> NZTK and return"
+  airspace:
+    - "Use current Nelson and Woodbourne controlled-airspace procedures"
+    - "Check Marlborough military and special-use areas"
+    - "Mountain crossings around Golden Bay require conservative planning"
+
+- id: itin-canterbury-high-country
+  from: NZCH
+  to: NZCH
+  from_name: Christchurch International
+  to_name: Canterbury & Mackenzie High Country
+  category: itinerary
+  operation: Itinerary
+  distance_nm: 0
+  duration: "2 Days"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+    - Airbus H125
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Plains
+    - Mountain
+    - Alpine
+  difficulty: 3
+  description: "Two-day programme covering Ashburton, Omarama, Pukaki, Mount Cook, and the Canterbury foothills"
+  tags:
+    - "Multi-Day"
+    - "Canterbury"
+    - "Mackenzie"
+    - "Aoraki"
+  highlights:
+    - "Day 1: NZCH -> NZAS -> NZOA -> NZCH"
+    - "Day 2: NZCH -> NZUK -> NZMC -> NZGT -> NZCH"
+    - "Optional helicopter alpine landing at selected sites"
+  airspace:
+    - "Omarama gliding operations require continuous traffic awareness"
+    - "Mount Cook operations use local FIZ procedures"
+    - "Check density altitude and mountain weather"
+
+- id: itin-southern-southland
+  from: NZNV
+  to: NZNV
+  from_name: Invercargill
+  to_name: Southland & Stewart Island Circuit
+  category: itinerary
+  operation: Itinerary
+  distance_nm: 0
+  duration: "3 Days"
+  aircraft:
+    - Airbus H125
+    - Airbus H145
+    - Piper Seneca V
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Remote
+    - Mountain
+  difficulty: 4
+  description: "Three-day Southland programme linking Invercargill, Fiordland, and Stewart Island"
+  tags:
+    - "Multi-Day"
+    - "Southland"
+    - "Stewart Island"
+    - "Fiordland"
+  highlights:
+    - "Day 1: NZNV -> NZMO regional charter"
+    - "Day 2: NZMO -> Fiordland remote helicopter sectors"
+    - "Day 3: NZNV -> NZRC -> NZNV Stewart Island operation"
+  airspace:
+    - "Use current Invercargill and NZMO information"
+    - "Foveaux Strait and Fiordland weather require frequent updates"
+    - "Remote helicopter landing sites require local assessment"
+  warning: "Southern weather may force flexible sequencing"
+
+- id: itin-marlborough-tasman
+  from: NZWB
+  to: NZWB
+  from_name: Woodbourne
+  to_name: Marlborough & Tasman Coastal Weekender
+  category: itinerary
+  operation: Itinerary
+  distance_nm: 0
+  duration: "2 Days"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+    - Robinson R44
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 2
+  description: "Two-day coastal programme linking Woodbourne, Picton, Nelson, Motueka, and Golden Bay"
+  tags:
+    - "Multi-Day"
+    - "Marlborough"
+    - "Tasman"
+    - "Coastal"
+  highlights:
+    - "Day 1: NZWB -> NZPN -> NZNS coastal charter"
+    - "Day 2: NZNS -> NZMK -> NZTK -> NZNS"
+    - "Optional helicopter lodge transfers in the Sounds"
+  airspace:
+    - "Review current Woodbourne and Nelson procedures"
+    - "Check Marlborough Sounds local traffic and weather"
+    - "Takaka Hill requires conservative terrain planning"
+
+- id: itin-otago-catlins
+  from: NZDN
+  to: NZDN
+  from_name: Dunedin International
+  to_name: Otago Peninsula & Catlins Explorer
+  category: itinerary
+  operation: Itinerary
+  distance_nm: 0
+  duration: "2 Days"
+  aircraft:
+    - Piper Warrior II
+    - Piper Archer II
+    - Robinson R44
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Plains
+  difficulty: 2
+  description: "Two-day Otago programme combining Dunedin, Taieri, the Otago Peninsula, and the Catlins coast"
+  tags:
+    - "Multi-Day"
+    - "Otago"
+    - "Catlins"
+    - "Coastal"
+  highlights:
+    - "Day 1: NZDN -> NZTI -> NZDN coastal and training sectors"
+    - "Day 2: NZDN -> Catlins survey loop -> NZDN"
+    - "Optional helicopter photography sectors"
+  airspace:
+    - "Coordinate Dunedin controlled airspace and Taieri procedures"
+    - "Check sea fog and peninsula winds"
+    - "Use current coastal operating restrictions"
+
+- id: itin-south-island-operations
+  from: NZCH
+  to: NZCH
+  from_name: Christchurch International
+  to_name: CPAS South Island Operations Tour
+  category: itinerary
+  operation: Itinerary
+  distance_nm: 0
+  duration: "5 Days"
+  aircraft:
+    - Robinson R66
+    - Airbus H125
+    - Airbus H145
+    - Piper Archer II
+    - Piper Seneca V
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Alpine
+    - Coastal
+    - Remote
+  difficulty: 5
+  description: "Five-day operator-style itinerary combining CPAS charter, scenic, survey, and heli-hike missions across the South Island"
+  tags:
+    - "Multi-Day"
+    - "CPAS Operations"
+    - "South Island"
+    - "Mixed Mission"
+  highlights:
+    - "Day 1: NZCH -> NZTU -> NZOU -> NZDN"
+    - "Day 2: NZDN -> NZNV -> NZRC specialty helicopter work"
+    - "Day 3: NZQN -> NZWF -> NZLX high-country charter"
+    - "Day 4: NZCH -> NZHK -> NZFJ glacier operations"
+    - "Day 5: NZNS -> NZPN -> NZWB -> NZKI coastal and Marlborough work"
+  airspace:
+    - "Use current AIP and NOTAMs for every operational day"
+    - "Mission planning must respect aircraft-specific endurance and terrain"
+    - "Treat remote landing sites as weather-dependent"
+  warning: "This is a flexible virtual-operator itinerary and should be re-sequenced when weather dictates"
