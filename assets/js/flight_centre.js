@@ -11,6 +11,14 @@
         5: 'Expert'
     };
 
+    const DIFFICULTY_COLORS = {
+        1: '#059669', // Easy
+        2: '#0891b2', // Light
+        3: '#2d6bc9', // Moderate
+        4: '#f59e0b', // Challenging
+        5: '#dc2626'  // Expert
+    };
+
     const CATEGORY_LABELS = {
         'fixed-wing': 'Fixed-Wing',
         'helicopter': 'Helicopter',
@@ -27,13 +35,28 @@
         'itinerary': 'Multi-Day Itineraries'
     };
 
+    // Approximate NZ bounding box used as the default map view.
+    const NZ_CENTER = [-43.5, 171.0];
+    const NZ_ZOOM = 6;
+
     class FlightCentre {
-        constructor(routes) {
+        constructor(routes, airports) {
             this.allRoutes = Array.isArray(routes) ? routes : [];
+            this.airports = (airports && typeof airports === 'object') ? airports : {};
+
             this.activeTab = 'fixed-wing';
             this.currentPage = 1;
             this.perPage = 6;
             this.els = {};
+
+            // Map state
+            this.map = null;
+            this.mapRouteLayer = null;
+            this.mapRouteLayers = {};   // routeKey -> L.Polyline
+            this.mapMarkerLayers = {};  // ICAO     -> L.CircleMarker
+            this.mapVisible = false;
+            this.highlightedKey = null;
+
             this.init();
         }
 
@@ -44,6 +67,7 @@
                 this.buildRoutes();
                 this.bindEvents();
                 this.bindTabs();
+                this.bindMap();
                 this.updateTabCounts();
                 this.render();
             };
@@ -74,12 +98,16 @@
                 modal: document.getElementById('fcModal'),
                 modalClose: document.getElementById('fcModalClose'),
                 modalBody: document.getElementById('fcModalBody'),
-                tabButtons: Array.from(document.querySelectorAll('.fc-tab-btn'))
+                tabButtons: Array.from(document.querySelectorAll('.fc-tab-btn')),
+
+                // Map
+                mapToggle: document.getElementById('fcMapToggle'),
+                mapWrap: document.getElementById('fcMapWrap'),
+                mapInner: document.getElementById('fcMap')
             };
         }
 
         buildRoutes() {
-            // Attach a synthetic lookup key for the modal + a friendly category label.
             this.allRoutes.forEach((r, i) => {
                 r._key = `${r.id || 'route'}-${i}`;
                 r._categoryLabel = CATEGORY_LABELS[r.category] || r.category || 'Flight';
@@ -123,13 +151,11 @@
             if (emptyReset) emptyReset.addEventListener('click', () => this.resetFilters());
             if (sort) sort.addEventListener('change', () => { this.currentPage = 1; this.render(); });
 
-            // Live-filter on dropdown change
             ['from', 'to', 'aircraft', 'operation', 'conditions', 'difficulty'].forEach(k => {
                 const el = this.els[k];
                 if (el) el.addEventListener('change', () => this.applyFilters(true));
             });
 
-            // Allow Enter key in the filter area to re-search
             document.querySelectorAll('.fc-filter select').forEach(sel => {
                 sel.addEventListener('keypress', (e) => {
                     if (e.key === 'Enter') this.applyFilters(true);
@@ -150,6 +176,199 @@
             });
         }
 
+        // ---- MAP --------------------------------------------------------
+
+        bindMap() {
+            const { mapToggle, mapWrap } = this.els;
+            if (!mapToggle || !mapWrap) return;
+
+            mapToggle.addEventListener('click', () => {
+                this.mapVisible = !this.mapVisible;
+                mapWrap.hidden = !this.mapVisible;
+                mapToggle.setAttribute('aria-expanded', String(this.mapVisible));
+                mapToggle.classList.toggle('open', this.mapVisible);
+
+                const label = mapToggle.querySelector('.fc-map-toggle-label');
+                if (label) {
+                    label.textContent = this.mapVisible ? 'Hide Route Map' : 'Show Route Map';
+                }
+
+                if (this.mapVisible) {
+                    this.initMap();
+                    // Leaflet needs a tick when the container becomes visible.
+                    window.setTimeout(() => {
+                        if (this.map) this.map.invalidateSize();
+                        this.renderMap(this.getFilteredRoutes());
+                    }, 60);
+                }
+            });
+        }
+
+        initMap() {
+            if (this.map || typeof window.L === 'undefined' || !this.els.mapInner) return;
+
+            this.map = window.L.map(this.els.mapInner, {
+                center: NZ_CENTER,
+                zoom: NZ_ZOOM,
+                scrollWheelZoom: true,
+                worldCopyJump: false,
+                zoomControl: true,
+                attributionControl: true
+            });
+
+            window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                minZoom: 4,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(this.map);
+
+            this.mapRouteLayer = window.L.layerGroup().addTo(this.map);
+        }
+
+        // Draw every route in the given list. Clears previous layers.
+        renderMap(routes) {
+            if (!this.map || !this.mapRouteLayer) return;
+
+            this.mapRouteLayer.clearLayers();
+            this.mapRouteLayers = {};
+            this.mapMarkerLayers = {};
+
+            const bounds = [];
+
+            routes.forEach(r => {
+                const from = this.airports[r.from];
+                const to = this.airports[r.to];
+                if (!from || !to) return;
+
+                const color = DIFFICULTY_COLORS[r.difficulty] || DIFFICULTY_COLORS[3];
+                const latlngs = [
+                    [from.lat, from.lon],
+                    [to.lat, to.lon]
+                ];
+
+                const line = window.L.polyline(latlngs, {
+                    color: color,
+                    weight: 3,
+                    opacity: 0.75,
+                    lineCap: 'round',
+                    lineJoin: 'round'
+                });
+
+                line._cpasKey = r._key;
+                line.on('mouseover', () => {
+                    line.setStyle({ weight: 6, opacity: 1 });
+                    this.highlightCard(r._key, true);
+                });
+                line.on('mouseout', () => {
+                    if (this.highlightedKey !== r._key) {
+                        line.setStyle({ weight: 3, opacity: 0.75 });
+                    } else {
+                        line.setStyle({ weight: 6, opacity: 1 });
+                    }
+                    this.highlightCard(r._key, false);
+                });
+                line.on('click', () => this.focusCard(r._key));
+
+                line.addTo(this.mapRouteLayer);
+                this.mapRouteLayers[r._key] = line;
+
+                this.ensureMarker(r.from, from, color, bounds);
+                this.ensureMarker(r.to, to, color, bounds);
+            });
+
+            // Fit map to the visible routes if any are shown.
+            if (bounds.length > 0) {
+                try {
+                    this.map.fitBounds(bounds, { padding: [30, 30], maxZoom: 9 });
+                } catch (e) { /* ignore */ }
+            }
+        }
+
+        ensureMarker(icao, airport, color, bounds) {
+            bounds.push([airport.lat, airport.lon]);
+
+            if (this.mapMarkerLayers[icao]) return;
+
+            const marker = window.L.circleMarker([airport.lat, airport.lon], {
+                radius: 4,
+                color: '#ffffff',
+                weight: 2,
+                fillColor: '#1a365d',
+                fillOpacity: 1
+            });
+
+            marker.bindTooltip(
+                `<strong>${this.escape(icao)}</strong><br>${this.escape(airport.name || '')}`,
+                { direction: 'top', offset: [0, -6] }
+            );
+
+            marker.addTo(this.mapRouteLayer);
+            this.mapMarkerLayers[icao] = marker;
+        }
+
+        // Highlight a single route on the map (used from card hover / click).
+        highlightOnMap(key) {
+            if (!this.map) return;
+
+            // Reset any previous highlight.
+            if (this.highlightedKey && this.mapRouteLayers[this.highlightedKey]) {
+                const prev = this.mapRouteLayers[this.highlightedKey];
+                prev.setStyle({ weight: 3, opacity: 0.75 });
+                if (prev.bringToFront) prev.bringToFront();
+            }
+
+            const line = this.mapRouteLayers[key];
+            if (!line) {
+                this.highlightedKey = null;
+                return;
+            }
+
+            line.setStyle({ weight: 6, opacity: 1 });
+            if (line.bringToFront) line.bringToFront();
+            this.highlightedKey = key;
+
+            // Pan the map to the highlighted route.
+            if (line.getBounds) {
+                this.map.fitBounds(line.getBounds(), {
+                    padding: [60, 60],
+                    maxZoom: 9,
+                    animate: true
+                });
+            }
+        }
+
+        clearHighlight() {
+            if (!this.map) return;
+            if (this.highlightedKey && this.mapRouteLayers[this.highlightedKey]) {
+                this.mapRouteLayers[this.highlightedKey].setStyle({ weight: 3, opacity: 0.75 });
+            }
+            this.highlightedKey = null;
+        }
+
+        // Toggle the matching card's "highlighted" class.
+        highlightCard(key, on) {
+            if (!this.els.results) return;
+            const card = this.els.results.querySelector(`.fc-card[data-key="${this.cssEscape(key)}"]`);
+            if (card) card.classList.toggle('is-highlighted', !!on);
+        }
+
+        // Scroll card into view and mark it as highlighted (used when a line is clicked).
+        focusCard(key) {
+            if (!this.els.results) return;
+            const card = this.els.results.querySelector(`.fc-card[data-key="${this.cssEscape(key)}"]`);
+            if (!card) return;
+
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            card.classList.add('is-highlighted');
+            window.setTimeout(() => card.classList.remove('is-highlighted'), 1800);
+        }
+
+        cssEscape(str) {
+            return String(str).replace(/([^\w-])/g, '\\$1');
+        }
+
+        // ---- FILTERS / RESULTS ------------------------------------------
+
         readFilters() {
             return {
                 from: (this.els.from && this.els.from.value) || '',
@@ -165,7 +384,6 @@
             const f = this.readFilters();
 
             return this.allRoutes.filter(r => {
-                // Scope to the currently selected tab/category
                 if (r.category !== this.activeTab) return false;
 
                 if (f.from && r.from !== f.from) return false;
@@ -238,6 +456,11 @@
             this.renderCount(filtered);
             this.renderPagination(filtered);
             this.toggleEmptyState(filtered);
+
+            // Keep the map in sync when it's open.
+            if (this.mapVisible && this.map) {
+                this.renderMap(filtered);
+            }
         }
 
         renderResults(filtered) {
@@ -246,7 +469,7 @@
 
             this.els.results.innerHTML = slice.map(r => this.cardHTML(r)).join('');
 
-            // Bind "View Brief" buttons
+            // "View Brief"
             this.els.results.querySelectorAll('[data-brief-key]').forEach(btn => {
                 btn.addEventListener('click', () => {
                     const key = btn.getAttribute('data-brief-key');
@@ -255,12 +478,32 @@
                 });
             });
 
-            // Bind "Airspace" buttons
+            // "Airspace"
             this.els.results.querySelectorAll('[data-airspace-key]').forEach(btn => {
                 btn.addEventListener('click', () => {
                     const key = btn.getAttribute('data-airspace-key');
                     const route = this.allRoutes.find(x => x._key === key);
                     if (route) this.openAirspaceModal(route);
+                });
+            });
+
+            // Card -> map interactivity: hover highlights, click focuses.
+            this.els.results.querySelectorAll('.fc-card').forEach(cardEl => {
+                const key = cardEl.getAttribute('data-key');
+                if (!key) return;
+
+                cardEl.addEventListener('mouseenter', () => {
+                    if (this.mapVisible && this.map) this.highlightOnMap(key);
+                });
+
+                cardEl.addEventListener('mouseleave', () => {
+                    if (this.mapVisible && this.map) this.clearHighlight();
+                });
+
+                cardEl.addEventListener('click', (e) => {
+                    // Ignore clicks on internal buttons/links.
+                    if (e.target.closest('button, a')) return;
+                    if (this.mapVisible && this.map) this.highlightOnMap(key);
                 });
             });
         }
@@ -350,7 +593,7 @@
             });
         }
 
-        // ---- HTML builders ------------------------------------------------
+        // ---- HTML builders ---------------------------------------------
 
         hasAirspace(r) {
             return Array.isArray(r.airspace) && r.airspace.length > 0;
@@ -598,22 +841,29 @@
         }
     }
 
-    async function bootstrap() {
-        let routes = [];
-        const url = window.CPAS_ROUTES_URL;
+    async function fetchJSON(url, label) {
         if (!url) {
-            console.error('[flight-centre] CPAS_ROUTES_URL is not defined');
-        } else {
-            try {
-                const res = await fetch(url, { cache: 'no-cache' });
-                if (!res.ok) throw new Error(`HTTP ${res.status}`);
-                const data = await res.json();
-                if (Array.isArray(data)) routes = data;
-            } catch (err) {
-                console.error('[flight-centre] Failed to load routes:', err);
-            }
+            console.error(`[flight-centre] Missing URL for ${label}`);
+            return null;
         }
-        window.flightCentre = new FlightCentre(routes);
+        try {
+            const res = await fetch(url, { cache: 'no-cache' });
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return await res.json();
+        } catch (err) {
+            console.error(`[flight-centre] Failed to load ${label}:`, err);
+            return null;
+        }
+    }
+
+    async function bootstrap() {
+        const routesData = await fetchJSON(window.CPAS_ROUTES_URL, 'routes');
+        const airportsData = await fetchJSON(window.CPAS_AIRPORTS_URL, 'airports');
+
+        const routes = Array.isArray(routesData) ? routesData : [];
+        const airports = (airportsData && typeof airportsData === 'object') ? airportsData : {};
+
+        window.flightCentre = new FlightCentre(routes, airports);
     }
 
     if (document.readyState === 'loading') {

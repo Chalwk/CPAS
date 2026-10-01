@@ -6,6 +6,10 @@ css: [flight_centre]
 
 <!-- Copyright (c) 2025-2026 Jericho Crosby (Chalwk) -->
 
+<!-- Leaflet (CDN) -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
 <section class="fc-section" style="margin-top: 70px;">
     <div class="container">
         <h2 class="section-title">Flight Centre</h2>
@@ -120,6 +124,30 @@ css: [flight_centre]
             </div>
         </div>
 
+        <!-- Interactive Route Map -->
+        <div class="fc-map-block">
+            <button class="fc-map-toggle" id="fcMapToggle" aria-expanded="false" aria-controls="fcMapWrap">
+                <i class="fas fa-map-marked-alt"></i>
+                <span class="fc-map-toggle-label">Show Route Map</span>
+                <i class="fas fa-chevron-down fc-map-toggle-chevron"></i>
+            </button>
+
+            <div class="fc-map-wrap" id="fcMapWrap" hidden>
+                <div class="fc-map-inner" id="fcMap"></div>
+                <div class="fc-map-legend" aria-hidden="true">
+                    <span class="fc-map-legend-item"><i class="fc-map-legend-swatch" style="background:#059669"></i>Easy</span>
+                    <span class="fc-map-legend-item"><i class="fc-map-legend-swatch" style="background:#0891b2"></i>Light</span>
+                    <span class="fc-map-legend-item"><i class="fc-map-legend-swatch" style="background:#2d6bc9"></i>Moderate</span>
+                    <span class="fc-map-legend-item"><i class="fc-map-legend-swatch" style="background:#f59e0b"></i>Challenging</span>
+                    <span class="fc-map-legend-item"><i class="fc-map-legend-swatch" style="background:#dc2626"></i>Expert</span>
+                </div>
+                <div class="fc-map-hint">
+                    <i class="fas fa-info-circle"></i>
+                    Hover a route card to highlight it on the map. Click a line to focus its card.
+                </div>
+            </div>
+        </div>
+
         <div class="fc-results-header">
             <div class="fc-results-count" id="fcCount">Showing all routes</div>
             <div class="fc-sort">
@@ -164,5 +192,8 @@ css: [flight_centre]
 <script>
     window.CPAS_BASEURL = '{{ site.baseurl }}';
     window.CPAS_ROUTES_URL = '{{ '/assets/data/routes.json' | relative_url }}';
+    window.CPAS_AIRPORTS_URL = '{{ '/assets/data/airports.json' | relative_url }}';
 </script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
 <script defer src="{{ '/assets/js/flight_centre.js' | relative_url }}"></script>
