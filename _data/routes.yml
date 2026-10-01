@@ -281,6 +281,110 @@
   alternate: "NZGY (Glenorchy) if NZQN weather marginal"
   warning: "Monitor weather trends for alpine crossing segment"
 
+- id: fw-nzns-nzch-marlborough
+  from: NZNS
+  to: NZCH
+  from_name: Nelson
+  to_name: Christchurch International
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 137
+  duration: "~1h 05m"
+  aircraft:
+    - Piper Seneca V
+    - Piper Archer III
+    - Piper Turbo Arrow III
+  flight_rules: IFR
+  conditions:
+    - Coastal
+    - Mountain
+    - IMC
+  difficulty: 2
+  description: Nelson to Christchurch via the Marlborough Sounds and Kaikoura Coast. A scenic and efficient IFR connection between the top of the South Island and Canterbury.
+  tags:
+    - Marlborough Sounds
+    - Kaikoura Coast
+    - IFR
+  highlights:
+    - Marlborough Sounds overflight
+    - Kaikoura Peninsula and whale watching area
+    - Transition from Class G to Christchurch Control Area
+  airspace:
+    - "Depart NZNS: Nelson Tower 118.6"
+    - "Climb to FL150 for smooth IFR cruise"
+    - "Route: Direct via Kaikoura, expect vectors for Christchurch approach"
+    - "NZCH arrival: Christchurch Control 119.1"
+  alternate: "NZWB (Woodbourne) or NZKI (Kaikoura)"
+
+- id: fw-nzch-nzwn-nzns-capital
+  from: NZCH
+  to: NZNS
+  from_name: Christchurch International
+  to_name: Nelson
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 137
+  duration: "~1h 10m"
+  aircraft:
+    - Piper Archer II
+    - Piper Archer III
+    - Piper Turbo Arrow IV
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 3
+  description: Christchurch to Nelson via the Kaikoura Coast and Marlborough. A classic South Island cross-country route with spectacular coastal scenery.
+  tags:
+    - Kaikoura
+    - Marlborough
+    - Coastal
+  highlights:
+    - Kaikoura Peninsula (whale watching from the air)
+    - Marlborough wine region overflight
+    - Wairau Valley approach into Nelson
+  airspace:
+    - "Depart NZCH: Christchurch Tower 118.1"
+    - "Kaikoura (NZKI): CTAF 119.5, optional stop"
+    - "Blenheim (NZWB): Control Zone 118.1"
+    - "NZNS arrival: Nelson Tower 118.6"
+  alternate: "NZWB (Woodbourne) or NZKI (Kaikoura)"
+
+- id: fw-nzqn-nzch-return
+  from: NZQN
+  to: NZCH
+  from_name: Queenstown
+  to_name: Christchurch International
+  category: fixed-wing
+  operation: Charter
+  distance_nm: 274
+  duration: "~2h 00m"
+  aircraft:
+    - Piper Archer II
+    - Piper Archer III
+    - Piper Seneca V
+  flight_rules: VFR
+  conditions:
+    - Mountain
+    - Alpine
+  difficulty: 4
+  description: Queenstown to Christchurch return via the Mackenzie Country and Lake Tekapo. The classic alpine crossing in reverse with stunning views of the Southern Alps.
+  tags:
+    - Lake Tekapo
+    - Mackenzie Country
+    - Southern Alps
+  highlights:
+    - Departure over The Remarkables
+    - Lake Pukaki and Mount Cook views
+    - Lake Tekapo overflight
+    - Canterbury Plains descent into Christchurch
+  airspace:
+    - "Depart NZQN: Queenstown Tower 124.8"
+    - "Climb to 9,500 ft for alpine crossing"
+    - "Mackenzie Basin: Class G, monitor 122.5 for Mount Cook FIZ"
+    - "NZCH arrival: Christchurch Approach 119.1"
+  alternate: "NZMC (Mount Cook) for weather or scenic stop"
+
 # Helicopter ---------------------------------------------------------------
 
 - id: hel-nzch-nzmf-r66
@@ -424,6 +528,78 @@
     - "Low-level corridors: Follow SH6 highway for navigation"
     - "Marine VHF monitoring: Channel 16 for maritime activity"
     - "Military Restricted Area R380 occasionally active - check NOTAMs"
+
+- id: hel-nzqn-nzmf-milford
+  from: NZQN
+  to: NZMF
+  from_name: Queenstown
+  to_name: Milford Sound
+  category: helicopter
+  operation: Charter
+  distance_nm: 70
+  duration: "~50m"
+  aircraft:
+    - Airbus H145
+    - Airbus H125
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+    - Remote
+  difficulty: 5
+  description: Queenstown to Milford Sound direct over the Southern Alps. One of the most spectacular helicopter routes in New Zealand, featuring glacier and fiord views.
+  tags:
+    - Milford Sound
+    - Fiordland
+    - Southern Alps
+  highlights:
+    - Lake Wakatipu and Dart River Valley
+    - Fiordland National Park overflight
+    - Mitre Peak and Milford Sound approach
+    - Optional glacier landing en route
+  airspace:
+    - "Depart NZQN: Queenstown Tower 124.8"
+    - "Route: Via Glenorchy and the Dart River Valley"
+    - "Milford Sound (NZMF): Special rules airspace 122.1"
+    - "Mount Aspiring National Park: Minimum altitude 2,000 ft AGL"
+    - "Watch for other scenic flight traffic - high volume in summer"
+  warning: "Weather in Fiordland can change rapidly"
+
+- id: hel-nzqn-nzrc-stewart
+  from: NZQN
+  to: NZRC
+  from_name: Queenstown
+  to_name: Stewart Island / Oban
+  category: helicopter
+  operation: Charter
+  distance_nm: 160
+  duration: "~1h 15m"
+  aircraft:
+    - Airbus H145
+    - Airbus H125
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Remote
+  difficulty: 3
+  description: Queenstown to Stewart Island (Rakiura) direct. A remote and scenic flight over Southland and Foveaux Strait to New Zealand's southernmost inhabited island.
+  tags:
+    - Stewart Island
+    - Rakiura
+    - Remote
+  highlights:
+    - Southland farmland and coastline
+    - Foveaux Strait crossing
+    - Oban township and Ryan's Creek airstrip approach
+    - Optional landing at Mason Bay (west coast)
+  airspace:
+    - "Depart NZQN: Queenstown Tower 124.8"
+    - "Invercargill (NZNV): Control Zone 118.1, transit approval required"
+    - "Ryan's Creek (NZRC): Unattended, CTAF 119.1"
+    - "Foveaux Strait: Class G, monitor 130.6 for area broadcasts"
+    - "Stewart Island: Remote terrain, limited emergency landing options"
+  alternate: "NZNV (Invercargill) or NZMO (Manapouri)"
 
 # Scenic Tours -------------------------------------------------------------
 
@@ -645,6 +821,81 @@
     - "Mountain radio frequency: 130.6 for area broadcasts"
   alternate: "Hororata (NZHT), Glenorchy (NZGY), or high-country farm strips"
   warning: "Mountain weather changes rapidly - careful planning required"
+
+- id: tour-nzns-abel-tasman
+  from: NZNS
+  to: NZNS
+  from_name: Nelson
+  to_name: Nelson
+  category: scenic
+  operation: Tour
+  distance_nm: 0
+  duration: "50-60 min"
+  aircraft:
+    - Robinson R66
+    - Airbus H125
+    - Robinson R44
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 2
+  description: A scenic helicopter tour from Nelson over the Abel Tasman National Park, Kahurangi National Park, and the golden beaches of Tasman Bay. Optional landing at a remote beach or lodge.
+  tags:
+    - Abel Tasman
+    - Kahurangi
+    - Golden Bay
+  highlights:
+    - Abel Tasman National Park coastline
+    - Split Apple Rock and Anchorage Bay
+    - Kahurangi National Park mountains
+    - Optional beach landing at Awaroa or Torrent Bay
+    - Farewell Spit views (weather permitting)
+  airspace:
+    - "Depart NZNS: Nelson Tower 118.6"
+    - "Abel Tasman area: Class G, CTAF 123.1"
+    - "Kahurangi National Park: Minimum altitude 2,000 ft AGL"
+    - "Watch for other scenic aircraft - high traffic in summer"
+    - "Beach landings: Check tide times and local conditions"
+  alternate: "Motueka (NZMK) or Takaka (NZTK) for refueling"
+
+- id: tour-nzqn-milford-seneca
+  from: NZQN
+  to: NZMF
+  from_name: Queenstown
+  to_name: Milford Sound
+  category: scenic
+  operation: Tour
+  distance_nm: 70
+  duration: "1h 30m (round trip)"
+  aircraft:
+    - Piper Seneca V
+    - Piper Turbo Arrow III
+    - Piper Turbo Arrow IV
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+    - Remote
+  difficulty: 4
+  description: Queenstown to Milford Sound scenic flight with a cruise option. Fly over the Southern Alps, glacier-fed rivers, and into the heart of Fiordland National Park.
+  tags:
+    - Milford Sound
+    - Fiordland
+    - Scenic Flight
+  highlights:
+    - Lake Wakatipu and the Dart River Valley
+    - Mount Aspiring National Park
+    - Fiordland National Park and Milford Sound
+    - Mitre Peak and Stirling Falls
+    - Optional return via the Homer Tunnel and Milford Road
+  airspace:
+    - "Depart NZQN: Queenstown Tower 124.8"
+    - "Route: Via Glenorchy, Dart River, and over the Main Divide"
+    - "Milford Sound (NZMF): Special rules airspace 122.1"
+    - "Minimum altitude 2,000 ft AGL over national parks"
+    - "Weather: Check Fiordland forecast - conditions can change rapidly"
+  warning: "Mountain flying experience required for the Main Divide crossing"
 
 # Heli-Hike Tours ----------------------------------------------------------
 
@@ -869,6 +1120,43 @@
     - "All landings require firm, stable ground"
     - "Avoid disturbing wildlife habitats"
 
+- id: hike-nzqn-earnslaw
+  from: NZQN
+  to: NZQN
+  from_name: Queenstown
+  to_name: Earnslaw Burn
+  category: heli-hike
+  operation: Tour
+  distance_nm: 0
+  duration: "3-4 hours"
+  aircraft:
+    - Airbus H145
+    - Airbus H125
+    - Robinson R66
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+    - Remote
+  difficulty: 4
+  description: A spectacular heli-hike from Queenstown into the Earnslaw Burn, featuring a landing beneath the 2,000 ft Earnslaw Glacier waterfall and a guided hike through alpine terrain.
+  tags:
+    - Earnslaw Burn
+    - Heli-Hike
+    - Waterfall
+  highlights:
+    - Landing beneath the Earnslaw Glacier waterfall
+    - Guided hike through tussock and alpine terrain
+    - Views of Mount Earnslaw and the Forbes Mountains
+    - Optional landing at a high alpine tarn
+  airspace:
+    - "Depart NZQN: Queenstown Tower 124.8"
+    - "Route: Via Glenorchy and the Rees Valley"
+    - "Mount Aspiring National Park: Minimum altitude 2,000 ft AGL"
+    - "Landing zone: Earnslaw Burn, S44° 38' E168° 24'"
+    - "Watch for variable mountain weather and wind shear"
+  warning: "Weather in the Earnslaw Burn can change rapidly"
+
 # Itineraries --------------------------------------------------------------
 
 - id: itin-south-island
@@ -967,3 +1255,78 @@
   airspace:
     - "Coastal Class G, Oamaru CTAF 123.1"
     - "Queenstown CTR, then Class G high country"
+
+- id: itin-marlborough-nelson
+  from: NZCH
+  to: NZCH
+  from_name: Christchurch International
+  to_name: Marlborough / Nelson
+  category: itinerary
+  operation: Itinerary
+  distance_nm: 0
+  duration: "2 Days"
+  aircraft:
+    - Piper Seneca V
+    - Piper Archer III
+    - Piper Turbo Arrow III
+  flight_rules: VFR
+  conditions:
+    - Coastal
+    - Mountain
+  difficulty: 2
+  description: Marlborough & Nelson Wine and Scenic Tour - a two-day exploration of the top of the South Island, combining coastal flying, vineyard visits, and alpine scenery.
+  tags:
+    - Multi-Day
+    - Wine Tour
+    - Marlborough
+    - Nelson
+  highlights:
+    - "Day 1: NZCH → NZNS - Coastal flight via Kaikoura and Marlborough Sounds"
+    - "Day 1: Afternoon wine tasting in Marlborough vineyards"
+    - "Day 2: NZNS → NZCH - Return via Abel Tasman and Kahurangi National Parks"
+    - "Day 2: Scenic overflight of Nelson Lakes and the Wairau Valley"
+  airspace:
+    - "Day 1: Christchurch CTR, Kaikoura CTAF 119.5, Nelson Tower 118.6"
+    - "Day 2: Nelson Tower, Marlborough CTR 118.1, Christchurch Approach 119.1"
+    - "Flight following available throughout"
+  alternate: "NZWB (Woodbourne) or NZKI (Kaikoura)"
+
+- id: itin-southern-lakes
+  from: NZQN
+  to: NZQN
+  from_name: Queenstown
+  to_name: Southern Lakes & Fiordland
+  category: itinerary
+  operation: Itinerary
+  distance_nm: 0
+  duration: "3 Days"
+  aircraft:
+    - Airbus H145
+    - Airbus H125
+    - Piper Seneca V
+    - Piper Turbo Arrow IV
+  flight_rules: VFR
+  conditions:
+    - Alpine
+    - Mountain
+    - Remote
+    - Coastal
+  difficulty: 4
+  description: Southern Lakes & Fiordland Explorer - a three-day itinerary from Queenstown covering Milford Sound, Te Anau, and the remote fiords of Fiordland National Park.
+  tags:
+    - Multi-Day
+    - Fiordland
+    - Milford Sound
+    - Remote
+  highlights:
+    - "Day 1: NZQN → NZMF - Milford Sound scenic flight and cruise"
+    - "Day 1: NZMF → NZMO - Overnight at Te Anau/Manapouri"
+    - "Day 2: NZMO → Doubtful Sound - Remote fiord landing and exploration"
+    - "Day 2: Return to NZMO for overnight"
+    - "Day 3: NZMO → NZQN - Return via the Southern Alps and Lake Wakatipu"
+  airspace:
+    - "Day 1: Queenstown CTR 124.8, Milford Sound Special Rules 122.1"
+    - "Day 2: Manapouri CTAF 119.1, Fiordland remote operations"
+    - "Day 3: Queenstown CTR, mountain radio service 130.6"
+    - "All Fiordland operations require weather checks and flight planning"
+  warning: "Fiordland weather is highly changeable - build flexibility into the itinerary"
