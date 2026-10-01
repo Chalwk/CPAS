@@ -15,7 +15,7 @@ Ryan's Creek is the only airfield on Stewart Island / Rakiura, near the town of 
 
 | Designator | Length | Surface | Notes |
 | ---------- | ------ | ------- | ----- |
-| 04/22      | 750 m  | Grass   |       |
+| 04/22      | 800 m  | Grass   |       |
 
 ## Frequencies
 
@@ -25,7 +25,7 @@ Ryan's Creek is the only airfield on Stewart Island / Rakiura, near the town of 
 
 ## Elevation
 
-92 ft AMSL.
+288 ft AMSL.
 
 ## Local Procedures
 

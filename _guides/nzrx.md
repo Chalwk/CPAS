@@ -13,9 +13,9 @@ Roxburgh is a small grass strip serving the Teviot Valley community and the Roxb
 
 ## Runways
 
-| Designator | Length | Surface | Notes         |
-| ---------- | ------ | ------- | ------------- |
-| 14/32      | 600 m  | Grass   | Valley floor. |
+| Designator | Length  | Surface | Notes         |
+| ---------- | ------- | ------- | ------------- |
+| 16/34      | 1,272 m | Grass   | Valley floor. |
 
 ## Frequencies
 
@@ -25,7 +25,7 @@ Roxburgh is a small grass strip serving the Teviot Valley community and the Roxb
 
 ## Elevation
 
-380 ft AMSL.
+506 ft AMSL.
 
 ## Local Procedures
 
@@ -38,7 +38,7 @@ Roxburgh is a small grass strip serving the Teviot Valley community and the Roxb
 
 ## Recommended Approaches
 
-- **Visual 32:** From the north.
+- **Visual 34:** From the north.
 
 ## Nearby Airfields
 

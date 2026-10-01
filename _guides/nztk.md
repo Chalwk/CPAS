@@ -15,7 +15,8 @@ Takaka is a small aerodrome serving Golden Bay and the town of Takaka. It requir
 
 | Designator | Length | Surface | Notes |
 | ---------- | ------ | ------- | ----- |
-| 11/29      | 700 m  | Grass   |       |
+| 18/36      | 832 m  | Bitumen |       |
+| 11/29      | 770 m  | Grass   |       |
 
 ## Frequencies
 
@@ -25,7 +26,7 @@ Takaka is a small aerodrome serving Golden Bay and the town of Takaka. It requir
 
 ## Elevation
 
-40 ft AMSL.
+100 ft AMSL.
 
 ## Local Procedures
 
@@ -38,7 +39,7 @@ Takaka is a small aerodrome serving Golden Bay and the town of Takaka. It requir
 
 ## Recommended Approaches
 
-- **Visual 29:** From the west.
+- **Visual 36:** From the west.
 
 ## Nearby Airfields
 

@@ -16,15 +16,15 @@ Nelson is the main airport at the top of the South Island. It serves the Tasman 
 | Designator | Length  | Surface | Notes      |
 | ---------- | ------- | ------- | ---------- |
 | 02/20      | 1,347 m | Asphalt | Primary.   |
-| 17/35      | 730 m   | Grass   | Secondary. |
+| 17/35      | 584 m   | Grass   | Secondary. |
 
 ## Frequencies
 
 | Service  | Frequency | Notes           |
 | -------- | --------- | --------------- |
-| ATIS     | 126.4     |                 |
-| Tower    | 118.6     | Nelson Tower    |
-| Approach | 128.9     | Nelson Approach |
+| ATIS     | 129.1     |                 |
+| Tower    | 127.4     | Nelson Tower    |
+| Approach | 127.4     | Nelson Approach |
 
 ## Elevation
 

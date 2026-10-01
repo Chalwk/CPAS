@@ -15,8 +15,8 @@ Te Anau / Manapouri is the primary aerodrome for Fiordland, sitting on the easte
 
 | Designator | Length  | Surface | Notes      |
 | ---------- | ------- | ------- | ---------- |
-| 14/32      | 1,600 m | Asphalt | Primary.   |
-| 03/21      | 800 m   | Grass   | Crosswind. |
+| 08/26      | 1,594 m | Asphalt | Primary.   |
+| 14/32      | 969 m   | Grass   | Crosswind. |
 
 ## Frequencies
 
@@ -26,7 +26,7 @@ Te Anau / Manapouri is the primary aerodrome for Fiordland, sitting on the easte
 
 ## Elevation
 
-770 ft AMSL.
+687 ft AMSL.
 
 ## Local Procedures
 

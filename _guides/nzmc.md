@@ -15,7 +15,7 @@ Mount Cook Airport sits at the head of the Mackenzie Basin, at the foot of Aorak
 
 | Designator | Length  | Surface        | Notes                   |
 | ---------- | ------- | -------------- | ----------------------- |
-| 05/23      | 1,800 m | Grass / gravel | Runway 05 rises uphill. |
+| 05/23      | 1,473 m | Grass / gravel | Runway 05 rises uphill. |
 
 ## Frequencies
 
@@ -26,7 +26,7 @@ Mount Cook Airport sits at the head of the Mackenzie Basin, at the foot of Aorak
 
 ## Elevation
 
-1,800 ft AMSL.
+2,153 ft AMSL.
 
 ## Local Procedures
 

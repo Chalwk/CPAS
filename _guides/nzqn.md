@@ -15,15 +15,15 @@ Queenstown is one of the most scenic and demanding airports in New Zealand. It s
 
 | Designator | Length  | Surface | Notes                                         |
 | ---------- | ------- | ------- | --------------------------------------------- |
-| 05/23      | 1,891 m | Asphalt | Primary. 23 has the famous over-water visual. |
-| 14/32      | 883 m   | Asphalt | Secondary, crosswind.                         |
+| 05/23      | 1,777 m | Asphalt | Primary. 23 has the famous over-water visual. |
+| 14/32      | 720 m   | Asphalt | Secondary, crosswind.                         |
 
 ## Frequencies
 
 | Service | Frequency | Notes                       |
 | ------- | --------- | --------------------------- |
-| ATIS    | 118.0     |                             |
-| Tower   | 124.8     | Queenstown Tower / Approach |
+| ATIS    | 126.4     |                             |
+| Tower   | 118.1     | Queenstown Tower / Approach |
 | Ground  | 121.9     |                             |
 
 ## Elevation

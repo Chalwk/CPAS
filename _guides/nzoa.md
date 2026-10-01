@@ -15,7 +15,7 @@ Omarama is a small aerodrome at the southern end of the Mackenzie Basin, world-f
 
 | Designator | Length  | Surface | Notes      |
 | ---------- | ------- | ------- | ---------- |
-| 09/27      | 1,000 m | Grass   | Primary.   |
+| 09/27      | 1,400 m | Grass   | Primary.   |
 | 15/33      | 700 m   | Grass   | Crosswind. |
 
 ## Frequencies
@@ -26,7 +26,7 @@ Omarama is a small aerodrome at the southern end of the Mackenzie Basin, world-f
 
 ## Elevation
 
-760 ft AMSL.
+1,380 ft AMSL.
 
 ## Local Procedures
 

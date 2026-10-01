@@ -15,7 +15,7 @@ Motueka is a small aerodrome on the shore of Tasman Bay, serving the town and ac
 
 | Designator | Length | Surface | Notes |
 | ---------- | ------ | ------- | ----- |
-| 02/20      | 800 m  | Grass   |       |
+| 02/20      | 729 m  | Asphalt |       |
 | 11/29      | 700 m  | Grass   |       |
 
 ## Frequencies
@@ -26,7 +26,7 @@ Motueka is a small aerodrome on the shore of Tasman Bay, serving the town and ac
 
 ## Elevation
 
-15 ft AMSL.
+38 ft AMSL.
 
 ## Local Procedures
 

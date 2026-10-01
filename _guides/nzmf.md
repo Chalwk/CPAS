@@ -15,13 +15,13 @@ Milford Sound is a short sealed strip at the head of the fiord, surrounded by to
 
 | Designator | Length | Surface | Notes                                                   |
 | ---------- | ------ | ------- | ------------------------------------------------------- |
-| 11/29      | 700 m  | Asphalt | One-way preferred: land 11, depart 29 (or as directed). |
+| 11/29      | 782 m  | Asphalt | One-way preferred: land 11, depart 29 (or as directed). |
 
 ## Frequencies
 
 | Service       | Frequency | Notes         |
 | ------------- | --------- | ------------- |
-| Special Rules | 122.1     | Milford Sound |
+| Special Rules | 119.2     | Milford Sound |
 
 ## Elevation
 

@@ -15,7 +15,7 @@ Glentanner Station is a private airstrip on the south-western shore of Lake Puka
 
 | Designator | Length | Surface | Notes    |
 | ---------- | ------ | ------- | -------- |
-| 15/33      | 900 m  | Grass   | Sloping. |
+| 15/33      | 965 m  | Grass   | Sloping. |
 
 ## Frequencies
 
@@ -25,7 +25,7 @@ Glentanner Station is a private airstrip on the south-western shore of Lake Puka
 
 ## Elevation
 
-1,825 ft AMSL.
+1,777 ft AMSL.
 
 ## Local Procedures
 

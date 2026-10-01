@@ -13,10 +13,10 @@ Rangiora is a small aerodrome north of Christchurch, used heavily for training a
 
 ## Runways
 
-| Designator | Length | Surface | Notes |
-| ---------- | ------ | ------- | ----- |
-| 07/25      | 900 m  | Grass   |       |
-| 16/34      | 700 m  | Grass   |       |
+| Designator | Length  | Surface | Notes |
+| ---------- | ------- | ------- | ----- |
+| 07/25      | 1,180 m | Grass   |       |
+| 16/34      | 700 m   | Grass   |       |
 
 ## Frequencies
 

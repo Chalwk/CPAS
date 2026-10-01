@@ -15,7 +15,7 @@ Murchison is a small aerodrome in the Buller district, used primarily for recrea
 
 | Designator | Length | Surface | Notes |
 | ---------- | ------ | ------- | ----- |
-| 06/24      | 700 m  | Grass   |       |
+| 13/31      | 580 m  | Grass   |       |
 
 ## Frequencies
 
@@ -25,7 +25,7 @@ Murchison is a small aerodrome in the Buller district, used primarily for recrea
 
 ## Elevation
 
-500 ft AMSL.
+532 ft AMSL.
 
 ## Local Procedures
 
@@ -38,7 +38,7 @@ Murchison is a small aerodrome in the Buller district, used primarily for recrea
 
 ## Recommended Approaches
 
-- **Visual 24:** From the west.
+- **Visual 31:** From the west.
 
 ## Nearby Airfields
 

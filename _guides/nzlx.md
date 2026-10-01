@@ -15,8 +15,8 @@ Alexandra is a small aerodrome in the Central Otago basin, surrounded by dry hil
 
 | Designator | Length  | Surface | Notes      |
 | ---------- | ------- | ------- | ---------- |
-| 14/32      | 1,000 m | Asphalt | Primary.   |
-| 01/19      | 800 m   | Grass   | Crosswind. |
+| 14/32      | 1,200 m | Asphalt | Primary.   |
+| 01/19      | 652 m   | Grass   | Crosswind. |
 
 ## Frequencies
 

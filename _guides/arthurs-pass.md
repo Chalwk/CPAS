@@ -34,7 +34,7 @@ Arthur's Pass is the most well-known VFR crossing of the Southern Alps. It links
 
 | Service                            | Frequency |
 | ---------------------------------- | --------- |
-| Christchurch Approach / Departure  | 119.1     |
+| Christchurch Approach / Departure  | 120.9     |
 | Mount Cook FIZ (if north of track) | 122.5     |
 | Hokitika Tower / CTAF              | 118.7     |
 | Area / Mountain radio              | 130.6     |

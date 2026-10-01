@@ -15,8 +15,8 @@ Wanaka is a small regional airport in the Upper Clutha Basin, near the southern 
 
 | Designator | Length  | Surface | Notes      |
 | ---------- | ------- | ------- | ---------- |
-| 11/29      | 1,600 m | Asphalt | Primary.   |
-| 08/26      | 700 m   | Grass   | Crosswind. |
+| 11/29      | 1,200 m | Asphalt | Primary.   |
+| 08/26      | 900 m   | Grass   | Crosswind. |
 
 ## Frequencies
 

@@ -15,7 +15,7 @@ Glenorchy is a small, private grass strip at the northern end of Lake Wakatipu. 
 
 | Designator | Length | Surface | Notes |
 | ---------- | ------ | ------- | ----- |
-| 14/32      | 600 m  | Grass   |       |
+| 14/32      | 675 m  | Grass   |       |
 
 ## Frequencies
 
@@ -25,7 +25,7 @@ Glenorchy is a small, private grass strip at the northern end of Lake Wakatipu. 
 
 ## Elevation
 
-1,220 ft AMSL.
+1,255 ft AMSL.
 
 ## Local Procedures
 

@@ -15,7 +15,7 @@ Franz Josef is a small aerodrome on the West Coast, right at the foot of the Fra
 
 | Designator | Length | Surface | Notes              |
 | ---------- | ------ | ------- | ------------------ |
-| 10/28      | 600 m  | Grass   | Scenic operations. |
+| 10/28      | 801 m  | Grass   | Scenic operations. |
 
 ## Frequencies
 
@@ -25,7 +25,7 @@ Franz Josef is a small aerodrome on the West Coast, right at the foot of the Fra
 
 ## Elevation
 
-474 ft AMSL.
+305 ft AMSL.
 
 ## Local Procedures
 

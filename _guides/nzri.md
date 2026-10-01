@@ -13,9 +13,10 @@ Rangitata Island is a private strip on the Canterbury Plains between Ashburton a
 
 ## Runways
 
-| Designator | Length | Surface | Notes    |
-| ---------- | ------ | ------- | -------- |
-| 14/32      | 600 m  | Grass   | Private. |
+| Designator | Length  | Surface | Notes    |
+| ---------- | ------- | ------- | -------- |
+| 12/30      | 1,040 m | Grass   | Private. |
+| 03/21      | 545 m   | Grass   | Private. |
 
 ## Frequencies
 
@@ -37,7 +38,7 @@ Rangitata Island is a private strip on the Canterbury Plains between Ashburton a
 
 ## Recommended Approaches
 
-- **Visual 32:** From the north.
+- **Visual 30:** From the north.
 
 ## Nearby Airfields
 

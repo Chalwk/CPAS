@@ -43,7 +43,7 @@ The Mount Cook valley runs north from Lake Pukaki into the heart of the Aoraki/M
 
 ## Hazards
 
-- **High density altitude** - Mount Cook Airport is 1,800 ft AMSL, and density altitude in summer reaches 4,000 ft+.
+- **High density altitude** - Mount Cook Airport is 2,153 ft AMSL, and density altitude in summer reaches 4,000 ft+.
 - **Katabatic winds** off the Tasman and Hooker glaciers.
 - **Mountain wave** - the Mount Cook area is notorious.
 - High scenic traffic - helicopters, fixed-wing, and gliders.

@@ -37,8 +37,8 @@ Banks Peninsula is a volcanic landmass immediately south-east of Christchurch. I
 
 | Service                  | Frequency |
 | ------------------------ | --------- |
-| Christchurch Tower       | 118.1     |
-| Christchurch Approach    | 119.1     |
+| Christchurch Tower       | 118.4     |
+| Christchurch Approach    | 120.9     |
 | Christchurch Information | 124.4     |
 | Banks Peninsula CTAF     | 123.1     |
 

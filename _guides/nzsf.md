@@ -15,7 +15,8 @@ Springfield is a small private strip on the Canterbury Plains near the foothills
 
 | Designator | Length | Surface | Notes |
 | ---------- | ------ | ------- | ----- |
-| 12/30      | 700 m  | Grass   |       |
+| 10/28      | 852 m  | Grass   |       |
+| 04/22      | 836 m  | Grass   |       |
 
 ## Frequencies
 
@@ -38,7 +39,7 @@ Springfield is a small private strip on the Canterbury Plains near the foothills
 
 ## Recommended Approaches
 
-- **Visual 30:** From the east.
+- **Visual 28:** From the east.
 
 ## Nearby Airfields
 

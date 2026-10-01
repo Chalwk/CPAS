@@ -15,8 +15,8 @@ Taieri is a small aerodrome on the Taieri Plain just west of Dunedin, home to th
 
 | Designator | Length | Surface | Notes      |
 | ---------- | ------ | ------- | ---------- |
-| 11/29      | 900 m  | Grass   | Primary.   |
-| 02/20      | 700 m  | Grass   | Crosswind. |
+| 05/23      | 813 m  | Grass   | Primary.   |
+| 11/29      | 680 m  | Grass   | Crosswind. |
 
 ## Frequencies
 
@@ -26,7 +26,7 @@ Taieri is a small aerodrome on the Taieri Plain just west of Dunedin, home to th
 
 ## Elevation
 
-30 ft AMSL.
+85 ft AMSL.
 
 ## Local Procedures
 
@@ -40,7 +40,7 @@ Taieri is a small aerodrome on the Taieri Plain just west of Dunedin, home to th
 
 ## Recommended Approaches
 
-- **Visual 29:** Into the prevailing wind.
+- **Visual 05:** Into the prevailing wind.
 
 ## Nearby Airfields
 

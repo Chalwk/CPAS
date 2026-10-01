@@ -15,7 +15,7 @@ Picton (Koromiko) is a small aerodrome serving the Picton township and the Marlb
 
 | Designator | Length | Surface | Notes                                  |
 | ---------- | ------ | ------- | -------------------------------------- |
-| 05/23      | 640 m  | Asphalt | Short, one-way operations recommended. |
+| 18/36      | 840 m  | Asphalt | Short, one-way operations recommended. |
 
 ## Frequencies
 
@@ -25,12 +25,12 @@ Picton (Koromiko) is a small aerodrome serving the Picton township and the Marlb
 
 ## Elevation
 
-115 ft AMSL.
+140 ft AMSL.
 
 ## Local Procedures
 
-- **One-way operations:** Runway 23 preferred for landing (uphill).
-- **Departures:** Runway 05 (downhill) preferred.
+- **One-way operations:** Runway 36 preferred for landing (uphill).
+- **Departures:** Runway 18 (downhill) preferred.
 - **No go-around:** Terrain at the southern end limits go-around options - commit only with stable approach.
 
 ## Hazards
@@ -40,7 +40,7 @@ Picton (Koromiko) is a small aerodrome serving the Picton township and the Marlb
 
 ## Recommended Approaches
 
-- **Visual 23:** Standard arrival from the north over the Sounds.
+- **Visual 36:** Standard arrival from the north over the Sounds.
 
 ## Nearby Airfields
 

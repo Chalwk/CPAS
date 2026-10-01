@@ -22,9 +22,9 @@ Dunedin International sits on the Taieri Plain, 15 NM south-west of Dunedin city
 
 | Service  | Frequency | Notes            |
 | -------- | --------- | ---------------- |
-| ATIS     | 118.0     |                  |
-| Tower    | 118.1     | Dunedin Tower    |
-| Approach | 128.9     | Dunedin Approach |
+| ATIS     | 128.8     |                  |
+| Tower    | 120.7     | Dunedin Tower    |
+| Approach | 120.7     | Dunedin Approach |
 | Ground   | 121.9     |                  |
 
 ## Elevation

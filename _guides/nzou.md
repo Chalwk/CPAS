@@ -15,8 +15,8 @@ Oamaru is a small aerodrome on the North Otago coast, serving the town of Oamaru
 
 | Designator | Length  | Surface | Notes      |
 | ---------- | ------- | ------- | ---------- |
-| 02/20      | 1,000 m | Asphalt | Primary.   |
-| 08/26      | 700 m   | Grass   | Crosswind. |
+| 18/36      | 1,283 m | Asphalt | Primary.   |
+| 11/29      | 947 m   | Grass   | Crosswind. |
 
 ## Frequencies
 
@@ -26,7 +26,7 @@ Oamaru is a small aerodrome on the North Otago coast, serving the town of Oamaru
 
 ## Elevation
 
-98 ft AMSL.
+97 ft AMSL.
 
 ## Local Procedures
 
@@ -40,7 +40,7 @@ Oamaru is a small aerodrome on the North Otago coast, serving the town of Oamaru
 
 ## Recommended Approaches
 
-- **Visual 02:** From the coast, straight-in.
+- **Visual 18:** From the coast, straight-in.
 
 ## Nearby Airfields
 

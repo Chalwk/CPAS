@@ -13,9 +13,9 @@ Pukaki is a small grass strip on the southern shore of the glacial Lake Pukaki. 
 
 ## Runways
 
-| Designator | Length | Surface | Notes      |
-| ---------- | ------ | ------- | ---------- |
-| 09/27      | 700 m  | Grass   | Lake-side. |
+| Designator | Length  | Surface | Notes      |
+| ---------- | ------- | ------- | ---------- |
+| 15/33      | 1,082 m | Asphalt | Lake-side. |
 
 ## Frequencies
 
@@ -25,7 +25,7 @@ Pukaki is a small grass strip on the southern shore of the glacial Lake Pukaki. 
 
 ## Elevation
 
-1,560 ft AMSL.
+1,575 ft AMSL.
 
 ## Local Procedures
 
@@ -38,7 +38,7 @@ Pukaki is a small grass strip on the southern shore of the glacial Lake Pukaki. 
 
 ## Recommended Approaches
 
-- **Visual 09:** From the east, over the lake.
+- **Visual 15:** From the east, over the lake.
 
 ## Nearby Airfields
 
