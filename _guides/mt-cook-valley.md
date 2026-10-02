@@ -50,17 +50,17 @@ The Mount Cook valley runs north from Lake Pukaki into the heart of the Aoraki/M
 ## Minimum Altitudes
 
 - **2,000 ft AGL** minimum over national park land.
-- **Local operator agreement (DOC):** Do not fly below 6,000 ft around the Hermitage or below 8,000 ft in the Mueller and Hooker valleys. Avoid the summit area. Itinerant pilots are expected to respect this.
+- **Local operator agreement (DOC):** Do not fly below 6,000 ft around the Hermitage or below 8,000 ft in the Mueller and Hooker valleys. Avoid the summit area. Itinerant pilots are expected to respect this. (Todo: verify - not found in official AIP/DOC sources)
 - **MBZ (Alps Traffic):** 118.6. Calls required on entry and at least every 15 minutes.
 - **One-way valley traffic** - keep to the right-hand side of the valley: eastern side northbound, western side southbound.
 
 ## Frequencies
 
-| Service                  | Frequency                    |
-| ------------------------ | ---------------------------- |
-| MBZ (Alps Traffic)       | 118.6                        |
-| Christchurch Information | 123.5                        |
-| Ohau QNH                 | Via Christchurch Information |
+| Service                  | Frequency                        |
+| ------------------------ | -------------------------------- |
+| MBZ (Alps Traffic)       | 118.6                            |
+| Christchurch Information | 123.5                            |
+| Ohau QNH                 | 123.5 (Christchurch Information) |
 
 ## Hazards
 

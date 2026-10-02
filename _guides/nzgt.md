@@ -44,7 +44,7 @@ Glentanner Station is a private airstrip at the northern end of Lake Pukaki, nea
 - **Prior permission required** (private strip).
 - **Weather minima:** 1,000 ft ceiling and 8 km visibility.
 - **Overhead joins:** Advised for fixed-wing.
-- **Circuit:** Over the lake, downwind at 2,800 ft (helicopters may be below).
+- **Circuit:** RWY 15 left-hand, RWY 33 right-hand. Downwind at 2,800 ft (Todo: verify).
 - **Visibility on ground:** Aircraft at the far end of the runway cannot be seen when lining up.
 - **Standard mountain one-way operations.**
 

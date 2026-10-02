@@ -34,7 +34,7 @@ Mount Cook Airport sits at the head of the Mackenzie Basin, at the foot of Aorak
 | ------------------------ | --------- | -------------------------------------------------------------------------------- |
 | MBZ (Alps Traffic)       | 118.6     | Mandatory area frequency. Calls required on entry and at least every 15 minutes. |
 | Christchurch Information | 123.5     | Area FIS                                                                         |
-| UNICOM                   | 131.0     | Todo: verify - not confirmed                                                     |
+| UNICOM                   | 131.0     | Mount Cook Radio. Provides aerodrome and weather information.                    |
 
 ## Elevation
 
@@ -50,7 +50,7 @@ Mount Cook Airport sits at the head of the Mackenzie Basin, at the foot of Aorak
 - **Runway use:** Use the full runway.
 - **Departure 31:** Make an early right turn toward Gorilla Stream (light northwesterlies) or Rotten Tommy (stronger winds).
 - **Traffic:** Watch for Glentanner helicopters on the eastern side of the Tasman River. Ski-planes join from altitude.
-- **Noise abatement:** 170 kt or less over the Hermitage at 9,000 ft; not below 6,000 ft over Round Hill.
+- **Noise abatement:** (Todo: verify - not found in official AIP/CAA sources)
 
 ## Hazards
 

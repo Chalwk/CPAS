@@ -43,17 +43,17 @@ The Franz Josef and Fox glaciers descend from the Southern Alps almost to sea le
 ## Minimum Altitudes
 
 - **2,000 ft AGL** minimum over national park land.
-- **3,000 ft** minimum near Fox township. Do not overfly the towns.
-- **500 ft AGL** over the coast only where permitted.
+- Maintain at least 3,000 ft in the vicinity of Fox township. Avoid overflying the town where possible (noise abatement).
+- Over non-park land, standard low-flying rules apply (500 ft AGL over non-congested areas, 1,000 ft over congested areas).
 - For glacier landings: check current snow/ice conditions and DO NOT land without proper training.
 
 ## Frequencies
 
-| Service               | Frequency |
-| --------------------- | --------- |
-| Hokitika CTAF         | 119.1     |
-| Mount Cook MBZ        | 118.6     |
-| Area / Mountain radio | 130.6     |
+| Service               | Frequency                            |
+| --------------------- | ------------------------------------ |
+| Hokitika CTAF         | 119.1                                |
+| Southern Alps MBZ     | 118.6                                |
+| Area / Mountain radio | 130.6 (Todo: verify - not confirmed) |
 
 ## Hazards
 

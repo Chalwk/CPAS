@@ -24,9 +24,10 @@ Pukaki is a small strip near Twizel, a few miles south of the glacial Lake Pukak
 
 ## Runways
 
-| Designator | Length  | Surface | Notes                                       |
-| ---------- | ------- | ------- | ------------------------------------------- |
-| 15/33      | 1,529 m | Grass   | Near Twizel. Grass can be soft during thaw. |
+| Designator     | Length  | Surface | Notes                                                              |
+| -------------- | ------- | ------- | ------------------------------------------------------------------ |
+| 15/33          | 1,082 m | Asphalt | Main sealed runway. PCN 8/F/B/Y/U.                                 |
+| 15 (grass ext) | 448 m   | Grass   | Northern grass extension. Prior permission required from operator. |
 
 ## Frequencies
 
@@ -48,7 +49,7 @@ Pukaki is a small strip near Twizel, a few miles south of the glacial Lake Pukak
 
 - Lake outflow winds.
 - Mountain terrain close to the north.
-- Soft grass during thaw.
+- Grass extension can be soft during thaw.
 
 ## Recommended Approaches
 
