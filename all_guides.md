@@ -31,12 +31,12 @@ Arthur's Pass is the most well-known VFR crossing of the Southern Alps. It links
 1. Depart [Christchurch (NZCH)](/guides/nzch/). Expect a clearance westbound via the Waimakariri River corridor.
 2. Follow the **Waimakariri River** upstream through the gorge.
 3. Cross **Arthur's Pass** (3,018 ft pass saddle) at a minimum of **7,500 ft MSL** - higher if terrain clearance or turbulence demands it.
-4. Descend west of the divide into the **Otira Valley** and then the **Tarāmakau River**.
-5. Continue west, descending toward the coast and joining the Hokitika Control Zone.
+4. Descend west of the divide into the **Otira Valley** and then the **Taramakau River**.
+5. Continue west, descending toward the coast and joining the Hokitika aerodrome area (CTAF 119.1).
 
 ## Reporting Points
 
-- **Waimakariri Gorge** - 10 NM west of Christchurch, entry to the corridor.
+- **Waimakariri Gorge** - about 25 NM north-west of Christchurch, entry to the corridor.
 - **Arthur's Pass** - the saddle itself.
 - **Otira** - western side of the divide.
 - **Kumara** - coastal junction.
@@ -48,12 +48,12 @@ Arthur's Pass is the most well-known VFR crossing of the Southern Alps. It links
 
 ## Frequencies
 
-| Service                            | Frequency |
-| ---------------------------------- | --------- |
-| Christchurch Approach / Departure  | 120.9     |
-| Mount Cook FIZ (if north of track) | 122.5     |
-| Hokitika Tower / CTAF              | 118.7     |
-| Area / Mountain radio              | 130.6     |
+| Service                                  | Frequency |
+| ---------------------------------------- | --------- |
+| Christchurch Approach / Departure        | 120.9     |
+| Christchurch Information (Hokitika area) | 118.5     |
+| Hokitika CTAF                            | 119.1     |
+| Area / Mountain radio                    | 130.6     |
 
 ## Hazards
 
@@ -124,7 +124,7 @@ Banks Peninsula is a volcanic landmass immediately south-east of Christchurch. I
 
 ## Minimum Altitudes
 
-- **1,500 ft MSL** over the peninsula (2,500 ft recommended over the Port Hills).
+- **4,000 ft MSL** over the peninsula interior (terrain reaches about 3,000 ft near Mt Herbert); 2,500 ft MSL recommended over the Port Hills.
 - **500 ft AGL** minimum over water and unpopulated areas.
 - Remain **clear of Christchurch Class C airspace** - no shortcuts through the CTR without clearance.
 
@@ -134,7 +134,7 @@ Banks Peninsula is a volcanic landmass immediately south-east of Christchurch. I
 | ------------------------ | --------- |
 | Christchurch Tower       | 118.4     |
 | Christchurch Approach    | 120.9     |
-| Christchurch Information | 124.4     |
+| Christchurch Information | 129.3     |
 | Banks Peninsula CTAF     | 123.1     |
 
 ## Hazards
@@ -196,7 +196,7 @@ The Franz Josef and Fox glaciers descend from the Southern Alps almost to sea le
 ## Reporting Points
 
 - **Hokitika** - coastal departure.
-- **Whataroa** - river junction, turn inland.
+- **Whataroa** - coastal township, continue south toward the glacier valleys.
 - **Franz Josef township** - tourist hub, helicopter base.
 - **Fox Glacier township** - southern glacier base.
 - **Glacier terminal faces** - the icefall viewpoints.
@@ -211,7 +211,7 @@ The Franz Josef and Fox glaciers descend from the Southern Alps almost to sea le
 
 | Service                | Frequency |
 | ---------------------- | --------- |
-| Hokitika Tower / CTAF  | 118.7     |
+| Hokitika CTAF          | 119.1     |
 | West Coast common CTAF | 123.1     |
 | Area / Mountain radio  | 130.6     |
 
@@ -271,7 +271,7 @@ Haast Pass (563 m / 1,847 ft) is the lowest of the three main alpine crossings (
 2. Track south along the coast to **Haast**.
 3. Turn east into the **Haast River** valley.
 4. Follow the valley through **Haast Pass**, crossing at a minimum of **6,500 ft MSL**.
-5. Descend into the **Makārоra / Lake Wānaka** system.
+5. Descend into the **Makarora / Lake Wanaka** system.
 6. Continue east to [Wanaka (NZWF)](/guides/nzwf/) or turn south for [Queenstown (NZQN)](/guides/nzqn/).
 
 ## Reporting Points
@@ -292,8 +292,7 @@ Haast Pass (563 m / 1,847 ft) is the lowest of the three main alpine crossings (
 
 | Service               | Frequency |
 | --------------------- | --------- |
-| Mount Cook FIZ        | 122.5     |
-| Wanaka Tower / CTAF   | 118.1     |
+| Wanaka CTAF           | 119.1     |
 | Queenstown Tower      | 118.1     |
 | Area / Mountain radio | 130.6     |
 
@@ -366,16 +365,16 @@ The Mount Cook valley runs north from Lake Pukaki into the heart of the Aoraki/M
 ## Minimum Altitudes
 
 - **2,000 ft AGL** minimum over national park land.
-- **Mount Cook FIZ:** 122.5 within 10 NM.
-- **One-way valley traffic** - northern side for northbound, southern side for southbound (as published in local guidance).
+- **Mount Cook FIZ (Alps Traffic):** 118.6 within 10 NM.
+- **One-way valley traffic** - keep to the right-hand side of the valley: eastern side northbound, western side southbound.
 
 ## Frequencies
 
-| Service                  | Frequency |
-| ------------------------ | --------- |
-| Mount Cook FIZ           | 122.5     |
-| Area / Mountain radio    | 130.6     |
-| Christchurch Information | 124.4     |
+| Service                       | Frequency |
+| ----------------------------- | --------- |
+| Mount Cook FIZ (Alps Traffic) | 118.6     |
+| Area / Mountain radio         | 130.6     |
+| Christchurch Information      | 123.5     |
 
 ## Hazards
 
@@ -429,16 +428,18 @@ Ashburton is a small plains aerodrome serving the Mid-Canterbury district. It is
 
 ## Runways
 
-| Designator | Length | Surface | Notes |
-| ---------- | ------ | ------- | ----- |
-| 03/21      | 900 m  | Grass   |       |
-| 11/29      | 700 m  | Grass   |       |
+| Designator | Length  | Surface | Notes |
+| ---------- | ------- | ------- | ----- |
+| 02/20      | 900 m   | Grass   |       |
+| 06/24      | 1,388 m | Grass   |       |
+| 11/29      | 1,024 m | Grass   |       |
+| 16/34      | 1,080 m | Grass   |       |
 
 ## Frequencies
 
-| Service | Frequency | Notes         |
-| ------- | --------- | ------------- |
-| FIZ     | 122.7     | Ashburton FIZ |
+| Service | Frequency | Notes     |
+| ------- | --------- | --------- |
+| CTAF    | 119.1     | Ashburton |
 
 ## Elevation
 
@@ -446,7 +447,7 @@ Ashburton is a small plains aerodrome serving the Mid-Canterbury district. It is
 
 ## Local Procedures
 
-- FIZ 122.7 within the zone.
+- Broadcast on CTAF 119.1 within the zone.
 - Extensive agricultural aircraft operations.
 
 ## Hazards
@@ -456,7 +457,7 @@ Ashburton is a small plains aerodrome serving the Mid-Canterbury district. It is
 
 ## Recommended Approaches
 
-- **Visual 03:** From the north.
+- **Visual 02:** From the south.
 
 ## Nearby Airfields
 
@@ -496,7 +497,7 @@ Christchurch International is the primary CPAS base and the busiest airport on t
 | Designator | Length  | Surface | Notes                              |
 | ---------- | ------- | ------- | ---------------------------------- |
 | 02/20      | 3,288 m | Asphalt | Main jet runway. ILS on both ends. |
-| 11/29      | 1,741 m | Asphalt | Crosswind runway, used by GA.      |
+| 11/29      | 1,703 m | Asphalt | Crosswind runway, used by GA.      |
 
 ## Frequencies
 
@@ -507,7 +508,7 @@ Christchurch International is the primary CPAS base and the busiest airport on t
 | Ground                   | 121.9     |                                   |
 | Tower                    | 118.4     |                                   |
 | Approach                 | 120.9     | Christchurch Approach / Departure |
-| Christchurch Information | 124.4     | FIS for the wider area            |
+| Christchurch Information | 129.3     | FIS for the wider area            |
 
 ## Elevation
 
@@ -529,8 +530,8 @@ Christchurch International is the primary CPAS base and the busiest airport on t
 
 ## Recommended Approaches
 
-- **Runway 02 (ILS):** Straight-in over Pegasus Bay, minimal terrain.
-- **Runway 20 (ILS):** Over the city - expect vectoring.
+- **Runway 02 (ILS):** From the south-west over the suburbs - expect vectoring.
+- **Runway 20 (ILS):** Straight-in from the north-east over Pegasus Bay, minimal terrain.
 - **Runway 11/29:** VFR circuit joins, watch for helicopter traffic.
 
 ## Nearby Airfields
@@ -569,7 +570,7 @@ region:
 
 ## Overview
 
-Dunedin International sits on the Taieri Plain, 15 NM south-west of Dunedin city. It is the main gateway to Otago and the lower South Island.
+Dunedin International sits on the Taieri Plain, about 12 NM (22 km) south-west of Dunedin city. It is the main gateway to Otago and the lower South Island.
 
 {% include region_map.html %}
 
@@ -578,7 +579,6 @@ Dunedin International sits on the Taieri Plain, 15 NM south-west of Dunedin city
 | Designator | Length  | Surface | Notes                      |
 | ---------- | ------- | ------- | -------------------------- |
 | 03/21      | 1,900 m | Asphalt | Primary. ILS on both ends. |
-| 08/26      | 800 m   | Grass   | Crosswind.                 |
 
 ## Frequencies
 
@@ -587,7 +587,6 @@ Dunedin International sits on the Taieri Plain, 15 NM south-west of Dunedin city
 | ATIS     | 128.8     |                  |
 | Tower    | 120.7     | Dunedin Tower    |
 | Approach | 120.7     | Dunedin Approach |
-| Ground   | 121.9     |                  |
 
 ## Elevation
 
@@ -657,7 +656,7 @@ Franz Josef is a small aerodrome on the West Coast, right at the foot of the Fra
 
 ## Elevation
 
-305 ft AMSL.
+240 ft AMSL.
 
 ## Local Procedures
 
@@ -713,15 +712,16 @@ Greymouth is a small regional aerodrome on the West Coast, serving the Grey Dist
 
 ## Runways
 
-| Designator | Length | Surface | Notes    |
-| ---------- | ------ | ------- | -------- |
-| 06/24      | 880 m  | Asphalt | Primary. |
+| Designator | Length  | Surface | Notes    |
+| ---------- | ------- | ------- | -------- |
+| 01/19      | 1,091 m | Bitumen | Primary. |
 
 ## Frequencies
 
-| Service    | Frequency | Notes                             |
-| ---------- | --------- | --------------------------------- |
-| CTAF / FIZ | 122.7     | Greymouth Flight Information Zone |
+| Service                  | Frequency | Notes                             |
+| ------------------------ | --------- | --------------------------------- |
+| CTAF / FIZ               | 122.7     | Greymouth Flight Information Zone |
+| Christchurch Information | 118.7     | Area FIS                          |
 
 ## Elevation
 
@@ -740,8 +740,8 @@ Greymouth is a small regional aerodrome on the West Coast, serving the Grey Dist
 
 ## Recommended Approaches
 
-- **Visual 06:** Coastal.
-- **Visual 24:** Straight-in over the Grey River mouth.
+- **Visual 01:** Straight-in from the south, over the Grey River mouth.
+- **Visual 19:** Coastal, from the north.
 
 ## Nearby Airfields
 
@@ -773,7 +773,7 @@ region:
 
 ## Overview
 
-Glentanner Station is a private airstrip on the south-western shore of Lake Pukaki, near the entrance to the Mount Cook valley. It is used primarily by scenic operators as an alternative to NZMC when the valley is busy.
+Glentanner Station is a private airstrip at the northern end of Lake Pukaki, near the entrance to the Mount Cook valley. It is used primarily by scenic operators as an alternative to NZMC when the valley is busy.
 
 {% include region_map.html %}
 
@@ -785,13 +785,13 @@ Glentanner Station is a private airstrip on the south-western shore of Lake Puka
 
 ## Frequencies
 
-| Service | Frequency | Notes          |
-| ------- | --------- | -------------- |
-| FIZ     | 122.5     | Mount Cook FIZ |
+| Service | Frequency | Notes                         |
+| ------- | --------- | ----------------------------- |
+| CTAF    | 118.6     | Alps Traffic (Mount Cook FIZ) |
 
 ## Elevation
 
-1,777 ft AMSL.
+1,824 ft AMSL.
 
 ## Local Procedures
 
@@ -806,7 +806,7 @@ Glentanner Station is a private airstrip on the south-western shore of Lake Puka
 
 ## Recommended Approaches
 
-- **Visual 15:** From the south, over the lake.
+- **Visual 33:** From the south, over the lake.
 
 ## Nearby Airfields
 
@@ -884,7 +884,7 @@ title: Hokitika
 icao: NZHK
 category: airport
 permalink: /guides/nzhk/
-description: "West Coast regional airport and the primary eastern gateway to the glaciers."
+description: "West Coast regional airport and the primary northern gateway to the glaciers."
 icon: fa-water
 region:
   center: [-42.71, 170.99]
@@ -905,17 +905,17 @@ Hokitika is the main West Coast airport, sitting between the Tasman Sea and the 
 
 ## Runways
 
-| Designator | Length  | Surface | Notes    |
-| ---------- | ------- | ------- | -------- |
-| 03/21      | 1,152 m | Asphalt | Primary. |
+| Designator | Length  | Surface | Notes      |
+| ---------- | ------- | ------- | ---------- |
+| 03/21      | 1,314 m | Asphalt | Primary.   |
+| 12/30      | 1,176 m | Asphalt | Secondary. |
 
 ## Frequencies
 
-| Service                    | Frequency | Notes                     |
-| -------------------------- | --------- | ------------------------- |
-| ATIS                       | 126.8     |                           |
-| Tower                      | 118.7     | Hokitika Tower / Approach |
-| CTAF (outside tower hours) | 118.7     |                           |
+| Service                  | Frequency | Notes                         |
+| ------------------------ | --------- | ----------------------------- |
+| Christchurch Information | 118.5     | Area FIS                      |
+| CTAF                     | 119.1     | Unattended - no tower or ATIS |
 
 ## Elevation
 
@@ -923,8 +923,8 @@ Hokitika is the main West Coast airport, sitting between the Tasman Sea and the 
 
 ## Local Procedures
 
-- **Tower hours:** 0800–1700 local; outside those hours CTAF applies.
-- **Approaches:** RNAV and VOR approaches available.
+- **Unattended:** No tower or ATIS - broadcast on CTAF 119.1.
+- **Approaches:** RNAV (GNSS) and NDB/DME approaches available.
 - **Coastal corridor:** Class G below 1500 ft.
 
 ## Hazards
@@ -979,10 +979,10 @@ Kaikoura is a small coastal aerodrome on the east coast of the South Island, nes
 
 ## Runways
 
-| Designator | Length | Surface | Notes      |
-| ---------- | ------ | ------- | ---------- |
-| 05/23      | 700 m  | Bitumen |            |
-| 16/34      | 700 m  | Grass   | Crosswind. |
+| Designator | Length | Surface | Notes     |
+| ---------- | ------ | ------- | --------- |
+| 05/23      | 700 m  | Bitumen |           |
+| 05L/23R    | 615 m  | Grass   | Parallel. |
 
 ## Frequencies
 
@@ -1005,7 +1005,7 @@ Kaikoura is a small coastal aerodrome on the east coast of the South Island, nes
 
 ## Recommended Approaches
 
-- **Visual 23:** From the south, over the coast.
+- **Visual 23:** From the north-east, off the sea.
 
 ## Nearby Airfields
 
@@ -1051,7 +1051,7 @@ Alexandra is a small aerodrome in the Central Otago basin, surrounded by dry hil
 
 | Service | Frequency | Notes |
 | ------- | --------- | ----- |
-| CTAF    | 118.1     |       |
+| CTAF    | 119.1     |       |
 
 ## Elevation
 
@@ -1068,7 +1068,7 @@ Alexandra is a small aerodrome in the Central Otago basin, surrounded by dry hil
 
 ## Recommended Approaches
 
-- **Visual 32:** From the north, over the Clutha.
+- **Visual 14:** From the north-west, following the Clutha.
 
 ## Nearby Airfields
 
@@ -1106,16 +1106,17 @@ Mount Cook Airport sits at the head of the Mackenzie Basin, at the foot of Aorak
 
 ## Runways
 
-| Designator | Length  | Surface        | Notes                   |
-| ---------- | ------- | -------------- | ----------------------- |
-| 05/23      | 1,473 m | Grass / gravel | Runway 05 rises uphill. |
+| Designator | Length  | Surface | Notes                   |
+| ---------- | ------- | ------- | ----------------------- |
+| 13/31      | 1,473 m | Asphalt | Runway 31 rises uphill. |
 
 ## Frequencies
 
-| Service        | Frequency | Notes                    |
-| -------------- | --------- | ------------------------ |
-| FIZ            | 122.5     | Mandatory area frequency |
-| Mountain radio | 130.6     | Area broadcasts          |
+| Service                  | Frequency | Notes                    |
+| ------------------------ | --------- | ------------------------ |
+| FIZ (Alps Traffic)       | 118.6     | Mandatory area frequency |
+| Christchurch Information | 123.5     | Area FIS                 |
+| Mountain radio           | 130.6     | Area broadcasts          |
 
 ## Elevation
 
@@ -1123,7 +1124,7 @@ Mount Cook Airport sits at the head of the Mackenzie Basin, at the foot of Aorak
 
 ## Local Procedures
 
-- **FIZ:** 122.5 within 10 NM. Broadcast position and intentions.
+- **FIZ:** 118.6 (Alps Traffic) within 10 NM. Broadcast position and intentions.
 - **IFR:** RNAV (GNSS) approaches published; no ATC, FIZ procedures apply.
 - **Visual contact with terrain:** Required at all times.
 - **One-way valley traffic:** Standard mountain rules apply.
@@ -1137,8 +1138,8 @@ Mount Cook Airport sits at the head of the Mackenzie Basin, at the foot of Aorak
 
 ## Recommended Approaches
 
-- **Visual 23:** From the south, over Lake Pukaki and Glentanner.
-- **Visual 05:** Uphill, arriving from the north - expect turbulence.
+- **Visual 31:** Uphill, from the south-east over Lake Pukaki and Glentanner.
+- **Visual 13:** Downhill, arriving from the north-west - expect turbulence.
 
 ## Nearby Airfields
 
@@ -1182,7 +1183,7 @@ Milford Sound is a short sealed strip at the head of the fiord, surrounded by to
 
 | Designator | Length | Surface | Notes                                                   |
 | ---------- | ------ | ------- | ------------------------------------------------------- |
-| 11/29      | 782 m  | Asphalt | One-way preferred: land 11, depart 29 (or as directed). |
+| 11/29      | 792 m  | Asphalt | One-way preferred: land 11, depart 29 (or as directed). |
 
 ## Frequencies
 
@@ -1246,10 +1247,10 @@ Motueka is a small aerodrome on the shore of Tasman Bay, serving the town and ac
 
 ## Runways
 
-| Designator | Length | Surface | Notes |
-| ---------- | ------ | ------- | ----- |
-| 02/20      | 729 m  | Asphalt |       |
-| 11/29      | 700 m  | Grass   |       |
+| Designator | Length | Surface | Notes     |
+| ---------- | ------ | ------- | --------- |
+| 02/20      | 781 m  | Asphalt |           |
+| 02R/20L    | 733 m  | Grass   | Parallel. |
 
 ## Frequencies
 
@@ -1309,10 +1310,9 @@ Te Anau / Manapouri is the primary aerodrome for Fiordland, sitting on the easte
 
 ## Runways
 
-| Designator | Length  | Surface | Notes      |
-| ---------- | ------- | ------- | ---------- |
-| 08/26      | 1,594 m | Asphalt | Primary.   |
-| 14/32      | 969 m   | Grass   | Crosswind. |
+| Designator | Length  | Surface | Notes    |
+| ---------- | ------- | ------- | -------- |
+| 08/26      | 1,081 m | Asphalt | Primary. |
 
 ## Frequencies
 
@@ -1337,8 +1337,8 @@ Te Anau / Manapouri is the primary aerodrome for Fiordland, sitting on the easte
 
 ## Recommended Approaches
 
-- **Visual 32:** From the south, over the lake.
-- **Visual 14:** Straight-in from the north.
+- **Visual 08:** From the west, over the lake.
+- **Visual 26:** Straight-in from the east.
 
 ## Nearby Airfields
 
@@ -1357,7 +1357,7 @@ permalink: /guides/nzmr/
 description: "Small Tasman district strip in the Buller Gorge region."
 icon: fa-plane
 region:
-  center: [-41.80, 172.37]
+  center: [-41.80, 172.32]
   zoom: 11
   boundary:
     - [-41.71, 172.25]
@@ -1369,7 +1369,7 @@ region:
 
 ## Overview
 
-Murchison is a small aerodrome in the Buller district, used primarily for recreational flying and as a stopover between Nelson and the West Coast.
+Murchison is a small aerodrome in the Tasman district, used primarily for recreational flying and as a stopover between Nelson and the West Coast.
 
 {% include region_map.html %}
 
@@ -1511,16 +1511,16 @@ Invercargill is the southernmost city airport in New Zealand, serving Southland 
 | Designator | Length  | Surface | Notes                      |
 | ---------- | ------- | ------- | -------------------------- |
 | 04/22      | 2,210 m | Asphalt | Primary. ILS on both ends. |
-| 07/25      | 1,200 m | Asphalt | Crosswind.                 |
-| 10/28      | 700 m   | Grass   |                            |
+| 04R/22L    | 695 m   | Grass   | Parallel.                  |
+| 07/25      | 426 m   | Grass   | Crosswind.                 |
+| 12/30      | 913 m   | Grass   |                            |
 
 ## Frequencies
 
 | Service | Frequency | Notes              |
 | ------- | --------- | ------------------ |
-| ATIS    | 128.9     |                    |
-| Tower   | 118.1     | Invercargill Tower |
-| Ground  | 121.9     |                    |
+| ATIS    | 127.0     |                    |
+| Tower   | 118.5     | Invercargill Tower |
 
 ## Elevation
 
@@ -1648,9 +1648,9 @@ Oamaru is a small aerodrome on the North Otago coast, serving the town of Oamaru
 
 ## Frequencies
 
-| Service    | Frequency | Notes      |
-| ---------- | --------- | ---------- |
-| CTAF / FIZ | 123.1     | Oamaru FIZ |
+| Service | Frequency | Notes  |
+| ------- | --------- | ------ |
+| CTAF    | 119.1     | Oamaru |
 
 ## Elevation
 
@@ -1658,7 +1658,7 @@ Oamaru is a small aerodrome on the North Otago coast, serving the town of Oamaru
 
 ## Local Procedures
 
-- **FIZ:** 123.1 within the zone.
+- **CTAF:** 119.1 within the zone.
 - Coastal VFR standard.
 
 ## Hazards
@@ -1711,9 +1711,9 @@ Picton (Koromiko) is a small aerodrome serving the Picton township and the Marlb
 
 ## Frequencies
 
-| Service | Frequency | Notes                                 |
-| ------- | --------- | ------------------------------------- |
-| CTAF    | 118.1     | Shared with Woodbourne Tower airspace |
+| Service | Frequency | Notes |
+| ------- | --------- | ----- |
+| CTAF    | 118.1     |       |
 
 ## Elevation
 
@@ -1772,15 +1772,16 @@ Queenstown is one of the most scenic and demanding airports in New Zealand. It s
 | Designator | Length  | Surface | Notes                                         |
 | ---------- | ------- | ------- | --------------------------------------------- |
 | 05/23      | 1,777 m | Asphalt | Primary. 23 has the famous over-water visual. |
-| 14/32      | 720 m   | Asphalt | Secondary, crosswind.                         |
+| 14/32      | 890 m   | Asphalt | Secondary, crosswind.                         |
 
 ## Frequencies
 
-| Service | Frequency | Notes                       |
-| ------- | --------- | --------------------------- |
-| ATIS    | 126.4     |                             |
-| Tower   | 118.1     | Queenstown Tower / Approach |
-| Ground  | 121.9     |                             |
+| Service  | Frequency | Notes               |
+| -------- | --------- | ------------------- |
+| ATIS     | 126.4     |                     |
+| Delivery | 121.9     |                     |
+| Tower    | 118.1     | Queenstown Tower    |
+| Approach | 125.75    | Queenstown Approach |
 
 ## Elevation
 
@@ -1894,7 +1895,7 @@ permalink: /guides/nzri/
 description: "Private plains airstrip in South Canterbury."
 icon: fa-tractor
 region:
-  center: [-43.92, 171.43]
+  center: [-44.08, 171.42]
   zoom: 11
   boundary:
     - [-43.85, 171.30]
@@ -1921,11 +1922,11 @@ Rangitata Island is a private strip on the Canterbury Plains between Ashburton a
 
 | Service | Frequency | Notes |
 | ------- | --------- | ----- |
-| CTAF    | 123.1     |       |
+| CTAF    | 119.5     |       |
 
 ## Elevation
 
-340 ft AMSL.
+288 ft AMSL.
 
 ## Local Procedures
 
@@ -1977,13 +1978,14 @@ Rangiora is a small aerodrome north of Christchurch, used heavily for training a
 | Designator | Length  | Surface | Notes |
 | ---------- | ------- | ------- | ----- |
 | 07/25      | 1,180 m | Grass   |       |
-| 16/34      | 700 m   | Grass   |       |
+| 10/28      | 583 m   | Grass   |       |
+| 04/22      | 515 m   | Grass   |       |
 
 ## Frequencies
 
-| Service | Frequency | Notes |
-| ------- | --------- | ----- |
-| CTAF    | 123.1     |       |
+| Service    | Frequency | Notes |
+| ---------- | --------- | ----- |
+| MBZ / CTAF | 120.2     |       |
 
 ## Elevation
 
@@ -2049,7 +2051,7 @@ Roxburgh is a small grass strip serving the Teviot Valley community and the Roxb
 
 ## Elevation
 
-506 ft AMSL.
+463 ft AMSL.
 
 ## Local Procedures
 
@@ -2081,7 +2083,7 @@ permalink: /guides/nzsf/
 description: "Canterbury foothills strip west of Christchurch."
 icon: fa-mountain
 region:
-  center: [-43.40, 171.93]
+  center: [-43.38, 171.91]
   zoom: 11
   boundary:
     - [-43.31, 171.81]
@@ -2112,7 +2114,7 @@ Springfield is a small private strip on the Canterbury Plains near the foothills
 
 ## Elevation
 
-1,050 ft AMSL.
+1,216 ft AMSL.
 
 ## Local Procedures
 
@@ -2169,9 +2171,9 @@ Taieri is a small aerodrome on the Taieri Plain just west of Dunedin, home to th
 
 ## Frequencies
 
-| Service | Frequency | Notes                     |
-| ------- | --------- | ------------------------- |
-| CTAF    | 118.1     | Shared with Dunedin Tower |
+| Service | Frequency | Notes |
+| ------- | --------- | ----- |
+| CTAF    | 118.1     |       |
 
 ## Elevation
 
@@ -2242,7 +2244,7 @@ Takaka is a small aerodrome serving Golden Bay and the town of Takaka. It requir
 
 ## Local Procedures
 
-- Takaka Hill crossing requires care - over 2,500 ft.
+- Takaka Hill crossing requires care - the road summit is about 2,600 ft; cross at 4,000 ft MSL or higher.
 
 ## Hazards
 
@@ -2282,7 +2284,7 @@ region:
 
 ## Overview
 
-Timaru is a regional aerodrome on the South Canterbury coast. It is a common transit stop and has a small control zone.
+Timaru is a regional aerodrome on the South Canterbury coast. It is a common transit stop on the coastal route.
 
 {% include region_map.html %}
 
@@ -2295,11 +2297,9 @@ Timaru is a regional aerodrome on the South Canterbury coast. It is a common tra
 
 ## Frequencies
 
-| Service              | Frequency | Notes        |
-| -------------------- | --------- | ------------ |
-| ATIS                 | 126.6     |              |
-| Tower                | 118.1     | Timaru Tower |
-| CTAF (outside tower) | 118.1     |              |
+| Service | Frequency | Notes      |
+| ------- | --------- | ---------- |
+| CTAF    | 119.5     | Unattended |
 
 ## Elevation
 
@@ -2307,7 +2307,7 @@ Timaru is a regional aerodrome on the South Canterbury coast. It is a common tra
 
 ## Local Procedures
 
-- **CTR:** Class D around Timaru. Coastal VFR routes along the shore.
+- **Uncontrolled aerodrome:** broadcast on CTAF 119.5. Coastal VFR routes along the shore.
 
 ## Hazards
 
@@ -2334,7 +2334,7 @@ title: Pukaki
 icao: NZUK
 category: airport
 permalink: /guides/nzuk/
-description: "Small Mackenzie Basin strip on the shore of Lake Pukaki."
+description: "Sealed Mackenzie Basin strip near Twizel, just south of Lake Pukaki."
 icon: fa-water
 region:
   center: [-44.24, 170.12]
@@ -2349,21 +2349,22 @@ region:
 
 ## Overview
 
-Pukaki is a small grass strip on the southern shore of the glacial Lake Pukaki. It is a useful alternative or stopover on the route into Mount Cook.
+Pukaki is a small sealed strip near Twizel, a few miles south of the glacial Lake Pukaki. It is a useful alternative or stopover on the route into Mount Cook.
 
 {% include region_map.html %}
 
 ## Runways
 
-| Designator | Length  | Surface | Notes      |
-| ---------- | ------- | ------- | ---------- |
-| 15/33      | 1,082 m | Asphalt | Lake-side. |
+| Designator | Length  | Surface | Notes        |
+| ---------- | ------- | ------- | ------------ |
+| 15/33      | 1,082 m | Asphalt | Near Twizel. |
 
 ## Frequencies
 
-| Service | Frequency | Notes          |
-| ------- | --------- | -------------- |
-| FIZ     | 122.5     | Mount Cook FIZ |
+| Service                  | Frequency | Notes    |
+| ------------------------ | --------- | -------- |
+| CTAF                     | 119.1     |          |
+| Christchurch Information | 123.5     | Area FIS |
 
 ## Elevation
 
@@ -2380,7 +2381,7 @@ Pukaki is a small grass strip on the southern shore of the glacial Lake Pukaki. 
 
 ## Recommended Approaches
 
-- **Visual 15:** From the east, over the lake.
+- **Visual 15:** From the north, over the lake.
 
 ## Nearby Airfields
 
@@ -2420,15 +2421,15 @@ Woodbourne is a joint civil/military aerodrome serving Blenheim and the Marlboro
 | Designator | Length  | Surface | Notes      |
 | ---------- | ------- | ------- | ---------- |
 | 06/24      | 1,425 m | Asphalt | Primary.   |
-| 10/28      | 1,425 m | Grass   | Secondary. |
+| 10/28      | 1,182 m | Grass   | Secondary. |
 | 16/34      | 900 m   | Grass   | Crosswind. |
 
 ## Frequencies
 
 | Service  | Frequency | Notes            |
 | -------- | --------- | ---------------- |
-| ATIS     | 127.6     |                  |
-| Tower    | 118.1     | Woodbourne Tower |
+| ATIS     | 126.05    |                  |
+| Tower    | 122.8     | Woodbourne Tower |
 | Approach | 122.3     |                  |
 
 ## Elevation
@@ -2488,18 +2489,16 @@ Wanaka is a small regional airport in the Upper Clutha Basin, near the southern 
 
 ## Runways
 
-| Designator | Length  | Surface | Notes      |
-| ---------- | ------- | ------- | ---------- |
-| 11/29      | 1,200 m | Asphalt | Primary.   |
-| 08/26      | 900 m   | Grass   | Crosswind. |
+| Designator | Length  | Surface | Notes     |
+| ---------- | ------- | ------- | --------- |
+| 11/29      | 1,200 m | Asphalt | Primary.  |
+| 11L/29R    | 900 m   | Grass   | Parallel. |
 
 ## Frequencies
 
-| Service              | Frequency | Notes                    |
-| -------------------- | --------- | ------------------------ |
-| ATIS                 | 119.2     |                          |
-| Tower                | 118.1     | Wanaka Tower (part-time) |
-| CTAF (outside tower) | 118.1     |                          |
+| Service | Frequency | Notes                         |
+| ------- | --------- | ----------------------------- |
+| CTAF    | 119.1     | Unattended - no tower or ATIS |
 
 ## Elevation
 
@@ -2507,8 +2506,7 @@ Wanaka is a small regional airport in the Upper Clutha Basin, near the southern 
 
 ## Local Procedures
 
-- **Part-time tower:** Check NOTAMs.
-- **CTR:** Class D when tower is active.
+- **Unattended:** No tower or ATIS - broadcast on CTAF 119.1.
 - High scenic traffic.
 
 ## Hazards
@@ -2564,10 +2562,10 @@ Westport sits on the Buller River mouth on the northern West Coast. It's a small
 
 ## Frequencies
 
-| Service | Frequency | Notes          |
-| ------- | --------- | -------------- |
-| ATIS    | 126.8     |                |
-| Tower   | 118.7     | Westport Tower |
+| Service                  | Frequency | Notes      |
+| ------------------------ | --------- | ---------- |
+| Christchurch Information | 118.7     | Area FIS   |
+| CTAF                     | 119.1     | Unattended |
 
 ## Elevation
 
@@ -2575,7 +2573,7 @@ Westport sits on the Buller River mouth on the northern West Coast. It's a small
 
 ## Local Procedures
 
-- Check NOTAMs for tower hours; often AFIS or CTAF.
+- Unattended - no tower or ATIS; broadcast on CTAF 119.1.
 - Coastal VFR routes along the shoreline are common.
 
 ## Hazards
