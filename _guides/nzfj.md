@@ -36,7 +36,7 @@ Franz Josef is a small aerodrome on the West Coast, right at the foot of the Fra
 
 ## Elevation
 
-305 ft AMSL.
+240 ft AMSL.
 
 ## Local Procedures
 

@@ -29,12 +29,12 @@ Arthur's Pass is the most well-known VFR crossing of the Southern Alps. It links
 1. Depart [Christchurch (NZCH)](/guides/nzch/). Expect a clearance westbound via the Waimakariri River corridor.
 2. Follow the **Waimakariri River** upstream through the gorge.
 3. Cross **Arthur's Pass** (3,018 ft pass saddle) at a minimum of **7,500 ft MSL** - higher if terrain clearance or turbulence demands it.
-4. Descend west of the divide into the **Otira Valley** and then the **Tarāmakau River**.
-5. Continue west, descending toward the coast and joining the Hokitika Control Zone.
+4. Descend west of the divide into the **Otira Valley** and then the **Taramakau River**.
+5. Continue west, descending toward the coast and joining the Hokitika aerodrome area (CTAF 119.1).
 
 ## Reporting Points
 
-- **Waimakariri Gorge** - 10 NM west of Christchurch, entry to the corridor.
+- **Waimakariri Gorge** - about 25 NM north-west of Christchurch, entry to the corridor.
 - **Arthur's Pass** - the saddle itself.
 - **Otira** - western side of the divide.
 - **Kumara** - coastal junction.
@@ -46,12 +46,12 @@ Arthur's Pass is the most well-known VFR crossing of the Southern Alps. It links
 
 ## Frequencies
 
-| Service                            | Frequency |
-| ---------------------------------- | --------- |
-| Christchurch Approach / Departure  | 120.9     |
-| Mount Cook FIZ (if north of track) | 122.5     |
-| Hokitika Tower / CTAF              | 118.7     |
-| Area / Mountain radio              | 130.6     |
+| Service                                  | Frequency |
+| ---------------------------------------- | --------- |
+| Christchurch Approach / Departure        | 120.9     |
+| Christchurch Information (Hokitika area) | 118.5     |
+| Hokitika CTAF                            | 119.1     |
+| Area / Mountain radio                    | 130.6     |
 
 ## Hazards
 

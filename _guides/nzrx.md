@@ -36,7 +36,7 @@ Roxburgh is a small grass strip serving the Teviot Valley community and the Roxb
 
 ## Elevation
 
-506 ft AMSL.
+463 ft AMSL.
 
 ## Local Procedures
 

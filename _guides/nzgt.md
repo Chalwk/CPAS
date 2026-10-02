@@ -18,7 +18,7 @@ region:
 
 ## Overview
 
-Glentanner Station is a private airstrip on the south-western shore of Lake Pukaki, near the entrance to the Mount Cook valley. It is used primarily by scenic operators as an alternative to NZMC when the valley is busy.
+Glentanner Station is a private airstrip at the northern end of Lake Pukaki, near the entrance to the Mount Cook valley. It is used primarily by scenic operators as an alternative to NZMC when the valley is busy.
 
 {% include region_map.html %}
 
@@ -30,13 +30,13 @@ Glentanner Station is a private airstrip on the south-western shore of Lake Puka
 
 ## Frequencies
 
-| Service | Frequency | Notes          |
-| ------- | --------- | -------------- |
-| FIZ     | 122.5     | Mount Cook FIZ |
+| Service | Frequency | Notes                         |
+| ------- | --------- | ----------------------------- |
+| CTAF    | 118.6     | Alps Traffic (Mount Cook FIZ) |
 
 ## Elevation
 
-1,777 ft AMSL.
+1,824 ft AMSL.
 
 ## Local Procedures
 
@@ -51,7 +51,7 @@ Glentanner Station is a private airstrip on the south-western shore of Lake Puka
 
 ## Recommended Approaches
 
-- **Visual 15:** From the south, over the lake.
+- **Visual 33:** From the south, over the lake.
 
 ## Nearby Airfields
 

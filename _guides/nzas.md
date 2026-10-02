@@ -24,16 +24,18 @@ Ashburton is a small plains aerodrome serving the Mid-Canterbury district. It is
 
 ## Runways
 
-| Designator | Length | Surface | Notes |
-| ---------- | ------ | ------- | ----- |
-| 03/21      | 900 m  | Grass   |       |
-| 11/29      | 700 m  | Grass   |       |
+| Designator | Length  | Surface | Notes |
+| ---------- | ------- | ------- | ----- |
+| 02/20      | 900 m   | Grass   |       |
+| 06/24      | 1,388 m | Grass   |       |
+| 11/29      | 1,024 m | Grass   |       |
+| 16/34      | 1,080 m | Grass   |       |
 
 ## Frequencies
 
-| Service | Frequency | Notes         |
-| ------- | --------- | ------------- |
-| FIZ     | 122.7     | Ashburton FIZ |
+| Service | Frequency | Notes     |
+| ------- | --------- | --------- |
+| CTAF    | 119.1     | Ashburton |
 
 ## Elevation
 
@@ -41,7 +43,7 @@ Ashburton is a small plains aerodrome serving the Mid-Canterbury district. It is
 
 ## Local Procedures
 
-- FIZ 122.7 within the zone.
+- Broadcast on CTAF 119.1 within the zone.
 - Extensive agricultural aircraft operations.
 
 ## Hazards
@@ -51,7 +53,7 @@ Ashburton is a small plains aerodrome serving the Mid-Canterbury district. It is
 
 ## Recommended Approaches
 
-- **Visual 03:** From the north.
+- **Visual 02:** From the south.
 
 ## Nearby Airfields
 

@@ -43,7 +43,7 @@ Banks Peninsula is a volcanic landmass immediately south-east of Christchurch. I
 
 ## Minimum Altitudes
 
-- **1,500 ft MSL** over the peninsula (2,500 ft recommended over the Port Hills).
+- **4,000 ft MSL** over the peninsula interior (terrain reaches about 3,000 ft near Mt Herbert); 2,500 ft MSL recommended over the Port Hills.
 - **500 ft AGL** minimum over water and unpopulated areas.
 - Remain **clear of Christchurch Class C airspace** - no shortcuts through the CTR without clearance.
 
@@ -53,7 +53,7 @@ Banks Peninsula is a volcanic landmass immediately south-east of Christchurch. I
 | ------------------------ | --------- |
 | Christchurch Tower       | 118.4     |
 | Christchurch Approach    | 120.9     |
-| Christchurch Information | 124.4     |
+| Christchurch Information | 129.3     |
 | Banks Peninsula CTAF     | 123.1     |
 
 ## Hazards

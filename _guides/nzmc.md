@@ -24,16 +24,17 @@ Mount Cook Airport sits at the head of the Mackenzie Basin, at the foot of Aorak
 
 ## Runways
 
-| Designator | Length  | Surface        | Notes                   |
-| ---------- | ------- | -------------- | ----------------------- |
-| 05/23      | 1,473 m | Grass / gravel | Runway 05 rises uphill. |
+| Designator | Length  | Surface | Notes                   |
+| ---------- | ------- | ------- | ----------------------- |
+| 13/31      | 1,473 m | Asphalt | Runway 31 rises uphill. |
 
 ## Frequencies
 
-| Service        | Frequency | Notes                    |
-| -------------- | --------- | ------------------------ |
-| FIZ            | 122.5     | Mandatory area frequency |
-| Mountain radio | 130.6     | Area broadcasts          |
+| Service                  | Frequency | Notes                    |
+| ------------------------ | --------- | ------------------------ |
+| FIZ (Alps Traffic)       | 118.6     | Mandatory area frequency |
+| Christchurch Information | 123.5     | Area FIS                 |
+| Mountain radio           | 130.6     | Area broadcasts          |
 
 ## Elevation
 
@@ -41,7 +42,7 @@ Mount Cook Airport sits at the head of the Mackenzie Basin, at the foot of Aorak
 
 ## Local Procedures
 
-- **FIZ:** 122.5 within 10 NM. Broadcast position and intentions.
+- **FIZ:** 118.6 (Alps Traffic) within 10 NM. Broadcast position and intentions.
 - **IFR:** RNAV (GNSS) approaches published; no ATC, FIZ procedures apply.
 - **Visual contact with terrain:** Required at all times.
 - **One-way valley traffic:** Standard mountain rules apply.
@@ -55,8 +56,8 @@ Mount Cook Airport sits at the head of the Mackenzie Basin, at the foot of Aorak
 
 ## Recommended Approaches
 
-- **Visual 23:** From the south, over Lake Pukaki and Glentanner.
-- **Visual 05:** Uphill, arriving from the north - expect turbulence.
+- **Visual 31:** Uphill, from the south-east over Lake Pukaki and Glentanner.
+- **Visual 13:** Downhill, arriving from the north-west - expect turbulence.
 
 ## Nearby Airfields
 

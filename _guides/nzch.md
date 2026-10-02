@@ -27,7 +27,7 @@ Christchurch International is the primary CPAS base and the busiest airport on t
 | Designator | Length  | Surface | Notes                              |
 | ---------- | ------- | ------- | ---------------------------------- |
 | 02/20      | 3,288 m | Asphalt | Main jet runway. ILS on both ends. |
-| 11/29      | 1,741 m | Asphalt | Crosswind runway, used by GA.      |
+| 11/29      | 1,703 m | Asphalt | Crosswind runway, used by GA.      |
 
 ## Frequencies
 
@@ -38,7 +38,7 @@ Christchurch International is the primary CPAS base and the busiest airport on t
 | Ground                   | 121.9     |                                   |
 | Tower                    | 118.4     |                                   |
 | Approach                 | 120.9     | Christchurch Approach / Departure |
-| Christchurch Information | 124.4     | FIS for the wider area            |
+| Christchurch Information | 129.3     | FIS for the wider area            |
 
 ## Elevation
 
@@ -60,8 +60,8 @@ Christchurch International is the primary CPAS base and the busiest airport on t
 
 ## Recommended Approaches
 
-- **Runway 02 (ILS):** Straight-in over Pegasus Bay, minimal terrain.
-- **Runway 20 (ILS):** Over the city - expect vectoring.
+- **Runway 02 (ILS):** From the south-west over the suburbs - expect vectoring.
+- **Runway 20 (ILS):** Straight-in from the north-east over Pegasus Bay, minimal terrain.
 - **Runway 11/29:** VFR circuit joins, watch for helicopter traffic.
 
 ## Nearby Airfields

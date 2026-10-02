@@ -30,9 +30,9 @@ Picton (Koromiko) is a small aerodrome serving the Picton township and the Marlb
 
 ## Frequencies
 
-| Service | Frequency | Notes                                 |
-| ------- | --------- | ------------------------------------- |
-| CTAF    | 118.1     | Shared with Woodbourne Tower airspace |
+| Service | Frequency | Notes |
+| ------- | --------- | ----- |
+| CTAF    | 118.1     |       |
 
 ## Elevation
 

@@ -30,10 +30,10 @@ Westport sits on the Buller River mouth on the northern West Coast. It's a small
 
 ## Frequencies
 
-| Service | Frequency | Notes          |
-| ------- | --------- | -------------- |
-| ATIS    | 126.8     |                |
-| Tower   | 118.7     | Westport Tower |
+| Service                  | Frequency | Notes      |
+| ------------------------ | --------- | ---------- |
+| Christchurch Information | 118.7     | Area FIS   |
+| CTAF                     | 119.1     | Unattended |
 
 ## Elevation
 
@@ -41,7 +41,7 @@ Westport sits on the Buller River mouth on the northern West Coast. It's a small
 
 ## Local Procedures
 
-- Check NOTAMs for tower hours; often AFIS or CTAF.
+- Unattended - no tower or ATIS; broadcast on CTAF 119.1.
 - Coastal VFR routes along the shoreline are common.
 
 ## Hazards

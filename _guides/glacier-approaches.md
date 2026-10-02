@@ -35,7 +35,7 @@ The Franz Josef and Fox glaciers descend from the Southern Alps almost to sea le
 ## Reporting Points
 
 - **Hokitika** - coastal departure.
-- **Whataroa** - river junction, turn inland.
+- **Whataroa** - coastal township, continue south toward the glacier valleys.
 - **Franz Josef township** - tourist hub, helicopter base.
 - **Fox Glacier township** - southern glacier base.
 - **Glacier terminal faces** - the icefall viewpoints.
@@ -50,7 +50,7 @@ The Franz Josef and Fox glaciers descend from the Southern Alps almost to sea le
 
 | Service                | Frequency |
 | ---------------------- | --------- |
-| Hokitika Tower / CTAF  | 118.7     |
+| Hokitika CTAF          | 119.1     |
 | West Coast common CTAF | 123.1     |
 | Area / Mountain radio  | 130.6     |
 

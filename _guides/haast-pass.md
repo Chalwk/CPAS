@@ -30,7 +30,7 @@ Haast Pass (563 m / 1,847 ft) is the lowest of the three main alpine crossings (
 2. Track south along the coast to **Haast**.
 3. Turn east into the **Haast River** valley.
 4. Follow the valley through **Haast Pass**, crossing at a minimum of **6,500 ft MSL**.
-5. Descend into the **Makārоra / Lake Wānaka** system.
+5. Descend into the **Makarora / Lake Wanaka** system.
 6. Continue east to [Wanaka (NZWF)](/guides/nzwf/) or turn south for [Queenstown (NZQN)](/guides/nzqn/).
 
 ## Reporting Points
@@ -51,8 +51,7 @@ Haast Pass (563 m / 1,847 ft) is the lowest of the three main alpine crossings (
 
 | Service               | Frequency |
 | --------------------- | --------- |
-| Mount Cook FIZ        | 122.5     |
-| Wanaka Tower / CTAF   | 118.1     |
+| Wanaka CTAF           | 119.1     |
 | Queenstown Tower      | 118.1     |
 | Area / Mountain radio | 130.6     |
 

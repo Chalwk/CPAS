@@ -6,7 +6,7 @@ permalink: /guides/nzsf/
 description: "Canterbury foothills strip west of Christchurch."
 icon: fa-mountain
 region:
-  center: [-43.40, 171.93]
+  center: [-43.38, 171.91]
   zoom: 11
   boundary:
     - [-43.31, 171.81]
@@ -37,7 +37,7 @@ Springfield is a small private strip on the Canterbury Plains near the foothills
 
 ## Elevation
 
-1,050 ft AMSL.
+1,216 ft AMSL.
 
 ## Local Procedures
 

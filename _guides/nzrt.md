@@ -27,13 +27,14 @@ Rangiora is a small aerodrome north of Christchurch, used heavily for training a
 | Designator | Length  | Surface | Notes |
 | ---------- | ------- | ------- | ----- |
 | 07/25      | 1,180 m | Grass   |       |
-| 16/34      | 700 m   | Grass   |       |
+| 10/28      | 583 m   | Grass   |       |
+| 04/22      | 515 m   | Grass   |       |
 
 ## Frequencies
 
-| Service | Frequency | Notes |
-| ------- | --------- | ----- |
-| CTAF    | 123.1     |       |
+| Service    | Frequency | Notes |
+| ---------- | --------- | ----- |
+| MBZ / CTAF | 120.2     |       |
 
 ## Elevation
 

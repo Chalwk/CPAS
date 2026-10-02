@@ -44,16 +44,16 @@ The Mount Cook valley runs north from Lake Pukaki into the heart of the Aoraki/M
 ## Minimum Altitudes
 
 - **2,000 ft AGL** minimum over national park land.
-- **Mount Cook FIZ:** 122.5 within 10 NM.
-- **One-way valley traffic** - northern side for northbound, southern side for southbound (as published in local guidance).
+- **Mount Cook FIZ (Alps Traffic):** 118.6 within 10 NM.
+- **One-way valley traffic** - keep to the right-hand side of the valley: eastern side northbound, western side southbound.
 
 ## Frequencies
 
-| Service                  | Frequency |
-| ------------------------ | --------- |
-| Mount Cook FIZ           | 122.5     |
-| Area / Mountain radio    | 130.6     |
-| Christchurch Information | 124.4     |
+| Service                       | Frequency |
+| ----------------------------- | --------- |
+| Mount Cook FIZ (Alps Traffic) | 118.6     |
+| Area / Mountain radio         | 130.6     |
+| Christchurch Information      | 123.5     |
 
 ## Hazards
 

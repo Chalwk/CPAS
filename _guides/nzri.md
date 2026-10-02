@@ -6,7 +6,7 @@ permalink: /guides/nzri/
 description: "Private plains airstrip in South Canterbury."
 icon: fa-tractor
 region:
-  center: [-43.92, 171.43]
+  center: [-44.08, 171.42]
   zoom: 11
   boundary:
     - [-43.85, 171.30]
@@ -33,11 +33,11 @@ Rangitata Island is a private strip on the Canterbury Plains between Ashburton a
 
 | Service | Frequency | Notes |
 | ------- | --------- | ----- |
-| CTAF    | 123.1     |       |
+| CTAF    | 119.5     |       |
 
 ## Elevation
 
-340 ft AMSL.
+288 ft AMSL.
 
 ## Local Procedures
 

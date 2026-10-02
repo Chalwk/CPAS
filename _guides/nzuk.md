@@ -3,7 +3,7 @@ title: Pukaki
 icao: NZUK
 category: airport
 permalink: /guides/nzuk/
-description: "Small Mackenzie Basin strip on the shore of Lake Pukaki."
+description: "Sealed Mackenzie Basin strip near Twizel, just south of Lake Pukaki."
 icon: fa-water
 region:
   center: [-44.24, 170.12]
@@ -18,21 +18,22 @@ region:
 
 ## Overview
 
-Pukaki is a small grass strip on the southern shore of the glacial Lake Pukaki. It is a useful alternative or stopover on the route into Mount Cook.
+Pukaki is a small sealed strip near Twizel, a few miles south of the glacial Lake Pukaki. It is a useful alternative or stopover on the route into Mount Cook.
 
 {% include region_map.html %}
 
 ## Runways
 
-| Designator | Length  | Surface | Notes      |
-| ---------- | ------- | ------- | ---------- |
-| 15/33      | 1,082 m | Asphalt | Lake-side. |
+| Designator | Length  | Surface | Notes        |
+| ---------- | ------- | ------- | ------------ |
+| 15/33      | 1,082 m | Asphalt | Near Twizel. |
 
 ## Frequencies
 
-| Service | Frequency | Notes          |
-| ------- | --------- | -------------- |
-| FIZ     | 122.5     | Mount Cook FIZ |
+| Service                  | Frequency | Notes    |
+| ------------------------ | --------- | -------- |
+| CTAF                     | 119.1     |          |
+| Christchurch Information | 123.5     | Area FIS |
 
 ## Elevation
 
@@ -49,7 +50,7 @@ Pukaki is a small grass strip on the southern shore of the glacial Lake Pukaki. 
 
 ## Recommended Approaches
 
-- **Visual 15:** From the east, over the lake.
+- **Visual 15:** From the north, over the lake.
 
 ## Nearby Airfields
 

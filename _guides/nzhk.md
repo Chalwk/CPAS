@@ -3,7 +3,7 @@ title: Hokitika
 icao: NZHK
 category: airport
 permalink: /guides/nzhk/
-description: "West Coast regional airport and the primary eastern gateway to the glaciers."
+description: "West Coast regional airport and the primary northern gateway to the glaciers."
 icon: fa-water
 region:
   center: [-42.71, 170.99]
@@ -24,17 +24,17 @@ Hokitika is the main West Coast airport, sitting between the Tasman Sea and the 
 
 ## Runways
 
-| Designator | Length  | Surface | Notes    |
-| ---------- | ------- | ------- | -------- |
-| 03/21      | 1,152 m | Asphalt | Primary. |
+| Designator | Length  | Surface | Notes      |
+| ---------- | ------- | ------- | ---------- |
+| 03/21      | 1,314 m | Asphalt | Primary.   |
+| 12/30      | 1,176 m | Asphalt | Secondary. |
 
 ## Frequencies
 
-| Service                    | Frequency | Notes                     |
-| -------------------------- | --------- | ------------------------- |
-| ATIS                       | 126.8     |                           |
-| Tower                      | 118.7     | Hokitika Tower / Approach |
-| CTAF (outside tower hours) | 118.7     |                           |
+| Service                  | Frequency | Notes                         |
+| ------------------------ | --------- | ----------------------------- |
+| Christchurch Information | 118.5     | Area FIS                      |
+| CTAF                     | 119.1     | Unattended - no tower or ATIS |
 
 ## Elevation
 
@@ -42,8 +42,8 @@ Hokitika is the main West Coast airport, sitting between the Tasman Sea and the 
 
 ## Local Procedures
 
-- **Tower hours:** 0800–1700 local; outside those hours CTAF applies.
-- **Approaches:** RNAV and VOR approaches available.
+- **Unattended:** No tower or ATIS - broadcast on CTAF 119.1.
+- **Approaches:** RNAV (GNSS) and NDB/DME approaches available.
 - **Coastal corridor:** Class G below 1500 ft.
 
 ## Hazards

@@ -27,16 +27,16 @@ Invercargill is the southernmost city airport in New Zealand, serving Southland 
 | Designator | Length  | Surface | Notes                      |
 | ---------- | ------- | ------- | -------------------------- |
 | 04/22      | 2,210 m | Asphalt | Primary. ILS on both ends. |
-| 07/25      | 1,200 m | Asphalt | Crosswind.                 |
-| 10/28      | 700 m   | Grass   |                            |
+| 04R/22L    | 695 m   | Grass   | Parallel.                  |
+| 07/25      | 426 m   | Grass   | Crosswind.                 |
+| 12/30      | 913 m   | Grass   |                            |
 
 ## Frequencies
 
 | Service | Frequency | Notes              |
 | ------- | --------- | ------------------ |
-| ATIS    | 128.9     |                    |
-| Tower   | 118.1     | Invercargill Tower |
-| Ground  | 121.9     |                    |
+| ATIS    | 127.0     |                    |
+| Tower   | 118.5     | Invercargill Tower |
 
 ## Elevation
 

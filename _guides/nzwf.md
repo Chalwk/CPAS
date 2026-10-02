@@ -24,18 +24,16 @@ Wanaka is a small regional airport in the Upper Clutha Basin, near the southern 
 
 ## Runways
 
-| Designator | Length  | Surface | Notes      |
-| ---------- | ------- | ------- | ---------- |
-| 11/29      | 1,200 m | Asphalt | Primary.   |
-| 08/26      | 900 m   | Grass   | Crosswind. |
+| Designator | Length  | Surface | Notes     |
+| ---------- | ------- | ------- | --------- |
+| 11/29      | 1,200 m | Asphalt | Primary.  |
+| 11L/29R    | 900 m   | Grass   | Parallel. |
 
 ## Frequencies
 
-| Service              | Frequency | Notes                    |
-| -------------------- | --------- | ------------------------ |
-| ATIS                 | 119.2     |                          |
-| Tower                | 118.1     | Wanaka Tower (part-time) |
-| CTAF (outside tower) | 118.1     |                          |
+| Service | Frequency | Notes                         |
+| ------- | --------- | ----------------------------- |
+| CTAF    | 119.1     | Unattended - no tower or ATIS |
 
 ## Elevation
 
@@ -43,8 +41,7 @@ Wanaka is a small regional airport in the Upper Clutha Basin, near the southern 
 
 ## Local Procedures
 
-- **Part-time tower:** Check NOTAMs.
-- **CTR:** Class D when tower is active.
+- **Unattended:** No tower or ATIS - broadcast on CTAF 119.1.
 - High scenic traffic.
 
 ## Hazards

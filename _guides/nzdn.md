@@ -18,7 +18,7 @@ region:
 
 ## Overview
 
-Dunedin International sits on the Taieri Plain, 15 NM south-west of Dunedin city. It is the main gateway to Otago and the lower South Island.
+Dunedin International sits on the Taieri Plain, about 12 NM (22 km) south-west of Dunedin city. It is the main gateway to Otago and the lower South Island.
 
 {% include region_map.html %}
 
@@ -27,7 +27,6 @@ Dunedin International sits on the Taieri Plain, 15 NM south-west of Dunedin city
 | Designator | Length  | Surface | Notes                      |
 | ---------- | ------- | ------- | -------------------------- |
 | 03/21      | 1,900 m | Asphalt | Primary. ILS on both ends. |
-| 08/26      | 800 m   | Grass   | Crosswind.                 |
 
 ## Frequencies
 
@@ -36,7 +35,6 @@ Dunedin International sits on the Taieri Plain, 15 NM south-west of Dunedin city
 | ATIS     | 128.8     |                  |
 | Tower    | 120.7     | Dunedin Tower    |
 | Approach | 120.7     | Dunedin Approach |
-| Ground   | 121.9     |                  |
 
 ## Elevation
 

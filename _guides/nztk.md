@@ -41,7 +41,7 @@ Takaka is a small aerodrome serving Golden Bay and the town of Takaka. It requir
 
 ## Local Procedures
 
-- Takaka Hill crossing requires care - over 2,500 ft.
+- Takaka Hill crossing requires care - the road summit is about 2,600 ft; cross at 4,000 ft MSL or higher.
 
 ## Hazards
 

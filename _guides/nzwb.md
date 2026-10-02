@@ -27,15 +27,15 @@ Woodbourne is a joint civil/military aerodrome serving Blenheim and the Marlboro
 | Designator | Length  | Surface | Notes      |
 | ---------- | ------- | ------- | ---------- |
 | 06/24      | 1,425 m | Asphalt | Primary.   |
-| 10/28      | 1,425 m | Grass   | Secondary. |
+| 10/28      | 1,182 m | Grass   | Secondary. |
 | 16/34      | 900 m   | Grass   | Crosswind. |
 
 ## Frequencies
 
 | Service  | Frequency | Notes            |
 | -------- | --------- | ---------------- |
-| ATIS     | 127.6     |                  |
-| Tower    | 118.1     | Woodbourne Tower |
+| ATIS     | 126.05    |                  |
+| Tower    | 122.8     | Woodbourne Tower |
 | Approach | 122.3     |                  |
 
 ## Elevation

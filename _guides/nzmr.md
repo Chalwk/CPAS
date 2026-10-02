@@ -6,7 +6,7 @@ permalink: /guides/nzmr/
 description: "Small Tasman district strip in the Buller Gorge region."
 icon: fa-plane
 region:
-  center: [-41.80, 172.37]
+  center: [-41.80, 172.32]
   zoom: 11
   boundary:
     - [-41.71, 172.25]
@@ -18,7 +18,7 @@ region:
 
 ## Overview
 
-Murchison is a small aerodrome in the Buller district, used primarily for recreational flying and as a stopover between Nelson and the West Coast.
+Murchison is a small aerodrome in the Tasman district, used primarily for recreational flying and as a stopover between Nelson and the West Coast.
 
 {% include region_map.html %}
 

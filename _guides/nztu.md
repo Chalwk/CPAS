@@ -18,7 +18,7 @@ region:
 
 ## Overview
 
-Timaru is a regional aerodrome on the South Canterbury coast. It is a common transit stop and has a small control zone.
+Timaru is a regional aerodrome on the South Canterbury coast. It is a common transit stop on the coastal route.
 
 {% include region_map.html %}
 
@@ -31,11 +31,9 @@ Timaru is a regional aerodrome on the South Canterbury coast. It is a common tra
 
 ## Frequencies
 
-| Service              | Frequency | Notes        |
-| -------------------- | --------- | ------------ |
-| ATIS                 | 126.6     |              |
-| Tower                | 118.1     | Timaru Tower |
-| CTAF (outside tower) | 118.1     |              |
+| Service | Frequency | Notes      |
+| ------- | --------- | ---------- |
+| CTAF    | 119.5     | Unattended |
 
 ## Elevation
 
@@ -43,7 +41,7 @@ Timaru is a regional aerodrome on the South Canterbury coast. It is a common tra
 
 ## Local Procedures
 
-- **CTR:** Class D around Timaru. Coastal VFR routes along the shore.
+- **Uncontrolled aerodrome:** broadcast on CTAF 119.5. Coastal VFR routes along the shore.
 
 ## Hazards
 

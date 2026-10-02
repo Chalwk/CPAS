@@ -24,10 +24,10 @@ Motueka is a small aerodrome on the shore of Tasman Bay, serving the town and ac
 
 ## Runways
 
-| Designator | Length | Surface | Notes |
-| ---------- | ------ | ------- | ----- |
-| 02/20      | 729 m  | Asphalt |       |
-| 11/29      | 700 m  | Grass   |       |
+| Designator | Length | Surface | Notes     |
+| ---------- | ------ | ------- | --------- |
+| 02/20      | 781 m  | Asphalt |           |
+| 02R/20L    | 733 m  | Grass   | Parallel. |
 
 ## Frequencies
 

@@ -33,7 +33,7 @@ Alexandra is a small aerodrome in the Central Otago basin, surrounded by dry hil
 
 | Service | Frequency | Notes |
 | ------- | --------- | ----- |
-| CTAF    | 118.1     |       |
+| CTAF    | 119.1     |       |
 
 ## Elevation
 
@@ -50,7 +50,7 @@ Alexandra is a small aerodrome in the Central Otago basin, surrounded by dry hil
 
 ## Recommended Approaches
 
-- **Visual 32:** From the north, over the Clutha.
+- **Visual 14:** From the north-west, following the Clutha.
 
 ## Nearby Airfields
 

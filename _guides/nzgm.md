@@ -24,15 +24,16 @@ Greymouth is a small regional aerodrome on the West Coast, serving the Grey Dist
 
 ## Runways
 
-| Designator | Length | Surface | Notes    |
-| ---------- | ------ | ------- | -------- |
-| 06/24      | 880 m  | Asphalt | Primary. |
+| Designator | Length  | Surface | Notes    |
+| ---------- | ------- | ------- | -------- |
+| 01/19      | 1,091 m | Bitumen | Primary. |
 
 ## Frequencies
 
-| Service    | Frequency | Notes                             |
-| ---------- | --------- | --------------------------------- |
-| CTAF / FIZ | 122.7     | Greymouth Flight Information Zone |
+| Service                  | Frequency | Notes                             |
+| ------------------------ | --------- | --------------------------------- |
+| CTAF / FIZ               | 122.7     | Greymouth Flight Information Zone |
+| Christchurch Information | 118.7     | Area FIS                          |
 
 ## Elevation
 
@@ -51,8 +52,8 @@ Greymouth is a small regional aerodrome on the West Coast, serving the Grey Dist
 
 ## Recommended Approaches
 
-- **Visual 06:** Coastal.
-- **Visual 24:** Straight-in over the Grey River mouth.
+- **Visual 01:** Straight-in from the south, over the Grey River mouth.
+- **Visual 19:** Coastal, from the north.
 
 ## Nearby Airfields
 

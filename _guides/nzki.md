@@ -24,10 +24,10 @@ Kaikoura is a small coastal aerodrome on the east coast of the South Island, nes
 
 ## Runways
 
-| Designator | Length | Surface | Notes      |
-| ---------- | ------ | ------- | ---------- |
-| 05/23      | 700 m  | Bitumen |            |
-| 16/34      | 700 m  | Grass   | Crosswind. |
+| Designator | Length | Surface | Notes     |
+| ---------- | ------ | ------- | --------- |
+| 05/23      | 700 m  | Bitumen |           |
+| 05L/23R    | 615 m  | Grass   | Parallel. |
 
 ## Frequencies
 
@@ -50,7 +50,7 @@ Kaikoura is a small coastal aerodrome on the east coast of the South Island, nes
 
 ## Recommended Approaches
 
-- **Visual 23:** From the south, over the coast.
+- **Visual 23:** From the north-east, off the sea.
 
 ## Nearby Airfields
 
