@@ -27,7 +27,7 @@ Christchurch International is the primary CPAS base and the busiest airport on t
 | Designator | Length  | Surface | Notes                                              |
 | ---------- | ------- | ------- | -------------------------------------------------- |
 | 02/20      | 3,288 m | Asphalt | Main jet runway. ILS on both ends.                 |
-| 11/29      | 1,703 m | Asphalt | Crosswind runway, used by GA. RNP approaches only. |
+| 11/29      | 1,741 m | Asphalt | Crosswind runway, used by GA. RNP approaches only. |
 | 02/20      | 515 m   | Grass   | Canterbury Aero Club circuit runway.               |
 
 ## Frequencies
@@ -37,7 +37,7 @@ Christchurch International is the primary CPAS base and the busiest airport on t
 | ATIS     | 127.2     |                                         |
 | Delivery | 128.2     | IFR clearances                          |
 | Ground   | 121.9     |                                         |
-| Tower    | 118.4     | Also 128.9 (secondary)                  |
+| Tower    | 118.4     | Also 119.65 (secondary)                 |
 | Approach | 126.1     | Primary Christchurch Approach/Departure |
 | Approach | 124.1     | Secondary                               |
 | Approach | 120.9     | Christchurch Approach / Departure       |
@@ -50,7 +50,7 @@ Christchurch International is the primary CPAS base and the busiest airport on t
 
 - **GA parking:** Canterbury Aero Club (CAC) apron is the main GA hub.
 - **VFR departures:** Expect a clearance to track via the Waimakariri River or the coast.
-- **Noise abatement:** Prefer Runway 02 for easterly operations when able (Todo: verify - easterlies typically favour 11/29).
+- **Noise abatement:** Runway 02/20 is the primary runway used for approximately 97% of flights. Runway 11/29 is the crosswind runway, primarily used by smaller aircraft during strong nor'wester conditions.
 - **Circuit directions:** Runways 20 and 29 use right-hand circuits.
 - **Port Hills transition:** Remain inside the CTR if cleared; contact ATC. Do not use CTAF while inside Class C airspace.
 
