@@ -3,9 +3,17 @@ title: Takaka
 icao: NZTK
 category: airport
 permalink: /guides/nztk/
-region: nztk
 description: "Golden Bay aerodrome across the Takaka Hill."
 icon: fa-mountain
+region:
+  center: [-40.81, 172.78]
+  zoom: 11
+  boundary:
+    - [-40.72, 172.65]
+    - [-40.72, 172.90]
+    - [-40.91, 172.90]
+    - [-40.91, 172.65]
+    - [-40.72, 172.65]
 ---
 
 ## Overview

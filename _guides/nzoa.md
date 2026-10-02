@@ -3,9 +3,17 @@ title: Omarama
 icao: NZOA
 category: airport
 permalink: /guides/nzoa/
-region: nzoa
 description: "Mackenzie Basin gliding mecca. Expect heavy glider traffic in summer."
 icon: fa-plane
+region:
+  center: [-44.49, 169.99]
+  zoom: 11
+  boundary:
+    - [-44.39, 169.86]
+    - [-44.39, 170.11]
+    - [-44.58, 170.11]
+    - [-44.58, 169.86]
+    - [-44.39, 169.86]
 ---
 
 ## Overview

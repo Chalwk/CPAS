@@ -2,9 +2,20 @@
 title: Arthur's Pass VFR Corridor
 category: scenic
 permalink: /guides/arthurs-pass/
-region: arthurs_pass
 description: "The classic East–West crossing of the Southern Alps between Christchurch and Hokitika."
 icon: fa-mountain
+region:
+  center: [-42.94, 171.65]
+  zoom: 10
+  boundary:
+    - [-42.78, 171.45]
+    - [-42.76, 171.75]
+    - [-42.88, 171.98]
+    - [-43.05, 171.98]
+    - [-43.12, 171.72]
+    - [-43.05, 171.42]
+    - [-42.88, 171.32]
+    - [-42.78, 171.45]
 ---
 
 ## Overview

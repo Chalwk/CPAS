@@ -2,9 +2,20 @@
 title: Banks Peninsula VFR Corridor
 category: scenic
 permalink: /guides/banks-peninsula/
-region: banks_peninsula
 description: "Volcanic peninsula south-east of Christchurch - Lyttelton Harbour, Akaroa, and the Port Hills."
 icon: fa-water
+region:
+  center: [-43.72, 172.85]
+  zoom: 10
+  boundary:
+    - [-43.58, 172.60]
+    - [-43.55, 172.85]
+    - [-43.62, 173.05]
+    - [-43.78, 173.12]
+    - [-43.90, 172.95]
+    - [-43.88, 172.72]
+    - [-43.72, 172.58]
+    - [-43.58, 172.60]
 ---
 
 ## Overview

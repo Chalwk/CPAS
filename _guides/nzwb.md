@@ -3,9 +3,17 @@ title: Woodbourne / Blenheim
 icao: NZWB
 category: airport
 permalink: /guides/nzwb/
-region: nzwb
 description: "Marlborough's principal airport. Wine country hub and gateway to the Sounds."
 icon: fa-plane
+region:
+  center: [-41.52, 173.87]
+  zoom: 11
+  boundary:
+    - [-41.43, 173.74]
+    - [-41.43, 173.99]
+    - [-41.61, 173.99]
+    - [-41.61, 173.74]
+    - [-41.43, 173.74]
 ---
 
 ## Overview

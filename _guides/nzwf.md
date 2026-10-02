@@ -3,9 +3,17 @@ title: Wanaka
 icao: NZWF
 category: airport
 permalink: /guides/nzwf/
-region: nzwf
 description: "Southern Lakes regional airport. Gateway to Mount Aspiring National Park."
 icon: fa-mountain
+region:
+  center: [-44.72, 169.25]
+  zoom: 11
+  boundary:
+    - [-44.63, 169.12]
+    - [-44.63, 169.37]
+    - [-44.81, 169.37]
+    - [-44.81, 169.12]
+    - [-44.63, 169.12]
 ---
 
 ## Overview

@@ -3,9 +3,17 @@ title: Murchison
 icao: NZMR
 category: airport
 permalink: /guides/nzmr/
-region: nzmr
 description: "Small Tasman district strip in the Buller Gorge region."
 icon: fa-plane
+region:
+  center: [-41.80, 172.37]
+  zoom: 11
+  boundary:
+    - [-41.71, 172.25]
+    - [-41.71, 172.49]
+    - [-41.88, 172.49]
+    - [-41.88, 172.25]
+    - [-41.71, 172.25]
 ---
 
 ## Overview

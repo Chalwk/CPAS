@@ -2,9 +2,20 @@
 title: Haast Pass VFR Corridor
 category: scenic
 permalink: /guides/haast-pass/
-region: haast_pass
 description: "Southern crossing of the Southern Alps between the West Coast and Wanaka."
 icon: fa-mountain
+region:
+  center: [-44.10, 169.15]
+  zoom: 10
+  boundary:
+    - [-43.88, 168.85]
+    - [-43.85, 169.22]
+    - [-44.00, 169.55]
+    - [-44.22, 169.58]
+    - [-44.34, 169.25]
+    - [-44.22, 168.85]
+    - [-44.02, 168.72]
+    - [-43.88, 168.85]
 ---
 
 ## Overview

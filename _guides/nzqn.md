@@ -3,9 +3,17 @@ title: Queenstown
 icao: NZQN
 category: airport
 permalink: /guides/nzqn/
-region: nzqn
 description: "Southern Lakes alpine airport famous for its dramatic terrain and the Runway 23 visual approach."
 icon: fa-mountain
+region:
+  center: [-45.02, 168.74]
+  zoom: 10
+  boundary:
+    - [-44.91, 168.60]
+    - [-44.91, 168.88]
+    - [-45.13, 168.88]
+    - [-45.13, 168.60]
+    - [-44.91, 168.60]
 ---
 
 ## Overview

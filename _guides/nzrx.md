@@ -3,9 +3,17 @@ title: Roxburgh
 icao: NZRX
 category: airport
 permalink: /guides/nzrx/
-region: nzrx
 description: "Small Central Otago strip in the Teviot Valley."
 icon: fa-plane
+region:
+  center: [-45.51, 169.32]
+  zoom: 11
+  boundary:
+    - [-45.42, 169.19]
+    - [-45.42, 169.44]
+    - [-45.60, 169.44]
+    - [-45.60, 169.19]
+    - [-45.42, 169.19]
 ---
 
 ## Overview

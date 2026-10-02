@@ -2,9 +2,20 @@
 title: Glacier Approaches
 category: scenic
 permalink: /guides/glacier-approaches/
-region: glaciers
 description: "Franz Josef and Fox glacier valleys - helicopter and fixed-wing scenic corridors on the West Coast."
 icon: fa-mountain
+region:
+  center: [-43.48, 170.05]
+  zoom: 10
+  boundary:
+    - [-43.28, 169.78]
+    - [-43.26, 170.15]
+    - [-43.42, 170.35]
+    - [-43.62, 170.32]
+    - [-43.68, 170.02]
+    - [-43.58, 169.75]
+    - [-43.40, 169.68]
+    - [-43.28, 169.78]
 ---
 
 ## Overview

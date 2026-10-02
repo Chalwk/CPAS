@@ -202,7 +202,17 @@ css: [flight_centre]
 <script>
     window.CPAS_BASEURL = '{{ site.baseurl }}';
     window.CPAS_ROUTES_URL = '{{ '/assets/data/routes.json' | relative_url }}';
-    window.CPAS_AIRPORTS_URL = '{{ '/assets/data/airports.json' | relative_url }}';
+    window.CPAS_AIRPORTS = {
+        {% for guide in site.guides %}
+            {% if guide.icao and guide.region and guide.region.center %}
+            "{{ guide.icao }}": {
+                "name": {{ guide.title | jsonify }},
+                "lat": {{ guide.region.center[0] }},
+                "lon": {{ guide.region.center[1] }}
+            },
+            {% endif %}
+        {% endfor %}
+    };
 </script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>

@@ -3,9 +3,17 @@ title: Milford Sound
 icao: NZMF
 category: airport
 permalink: /guides/nzmf/
-region: nzmf
 description: "One of the world's most scenic approaches. Special rules airspace."
 icon: fa-mountain
+region:
+  center: [-44.67, 167.92]
+  zoom: 11
+  boundary:
+    - [-44.58, 167.80]
+    - [-44.58, 168.05]
+    - [-44.77, 168.05]
+    - [-44.77, 167.80]
+    - [-44.58, 167.80]
 ---
 
 ## Overview

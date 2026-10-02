@@ -3,9 +3,17 @@ title: Christchurch International
 icao: NZCH
 category: airport
 permalink: /guides/nzch/
-region: nzch
 description: "Primary CPAS base. Busy Class C international airport on the Canterbury Plains."
 icon: fa-plane
+region:
+  center: [-43.49, 172.53]
+  zoom: 10
+  boundary:
+    - [-43.34, 172.38]
+    - [-43.34, 172.68]
+    - [-43.64, 172.68]
+    - [-43.64, 172.38]
+    - [-43.34, 172.38]
 ---
 
 ## Overview

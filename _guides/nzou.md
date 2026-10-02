@@ -3,9 +3,17 @@ title: Oamaru
 icao: NZOU
 category: airport
 permalink: /guides/nzou/
-region: nzou
 description: "North Otago coastal aerodrome. Victorian precinct town."
 icon: fa-plane
+region:
+  center: [-44.97, 171.08]
+  zoom: 11
+  boundary:
+    - [-44.88, 170.96]
+    - [-44.88, 171.20]
+    - [-45.06, 171.20]
+    - [-45.06, 170.96]
+    - [-44.88, 170.96]
 ---
 
 ## Overview

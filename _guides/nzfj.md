@@ -3,9 +3,17 @@ title: Franz Josef
 icao: NZFJ
 category: airport
 permalink: /guides/nzfj/
-region: nzfj
 description: "West Coast glacier aerodrome. Base for Fox and Franz Josef glacier flights."
 icon: fa-mountain
+region:
+  center: [-43.36, 170.13]
+  zoom: 11
+  boundary:
+    - [-43.28, 170.03]
+    - [-43.28, 170.24]
+    - [-43.45, 170.24]
+    - [-43.45, 170.03]
+    - [-43.28, 170.03]
 ---
 
 ## Overview

@@ -3,9 +3,17 @@ title: Alexandra
 icao: NZLX
 category: airport
 permalink: /guides/nzlx/
-region: nzlx
 description: "Central Otago regional aerodrome in a dry, basin climate."
 icon: fa-plane
+region:
+  center: [-45.21, 169.37]
+  zoom: 11
+  boundary:
+    - [-45.12, 169.25]
+    - [-45.12, 169.50]
+    - [-45.30, 169.50]
+    - [-45.30, 169.25]
+    - [-45.12, 169.25]
 ---
 
 ## Overview

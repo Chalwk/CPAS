@@ -3,9 +3,17 @@ title: Stewart Island / Oban
 icao: NZRC
 category: airport
 permalink: /guides/nzrc/
-region: nzrc
 description: "Ryan's Creek aerodrome. Remote island strip south of Foveaux Strait."
 icon: fa-water
+region:
+  center: [-46.90, 168.09]
+  zoom: 11
+  boundary:
+    - [-46.82, 167.96]
+    - [-46.82, 168.22]
+    - [-46.98, 168.22]
+    - [-46.98, 167.96]
+    - [-46.82, 167.96]
 ---
 
 ## Overview

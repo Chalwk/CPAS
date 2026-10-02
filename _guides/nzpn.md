@@ -3,9 +3,17 @@ title: Picton
 icao: NZPN
 category: airport
 permalink: /guides/nzpn/
-region: nzpn
 description: "Small Marlborough aerodrome at the head of Queen Charlotte Sound."
 icon: fa-water
+region:
+  center: [-41.35, 173.96]
+  zoom: 11
+  boundary:
+    - [-41.26, 173.83]
+    - [-41.26, 174.08]
+    - [-41.44, 174.08]
+    - [-41.44, 173.83]
+    - [-41.26, 173.83]
 ---
 
 ## Overview

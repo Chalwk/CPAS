@@ -3,9 +3,17 @@ title: Motueka
 icao: NZMK
 category: airport
 permalink: /guides/nzmk/
-region: nzmk
 description: "Tasman Bay aerodrome and base for Abel Tasman scenic flights."
 icon: fa-plane
+region:
+  center: [-41.12, 172.99]
+  zoom: 11
+  boundary:
+    - [-41.04, 172.87]
+    - [-41.04, 173.11]
+    - [-41.21, 173.11]
+    - [-41.21, 172.87]
+    - [-41.04, 172.87]
 ---
 
 ## Overview

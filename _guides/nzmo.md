@@ -3,9 +3,17 @@ title: Te Anau / Manapouri
 icao: NZMO
 category: airport
 permalink: /guides/nzmo/
-region: nzmo
 description: "Fiordland gateway. Base for Milford Sound and Doubtful Sound operations."
 icon: fa-mountain
+region:
+  center: [-45.53, 167.65]
+  zoom: 11
+  boundary:
+    - [-45.44, 167.52]
+    - [-45.44, 167.78]
+    - [-45.63, 167.78]
+    - [-45.63, 167.52]
+    - [-45.44, 167.52]
 ---
 
 ## Overview

@@ -2,9 +2,20 @@
 title: Mount Cook Valley
 category: scenic
 permalink: /guides/mt-cook-valley/
-region: mt_cook
 description: "The Aoraki/Mount Cook valley - Lake Pukaki, Glentanner, and the Hooker and Tasman glacier valleys."
 icon: fa-mountain
+region:
+  center: [-43.68, 170.10]
+  zoom: 10
+  boundary:
+    - [-43.50, 169.85]
+    - [-43.48, 170.20]
+    - [-43.62, 170.42]
+    - [-43.82, 170.38]
+    - [-43.92, 170.05]
+    - [-43.82, 169.80]
+    - [-43.62, 169.76]
+    - [-43.50, 169.85]
 ---
 
 ## Overview

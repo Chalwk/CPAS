@@ -3,9 +3,17 @@ title: Glenorchy
 icao: NZGY
 category: airport
 permalink: /guides/nzgy/
-region: nzgy
 description: "Remote grass strip at the head of Lake Wakatipu."
 icon: fa-mountain
+region:
+  center: [-44.87, 168.40]
+  zoom: 10
+  boundary:
+    - [-44.78, 168.28]
+    - [-44.78, 168.52]
+    - [-44.96, 168.52]
+    - [-44.96, 168.28]
+    - [-44.78, 168.28]
 ---
 
 ## Overview

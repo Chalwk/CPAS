@@ -3,9 +3,17 @@ title: Rangiora
 icao: NZRT
 category: airport
 permalink: /guides/nzrt/
-region: nzrt
 description: "Canterbury Aero Club satellite field north of Christchurch."
 icon: fa-plane
+region:
+  center: [-43.29, 172.55]
+  zoom: 11
+  boundary:
+    - [-43.20, 172.42]
+    - [-43.20, 172.67]
+    - [-43.38, 172.67]
+    - [-43.38, 172.42]
+    - [-43.20, 172.42]
 ---
 
 ## Overview

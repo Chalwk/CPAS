@@ -3,9 +3,17 @@ title: Timaru
 icao: NZTU
 category: airport
 permalink: /guides/nztu/
-region: nztu
 description: "South Canterbury regional airport. Coastal transit hub between Christchurch and Dunedin."
 icon: fa-plane
+region:
+  center: [-44.30, 171.23]
+  zoom: 11
+  boundary:
+    - [-44.21, 171.10]
+    - [-44.21, 171.35]
+    - [-44.40, 171.35]
+    - [-44.40, 171.10]
+    - [-44.21, 171.10]
 ---
 
 ## Overview

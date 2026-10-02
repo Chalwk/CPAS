@@ -3,9 +3,17 @@ title: Pukaki
 icao: NZUK
 category: airport
 permalink: /guides/nzuk/
-region: nzuk
 description: "Small Mackenzie Basin strip on the shore of Lake Pukaki."
 icon: fa-water
+region:
+  center: [-44.24, 170.12]
+  zoom: 11
+  boundary:
+    - [-44.15, 170.00]
+    - [-44.15, 170.24]
+    - [-44.32, 170.24]
+    - [-44.32, 170.00]
+    - [-44.15, 170.00]
 ---
 
 ## Overview

@@ -1,9 +1,4 @@
-{%- assign region_key = page.region -%}
-{%- assign region = nil -%}
-{%- if region_key and site.data.regions[region_key] -%}
-    {%- assign region = site.data.regions[region_key] -%}
-{%- endif -%}
-
+{%- assign region = page.region -%}
 {%- if region and region.boundary -%}
     {%- assign center = page.region_center | default: region.center -%}
     {%- assign zoom   = page.region_zoom   | default: region.zoom | default: 10 -%}

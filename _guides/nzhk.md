@@ -3,9 +3,17 @@ title: Hokitika
 icao: NZHK
 category: airport
 permalink: /guides/nzhk/
-region: nzhk
 description: "West Coast regional airport and the primary eastern gateway to the glaciers."
 icon: fa-water
+region:
+  center: [-42.71, 170.99]
+  zoom: 11
+  boundary:
+    - [-42.63, 170.87]
+    - [-42.63, 171.10]
+    - [-42.80, 171.10]
+    - [-42.80, 170.87]
+    - [-42.63, 170.87]
 ---
 
 ## Overview

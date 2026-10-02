@@ -3,9 +3,17 @@ title: Taieri
 icao: NZTI
 category: airport
 permalink: /guides/nzti/
-region: nzti
 description: "Otago Aero Club home field, Taieri Plain."
 icon: fa-plane
+region:
+  center: [-45.86, 170.36]
+  zoom: 11
+  boundary:
+    - [-45.77, 170.23]
+    - [-45.77, 170.49]
+    - [-45.95, 170.49]
+    - [-45.95, 170.23]
+    - [-45.77, 170.23]
 ---
 
 ## Overview

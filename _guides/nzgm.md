@@ -3,9 +3,17 @@ title: Greymouth
 icao: NZGM
 category: airport
 permalink: /guides/nzgm/
-region: nzgm
 description: "Small West Coast aerodrome between Hokitika and Westport."
 icon: fa-water
+region:
+  center: [-42.46, 171.19]
+  zoom: 11
+  boundary:
+    - [-42.38, 171.08]
+    - [-42.38, 171.30]
+    - [-42.55, 171.30]
+    - [-42.55, 171.08]
+    - [-42.38, 171.08]
 ---
 
 ## Overview

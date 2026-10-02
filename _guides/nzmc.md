@@ -3,9 +3,17 @@ title: Mount Cook
 icao: NZMC
 category: airport
 permalink: /guides/nzmc/
-region: nzmc
 description: "Alpine aerodrome in the Aoraki/Mount Cook National Park. High-altitude and mountain weather."
 icon: fa-mountain
+region:
+  center: [-43.77, 170.13]
+  zoom: 11
+  boundary:
+    - [-43.68, 170.02]
+    - [-43.68, 170.25]
+    - [-43.85, 170.25]
+    - [-43.85, 170.02]
+    - [-43.68, 170.02]
 ---
 
 ## Overview

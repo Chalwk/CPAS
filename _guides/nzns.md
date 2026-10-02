@@ -3,9 +3,17 @@ title: Nelson
 icao: NZNS
 category: airport
 permalink: /guides/nzns/
-region: nzns
 description: "Top of the South Island regional hub. Gateway to Abel Tasman, Marlborough and Golden Bay."
 icon: fa-plane
+region:
+  center: [-41.30, 173.22]
+  zoom: 10
+  boundary:
+    - [-41.20, 173.09]
+    - [-41.20, 173.35]
+    - [-41.40, 173.35]
+    - [-41.40, 173.09]
+    - [-41.20, 173.09]
 ---
 
 ## Overview

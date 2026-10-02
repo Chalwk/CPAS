@@ -3,9 +3,17 @@ title: Rangitata Island
 icao: NZRI
 category: airport
 permalink: /guides/nzri/
-region: nzri
 description: "Private plains airstrip in South Canterbury."
 icon: fa-tractor
+region:
+  center: [-43.92, 171.43]
+  zoom: 11
+  boundary:
+    - [-43.85, 171.30]
+    - [-43.85, 171.55]
+    - [-43.99, 171.55]
+    - [-43.99, 171.30]
+    - [-43.85, 171.30]
 ---
 
 ## Overview

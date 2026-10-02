@@ -3,9 +3,17 @@ title: Invercargill
 icao: NZNV
 category: airport
 permalink: /guides/nznv/
-region: nznv
 description: "Southland's main airport. Gateway to Stewart Island and Fiordland."
 icon: fa-plane
+region:
+  center: [-46.41, 168.31]
+  zoom: 10
+  boundary:
+    - [-46.31, 168.16]
+    - [-46.31, 168.46]
+    - [-46.51, 168.46]
+    - [-46.51, 168.16]
+    - [-46.31, 168.16]
 ---
 
 ## Overview

@@ -3,9 +3,17 @@ title: Kaikoura
 icao: NZKI
 category: airport
 permalink: /guides/nzki/
-region: nzki
 description: "Coastal aerodrome famous for whale watching and the Seaward Kaikoura Range."
 icon: fa-water
+region:
+  center: [-42.43, 173.61]
+  zoom: 11
+  boundary:
+    - [-42.34, 173.49]
+    - [-42.34, 173.72]
+    - [-42.51, 173.72]
+    - [-42.51, 173.49]
+    - [-42.34, 173.49]
 ---
 
 ## Overview

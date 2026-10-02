@@ -3,9 +3,17 @@ title: Westport
 icao: NZWS
 category: airport
 permalink: /guides/nzws/
-region: nzws
 description: "Buller region airport on the northern West Coast. Gateway to the Buller Gorge and Karamea."
 icon: fa-water
+region:
+  center: [-41.74, 171.58]
+  zoom: 11
+  boundary:
+    - [-41.65, 171.46]
+    - [-41.65, 171.70]
+    - [-41.83, 171.70]
+    - [-41.83, 171.46]
+    - [-41.65, 171.46]
 ---
 
 ## Overview

@@ -315,7 +315,7 @@
 
             Object.keys(missing).sort().forEach(code => {
                 console.warn(
-                    `[flight-centre] ${code} is used by routes but missing from airports.json: ` +
+                    `[flight-centre] ${code} is used by routes but missing from airports data: ` +
                     Array.from(missing[code]).join(', ')
                 );
             });
@@ -323,7 +323,7 @@
             const unused = Object.keys(this.airports).filter(c => !used.has(c)).sort();
             if (unused.length) {
                 console.warn(
-                    `[flight-centre] airports.json has entries no route uses: ${unused.join(', ')}`
+                    `[flight-centre] airports data has entries no route uses: ${unused.join(', ')}`
                 );
             }
         }
@@ -1154,10 +1154,11 @@
 
     async function bootstrap() {
         const routesData = await fetchJSON(window.CPAS_ROUTES_URL, 'routes');
-        const airportsData = await fetchJSON(window.CPAS_AIRPORTS_URL, 'airports');
 
         const routes = Array.isArray(routesData) ? routesData : [];
-        const airports = (airportsData && typeof airportsData === 'object') ? airportsData : {};
+        const airports = (window.CPAS_AIRPORTS && typeof window.CPAS_AIRPORTS === 'object')
+            ? window.CPAS_AIRPORTS
+            : {};
 
         window.flightCentre = new FlightCentre(routes, airports);
     }

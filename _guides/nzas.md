@@ -3,9 +3,17 @@ title: Ashburton
 icao: NZAS
 category: airport
 permalink: /guides/nzas/
-region: nzas
 description: "Mid-Canterbury plains aerodrome between Christchurch and Timaru."
 icon: fa-tractor
+region:
+  center: [-43.90, 171.80]
+  zoom: 11
+  boundary:
+    - [-43.83, 171.71]
+    - [-43.83, 171.89]
+    - [-43.97, 171.89]
+    - [-43.97, 171.71]
+    - [-43.83, 171.71]
 ---
 
 ## Overview

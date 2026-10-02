@@ -3,9 +3,17 @@ title: Springfield
 icao: NZSF
 category: airport
 permalink: /guides/nzsf/
-region: nzsf
 description: "Canterbury foothills strip west of Christchurch."
 icon: fa-mountain
+region:
+  center: [-43.40, 171.93]
+  zoom: 11
+  boundary:
+    - [-43.31, 171.81]
+    - [-43.31, 172.06]
+    - [-43.49, 172.06]
+    - [-43.49, 171.81]
+    - [-43.31, 171.81]
 ---
 
 ## Overview

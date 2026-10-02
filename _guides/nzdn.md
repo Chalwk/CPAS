@@ -3,9 +3,17 @@ title: Dunedin International
 icao: NZDN
 category: airport
 permalink: /guides/nzdn/
-region: nzdn
 description: "Otago's primary airport at Momona, south-west of Dunedin."
 icon: fa-plane
+region:
+  center: [-45.93, 170.20]
+  zoom: 10
+  boundary:
+    - [-45.83, 170.05]
+    - [-45.83, 170.35]
+    - [-46.03, 170.35]
+    - [-46.03, 170.05]
+    - [-45.83, 170.05]
 ---
 
 ## Overview
