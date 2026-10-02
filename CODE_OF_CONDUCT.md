@@ -2,82 +2,58 @@
 
 ## Table of Contents
 
-* [Code of Conduct](#code-of-conduct)
-
-    * [Respect and Professionalism](#1-respect-and-professionalism)
-    * [Virtual Aviation Etiquette](#2-virtual-aviation-etiquette)
-    * [Collaborative Spirit](#3-collaborative-spirit)
-
-* [Community Structure & Operations](#community-structure--operations)
-
-    * [Virtual Charter Concept](#1-virtual-charter-concept)
-    * [Core Principles](#2-core-principles)
-
-* [Pilot Requirements & Standards](#pilot-requirements--standards)
-
-    * [Minimum Requirements](#1-minimum-requirements)
-    * [Rank System](#2-rank-system)
-    * [Endorsement System](#3-endorsement-system)
-    * [Performance Expectations](#4-performance-expectations)
-
-* [Flight Operations](#flight-operations)
-
-    * [Flight Planning Requirements](#1-flight-planning-requirements)
-    * [In-Flight Conduct](#2-in-flight-conduct)
-    * [Flight Reporting](#3-flight-reporting)
-    * [Specialized Operations](#4-specialized-operations)
-
-* [Communication & Discord Usage](#communication--discord-usage)
-
-    * [Discord Structure](#1-discord-structure)
-    * [Communication Standards](#2-communication-standards)
-    * [Support Channels](#3-support-channels)
-
-* [Simulation Standards](#simulation-standards)
-
-    * [Realism Expectations](#1-realism-expectations)
-    * [Acceptable Modifications](#2-acceptable-modifications)
-    * [Unacceptable Practices](#3-unacceptable-practices)
-
-* [Training & Progression](#training--progression)
-
-    * [Training Philosophy](#1-training-philosophy)
-    * [Checkride Format](#2-checkride-format)
-    * [Advancement Requirements](#3-advancement-requirements)
-
-* [Rules & Enforcement](#rules--enforcement)
-
-    * [Zero Tolerance Violations](#1-zero-tolerance-violations)
-    * [Progressive Discipline](#2-progressive-discipline)
-    * [Appeal Process](#3-appeal-process)
-
-* [Community Events](#community-events)
-
-    * [Regular Activities](#1-regular-activities)
-    * [Event Participation](#2-event-participation)
-    * [Event Conduct](#3-event-conduct)
-
-* [Technical Requirements](#technical-requirements)
-
-    * [Minimum Specifications](#1-minimum-specifications)
-    * [Recommended Add-ons](#2-recommended-add-ons)
-    * [Performance Standards](#3-performance-standards)
-
-* [Community Values](#community-values)
-
-    * [Inclusivity](#1-inclusivity)
-    * [Balance of Realism and Fun](#2-balance-of-realism-and-fun)
-    * [Learning Culture](#3-learning-culture)
-
-* [Leadership & Support](#leadership--support)
-
-    * [Leadership Team](#1-leadership-team)
-    * [Support Channels](#2-support-channels)
-    * [Contact Points](#3-contact-points)
-
-* [Agreement](#agreement)
-
-    * [Updates to Guidelines](#updates-to-guidelines)
+- [Code of Conduct](#code-of-conduct)
+  - [Table of Contents](#table-of-contents)
+    - [1. Respect and Professionalism](#1-respect-and-professionalism)
+    - [2. Virtual Aviation Etiquette](#2-virtual-aviation-etiquette)
+    - [3. Collaborative Spirit](#3-collaborative-spirit)
+  - [Community Structure \& Operations](#community-structure--operations)
+    - [1. Virtual Charter Concept](#1-virtual-charter-concept)
+    - [2. Core Principles](#2-core-principles)
+  - [Pilot Requirements \& Standards](#pilot-requirements--standards)
+    - [1. Minimum Requirements](#1-minimum-requirements)
+    - [2. Rank System](#2-rank-system)
+    - [3. Endorsement System](#3-endorsement-system)
+    - [4. Performance Expectations](#4-performance-expectations)
+  - [Flight Operations](#flight-operations)
+    - [1. Flight Planning Requirements](#1-flight-planning-requirements)
+    - [2. In-Flight Conduct](#2-in-flight-conduct)
+    - [3. Flight Reporting](#3-flight-reporting)
+    - [4. Specialized Operations](#4-specialized-operations)
+  - [Communication \& Discord Usage](#communication--discord-usage)
+    - [1. Discord Structure](#1-discord-structure)
+    - [2. Communication Standards](#2-communication-standards)
+    - [3. Support Channels](#3-support-channels)
+  - [Simulation Standards](#simulation-standards)
+    - [1. Realism Expectations](#1-realism-expectations)
+    - [2. Acceptable Modifications](#2-acceptable-modifications)
+    - [3. Unacceptable Practices](#3-unacceptable-practices)
+  - [Training \& Progression](#training--progression)
+    - [1. Training Philosophy](#1-training-philosophy)
+    - [2. Checkride Format](#2-checkride-format)
+    - [3. Advancement Requirements](#3-advancement-requirements)
+  - [Rules \& Enforcement](#rules--enforcement)
+    - [1. Zero Tolerance Violations](#1-zero-tolerance-violations)
+    - [2. Progressive Discipline](#2-progressive-discipline)
+    - [3. Appeal Process](#3-appeal-process)
+  - [Community Events](#community-events)
+    - [1. Regular Activities](#1-regular-activities)
+    - [2. Event Participation](#2-event-participation)
+    - [3. Event Conduct](#3-event-conduct)
+  - [Technical Requirements](#technical-requirements)
+    - [1. Minimum Specifications](#1-minimum-specifications)
+    - [2. Recommended Add-ons](#2-recommended-add-ons)
+    - [3. Performance Standards](#3-performance-standards)
+  - [Community Values](#community-values)
+    - [1. Inclusivity](#1-inclusivity)
+    - [2. Balance of Realism and Fun](#2-balance-of-realism-and-fun)
+    - [3. Learning Culture](#3-learning-culture)
+  - [Leadership \& Support](#leadership--support)
+    - [1. Leadership Team](#1-leadership-team)
+    - [2. Support Channels](#2-support-channels)
+    - [3. Contact Points](#3-contact-points)
+  - [Agreement](#agreement)
+    - [Updates to Guidelines](#updates-to-guidelines)
 
 ---
 
@@ -408,7 +384,7 @@ By participating in Coastal Peaks Air Service (CPAS), you agree to:
 ### Updates to Guidelines
 
 These guidelines may be updated periodically to reflect community evolution. Changes will be announced in our Discord
-server and documented on our [website](https://chalwk.github.io/CPAS). Continued participation constitutes acceptance of
+server and documented on our [website](https://chalwk.github.io/CPAS/). Continued participation constitutes acceptance of
 updated guidelines.
 
-*Last Updated: January 2026*
+*Last Updated: October 2026*
