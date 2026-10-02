@@ -24,10 +24,9 @@ layout: default
             </div>
             {% endif %}
             <div class="guide-header-text">
-                <h1>{{ page.title }}</h1>
-                {% if page.icao %}
-                <span class="guide-icao"><i class="fas fa-hashtag"></i> {{ page.icao }}</span>
-                {% endif %}
+                <h1>
+                    {{ page.title }}{% if page.icao %} <span class="guide-icao">({{ page.icao }})</span>{% endif %}
+                </h1>
                 {% if page.description %}
                 <p class="guide-description">{{ page.description }}</p>
                 {% endif %}
