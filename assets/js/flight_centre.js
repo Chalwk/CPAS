@@ -36,7 +36,7 @@
         'itinerary': 'Multi-Day Itineraries'
     };
 
-    // Approximate NZ bounding box used as the default map view.
+    // Approximate NZ bounding box used as the default modal map view.
     const NZ_CENTER = [-43.5, 171.0];
     const NZ_ZOOM = 6;
     const ICAO_PATTERN = /\bNZ[A-Z]{2}\b/g;
@@ -57,14 +57,6 @@
             this.perPage = 6;
             this.els = {};
 
-            // Map state (in-page toggle map)
-            this.map = null;
-            this.mapRouteLayer = null;
-            this.mapRouteLayers = {};   // routeKey -> L.Polyline
-            this.mapMarkerLayers = {};  // ICAO     -> L.CircleMarker
-            this.mapVisible = false;
-            this.highlightedKey = null;
-
             this.init();
         }
 
@@ -76,7 +68,6 @@
                 this.auditAirports();
                 this.bindEvents();
                 this.bindTabs();
-                this.bindMap();
                 this.updateTabCounts();
                 this.render();
             };
@@ -107,12 +98,7 @@
                 modal: document.getElementById('fcModal'),
                 modalClose: document.getElementById('fcModalClose'),
                 modalBody: document.getElementById('fcModalBody'),
-                tabButtons: Array.from(document.querySelectorAll('.fc-tab-btn')),
-
-                // Map
-                mapToggle: document.getElementById('fcMapToggle'),
-                mapWrap: document.getElementById('fcMapWrap'),
-                mapInner: document.getElementById('fcMap')
+                tabButtons: Array.from(document.querySelectorAll('.fc-tab-btn'))
             };
         }
 
@@ -183,49 +169,6 @@
                     this.closeModal();
                 }
             });
-        }
-
-        // ---- MAP --------------------------------------------------------
-
-        bindMap() {
-            const { mapToggle, mapWrap } = this.els;
-            if (!mapToggle || !mapWrap) return;
-
-            mapToggle.addEventListener('click', () => {
-                this.mapVisible = !this.mapVisible;
-                mapWrap.hidden = !this.mapVisible;
-                mapToggle.setAttribute('aria-expanded', String(this.mapVisible));
-                mapToggle.classList.toggle('open', this.mapVisible);
-
-                const label = mapToggle.querySelector('.fc-map-toggle-label');
-                if (label) {
-                    label.textContent = this.mapVisible ? 'Hide Route Map' : 'Show Route Map';
-                }
-
-                if (this.mapVisible) {
-                    this.initMap();
-                    // Leaflet needs a tick when the container becomes visible.
-                    window.setTimeout(() => {
-                        if (this.map) this.map.invalidateSize();
-                        this.renderMap(this.getFilteredRoutes());
-                    }, 60);
-                }
-            });
-        }
-
-        initMap() {
-            if (this.map || !this.els.mapInner) return;
-            if (!window.CPASLeaflet) return;
-
-            this.map = window.CPASLeaflet.createMap(this.els.mapInner, {
-                center: NZ_CENTER,
-                zoom: NZ_ZOOM,
-                scrollWheelZoom: true
-            });
-
-            if (!this.map) return;
-
-            this.mapRouteLayer = window.CPASLeaflet.createLayerGroup(this.map);
         }
 
         // ---- MAP DATA HELPERS -------------------------------------------
@@ -328,190 +271,6 @@
             }
         }
 
-        // ---- MAP DRAWING ------------------------------------------------
-
-        // Draw every route in the given list. Clears previous layers.
-        renderMap(routes) {
-            if (!this.map || !this.mapRouteLayer) return;
-
-            const CL = window.CPASLeaflet;
-            if (!CL) return;
-
-            this.mapRouteLayer.clearLayers();
-            this.mapRouteLayers = {};
-            this.mapMarkerLayers = {};
-            this.highlightedKey = null;
-
-            const bounds = [];
-            const endpoints = new Set();   // airfields routes start/end/stop at
-            const alternates = new Set();  // airfields only named as alternates / optional stops
-
-            routes.forEach(r => {
-                this.referencedCodes(r).forEach(c => {
-                    if (this.airports[c]) alternates.add(c);
-                });
-
-                const geo = this.resolveRoute(r);
-                if (!geo) return;
-
-                const color = DIFFICULTY_COLORS[r.difficulty] || DIFFICULTY_COLORS[3];
-                let layer;
-
-                if (geo.kind === 'path') {
-                    const legs = geo.segments.map(([a, b]) => [
-                        [this.airports[a].lat, this.airports[a].lon],
-                        [this.airports[b].lat, this.airports[b].lon]
-                    ]);
-
-                    layer = CL.drawRoute(this.map, legs, {
-                        color: color,
-                        group: this.mapRouteLayer
-                    });
-                } else {
-                    // Round trip from a base: dashed ring around the base airfield.
-                    const base = geo.stops[0];
-                    const airport = this.airports[base];
-
-                    layer = CL.drawLoop(this.map, [airport.lat, airport.lon], {
-                        color: color,
-                        group: this.mapRouteLayer
-                    });
-
-                    if (layer) {
-                        layer.bindTooltip(
-                            `<strong>${this.escape(r.to_name || airport.name || base)}</strong><br>` +
-                            `${this.escape(r._categoryLabel)} · round trip from ${this.escape(base)}`,
-                            { direction: 'top', offset: [0, -10], sticky: true }
-                        );
-                    }
-                }
-
-                if (!layer) return;
-
-                layer._cpasKey = r._key;
-                layer.on('mouseover', () => {
-                    this.styleLayer(layer, true);
-                    this.highlightCard(r._key, true);
-                });
-                layer.on('mouseout', () => {
-                    this.styleLayer(layer, this.highlightedKey === r._key);
-                    this.highlightCard(r._key, false);
-                });
-                layer.on('click', () => this.focusCard(r._key));
-
-                this.mapRouteLayers[r._key] = layer;
-
-                geo.stops.forEach(c => endpoints.add(c));
-            });
-
-            // Markers are added last so they sit on top of the lines and rings.
-            endpoints.forEach(code => this.ensureMarker(code, bounds, false));
-            alternates.forEach(code => {
-                if (!endpoints.has(code)) this.ensureMarker(code, bounds, true);
-            });
-
-            // Fit map to the visible routes if any are shown.
-            if (bounds.length > 0) {
-                try {
-                    this.map.fitBounds(bounds, { padding: [30, 30], maxZoom: 9 });
-                } catch (e) { /* ignore */ }
-            }
-        }
-
-        // Solid navy dot = airfield a route flies to/from.
-        // Hollow dot     = alternate or optional stop named in a route (doesn't affect map bounds).
-        ensureMarker(icao, bounds, isAlternate) {
-            const airport = this.airports[icao];
-            if (!airport || !window.CPASLeaflet) return;
-
-            if (!isAlternate) bounds.push([airport.lat, airport.lon]);
-
-            if (this.mapMarkerLayers[icao]) return;
-
-            const marker = window.CPASLeaflet.drawAirportMarker(
-                this.map,
-                [airport.lat, airport.lon],
-                { alternate: isAlternate, group: this.mapRouteLayer }
-            );
-            if (!marker) return;
-
-            marker.bindTooltip(
-                `<strong>${this.escape(icao)}</strong><br>${this.escape(airport.name || '')}` +
-                (isAlternate ? '<br><em>Alternate / optional stop</em>' : ''),
-                { direction: 'top', offset: [0, -6] }
-            );
-
-            this.mapMarkerLayers[icao] = marker;
-        }
-
-        styleLayer(layer, on) {
-            if (!layer) return;
-            layer.setStyle(on ? { weight: 6, opacity: 1 } : { weight: 3, opacity: 0.75 });
-        }
-
-        // Highlight a single route on the map (used from card hover / click).
-        highlightOnMap(key) {
-            if (!this.map) return;
-
-            // Reset any previous highlight.
-            if (this.highlightedKey && this.mapRouteLayers[this.highlightedKey]) {
-                const prev = this.mapRouteLayers[this.highlightedKey];
-                this.styleLayer(prev, false);
-                if (prev.bringToFront) prev.bringToFront();
-            }
-
-            const layer = this.mapRouteLayers[key];
-            if (!layer) {
-                this.highlightedKey = null;
-                return;
-            }
-
-            this.styleLayer(layer, true);
-            if (layer.bringToFront) layer.bringToFront();
-            this.highlightedKey = key;
-
-            // Pan the map to the highlighted route.
-            if (layer.getBounds) {
-                this.map.fitBounds(layer.getBounds(), {
-                    padding: [60, 60],
-                    maxZoom: 9,
-                    animate: true
-                });
-            } else if (layer.getLatLng) {
-                this.map.panTo(layer.getLatLng(), { animate: true });
-            }
-        }
-
-        clearHighlight() {
-            if (!this.map) return;
-            if (this.highlightedKey && this.mapRouteLayers[this.highlightedKey]) {
-                this.styleLayer(this.mapRouteLayers[this.highlightedKey], false);
-            }
-            this.highlightedKey = null;
-        }
-
-        // Toggle the matching card's "highlighted" class.
-        highlightCard(key, on) {
-            if (!this.els.results) return;
-            const card = this.els.results.querySelector(`.fc-card[data-key="${this.cssEscape(key)}"]`);
-            if (card) card.classList.toggle('is-highlighted', !!on);
-        }
-
-        // Scroll card into view and mark it as highlighted (used when a line is clicked).
-        focusCard(key) {
-            if (!this.els.results) return;
-            const card = this.els.results.querySelector(`.fc-card[data-key="${this.cssEscape(key)}"]`);
-            if (!card) return;
-
-            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            card.classList.add('is-highlighted');
-            window.setTimeout(() => card.classList.remove('is-highlighted'), 1800);
-        }
-
-        cssEscape(str) {
-            return String(str).replace(/([^\w-])/g, '\\$1');
-        }
-
         // ---- FILTERS / RESULTS ------------------------------------------
 
         readFilters() {
@@ -601,11 +360,6 @@
             this.renderCount(filtered);
             this.renderPagination(filtered);
             this.toggleEmptyState(filtered);
-
-            // Keep the map in sync when it's open.
-            if (this.mapVisible && this.map) {
-                this.renderMap(filtered);
-            }
         }
 
         renderResults(filtered) {
@@ -638,26 +392,6 @@
                     const key = btn.getAttribute('data-map-key');
                     const route = this.allRoutes.find(x => x._key === key);
                     if (route) this.openRouteMapModal(route);
-                });
-            });
-
-            // Card -> map interactivity: hover highlights, click focuses.
-            this.els.results.querySelectorAll('.fc-card').forEach(cardEl => {
-                const key = cardEl.getAttribute('data-key');
-                if (!key) return;
-
-                cardEl.addEventListener('mouseenter', () => {
-                    if (this.mapVisible && this.map) this.highlightOnMap(key);
-                });
-
-                cardEl.addEventListener('mouseleave', () => {
-                    if (this.mapVisible && this.map) this.clearHighlight();
-                });
-
-                cardEl.addEventListener('click', (e) => {
-                    // Ignore clicks on internal buttons/links.
-                    if (e.target.closest('button, a')) return;
-                    if (this.mapVisible && this.map) this.highlightOnMap(key);
                 });
             });
         }
