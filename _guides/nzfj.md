@@ -18,21 +18,21 @@ region:
 
 ## Overview
 
-Franz Josef is a small aerodrome on the West Coast, right at the foot of the Franz Josef Glacier. It is primarily used by helicopter and fixed-wing scenic operators.
+Franz Josef is a small aerodrome on the West Coast, right at the foot of the Franz Josef Glacier. It is primarily used by helicopter and fixed-wing scenic operators. Prior approval and a briefing are required.
 
 {% include region_map.html %}
 
 ## Runways
 
-| Designator | Length | Surface | Notes              |
-| ---------- | ------ | ------- | ------------------ |
-| 10/28      | 801 m  | Grass   | Scenic operations. |
+| Designator | Length | Surface | Notes                                           |
+| ---------- | ------ | ------- | ----------------------------------------------- |
+| 10/28      | 801 m  | Grass   | Scenic operations. Slope: down on 28, up on 10. |
 
 ## Frequencies
 
-| Service | Frequency | Notes             |
-| ------- | --------- | ----------------- |
-| CTAF    | 123.1     | West Coast common |
+| Service | Frequency | Notes                         |
+| ------- | --------- | ----------------------------- |
+| MBZ     | 118.6     | Mount Cook MBZ (Alps Traffic) |
 
 ## Elevation
 
@@ -40,14 +40,19 @@ Franz Josef is a small aerodrome on the West Coast, right at the foot of the Fra
 
 ## Local Procedures
 
+- **Prior approval and briefing required.**
 - Heavy scenic and helicopter traffic.
+- **Circuit:** Right-hand on 28, staying west of Canavan Knob for the heliport 4.5 NM SE.
+- **Joining:** From the west.
 - Alpine weather can close the field quickly.
+- Skydiving operations.
 
 ## Hazards
 
 - Glacier outflow winds.
 - Rapid weather change.
 - High traffic density in summer.
+- Soft grass.
 
 ## Recommended Approaches
 

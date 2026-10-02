@@ -24,16 +24,15 @@ Motueka is a small aerodrome on the shore of Tasman Bay, serving the town and ac
 
 ## Runways
 
-| Designator | Length | Surface | Notes     |
-| ---------- | ------ | ------- | --------- |
-| 02/20      | 781 m  | Asphalt |           |
-| 02R/20L    | 733 m  | Grass   | Parallel. |
+| Designator | Length | Surface | Notes |
+| ---------- | ------ | ------- | ----- |
+| 02/20      | 732 m  | Grass   |       |
 
 ## Frequencies
 
-| Service | Frequency | Notes |
-| ------- | --------- | ----- |
-| CTAF    | 118.1     |       |
+| Service   | Frequency | Notes                      |
+| --------- | --------- | -------------------------- |
+| MBZ / CFZ | 127.3     | Motueka MBZ and Tasman CFZ |
 
 ## Elevation
 
@@ -42,11 +41,14 @@ Motueka is a small aerodrome on the shore of Tasman Bay, serving the town and ac
 ## Local Procedures
 
 - Coastal VFR standard.
+- **Heavy skydiving:** No overhead joins while jumping.
+- **Nelson Tower:** 127.4.
 
 ## Hazards
 
 - Sea breeze.
 - High scenic traffic.
+- Skydiving.
 
 ## Recommended Approaches
 

@@ -27,13 +27,16 @@ Nelson is the main airport at the top of the South Island. It serves the Tasman 
 | Designator | Length  | Surface | Notes      |
 | ---------- | ------- | ------- | ---------- |
 | 02/20      | 1,347 m | Asphalt | Primary.   |
-| 17/35      | 584 m   | Grass   | Secondary. |
+| 02L/20R    | 584 m   | Grass   | Secondary. |
+| 06/24      | 600 m   | Grass   |            |
+| 17/35      | 584 m   | Grass   |            |
 
 ## Frequencies
 
 | Service  | Frequency | Notes           |
 | -------- | --------- | --------------- |
 | ATIS     | 129.1     |                 |
+| Delivery | 123.3     |                 |
 | Tower    | 127.4     | Nelson Tower    |
 | Approach | 127.4     | Nelson Approach |
 
@@ -45,6 +48,7 @@ Nelson is the main airport at the top of the South Island. It serves the Tasman 
 
 - **CTR:** Class D. Prior approval required for transitions.
 - **VFR routes:** Abel Tasman coast and Wairau Valley are common.
+- **Brightwater transit lane T653** and published VFR departures.
 - **Noise:** Sensitive areas to the south of the field.
 
 ## Hazards

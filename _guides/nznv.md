@@ -18,25 +18,27 @@ region:
 
 ## Overview
 
-Invercargill is the southernmost city airport in New Zealand, serving Southland and as the staging point for Stewart Island and southern Fiordland.
+Invercargill is the southernmost city airport in New Zealand, serving Southland and as the staging point for Stewart Island and southern Fiordland. Tower hours are approximately 0500–2030 local (Todo: verify).
 
 {% include region_map.html %}
 
 ## Runways
 
-| Designator | Length  | Surface | Notes                      |
-| ---------- | ------- | ------- | -------------------------- |
-| 04/22      | 2,210 m | Asphalt | Primary. ILS on both ends. |
-| 04R/22L    | 695 m   | Grass   | Parallel.                  |
-| 07/25      | 426 m   | Grass   | Crosswind.                 |
-| 12/30      | 913 m   | Grass   |                            |
+| Designator | Length  | Surface | Notes                                         |
+| ---------- | ------- | ------- | --------------------------------------------- |
+| 04/22      | 2,210 m | Asphalt | Primary. VOR/DME approaches (ILS unverified). |
+| 04R/22L    | 695 m   | Grass   | Parallel.                                     |
+| 07/25      | 426 m   | Grass   | Crosswind.                                    |
+| 12/30      | 913 m   | Grass   |                                               |
 
 ## Frequencies
 
-| Service | Frequency | Notes              |
-| ------- | --------- | ------------------ |
-| ATIS    | 127.0     |                    |
-| Tower   | 118.5     | Invercargill Tower |
+| Service              | Frequency | Notes              |
+| -------------------- | --------- | ------------------ |
+| ATIS                 | 127.0     |                    |
+| Tower                | 118.5     | Invercargill Tower |
+| Approach             | 122.4     | Secondary          |
+| Christchurch Control | 129.3     | Area FIS           |
 
 ## Elevation
 
@@ -55,7 +57,7 @@ Invercargill is the southernmost city airport in New Zealand, serving Southland 
 
 ## Recommended Approaches
 
-- **ILS 04 / 22:** Preferred IFR.
+- **VOR/DME 04 / 22:** Preferred IFR.
 - **Visual:** Straight-in.
 
 ## Nearby Airfields

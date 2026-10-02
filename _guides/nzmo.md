@@ -26,13 +26,15 @@ Te Anau / Manapouri is the primary aerodrome for Fiordland, sitting on the easte
 
 | Designator | Length  | Surface | Notes    |
 | ---------- | ------- | ------- | -------- |
-| 08/26      | 1,081 m | Asphalt | Primary. |
+| 08/26      | 1,593 m | Asphalt | Primary. |
+| 14/32      | 968 m   | Grass   |          |
 
 ## Frequencies
 
-| Service     | Frequency | Notes     |
-| ----------- | --------- | --------- |
-| CTAF / AFIS | 119.1     | Manapouri |
+| Service                | Frequency | Notes     |
+| ---------------------- | --------- | --------- |
+| CTAF / AFIS            | 119.1     | Manapouri |
+| Queenstown Information | 128.9     | Area FIS  |
 
 ## Elevation
 
@@ -41,7 +43,7 @@ Te Anau / Manapouri is the primary aerodrome for Fiordland, sitting on the easte
 ## Local Procedures
 
 - Fiordland National Park overflight rules apply.
-- Mountain radio 130.6 for area broadcasts.
+- Landing lights and strobes required throughout the Fiordland CFZ.
 
 ## Hazards
 

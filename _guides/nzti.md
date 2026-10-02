@@ -31,9 +31,10 @@ Taieri is a small aerodrome on the Taieri Plain just west of Dunedin, home to th
 
 ## Frequencies
 
-| Service | Frequency | Notes |
-| ------- | --------- | ----- |
-| CTAF    | 118.1     |       |
+| Service | Frequency | Notes                     |
+| ------- | --------- | ------------------------- |
+| CTAF    | 119.1     | On watch                  |
+| CTAF    | 120.7     | Off watch (Dunedin Tower) |
 
 ## Elevation
 

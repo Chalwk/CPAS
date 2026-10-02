@@ -24,10 +24,10 @@ Timaru is a regional aerodrome on the South Canterbury coast. It is a common tra
 
 ## Runways
 
-| Designator | Length  | Surface | Notes      |
-| ---------- | ------- | ------- | ---------- |
-| 02/20      | 1,280 m | Asphalt | Primary.   |
-| 11/29      | 1,113 m | Grass   | Crosswind. |
+| Designator | Length  | Surface | Notes                                                          |
+| ---------- | ------- | ------- | -------------------------------------------------------------- |
+| 02/20      | 1,188 m | Grass   | Primary (Todo: verify - previously listed as 1,280 m asphalt). |
+| 11/29      | 1,113 m | Grass   | Crosswind.                                                     |
 
 ## Frequencies
 

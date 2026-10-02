@@ -24,16 +24,15 @@ Kaikoura is a small coastal aerodrome on the east coast of the South Island, nes
 
 ## Runways
 
-| Designator | Length | Surface | Notes     |
-| ---------- | ------ | ------- | --------- |
-| 05/23      | 700 m  | Bitumen |           |
-| 05L/23R    | 615 m  | Grass   | Parallel. |
+| Designator | Length | Surface | Notes |
+| ---------- | ------ | ------- | ----- |
+| 05/23      | 614 m  | Grass   |       |
 
 ## Frequencies
 
-| Service | Frequency | Notes |
-| ------- | --------- | ----- |
-| CTAF    | 119.5     |       |
+| Service | Frequency | Notes        |
+| ------- | --------- | ------------ |
+| MBZ     | 124.9     | Kaikoura MBZ |
 
 ## Elevation
 
@@ -41,7 +40,9 @@ Kaikoura is a small coastal aerodrome on the east coast of the South Island, nes
 
 ## Local Procedures
 
-- Coastal VFR corridor along the peninsula.
+- **Left-hand circuits only.**
+- **Overhead join advised.**
+- **Whale-watch MOU:** Private pilots must be briefed by Wings Over Whales or Air Kaikōura Aero Club.
 
 ## Hazards
 

@@ -24,21 +24,23 @@ Christchurch International is the primary CPAS base and the busiest airport on t
 
 ## Runways
 
-| Designator | Length  | Surface | Notes                              |
-| ---------- | ------- | ------- | ---------------------------------- |
-| 02/20      | 3,288 m | Asphalt | Main jet runway. ILS on both ends. |
-| 11/29      | 1,703 m | Asphalt | Crosswind runway, used by GA.      |
+| Designator | Length  | Surface | Notes                                              |
+| ---------- | ------- | ------- | -------------------------------------------------- |
+| 02/20      | 3,288 m | Asphalt | Main jet runway. ILS on both ends.                 |
+| 11/29      | 1,703 m | Asphalt | Crosswind runway, used by GA. RNP approaches only. |
+| 02/20      | 515 m   | Grass   | Canterbury Aero Club circuit runway.               |
 
 ## Frequencies
 
-| Service                  | Frequency | Notes                             |
-| ------------------------ | --------- | --------------------------------- |
-| ATIS                     | 127.2     |                                   |
-| Delivery                 | 128.2     | IFR clearances                    |
-| Ground                   | 121.9     |                                   |
-| Tower                    | 118.4     |                                   |
-| Approach                 | 120.9     | Christchurch Approach / Departure |
-| Christchurch Information | 129.3     | FIS for the wider area            |
+| Service  | Frequency | Notes                                   |
+| -------- | --------- | --------------------------------------- |
+| ATIS     | 127.2     |                                         |
+| Delivery | 128.2     | IFR clearances                          |
+| Ground   | 121.9     |                                         |
+| Tower    | 118.4     | Also 128.9 (secondary)                  |
+| Approach | 126.1     | Primary Christchurch Approach/Departure |
+| Approach | 124.1     | Secondary                               |
+| Approach | 120.9     | Christchurch Approach / Departure       |
 
 ## Elevation
 
@@ -48,12 +50,13 @@ Christchurch International is the primary CPAS base and the busiest airport on t
 
 - **GA parking:** Canterbury Aero Club (CAC) apron is the main GA hub.
 - **VFR departures:** Expect a clearance to track via the Waimakariri River or the coast.
-- **Noise abatement:** Prefer Runway 02 for easterly operations when able.
-- **Port Hills transition:** Use CTAF 123.1 in the Port Hills area but remain inside the CTR if cleared.
+- **Noise abatement:** Prefer Runway 02 for easterly operations when able (Todo: verify - easterlies typically favour 11/29).
+- **Circuit directions:** Runways 20 and 29 use right-hand circuits.
+- **Port Hills transition:** Remain inside the CTR if cleared; contact ATC. Do not use CTAF while inside Class C airspace.
 
 ## Hazards
 
-- Strong nor'wester crosswind on 11/29.
+- Strong nor'wester crosswind on 02/20 (not 11/29, which is aligned with nor'westers).
 - Airline wake turbulence on 02/20.
 - Downwind turbulence over the Port Hills in a nor'wester.
 - Frequent low-level agricultural aircraft to the south-west.
@@ -62,7 +65,7 @@ Christchurch International is the primary CPAS base and the busiest airport on t
 
 - **Runway 02 (ILS):** From the south-west over the suburbs - expect vectoring.
 - **Runway 20 (ILS):** Straight-in from the north-east over Pegasus Bay, minimal terrain.
-- **Runway 11/29:** VFR circuit joins, watch for helicopter traffic.
+- **Runway 11/29:** VFR circuit joins, watch for helicopter traffic. RNP approaches only.
 
 ## Nearby Airfields
 

@@ -18,7 +18,7 @@ region:
 
 ## Overview
 
-Dunedin International sits on the Taieri Plain, about 12 NM (22 km) south-west of Dunedin city. It is the main gateway to Otago and the lower South Island.
+Dunedin International sits on the Taieri Plain, about 12 NM (22 km) south-west of Dunedin city. It is the main gateway to Otago and the lower South Island. Tower hours are approximately 0630–2130 local (Todo: verify).
 
 {% include region_map.html %}
 
@@ -30,11 +30,13 @@ Dunedin International sits on the Taieri Plain, about 12 NM (22 km) south-west o
 
 ## Frequencies
 
-| Service  | Frequency | Notes            |
-| -------- | --------- | ---------------- |
-| ATIS     | 128.8     |                  |
-| Tower    | 120.7     | Dunedin Tower    |
-| Approach | 120.7     | Dunedin Approach |
+| Service              | Frequency | Notes            |
+| -------------------- | --------- | ---------------- |
+| ATIS                 | 128.8     |                  |
+| Tower                | 120.7     | Dunedin Tower    |
+| Approach             | 120.7     | Dunedin Approach |
+| Approach             | 122.4     | Secondary        |
+| Christchurch Control | 129.3     | Area FIS         |
 
 ## Elevation
 
@@ -42,7 +44,8 @@ Dunedin International sits on the Taieri Plain, about 12 NM (22 km) south-west o
 
 ## Local Procedures
 
-- **CTR:** Class C. Transitions require clearance.
+- **CTR:** Transitions require clearance. (Class C unverified.)
+- **Circuit:** Right-hand traffic on 21.
 - Taieri (NZTI) is nearby and shares some airspace.
 
 ## Hazards

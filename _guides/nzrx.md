@@ -30,9 +30,9 @@ Roxburgh is a small grass strip serving the Teviot Valley community and the Roxb
 
 ## Frequencies
 
-| Service | Frequency | Notes |
-| ------- | --------- | ----- |
-| CTAF    | 118.1     |       |
+| Service | Frequency | Notes                                       |
+| ------- | --------- | ------------------------------------------- |
+| CTAF    | 119.1     | (Todo: verify - previously listed as 118.1) |
 
 ## Elevation
 

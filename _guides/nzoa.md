@@ -31,9 +31,11 @@ Omarama is a small aerodrome at the southern end of the Mackenzie Basin, world-f
 
 ## Frequencies
 
-| Service | Frequency | Notes |
-| ------- | --------- | ----- |
-| CTAF    | 123.1     |       |
+| Service | Frequency | Notes          |
+| ------- | --------- | -------------- |
+| CTAF    | 119.1     | (Todo: verify) |
+| Glider  | 133.55    |                |
+| Glider  | 134.0     |                |
 
 ## Elevation
 

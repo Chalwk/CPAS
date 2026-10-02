@@ -3,7 +3,7 @@ title: Glenorchy
 icao: NZGY
 category: airport
 permalink: /guides/nzgy/
-description: "Remote grass strip at the head of Lake Wakatipu."
+description: "Remote grass strip at the head of Lake Wakatipu. Operated by Queenstown Airport Corporation."
 icon: fa-mountain
 region:
   center: [-44.87, 168.40]
@@ -18,7 +18,7 @@ region:
 
 ## Overview
 
-Glenorchy is a small, private grass strip at the northern end of Lake Wakatipu. It is used by local operators and is a beautiful alternative to Queenstown.
+Glenorchy is a small grass strip at the northern end of Lake Wakatipu. It is operated by Queenstown Airport Corporation and is a beautiful alternative to Queenstown.
 
 {% include region_map.html %}
 
@@ -30,9 +30,9 @@ Glenorchy is a small, private grass strip at the northern end of Lake Wakatipu. 
 
 ## Frequencies
 
-| Service | Frequency | Notes |
-| ------- | --------- | ----- |
-| CTAF    | 122.9     |       |
+| Service | Frequency | Notes         |
+| ------- | --------- | ------------- |
+| CTAF    | 119.2     | Fiordland CFZ |
 
 ## Elevation
 
@@ -40,7 +40,7 @@ Glenorchy is a small, private grass strip at the northern end of Lake Wakatipu. 
 
 ## Local Procedures
 
-- Prior permission required (private).
+- Operated by Queenstown Airport Corporation. Prior permission not required.
 
 ## Hazards
 

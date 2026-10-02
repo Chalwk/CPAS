@@ -3,7 +3,7 @@ title: Pukaki
 icao: NZUK
 category: airport
 permalink: /guides/nzuk/
-description: "Sealed Mackenzie Basin strip near Twizel, just south of Lake Pukaki."
+description: "Mackenzie Basin strip near Twizel, just south of Lake Pukaki."
 icon: fa-water
 region:
   center: [-44.24, 170.12]
@@ -18,15 +18,15 @@ region:
 
 ## Overview
 
-Pukaki is a small sealed strip near Twizel, a few miles south of the glacial Lake Pukaki. It is a useful alternative or stopover on the route into Mount Cook.
+Pukaki is a small strip near Twizel, a few miles south of the glacial Lake Pukaki. It is a useful alternative or stopover on the route into Mount Cook. The Helicopter Line has a seasonal Twizel base here.
 
 {% include region_map.html %}
 
 ## Runways
 
-| Designator | Length  | Surface | Notes        |
-| ---------- | ------- | ------- | ------------ |
-| 15/33      | 1,082 m | Asphalt | Near Twizel. |
+| Designator | Length  | Surface | Notes                                       |
+| ---------- | ------- | ------- | ------------------------------------------- |
+| 15/33      | 1,529 m | Grass   | Near Twizel. Grass can be soft during thaw. |
 
 ## Frequencies
 
@@ -42,11 +42,13 @@ Pukaki is a small sealed strip near Twizel, a few miles south of the glacial Lak
 ## Local Procedures
 
 - Alpine conditions; watch for glider activity.
+- The Helicopter Line seasonal Twizel base.
 
 ## Hazards
 
 - Lake outflow winds.
 - Mountain terrain close to the north.
+- Soft grass during thaw.
 
 ## Recommended Approaches
 

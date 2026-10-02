@@ -27,8 +27,8 @@ Woodbourne is a joint civil/military aerodrome serving Blenheim and the Marlboro
 | Designator | Length  | Surface | Notes      |
 | ---------- | ------- | ------- | ---------- |
 | 06/24      | 1,425 m | Asphalt | Primary.   |
-| 10/28      | 1,182 m | Grass   | Secondary. |
-| 16/34      | 900 m   | Grass   | Crosswind. |
+| 06L/24R    | 1,182 m | Grass   | Secondary. |
+| 10/28      | 900 m   | Grass   | Crosswind. |
 
 ## Frequencies
 
@@ -36,6 +36,7 @@ Woodbourne is a joint civil/military aerodrome serving Blenheim and the Marlboro
 | -------- | --------- | ---------------- |
 | ATIS     | 126.05    |                  |
 | Tower    | 122.8     | Woodbourne Tower |
+| Tower    | 118.1     | Secondary        |
 | Approach | 122.3     |                  |
 
 ## Elevation
@@ -45,8 +46,10 @@ Woodbourne is a joint civil/military aerodrome serving Blenheim and the Marlboro
 ## Local Procedures
 
 - **Military traffic:** RNZAF operates from Woodbourne - expect military movements.
-- **CTR:** Class D. VFR transitions require clearance.
+- **CTR:** Class D to 3,500 ft. VFR transitions require clearance.
+- **Circuits:** Left for 06 and 10, right for 24 and 28.
 - **Sounds routes:** Standard scenic corridors to the north via Queen Charlotte Sound.
+- **Omaka transit lane T654** just south.
 
 ## Hazards
 

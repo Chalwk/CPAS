@@ -31,9 +31,9 @@ Oamaru is a small aerodrome on the North Otago coast, serving the town of Oamaru
 
 ## Frequencies
 
-| Service | Frequency | Notes  |
-| ------- | --------- | ------ |
-| CTAF    | 119.1     | Oamaru |
+| Service | Frequency | Notes          |
+| ------- | --------- | -------------- |
+| CTAF    | 120.55    | (Todo: verify) |
 
 ## Elevation
 
@@ -41,7 +41,7 @@ Oamaru is a small aerodrome on the North Otago coast, serving the town of Oamaru
 
 ## Local Procedures
 
-- **CTAF:** 119.1 within the zone.
+- **CTAF:** 120.55 within the zone (Todo: verify).
 - Coastal VFR standard.
 
 ## Hazards

@@ -20,13 +20,13 @@ region:
 
 ## Overview
 
-The Mount Cook valley runs north from Lake Pukaki into the heart of the Aoraki/Mount Cook National Park. It contains New Zealand's highest mountain and two of its largest glaciers. The airspace is a Mount Cook Flight Information Zone (FIZ) with no ATC.
+The Mount Cook valley runs north from Lake Pukaki into the heart of the Aoraki/Mount Cook National Park. It contains New Zealand's highest mountain and two of its largest glaciers. The airspace is within the Southern Alps Mandatory Broadcast Zone (MBZ) with no ATC.
 
 {% include region_map.html %}
 
 ## Route
 
-1. Approach from the south - either from [Omarama (NZOA)](/guides/nzoa/) or [Pukaki (NZUK)](/guides/nzuk/).
+1. Approach from the south - either from [Omarama (NZOA)](/guides/nzoa/) or [Pukaki (NZUK)](/guides/nzuk/). Other entry points: Tekapo, Godley Valley, Burkes Pass, Landsborough.
 2. Fly north along the eastern shore of **Lake Pukaki**.
 3. Overfly **Glentanner Station (NZGT)** and the **Tasman River** mouth.
 4. Continue into the **Tasman Valley** (east side) or **Hooker Valley** (west side).
@@ -40,34 +40,42 @@ The Mount Cook valley runs north from Lake Pukaki into the heart of the Aoraki/M
 - **Mount Cook Airport (NZMC)** - valley base.
 - **Tasman Terminal** - glacier lake viewpoint.
 - **Hooker Valley** - Aoraki viewpoint.
+- **Rotten Tommy**
+- **Round Hill**
+- **Gorilla Stream**
+- **Darwin Corner**
+- **Beetham**
+- **Malte Brun Corner**
 
 ## Minimum Altitudes
 
 - **2,000 ft AGL** minimum over national park land.
-- **Mount Cook FIZ (Alps Traffic):** 118.6 within 10 NM.
+- **Local operator agreement (DOC):** Do not fly below 6,000 ft around the Hermitage or below 8,000 ft in the Mueller and Hooker valleys. Avoid the summit area. Itinerant pilots are expected to respect this.
+- **MBZ (Alps Traffic):** 118.6. Calls required on entry and at least every 15 minutes.
 - **One-way valley traffic** - keep to the right-hand side of the valley: eastern side northbound, western side southbound.
 
 ## Frequencies
 
-| Service                       | Frequency |
-| ----------------------------- | --------- |
-| Mount Cook FIZ (Alps Traffic) | 118.6     |
-| Area / Mountain radio         | 130.6     |
-| Christchurch Information      | 123.5     |
+| Service                  | Frequency                    |
+| ------------------------ | ---------------------------- |
+| MBZ (Alps Traffic)       | 118.6                        |
+| Christchurch Information | 123.5                        |
+| Ohau QNH                 | Via Christchurch Information |
 
 ## Hazards
 
 - **High density altitude** - Mount Cook Airport is 2,153 ft AMSL, and density altitude in summer reaches 4,000 ft+.
 - **Katabatic winds** off the Tasman and Hooker glaciers.
 - **Mountain wave** - the Mount Cook area is notorious.
-- High scenic traffic - helicopters, fixed-wing, and gliders.
+- **High scenic traffic** - helicopters, fixed-wing, and gliders. Peak traffic about 30 aircraft from 10am to 3pm, November to April.
+- **Army live-firing danger areas D926 to D928** between Pukaki and Tekapo.
 - The valley is a trap - the only way out is the way you came in.
 
 ## Tips
 
 - Reduce payload for high-altitude operations.
-- Check the Mount Cook FIZ frequency before entering.
-- Do not descend below 2,000 ft AGL over the park.
+- Check the MBZ frequency before entering.
+- Do not descend below 2,000 ft AGL over the park (and observe the higher local operator agreements).
 - Never fly into cloud in the valley - turn back.
 
 ## Related Guides

@@ -30,10 +30,9 @@ Greymouth is a small regional aerodrome on the West Coast, serving the Grey Dist
 
 ## Frequencies
 
-| Service                  | Frequency | Notes                             |
-| ------------------------ | --------- | --------------------------------- |
-| CTAF / FIZ               | 122.7     | Greymouth Flight Information Zone |
-| Christchurch Information | 118.7     | Area FIS                          |
+| Service                  | Frequency | Notes    |
+| ------------------------ | --------- | -------- |
+| Christchurch Information | 118.7     | Area FIS |
 
 ## Elevation
 
@@ -41,7 +40,6 @@ Greymouth is a small regional aerodrome on the West Coast, serving the Grey Dist
 
 ## Local Procedures
 
-- **FIZ:** Mandatory frequency 122.7 within the FIZ.
 - **Coastal VFR:** Follow SH6 for the standard coastal corridor.
 
 ## Hazards

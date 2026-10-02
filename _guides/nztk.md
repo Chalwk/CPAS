@@ -33,7 +33,7 @@ Takaka is a small aerodrome serving Golden Bay and the town of Takaka. It requir
 
 | Service | Frequency | Notes |
 | ------- | --------- | ----- |
-| CTAF    | 118.1     |       |
+| CTAF    | 119.1     |       |
 
 ## Elevation
 
@@ -42,6 +42,8 @@ Takaka is a small aerodrome serving Golden Bay and the town of Takaka. It requir
 ## Local Procedures
 
 - Takaka Hill crossing requires care - the road summit is about 2,600 ft; cross at 4,000 ft MSL or higher.
+- **Farewell Spit restricted area NZR601:** Above 2,000 ft.
+- **Flights direct to Karamea or Westport:** Require 6,500 ft or more.
 
 ## Hazards
 

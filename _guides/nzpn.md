@@ -3,7 +3,7 @@ title: Picton
 icao: NZPN
 category: airport
 permalink: /guides/nzpn/
-description: "Small Marlborough aerodrome at the head of Queen Charlotte Sound."
+description: "Small Marlborough aerodrome at the head of Queen Charlotte Sound. Owned by Sounds Air."
 icon: fa-water
 region:
   center: [-41.35, 173.96]
@@ -18,7 +18,7 @@ region:
 
 ## Overview
 
-Picton (Koromiko) is a small aerodrome serving the Picton township and the Marlborough Sounds. It sits in a valley with limited options for go-arounds, making it suitable only for competent pilots.
+Picton (Koromiko) is a small aerodrome serving the Picton township and the Marlborough Sounds. It sits in a valley with limited options for go-arounds. Owned by Sounds Air and requires prior approval.
 
 {% include region_map.html %}
 
@@ -26,13 +26,13 @@ Picton (Koromiko) is a small aerodrome serving the Picton township and the Marlb
 
 | Designator | Length | Surface | Notes                                  |
 | ---------- | ------ | ------- | -------------------------------------- |
-| 18/36      | 840 m  | Asphalt | Short, one-way operations recommended. |
+| 18/36      | 779 m  | Asphalt | Short, one-way operations recommended. |
 
 ## Frequencies
 
-| Service | Frequency | Notes |
-| ------- | --------- | ----- |
-| CTAF    | 118.1     |       |
+| Service | Frequency | Notes                  |
+| ------- | --------- | ---------------------- |
+| CFZ     | 123.0     | Marlborough Sounds CFZ |
 
 ## Elevation
 
@@ -40,8 +40,10 @@ Picton (Koromiko) is a small aerodrome serving the Picton township and the Marlb
 
 ## Local Procedures
 
+- **Prior approval required** (owned by Sounds Air).
 - **One-way operations:** Runway 36 preferred for landing (uphill).
 - **Departures:** Runway 18 (downhill) preferred.
+- **No simultaneous operations:** Landings and takeoffs cannot happen at the same time as apron operations at the north end.
 - **No go-around:** Terrain at the southern end limits go-around options - commit only with stable approach.
 
 ## Hazards

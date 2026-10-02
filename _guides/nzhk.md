@@ -24,10 +24,10 @@ Hokitika is the main West Coast airport, sitting between the Tasman Sea and the 
 
 ## Runways
 
-| Designator | Length  | Surface | Notes      |
-| ---------- | ------- | ------- | ---------- |
-| 03/21      | 1,314 m | Asphalt | Primary.   |
-| 12/30      | 1,176 m | Asphalt | Secondary. |
+| Designator | Length  | Surface | Notes                                                         |
+| ---------- | ------- | ------- | ------------------------------------------------------------- |
+| 03/21      | 1,314 m | Asphalt | Primary. (Todo: Verify designator - some sources say 04/22)   |
+| 12/30      | 1,176 m | Asphalt | Secondary. (Todo: Verify designator - some sources say 13/31) |
 
 ## Frequencies
 

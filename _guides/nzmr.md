@@ -30,9 +30,9 @@ Murchison is a small aerodrome in the Tasman district, used primarily for recrea
 
 ## Frequencies
 
-| Service | Frequency | Notes |
-| ------- | --------- | ----- |
-| CTAF    | 118.1     |       |
+| Service | Frequency | Notes          |
+| ------- | --------- | -------------- |
+| CTAF    | 119.1     | (Todo: verify) |
 
 ## Elevation
 

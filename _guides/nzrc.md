@@ -24,19 +24,19 @@ Ryan's Creek is the only airfield on Stewart Island / Rakiura, near the town of 
 
 ## Runways
 
-| Designator | Length | Surface | Notes |
-| ---------- | ------ | ------- | ----- |
-| 04/22      | 800 m  | Grass   |       |
+| Designator | Length | Surface | Notes                                                  |
+| ---------- | ------ | ------- | ------------------------------------------------------ |
+| 04/22      | 632 m  | Hard    | Todo: verify - some sources say 800 m grass at 288 ft. |
 
 ## Frequencies
 
-| Service | Frequency | Notes        |
-| ------- | --------- | ------------ |
-| CTAF    | 119.1     | Ryan's Creek |
+| Service | Frequency | Notes                                 |
+| ------- | --------- | ------------------------------------- |
+| CTAF    | 130.2     | Todo: verify - some sources say 119.1 |
 
 ## Elevation
 
-288 ft AMSL.
+282 ft AMSL (Todo: verify).
 
 ## Local Procedures
 

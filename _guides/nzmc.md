@@ -18,7 +18,7 @@ region:
 
 ## Overview
 
-Mount Cook Airport sits at the head of the Mackenzie Basin, at the foot of Aoraki/Mount Cook. The airfield is inside the Mount Cook Flight Information Zone (FIZ) with no ATC service and significant terrain in every direction.
+Mount Cook Airport sits at the head of the Mackenzie Basin, at the foot of Aoraki/Mount Cook. The airfield is inside the Southern Alps Mandatory Broadcast Zone (MBZ) with no ATC service and significant terrain in every direction. Prior approval is required for landing.
 
 {% include region_map.html %}
 
@@ -30,22 +30,27 @@ Mount Cook Airport sits at the head of the Mackenzie Basin, at the foot of Aorak
 
 ## Frequencies
 
-| Service                  | Frequency | Notes                    |
-| ------------------------ | --------- | ------------------------ |
-| FIZ (Alps Traffic)       | 118.6     | Mandatory area frequency |
-| Christchurch Information | 123.5     | Area FIS                 |
-| Mountain radio           | 130.6     | Area broadcasts          |
+| Service                  | Frequency | Notes                                                                            |
+| ------------------------ | --------- | -------------------------------------------------------------------------------- |
+| MBZ (Alps Traffic)       | 118.6     | Mandatory area frequency. Calls required on entry and at least every 15 minutes. |
+| Christchurch Information | 123.5     | Area FIS                                                                         |
+| UNICOM                   | 131.0     | Todo: verify - not confirmed                                                     |
 
 ## Elevation
 
-2,153 ft AMSL.
+2,153 ft AMSL. Use Ohau QNH (obtained from Christchurch Information).
 
 ## Local Procedures
 
-- **FIZ:** 118.6 (Alps Traffic) within 10 NM. Broadcast position and intentions.
-- **IFR:** RNAV (GNSS) approaches published; no ATC, FIZ procedures apply.
+- **MBZ:** 118.6 (Alps Traffic) within the MBZ. Broadcast position and intentions. Landing and anti-collision lights required. Keep right in valleys.
+- **Prior approval:** Required. Mount Cook, Glentanner and Tekapo are private aerodromes.
+- **IFR:** IFR traffic descends to 3,500 ft at Tasman Downs and continues VFR to Mount Cook or Glentanner. Verify approach availability in current AIP.
 - **Visual contact with terrain:** Required at all times.
 - **One-way valley traffic:** Standard mountain rules apply.
+- **Runway use:** Use the full runway.
+- **Departure 31:** Make an early right turn toward Gorilla Stream (light northwesterlies) or Rotten Tommy (stronger winds).
+- **Traffic:** Watch for Glentanner helicopters on the eastern side of the Tasman River. Ski-planes join from altitude.
+- **Noise abatement:** 170 kt or less over the Hermitage at 9,000 ft; not below 6,000 ft over Round Hill.
 
 ## Hazards
 
@@ -53,6 +58,8 @@ Mount Cook Airport sits at the head of the Mackenzie Basin, at the foot of Aorak
 - High density altitude - reduce payload.
 - Rapid weather change - the valley can close in minutes.
 - Katabatic winds off the Tasman Glacier.
+- Shifty, swirling winds on the valley floor.
+- Low-level shear in westerlies.
 
 ## Recommended Approaches
 

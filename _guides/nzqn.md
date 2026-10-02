@@ -26,17 +26,18 @@ Queenstown is one of the most scenic and demanding airports in New Zealand. It s
 
 | Designator | Length  | Surface | Notes                                         |
 | ---------- | ------- | ------- | --------------------------------------------- |
-| 05/23      | 1,777 m | Asphalt | Primary. 23 has the famous over-water visual. |
+| 05/23      | 1,890 m | Asphalt | Primary. 23 has the famous over-water visual. |
 | 14/32      | 890 m   | Asphalt | Secondary, crosswind.                         |
 
 ## Frequencies
 
-| Service  | Frequency | Notes               |
-| -------- | --------- | ------------------- |
-| ATIS     | 126.4     |                     |
-| Delivery | 121.9     |                     |
-| Tower    | 118.1     | Queenstown Tower    |
-| Approach | 125.75    | Queenstown Approach |
+| Service                | Frequency | Notes                   |
+| ---------------------- | --------- | ----------------------- |
+| ATIS                   | 126.4     |                         |
+| Delivery               | 121.9     |                         |
+| Tower                  | 118.1     | Also 128.9 (secondary)  |
+| Approach               | 125.75    | Also 122.95 (secondary) |
+| Queenstown Information | 128.9     | Area FIS                |
 
 ## Elevation
 
@@ -44,10 +45,10 @@ Queenstown is one of the most scenic and demanding airports in New Zealand. It s
 
 ## Local Procedures
 
-- **Runway 23 visual:** Over Lake Wakatipu, tight turn onto final. Strict noise and curfew restrictions.
+- **Runway 23 visual:** Over Lake Wakatipu, tight turn onto final. Strict noise and curfew restrictions (Todo: verify current curfew).
 - **Runway 05:** Departures over the lake and a left or right turn to avoid terrain.
 - **Circuit:** High terrain to the east and south; expect non-standard patterns.
-- **CTAF:** 122.9 for surrounding unattended strips.
+- **CTAF:** 119.2 for surrounding strips in the Fiordland area (not 122.9).
 
 ## Hazards
 

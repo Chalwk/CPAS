@@ -49,11 +49,10 @@ Haast Pass (563 m / 1,847 ft) is the lowest of the three main alpine crossings (
 
 ## Frequencies
 
-| Service               | Frequency |
-| --------------------- | --------- |
-| Wanaka CTAF           | 119.1     |
-| Queenstown Tower      | 118.1     |
-| Area / Mountain radio | 130.6     |
+| Service          | Frequency |
+| ---------------- | --------- |
+| Wanaka CTAF      | 119.1     |
+| Queenstown Tower | 118.1     |
 
 ## Hazards
 
