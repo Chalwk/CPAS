@@ -466,12 +466,6 @@
     white-space: nowrap;
 }
 
-.fc-card-actions .fc-btn-airspace {
-    flex: 1 1 100%;
-    padding: 10px 12px;
-    font-size: 0.85rem;
-}
-
 .fc-btn-brief {
     background: var(--secondary-color);
     color: white;
@@ -479,17 +473,6 @@
 
 .fc-btn-brief:hover {
     background: var(--primary-color);
-}
-
-.fc-btn-airspace {
-    background: #e0e7ff;
-    color: #3730a3;
-    border: 1px solid #c7d2fe;
-}
-
-.fc-btn-airspace:hover {
-    background: #c7d2fe;
-    color: #312e81;
 }
 
 .fc-btn-simbrief {
@@ -676,10 +659,6 @@
 
 .fc-modal-header.fc-op-survey {
     background: linear-gradient(135deg, #047857, #065f46);
-}
-
-.fc-modal-header.fc-op-airspace {
-    background: linear-gradient(135deg, #0369a1, #075985);
 }
 
 .fc-modal-header h2 {
@@ -953,10 +932,6 @@
 
     .fc-card-actions .fc-btn {
         flex: 1 1 calc(50% - 4px);
-    }
-
-    .fc-card-actions .fc-btn-airspace {
-        flex: 1 1 100%;
     }
 
     .fc-modal-map {

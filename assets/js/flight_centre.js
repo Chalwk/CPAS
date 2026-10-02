@@ -377,15 +377,6 @@
                 });
             });
 
-            // "Airspace"
-            this.els.results.querySelectorAll('[data-airspace-key]').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const key = btn.getAttribute('data-airspace-key');
-                    const route = this.allRoutes.find(x => x._key === key);
-                    if (route) this.openAirspaceModal(route);
-                });
-            });
-
             // "View Map"
             this.els.results.querySelectorAll('[data-map-key]').forEach(btn => {
                 btn.addEventListener('click', () => {
@@ -542,9 +533,6 @@
                             <button class="fc-btn fc-btn-brief" data-brief-key="${this.escape(r._key)}">
                                 <i class="fas fa-clipboard-list"></i> View Brief
                             </button>
-                            <button class="fc-btn fc-btn-airspace" data-airspace-key="${this.escape(r._key)}" title="View airspace & procedures">
-                                <i class="fas fa-tower"></i> Airspace
-                            </button>
                             <a class="fc-btn fc-btn-simbrief" href="${simbriefURL}" target="_blank" rel="noopener" title="Open SimBrief">
                                 <i class="fas fa-paper-plane"></i> SimBrief
                             </a>
@@ -650,61 +638,6 @@
             if (viewMapBtn) {
                 viewMapBtn.addEventListener('click', () => this.openRouteMapModal(r));
             }
-
-            this.els.modal.classList.add('open');
-            this.els.modal.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';
-        }
-
-        openAirspaceModal(r) {
-            const opClass = this.opClass(r.operation);
-            const fromDisplay = r.from || '-';
-            const toDisplay = r.to || '-';
-            const fromName = r.from_name || '';
-            const toName = r.to_name || '';
-
-            const airspaceHTML = (r.airspace || [])
-                .map(a => `<li>${this.escape(a)}</li>`).join('');
-
-            const hasAirspace = airspaceHTML.length > 0;
-
-            const alternateHTML = r.alternate
-                ? `<div class="fc-modal-alt"><strong>Alternate / Notes:</strong> ${this.escape(r.alternate)}</div>`
-                : '';
-
-            const warningHTML = r.warning
-                ? `<div class="fc-modal-warning"><i class="fas fa-exclamation-triangle"></i> ${this.escape(r.warning)}</div>`
-                : '';
-
-            const emptyHTML = `
-                <div class="fc-modal-empty">
-                    <i class="fas fa-tower"></i>
-                    <p>No airspace or procedure information is available for this route yet.</p>
-                </div>
-            `;
-
-            this.els.modalBody.innerHTML = `
-                <div class="fc-modal-header fc-op-airspace ${opClass}">
-                    <h2 id="fcModalTitle"><i class="fas fa-tower"></i> Airspace &amp; Procedures</h2>
-                    <div class="fc-modal-sub">
-                        ${this.escape(fromDisplay)} → ${this.escape(toDisplay)} &nbsp;·&nbsp;
-                        ${this.escape(fromName)} → ${this.escape(toName)}
-                    </div>
-                    <div class="fc-modal-meta">
-                        <span><i class="fas fa-briefcase"></i> ${this.escape(r.operation || 'Flight')}</span>
-                        <span><i class="fas fa-file-alt"></i> ${this.escape(r.flight_rules || 'VFR')}</span>
-                        <span><i class="fas fa-tag"></i> ${this.escape(r._categoryLabel || '')}</span>
-                    </div>
-                </div>
-
-                <div class="fc-modal-body-inner">
-                    ${hasAirspace
-                    ? `<h3><i class="fas fa-tower"></i> Airspace &amp; Procedures</h3><ul>${airspaceHTML}</ul>`
-                    : emptyHTML}
-                    ${alternateHTML}
-                    ${warningHTML}
-                </div>
-            `;
 
             this.els.modal.classList.add('open');
             this.els.modal.setAttribute('aria-hidden', 'false');
