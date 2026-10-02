@@ -3,6 +3,7 @@ title: Franz Josef
 icao: NZFJ
 category: airport
 permalink: /guides/nzfj/
+region: nzfj
 description: "West Coast glacier aerodrome. Base for Fox and Franz Josef glacier flights."
 icon: fa-mountain
 ---
@@ -10,6 +11,8 @@ icon: fa-mountain
 ## Overview
 
 Franz Josef is a small aerodrome on the West Coast, right at the foot of the Franz Josef Glacier. It is primarily used by helicopter and fixed-wing scenic operators.
+
+{% include region_map.html %}
 
 ## Runways
 

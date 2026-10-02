@@ -3,6 +3,7 @@ title: Dunedin International
 icao: NZDN
 category: airport
 permalink: /guides/nzdn/
+region: nzdn
 description: "Otago's primary airport at Momona, south-west of Dunedin."
 icon: fa-plane
 ---
@@ -10,6 +11,8 @@ icon: fa-plane
 ## Overview
 
 Dunedin International sits on the Taieri Plain, 15 NM south-west of Dunedin city. It is the main gateway to Otago and the lower South Island.
+
+{% include region_map.html %}
 
 ## Runways
 

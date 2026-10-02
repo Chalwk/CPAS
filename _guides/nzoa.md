@@ -3,6 +3,7 @@ title: Omarama
 icao: NZOA
 category: airport
 permalink: /guides/nzoa/
+region: nzoa
 description: "Mackenzie Basin gliding mecca. Expect heavy glider traffic in summer."
 icon: fa-plane
 ---
@@ -10,6 +11,8 @@ icon: fa-plane
 ## Overview
 
 Omarama is a small aerodrome at the southern end of the Mackenzie Basin, world-famous for gliding. The field is in Class G airspace with no ATC, but glider activity can be intense.
+
+{% include region_map.html %}
 
 ## Runways
 

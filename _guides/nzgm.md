@@ -3,6 +3,7 @@ title: Greymouth
 icao: NZGM
 category: airport
 permalink: /guides/nzgm/
+region: nzgm
 description: "Small West Coast aerodrome between Hokitika and Westport."
 icon: fa-water
 ---
@@ -10,6 +11,8 @@ icon: fa-water
 ## Overview
 
 Greymouth is a small regional aerodrome on the West Coast, serving the Grey District and the Paparoa National Park.
+
+{% include region_map.html %}
 
 ## Runways
 

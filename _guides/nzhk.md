@@ -3,6 +3,7 @@ title: Hokitika
 icao: NZHK
 category: airport
 permalink: /guides/nzhk/
+region: nzhk
 description: "West Coast regional airport and the primary eastern gateway to the glaciers."
 icon: fa-water
 ---
@@ -10,6 +11,8 @@ icon: fa-water
 ## Overview
 
 Hokitika is the main West Coast airport, sitting between the Tasman Sea and the foothills of the Southern Alps. It is the natural arrival point for glacier country and Arthur's Pass crossings.
+
+{% include region_map.html %}
 
 ## Runways
 

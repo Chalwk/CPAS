@@ -3,6 +3,7 @@ title: Timaru
 icao: NZTU
 category: airport
 permalink: /guides/nztu/
+region: nztu
 description: "South Canterbury regional airport. Coastal transit hub between Christchurch and Dunedin."
 icon: fa-plane
 ---
@@ -10,6 +11,8 @@ icon: fa-plane
 ## Overview
 
 Timaru is a regional aerodrome on the South Canterbury coast. It is a common transit stop and has a small control zone.
+
+{% include region_map.html %}
 
 ## Runways
 

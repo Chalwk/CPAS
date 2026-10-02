@@ -2,6 +2,7 @@
 title: Arthur's Pass VFR Corridor
 category: scenic
 permalink: /guides/arthurs-pass/
+region: arthurs_pass
 description: "The classic East–West crossing of the Southern Alps between Christchurch and Hokitika."
 icon: fa-mountain
 ---
@@ -9,6 +10,8 @@ icon: fa-mountain
 ## Overview
 
 Arthur's Pass is the most well-known VFR crossing of the Southern Alps. It links [Christchurch (NZCH)](/guides/nzch/) on the east coast with [Hokitika (NZHK)](/guides/nzhk/) on the west, following the Waimakariri River valley to the pass and descending to the coast.
+
+{% include region_map.html %}
 
 ## Route
 

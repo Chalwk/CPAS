@@ -3,6 +3,7 @@ title: Queenstown
 icao: NZQN
 category: airport
 permalink: /guides/nzqn/
+region: nzqn
 description: "Southern Lakes alpine airport famous for its dramatic terrain and the Runway 23 visual approach."
 icon: fa-mountain
 ---
@@ -10,6 +11,8 @@ icon: fa-mountain
 ## Overview
 
 Queenstown is one of the most scenic and demanding airports in New Zealand. It sits in the Wakatipu Basin surrounded by the Remarkables, Crown Range, and Ben Lomond. RNP approaches are published but the classic arrival is a visual approach over Lake Wakatipu.
+
+{% include region_map.html %}
 
 ## Runways
 

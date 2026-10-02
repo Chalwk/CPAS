@@ -3,6 +3,7 @@ title: Ashburton
 icao: NZAS
 category: airport
 permalink: /guides/nzas/
+region: nzas
 description: "Mid-Canterbury plains aerodrome between Christchurch and Timaru."
 icon: fa-tractor
 ---
@@ -10,6 +11,8 @@ icon: fa-tractor
 ## Overview
 
 Ashburton is a small plains aerodrome serving the Mid-Canterbury district. It is a useful diversion or training stop on the coastal route south of Christchurch.
+
+{% include region_map.html %}
 
 ## Runways
 

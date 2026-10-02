@@ -3,6 +3,7 @@ title: Woodbourne / Blenheim
 icao: NZWB
 category: airport
 permalink: /guides/nzwb/
+region: nzwb
 description: "Marlborough's principal airport. Wine country hub and gateway to the Sounds."
 icon: fa-plane
 ---
@@ -10,6 +11,8 @@ icon: fa-plane
 ## Overview
 
 Woodbourne is a joint civil/military aerodrome serving Blenheim and the Marlborough wine region. It sits in the Wairau Valley between the Richmond Ranges to the north and the Wither Hills to the south.
+
+{% include region_map.html %}
 
 ## Runways
 

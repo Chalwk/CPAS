@@ -4,6 +4,10 @@ layout: default
 
 <!-- Copyright (c) 2025-2026 Jericho Crosby (Chalwk) -->
 
+<!-- Leaflet (CDN) -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
 <article class="guide-container">
     <div class="container">
 
@@ -59,3 +63,7 @@ layout: default
         });
     })();
 </script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+<script defer src="{{ '/assets/js/leaflet.js' | relative_url }}"></script>

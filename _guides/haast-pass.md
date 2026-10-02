@@ -2,6 +2,7 @@
 title: Haast Pass VFR Corridor
 category: scenic
 permalink: /guides/haast-pass/
+region: haast_pass
 description: "Southern crossing of the Southern Alps between the West Coast and Wanaka."
 icon: fa-mountain
 ---
@@ -9,6 +10,8 @@ icon: fa-mountain
 ## Overview
 
 Haast Pass (563 m / 1,847 ft) is the lowest of the three main alpine crossings (with Arthur's and Lewis). It links the West Coast at Haast with the upper Clutha valley at [Wanaka (NZWF)](/guides/nzwf/) and [Queenstown (NZQN)](/guides/nzqn/).
+
+{% include region_map.html %}
 
 ## Route
 

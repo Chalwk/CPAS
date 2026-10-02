@@ -3,6 +3,7 @@ title: Te Anau / Manapouri
 icao: NZMO
 category: airport
 permalink: /guides/nzmo/
+region: nzmo
 description: "Fiordland gateway. Base for Milford Sound and Doubtful Sound operations."
 icon: fa-mountain
 ---
@@ -10,6 +11,8 @@ icon: fa-mountain
 ## Overview
 
 Te Anau / Manapouri is the primary aerodrome for Fiordland, sitting on the eastern shore of Lake Manapouri. It is the last fuel stop before Milford Sound.
+
+{% include region_map.html %}
 
 ## Runways
 

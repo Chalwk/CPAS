@@ -3,6 +3,7 @@ title: Taieri
 icao: NZTI
 category: airport
 permalink: /guides/nzti/
+region: nzti
 description: "Otago Aero Club home field, Taieri Plain."
 icon: fa-plane
 ---
@@ -10,6 +11,8 @@ icon: fa-plane
 ## Overview
 
 Taieri is a small aerodrome on the Taieri Plain just west of Dunedin, home to the Otago Aero Club. It shares airspace with Dunedin International.
+
+{% include region_map.html %}
 
 ## Runways
 

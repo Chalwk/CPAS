@@ -3,6 +3,7 @@ title: Pukaki
 icao: NZUK
 category: airport
 permalink: /guides/nzuk/
+region: nzuk
 description: "Small Mackenzie Basin strip on the shore of Lake Pukaki."
 icon: fa-water
 ---
@@ -10,6 +11,8 @@ icon: fa-water
 ## Overview
 
 Pukaki is a small grass strip on the southern shore of the glacial Lake Pukaki. It is a useful alternative or stopover on the route into Mount Cook.
+
+{% include region_map.html %}
 
 ## Runways
 

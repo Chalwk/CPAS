@@ -3,6 +3,7 @@ title: Christchurch International
 icao: NZCH
 category: airport
 permalink: /guides/nzch/
+region: nzch
 description: "Primary CPAS base. Busy Class C international airport on the Canterbury Plains."
 icon: fa-plane
 ---
@@ -10,6 +11,8 @@ icon: fa-plane
 ## Overview
 
 Christchurch International is the primary CPAS base and the busiest airport on the South Island. It sits on the Canterbury Plains, bounded to the north-east by the Waimakariri River and to the south by the Port Hills. Expect Class C controlled airspace, heavy airline traffic, and frequent nor'wester wind shifts.
+
+{% include region_map.html %}
 
 ## Runways
 

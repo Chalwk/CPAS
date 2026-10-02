@@ -3,6 +3,7 @@ title: Motueka
 icao: NZMK
 category: airport
 permalink: /guides/nzmk/
+region: nzmk
 description: "Tasman Bay aerodrome and base for Abel Tasman scenic flights."
 icon: fa-plane
 ---
@@ -10,6 +11,8 @@ icon: fa-plane
 ## Overview
 
 Motueka is a small aerodrome on the shore of Tasman Bay, serving the town and acting as a base for scenic flights into Abel Tasman National Park.
+
+{% include region_map.html %}
 
 ## Runways
 

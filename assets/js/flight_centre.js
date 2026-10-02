@@ -11,13 +11,14 @@
         5: 'Expert'
     };
 
-    const DIFFICULTY_COLORS = {
-        1: '#059669', // Easy
-        2: '#0891b2', // Light
-        3: '#2d6bc9', // Moderate
-        4: '#f59e0b', // Challenging
-        5: '#dc2626'  // Expert
-    };
+    const DIFFICULTY_COLORS =
+        (window.CPASLeaflet && window.CPASLeaflet.COLORS.difficulty) || {
+            1: '#059669',
+            2: '#0891b2',
+            3: '#2d6bc9',
+            4: '#f59e0b',
+            5: '#dc2626'
+        };
 
     const CATEGORY_LABELS = {
         'fixed-wing': 'Fixed-Wing',
@@ -40,12 +41,11 @@
     const NZ_ZOOM = 6;
     const ICAO_PATTERN = /\bNZ[A-Z]{2}\b/g;
 
-    // Routes whose map path can't be derived from `from`/`to` alone (multi-stop charters).
+    // Routes whose map path can't be derived from `from`/`to` alone
+    // (multi-stop charters).
     const ROUTE_PATH_OVERRIDES = {
         'fw-nzch-nztu-nzqn-multi': ['NZCH', 'NZTU', 'NZQN']
     };
-
-    const MARKER_NAVY = '#1a365d';
 
     class FlightCentre {
         constructor(routes, airports) {
@@ -57,7 +57,7 @@
             this.perPage = 6;
             this.els = {};
 
-            // Map state
+            // Map state (in-page toggle map)
             this.map = null;
             this.mapRouteLayer = null;
             this.mapRouteLayers = {};   // routeKey -> L.Polyline
@@ -214,24 +214,18 @@
         }
 
         initMap() {
-            if (this.map || typeof window.L === 'undefined' || !this.els.mapInner) return;
+            if (this.map || !this.els.mapInner) return;
+            if (!window.CPASLeaflet) return;
 
-            this.map = window.L.map(this.els.mapInner, {
+            this.map = window.CPASLeaflet.createMap(this.els.mapInner, {
                 center: NZ_CENTER,
                 zoom: NZ_ZOOM,
-                scrollWheelZoom: true,
-                worldCopyJump: false,
-                zoomControl: true,
-                attributionControl: true
+                scrollWheelZoom: true
             });
 
-            window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 18,
-                minZoom: 4,
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(this.map);
+            if (!this.map) return;
 
-            this.mapRouteLayer = window.L.layerGroup().addTo(this.map);
+            this.mapRouteLayer = window.CPASLeaflet.createLayerGroup(this.map);
         }
 
         // ---- MAP DATA HELPERS -------------------------------------------
@@ -257,9 +251,9 @@
         }
 
         // Works out what to draw for a route:
-        //   { kind: 'path', segments: [[ICAO, ICAO], ...], stops: [ICAO, ...] }   - one or more legs
-        //   { kind: 'loop', segments: [], stops: [ICAO] }                         - round trip from a base
-        //   null                                                                  - can't be drawn
+        //   { kind: 'path', segments: [[ICAO, ICAO], ...], stops: [ICAO, ...] }
+        //   { kind: 'loop', segments: [], stops: [ICAO] }   - round trip from a base
+        //   null                                            - can't be drawn
         resolveRoute(r) {
             let sequences;
             if (ROUTE_PATH_OVERRIDES[r.id]) {
@@ -272,7 +266,8 @@
                 sequences = [];
             }
 
-            // Nothing to join: a sortie, scenic loop or heli-hike that starts and ends at its base.
+            // Nothing to join: a sortie, scenic loop or heli-hike that starts and
+            // ends at its base.
             if (sequences.length === 0) {
                 const base = r.from;
                 return (base && this.airports[base])
@@ -339,7 +334,8 @@
         renderMap(routes) {
             if (!this.map || !this.mapRouteLayer) return;
 
-            const L = window.L;
+            const CL = window.CPASLeaflet;
+            if (!CL) return;
 
             this.mapRouteLayer.clearLayers();
             this.mapRouteLayers = {};
@@ -367,33 +363,30 @@
                         [this.airports[b].lat, this.airports[b].lon]
                     ]);
 
-                    layer = L.polyline(legs, {
+                    layer = CL.drawRoute(this.map, legs, {
                         color: color,
-                        weight: 3,
-                        opacity: 0.75,
-                        lineCap: 'round',
-                        lineJoin: 'round'
+                        group: this.mapRouteLayer
                     });
                 } else {
                     // Round trip from a base: dashed ring around the base airfield.
                     const base = geo.stops[0];
                     const airport = this.airports[base];
 
-                    layer = L.circleMarker([airport.lat, airport.lon], {
-                        radius: 12,
+                    layer = CL.drawLoop(this.map, [airport.lat, airport.lon], {
                         color: color,
-                        weight: 3,
-                        opacity: 0.75,
-                        fill: false,
-                        dashArray: '4 4'
+                        group: this.mapRouteLayer
                     });
 
-                    layer.bindTooltip(
-                        `<strong>${this.escape(r.to_name || airport.name || base)}</strong><br>` +
-                        `${this.escape(r._categoryLabel)} · round trip from ${this.escape(base)}`,
-                        { direction: 'top', offset: [0, -10], sticky: true }
-                    );
+                    if (layer) {
+                        layer.bindTooltip(
+                            `<strong>${this.escape(r.to_name || airport.name || base)}</strong><br>` +
+                            `${this.escape(r._categoryLabel)} · round trip from ${this.escape(base)}`,
+                            { direction: 'top', offset: [0, -10], sticky: true }
+                        );
+                    }
                 }
+
+                if (!layer) return;
 
                 layer._cpasKey = r._key;
                 layer.on('mouseover', () => {
@@ -406,7 +399,6 @@
                 });
                 layer.on('click', () => this.focusCard(r._key));
 
-                layer.addTo(this.mapRouteLayer);
                 this.mapRouteLayers[r._key] = layer;
 
                 geo.stops.forEach(c => endpoints.add(c));
@@ -430,19 +422,18 @@
         // Hollow dot     = alternate or optional stop named in a route (doesn't affect map bounds).
         ensureMarker(icao, bounds, isAlternate) {
             const airport = this.airports[icao];
-            if (!airport) return;
+            if (!airport || !window.CPASLeaflet) return;
 
             if (!isAlternate) bounds.push([airport.lat, airport.lon]);
 
             if (this.mapMarkerLayers[icao]) return;
 
-            const marker = window.L.circleMarker([airport.lat, airport.lon], {
-                radius: 4,
-                color: isAlternate ? MARKER_NAVY : '#ffffff',
-                weight: 2,
-                fillColor: isAlternate ? '#ffffff' : MARKER_NAVY,
-                fillOpacity: 1
-            });
+            const marker = window.CPASLeaflet.drawAirportMarker(
+                this.map,
+                [airport.lat, airport.lon],
+                { alternate: isAlternate, group: this.mapRouteLayer }
+            );
+            if (!marker) return;
 
             marker.bindTooltip(
                 `<strong>${this.escape(icao)}</strong><br>${this.escape(airport.name || '')}` +
@@ -450,7 +441,6 @@
                 { direction: 'top', offset: [0, -6] }
             );
 
-            marker.addTo(this.mapRouteLayer);
             this.mapMarkerLayers[icao] = marker;
         }
 
@@ -642,6 +632,15 @@
                 });
             });
 
+            // "View Map"
+            this.els.results.querySelectorAll('[data-map-key]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const key = btn.getAttribute('data-map-key');
+                    const route = this.allRoutes.find(x => x._key === key);
+                    if (route) this.openRouteMapModal(route);
+                });
+            });
+
             // Card -> map interactivity: hover highlights, click focuses.
             this.els.results.querySelectorAll('.fc-card').forEach(cardEl => {
                 const key = cardEl.getAttribute('data-key');
@@ -774,7 +773,6 @@
                 : '';
 
             const simbriefURL = this.simbriefURL(r);
-            const mapURL = this.skyvectorURL(r);
 
             return `
                 <article class="fc-card" data-key="${this.escape(r._key)}">
@@ -816,9 +814,9 @@
                             <a class="fc-btn fc-btn-simbrief" href="${simbriefURL}" target="_blank" rel="noopener" title="Open SimBrief">
                                 <i class="fas fa-paper-plane"></i> SimBrief
                             </a>
-                            <a class="fc-btn fc-btn-map" href="${mapURL}" target="_blank" rel="noopener" title="Open Route Map">
-                                <i class="fas fa-map"></i> SkyVector Map
-                            </a>
+                            <button class="fc-btn fc-btn-map" data-map-key="${this.escape(r._key)}" title="View route on Leaflet map">
+                                <i class="fas fa-map"></i> View Map
+                            </button>
                         </div>
                     </div>
                 </article>
@@ -852,12 +850,6 @@
             return `https://dispatch.simbrief.com/options/custom?orig=${encodeURIComponent(from)}&dest=${encodeURIComponent(to)}`;
         }
 
-        skyvectorURL(r) {
-            const from = r.from || '';
-            const to = r.to || '';
-            return `https://skyvector.com/?fpl=${encodeURIComponent(from + ' ' + to)}`;
-        }
-
         openModal(r) {
             const opClass = this.opClass(r.operation);
             const distance = r.distance_nm ? `${r.distance_nm} NM` : (r.duration || '-');
@@ -877,7 +869,6 @@
                 .map(c => `<span class="fc-chip fc-chip-cond"><i class="fas fa-cloud-sun"></i>${this.escape(c)}</span>`).join('');
 
             const simbriefURL = this.simbriefURL(r);
-            const mapURL = this.skyvectorURL(r);
 
             this.els.modalBody.innerHTML = `
                 <div class="fc-modal-header ${opClass}">
@@ -913,12 +904,18 @@
                         <a class="fc-btn fc-btn-simbrief" href="${simbriefURL}" target="_blank" rel="noopener">
                             <i class="fas fa-paper-plane"></i> Open in SimBrief
                         </a>
-                        <a class="fc-btn fc-btn-map" href="${mapURL}" target="_blank" rel="noopener">
-                            <i class="fas fa-map"></i> SkyVector Map
-                        </a>
+                        <button class="fc-btn fc-btn-map" id="fcModalViewMapBtn" type="button">
+                            <i class="fas fa-map"></i> View Route Map
+                        </button>
                     </div>
                 </div>
             `;
+
+            // Bind the in-modal "View Route Map" button.
+            const viewMapBtn = this.els.modalBody.querySelector('#fcModalViewMapBtn');
+            if (viewMapBtn) {
+                viewMapBtn.addEventListener('click', () => this.openRouteMapModal(r));
+            }
 
             this.els.modal.classList.add('open');
             this.els.modal.setAttribute('aria-hidden', 'false');
@@ -980,10 +977,154 @@
             document.body.style.overflow = 'hidden';
         }
 
+        // Leaflet route-map modal
+        openRouteMapModal(r) {
+            const geo = this.resolveRoute(r);
+            const opClass = this.opClass(r.operation);
+            const distance = r.distance_nm ? `${r.distance_nm} NM` : (r.duration || '-');
+            const stars = this.starsHTML(r.difficulty);
+
+            const headerHTML = `
+                <div class="fc-modal-header fc-op-map ${opClass}">
+                    <h2 id="fcModalTitle"><i class="fas fa-map"></i> Route Map</h2>
+                    <div class="fc-modal-sub">
+                        ${this.escape(r.from || '-')} → ${this.escape(r.to || '-')} &nbsp;·&nbsp;
+                        ${this.escape(r.from_name || '')} → ${this.escape(r.to_name || '')}
+                    </div>
+                    <div class="fc-modal-meta">
+                        <span><i class="fas fa-ruler-horizontal"></i> ${this.escape(String(distance))}</span>
+                        <span><i class="fas fa-briefcase"></i> ${this.escape(r.operation || 'Flight')}</span>
+                        <span>${stars} ${this.escape(DIFFICULTY_LABELS[r.difficulty] || '')}</span>
+                    </div>
+                </div>
+            `;
+
+            if (!geo) {
+                this.els.modalBody.innerHTML = headerHTML + `
+                    <div class="fc-modal-body-inner">
+                        <div class="fc-modal-empty">
+                            <i class="fas fa-map"></i>
+                            <p>No map data is available for this route yet.</p>
+                        </div>
+                    </div>
+                `;
+                this.els.modal.classList.add('open');
+                this.els.modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+                return;
+            }
+
+            this.els.modalBody.innerHTML = headerHTML + `
+                <div class="fc-modal-map-body">
+                    <div class="fc-modal-map" id="fcModalMap"></div>
+                </div>
+            `;
+
+            this.els.modal.classList.add('open');
+            this.els.modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+
+            // Let the modal settle before we ask Leaflet to measure the container.
+            window.setTimeout(() => this.drawRouteMap(r, geo), 50);
+        }
+
+        drawRouteMap(r, geo) {
+            const container = document.getElementById('fcModalMap');
+            if (!container) return;
+            if (!window.CPASLeaflet) return;
+
+            const map = window.CPASLeaflet.createMap(container, {
+                center: NZ_CENTER,
+                zoom: NZ_ZOOM
+            });
+            if (!map) return;
+
+            const color = DIFFICULTY_COLORS[r.difficulty] || DIFFICULTY_COLORS[3];
+            const bounds = [];
+            const endpoints = new Set();
+            const alternates = new Set();
+
+            this.referencedCodes(r).forEach(c => {
+                if (this.airports[c]) alternates.add(c);
+            });
+
+            if (geo.kind === 'path') {
+                const legs = geo.segments.map(([a, b]) => [
+                    [this.airports[a].lat, this.airports[a].lon],
+                    [this.airports[b].lat, this.airports[b].lon]
+                ]);
+                window.CPASLeaflet.drawRoute(map, legs, { color: color });
+            } else {
+                const base = geo.stops[0];
+                const airport = this.airports[base];
+                const ring = window.CPASLeaflet.drawLoop(
+                    map,
+                    [airport.lat, airport.lon],
+                    { color: color }
+                );
+                if (ring) {
+                    ring.bindTooltip(
+                        `<strong>${this.escape(r.to_name || airport.name || base)}</strong><br>` +
+                        `${this.escape(r._categoryLabel)} · round trip from ${this.escape(base)}`,
+                        { direction: 'top', offset: [0, -10], sticky: true }
+                    );
+                }
+            }
+
+            geo.stops.forEach(c => {
+                const ap = this.airports[c];
+                if (!ap) return;
+                bounds.push([ap.lat, ap.lon]);
+                endpoints.add(c);
+            });
+
+            endpoints.forEach(code => {
+                const ap = this.airports[code];
+                if (!ap) return;
+                const marker = window.CPASLeaflet.drawAirportMarker(
+                    map, [ap.lat, ap.lon], { alternate: false }
+                );
+                if (marker) {
+                    marker.bindTooltip(
+                        `<strong>${this.escape(code)}</strong><br>${this.escape(ap.name || '')}`,
+                        { direction: 'top', offset: [0, -6] }
+                    );
+                }
+            });
+
+            alternates.forEach(code => {
+                if (endpoints.has(code)) return;
+                const ap = this.airports[code];
+                if (!ap) return;
+                const marker = window.CPASLeaflet.drawAirportMarker(
+                    map, [ap.lat, ap.lon], { alternate: true }
+                );
+                if (marker) {
+                    marker.bindTooltip(
+                        `<strong>${this.escape(code)}</strong><br>${this.escape(ap.name || '')}` +
+                        '<br><em>Alternate / optional stop</em>',
+                        { direction: 'top', offset: [0, -6] }
+                    );
+                }
+            });
+
+            if (bounds.length > 0) {
+                try {
+                    map.fitBounds(bounds, { padding: [30, 30], maxZoom: 9 });
+                } catch (e) { /* ignore */ }
+            }
+
+            window.setTimeout(() => map.invalidateSize(), 60);
+        }
+
         closeModal() {
             this.els.modal.classList.remove('open');
             this.els.modal.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = '';
+
+            // Drop the map container (if any) so the next open starts fresh.
+            const staleMap = document.getElementById('fcModalMap');
+            if (staleMap) staleMap.remove();
         }
 
         escape(str) {

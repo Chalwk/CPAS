@@ -2,6 +2,7 @@
 title: Glacier Approaches
 category: scenic
 permalink: /guides/glacier-approaches/
+region: glaciers
 description: "Franz Josef and Fox glacier valleys - helicopter and fixed-wing scenic corridors on the West Coast."
 icon: fa-mountain
 ---
@@ -9,6 +10,8 @@ icon: fa-mountain
 ## Overview
 
 The Franz Josef and Fox glaciers descend from the Southern Alps almost to sea level on the West Coast. Their valleys are the most popular scenic corridors in the country and are flown by helicopter and fixed-wing operations daily.
+
+{% include region_map.html %}
 
 ## Route
 

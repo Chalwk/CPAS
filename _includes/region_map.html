@@ -1,0 +1,22 @@
+{%- assign region_key = page.region -%}
+{%- assign region = nil -%}
+{%- if region_key and site.data.regions[region_key] -%}
+    {%- assign region = site.data.regions[region_key] -%}
+{%- endif -%}
+
+{%- if region and region.boundary -%}
+    {%- assign center = page.region_center | default: region.center -%}
+    {%- assign zoom   = page.region_zoom   | default: region.zoom | default: 10 -%}
+    {%- assign title  = page.region_title  | default: region.name | default: page.title -%}
+
+<div class="region-map-block" data-region-map>
+    <div class="region-map-header">
+        <i class="fas fa-map-marked-alt"></i>
+        <span>{{ title }}</span>
+    </div>
+    <div class="region-map-canvas"
+         data-boundary="{{ region.boundary | jsonify | escape }}"
+         {% if center %}data-center="{{ center | jsonify | escape }}"{% endif %}
+         data-zoom="{{ zoom }}"></div>
+</div>
+{%- endif -%}

@@ -3,6 +3,7 @@ title: Rangiora
 icao: NZRT
 category: airport
 permalink: /guides/nzrt/
+region: nzrt
 description: "Canterbury Aero Club satellite field north of Christchurch."
 icon: fa-plane
 ---
@@ -10,6 +11,8 @@ icon: fa-plane
 ## Overview
 
 Rangiora is a small aerodrome north of Christchurch, used heavily for training and recreational flying. It sits on the Canterbury Plains.
+
+{% include region_map.html %}
 
 ## Runways
 

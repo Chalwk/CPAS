@@ -3,6 +3,7 @@ title: Alexandra
 icao: NZLX
 category: airport
 permalink: /guides/nzlx/
+region: nzlx
 description: "Central Otago regional aerodrome in a dry, basin climate."
 icon: fa-plane
 ---
@@ -10,6 +11,8 @@ icon: fa-plane
 ## Overview
 
 Alexandra is a small aerodrome in the Central Otago basin, surrounded by dry hills and the Clutha River. It has some of the most stable weather in the South Island.
+
+{% include region_map.html %}
 
 ## Runways
 

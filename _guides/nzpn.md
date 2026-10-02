@@ -3,6 +3,7 @@ title: Picton
 icao: NZPN
 category: airport
 permalink: /guides/nzpn/
+region: nzpn
 description: "Small Marlborough aerodrome at the head of Queen Charlotte Sound."
 icon: fa-water
 ---
@@ -10,6 +11,8 @@ icon: fa-water
 ## Overview
 
 Picton (Koromiko) is a small aerodrome serving the Picton township and the Marlborough Sounds. It sits in a valley with limited options for go-arounds, making it suitable only for competent pilots.
+
+{% include region_map.html %}
 
 ## Runways
 

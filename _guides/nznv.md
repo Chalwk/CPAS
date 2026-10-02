@@ -3,6 +3,7 @@ title: Invercargill
 icao: NZNV
 category: airport
 permalink: /guides/nznv/
+region: nznv
 description: "Southland's main airport. Gateway to Stewart Island and Fiordland."
 icon: fa-plane
 ---
@@ -10,6 +11,8 @@ icon: fa-plane
 ## Overview
 
 Invercargill is the southernmost city airport in New Zealand, serving Southland and as the staging point for Stewart Island and southern Fiordland.
+
+{% include region_map.html %}
 
 ## Runways
 

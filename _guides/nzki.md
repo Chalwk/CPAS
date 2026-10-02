@@ -3,6 +3,7 @@ title: Kaikoura
 icao: NZKI
 category: airport
 permalink: /guides/nzki/
+region: nzki
 description: "Coastal aerodrome famous for whale watching and the Seaward Kaikoura Range."
 icon: fa-water
 ---
@@ -10,6 +11,8 @@ icon: fa-water
 ## Overview
 
 Kaikoura is a small coastal aerodrome on the east coast of the South Island, nestled between the Seaward Kaikoura Range and the Pacific Ocean. It is renowned for marine wildlife and dramatic mountain scenery.
+
+{% include region_map.html %}
 
 ## Runways
 

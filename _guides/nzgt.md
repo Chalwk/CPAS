@@ -3,6 +3,7 @@ title: Glentanner Station
 icao: NZGT
 category: airport
 permalink: /guides/nzgt/
+region: nzgt
 description: "Private alpine strip on the shore of Lake Pukaki. Alternative to Mount Cook."
 icon: fa-mountain
 ---
@@ -10,6 +11,8 @@ icon: fa-mountain
 ## Overview
 
 Glentanner Station is a private airstrip on the south-western shore of Lake Pukaki, near the entrance to the Mount Cook valley. It is used primarily by scenic operators as an alternative to NZMC when the valley is busy.
+
+{% include region_map.html %}
 
 ## Runways
 

@@ -3,6 +3,7 @@ title: Takaka
 icao: NZTK
 category: airport
 permalink: /guides/nztk/
+region: nztk
 description: "Golden Bay aerodrome across the Takaka Hill."
 icon: fa-mountain
 ---
@@ -10,6 +11,8 @@ icon: fa-mountain
 ## Overview
 
 Takaka is a small aerodrome serving Golden Bay and the town of Takaka. It requires a crossing of the Takaka Hill from Nelson or a coastal route.
+
+{% include region_map.html %}
 
 ## Runways
 

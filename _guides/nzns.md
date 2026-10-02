@@ -3,6 +3,7 @@ title: Nelson
 icao: NZNS
 category: airport
 permalink: /guides/nzns/
+region: nzns
 description: "Top of the South Island regional hub. Gateway to Abel Tasman, Marlborough and Golden Bay."
 icon: fa-plane
 ---
@@ -10,6 +11,8 @@ icon: fa-plane
 ## Overview
 
 Nelson is the main airport at the top of the South Island. It serves the Tasman and Nelson regions and is a popular base for scenic flights into Abel Tasman and Kahurangi National Parks.
+
+{% include region_map.html %}
 
 ## Runways
 

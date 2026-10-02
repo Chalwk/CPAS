@@ -3,6 +3,7 @@ title: Westport
 icao: NZWS
 category: airport
 permalink: /guides/nzws/
+region: nzws
 description: "Buller region airport on the northern West Coast. Gateway to the Buller Gorge and Karamea."
 icon: fa-water
 ---
@@ -10,6 +11,8 @@ icon: fa-water
 ## Overview
 
 Westport sits on the Buller River mouth on the northern West Coast. It's a small regional aerodrome with a single sealed runway and a challenging coastal weather environment.
+
+{% include region_map.html %}
 
 ## Runways
 

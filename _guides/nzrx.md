@@ -3,6 +3,7 @@ title: Roxburgh
 icao: NZRX
 category: airport
 permalink: /guides/nzrx/
+region: nzrx
 description: "Small Central Otago strip in the Teviot Valley."
 icon: fa-plane
 ---
@@ -10,6 +11,8 @@ icon: fa-plane
 ## Overview
 
 Roxburgh is a small grass strip serving the Teviot Valley community and the Roxburgh hydro dam. It sits in a narrow valley.
+
+{% include region_map.html %}
 
 ## Runways
 

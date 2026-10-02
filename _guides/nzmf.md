@@ -3,6 +3,7 @@ title: Milford Sound
 icao: NZMF
 category: airport
 permalink: /guides/nzmf/
+region: nzmf
 description: "One of the world's most scenic approaches. Special rules airspace."
 icon: fa-mountain
 ---
@@ -10,6 +11,8 @@ icon: fa-mountain
 ## Overview
 
 Milford Sound is a short sealed strip at the head of the fiord, surrounded by towering terrain. It uses Special Rules airspace to manage the intense scenic traffic.
+
+{% include region_map.html %}
 
 ## Runways
 

@@ -3,6 +3,7 @@ title: Glenorchy
 icao: NZGY
 category: airport
 permalink: /guides/nzgy/
+region: nzgy
 description: "Remote grass strip at the head of Lake Wakatipu."
 icon: fa-mountain
 ---
@@ -10,6 +11,8 @@ icon: fa-mountain
 ## Overview
 
 Glenorchy is a small, private grass strip at the northern end of Lake Wakatipu. It is used by local operators and is a beautiful alternative to Queenstown.
+
+{% include region_map.html %}
 
 ## Runways
 

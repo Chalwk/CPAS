@@ -3,6 +3,7 @@ title: Stewart Island / Oban
 icao: NZRC
 category: airport
 permalink: /guides/nzrc/
+region: nzrc
 description: "Ryan's Creek aerodrome. Remote island strip south of Foveaux Strait."
 icon: fa-water
 ---
@@ -10,6 +11,8 @@ icon: fa-water
 ## Overview
 
 Ryan's Creek is the only airfield on Stewart Island / Rakiura, near the town of Oban. The strip is unattended and requires careful planning due to its remote location.
+
+{% include region_map.html %}
 
 ## Runways
 

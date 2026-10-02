@@ -3,6 +3,7 @@ title: Springfield
 icao: NZSF
 category: airport
 permalink: /guides/nzsf/
+region: nzsf
 description: "Canterbury foothills strip west of Christchurch."
 icon: fa-mountain
 ---
@@ -10,6 +11,8 @@ icon: fa-mountain
 ## Overview
 
 Springfield is a small private strip on the Canterbury Plains near the foothills, often used for training and foothill familiarisation.
+
+{% include region_map.html %}
 
 ## Runways
 

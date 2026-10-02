@@ -3,6 +3,7 @@ title: Mount Cook
 icao: NZMC
 category: airport
 permalink: /guides/nzmc/
+region: nzmc
 description: "Alpine aerodrome in the Aoraki/Mount Cook National Park. High-altitude and mountain weather."
 icon: fa-mountain
 ---
@@ -10,6 +11,8 @@ icon: fa-mountain
 ## Overview
 
 Mount Cook Airport sits at the head of the Mackenzie Basin, at the foot of Aoraki/Mount Cook. The airfield is inside the Mount Cook Flight Information Zone (FIZ) with no ATC service and significant terrain in every direction.
+
+{% include region_map.html %}
 
 ## Runways
 

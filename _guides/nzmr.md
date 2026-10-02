@@ -3,6 +3,7 @@ title: Murchison
 icao: NZMR
 category: airport
 permalink: /guides/nzmr/
+region: nzmr
 description: "Small Tasman district strip in the Buller Gorge region."
 icon: fa-plane
 ---
@@ -10,6 +11,8 @@ icon: fa-plane
 ## Overview
 
 Murchison is a small aerodrome in the Buller district, used primarily for recreational flying and as a stopover between Nelson and the West Coast.
+
+{% include region_map.html %}
 
 ## Runways
 

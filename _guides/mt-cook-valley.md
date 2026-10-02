@@ -2,6 +2,7 @@
 title: Mount Cook Valley
 category: scenic
 permalink: /guides/mt-cook-valley/
+region: mt_cook
 description: "The Aoraki/Mount Cook valley - Lake Pukaki, Glentanner, and the Hooker and Tasman glacier valleys."
 icon: fa-mountain
 ---
@@ -9,6 +10,8 @@ icon: fa-mountain
 ## Overview
 
 The Mount Cook valley runs north from Lake Pukaki into the heart of the Aoraki/Mount Cook National Park. It contains New Zealand's highest mountain and two of its largest glaciers. The airspace is a Mount Cook Flight Information Zone (FIZ) with no ATC.
+
+{% include region_map.html %}
 
 ## Route
 

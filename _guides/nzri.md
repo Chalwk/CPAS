@@ -3,6 +3,7 @@ title: Rangitata Island
 icao: NZRI
 category: airport
 permalink: /guides/nzri/
+region: nzri
 description: "Private plains airstrip in South Canterbury."
 icon: fa-tractor
 ---
@@ -10,6 +11,8 @@ icon: fa-tractor
 ## Overview
 
 Rangitata Island is a private strip on the Canterbury Plains between Ashburton and Timaru. It is used by the landowner and for occasional charter work.
+
+{% include region_map.html %}
 
 ## Runways
 

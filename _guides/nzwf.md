@@ -3,6 +3,7 @@ title: Wanaka
 icao: NZWF
 category: airport
 permalink: /guides/nzwf/
+region: nzwf
 description: "Southern Lakes regional airport. Gateway to Mount Aspiring National Park."
 icon: fa-mountain
 ---
@@ -10,6 +11,8 @@ icon: fa-mountain
 ## Overview
 
 Wanaka is a small regional airport in the Upper Clutha Basin, near the southern end of Lake Wanaka. It is a base for scenic helicopter and fixed-wing operations into Mount Aspiring National Park.
+
+{% include region_map.html %}
 
 ## Runways
 

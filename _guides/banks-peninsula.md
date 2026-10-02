@@ -2,6 +2,7 @@
 title: Banks Peninsula VFR Corridor
 category: scenic
 permalink: /guides/banks-peninsula/
+region: banks_peninsula
 description: "Volcanic peninsula south-east of Christchurch - Lyttelton Harbour, Akaroa, and the Port Hills."
 icon: fa-water
 ---
@@ -9,6 +10,8 @@ icon: fa-water
 ## Overview
 
 Banks Peninsula is a volcanic landmass immediately south-east of Christchurch. Its two harbours - Lyttelton and Akaroa - are the dominant features, and the peninsula is a popular scenic and training area.
+
+{% include region_map.html %}
 
 ## Route
 

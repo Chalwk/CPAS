@@ -3,6 +3,7 @@ title: Oamaru
 icao: NZOU
 category: airport
 permalink: /guides/nzou/
+region: nzou
 description: "North Otago coastal aerodrome. Victorian precinct town."
 icon: fa-plane
 ---
@@ -10,6 +11,8 @@ icon: fa-plane
 ## Overview
 
 Oamaru is a small aerodrome on the North Otago coast, serving the town of Oamaru and the Waitaki District.
+
+{% include region_map.html %}
 
 ## Runways
 
