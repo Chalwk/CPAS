@@ -24,6 +24,12 @@ Banks Peninsula is a volcanic landmass immediately south-east of Christchurch. I
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Route
 
 1. Depart [Christchurch (NZCH)](/guides/nzch/) and track south of the city.

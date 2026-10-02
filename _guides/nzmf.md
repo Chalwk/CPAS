@@ -22,6 +22,12 @@ Milford Sound is a short sealed strip at the head of the fiord, surrounded by to
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Runways
 
 | Designator | Length | Surface | Notes                                                                                                                               |

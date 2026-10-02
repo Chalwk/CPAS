@@ -22,6 +22,12 @@ Franz Josef is a small aerodrome on the West Coast, right at the foot of the Fra
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Runways
 
 | Designator | Length | Surface | Notes                                           |

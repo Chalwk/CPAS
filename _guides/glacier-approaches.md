@@ -24,6 +24,12 @@ The Franz Josef and Fox glaciers descend from the Southern Alps almost to sea le
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Route
 
 1. Depart [Hokitika (NZHK)](/guides/nzhk/) or the glacier fields directly.

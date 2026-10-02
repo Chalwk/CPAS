@@ -22,6 +22,12 @@ Springfield is a small private strip on the Canterbury Plains near the foothills
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Runways
 
 | Designator | Length | Surface | Notes |

@@ -22,6 +22,12 @@ Takaka is a small aerodrome serving Golden Bay and the town of Takaka. It requir
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Runways
 
 | Designator | Length | Surface | Notes |

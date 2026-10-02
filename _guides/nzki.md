@@ -22,6 +22,12 @@ Kaikoura is a small coastal aerodrome on the east coast of the South Island, nes
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Runways
 
 | Designator | Length | Surface | Notes |

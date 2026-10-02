@@ -22,6 +22,12 @@ Picton (Koromiko) is a small aerodrome serving the Picton township and the Marlb
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Runways
 
 | Designator | Length | Surface | Notes                                  |

@@ -24,6 +24,12 @@ Haast Pass (563 m / 1,847 ft) is the lowest of the three main alpine crossings (
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Route
 
 1. Depart from [Hokitika (NZHK)](/guides/nzhk/) or Franz Josef / Fox for the West Coast leg.

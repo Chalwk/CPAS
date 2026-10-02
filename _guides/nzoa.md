@@ -22,6 +22,12 @@ Omarama is a small aerodrome at the southern end of the Mackenzie Basin, world-f
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Runways
 
 | Designator | Length  | Surface | Notes      |

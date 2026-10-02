@@ -24,6 +24,12 @@ Arthur's Pass is the most well-known VFR crossing of the Southern Alps. It links
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Route
 
 1. Depart [Christchurch (NZCH)](/guides/nzch/). Expect a clearance westbound via the Waimakariri River corridor.

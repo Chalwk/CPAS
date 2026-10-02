@@ -1,0 +1,135 @@
+<!-- Copyright (c) 2025-2026 Jericho Crosby (Chalwk) -->
+
+<div class="toc-block toc-collapsed" data-toc>
+    <button type="button" class="toc-header" data-toc-toggle aria-expanded="false">
+        <i class="fas fa-list-ul toc-header-icon"></i>
+        <span class="toc-header-label">Table of Contents</span>
+        <i class="fas fa-chevron-down toc-chevron" aria-hidden="true"></i>
+    </button>
+    <ul class="toc-list" data-toc-list hidden></ul>
+</div>
+
+<script>
+    (function () {
+        if (window.__cpasTocInit) return;
+        window.__cpasTocInit = true;
+
+        var HEADING_SELECTOR = 'h2, h3, h4';
+
+        function slugify(text) {
+            return String(text)
+                .trim()
+                .toLowerCase()
+                .replace(/[^\w\s-]/g, '')
+                .replace(/\s+/g, '-')
+                .replace(/-+/g, '-')
+                .replace(/^-+|-+$/g, '');
+        }
+
+        function escapeHtml(str) {
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
+        function findContentRoot() {
+            return document.querySelector('.guide-content')
+                || document.querySelector('.checklist-content')
+                || document.querySelector('.airframe-content')
+                || document.querySelector('article')
+                || document.querySelector('main')
+                || document.body;
+        }
+
+        function initToggles() {
+            var toggles = document.querySelectorAll('[data-toc-toggle]');
+            Array.prototype.forEach.call(toggles, function (btn) {
+                var block = btn.closest('.toc-block');
+                if (!block || block.dataset.tocBound === 'true') return;
+                block.dataset.tocBound = 'true';
+
+                var list = block.querySelector('[data-toc-list]');
+                if (!list) return;
+
+                btn.addEventListener('click', function () {
+                    var expanded = btn.getAttribute('aria-expanded') === 'true';
+                    var next = !expanded;
+
+                    btn.setAttribute('aria-expanded', String(next));
+                    block.classList.toggle('toc-collapsed', !next);
+
+                    if (next) {
+                        list.removeAttribute('hidden');
+                    } else {
+                        list.setAttribute('hidden', '');
+                    }
+                });
+            });
+        }
+
+        function buildToc() {
+            initToggles();
+
+            var lists = document.querySelectorAll('[data-toc-list]');
+            if (!lists.length) return;
+
+            var root = findContentRoot();
+            var headings = root.querySelectorAll(HEADING_SELECTOR);
+
+            var items = [];
+            var usedIds = {};
+
+            Array.prototype.forEach.call(headings, function (h) {
+                var text = h.textContent.trim();
+                if (!text) return;
+                if (h.hasAttribute('data-toc-skip')) return;
+                if (text.toLowerCase() === 'table of contents') return;
+                if (h.closest('.toc-block')) return;
+
+                var id = h.id;
+                if (!id) {
+                    var base = slugify(text) || 'section';
+                    id = base;
+                    var n = 1;
+                    while (usedIds[id] || document.getElementById(id)) {
+                        id = base + '-' + (n++);
+                    }
+                    h.id = id;
+                }
+                usedIds[id] = true;
+
+                items.push({
+                    id: id,
+                    text: text,
+                    level: parseInt(h.tagName.substring(1), 10)
+                });
+            });
+
+            if (!items.length) {
+                Array.prototype.forEach.call(lists, function (ul) {
+                    ul.innerHTML = '<li class="toc-empty">No sections available.</li>';
+                });
+                return;
+            }
+
+            var html = items.map(function (it) {
+                return '<li class="toc-item toc-level-' + it.level + '">' +
+                    '<a href="#' + it.id + '">' + escapeHtml(it.text) + '</a>' +
+                    '</li>';
+            }).join('');
+
+            Array.prototype.forEach.call(lists, function (ul) {
+                ul.innerHTML = html;
+            });
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', buildToc);
+        } else {
+            buildToc();
+        }
+    })();
+</script>

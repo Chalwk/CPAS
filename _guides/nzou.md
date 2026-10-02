@@ -22,6 +22,12 @@ Oamaru is a small aerodrome on the North Otago coast, serving the town of Oamaru
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Runways
 
 | Designator | Length  | Surface | Notes      |

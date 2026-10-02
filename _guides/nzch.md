@@ -22,6 +22,12 @@ Christchurch International is the primary CPAS base and the busiest airport on t
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Runways
 
 | Designator | Length  | Surface | Notes                                              |

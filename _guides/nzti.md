@@ -22,6 +22,12 @@ Taieri is a small aerodrome on the Taieri Plain just west of Dunedin, home to th
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Runways
 
 | Designator | Length | Surface | Notes      |

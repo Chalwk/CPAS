@@ -24,6 +24,12 @@ The Mount Cook valley runs north from Lake Pukaki into the heart of the Aoraki/M
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Route
 
 1. Approach from the south - either from [Omarama (NZOA)](/guides/nzoa/) or [Pukaki (NZUK)](/guides/nzuk/). Other entry points: Tekapo, Godley Valley, Burkes Pass, Landsborough.

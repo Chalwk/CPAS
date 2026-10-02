@@ -22,6 +22,12 @@ Dunedin International sits on the Taieri Plain, about 12 NM (22 km) south-west o
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Runways
 
 | Designator | Length  | Surface | Notes                      |

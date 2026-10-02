@@ -1,0 +1,144 @@
+/* Copyright (c) 2025-2026 Jericho Crosby (Chalwk) */
+
+.toc-block {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 8px;
+    margin: 24px 0 32px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+}
+
+.toc-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px 24px;
+    margin: 0;
+    background: transparent;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-align: left;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.toc-header:hover {
+    background: rgba(45, 107, 201, 0.05);
+}
+
+.toc-header:focus-visible {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: -2px;
+}
+
+.toc-header-icon {
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
+
+.toc-header-label {
+    flex: 1;
+    min-width: 0;
+}
+
+.toc-chevron {
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+
+.toc-block:not(.toc-collapsed) .toc-chevron {
+    transform: rotate(180deg);
+}
+
+.toc-list {
+    list-style: none;
+    margin: 0;
+    padding: 4px 24px 18px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.toc-list[hidden] {
+    display: none;
+}
+
+.toc-item {
+    margin: 0;
+    padding: 0;
+}
+
+.toc-item a {
+    display: block;
+    padding: 6px 0;
+    color: var(--dark-color);
+    text-decoration: none;
+    font-size: 0.93rem;
+    line-height: 1.4;
+    border-left: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.toc-item a:hover {
+    color: var(--secondary-color);
+    border-left-color: var(--secondary-color);
+    padding-left: 8px;
+}
+
+.toc-level-2>a {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.toc-level-3>a {
+    padding-left: 18px;
+    font-size: 0.88rem;
+    color: var(--gray-color);
+}
+
+.toc-level-3>a:hover {
+    color: var(--secondary-color);
+    padding-left: 26px;
+}
+
+.toc-level-4>a,
+.toc-level-5>a,
+.toc-level-6>a {
+    padding-left: 34px;
+    font-size: 0.84rem;
+    color: var(--gray-color);
+}
+
+.toc-empty {
+    color: var(--gray-color);
+    font-style: italic;
+    font-size: 0.9rem;
+    padding: 4px 0;
+}
+
+@media (max-width: 768px) {
+    .toc-block {
+        margin: 20px 0 26px;
+    }
+
+    .toc-header {
+        padding: 14px 18px;
+        font-size: 0.95rem;
+    }
+
+    .toc-list {
+        padding: 4px 18px 14px;
+    }
+
+    .toc-item a {
+        font-size: 0.88rem;
+        padding: 5px 0;
+    }
+}

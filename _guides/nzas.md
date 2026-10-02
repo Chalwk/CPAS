@@ -22,6 +22,12 @@ Ashburton is a small plains aerodrome serving the Mid-Canterbury district. It is
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Runways
 
 | Designator | Length  | Surface | Notes |

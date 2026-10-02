@@ -22,6 +22,12 @@ Hokitika is the main West Coast airport, sitting between the Tasman Sea and the 
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Runways
 
 | Designator | Length  | Surface | Notes                                                         |

@@ -22,6 +22,12 @@ Alexandra is a small aerodrome in the Central Otago basin, surrounded by dry hil
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Runways
 
 | Designator | Length  | Surface | Notes      |

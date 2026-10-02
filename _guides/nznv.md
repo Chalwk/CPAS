@@ -22,6 +22,12 @@ Invercargill is the southernmost city airport in New Zealand, serving Southland 
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Runways
 
 | Designator | Length  | Surface | Notes                                         |

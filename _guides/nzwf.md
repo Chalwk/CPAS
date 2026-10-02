@@ -22,6 +22,12 @@ Wanaka is a small regional airport in the Upper Clutha Basin, near the southern 
 
 {% include region_map.html %}
 
+---
+
+{% include toc.html %}
+
+---
+
 ## Runways
 
 | Designator | Length  | Surface | Notes     |
