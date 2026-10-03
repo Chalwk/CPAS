@@ -18,15 +18,15 @@ region:
     - [-43.28, 169.78]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 The Franz Josef and Fox glaciers descend from the Southern Alps almost to sea level on the West Coast. Their valleys are the most popular scenic corridors in the country and are flown by helicopter and fixed-wing operations daily.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

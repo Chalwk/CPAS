@@ -16,15 +16,15 @@ region:
     - [-43.83, 171.71]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Ashburton is a small plains aerodrome serving the Mid-Canterbury district. It is a useful diversion or training stop on the coastal route south of Christchurch.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

@@ -16,15 +16,15 @@ region:
     - [-41.20, 173.09]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Nelson is the main airport at the top of the South Island. It serves the Tasman and Nelson regions and is a popular base for scenic flights into Abel Tasman and Kahurangi National Parks.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

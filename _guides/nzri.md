@@ -16,15 +16,15 @@ region:
     - [-43.85, 171.30]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Rangitata Island is a private strip on the Canterbury Plains between Ashburton and Timaru. It is used by the landowner and for occasional charter work.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

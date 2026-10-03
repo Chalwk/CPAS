@@ -16,15 +16,15 @@ region:
     - [-41.04, 172.87]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Motueka is a small aerodrome on the shore of Tasman Bay, serving the town and acting as a base for scenic flights into Abel Tasman National Park.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

@@ -16,15 +16,15 @@ region:
     - [-45.12, 169.25]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Alexandra is a small aerodrome in the Central Otago basin, surrounded by dry hills and the Clutha River. It has some of the most stable weather in the South Island.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

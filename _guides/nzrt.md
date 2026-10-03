@@ -16,15 +16,15 @@ region:
     - [-43.20, 172.42]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Rangiora is a small aerodrome north of Christchurch, used heavily for training and recreational flying. It sits on the Canterbury Plains.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

@@ -16,15 +16,15 @@ region:
     - [-43.68, 170.02]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Mount Cook Airport sits at the head of the Mackenzie Basin, at the foot of Aoraki/Mount Cook. The airfield is inside the Southern Alps Mandatory Broadcast Zone (MBZ) with no ATC service and significant terrain in every direction. Prior approval is required for landing.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

@@ -16,15 +16,15 @@ region:
     - [-42.63, 170.87]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Hokitika is the main West Coast airport, sitting between the Tasman Sea and the foothills of the Southern Alps. It is the natural arrival point for glacier country and Arthur's Pass crossings.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

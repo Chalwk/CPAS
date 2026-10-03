@@ -16,15 +16,15 @@ region:
     - [-43.31, 171.81]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Springfield is a small private strip on the Canterbury Plains near the foothills, often used for training and foothill familiarisation.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

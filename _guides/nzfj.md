@@ -16,15 +16,15 @@ region:
     - [-43.28, 170.03]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Franz Josef is a small aerodrome on the West Coast, right at the foot of the Franz Josef Glacier. It is primarily used by helicopter and fixed-wing scenic operators. Prior approval and a briefing are required.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

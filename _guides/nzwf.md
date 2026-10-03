@@ -16,15 +16,15 @@ region:
     - [-44.63, 169.12]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Wanaka is a small regional airport in the Upper Clutha Basin, near the southern end of Lake Wanaka. It is a base for scenic helicopter and fixed-wing operations into Mount Aspiring National Park.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

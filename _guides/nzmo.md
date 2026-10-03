@@ -16,15 +16,15 @@ region:
     - [-45.44, 167.52]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Te Anau / Manapouri is the primary aerodrome for Fiordland, sitting on the eastern shore of Lake Manapouri. It is the last fuel stop before Milford Sound.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

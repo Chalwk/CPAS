@@ -16,15 +16,15 @@ region:
     - [-41.26, 173.83]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Picton (Koromiko) is a small aerodrome serving the Picton township and the Marlborough Sounds. It sits in a valley with limited options for go-arounds. Owned by Sounds Air and requires prior approval.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

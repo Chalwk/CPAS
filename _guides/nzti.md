@@ -16,15 +16,15 @@ region:
     - [-45.77, 170.23]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Taieri is a small aerodrome on the Taieri Plain just west of Dunedin, home to the Otago Aero Club. It shares airspace with Dunedin International.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

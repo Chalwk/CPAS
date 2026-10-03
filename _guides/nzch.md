@@ -16,15 +16,15 @@ region:
     - [-43.34, 172.38]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Christchurch International is the primary CPAS base and the busiest airport on the South Island. It sits on the Canterbury Plains, bounded to the north-east by the Waimakariri River and to the south by the Port Hills. Expect Class C controlled airspace, heavy airline traffic, and frequent nor'wester wind shifts.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

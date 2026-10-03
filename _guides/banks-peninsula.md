@@ -18,15 +18,15 @@ region:
     - [-43.58, 172.60]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Banks Peninsula is a volcanic landmass immediately south-east of Christchurch. Its two harbours - Lyttelton and Akaroa - are the dominant features, and the peninsula is a popular scenic and training area.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

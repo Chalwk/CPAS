@@ -16,15 +16,15 @@ region:
     - [-41.43, 173.74]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Woodbourne is a joint civil/military aerodrome serving Blenheim and the Marlborough wine region. It sits in the Wairau Valley between the Richmond Ranges to the north and the Wither Hills to the south.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

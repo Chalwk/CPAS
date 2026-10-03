@@ -16,15 +16,15 @@ region:
     - [-42.38, 171.08]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Greymouth is a small regional aerodrome on the West Coast, serving the Grey District and the Paparoa National Park.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

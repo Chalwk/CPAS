@@ -16,15 +16,15 @@ region:
     - [-44.91, 168.60]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Queenstown is one of the most scenic and demanding airports in New Zealand. It sits in the Wakatipu Basin surrounded by the Remarkables, Crown Range, and Ben Lomond. RNP approaches are published but the classic arrival is a visual approach over Lake Wakatipu.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

@@ -16,15 +16,15 @@ region:
     - [-44.21, 171.10]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Timaru is a regional aerodrome on the South Canterbury coast. It is a common transit stop on the coastal route.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

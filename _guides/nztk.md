@@ -16,15 +16,15 @@ region:
     - [-40.72, 172.65]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Takaka is a small aerodrome serving Golden Bay and the town of Takaka. It requires a crossing of the Takaka Hill from Nelson or a coastal route.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

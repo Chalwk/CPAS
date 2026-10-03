@@ -18,15 +18,15 @@ region:
     - [-42.78, 171.45]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Arthur's Pass is the most well-known VFR crossing of the Southern Alps. It links [Christchurch (NZCH)](/guides/nzch/) on the east coast with [Hokitika (NZHK)](/guides/nzhk/) on the west, following the Waimakariri River valley to the pass and descending to the coast.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

@@ -16,15 +16,15 @@ region:
     - [-46.82, 167.96]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Ryan's Creek is the only airfield on Stewart Island / Rakiura, near the town of Oban. The strip is unattended and requires careful planning due to its remote location.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

@@ -16,15 +16,15 @@ region:
     - [-44.58, 167.80]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Milford Sound is a short sealed strip at the head of the fiord, surrounded by towering terrain. It uses a Common Frequency Zone (CFZ) to manage the intense scenic traffic. A DOC landing permit is required.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

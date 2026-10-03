@@ -18,15 +18,15 @@ region:
     - [-43.88, 168.85]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Haast Pass (563 m / 1,847 ft) is the lowest of the three main alpine crossings (with Arthur's and Lewis). It links the West Coast at Haast with the upper Clutha valley at [Wanaka (NZWF)](/guides/nzwf/) and [Queenstown (NZQN)](/guides/nzqn/).
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

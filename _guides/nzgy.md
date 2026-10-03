@@ -16,15 +16,15 @@ region:
     - [-44.78, 168.28]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Glenorchy is a small grass strip at the northern end of Lake Wakatipu. It is operated by Queenstown Airport Corporation and is a beautiful alternative to Queenstown.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

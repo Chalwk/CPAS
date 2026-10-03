@@ -18,15 +18,15 @@ region:
     - [-43.50, 169.85]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 The Mount Cook valley runs north from Lake Pukaki into the heart of the Aoraki/Mount Cook National Park. It contains New Zealand's highest mountain and two of its largest glaciers. The airspace is within the Southern Alps Mandatory Broadcast Zone (MBZ) with no ATC.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

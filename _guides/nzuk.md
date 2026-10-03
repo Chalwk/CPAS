@@ -16,15 +16,15 @@ region:
     - [-44.15, 170.00]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Pukaki is a small strip near Twizel, a few miles south of the glacial Lake Pukaki. It is a useful alternative or stopover on the route into Mount Cook. The Helicopter Line has a seasonal Twizel base here.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

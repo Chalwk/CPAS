@@ -16,15 +16,15 @@ region:
     - [-44.39, 169.86]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Omarama is a small aerodrome at the southern end of the Mackenzie Basin, world-famous for gliding. The field is in Class G airspace with no ATC, but glider activity can be intense.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

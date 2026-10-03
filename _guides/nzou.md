@@ -16,15 +16,15 @@ region:
     - [-44.88, 170.96]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Oamaru is a small aerodrome on the North Otago coast, serving the town of Oamaru and the Waitaki District.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

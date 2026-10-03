@@ -16,15 +16,15 @@ region:
     - [-45.42, 169.19]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Roxburgh is a small grass strip serving the Teviot Valley community and the Roxburgh hydro dam. It sits in a narrow valley.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 

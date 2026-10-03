@@ -16,15 +16,15 @@ region:
     - [-41.65, 171.46]
 ---
 
+{% include toc.html %}
+
+---
+
 ## Overview
 
 Westport sits on the Buller River mouth on the northern West Coast. It's a small regional aerodrome with a single sealed runway and a challenging coastal weather environment.
 
 {% include region_map.html %}
-
----
-
-{% include toc.html %}
 
 ---
 
