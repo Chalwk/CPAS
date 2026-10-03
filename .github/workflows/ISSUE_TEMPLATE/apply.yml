@@ -1,0 +1,199 @@
+name: Pilot Application
+description: Apply to join Coastal Peaks Air Service (CPAS) as a virtual pilot.
+title: "[Pilot Application] <discord-username>"
+labels:
+  - application
+  - pending-review
+body:
+  # ---------------------------------------------------------------
+  # Intro
+  # ---------------------------------------------------------------
+  - type: markdown
+    attributes:
+      value: |
+        ## Coastal Peaks Air Service - Pilot Application
+
+        Thanks for your interest in joining **CPAS**, a virtual charter (VC) and specialty flight operator for Microsoft Flight Simulator based out of Christchurch (NZCH), Mount Cook (NZMC) and Glentanner (NZGT).
+
+        Before you submit, please take a moment to read:
+
+        - [**Training & Progression**](https://chalwk.github.io/CPAS/pages/training/) - ranks, endorsements and checkride flow
+        - [**Operations**](https://chalwk.github.io/CPAS/pages/operations/) - flight planning, live weather policy and PIREP reporting
+        - [**Our Fleet**](https://chalwk.github.io/CPAS/pages/fleet/) - aircraft you'll be flying
+
+        All new pilots start as **Pilot in Training** and progress at their own pace. Applications are reviewed by CPAS staff and you may be contacted for a short follow-up discussion.
+
+  # ---------------------------------------------------------------
+  # Prerequisites
+  # ---------------------------------------------------------------
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites & Agreement
+      description: Please confirm each of the following before continuing.
+      options:
+        - label: I have read the **Training**, **Operations** and **Fleet** pages linked above.
+          required: true
+        - label: I agree to fly with **Live Weather** in Microsoft Flight Simulator on all CPAS flights.
+          required: true
+        - label: I will only fly aircraft and routes permitted by my current rank and endorsements.
+          required: true
+        - label: I will use the published checklists and file a PIREP after every flight.
+          required: true
+        - label: I understand CPAS is a **simulation community** - the goals are learning and enjoyment, not perfection.
+          required: true
+
+  # ---------------------------------------------------------------
+  # Contact & identifiers
+  # ---------------------------------------------------------------
+  - type: input
+    id: discord_username
+    attributes:
+      label: Discord Username
+      description: Your full Discord handle, including the new username format (e.g. `bobby`).
+      placeholder: "your-discord-username"
+    validations:
+      required: true
+
+  - type: input
+    id: simbrief_id
+    attributes:
+      label: SimBrief Pilot ID
+      description: |
+        Your **numeric** SimBrief Pilot ID (not your username). This is required for `/pirep` submissions later.
+        Find it under **Account Settings → Your SimBrief Data → Pilot ID** on [simbrief.com](https://www.simbrief.com).
+      placeholder: "123456"
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Country & Timezone
+      description: Where you're flying from - helps us schedule checkrides and group flights.
+      placeholder: "New Zealand (Pacific/Auckland)"
+    validations:
+      required: true
+
+  # ---------------------------------------------------------------
+  # Experience
+  # ---------------------------------------------------------------
+  - type: dropdown
+    id: simulator
+    attributes:
+      label: Which simulator do you fly?
+      options:
+        - Microsoft Flight Simulator 2024
+        - Microsoft Flight Simulator 2020
+        - Both MSFS 2020 and 2024
+    validations:
+      required: true
+
+  - type: dropdown
+    id: experience
+    attributes:
+      label: Flight Sim Experience
+      description: Roughly how long have you been flying in flight simulators?
+      options:
+        - Brand new - just getting started
+        - Less than 6 months
+        - 6 months - 1 year
+        - 1 - 3 years
+        - 3 - 5 years
+        - More than 5 years
+    validations:
+      required: true
+
+  - type: dropdown
+    id: vatsim
+    attributes:
+      label: VATSIM / Online ATC
+      description: VATSIM is encouraged but **not required** at CPAS.
+      options:
+        - Yes - I'm an active VATSIM member
+        - I've used VATSIM in the past
+        - No - but I'm interested in learning
+        - No - and not interested right now
+    validations:
+      required: true
+
+  # ---------------------------------------------------------------
+  # Starting aircraft & fleet
+  # ---------------------------------------------------------------
+  - type: dropdown
+    id: starting_aircraft
+    attributes:
+      label: Preferred Starting Aircraft
+      description: |
+        All new pilots start on a trainer. Choose the one you'd like to begin with - this can be changed later.
+      options:
+        - Piper Warrior II (PA-28-161) - fixed-wing
+        - Piper Tomahawk (PA-38-112) - fixed-wing
+        - Robinson R44 (Raven II) - helicopter
+        - No preference - assign me one
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: addons_owned
+    attributes:
+      label: Which CPAS fleet add-ons do you already own?
+      description: |
+        Not a requirement - just helps us plan your progression. Tick any that apply.
+      options:
+        - label: Piper Tomahawk (Just Flight)
+        - label: Piper Warrior II (Just Flight)
+        - label: Piper Archer II (Carenado)
+        - label: Piper Arrow III (Just Flight)
+        - label: Piper Turbo Arrow III / IV (Just Flight)
+        - label: Piper Seneca V (Carenado)
+        - label: Robinson R44 (Rotor Sim Pilot)
+        - label: Robinson R66 (CowanSim)
+        - label: Airbus H125 / AS350 (CowanSim)
+        - label: Airbus H145 (Hype Performance Group)
+        - label: None of the above yet
+
+  # ---------------------------------------------------------------
+  # Motivation
+  # ---------------------------------------------------------------
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why do you want to join CPAS?
+      description: Tell us a little about yourself, what draws you to our operation, and what you hope to get out of it.
+      placeholder: "I'm interested in scenic South Island flying, particularly around Mount Cook and the West Coast..."
+    validations:
+      required: true
+
+  - type: input
+    id: availability
+    attributes:
+      label: Typical Availability
+      description: When are you usually able to fly? This helps us match you with an instructor for checkrides.
+      placeholder: "Weekday evenings NZT, most weekends"
+    validations:
+      required: false
+
+  # ---------------------------------------------------------------
+  # Anything else
+  # ---------------------------------------------------------------
+  - type: textarea
+    id: additional
+    attributes:
+      label: Anything Else?
+      description: Any questions, prior virtual airline experience, or other information you'd like us to know.
+    validations:
+      required: false
+
+  # ---------------------------------------------------------------
+  # Closing note
+  # ---------------------------------------------------------------
+  - type: markdown
+    attributes:
+      value: |
+        ---
+
+        Once submitted, a CPAS staff member will review your application. Please keep an eye on this issue and on Discord - we may reach out for a short interview.
+
+        *Blue skies and tailwinds.*
+        - **Coastal Peaks Air Service (CPAS)**

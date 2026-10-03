@@ -22,7 +22,7 @@ region:
 
 ## Overview
 
-Dunedin International sits on the Taieri Plain, about 12 NM (22 km) south-west of Dunedin city. It is the main gateway to Otago and the lower South Island. Tower hours are approximately 0630–2130 local (Todo: verify).
+Dunedin International sits on the Taieri Plain, about 12 NM (22 km) south-west of Dunedin city. It is the main gateway to Otago and the lower South Island. Tower hours are approximately 0630-2130 local (Todo: verify).
 
 {% include region_map.html %}
 

@@ -1,0 +1,22 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Apply via Discord
+    url: https://discord.gg/NsndXgYfxQ
+    about: Prefer to apply through Discord? Join the server and follow the application instructions.
+
+  - name: CPAS Website
+    url: https://chalwk.github.io/CPAS/
+    about: Visit the CPAS site for training information, flight planning and the latest operations.
+
+  - name: Training & Progression
+    url: https://chalwk.github.io/CPAS/pages/training/
+    about: Read about pilot ranks, endorsements and how checkrides work before applying.
+
+  - name: Operations & Flight Planning
+    url: https://chalwk.github.io/CPAS/pages/operations/
+    about: Learn about SimBrief flight planning, live weather policy, PIREP reporting and operational procedures.
+
+  - name: Our Fleet
+    url: https://chalwk.github.io/CPAS/pages/fleet/
+    about: Browse the CPAS fleet and view detailed checklists for every aircraft in the virtual lineup.

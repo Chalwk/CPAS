@@ -22,7 +22,7 @@ region:
 
 ## Overview
 
-Invercargill is the southernmost city airport in New Zealand, serving Southland and as the staging point for Stewart Island and southern Fiordland. Tower hours are approximately 0500–2030 local (Todo: verify).
+Invercargill is the southernmost city airport in New Zealand, serving Southland and as the staging point for Stewart Island and southern Fiordland. Tower hours are approximately 0500-2030 local (Todo: verify).
 
 {% include region_map.html %}
 

@@ -22,7 +22,7 @@ region:
 
 ## Overview
 
-Glentanner Station is a private airstrip at the northern end of Lake Pukaki, near the entrance to the Mount Cook valley. It is the main base for The Helicopter Line's Mount Cook operations (open 8am–5pm daily) and Air Safaris scenic flights. Prior approval is required. It is a key alternative to NZMC when the valley is busy.
+Glentanner Station is a private airstrip at the northern end of Lake Pukaki, near the entrance to the Mount Cook valley. It is the main base for The Helicopter Line's Mount Cook operations (open 8am-5pm daily) and Air Safaris scenic flights. Prior approval is required. It is a key alternative to NZMC when the valley is busy.
 
 {% include region_map.html %}
 

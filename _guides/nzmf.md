@@ -52,7 +52,7 @@ Milford Sound is a short sealed strip at the head of the fiord, surrounded by to
 - **DOC landing permit required.**
 - **Pilot briefing:** Pilots without Milford experience in the last six months need a briefing.
 - **No fuel available.**
-- **Peak traffic:** 1000–1600 local, with 240+ daily movements in summer.
+- **Peak traffic:** 1000-1600 local, with 240+ daily movements in summer.
 - **Landing lights and strobes:** Required throughout the Fiordland CFZ.
 - **Overflights:** 5,000 ft or above.
 - **Homer Tunnel restricted area NZR701:** Up to 8,000 ft.
