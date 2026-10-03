@@ -94,14 +94,20 @@ css: [index]
         <h2 class="section-title">Apply to {{ site.title }}</h2>
 
         <div class="discord-container">
-            <a class="btn btn-discord" href="{{ site.links.discord }}" target="_blank" rel="noopener">
-                <i class="fab fa-discord"></i> Apply via Discord
-            </a>
+            <div class="apply-buttons">
+                <a class="btn btn-discord" href="{{ site.links.discord }}" target="_blank" rel="noopener">
+                    <i class="fab fa-discord"></i> Apply via Discord
+                </a>
+                <a class="btn btn-github" href="{{ site.links.github }}/CPAS/issues/new?template=apply.yml"
+                    target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i> Apply via GitHub
+                </a>
+            </div>
 
             <div class="discord-info">
                 <h3>What Happens After You Apply</h3>
                 <ul>
-                    <li><i class="fas fa-file-alt"></i> Complete the pilot application on Discord</li>
+                    <li><i class="fas fa-file-alt"></i> Complete the pilot application on Discord or GitHub</li>
                     <li><i class="fas fa-eye"></i> Application is reviewed by CPAS staff</li>
                     <li><i class="fas fa-comments"></i> Follow-up discussion may occur in an interview</li>
                     <li><i class="fas fa-plane"></i> Aircraft assignment and ops access on approval</li>

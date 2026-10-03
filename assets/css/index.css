@@ -2,7 +2,7 @@
 
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('../images/hero_background.png');
+        url('../images/hero_background.png');
     background-size: cover;
     background-position: center;
     height: calc(100vh - 70px);
@@ -255,6 +255,44 @@
     margin: 0 auto;
 }
 
+.apply-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.apply-buttons .btn {
+    flex: 1 1 240px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.btn-github {
+    background-color: #24292e;
+    color: var(--white);
+    font-size: 1.2rem;
+    padding: 15px 40px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-github:hover {
+    background-color: #1b1f23;
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow);
+}
+
+.btn-github i {
+    font-size: 1.35rem;
+}
+
 .discord-info {
     background-color: white;
     padding: 30px;
@@ -401,6 +439,23 @@
     .base {
         padding-left: 5px;
     }
+
+    .apply-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .apply-buttons .btn {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    .btn-github {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 1rem;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 576px) {
@@ -453,6 +508,11 @@
     .base {
         padding-left: 3px;
     }
+
+    .btn-github {
+        padding: 12px 18px;
+        font-size: 0.95rem;
+    }
 }
 
 @media print {
@@ -471,6 +531,8 @@
     }
 
     .btn-discord,
+    .btn-github,
+    .apply-buttons,
     .discord-section {
         display: none;
     }
