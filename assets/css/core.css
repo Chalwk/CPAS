@@ -185,11 +185,12 @@ p {
 .nav-menu {
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
 .nav-menu li {
-    margin-left: 30px;
-    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .nav-menu a {
@@ -199,6 +200,7 @@ p {
     transition: var(--transition);
     padding: 5px 0;
     position: relative;
+    white-space: nowrap;
 }
 
 .nav-menu a:hover {
@@ -227,11 +229,12 @@ p {
 
 .nav-menu li:not(:last-child)::after {
     content: var(--nav-divider);
-    position: absolute;
-    right: -18px;
-    top: 50%;
-    transform: translateY(-50%);
     color: var(--nav-divider-color);
+    opacity: 0.4;
+    margin: 0 12px;
+    line-height: 1;
+    font-weight: 400;
+    transform: translateY(-1px);
 }
 
 .menu-toggle {
@@ -388,7 +391,7 @@ footer p {
     }
 
     .nav-menu li:not(:last-child)::after {
-        display: none;
+        content: none;
     }
 
     .menu-toggle {
