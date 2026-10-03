@@ -13,21 +13,25 @@ css: [guides]
 
 {% include toc.html %}
 
-## 1. Respect and Professionalism
+---
+
+## General Conduct
+
+### 1. Respect and Professionalism
 
 * Treat all members with respect and courtesy.
 * Maintain professional conduct in all communications.
 * Avoid offensive language, harassment, or discrimination of any kind.
 * Remember there are real people behind the screens.
 
-## 2. Virtual Aviation Etiquette
+### 2. Virtual Aviation Etiquette
 
 * Follow realistic procedures and checklists for an immersive experience.
 * Fly responsibly within the simulation to ensure enjoyable operations for everyone.
 * Share knowledge and tips to help others improve their skills.
 * Learn from mistakes and encourage others to do the same.
 
-## 3. Collaborative Spirit
+### 3. Collaborative Spirit
 
 * Help new pilots learn and integrate.
 * Participate in community events and group flights.
