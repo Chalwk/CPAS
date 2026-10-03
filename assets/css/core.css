@@ -283,6 +283,63 @@ footer p {
     margin-top: 10px;
 }
 
+/* Footer social / contact icons */
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin: 0 auto 18px;
+    padding: 0;
+}
+
+.footer-links li {
+    display: flex;
+}
+
+.footer-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--white);
+    border: 1px solid var(--light-gray);
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow);
+}
+
+.footer-links a:focus-visible {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+/* Footer licence / legal links */
+.footer-legal a,
+.footer-copyright .disclaimer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-legal a:hover,
+.footer-copyright .disclaimer a:hover {
+    text-decoration: underline;
+}
+
 .airline-code-note {
     background-color: var(--note-bg-color);
     border: 1px solid var(--note-border-color);
@@ -422,6 +479,16 @@ footer p {
         padding: 0 10px;
         max-width: 100%;
     }
+
+    .footer-links {
+        gap: 12px;
+    }
+
+    .footer-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 576px) {
@@ -442,6 +509,12 @@ footer p {
     .container {
         padding: 0 15px;
     }
+
+    .footer-links a {
+        width: 38px;
+        height: 38px;
+        font-size: 0.95rem;
+    }
 }
 
 @media print {
@@ -451,6 +524,10 @@ footer p {
     }
 
     .menu-toggle {
+        display: none;
+    }
+
+    .footer-links {
         display: none;
     }
 }

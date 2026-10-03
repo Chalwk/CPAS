@@ -1,8 +1,36 @@
 <!-- Copyright (c) 2025-2026 Jericho Crosby (Chalwk) -->
 
+{%- assign license_url = site.links.github | append: '/CPAS/blob/main/LICENSE' -%}
+
 <footer class="footer-copyright">
     <div class="container">
-        <p>&copy; {{ site.time | date: "%Y" }} Coastal Peaks Air Service (CPAS). All rights reserved.</p>
-        <p class="disclaimer">Coastal Peaks Air Service (CPAS) is not affiliated with, sponsored by, or representative of the real-world Canterbury Aero Club (CAC), GCH Aviation, Helicopter Line, or any other actual aviation service.</p>
+        <ul class="footer-links">
+            <li>
+                <a href="{{ site.links.discord }}" target="_blank" rel="noopener noreferrer" title="Join our Discord"
+                    aria-label="Join our Discord">
+                    <i class="fab fa-discord" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:{{ site.links.email }}" title="{{ site.links.email }}"
+                    aria-label="Email {{ site.links.email }}">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="{{ license_url }}" target="_blank" rel="noopener noreferrer" title="Licence"
+                    aria-label="Licence">
+                    <i class="fas fa-file-contract" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+
+        <p class="footer-legal">
+            &copy; {{ site.time | date: "%Y" }} Coastal Peaks Air Service (CPAS). All rights reserved.</a>
+        </p>
+
+        <p class="disclaimer">Coastal Peaks Air Service (CPAS) is not affiliated with, sponsored by, or representative
+            of the real-world Canterbury Aero Club (CAC), GCH Aviation, Helicopter Line, or any other actual aviation
+            service.</p>
     </div>
 </footer>
