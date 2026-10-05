@@ -29,3 +29,5 @@ For questions, licensing inquiries, or collaboration proposals:
 
 - **Email:** chalwk.dev@gmail.com  
 - **Discord:** chalwk
+
+---
