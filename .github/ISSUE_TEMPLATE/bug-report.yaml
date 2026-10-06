@@ -1,0 +1,95 @@
+name: Bug Report
+description: Report a bug, broken page, or unexpected behaviour on the CPAS site.
+title: "[BUG] <title>"
+labels: [ "bug", "needs triage" ]
+assignees: Chalwk
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Is this a security issue?**
+        > If this bug could expose member data, leak sensitive information, or
+        > let an attacker do something they shouldn't, **do not open a public
+        > issue**. Use the [Report a vulnerability](https://github.com/Chalwk/CPAS/security/advisories/new)
+        > link on the new issue page instead.
+        >
+        > For all other bugs, continue below.
+  - type: markdown
+    attributes:
+      value: |
+        **Describe the bug**
+        > Provide a clear and concise description in the following sections.
+        > Use headers (`#`) or lists (`-`) to organize your thoughts.
+  - type: input
+    id: page
+    attributes:
+      label: Affected Page or Feature
+      description: Provide the URL or page name where the problem occurs.
+      placeholder: "e.g., /join/ or the ranks page"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: List the exact steps that trigger the problem.
+      placeholder: |
+        1. Go to ...
+        2. Click ...
+        3. ...
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: Describe what you expected to happen.
+      placeholder: "Explain the expected behavior"
+    validations:
+      required: true
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: Describe what actually happened, including any error messages.
+      placeholder: "Describe what happened instead"
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and Version
+      description: Which browser and version are you using?
+      placeholder: "e.g., Firefox 128, Chrome 126, Safari 17"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating System
+      description: Which OS are you running?
+      placeholder: "e.g., Windows 11, Ubuntu 24.04, macOS 15"
+    validations:
+      required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Write any other context or information about the bug here.
+      placeholder: "Further context or information here"
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        **Screenshots and Logs**
+        > Include any relevant screenshots to help illustrate the bug.
+        >
+        > Please make sure you have redacted any personal data before posting.
+        >
+        >
+        > Thank you
+        >
+        > **I appreciate your effort in reporting bugs on the CPAS site. Your input is invaluable!**
