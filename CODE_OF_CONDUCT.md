@@ -1,350 +1,154 @@
----
-layout: guides
-title: Code of Conduct
-description: "Community rules, pilot standards, flight operations, and simulation guidelines for Coastal Peaks Air Service."
-icon: fa-book
-permalink: /pages/rules/
-back_url: /
-back_label: Back to Home
-css: [guides]
----
+# Contributor Covenant Code of Conduct
 
-<!-- Copyright (c) 2025-2026 Jericho Crosby (Chalwk) -->
+## Our Pledge
 
-{% include toc.html %}
+We as members, contributors, and leaders pledge to make participation in the
+Coastal Peaks Air Service (CPAS) community a harassment-free experience for
+everyone, regardless of age, body size, visible or invisible disability,
+ethnicity, sex characteristics, gender identity and expression, level of
+experience, education, socio-economic status, nationality, personal appearance,
+race, caste, colour, religion, or sexual identity and orientation.
 
----
-
-## General Conduct
-
-### 1. Respect and Professionalism
-
-* Treat all members with respect and courtesy.
-* Maintain professional conduct in all communications.
-* Avoid offensive language, harassment, or discrimination of any kind.
-* Remember there are real people behind the screens.
-
-### 2. Virtual Aviation Etiquette
-
-* Follow realistic procedures and checklists for an immersive experience.
-* Fly responsibly within the simulation to ensure enjoyable operations for everyone.
-* Share knowledge and tips to help others improve their skills.
-* Learn from mistakes and encourage others to do the same.
-
-### 3. Collaborative Spirit
-
-* Help new pilots learn and integrate.
-* Participate in community events and group flights.
-* Provide constructive feedback to help others improve.
-* Respect diverse backgrounds, experiences, and skill levels.
+We pledge to act and interact in ways that contribute to an open, welcoming,
+diverse, inclusive, and healthy community.
 
 ---
 
-## Community Structure & Operations
+## Our Standards
 
-### 1. Virtual Charter Concept
+Examples of behaviour that contributes to a positive environment:
 
-* **Service Code:** CPAS (Coastal Peaks Air Service)
-* **ICAO Code:** CPX (used in all flight planning and communication)
-* **Focus:** Realistic general aviation and helicopter operations in New Zealand's South Island
-* **Bases:** Canterbury Aero Club (NZCH), GCH Aviation (NZCH), Helicopter Line at Aoraki/Mount Cook (NZMC/NZGT)
+- Demonstrating empathy and kindness toward other people
+- Being respectful of differing opinions, viewpoints, and experiences
+- Giving and gracefully accepting constructive feedback
+- Accepting responsibility and apologising to those affected by our mistakes,
+  and learning from the experience
+- Focusing on what is best not just for us as individuals, but for the overall
+  community
+- Helping new pilots learn, and treating mistakes as opportunities to improve
 
-### 2. Core Principles
+Examples of unacceptable behaviour:
 
-* **Virtual First:** Focus on enjoyment and learning over perfection
-* **Community Spirit:** Supportive environment for all skill levels
-* **Realistic Boundaries:** Fly within your skill level and aircraft capabilities
-* **Progression System:** Advance through ranks based on experience and training
-
----
-
-## Pilot Requirements & Standards
-
-### 1. Minimum Requirements
-
-* **Age:** 16 years or older
-* **Software:** Legitimate copy of Microsoft Flight Simulator 2020
-* **Communication:** Active Discord account for coordination
-* **Weather:** Live weather mandatory for all flights
-* **Participation:** Regular engagement in community activities
-
-### 2. Rank System
-
-```
-🟢 Pilot in Training     - Initial training phase, local area familiarization
-🟡 Charter Pilot         - Basic charter operations, VFR/IFR
-🟠 Senior Charter Pilot  - Advanced operations, multiple aircraft certifications
-🔴 Lead Pilot            - Full fleet access, mentoring role
-🟣 Instructor            - Training authority, checkride administration
-```
-
-### 3. Endorsement System
-
-* **Mountain Flying:** Required for alpine routes
-* **Multi-Engine:** Required for Piper Seneca V operations
-* **Turbine Helicopter:** Required for R66, H125, H145 operations
-* **Special Operations:** Glacier landings, confined area operations
-
-### 4. Performance Expectations
-
-* **Flight Activity:** Members may fly and log flights at their own pace.
-* **Event Participation:** Group events are optional. Participation is encouraged but never required.
-* **Training Compliance:** Complete required training updates
-* **Documentation:** Maintain accurate flight logs and PIREP submissions
+- The use of sexualised language or imagery, and sexual attention or advances
+  of any kind
+- Trolling, insulting or derogatory comments, and personal or political attacks
+- Public or private harassment
+- Publishing others' private information, such as a physical or email address,
+  without their explicit permission
+- Impersonating CPAS staff, instructors, or other members
+- Deliberately disrupting flights, events, or voice channels
+- Other conduct which could reasonably be considered inappropriate in a
+  professional setting
 
 ---
 
-## Flight Operations
+## Enforcement Responsibilities
 
-### 1. Flight Planning Requirements
+Community leaders are responsible for clarifying and enforcing our standards of
+acceptable behaviour and will take appropriate and fair corrective action in
+response to any behaviour that they deem inappropriate, threatening, offensive,
+or harmful.
 
-* **SimBrief:** Primary flight planning tool (free account required)
-* **Live Weather:** Mandatory for all CPAS operations
-* **Route Planning:** Prepare routes before departure, plan alternates
-* **Aircraft Familiarity:** Know your aircraft systems and limitations
-
-### 2. In-Flight Conduct
-
-* Fly realistically according to aircraft capabilities
-* Follow proper radio procedures if using VATSIM/IVAO
-* Maintain situational awareness of terrain and airspace
-* Complete appropriate checklists for each phase of flight
-
-### 3. Flight Reporting
-
-* **Standard Flights:** Use `/pirep [pilot_id]` Discord bot command
-* **Special Operations:** Use `/missionreport` for SAR, MEDEVAC, tours, training
-* **Screenshots:** Capture and share key moments of your flights
-* **Accuracy:** Report flight times, routes, and details truthfully
-
-### 4. Specialized Operations
-
-* **Glacier Heli-Hike Tours:** Special procedures apply from Mount Cook/Glentanner
-* **Mountain Flying:** Additional training and awareness required
-* **Confined Area Landings:** Certified pilots only
-* **Night/IFR Operations:** Appropriate simulated ratings required
+Community leaders have the right and responsibility to remove, edit, or reject
+comments, commits, code, wiki edits, issues, and other contributions that are
+not aligned to this Code of Conduct, and will communicate reasons for moderation
+decisions when appropriate.
 
 ---
 
-## Communication & Discord Usage
+## Scope
 
-### 1. Discord Structure
-
-* **Info Channels:** Rules, rank structure, arrivals/departures
-* **Operations Channels:** PIREP submission, flight planning, technical help
-* **Training Channels:** Fleet discussion, training questions, tips
-* **Community Channels:** General chat, aviation talk, media sharing
-* **Voice Channels:** General lounge, flight operations, training sessions
-
-### 2. Communication Standards
-
-* Use appropriate channels for different types of communication
-* Keep aviation terminology professional and clear
-* Respect others in voice channels, keep communication concise
-* Report issues to appropriate channels or staff members
-
-### 3. Support Channels
-
-* **Technical Issues:** `#tech-support` channel
-* **Training Questions:** `#training-questions` channel
-* **Member Concerns:** Direct message to moderators or admin
-* **Suggestions:** Use designated suggestions channel
+This Code of Conduct applies within all community spaces — including the CPAS
+Discord server, this GitHub repository's issues, pull requests, and discussions,
+and any official CPAS flight or training event — and also applies when an
+individual is officially representing the community in public spaces.
 
 ---
 
-## Simulation Standards
+## Enforcement
 
-### 1. Realism Expectations
+Instances of abusive, harassing, or otherwise unacceptable behaviour may be
+reported to the community leaders responsible for enforcement at:
 
-* Fly within realistic aircraft performance parameters
-* Use live weather settings for all flights
-* Follow checklists and standard operating procedures
-* Use quality add-ons to enhance immersion when possible
+- **Discord:** Open a ticket or DM a moderator directly.
+- **GitHub:** Use the private [Report a vulnerability][security_advisory] flow
+  on the Security tab if the report involves exposed personal data or
+  credentials. For everything else, contact a maintainer directly rather than
+  opening a public issue.
 
-### 2. Acceptable Modifications
+All complaints will be reviewed and investigated promptly and fairly.
 
-* CPAS-approved or authentic aircraft liveries
-* New Zealand scenery enhancements
-* Utilities: Navigraph, SimBrief, Little Navmap (encouraged)
-* Approved aircraft in the CPAS fleet or alternatives
-
-### 3. Unacceptable Practices
-
-* No cheating or unrealistic assists (except for training purposes)
-* Avoid exploiting bugs or glitches
-* Unauthorized or unrealistic mods are prohibited
-* Keep role-play realistic and respectful
+All community leaders are obligated to respect the privacy and security of the
+reporter of any incident.
 
 ---
 
-## Training & Progression
+## Enforcement Guidelines
 
-### 1. Training Philosophy
+Community leaders will follow these Community Impact Guidelines in determining
+the consequences for any action they deem in violation of this Code of Conduct:
 
-* **Learning Environment:** Encourage questions and exploration
-* **Mistakes as Learning:** Treat errors as opportunities to improve
-* **Knowledge Sharing:** Experienced pilots help newcomers
-* **Self-Paced Progression:** Advance at your own comfortable speed
+### 1. Correction
 
-### 2. Checkride Format
+**Community Impact:** Use of inappropriate language or other behaviour deemed
+unprofessional or unwelcome in the community.
 
-* Conducted via MSFS shared cockpit
-* Private Discord voice channel for communication
-* Practical assessment of skills and knowledge
-* Constructive feedback and debriefing
+**Consequence:** A private, written warning from community leaders, providing
+clarity around the nature of the violation and an explanation of why the
+behaviour was inappropriate. A public apology may be requested.
 
-### 3. Advancement Requirements
+### 2. Warning
 
-* **To Charter Pilot:** 3 local familiarization flights, basic knowledge check
-* **To Senior Charter Pilot:** 10 passenger charters, navigation checkride
-* **To Lead Pilot:** 25 total charters, multiple endorsements
-* **Instructor Role:** By invitation based on knowledge and teaching ability
+**Community Impact:** A violation through a single incident or series of
+actions.
 
----
+**Consequence:** A warning with consequences for continued behaviour. No
+interaction with the people involved, including unsolicited interaction with
+those enforcing the Code of Conduct, for a specified period of time. This
+includes avoiding interactions in community spaces as well as external channels
+like social media. Violating these terms may lead to a temporary or permanent
+ban.
 
-## Rules & Enforcement
+### 3. Temporary Ban
 
-### 1. Zero Tolerance Violations
+**Community Impact:** A serious violation of community standards, including
+sustained inappropriate behaviour.
 
-* Harassment or discrimination of any kind
-* Threatening or offensive behavior
-* Deliberate disregard for simulation rules
-* Malicious or disruptive actions
+**Consequence:** A temporary ban from any sort of interaction or public
+communication with the community for a specified period of time. No public or
+private interaction with the people involved, including unsolicited interaction
+with those enforcing the Code of Conduct, is allowed during this period.
+Violating these terms may lead to a permanent ban.
 
-### 2. Progressive Discipline
+### 4. Permanent Ban
 
-1. **Verbal Warning** - Minor first offense
-2. **Written Warning** - Repeated or moderate offense
-3. **Temporary Suspension** - Serious or repeated violations
-4. **Permanent Removal** - Severe or unrepentant behavior
+**Community Impact:** Demonstrating a pattern of violation of community
+standards, including sustained inappropriate behaviour, harassment of an
+individual, or aggression toward or disparagement of classes of individuals.
 
-### 3. Appeal Process
-
-* All disciplinary actions can be appealed
-* Contact senior administration for appeals
-* Provide evidence and context for review
-* Decisions reviewed by admin team
+**Consequence:** A permanent ban from any sort of public interaction within the
+community.
 
 ---
 
-## Community Events
+## Attribution
 
-### 1. Regular Activities
+This Code of Conduct is adapted from the [Contributor Covenant][homepage],
+version 2.1, available at
+[https://www.contributor-covenant.org/version/2/1/code_of_conduct.html][v2.1].
 
-* Weekly group flights and scenic tours
-* Training sessions for aircraft and procedures
-* Special community events and challenges
-* Glacier heli-hike tour operations
+Community Impact Guidelines were inspired by
+[Mozilla's code of conduct enforcement ladder][mozilla].
 
-### 2. Event Participation
-
-* Sign up in advance when required
-* Prepare aircraft and flight plan beforehand
-* Arrive on time for briefings
-* Follow event-specific procedures and roles
-
-### 3. Event Conduct
-
-* Respect organizers and fellow participants
-* Maintain professionalism throughout
-* Ensure positive experience for all involved
-* Share experiences and screenshots afterward
+For answers to common questions about this code of conduct, see the FAQ at
+[https://www.contributor-covenant.org/faq][faq]. Translations are available at
+[https://www.contributor-covenant.org/translations][translations].
 
 ---
 
-## Technical Requirements
-
-### 1. Minimum Specifications
-
-* MSFS 2020 Standard edition or higher
-* Discord for voice and text communication
-* Headset/microphone for voice communication
-* Stable internet connection for multiplayer events
-
-### 2. Recommended Add-ons
-
-* CPAS fleet aircraft (CowanSim, Just Flight, Carenado)
-* New Zealand scenery enhancements (NZA Simulations)
-* Utilities: Navigraph, SimBrief, Little Navmap
-* Weather enhancement packs for realism
-
-### 3. Performance Standards
-
-* Maintain stable frame rates for enjoyable simulation
-* Ensure clear voice communication quality
-* Keep simulation software updated
-* Report technical issues promptly for community support
-
----
-
-## Community Values
-
-### 1. Inclusivity
-
-* Welcome pilots of all skill levels and backgrounds
-* Create space for everyone to participate and learn
-* Value different perspectives and experiences
-* Foster supportive and encouraging environment
-
-### 2. Balance of Realism and Fun
-
-* Pursue realistic operations while maintaining enjoyment
-* Challenge yourself while having fun
-* Appreciate the beauty of virtual flight
-* Share memorable experiences with the community
-
-### 3. Learning Culture
-
-* Encourage continuous skill improvement
-* Share knowledge generously with others
-* Support fellow pilots in their development
-* Celebrate achievements and milestones
-
----
-
-## Leadership & Support
-
-### 1. Leadership Team
-
-* **Founder/Owner:** Chalwk (Jericho Crosby)
-* **Training Staff:** Certified instructors for various aircraft
-* **Moderators:** Community support and rule enforcement
-* **Senior Pilots:** Mentoring and operational guidance
-
-### 2. Support Channels
-
-* **Primary Platform:** Discord server for real-time communication
-* **Website:** Information, resources, and documentation
-* **GitHub:** Applications and technical resources
-* **Email:** For formal or emergency communications
-
-### 3. Contact Points
-
-* **General Questions:** Appropriate Discord channels
-* **Training Inquiries:** Training staff or `#training-questions`
-* **Technical Issues:** `#tech-support` channel
-* **Personal Concerns:** Direct message to Chalwk or senior admin
-* **Rule Violations:** Report to moderators immediately
-
----
-
-## Agreement
-
-By participating in Coastal Peaks Air Service (CPAS), you agree to:
-
-1. Follow all community guidelines and operating procedures
-2. Maintain professional and respectful conduct at all times
-3. Fly realistically and contribute to positive virtual experiences
-4. Support and help fellow community members in their development
-5. Report violations or concerns through appropriate channels
-6. Respect the rank and endorsement system for safe operations
-7. Use live weather for all CPAS flight operations
-8. Submit accurate flight reports via Discord bot commands
-
-### Updates to Guidelines
-
-These guidelines may be updated periodically to reflect community evolution. Changes will be announced in our Discord
-server and documented on our [website](https://chalwk.github.io/CPAS/). Continued participation constitutes acceptance of
-updated guidelines.
-
-*Last Updated: October 2026*
+[homepage]: https://www.contributor-covenant.org
+[v2.1]: https://www.contributor-covenant.org/version/2/1/code_of_conduct.html
+[mozilla]: https://github.com/mozilla/inclusion
+[faq]: https://www.contributor-covenant.org/faq
+[translations]: https://www.contributor-covenant.org/translations
+[security_advisory]: https://github.com/Chalwk/CPAS/security/advisories/new
